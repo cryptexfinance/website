@@ -1,5 +1,5 @@
 import React from "react"
-import { graphql } from "gatsby"
+// import { graphql } from "gatsby"
 // import ThemeContext from "../utils/theme"
 import { PageLayout } from "../components"
 import { SEO } from "../utils"
@@ -8,7 +8,7 @@ import { SEO } from "../utils"
 import Home from "./website/home";
 import bg from '../../static/bg.jpg'
 import bgvideo from '../../static/bg.webm'
-import bgvideo from '../../static/bg.mp4'
+import bgvideow from '../../static/bg.mp4'
 
 export default ({ data }) => {
   // const { unemployed, firstName, lastName, occupation } = data.site.siteMetadata
@@ -16,7 +16,7 @@ export default ({ data }) => {
   return (
     <PageLayout>
       <video className="video" playsInline autoPlay muted loop poster={bg} id="bgvid">
-        <source src={bgvideo} type="video/mp4" />
+        <source src={bgvideow} type="video/mp4" />
         <source src={bgvideo} type="video/mp4" />
       </video>
       <SEO title="Home" />
@@ -27,15 +27,15 @@ export default ({ data }) => {
   )
 }
 
-export const query = graphql`
-  query {
-    site {
-      siteMetadata {
-        unemployed
-        firstName
-        lastName
-        occupation
-      }
-    }
-  }
-`
+// export const query = graphql`
+//   query {
+//     site {
+//       siteMetadata {
+//         unemployed
+//         firstName
+//         lastName
+//         occupation
+//       }
+//     }
+//   }
+// `

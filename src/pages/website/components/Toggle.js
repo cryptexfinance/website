@@ -27,7 +27,7 @@ export class Toggle extends Component {
               <div className="question">  
                   {title}  
               </div>
-              <div className="plus" onClick={this.togglebutton}>{openclose}</div>
+              <div role="button" tabIndex={0} className="plus" onClick={this.togglebutton}  onKeyDown={this.togglebutton}>{openclose}</div>
               <div className="faq-divider"></div>
               {open && (  
                 <>  
