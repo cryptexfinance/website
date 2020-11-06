@@ -15,7 +15,7 @@ export class FlipCard extends Component {
     // var { front, back } = this.props;  
     return (
 
-      <div role="button" tabIndex={0} onMouseEnter={this.flip} onMouseLeave={this.flip} className={"team-box" + (this.state.flipped ? " flipped" : "")}>
+      <div onMouseEnter={this.flip} onMouseLeave={this.flip} className={"team-box" + (this.state.flipped ? " flipped" : "")}>
         <Front/>
         <Back />
       </div>

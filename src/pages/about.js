@@ -1,8 +1,8 @@
-import React from "react"
+import React, { useContext } from "react"
 import { PageLayout, PageTitle } from "../components"
 import { Container, Image } from "react-bootstrap"
 import { Link, graphql } from "gatsby"
-import { SEO } from "../utils"
+import { ThemeContext, SEO } from "../utils"
 
 export default ({ data }) => {
   const MediaLink = ({ title, author, link }) => (
@@ -22,7 +22,7 @@ export default ({ data }) => {
     designations,
     unemployed,
   } = data.site.siteMetadata
-  // const { toString } = ""//useContext(ThemeContext)
+  const { toString } = useContext(ThemeContext)
 
   const bookLinks = readingList.map(book => MediaLink(book))
   const showLinks = showsList.map(show => MediaLink(show))
@@ -36,6 +36,7 @@ export default ({ data }) => {
           rounded
           width="140"
           height="140"
+          src={`../../icons/luke-${toString()}.png`}
           alt={author}
         />
         <article className="w-75 m-auto pt-2 text-justify">

@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from 'gatsby'
-// import team1 from '../../../../static/website/team/team-1.png'
+import team1 from '../../../../static/website/team/team-1.png'
 import news from '../../../../static/website/team/news.jpg'
 import FlipCard from '../components/FlipCard'
 
