@@ -1,0 +1,106 @@
+.team-row {
+  position: absolute;
+  width: 50%;
+  left: calc(50% - 10.6875rem/2 - 33.65625rem);
+  top: calc(50% - 10.375rem/2 - 3.23125rem);
+}
+.team-box {
+  text-align: left !important;
+  position: relative;
+  height: 14rem;
+  margin-right: 4rem;
+  margin-bottom: 1.5rem;
+
+  &-photo {
+    position: relative;
+    width: 14.375rem;
+    height: 10.0625rem;
+    background: rgba(116, 80, 192, 0.67);
+    mix-blend-mode: lighten;
+    // opacity: 0.85;
+    border-radius: 0.125rem;
+  }
+
+  &-name {
+    position: relative;
+    width: 14.375rem;
+    height: 1.375rem;
+    font-family: $font-primary;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 0.875rem;
+    line-height: 1.375rem;
+    letter-spacing: 0.01875rem;
+    color: $color-dark-clean;
+    text-shadow: 0rem 0.125rem 0.75rem #9E55FB;
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+  }
+
+  &-position {
+    position: relative;
+    width: 12.5625rem;
+    height: 1rem;
+    font-family: $font-tertiary;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 0.75rem;
+    line-height: 1rem;
+    letter-spacing: -0.0125rem;
+    color: $color-grey;
+    padding-top: 0rem;
+  }
+
+  &-description {
+    font-family: $font-tertiary;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 0.75rem;
+    line-height: 1rem;
+    width: 11.875rem;
+    height: 4.125rem;
+    letter-spacing: -0.2px;
+    color: $color-grey;
+  }
+
+  .flipped {
+    .front {
+        transform: rotateY(180deg);
+    }
+    .back {
+        transform: rotateY(0deg);
+    }
+  }
+
+  
+}
+
+.front,
+.back {
+  box-sizing: border-box;
+  height: 100%;
+  width: 100%;
+  display: block;
+  background: $color-black;
+  // box-shadow: 10px 10px 5px rgb(95, 77, 99);
+  // padding: 10px;
+  position: relative;
+  // border-radius: 10px;
+  backface-visibility: hidden;
+  transform-style: preserve-3d;
+  transition: -webkit-transform ease 500ms;
+  transition: transform ease 500ms;
+}
+.front {
+  background: transparent;
+  z-index: 2;
+  transform: rotateY(0deg);
+    /* front tile styles go here! */
+}
+.back {
+  background: $color-black;
+  transform: rotateY(-180deg);
+  padding: 20px;
+  font-size: 20px;
+    /* back tile styles go here! */
+}

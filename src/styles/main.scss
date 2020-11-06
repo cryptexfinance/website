@@ -1,0 +1,29 @@
+@import "../../node_modules/bootstrap/scss/bootstrap.scss";
+// Abstracts
+
+@import "abstracts/variables";
+@import "abstracts/mixing";
+
+// Base
+
+@import "base/base";
+@import "base/page";
+@import "base/typography";
+
+// Components
+
+@import "components/button";
+@import "components/faqbox";
+@import "components/flipcard";
+@import "components/header";
+@import "components/newsbox";
+@import "components/teambox";
+@import "components/toggle";
+
+// Layout
+
+@import "layout/bg";
+
+// Pages
+
+@import "pages/home";

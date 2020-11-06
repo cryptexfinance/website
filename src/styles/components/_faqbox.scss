@@ -1,0 +1,40 @@
+.faq {
+  &-row {
+    position: absolute;
+    left: calc(50% - 10.6875rem/2 - 33.65625rem);
+    top: calc(50% - 10.375rem/2 - 3.23125rem);
+  }
+
+  &-box {
+    position: relative;
+    margin-right: 4rem;
+  }
+
+  &-title {
+		position: absolute;
+		width: 5.3125rem;
+		height: 3rem;
+		left: calc(50% - 5.3125rem/2 - 37.28125rem);
+		top: calc(50% - 3rem/2 - 18.625rem);
+	}
+
+	&-subtitle {
+		position: absolute;
+		width: 18.9375rem;
+		height: 1.375rem;
+		left: calc(50% - 18.9375rem/2 - 30.46875rem);
+		top: calc(50% - 1.375rem/2 - 12.9375rem);
+		color: $color-grey;
+	}
+
+	&-divider {
+		width: 36.25rem;
+		margin-top: 1rem;
+		margin-bottom: 2rem;
+		height: 1px;
+		background: #494866;
+		border-radius: 8px;
+		transform: matrix(-1, 0, 0, 1, 0, 0);
+	}
+
+}
