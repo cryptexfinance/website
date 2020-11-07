@@ -7,8 +7,8 @@ import { SEO } from "../utils"
 // import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import Home from "./website/home";
 import bg from '../../static/bg.jpg'
-import bgvideo from '../../static/bg.mp4'
-import bgvideom from '../../static/bg.mp4'
+// import bgvideo from '../../static/bg.mp4'
+import bgvideom from '../../static/bg.webm'
 
 export default ({ data }) => {
   // const { unemployed, firstName, lastName, occupation } = data.site.siteMetadata
@@ -17,7 +17,6 @@ export default ({ data }) => {
     <PageLayout>
       <video className="video" playsInline autoPlay muted loop poster={bg} id="bgvid">
         <source src={bgvideom} type="video/mp4" />
-        <source src={bgvideo} type="video/mp4" />
       </video>
       <SEO title="Home" />
       {/* <Container> */}

@@ -1,7 +1,7 @@
 import React from 'react'
 // import { Container } from "react-bootstrap"
 import { Link } from 'gatsby'
-import image from '../../../../static/website/home/main.svg'
+import image from '../../../../static/website/home/main.webp'
 import tcap from '../../../../static/website/home/tcap.svg'
 
 const SectionMain = () => {

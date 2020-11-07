@@ -3,7 +3,7 @@ import { Link } from 'gatsby'
 import reddit from '../../../../static/website/community/reddit.svg'
 import discord from '../../../../static/website/community/discord.svg'
 import twitter from '../../../../static/website/community/twitter.svg'
-import community from '../../../../static/website/community/community.png'
+import community from '../../../../static/website/community/community.webp'
 
 const SectionCommunity = () => {
   return (
