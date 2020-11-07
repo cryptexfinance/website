@@ -1,3 +1,16 @@
+.menu {
+  &-logo {
+    width: 100px;
+    // height: 26;
+  }
+}
+
+// .navbar-brand {
+//   .img {
+//     width: 100px;
+//   }
+// }
+
 .section-main {
   height: 100vh;
   background-size: cover;
@@ -45,10 +58,11 @@
     align-items: center;
     letter-spacing: 0.01875rem;
 
+
     color: $color-grey;
     
-    &-image img{
-      width: 3.125rem;
+    &-image{
+      width: 1.125rem;
       // height: 1.065rem;
     }
   }

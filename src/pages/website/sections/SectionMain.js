@@ -1,6 +1,7 @@
 import React from 'react'
 // import { Container } from "react-bootstrap"
-import image from '../../../../static/website/home/main.png'
+import { Link } from 'gatsby'
+import image from '../../../../static/website/home/main.svg'
 import tcap from '../../../../static/website/home/tcap.svg'
 
 const SectionMain = () => {
@@ -15,11 +16,13 @@ const SectionMain = () => {
       <div className="main-divider"></div>
       <div className="main-number-blue">$35.23</div>
       <div className="main-tcap">
-        <img src={tcap} className="main-tcap-image" alt="Cryptex" />
+        <img src={tcap} className="main-tcap-image" alt="TCAP" />
         <div className="main-tcap-text">&nbsp;TCAP</div>
       </div>
       <div className="main-number-green">+7.5%</div>
-      <button className="button-pink main-button">Go to App</button>
+      <Link to="https://app.cryptex.finance">
+        <button className="button-pink main-button">Go to App</button>
+      </Link>
     </>
   )
 }

@@ -1,10 +1,9 @@
-import React from "react"
-import { PageTitle, PageLayout } from "../components"
+import { useEffect } from 'react';
+import { navigate } from 'gatsby';
 
 export default () => {
-  return (
-    <PageLayout>
-      <PageTitle>404: Not Found</PageTitle>
-    </PageLayout>
-  )
-}
+  useEffect(() => {
+    navigate('/');
+  }, []);
+  return null;
+};

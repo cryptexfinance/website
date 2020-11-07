@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'gatsby'
 import reddit from '../../../../static/website/community/reddit.svg'
 import discord from '../../../../static/website/community/discord.svg'
 import twitter from '../../../../static/website/community/twitter.svg'
@@ -15,18 +16,18 @@ const SectionCommunity = () => {
             We’re on a mission to make digital asset investment simple, accessible, and secure.
           </div>
           <div className="community-icons-row">
-            <div className="community-item">
+            <Link to="https://www.reddit.com/r/totalcryptomarketcap" className="community-item">
               <img src={reddit} className="community-item-icon" alt="Reddit" />
               <div className="community-item-text terciary-header">Reddit</div>
-            </div>
-            <div className="community-item">
+            </Link>
+            <Link to="https://discord.gg/N5zEq6b" className="community-item">
               <img src={discord} className="community-item-icon" alt="Reddit" />
               <div className="community-item-text terciary-header">Discord</div>
-            </div>
-            <div className="community-item">
+            </Link>
+            <Link to="https://www.twitter.com/cryptexglobal" className="community-item">
               <img src={twitter} className="community-item-icon" alt="Reddit" />
               <div className="community-item-text terciary-header">Twitter</div>
-            </div>
+            </Link>
           </div>
           <div className="community-subscribe-title heading-secondary">
             Stay in Touch

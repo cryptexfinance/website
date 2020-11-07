@@ -1,6 +1,6 @@
 import React from "react"
 import { graphql } from "gatsby"
-import ThemeContext from "../utils/theme"
+// import ThemeContext from "../utils/theme"
 import { PageLayout } from "../components"
 import { SEO } from "../utils"
 // import { Container } from "react-bootstrap"
