@@ -88,13 +88,6 @@ module.exports = {
     `gatsby-plugin-offline`,
     `gatsby-plugin-react-helmet`,
     {
-      resolve: "gatsby-plugin-google-fonts",
-      options: {
-        fonts: ["Raleway:300,400"],
-        display: "swap",
-      },
-    },
-    {
       resolve: `gatsby-plugin-nprogress`,
       options: {
         color: `tomato`,

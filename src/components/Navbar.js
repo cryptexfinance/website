@@ -11,7 +11,7 @@ export default () => {
   return (
     <Navbar variant={toString()} fixed="top" collapseOnSelect expand="md">
       <Navbar.Brand className="pl-5 ml-5" as={Link} to="/">
-        <img className="menu-logo" src="/logo.svg" alt="" />
+        <img className="menu-logo" src="/logo.svg" alt="Logo" />
       </Navbar.Brand>
       <Navbar.Collapse
         id="responsive-navbar-nav"
