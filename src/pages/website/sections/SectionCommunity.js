@@ -29,10 +29,11 @@ const SectionCommunity = () => {
               <div className="community-item-text terciary-header">Twitter</div>
             </Link>
           </div>
-          <div className="community-subscribe-title heading-secondary">
+          <label id="subslbl" htmlFor="subscribe" className="community-subscribe-title heading-secondary">
             Stay in Touch
-          </div>
-          <input className="community-subscribe-input" placeholder="Email"></input>
+          <input id="subscribe" className="community-subscribe-input" placeholder="Email" />
+          </label>
+          
           <button className="community-subscribe-button button-pink">Subscribe</button>
           <img src={community} className="community-image" alt="Community" />
         </div>

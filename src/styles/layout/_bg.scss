@@ -5,15 +5,17 @@ video {
   // position: fixed;
   // top: 0;
   // left: 0;
-  object-fit: cover;
+  object-fit: inherit;
   width: 100vw;
   height: 100vh;
   position: fixed;
   top: 0;
   left: 0;
   opacity: 0.3;
+  // background-color: black;
 }
 
 .bg-black {
   background-color: black;
+  background: black;
 }

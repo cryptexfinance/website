@@ -9,13 +9,11 @@ import bgvideom from '../../static/bg.webm'
 export default ({ data }) => {
   return (
     <PageLayout>
+      <SEO title="Cryptex | TCAP" />
       <video className="video" playsInline autoPlay muted loop poster={bg} id="bgvid">
         <source src={bgvideom} type="video/mp4" />
       </video>
-      <SEO title="Home" />
-      {/* <Container> */}
         <Home />
-      {/* </Container> */}
     </PageLayout>
   )
 }
