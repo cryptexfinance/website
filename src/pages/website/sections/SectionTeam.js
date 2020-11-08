@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'gatsby'
 // import team1 from '../../../../static/website/team/team-1.png'
-import news from '../../../../static/website/team/news.jpg'
+import news from '../../../../static/website/team/news.webp'
 import FlipCard from '../components/FlipCard'
 
 const SectionTeam = () => {

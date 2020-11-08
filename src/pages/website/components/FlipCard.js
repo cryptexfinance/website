@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import team1 from '../../../../static/website/team/team-1.png'
+import team1 from '../../../../static/website/team/team-1.webp'
 
 export class FlipCard extends Component {
   constructor(props) {

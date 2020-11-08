@@ -6,7 +6,7 @@ import { SEO } from "../utils"
 // import { Container } from "react-bootstrap"
 // import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import Home from "./website/home";
-import bg from '../../static/bg.jpg'
+import bg from '../../static/bg.webp'
 // import bgvideo from '../../static/bg.mp4'
 import bgvideom from '../../static/bg.webm'
 

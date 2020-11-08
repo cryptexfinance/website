@@ -1,12 +1,12 @@
-@import "../../static/fonts/fonts.css";
+// @import "../../static/fonts/fonts.css";
 
 @import "themes";
 
 html,
 body {
   margin: 0;
-  font-family: "Raleway", sans-serif;
-  font-display: swap;
+  // font-family: "Raleway", sans-serif;
+  // font-display: swap;
   height: 100%;
   width: 100%;
   // font-size: calc(16px * ((80vw - 700px) / (1600 - 400)));
@@ -24,7 +24,7 @@ body {
 }
 
 .bg-none {
-  background: rgba(0, 0, 0, 0) !important;
+  background: rgba(0, 0, 0, 0.8) !important;
 }
 
 .aurebesh:hover {
