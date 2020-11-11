@@ -519,14 +519,15 @@
 		&:hover {
 			//box-sizing: border-box;
 			// filter:drop-shadow(5.00246px -4.66487px 0px $shadow-purple-neon) drop-shadow(-5.00246px 4.66487px 0px $shadow-pink-neon);
+			filter:drop-shadow(5.00246px -4.66487px 0px rgb(0, 255, 255)) drop-shadow(-5.00246px 4.66487px 0px rgb(255, 0, 255));
 			//box-shadow: 0px 0px 1px $shadow-green-neon, 0px 0px 34px $shadow-green-neon-second; rgb(0, 255, 255) rgb(255, 0, 255)
-			color:#fa0000;
-    	text-shadow: 0 0 80px $shadow-purple-neon,
-                 0 0 70px $shadow-purple-neon,
-                 0 0 60px $shadow-purple-neon,
-                 0 0 50px $shadow-purple-neon,
-                 0 0 40px $shadow-purple-neon,
-                 0 0 30px $shadow-purple-neon;
+			// color:#fa0000;
+    	// text-shadow: 0 0 80px $shadow-purple-neon,
+      //            0 0 70px $shadow-purple-neon,
+      //            0 0 60px $shadow-purple-neon,
+      //            0 0 50px $shadow-purple-neon,
+      //            0 0 40px $shadow-purple-neon,
+      //            0 0 30px $shadow-purple-neon;
 		}
 
 		&-icon {
