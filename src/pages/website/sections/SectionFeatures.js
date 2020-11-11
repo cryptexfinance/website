@@ -26,20 +26,20 @@ const SectionFeatures = () => {
                 <p className="features-content content">Buy and sell TCAP on Uniswap.</p>
               </div>
             </Link>
-            <Link to="https://app.uniswap.org/#/pool">
+            <Link to="https://app.uniswap.org/#/pool" target="_blank" >
               <div className="features-box-pool">
                 <img src={pool} className="features-icons" alt="Pool" />
                 <div className="features-subtitle heading-secondary">Pool</div>
                 <p className="features-content content">Provide liquidity to TCAP pairs on Uniswap and earn a portion of the trading fees.</p>
               </div>
             </Link>
-            <Link to="#">
+            <div>
               <div className="features-box-farm">
                 <img src={farm} className="features-icons" alt="Farm" />
                 <div className="features-subtitle heading-secondary">Farm</div>
                 <p className="features-content content">Coming soon!</p>
               </div>
-            </Link>
+            </div>
           </div>
       </section>
   )
