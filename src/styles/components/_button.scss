@@ -8,6 +8,10 @@
 		background: $color-primary-pink;
 		border-radius: 1px;
 		border: 2px solid $color-primary-pink;
+		outline:none;
+		&:focus {
+			outline:none !important;
+		}
 	}
 
 	.button-navbar {
