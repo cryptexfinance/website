@@ -46,19 +46,19 @@ const SectionTeam = () => {
                 <img src={news} className="newsitem-photo" alt="News" />
                 <div className="newsitem-title terciary-header">How to create time-locked functions using Builder and Solidity</div>
                 <div className="newsitem-description newsdescription">Like a conventional index fund, TCAP.X gives investors real-time price...</div>
-                <Link to="#" className="newsitem-link link">Read More</Link>
+                <Link to="/" target="_blank" className="newsitem-link link">Read More</Link>
               </div>
               <div className="newsitem">
                 <img src={news} className="newsitem-photo" alt="News" />
                 <div className="newsitem-title terciary-header">How to create time-locked functions using Builder and Solidity</div>
                 <div className="newsitem-description newsdescription">Like a conventional index fund, TCAP.X gives investors real-time price...</div>
-                <Link to="#" className="newsitem-link link">Read More</Link>
+                <Link to="/" target="_blank" className="newsitem-link link">Read More</Link>
               </div>
               <div className="newsitem">
                 <img src={news} className="newsitem-photo" alt="News" />
                 <div className="newsitem-title terciary-header">How to create time-locked functions using Builder and Solidity</div>
                 <div className="newsitem-description newsdescription">Like a conventional index fund, TCAP.X gives investors real-time price...</div>
-                <Link to="#" className="newsitem-link link">Read More</Link>
+                <Link to="/" target="_blank" className="newsitem-link link">Read More</Link>
               </div>
             </div>
           </div>

@@ -36,53 +36,30 @@ $gutter-vertical: 8rem;
 $gutter-horizontal: 6rem;
 
 // Font.
-@font-face {
-  font-family: 'Space Mono Bold Italic';
-  src: url('../fonts/SpaceMono-BoldItalic.eot');
-  src: url('../fonts/SpaceMono-BoldItalic.eot?#iefix') format('embedded-opentype'),
-      url('../fonts/SpaceMono-BoldItalic.woff2') format('woff2'),
-      url('../fonts/SpaceMono-BoldItalic.woff') format('woff'),
-      url('../fonts/SpaceMono-BoldItalic.ttf') format('truetype'),
-      url('../fonts/SpaceMono-BoldItalic.svg#SpaceMono-BoldItalic') format('svg');
-  font-weight: bold;
-  font-style: italic;
-  font-display: swap;
-}
+// @font-face {
+//   font-family: 'Space Mono Bold Italic';
+//   src: url('../fonts/SpaceMono-BoldItalic.eot');
+//   src: url('../fonts/SpaceMono-BoldItalic.eot?#iefix') format('embedded-opentype'),
+//       url('../fonts/SpaceMono-BoldItalic.woff2') format('woff2'),
+//       url('../fonts/SpaceMono-BoldItalic.woff') format('woff'),
+//       url('../fonts/SpaceMono-BoldItalic.ttf') format('truetype'),
+//       url('../fonts/SpaceMono-BoldItalic.svg#SpaceMono-BoldItalic') format('svg');
+//   font-weight: bold;
+//   font-style: italic;
+//   font-display: swap;
+// }
 
 @font-face {
   font-family: 'Space Mono Bold';
-  src: url('../fonts/SpaceMono-Bold.eot');
-  src: url('../fonts/SpaceMono-Bold.eot?#iefix') format('embedded-opentype'),
-      url('../fonts/SpaceMono-Bold.woff2') format('woff2'),
-      url('../fonts/SpaceMono-Bold.woff') format('woff'),
-      url('../fonts/SpaceMono-Bold.ttf') format('truetype'),
-      url('../fonts/SpaceMono-Bold.svg#SpaceMono-Bold') format('svg');
+  src: url('../fonts/SpaceMono-Bold.woff') format('woff');
   font-weight: bold;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'Space Mono Italic';
-  src: url('../fonts/SpaceMono-Italic.eot');
-  src: url('../fonts/SpaceMono-Italic.eot?#iefix') format('embedded-opentype'),
-      url('../fonts/SpaceMono-Italic.woff2') format('woff2'),
-      url('../fonts/SpaceMono-Italic.woff') format('woff'),
-      url('../fonts/SpaceMono-Italic.ttf') format('truetype'),
-      url('../fonts/SpaceMono-Italic.svg#SpaceMono-Italic') format('svg');
-  font-weight: normal;
-  font-style: italic;
-  font-display: swap;
-}
-
-@font-face {
   font-family: 'Space Mono';
-  src: url('../fonts/SpaceMono-Regular.eot');
-  src: url('../fonts/SpaceMono-Regular.eot?#iefix') format('embedded-opentype'),
-      url('../fonts/SpaceMono-Regular.woff2') format('woff2'),
-      url('../fonts/SpaceMono-Regular.woff') format('woff'),
-      url('../fonts/SpaceMono-Regular.ttf') format('truetype'),
-      url('../fonts/SpaceMono-Regular.svg#SpaceMono-Regular') format('svg');
+  src: url('../fonts/SpaceMono-Regular.woff') format('woff');
   font-weight: normal;
   font-style: normal;
   font-display: swap;
@@ -90,12 +67,7 @@ $gutter-horizontal: 6rem;
 
 @font-face {
   font-family: 'Nineteen Ninety Seven';
-  src: url('../fonts/Nineteen-Ninety-Seven.eot');
-  src: url('../fonts/Nineteen-Ninety-Seven.eot?#iefix') format('embedded-opentype'),
-      url('../fonts/Nineteen-Ninety-Seven.woff2') format('woff2'),
-      url('../fonts/Nineteen-Ninety-Seven.woff') format('woff'),
-      url('../fonts/Nineteen-Ninety-Seven.ttf') format('truetype'),
-      url('../fonts/Nineteen-Ninety-Seven.svg#Nineteen-Ninety-Seven') format('svg');
+  src: url('../fonts/Nineteen-Ninety-Seven.woff') format('woff');
   font-weight: normal;
   font-style: normal;
   font-display: swap;
@@ -103,20 +75,15 @@ $gutter-horizontal: 6rem;
 
 @font-face {
   font-family: 'Erbos Draco 1st Open NBP';
-  src: url('../fonts/Erbos-Draco-1st-Open-NBP.eot');
-  src: url('../fonts/Erbos-Draco-1st-Open-NBP.eot?#iefix') format('embedded-opentype'),
-      url('../fonts/Erbos-Draco-1st-Open-NBP.woff2') format('woff2'),
-      url('../fonts/Erbos-Draco-1st-Open-NBP.woff') format('woff'),
-      url('../fonts/Erbos-Draco-1st-Open-NBP.ttf') format('truetype'),
-      url('../fonts/Erbos-Draco-1st-Open-NBP.svg#Erbos-Draco-1st-Open-NBP') format('svg');
+  src: url('../fonts/Erbos-Draco-1st-Open-NBP.woff') format('woff');
   font-weight: normal;
   font-style: normal;
   font-display: swap;
 }
 
 $font: (
-  family:						('Space Mono', 'Nineteen Ninety Seven'),
-  family-fixed:				('Space Mono', 'Nineteen Ninety Seven'),
+  family:						('Space Mono', 'Nineteen Ninety Seven', 'Erbos Draco 1st Open NBP'),
+  family-fixed:				('Space Mono', 'Nineteen Ninety Seven', 'Erbos Draco 1st Open NBP'),
   weight:						300,
   weight-bold:				600,
   letter-spacing:				0.2rem,

@@ -14,26 +14,26 @@ const SectionAbout = () => {
               What is TCAP?
             </div>
             <div className="about-content">
-              Like a conventional index fund, TCAP.X gives investors real-time price exposure to the total cryptocurrency market cap. Our tokenized investment product is synched via the Cryptex Oracle and Nomics, the market leader in transparent crypto data. Like a conventional index fund, TCAP.X gives investors real-time price exposure to the total cryptocurrency market cap
+            TCAP gives holders real-time price exposure to total cryptocurrency market cap. It's a new, 150% fully backed, fully collateralized asset that’s both audited and accurately representative of the entire cryptocurrency complex by total market capitalization. 
             </div>
             <div className="about-image">
               <img src={image} alt="About" className="about-image" />
             </div>
             <div className="about-details">
               <div className="about-details-item">
-                <Link to="https://docs.google.com/document/d/14dFpXqlzrFqUbG7RFWcyP5z-4VTeUFMNyKo81nbYySQ/edit" className="about-details-text"><img src={whitepaper} className="about-details-icons" alt="Whitepaper" />Whitepaper</Link>
+                <Link to="https://docs.google.com/document/d/14dFpXqlzrFqUbG7RFWcyP5z-4VTeUFMNyKo81nbYySQ/edit" target="_blank" className="about-details-text"><img src={whitepaper} className="about-details-icons" alt="Whitepaper" />Whitepaper</Link>
               </div>
               <div className="about-details-divisor"></div>
               <div className="about-details-item">
-                <Link to="https://docs.cryptex.finance" className="about-details-text"><img src={code} className="about-details-icons" alt="Code" />Code</Link>
+                <Link to="https://docs.cryptex.finance" target="_blank" className="about-details-text"><img src={code} className="about-details-icons" alt="Code" />Code</Link>
               </div>
               <div className="about-details-divisor"></div>
               <div className="about-details-item">
-                <Link to="https://docs.chain.link/docs/get-the-latest-price" className="about-details-text"><img src={oracles} className="about-details-icons" alt="Oracles" />Oracles</Link>
+                <Link to="https://docs.chain.link/docs/get-the-latest-price" target="_blank" className="about-details-text"><img src={oracles} className="about-details-icons" alt="Oracles" />Oracles</Link>
               </div>
               <div className="about-details-divisor"></div>
               <div className="about-details-item">
-                <Link to="https://docs.chain.link/docs/get-the-latest-price" className="about-details-text"><img src={audit} className="about-details-icons" alt="Audit" />Audit</Link>
+                <Link to="https://docs.chain.link/docs/get-the-latest-price" target="_blank" className="about-details-text"><img src={audit} className="about-details-icons" alt="Audit" />Audit</Link>
               </div>
             </div>
       </section>

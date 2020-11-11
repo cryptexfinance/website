@@ -12,26 +12,34 @@ const SectionFeatures = () => {
             How to Use TCAP
           </div>
           <div className="features-row row">
+            <Link to="https://app.cryptex.finance/" target="_blank" >
               <div className="features-box-mint">
                 <img src={mint} className="features-icons" alt="Mint" />
-                <Link to="/" className="features-subtitle heading-secondary">Mint</Link>
-                <p className="features-content content">Gain secure access to state of the art cryptocurrency products with Cryptex, a new digital asset management firm.</p>
+                <div className="features-subtitle heading-secondary">Mint</div>
+                <p className="features-content content">Create and approve a vault, add collateral and begin minting TCAP.</p>
               </div>
+            </Link>
+            <Link to="https://app.uniswap.org/#/swap" target="_blank" >
               <div className="features-box-trade">
                 <img src={trade} className="features-icons" alt="Trade" />
-                <Link to="/" className="features-subtitle heading-secondary">Trade</Link>
-                <p className="features-content content">Gain secure access to state of the art cryptocurrency products with Cryptex, a new digital asset management firm.</p>
+                <div className="features-subtitle heading-secondary">Trade</div>
+                <p className="features-content content">Buy and sell TCAP on Uniswap.</p>
               </div>
+            </Link>
+            <Link to="/">
               <div className="features-box-pool">
                 <img src={pool} className="features-icons" alt="Pool" />
-                <Link to="/" className="features-subtitle heading-secondary">Pool</Link>
-                <p className="features-content content">Gain secure access to state of the art cryptocurrency products with Cryptex, a new digital asset management firm.</p>
+                <div className="features-subtitle heading-secondary">Pool</div>
+                <p className="features-content content">Provide liquidity to TCAP pairs on Uniswap and earn a portion of the trading fees.</p>
               </div>
+            </Link>
+            <Link to="/">
               <div className="features-box-farm">
                 <img src={farm} className="features-icons" alt="Farm" />
-                <Link to="/" className="features-subtitle heading-secondary">Farm</Link>
-                <p className="features-content content">Gain secure access to state of the art cryptocurrency products with Cryptex, a new digital asset management firm.</p>
+                <div className="features-subtitle heading-secondary">Farm</div>
+                <p className="features-content content">Coming soon!</p>
               </div>
+            </Link>
           </div>
       </section>
   )

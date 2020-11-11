@@ -314,17 +314,17 @@
 	position: relative;
 	&-title {
 		position: absolute;
-		width: 22.0625rem;
+		width: 23.0625rem;
 		height: 3rem;
-		left: calc(50% - 22.0625rem/2 - 28.96875rem);
-		top: calc(50% - 3rem/2 - 13.125rem);
+		left: calc(50% - 23.0625rem/2 - 27.96875rem);
+		top: calc(50% - 3rem/2 - 15.125rem);
 		letter-spacing: 0.3px;
 	}
 
 	&-row {
 		
 		position: absolute;
-		top: 20.5625rem;
+		top: calc(50% - 25.1875rem/2 + 5.125rem);//18.5625rem;
 		left: 5rem;
 	}
 

@@ -33,7 +33,7 @@ export default () => {
           <Nav.Link as={Link} to="#community" title="Comunity">
             Community
           </Nav.Link>
-          <a href="https://app.cryptex.finance" className="button-navbar">
+          <a href="https://app.cryptex.finance" target="_blank" rel="noreferrer" className="button-navbar">
             Go to App
           </a>
         </Nav>
