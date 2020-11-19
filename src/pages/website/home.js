@@ -6,12 +6,13 @@ import SectionTeam from './sections/SectionTeam'
 import SectionFaq from './sections/SectionFaq'
 import SectionCommunity from './sections/SectionCommunity'
 
-const Home = () => {
+const Home = (props) => {
+  const tprice = props.price;
 
     return (
       <>
         <header className="section-main">
-          <SectionMain />
+          <SectionMain price={tprice} />
         </header>
         <main>
           <SectionAbout />

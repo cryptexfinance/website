@@ -34,6 +34,7 @@ module.exports = {
       },
     },
     `gatsby-plugin-sass`,
+    `gatsby-plugin-netlify-cms`,
     `gatsby-transformer-remark`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
@@ -57,6 +58,17 @@ module.exports = {
       options: {
         color: `tomato`,
         showSpinner: true,
+      },
+    },
+    {
+      resolve: "gatsby-source-graphql",
+      options: {
+        // Arbitrary name for the remote schema Query type
+        typeName: "CRYPTEX",
+        // Field under which the remote schema will be accessible. You'll use this in your Gatsby query
+        fieldName: "price",
+        // Url to query from
+        url: "https://api.thegraph.com/subgraphs/name/cryptexglobal/tcap-oracle-graph",
       },
     },
   ],
