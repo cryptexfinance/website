@@ -7,18 +7,21 @@ import tcap from '../../../../static/website/home/tcap.svg'
 
 const SectionMain = (props) => {
   const format = (num, decimals) => num.toLocaleString('en-US', {
-    minimumFractionDigits: 2,      
-    maximumFractionDigits: 2,
+    minimumFractionDigits: decimals,      
+    maximumFractionDigits: decimals,
   });
+  const [totalTcapPrice, setTotalTcapPrice] = useState("0.0");
   const [tcapPrice, setTcapPrice] = useState("0.0");
 
   useEffect(() => {
     if (props) {
       const currentTotalPrice = BigNumber.from(props.price);
       const TotalTcapPrice = currentTotalPrice.mul(10000000000);
-      setTcapPrice(format(parseFloat(utils.formatEther(TotalTcapPrice.div(10000000000)))));
+      const tcapprice = currentTotalPrice.div(100000000);
+      setTotalTcapPrice(format(parseFloat(tcapprice), 0));
+      setTcapPrice(format(parseFloat(utils.formatEther(TotalTcapPrice.div(10000000000))),2));
     } else {
-      console.log("Error con props");
+      console.log("Error with props");
       console.log(props);
     }
     
@@ -30,7 +33,7 @@ const SectionMain = (props) => {
       <div className="main-image">
         <img src={image} alt="Main" className="main-image" />
       </div>
-      <div className="main-number-pink">$252,589,639,105</div>
+      <div className="main-number-pink">${totalTcapPrice}</div>
       <div className="main-bold-text">Total Crypto Market Capitalization</div>
       <div className="main-divider"></div>
       <div className="main-number-blue">${tcapPrice}</div>
