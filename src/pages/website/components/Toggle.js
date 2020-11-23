@@ -23,11 +23,11 @@ export class Toggle extends Component {
             openclose = '+';  
         }  
         return (  
-            <div className="toggle">  
+            <div className="toggle" role="button" onClick={this.togglebutton} onKeyDown={this.togglebutton} aria-hidden="true">  
               <div className="question">  
                   {title}  
               </div>
-              <div role="button" tabIndex={0} className="plus" onClick={this.togglebutton} onKeyDown={this.togglebutton}>{openclose}</div>
+              <div className="plus">{openclose}</div>
               <div className="faq-divider"></div>
               {open && (  
                 <>  
