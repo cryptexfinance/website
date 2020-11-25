@@ -14,9 +14,9 @@ const SectionMain = (props) => {
   const [tcapPrice, setTcapPrice] = useState("0.0");
 
   useEffect(() => {
-    if (props) {
-      const price = props.price.tcaps[0].tcap;
-      const currentTotalPrice = BigNumber.from(price);
+    if (typeof(props) !== `undefined`) {
+      const Tprice = props.tcap;
+      const currentTotalPrice = BigNumber.from(Tprice);
       const TotalTcapPrice = currentTotalPrice.mul(10000000000);
       const tcapprice = currentTotalPrice.div(100000000);
       setTotalTcapPrice(format(parseFloat(tcapprice), 0));

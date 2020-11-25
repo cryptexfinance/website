@@ -7,10 +7,6 @@ import bg from '../../static/bg.webp'
 import bgvideom from '../../static/bg.webm'
 
 export default ({ data }) => {
-  //const tprice=data.price.tcaps[0].tcap;
-  console.log("data in indez");
-  console.log(data);
-  console.log("----------------");
 
   return (
     <PageLayout>

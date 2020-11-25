@@ -1,18 +1,13 @@
 import React from 'react';
 import { Link } from 'gatsby';
 // import team1 from '../../../../static/website/team/team-1.png'
-import news from '../../../../static/website/team/news.webp';
+// import news from '../../../../static/website/team/news.webp';
 import FlipCard from '../components/FlipCard';
 
 const SectionTeam = (props) => {
-  console.log("props in team");
-  // props.blog.edges.map(node => console.log(node));
-  console.log(props.blog.edges);
-  console.log("----------------");
+
   const RenderBlog = () => {
-    // console.log(props.blog);
     return props.blog.edges.map (({node}) => (
-      // console.log(data.node.frontmatter.title)
       <div className="newsitem" key={node.id}>
         <img src={node.frontmatter.featuredimage.childImageSharp.fluid.src} className="newsitem-photo" alt="News" />
         <div className="newsitem-title terciary-header">{node.frontmatter.title}</div>

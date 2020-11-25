@@ -7,15 +7,11 @@ import SectionFaq from './sections/SectionFaq'
 import SectionCommunity from './sections/SectionCommunity'
 
 const Home = (props) => {
-  // const tprice = props.price;
-  console.log("props in home");
-  console.log(props);
-  console.log("----------------");
-
+  // const tprice = props.data.price.tcaps[0].tcap;
     return (
       <>
         <header className="section-main">
-          <SectionMain price={props.data.price} />
+          <SectionMain tcap={props.data.price.tcaps[0].tcap} />
         </header>
         <main>
           <SectionAbout />
