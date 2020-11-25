@@ -35,6 +35,18 @@ $grid-width: 114rem;
 $gutter-vertical: 8rem;
 $gutter-horizontal: 6rem;
 
+// Toast
+
+$rt-namespace: 'Toastify';
+$rt-toast-width: 320px !default;
+$rt-toast-background: #fff !default;
+$rt-toast-min-height: 64px !default;
+$rt-toast-max-height: 800px !default;
+$rt-color-progress-default: linear-gradient(to right, #4cd964, #5ac8fa, #007aff, #34aadc, #5856d6, #ff2d55) !default;
+$rt-color-progress-dark: #bb86fc !default;
+$rt-mobile: "only screen and (max-width : 480px)" !default;
+$rt-z-index: 9999 !default;
+
 // Font.
 // @font-face {
 //   font-family: 'Space Mono Bold Italic';

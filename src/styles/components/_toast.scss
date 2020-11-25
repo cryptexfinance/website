@@ -45,11 +45,15 @@
 
     h5 {
       font-size: 1rem;
+      font-family: $font-primary;
+      color: $color-white;
     }
 
     p {
       padding-bottom: 0;
       margin-bottom: 0;
+      font-family: $font-tertiary;
+      color: $color-grey;
     }
 
     button {
