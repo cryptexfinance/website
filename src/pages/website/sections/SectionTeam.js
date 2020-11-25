@@ -13,7 +13,7 @@ const SectionTeam = (props) => {
     // console.log(props.blog);
     return props.blog.edges.map (({node}) => (
       // console.log(data.node.frontmatter.title)
-      <div className="newsitem">
+      <div className="newsitem" key={node.id}>
         <img src={node.frontmatter.featuredimage.childImageSharp.fluid.src} className="newsitem-photo" alt="News" />
         <div className="newsitem-title terciary-header">{node.frontmatter.title}</div>
         <div className="newsitem-description newsdescription">&nbsp;</div>
