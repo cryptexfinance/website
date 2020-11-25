@@ -94,12 +94,12 @@
 .front {
   background: transparent;
   z-index: 2;
-  transform: rotateY(0deg);
+  // transform: rotateY(0deg);
     /* front tile styles go here! */
 }
 .back {
   background: $color-black;
-  transform: rotateY(-180deg);
+  // transform: rotateY(-180deg);
   padding: 20px;
   font-size: 20px;
     /* back tile styles go here! */

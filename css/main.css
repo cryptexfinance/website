@@ -11825,15 +11825,11 @@ body {
 .front {
   background: transparent;
   z-index: 2;
-  -webkit-transform: rotateY(0deg);
-          transform: rotateY(0deg);
   /* front tile styles go here! */
 }
 
 .back {
   background: #212138;
-  -webkit-transform: rotateY(-180deg);
-          transform: rotateY(-180deg);
   padding: 20px;
   font-size: 20px;
   /* back tile styles go here! */
