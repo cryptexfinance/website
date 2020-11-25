@@ -28,46 +28,6 @@ export const query = graphql`
         lastName
         occupation
       }
-    },
-    price {
-      tcaps(
-            first: 1, 
-            orderBy: updatedAt, 
-            orderDirection: desc
-      ) {
-        tcap
-      }
-    },
-    allMarkdownRemark(
-      sort: { order: DESC, fields: [frontmatter___date] }
-      filter: { frontmatter: { templateKey: { eq: "blog-post" } } }
-    ) {
-      edges {
-        node {
-          excerpt(pruneLength: 400)
-          id
-          fields {
-            slug
-          }
-          frontmatter {
-            title
-            templateKey
-            date(formatString: "MMMM DD, YYYY")
-            featuredpost
-            featuredimage {
-              childImageSharp {
-                fluid(maxWidth: 300) {
-                  base64
-                  aspectRatio
-                  src
-                  srcSet
-                  sizes
-                }
-              }
-            }
-          }
-        }
-      }
     }
   }
 `

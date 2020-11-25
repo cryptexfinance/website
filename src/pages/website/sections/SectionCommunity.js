@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Link, graphql } from 'gatsby';
+import { Link } from 'gatsby';
 import { toast, ToastContainer } from "react-toastify";
 import reddit from '../../../../static/website/community/reddit.svg';
 import discord from '../../../../static/website/community/discord.svg';
@@ -7,7 +7,6 @@ import twitter from '../../../../static/website/community/twitter.svg';
 import community from '../../../../static/website/community/community.webp';
 import addToMailchimp from 'gatsby-plugin-mailchimp';
 import toasty from "../../../../static/toasty.png";
-// const community = lazy(() => import( '../../../../static/website/community/community.webp'))
 
 const SectionCommunity = ({ data }) => {
 
@@ -22,7 +21,7 @@ const SectionCommunity = ({ data }) => {
       clearValues();  
     }else{
       console.log(res);
-      Toast("❌ " + res.result, res.msg,"error");
+      Toast("❌    Error", res.msg,"error");
     }
   }
 
@@ -74,7 +73,6 @@ const SectionCommunity = ({ data }) => {
   };
 
   return (
-    // <Suspense fallback={<div>Loading...</div>} >
       <section id="community" className="section-community">
         <ToastContainer />
         <div className="row">
@@ -108,16 +106,7 @@ const SectionCommunity = ({ data }) => {
           <img src={community} className="community-image" alt="Community" />
         </div>
       </section>
-    // </Suspense>
   )
 }
 
 export default SectionCommunity;
-
-export const pageQuery = graphql`
-  query MetadataQuery {
-    image: file(base: { eq: "static/website/community/community.webp" }) {
-      publicURL
-    }
-  }
-`
