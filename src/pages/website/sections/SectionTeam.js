@@ -1,10 +1,27 @@
-import React from 'react'
-import { Link } from 'gatsby'
+import React from 'react';
+import { Link } from 'gatsby';
 // import team1 from '../../../../static/website/team/team-1.png'
-import news from '../../../../static/website/team/news.webp'
-import FlipCard from '../components/FlipCard'
+import news from '../../../../static/website/team/news.webp';
+import FlipCard from '../components/FlipCard';
 
-const SectionTeam = () => {
+const SectionTeam = (props) => {
+  console.log("props in team");
+  // props.blog.edges.map(node => console.log(node));
+  console.log(props.blog.edges);
+  console.log("----------------");
+  const RenderBlog = () => {
+    // console.log(props.blog);
+    return props.blog.edges.map (({node}) => (
+      // console.log(data.node.frontmatter.title)
+      <div className="newsitem">
+        <img src={node.frontmatter.featuredimage.childImageSharp.fluid.src} className="newsitem-photo" alt="News" />
+        <div className="newsitem-title terciary-header">{node.frontmatter.title}</div>
+        <div className="newsitem-description newsdescription">&nbsp;</div>
+        <Link to={node.excerpt} target="_blank" className="newsitem-link link">Read More</Link>
+      </div>
+    ));
+  }
+
   return (
       <section id="team" className="section-team">
         <div className="row">
@@ -41,25 +58,8 @@ const SectionTeam = () => {
           
           <div className="newsbox">
             <div className="newsbox-title heading-secondary">Latest Posts</div>
-            <div className="newsgroup">  
-              <div className="newsitem">
-                <img src={news} className="newsitem-photo" alt="News" />
-                <div className="newsitem-title terciary-header">How to create time-locked functions using Builder and Solidity</div>
-                <div className="newsitem-description newsdescription">Like a conventional index fund, TCAP.X gives investors real-time price...</div>
-                <Link to="/" target="_blank" className="newsitem-link link">Read More</Link>
-              </div>
-              <div className="newsitem">
-                <img src={news} className="newsitem-photo" alt="News" />
-                <div className="newsitem-title terciary-header">How to create time-locked functions using Builder and Solidity</div>
-                <div className="newsitem-description newsdescription">Like a conventional index fund, TCAP.X gives investors real-time price...</div>
-                <Link to="/" target="_blank" className="newsitem-link link">Read More</Link>
-              </div>
-              <div className="newsitem">
-                <img src={news} className="newsitem-photo" alt="News" />
-                <div className="newsitem-title terciary-header">How to create time-locked functions using Builder and Solidity</div>
-                <div className="newsitem-description newsdescription">Like a conventional index fund, TCAP.X gives investors real-time price...</div>
-                <Link to="/" target="_blank" className="newsitem-link link">Read More</Link>
-              </div>
+            <div className="newsgroup">    
+              <RenderBlog/>          
             </div>
           </div>
         </div>

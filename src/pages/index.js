@@ -7,7 +7,10 @@ import bg from '../../static/bg.webp'
 import bgvideom from '../../static/bg.webm'
 
 export default ({ data }) => {
-  const tprice=data.price.tcaps[0].tcap;
+  //const tprice=data.price.tcaps[0].tcap;
+  console.log("data in indez");
+  console.log(data);
+  console.log("----------------");
 
   return (
     <PageLayout>
@@ -15,7 +18,7 @@ export default ({ data }) => {
       <video className="video" playsInline autoPlay muted loop poster={bg} id="bgvid">
         <source src={bgvideom} type="video/mp4" />
       </video>
-        <Home price={tprice}/>
+        <Home data={data}/>
     </PageLayout>
   )
 }
@@ -37,6 +40,37 @@ export const query = graphql`
             orderDirection: desc
       ) {
         tcap
+      }
+    },
+    allMarkdownRemark(
+      sort: { order: DESC, fields: [frontmatter___date] }
+      filter: { frontmatter: { templateKey: { eq: "blog-post" } } }
+    ) {
+      edges {
+        node {
+          excerpt(pruneLength: 400)
+          id
+          fields {
+            slug
+          }
+          frontmatter {
+            title
+            templateKey
+            date(formatString: "MMMM DD, YYYY")
+            featuredpost
+            featuredimage {
+              childImageSharp {
+                fluid(maxWidth: 300) {
+                  base64
+                  aspectRatio
+                  src
+                  srcSet
+                  sizes
+                }
+              }
+            }
+          }
+        }
       }
     }
   }

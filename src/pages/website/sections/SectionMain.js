@@ -15,7 +15,8 @@ const SectionMain = (props) => {
 
   useEffect(() => {
     if (props) {
-      const currentTotalPrice = BigNumber.from(props.price);
+      const price = props.price.tcaps[0].tcap;
+      const currentTotalPrice = BigNumber.from(price);
       const TotalTcapPrice = currentTotalPrice.mul(10000000000);
       const tcapprice = currentTotalPrice.div(100000000);
       setTotalTcapPrice(format(parseFloat(tcapprice), 0));
@@ -24,7 +25,6 @@ const SectionMain = (props) => {
       console.log("Error with props");
       console.log(props);
     }
-    
   }, [props]);
 
   return (
