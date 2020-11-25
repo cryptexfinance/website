@@ -34,6 +34,13 @@ module.exports = {
         name: 'pages',
       },
     },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `markdown-pages`,
+        path: `${__dirname}/src/pages/blog`,
+      },
+    },
     `gatsby-plugin-preload-link-crossorigin`,
     `gatsby-plugin-catch-links`,
     {

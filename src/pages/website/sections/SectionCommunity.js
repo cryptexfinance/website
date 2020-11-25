@@ -1,10 +1,13 @@
-import React, { useState } from 'react'
-import { Link, graphql } from 'gatsby'
-import reddit from '../../../../static/website/community/reddit.svg'
-import discord from '../../../../static/website/community/discord.svg'
-import twitter from '../../../../static/website/community/twitter.svg'
-import community from '../../../../static/website/community/community.webp'
-import addToMailchimp from 'gatsby-plugin-mailchimp'
+import React, { useState } from 'react';
+import { Link, graphql } from 'gatsby';
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+import { Toast } from '../components/Toast';
+import reddit from '../../../../static/website/community/reddit.svg';
+import discord from '../../../../static/website/community/discord.svg';
+import twitter from '../../../../static/website/community/twitter.svg';
+import community from '../../../../static/website/community/community.webp';
+import addToMailchimp from 'gatsby-plugin-mailchimp';
 // const community = lazy(() => import( '../../../../static/website/community/community.webp'))
 
 const SectionCommunity = ({ data }) => {
@@ -13,14 +16,16 @@ const SectionCommunity = ({ data }) => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    const result = await addToMailchimp(email);
-    if(result){
-      if(result.result){
-        console.log(result.msg);
+    const res = await addToMailchimp(email);
+    if(res){
+      if(res.result){
+        console.log(res);
+        Toast(res.result, res.msg);
         clearValues();
       }
     }else{
-      console.log(result.msg);
+      console.log(res);
+      Toast(res.result, res.msg);
     }
   }
 
@@ -35,6 +40,7 @@ const SectionCommunity = ({ data }) => {
   return (
     // <Suspense fallback={<div>Loading...</div>} >
       <section id="community" className="section-community">
+        <ToastContainer />
         <div className="row">
           <div className="community-title header">
             Join Our Community
