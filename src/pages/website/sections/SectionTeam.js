@@ -1,20 +1,31 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { Link } from 'gatsby';
 // import team1 from '../../../../static/website/team/team-1.png'
 // import news from '../../../../static/website/team/news.webp';
 import FlipCard from '../components/FlipCard';
 
 const SectionTeam = (props) => {
+  const [tblog, setBlog] = useState({});
+
+  useEffect(() => {
+    if (typeof(props.blog.edges) !== `undefined`) {
+      setBlog(props.blog);
+    } else {
+      console.log("Error with props");
+      console.log(props);
+    }
+    console.log(tblog);
+  }, [props]);
 
   const RenderBlog = () => {
-    return props.blog.edges.map (({node}) => (
+    return typeof(tblog.edges) !== `undefined` ? tblog.edges.map (({node}) => (
       <div className="newsitem" key={node.id}>
         <img src={node.frontmatter.featuredimage.childImageSharp.fluid.src} className="newsitem-photo" alt="News" />
         <div className="newsitem-title terciary-header">{node.frontmatter.title}</div>
         <div className="newsitem-description newsdescription">&nbsp;</div>
         <Link to={node.excerpt} target="_blank" className="newsitem-link link">Read More</Link>
       </div>
-    ));
+    )) : <div></div>;
   }
 
   return (
