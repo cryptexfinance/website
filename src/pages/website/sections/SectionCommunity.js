@@ -83,15 +83,15 @@ const SectionCommunity = ({ data }) => {
             We’re on a mission to make digital assets simple, accessible, and secure.
           </div>
           <div className="community-icons-row">
-            <Link to="https://www.reddit.com/r/totalcryptomarketcap" target="_blank" className="community-item">
+            <Link to="https://www.reddit.com/r/totalcryptomarketcap" rel="noopener" rel="noreferrer" target="_blank" className="community-item">
               <img src={reddit} className="community-item-icon" alt="Reddit" />
               <div className="community-item-text terciary-header">Reddit</div>
             </Link>
-            <Link to="https://discord.gg/N5zEq6b" target="_blank" className="community-item">
+            <Link to="https://discord.gg/N5zEq6b" rel="noopener" rel="noreferrer" target="_blank" className="community-item">
               <img src={discord} className="community-item-icon" alt="Reddit" />
               <div className="community-item-text terciary-header">Discord</div>
             </Link>
-            <Link to="https://twitter.com/cryptexfinance" target="_blank" className="community-item">
+            <Link to="https://twitter.com/cryptexfinance" rel="noopener" rel="noreferrer" target="_blank" className="community-item">
               <img src={twitter} className="community-item-icon" alt="Reddit" />
               <div className="community-item-text terciary-header">Twitter</div>
             </Link>

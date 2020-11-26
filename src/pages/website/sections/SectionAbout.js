@@ -21,19 +21,19 @@ const SectionAbout = () => {
             </div>
             <div className="about-details">
               <div className="about-details-item">
-                <Link to="https://docs.google.com/document/d/14dFpXqlzrFqUbG7RFWcyP5z-4VTeUFMNyKo81nbYySQ/edit" target="_blank" className="about-details-text"><img src={whitepaper} className="about-details-icons" alt="Whitepaper" />Whitepaper</Link>
+                <Link to="https://docs.google.com/document/d/14dFpXqlzrFqUbG7RFWcyP5z-4VTeUFMNyKo81nbYySQ/edit" rel="noopener" rel="noreferrer" target="_blank" className="about-details-text"><img src={whitepaper} className="about-details-icons" alt="Whitepaper" />Whitepaper</Link>
               </div>
               <div className="about-details-divisor"></div>
               <div className="about-details-item">
-                <Link to="https://docs.cryptex.finance" target="_blank" className="about-details-text"><img src={code} className="about-details-icons" alt="Code" />Code</Link>
+                <Link to="https://docs.cryptex.finance" rel="noopener" rel="noreferrer" target="_blank" className="about-details-text"><img src={code} className="about-details-icons" alt="Code" />Code</Link>
               </div>
               <div className="about-details-divisor"></div>
               <div className="about-details-item">
-                <Link to="https://docs.chain.link/docs/get-the-latest-price" target="_blank" className="about-details-text"><img src={oracles} className="about-details-icons" alt="Oracles" />Oracles</Link>
+                <Link to="https://docs.chain.link/docs/get-the-latest-price" rel="noopener" rel="noreferrer" target="_blank" className="about-details-text"><img src={oracles} className="about-details-icons" alt="Oracles" />Oracles</Link>
               </div>
               <div className="about-details-divisor"></div>
               <div className="about-details-item">
-                <Link to="https://docs.chain.link/docs/get-the-latest-price" target="_blank" className="about-details-text"><img src={audit} className="about-details-icons" alt="Audit" />Audit</Link>
+                <Link to="https://docs.chain.link/docs/get-the-latest-price" rel="noopener" rel="noreferrer" target="_blank" className="about-details-text"><img src={audit} className="about-details-icons" alt="Audit" />Audit</Link>
               </div>
             </div>
       </section>
