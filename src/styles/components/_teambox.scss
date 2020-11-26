@@ -63,44 +63,38 @@
     color: $color-grey;
   }
 
-  .flipped {
-    .front {
-        transform: rotateY(180deg);
-    }
-    .back {
-        transform: rotateY(0deg);
-    }
-  }
+  // .flipped {
+  //   .front {
+  //       transform: rotateY(180deg);
+  //   }
+  //   .back {
+  //       transform: rotateY(0deg);
+  //   }
+  // }
 
   
 }
 
-.front,
-.back {
-  box-sizing: border-box;
-  height: 100%;
-  width: 100%;
-  display: block;
-  background: $color-black;
-  // box-shadow: 10px 10px 5px rgb(95, 77, 99);
-  // padding: 10px;
-  position: relative;
-  // border-radius: 10px;
-  backface-visibility: hidden;
-  transform-style: preserve-3d;
-  transition: -webkit-transform ease 500ms;
-  transition: transform ease 500ms;
-}
-.front {
-  background: transparent;
-  z-index: 2;
-  // transform: rotateY(0deg);
-    /* front tile styles go here! */
-}
-.back {
-  background: $color-black;
-  // transform: rotateY(-180deg);
-  padding: 20px;
-  font-size: 20px;
-    /* back tile styles go here! */
-}
+// .front,
+// .back {
+//   box-sizing: border-box;
+//   height: 100%;
+//   width: 100%;
+//   display: block;
+//   background: $color-black;
+//   position: relative;
+//   backface-visibility: hidden;
+//   transform-style: preserve-3d;
+//   transition: -webkit-transform ease 500ms;
+//   transition: transform ease 500ms;
+// }
+// .front {
+//   background: transparent;
+//   z-index: 2;
+
+// }
+// .back {
+//   background: $color-black;
+//   padding: 20px;
+
+// }

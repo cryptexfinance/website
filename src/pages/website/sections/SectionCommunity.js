@@ -17,7 +17,7 @@ const SectionCommunity = ({ data }) => {
     const res = await addToMailchimp(email);
     if(res.result==="success"){
       console.log(res);
-      Toast("✔️ You’re Subscribed!", "All set!","success");
+      Toast("✔️ You’re Subscribed!", "Keep an eye out for updates from our team.","success");
       clearValues();  
     }else{
       console.log(res);
@@ -91,7 +91,7 @@ const SectionCommunity = ({ data }) => {
               <img src={discord} className="community-item-icon" alt="Reddit" />
               <div className="community-item-text terciary-header">Discord</div>
             </Link>
-            <Link to="https://www.twitter.com/cryptexglobal" target="_blank" className="community-item">
+            <Link to="https://twitter.com/cryptexfinance" target="_blank" className="community-item">
               <img src={twitter} className="community-item-icon" alt="Reddit" />
               <div className="community-item-text terciary-header">Twitter</div>
             </Link>

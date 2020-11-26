@@ -80,17 +80,16 @@ const SectionTeam = (props) => {
                   flipOnHover={true} // default false
                   flipOnClick={false} // default false
                   flipDirection="horizontal" // horizontal or vertical
-                  style={{ width: '200px', height: '200px' }} /// these are optional style, it is not necessary
                 >
                   <FrontSide>
                   <img src={joe} className="team-box-photo" alt="Joseph Sticoo" />
                   <p className="team-box-name">Joseph Sticoo</p>
-                  <p className="team-box-position">Founder &amp; CEO</p>
+                  <p className="team-box-position">Co-Founder &amp; CEO</p>
                 </FrontSide>
-                <BackSide>
+                <BackSide >
                   <p className="team-box-name">Joseph Sticoo</p>
                   <p className="team-box-description">A lifelong trader and investment manager, Joseph brings immense knowledge of traditional market structure to the project. He founded Cryptex Finance with the vision of combining Wall Street with world class blockchain development in building state of the art investment solutions for tomorrow.</p>
-                </BackSide>
+               </BackSide>
               </Flippy>
             </div>
             <div className="team-box">
@@ -98,7 +97,6 @@ const SectionTeam = (props) => {
                   flipOnHover={true} // default false
                   flipOnClick={false} // default false
                   flipDirection="horizontal" // horizontal or vertical
-                  style={{ width: '200px', height: '200px' }} /// these are optional style, it is not necessary
                 >
                 <FrontSide>
                   <img src={preston} className="team-box-photo" alt="Preston Van Loon" />
@@ -107,7 +105,7 @@ const SectionTeam = (props) => {
                 </FrontSide>
                 <BackSide>
                   <p className="team-box-name">Preston Van Loon</p>
-                  <p className="team-box-description">Preston is CEO and co-founder of Prysmatic Labs and leads a team of dedicated blockchain developers in building critical layer one scaling solutions for Ethereum 2.0. Since January 2018, Preston and team have received nearly $2MM in grant funding to pursue these efforts from the Ethereum Foundation, Vitalik Buterin, Ethereum Community Fund, and many other community members. Prysmatic Labs operates the first full Ethereum 2.0 public test network with tens of thousands of validators to date.</p>
+                  <p className="team-box-description">Preston is CEO and co-founder of Prysmatic Labs and leads a team of dedicated blockchain developers in building critical layer one scaling solutions for Ethereum 2.0. Since January 2018, Preston and team have received nearly $2MM in grant funding to pursue these efforts from the Ethereum Foundation, Vitalik Buterin, Ethereum Community Fund, and many other community members. </p>
                 </BackSide>
               </Flippy>
             </div>
@@ -116,7 +114,6 @@ const SectionTeam = (props) => {
                   flipOnHover={true} // default false
                   flipOnClick={false} // default false
                   flipDirection="horizontal" // horizontal or vertical
-                  style={{ width: '200px', height: '200px' }} /// these are optional style, it is not necessary
                 >
                 <FrontSide>
                   <img src={cristian} className="team-box-photo" alt="Cristian Espinoza" />
@@ -134,7 +131,6 @@ const SectionTeam = (props) => {
                   flipOnHover={true} // default false
                   flipOnClick={false} // default false
                   flipDirection="horizontal" // horizontal or vertical
-                  style={{ width: '200px', height: '200px' }} /// these are optional style, it is not necessary
                 >
                 <FrontSide>
                   <img src={tom} className="team-box-photo" alt="Thomas Matzner" />
