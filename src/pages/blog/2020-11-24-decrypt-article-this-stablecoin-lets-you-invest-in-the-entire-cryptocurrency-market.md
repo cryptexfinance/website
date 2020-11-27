@@ -6,6 +6,6 @@ description: Story by Decrypt
 featuredpost: true
 featuredimage: /img/decrypt-image.png
 tags:
-  - Media
+  - Decrypt
 ---
 https://decrypt.co/29674/tcap-stablecoin-development-by-cryptex
