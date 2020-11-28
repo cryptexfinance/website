@@ -312,7 +312,8 @@
     height: 54px;
     // left: calc(50% - 300px/2 - 2.7px);
     left: 28px;
-    top: 436px;
+    // top: 436px;
+    top: calc(50% - 22px/2 - 10.55px);
     font-size: 14px;
     line-height: 16px;
   }
@@ -635,7 +636,7 @@
   }
   
   .section-faq {
-    height: 160vh;
+    height: 16git 0vh;
     position: relative;
     // background-color: peachpuff;
   }
