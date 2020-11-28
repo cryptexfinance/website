@@ -1,12 +1,11 @@
 ---
 templateKey: blog-post
-title: "Decrypt Article: This stablecoin lets you invest in the entire
-  cryptocurrency market"
+title: This stablecoin lets you invest in the entire cryptocurrency market
 date: 2020-05-22T02:23:03.889Z
-description: "Sharing an article Decrypt wrote about us. "
+description: Story by Decrypt
 featuredpost: true
 featuredimage: /img/decrypt-image.png
 tags:
-  - Media
+  - Decrypt
 ---
 https://decrypt.co/29674/tcap-stablecoin-development-by-cryptex
