@@ -29,12 +29,8 @@ const SectionTeam = (props) => {
               featuredpost
               featuredimage {
                 childImageSharp {
-                  fluid(maxWidth: 300) {
-                    base64
-                    aspectRatio
-                    src
-                    srcSet
-                    sizes
+                  fluid(maxWidth: 600) {
+                      ...GatsbyImageSharpFluid
                   }
                 }
               }

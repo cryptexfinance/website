@@ -6,7 +6,7 @@ import Home from "./website/home";
 import bg from '../../static/bg.webp'
 import bgvideom from '../../static/bg.webm'
 
-export default () => {
+export default ({ data }) => {
 
   return (
     <PageLayout>
@@ -14,7 +14,7 @@ export default () => {
       <video className="video" autoPlay loop muted playsInline poster={bg} id="bgvid">
         <source src={bgvideom} type="video/mp4" />
       </video>
-        <Home/>
+        <Home data={data}/>
     </PageLayout>
   )
 }

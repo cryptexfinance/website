@@ -5,11 +5,6 @@
     width: 100vw;
   }
 
-  .header {
-    // font-weight: 400;
-    font-size: 22px !important;
-    line-height: 48px;
-  }
   .main {
     &-title{
       // position: absolute;
@@ -101,7 +96,7 @@
       width: 495.31px;
       height: 508.6px;
       left: calc(50% - 495.31px/2 - 20px);
-      top: calc(50% - 508.6px/2 + 228px);
+      top: calc(50% - 508.6px/2 + 268px);
     }
 
     &-details {
@@ -317,13 +312,13 @@
     height: 54px;
     // left: calc(50% - 300px/2 - 2.7px);
     left: 28px;
-    top: 406px;
+    top: 436px;
     font-size: 14px;
     line-height: 16px;
   }
 
   .header {
-    font-size: 24px;
+    font-size: 22px;
 		line-height: 36px;
 		display: flex;
 		align-items: center;
@@ -620,7 +615,7 @@
       width: 579.04px;
       height: 572.96px;
       left: calc(50% - 579.04px/2 - 14px);
-      top: calc(50% - 572.96px/2 + 128px);
+      top: calc(50% - 572.96px/2 + 168px);
     }
   }
 
@@ -635,12 +630,12 @@
   }
   
   .section-team {
-    height: 265vh;
+    height: 225vh;
     position: relative;
   }
   
   .section-faq {
-    height: 180vh;
+    height: 160vh;
     position: relative;
     // background-color: peachpuff;
   }
