@@ -1,8 +1,14 @@
-@media only screen and (max-width: 420px){
+@media only screen and (min-width: 375px) and (max-width: 480px){
+  body, html { overflow-x:hidden; }
   body {
     // height: 100vh;
-    width: 100%;
-    // overflow: hidden;
+    width: 100vw;
+  }
+
+  .header {
+    // font-weight: 400;
+    font-size: 22px !important;
+    line-height: 48px;
   }
   .main {
     &-title{
@@ -56,6 +62,10 @@
       left: calc(50% - 30px/2 - 140.7px);
       top: calc(50% - 22px/2 - 149.55px);
 
+      &-image {
+        width: 20px;
+      }
+
       &-text {
 				font-size: 14px;
         line-height: 37px;
@@ -70,7 +80,7 @@
       width: 312px;
       height: 36px;
       left: calc(50% - 312px/2 - 1.5px);
-      top: calc(50% - 36px/2 - 525px);
+      top: calc(50% - 36px/2 - 425px);
       font-size: 24px;
       line-height: 36px;
       letter-spacing: 0.3px;
@@ -80,7 +90,7 @@
       width: 315px;
       height: 247px;
       left: calc(50% - 315px/2);
-      top: calc(50% - 247px/2 - 345.5px);
+      top: calc(50% - 247px/2 - 245.5px);
       font-size: 14px;
       line-height: 20px;
       letter-spacing: 0.3px;
@@ -91,7 +101,7 @@
       width: 495.31px;
       height: 508.6px;
       left: calc(50% - 495.31px/2 - 20px);
-      top: calc(50% - 508.6px/2 + 168px);
+      top: calc(50% - 508.6px/2 + 228px);
     }
 
     &-details {
@@ -99,7 +109,7 @@
       width: 315px;
       height: 353px;
       left: calc(50% - 495.31px/2 + 92px);
-      top: calc(50% - 508.6px/2 - 28px);
+      top: calc(50% - 508.6px/2 + 88px);
 
       &-divisor {
         position: absolute;
@@ -136,7 +146,7 @@
       width: 312px;
       height: 36px;
       left: calc(50% - 312px/2 - 1.5px);
-      top: calc(50% - 36px/2 - 644px);
+      top: calc(50% - 36px/2 - 444px);
       font-size: 24px;
       line-height: 36px;
       letter-spacing: 0.3px;
@@ -147,7 +157,7 @@
       width: 355px;
       // height: 403px;
       left: 50px;
-      top: calc(50% - 36px/2 - 564px);
+      top: calc(50% - 36px/2 - 364px);
     }
 
     &-icons {
@@ -273,7 +283,7 @@
       width: 312px;
       height: 36px;
       left: calc(50% - 312px/2 - 7.5px);
-      top: calc(50% - 36px/2 - 777px);
+      top: calc(50% - 36px/2 - 517px);
       font-size: 24px;
       line-height: 36px;
       letter-spacing: 0.3px;
@@ -287,7 +297,7 @@
       line-height: 22px;
       letter-spacing: 0.3px;
       left: calc(50% - 305px/2 - 11px);
-      top: calc(50% - 44px/2 - 711px);
+      top: calc(50% - 44px/2 - 441px);
     }
   
     &-divider {
@@ -324,7 +334,7 @@
     position: absolute  ;
     width: 100%;
     // left: calc(50% - 10.6875rem/2 - 33.6562Z5rem);
-    top: calc(50% - 166px/2 - 573.7px);
+    top: calc(50% - 166px/2 - 283.7px);
     // background-color: #212138;
   }
 
@@ -375,7 +385,7 @@
   }
 
   .newsbox {
-    // position: absolute;
+    position: absolute;
   
     &-title {
       position: absolute;
@@ -383,14 +393,14 @@
       height: 24px;
       font-size: 22px;
       line-height: 24px;
-      left: calc(50% - 204px/2 - 55.5px);
-      top: calc(50% - 24px/2 + 325px);
+      left: calc(50% - 204px/2 + 140.5px);
+      top: calc(50% - 166px/2 + 1625px);
     }
 
     .newsgroup {
       position: absolute;
-      left: 5px;//calc(50% - 204px/2 + 7.8px);
-      top: calc(50% - 24px/2 + 386px);
+      left: 10px;//calc(50% - 204px/2 + 7.8px);
+      top: calc(50% - 166px/2 + 1706px);
       // padding-left: 22.76px;
     }
 
@@ -438,14 +448,14 @@
       width: 100%;
       // left: calc(50% - 312px/2 - 7.5px);
       left: 40px;
-      top: calc(50% - 36px/2 - 206px);
+      top: calc(50% - 36px/2 + 86px);
     }
 
     &-title {
       width: 312px;
       height: 36px;
       left: calc(50% - 312px/2 - 7.5px);
-      top: calc(50% - 36px/2 - 346px);
+      top: calc(50% - 36px/2 - 146px);
       font-size: 24px;
       line-height: 36px;
       letter-spacing: 0.3px;
@@ -455,7 +465,7 @@
       width: 305px;
       height: 22px;
       left: calc(50% - 305px/2 - 11px);
-      top: calc(50% - 22px/2 - 291px);
+      top: calc(50% - 22px/2 - 91px);
       font-size: 16px;
       line-height: 22px;
       letter-spacing: 0.3px;
@@ -601,7 +611,7 @@
 
   .section-main {
     position: relative;
-    height: 120vh;
+    height: 150vh;
     // display: block; 
     // padding-bottom: 27.66%;
     // background-color: khaki;
@@ -615,27 +625,28 @@
   }
 
   .section-about {
-    height: 145vh;
+    height: 185vh;
     position: relative;
   }
 
   .section-features {
-    height: 175vh;
+    height: 225vh;
     position: relative;
   }
   
   .section-team {
-    height: 205vh;
+    height: 265vh;
     position: relative;
   }
   
   .section-faq {
+    height: 180vh;
     position: relative;
     // background-color: peachpuff;
   }
   
   .section-community {
-    height: 145vh;
+    height: 185vh;
     position: relative;
     // background-color: darkorange;
   }

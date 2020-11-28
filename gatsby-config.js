@@ -135,6 +135,12 @@ module.exports = {
           endpoint: 'https://finance.us2.list-manage.com/subscribe/post?u=7bc366d2c0af3bd7b71582974&amp;id=6c20752368', // string; add your MC list endpoint here; see instructions below
           timeout: 3500, // number; the amount of time, in milliseconds, that you want to allow mailchimp to respond to your request before timing out. defaults to 3500
       },
-  },
+    },
+    {
+      resolve: "gatsby-plugin-webpack-bundle-analyser-v2",
+      options: {
+        devMode: true,
+      },
+    },
   ],
 }

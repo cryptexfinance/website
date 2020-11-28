@@ -6,15 +6,15 @@ import Home from "./website/home";
 import bg from '../../static/bg.webp'
 import bgvideom from '../../static/bg.webm'
 
-export default ({ data }) => {
+export default () => {
 
   return (
     <PageLayout>
       <SEO title="Cryptex | TCAP" />
-      <video className="video" playsInline autoPlay muted loop poster={bg} id="bgvid">
+      <video className="video" autoPlay loop muted playsInline poster={bg} id="bgvid">
         <source src={bgvideom} type="video/mp4" />
       </video>
-        <Home data={data}/>
+        <Home/>
     </PageLayout>
   )
 }

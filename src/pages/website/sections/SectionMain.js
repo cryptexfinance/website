@@ -44,7 +44,7 @@ const SectionMain = () => {
   return (
   
     <>
-      <div className="main-title header">The World's First<br/>Total Crypto Market Cap Token</div>
+      <div className="main-title header">The World's <br/>First Total Crypto<br/>Market Cap Token</div>
       <div className="main-image">
         <img src={image} alt="Main" className="main-image" />
       </div>
@@ -57,7 +57,7 @@ const SectionMain = () => {
         <div className="main-tcap-text">&nbsp;TCAP</div>
       </div>
       {/* <div className="main-number-green">+7.5%</div> */}
-      <Link to="https://app.cryptex.finance" rel="noopener" rel="noreferrer" target="_blank">
+      <Link to="https://app.cryptex.finance" rel="noreferrer" target="_blank">
         <button className="button-pink main-button">Go to App</button>
       </Link>
     </>

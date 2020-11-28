@@ -60,7 +60,7 @@ const SectionTeam = (props) => {
         <img src={node.frontmatter.featuredimage.childImageSharp.fluid.src} className="newsitem-photo" alt="News" />
         <div className="newsitem-title terciary-header">{node.frontmatter.title}</div>
         <div className="newsitem-description newsdescription">&nbsp;</div>
-        <Link to={node.excerpt} rel="noopener" rel="noreferrer" target="_blank" className="newsitem-link link">Read More</Link>
+        <Link to={node.excerpt} rel="noreferrer" target="_blank" className="newsitem-link link">Read More</Link>
       </div>
     )) : <div></div>;
   }
@@ -83,7 +83,7 @@ const SectionTeam = (props) => {
                 >
                   <FrontSide>
                   <img src={joe} className="team-box-photo" alt="Joseph Sticoo" />
-                  <p className="team-box-name">Joseph Sticoo</p>
+                  <p className="team-box-name">Joe Sticoo</p>
                   <p className="team-box-position">Co-Founder &amp; CEO</p>
                 </FrontSide>
                 <BackSide >

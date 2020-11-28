@@ -12,21 +12,21 @@ const SectionFeatures = () => {
             How to Use TCAP
           </div>
           <div className="features-row row">
-            <Link to="https://app.cryptex.finance/" rel="noopener" rel="noreferrer" target="_blank" >
+            <Link to="https://app.cryptex.finance/" rel="noreferrer" target="_blank" >
               <div className="features-box-mint">
                 <img src={mint} className="features-icons" alt="Mint" />
                 <div className="features-subtitle heading-secondary">Mint</div>
                 <p className="features-content content">Create and approve a vault, add collateral and begin minting TCAP.</p>
               </div>
             </Link>
-            <Link to="https://app.uniswap.org/#/swap" rel="noopener" rel="noreferrer" target="_blank" >
+            <Link to="https://app.uniswap.org/#/swap" rel="noreferrer" target="_blank" >
               <div className="features-box-trade">
                 <img src={trade} className="features-icons" alt="Trade" />
                 <div className="features-subtitle heading-secondary">Trade</div>
                 <p className="features-content content">Buy and sell TCAP on Uniswap.</p>
               </div>
             </Link>
-            <Link to="https://app.uniswap.org/#/pool" rel="noopener" rel="noreferrer" target="_blank" >
+            <Link to="https://app.uniswap.org/#/pool" rel="noreferrer" target="_blank" >
               <div className="features-box-pool">
                 <img src={pool} className="features-icons" alt="Pool" />
                 <div className="features-subtitle heading-secondary">Pool</div>
