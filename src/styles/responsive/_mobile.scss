@@ -1,4 +1,4 @@
-@media only screen and (min-width: 375px) and (max-width: 480px){
+@media only screen and (max-width: 420px){
   body, html { overflow-x:hidden; }
   body {
     // height: 100vh;
@@ -371,13 +371,14 @@
       font-size: 12px;
       line-height: 16px;
       letter-spacing: -0.2px;
+      margin-top: 20px;
       // background-color: #212138;
     }
   }
 
-  .flippy-front, .flippy-back {
-    background: #212138 !important;
-    background-color: #212138 !important;
+  .flippy-back {
+    background: $color-black !important;
+    background-color: $color-black !important;
   }
 
   .newsbox {
@@ -438,8 +439,9 @@
 
       &-tagbox { 
         position: relative;
-        background-color:#eee;
-        border: 1px solid #ccc;
+        color: $color-dark-clean;
+        background-color:$color-black;
+        border: 1px solid $shadow-purple-neon;
         margin:0px 20px 20px 0px;
         line-height: 30px;
         padding:2px 0 2px 2px;
@@ -447,7 +449,7 @@
         // margin-bottom: 24px;
          
       }
-      .taglink  { 
+      .taglink  {
         font-size: 16px;
         padding:2px;
       }
@@ -615,6 +617,7 @@
         position: absolute;
         width: 316px;
         height: 54px;
+        font-size: 12px;
         left: calc(50% - 316px/2 - 1px);
         top: calc(50% - 24px/2 + 45px);
       }

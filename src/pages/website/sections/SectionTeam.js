@@ -79,12 +79,12 @@ const SectionTeam = (props) => {
                   flipOnClick={false} // default false
                   flipDirection="horizontal" // horizontal or vertical
                 >
-                  <FrontSide>
+                  <FrontSide animationDuration="0">
                   <img src={joe} className="team-box-photo" alt="Joseph Sticoo" />
                   <p className="team-box-name">Joe Sticoo</p>
                   <p className="team-box-position">Co-Founder &amp; CEO</p>
                 </FrontSide>
-                <BackSide >
+                <BackSide animationDuration="0">
                   <p className="team-box-name">Joseph Sticoo</p>
                   <p className="team-box-description">A lifelong trader and investment manager, Joseph brings immense knowledge of traditional market structure to the project. He founded Cryptex Finance with the vision of combining Wall Street with world class blockchain development in building state of the art investment solutions for tomorrow.</p>
                </BackSide>
@@ -96,12 +96,12 @@ const SectionTeam = (props) => {
                   flipOnClick={false} // default false
                   flipDirection="horizontal" // horizontal or vertical
                 >
-                <FrontSide>
+                <FrontSide animationDuration="0">
                   <img src={preston} className="team-box-photo" alt="Preston Van Loon" />
                   <p className="team-box-name">Preston Van Loon</p>
                   <p className="team-box-position">Co-Founder &amp; Blockchain Lead</p>
                 </FrontSide>
-                <BackSide>
+                <BackSide animationDuration="0">
                   <p className="team-box-name">Preston Van Loon</p>
                   <p className="team-box-description">Preston is CEO and co-founder of Prysmatic Labs and leads a team of dedicated blockchain developers in building critical layer one scaling solutions for Ethereum 2.0. Since January 2018, Preston and team have received nearly $2MM in grant funding to pursue these efforts from the Ethereum Foundation, Vitalik Buterin, Ethereum Community Fund, and many other community members. </p>
                 </BackSide>
@@ -113,12 +113,12 @@ const SectionTeam = (props) => {
                   flipOnClick={false} // default false
                   flipDirection="horizontal" // horizontal or vertical
                 >
-                <FrontSide>
+                <FrontSide animationDuration="0">
                   <img src={cristian} className="team-box-photo" alt="Cristian Espinoza" />
                   <p className="team-box-name">Cristian Espinoza</p>
                   <p className="team-box-position">Blockchain Developer</p>
                 </FrontSide>
-                <BackSide>
+                <BackSide animationDuration="0">
                   <p className="team-box-name">Cristian Espinoza</p>
                   <p className="team-box-description">Smart Contract Developer certified by ConsenSys, Coffee Lover & Prev. Devcon Scholar at Ethereum Foundation. Leader of the Honduras Ethereum Community.</p>
                 </BackSide>
@@ -130,12 +130,12 @@ const SectionTeam = (props) => {
                   flipOnClick={false} // default false
                   flipDirection="horizontal" // horizontal or vertical
                 >
-                <FrontSide>
+                <FrontSide animationDuration="0">
                   <img src={tom} className="team-box-photo" alt="Thomas Matzner" />
                   <p className="team-box-name">Thomas Matzner</p>
                   <p className="team-box-position">Co-Founder &amp; CBO</p>
                 </FrontSide>
-                <BackSide>
+                <BackSide animationDuration="0">
                   <p className="team-box-name">Thomas Matzner</p>
                   <p className="team-box-description">Thomas has led planning, branding and marketing initiatives at world class companies and startups. He has taken high volume and celebrity endorsed products from concept to launch with an omnichannel strategy. Thomas' passion is building brands with bold visions of leaving a legacy.</p>
                 </BackSide>

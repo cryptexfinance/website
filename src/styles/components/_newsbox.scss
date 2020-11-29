@@ -50,8 +50,9 @@
   }
 
   &-tagbox { 
-    background-color:#eee;
-    border: 1px solid #ccc;
+    color: $color-dark-clean !important;
+    background-color:$color-black;
+    border: 1px solid $shadow-purple-neon;
     margin:0px 10px 10px 0px;
     line-height: 200%;
     padding:2px 0 2px 2px;
