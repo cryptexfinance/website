@@ -1,25 +1,28 @@
-import React,{ useEffect, useState } from "react"
+import React from "react"
 // import ThemeContext from "../utils/theme"
 import { Navbar, Nav } from "react-bootstrap"
 import { Link } from "gatsby"
+import Media from 'react-media';
 
 export default () => {
-  const mediaQuery = "screen and (min-width: 768px)";
-  const mql = window.matchMedia(mediaQuery);
-  const [showDesktopMenu, setShowDesktopMenu] = useState(mql.matches);
+  // const mediaQuery = "screen and (min-width: 768px)";
+  // const mql = typeof window !== `undefined` ? window.matchMedia(mediaQuery) : null;
+  // const [showDesktopMenu, setShowDesktopMenu] =  mql ? useState(mql.matches) : true;
 
-  useEffect(() => {
-    const handleMediaChange = (media) => {
-      setShowDesktopMenu(media.matches);
-    };
+  // useEffect(() => {
+  //   if(mql) {
+  //     const handleMediaChange = (media) => {
+  //       setShowDesktopMenu(media.matches);
+  //     };
 
-    mql.addEventListener("change", handleMediaChange);
-    setShowDesktopMenu(mql.matches);
+  //     mql.addEventListener("change", handleMediaChange);
+  //     setShowDesktopMenu(mql.matches);
 
-    return () => {
-      mql.removeEventListener("change", handleMediaChange);
-    };
-  }, [mql]);
+  //     return () => {
+  //       mql.removeEventListener("change", handleMediaChange);
+  //     };
+  //   }
+  // }, [mql]);
   // const { toString } = useContext(ThemeContext)
   // const isMobile = width <= 500;
 
@@ -96,9 +99,15 @@ export default () => {
 
   return (
     <>
-      { showDesktopMenu ? 
-          <NavDesktop/> :
-          <NavMobile/> }
+      <Media query={{ maxWidth: 420 }}>
+      {matches =>
+            matches ? (
+              <NavMobile/> 
+            ) : (
+              <NavDesktop/>
+            )
+          }      
+      </Media>
     </>
   )
 }
