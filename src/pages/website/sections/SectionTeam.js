@@ -1,10 +1,16 @@
 import React, { useEffect, useState } from 'react';
 import { Link, useStaticQuery, graphql } from 'gatsby';
 import Flippy, { FrontSide, BackSide } from 'react-flippy';
+import Media from 'react-media';
 import joe from '../../../../static/website/team/joe.webp'
 import preston from '../../../../static/website/team/preston.webp'
 import cristian from '../../../../static/website/team/cristian.webp'
 import tom from '../../../../static/website/team/tom.webp'
+import joem from '../../../../static/website/team/joem.webp'
+import prestonm from '../../../../static/website/team/prestonm.webp'
+import cristianm from '../../../../static/website/team/cristianm.webp'
+import tomm from '../../../../static/website/team/tomm.webp'
+
 
 const SectionTeam = (props) => {
   const [tblog, setBlog] = useState({});
@@ -80,7 +86,15 @@ const SectionTeam = (props) => {
                   flipDirection="horizontal" // horizontal or vertical
                 >
                   <FrontSide animationDuration="0">
-                  <img src={joe} className="team-box-photo" alt="Joseph Sticoo" />
+                  <Media query={{ maxWidth: 420 }}>
+                    {matches =>
+                          matches ? (
+                            <img src={joem} className="team-box-photo" alt="Joseph Sticoo" /> 
+                          ) : (
+                            <img src={joe} className="team-box-photo" alt="Joseph Sticoo" />
+                          )
+                    }      
+                  </Media>
                   <p className="team-box-name">Joe Sticoo</p>
                   <p className="team-box-position">Co-Founder &amp; CEO</p>
                 </FrontSide>
@@ -97,7 +111,15 @@ const SectionTeam = (props) => {
                   flipDirection="horizontal" // horizontal or vertical
                 >
                 <FrontSide animationDuration="0">
-                  <img src={preston} className="team-box-photo" alt="Preston Van Loon" />
+                  <Media query={{ maxWidth: 420 }}>
+                    {matches =>
+                          matches ? (
+                            <img src={prestonm} className="team-box-photo" alt="Preston Van Loon" /> 
+                          ) : (
+                            <img src={preston} className="team-box-photo" alt="Preston Van Loon" />
+                          )
+                    }      
+                  </Media>
                   <p className="team-box-name">Preston Van Loon</p>
                   <p className="team-box-position">Co-Founder &amp; Blockchain Lead</p>
                 </FrontSide>
@@ -114,7 +136,15 @@ const SectionTeam = (props) => {
                   flipDirection="horizontal" // horizontal or vertical
                 >
                 <FrontSide animationDuration="0">
-                  <img src={cristian} className="team-box-photo" alt="Cristian Espinoza" />
+                  <Media query={{ maxWidth: 420 }}>
+                    {matches =>
+                          matches ? (
+                            <img src={cristianm} className="team-box-photo" alt="Cristian Espinoza" />
+                          ) : (
+                            <img src={cristian} className="team-box-photo" alt="Cristian Espinoza" />
+                          )
+                    }      
+                  </Media>
                   <p className="team-box-name">Cristian Espinoza</p>
                   <p className="team-box-position">Blockchain Developer</p>
                 </FrontSide>
@@ -131,7 +161,15 @@ const SectionTeam = (props) => {
                   flipDirection="horizontal" // horizontal or vertical
                 >
                 <FrontSide animationDuration="0">
-                  <img src={tom} className="team-box-photo" alt="Thomas Matzner" />
+                  <Media query={{ maxWidth: 420 }}>
+                    {matches =>
+                          matches ? (
+                            <img src={tomm} className="team-box-photo" alt="Thomas Matzner" />
+                          ) : (
+                            <img src={tom} className="team-box-photo" alt="Thomas Matzner" />
+                          )
+                    }      
+                  </Media>
                   <p className="team-box-name">Thomas Matzner</p>
                   <p className="team-box-position">Co-Founder &amp; CBO</p>
                 </FrontSide>
