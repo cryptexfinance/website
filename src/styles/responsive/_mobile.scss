@@ -5,6 +5,76 @@
     width: 100vw;
   }
 
+  .navbar,
+  .navbar div {
+    height: 49px;
+    background: $color-black;
+    font-family: $font-primary;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 12px;
+    letter-spacing: 0.6px;
+    padding: 0%;
+  }
+
+  .responsive-app-button {
+    position: absolute;
+    width: 140px;
+    margin-left: auto; 
+    background: $color-navbar-button;
+		border: 1px solid $color-primary-pink;
+		box-sizing: border-box;
+    box-shadow: 0px 10px 49px -10px $shadow-navbar-button;
+    padding-left: 30px;
+  }
+
+  .menu-logo {
+    width: 30px;
+  }
+
+  .navbar-toggler,
+  .navbar-toggler-icon {
+    // display: none !important;
+    position: relative;
+    // left: -25px;
+    left: -180px;
+  }
+
+  .navbar-toggler:hover, .navbar-toggler:focus {
+    position: relative;
+    padding: 10px 20px 10px 20px;
+    // left: -25;
+  }
+
+  .mobile_menu_bar:before {
+    display:none
+  }
+  .mobile_menu_bar::after {
+    font-size: 12px;
+    font-family: $font-primary;
+    content: "MENU";
+    position: relative;
+    // left: -175px;
+    padding: 10px 20px 10px 20px;
+    // background-color: #3e4555;
+    color: $color-dark-clean!important;
+    text-decoration: none;
+    // cursor: pointer;
+    &:focus {
+			outline:none !important;
+		}
+  }
+  .mobile_nav.opened .mobile_menu_bar:after {
+    content: "CLOSE";
+  }
+
+  .button-navbar {
+    color: $color-grey;
+		border: 0px solid $color-primary-pink;
+		box-sizing: border-box;
+	}
+
   .main {
     &-title{
       // position: absolute;
