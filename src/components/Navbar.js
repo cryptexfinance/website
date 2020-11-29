@@ -29,7 +29,7 @@ export default () => {
   const NavMobile = () => {
     return (
       <>
-        <Navbar fixed="top" collapseOnSelect expand="sm">
+        <Navbar fixed="top" expand="sm">
           <Navbar.Brand className="pl-5 ml-5" as={Link} to="/">
             <img className="menu-logo" src="/logom.svg" alt="Logo" />
           </Navbar.Brand>
