@@ -1,16 +1,26 @@
 import React, { useEffect, useState } from 'react';
 import { Link, useStaticQuery, graphql } from 'gatsby';
 import Flippy, { FrontSide, BackSide } from 'react-flippy';
+// const Media = lazy(() =>  'react-media');
+// const joe = lazy(() => import('../../../../static/website/team/joe.webp'));
+// const preston = lazy(() => import('../../../../static/website/team/preston.webp'));
+// const cristian = lazy(() => import('../../../../static/website/team/cristian.webp'));
+// const tom = lazy(() => import('../../../../static/website/team/tom.webp'));
+// const joem = lazy(() => import('../../../../static/website/team/joem.webp'));
+// const prestonm = lazy(() => import('../../../../static/website/team/prestonm.webp'));
+// const cristianm = lazy(() => import('../../../../static/website/team/cristianm.webp'));
+// const tomm = lazy(() => import('../../../../static/website/team/tomm.webp'));
 import Media from 'react-media';
-import joe from '../../../../static/website/team/joe.webp'
-import preston from '../../../../static/website/team/preston.webp'
-import cristian from '../../../../static/website/team/cristian.webp'
-import tom from '../../../../static/website/team/tom.webp'
-import joem from '../../../../static/website/team/joem.webp'
-import prestonm from '../../../../static/website/team/prestonm.webp'
-import cristianm from '../../../../static/website/team/cristianm.webp'
-import tomm from '../../../../static/website/team/tomm.webp'
+import joe from '../../../../static/website/team/joe.webp';
+import preston from '../../../../static/website/team/preston.webp';
+import cristian from '../../../../static/website/team/cristian.webp';
+import tom from '../../../../static/website/team/tom.webp';
+import joem from '../../../../static/website/team/joem.webp';
+import prestonm from '../../../../static/website/team/prestonm.webp';
+import cristianm from '../../../../static/website/team/cristianm.webp';
+import tomm from '../../../../static/website/team/tomm.webp';
 
+// const renderLoader = () => <p>Loading</p>;
 
 const SectionTeam = (props) => {
   const [tblog, setBlog] = useState({});
@@ -70,6 +80,7 @@ const SectionTeam = (props) => {
   }
 
   return (
+    <>
       <section id="team" className="section-team">
         <div className="row">
           <div className="team-title header">
@@ -95,11 +106,11 @@ const SectionTeam = (props) => {
                           )
                     }      
                   </Media>
-                  <p className="team-box-name">Joe Sticoo</p>
+                  <p className="team-box-name">Joe Sticco</p>
                   <p className="team-box-position">Co-Founder &amp; CEO</p>
                 </FrontSide>
                 <BackSide animationDuration="0">
-                  <p className="team-box-name">Joseph Sticoo</p>
+                  <p className="team-box-name">Joe Sticco</p>
                   <p className="team-box-description">A lifelong trader and investment manager, Joseph brings immense knowledge of traditional market structure to the project. He founded Cryptex Finance with the vision of combining Wall Street with world class blockchain development in building state of the art investment solutions for tomorrow.</p>
                </BackSide>
               </Flippy>
@@ -192,6 +203,7 @@ const SectionTeam = (props) => {
           </div>
         </div>
       </section>
+    </>
   )
 }
 

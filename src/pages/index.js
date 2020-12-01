@@ -4,15 +4,17 @@ import { PageLayout } from "../components"
 import { SEO } from "../utils"
 import Home from "./website/home";
 import bg from '../../static/bg.webp'
-import bgvideom from '../../static/bg.webm'
+import bgvideo from '../../static/bg.mp4'
+// import bgvideom from '../../static/bg.webm'
 
 export default ({ data }) => {
 
   return (
     <PageLayout>
       <SEO title="Cryptex | TCAP" />
-      <video className="video" autoPlay loop muted playsInline poster={bg} id="bgvid">
-        <source src={bgvideom} type="video/mp4" />
+      <video playsInline autoPlay loop muted poster={bg} className="video"  id="bgvid">
+        <source src={bgvideo} type="video/mp4" />
+        {/* <source src={bgvideom} type="video/mp4" /> */}
       </video>
         <Home data={data}/>
     </PageLayout>
