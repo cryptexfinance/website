@@ -18,6 +18,55 @@
     padding: 0%;
   }
 
+  .nav-links a {
+    // border: 1px solid red;
+    height: 100vh;
+    background: $color-black;
+    // padding-left: 48px !important;
+    // padding-right: 48px !important;
+    padding-top: 60px;
+    padding-bottom: 44px;
+    text-align:center;
+    font-size: 18px;
+    line-height: 28px;
+    // display: flex;
+    // align-items: center;
+    // text-align: center;
+    letter-spacing: 0.6px;
+    // margin-right: 0% !important;
+    color: $color-grey !important;
+
+    &::first-child { 
+      margin-top: 60px;
+    }
+
+    &:not(:first-child) { 
+      padding-top: 44px;
+    }
+
+    &:hover {
+      color: $color-dark-clean !important;
+      text-decoration: none;
+    }
+  }
+
+  .nav-links-divisor {
+    top: -3px;
+			position: relative;
+			width: 300px;
+      height: 10px;
+      line-height: 28px;
+      background: $color-grey-dark !important;
+      background-color: $color-grey-dark !important;
+      z-index: 10;
+      // border: 1px solid $color-grey-dark;
+      border: 1px solid #494866;
+      box-sizing: border-box;
+      margin-left: 35px;
+      margin-bottom: -2px;
+      padding-top: -2px;
+  }
+
   .responsive-app-button {
     position: fixed;
     width: 140px;
@@ -31,6 +80,21 @@
 
   .menu-logo {
     width: 30px;
+    margin-left: -15px;
+    // padding-left: 20px;
+    
+    &-divider {
+      position: absolute;
+      width: 1px;
+      height: 49px;
+      left: 50px;
+      top: 0px;
+      // left: 504px;
+      // top: 362px;
+  
+      background-color: $color-grey-dark !important;//$color-grey-dark;
+      z-index: 0;
+    }
   }
 
   .navbar-toggler,
@@ -41,6 +105,10 @@
     left: -180px;
   }
 
+  .responsive-navbar-nav {
+    background: $color-black;
+  }
+
   .navbar-toggler:hover, .navbar-toggler:focus {
     position: relative;
     padding: 10px 20px 10px 20px;
@@ -48,7 +116,7 @@
   }
 
   .mobile_menu_bar:before {
-    display:none
+    display:none;
   }
   .mobile_menu_bar::after {
     font-size: 12px;
@@ -66,14 +134,18 @@
 		}
   }
   .mobile_nav.opened .mobile_menu_bar:after {
-    content: "CLOSE";
+    content: "";
   }
 
   .button-navbar {
     position: fixed;
     color: $color-grey;
 		border: 0px solid $color-primary-pink;
-		box-sizing: border-box;
+    box-sizing: border-box;
+    &:hover {
+      color: $color-dark-clean !important;
+      text-decoration: none;
+    }
 	}
 
   .main {

@@ -1,3 +1,7 @@
+.navbar {
+  border-bottom: 1px solid $color-grey-dark;
+}
+
 .navbar,
 .navbar div {
   height: 3.0625rem;
@@ -8,8 +12,7 @@
   font-size: 0.75rem;
   line-height: 0.75rem;
   letter-spacing: 0.6px;
-  padding: 0%
-  ;
+  padding: 0%;
 }
 
 .menu-logo {
@@ -27,8 +30,9 @@
     padding-left: 2rem !important;
   }
   &:hover {
-        color: $color-dark-clean !important;
-      }
+    color: $color-dark-clean !important;
+    text-decoration: none;
+  }
 }
 
 .nav-active {
