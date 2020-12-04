@@ -3,8 +3,12 @@ import React from "react"
 import { Navbar, Nav } from "react-bootstrap"
 import { Link } from "gatsby"
 import Media from 'react-media';
+import { useMediaQuery } from 'react-responsive';
 
 export default () => {
+  const isTabletOrMobile = useMediaQuery({ query: '(max-width: 1224px)' });
+  // const isTabletOrMobileDevice = useMediaQuery({ query: '(max-device-width: 1224px)' });
+  const isPortrait = useMediaQuery({ query: '(orientation: portrait)' });
   // const mediaQuery = "screen and (min-width: 768px)";
   // const mql = typeof window !== `undefined` ? window.matchMedia(mediaQuery) : null;
   // const [showDesktopMenu, setShowDesktopMenu] =  mql ? useState(mql.matches) : true;
@@ -29,7 +33,7 @@ export default () => {
   const NavMobile = () => {
     return (
       <>
-        <Navbar fixed="top" expand="sm">
+        <Navbar fixed="top" expand="lg md sm xl">
           <Navbar.Brand className="pl-5 ml-5" as={Link} to="/">
             <img className="menu-logo" src="/logom.svg" alt="Logo" />
             <div className="menu-logo-divider"></div>
@@ -102,16 +106,13 @@ export default () => {
   }
 
   return (
-    <>
-      <Media query={{ maxWidth: 420 }}>
-      {matches =>
-            matches ? (
+      <>
+      {isTabletOrMobile && isPortrait ? (
               <NavMobile/> 
             ) : (
               <NavDesktop/>
             )
           }      
-      </Media>
-    </>
+      </>
   )
 }

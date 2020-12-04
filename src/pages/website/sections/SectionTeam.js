@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { Link, useStaticQuery, graphql } from 'gatsby';
 import Flippy, { FrontSide, BackSide } from 'react-flippy';
-// const Media = lazy(() =>  'react-media');
 // const joe = lazy(() => import('../../../../static/website/team/joe.webp'));
 // const preston = lazy(() => import('../../../../static/website/team/preston.webp'));
 // const cristian = lazy(() => import('../../../../static/website/team/cristian.webp'));
@@ -10,7 +9,7 @@ import Flippy, { FrontSide, BackSide } from 'react-flippy';
 // const prestonm = lazy(() => import('../../../../static/website/team/prestonm.webp'));
 // const cristianm = lazy(() => import('../../../../static/website/team/cristianm.webp'));
 // const tomm = lazy(() => import('../../../../static/website/team/tomm.webp'));
-import Media from 'react-media';
+import { useMediaQuery } from 'react-responsive';
 import joe from '../../../../static/website/team/joe.webp';
 import preston from '../../../../static/website/team/preston.webp';
 import cristian from '../../../../static/website/team/cristian.webp';
@@ -23,7 +22,14 @@ import tomm from '../../../../static/website/team/tomm.webp';
 // const renderLoader = () => <p>Loading</p>;
 
 const SectionTeam = (props) => {
+  // const isDesktopOrLaptop = useMediaQuery({ query: '(min-device-width: 1224px)' });
+  // const isBigScreen = useMediaQuery({ query: '(min-device-width: 1824px)' });
+  const isTabletOrMobile = useMediaQuery({ query: '(max-width: 1224px)' });
+  // const isTabletOrMobileDevice = useMediaQuery({ query: '(max-device-width: 1224px)' });
+  const isPortrait = useMediaQuery({ query: '(orientation: portrait)' });
+  // const isRetina = useMediaQuery({ query: '(min-resolution: 2dppx)' });
   const [tblog, setBlog] = useState({});
+  // const [device, setDevice] = useState('mobile');
 
   const dataq = useStaticQuery(graphql`
     query {
@@ -97,15 +103,14 @@ const SectionTeam = (props) => {
                   flipDirection="horizontal" // horizontal or vertical
                 >
                   <FrontSide animationDuration="0">
-                  <Media query={{ maxWidth: 420 }}>
-                    {matches =>
-                          matches ? (
+                  <>
+                    {isTabletOrMobile && isPortrait ? (
                             <img src={joem} className="team-box-photo" alt="Joseph Sticoo" /> 
                           ) : (
                             <img src={joe} className="team-box-photo" alt="Joseph Sticoo" />
                           )
                     }      
-                  </Media>
+                  </>
                   <p className="team-box-name">Joe Sticco</p>
                   <p className="team-box-position">Co-Founder &amp; CEO</p>
                 </FrontSide>
@@ -122,15 +127,14 @@ const SectionTeam = (props) => {
                   flipDirection="horizontal" // horizontal or vertical
                 >
                 <FrontSide animationDuration="0">
-                  <Media query={{ maxWidth: 420 }}>
-                    {matches =>
-                          matches ? (
+                  <>
+                    {isTabletOrMobile && isPortrait ? (
                             <img src={prestonm} className="team-box-photo" alt="Preston Van Loon" /> 
                           ) : (
                             <img src={preston} className="team-box-photo" alt="Preston Van Loon" />
                           )
                     }      
-                  </Media>
+                  </>
                   <p className="team-box-name">Preston Van Loon</p>
                   <p className="team-box-position">Co-Founder &amp; Blockchain Lead</p>
                 </FrontSide>
@@ -147,15 +151,14 @@ const SectionTeam = (props) => {
                   flipDirection="horizontal" // horizontal or vertical
                 >
                 <FrontSide animationDuration="0">
-                  <Media query={{ maxWidth: 420 }}>
-                    {matches =>
-                          matches ? (
+                  <>
+                    {isTabletOrMobile && isPortrait ? (
                             <img src={cristianm} className="team-box-photo" alt="Cristian Espinoza" />
                           ) : (
                             <img src={cristian} className="team-box-photo" alt="Cristian Espinoza" />
                           )
                     }      
-                  </Media>
+                  </>
                   <p className="team-box-name">Cristian Espinoza</p>
                   <p className="team-box-position">Blockchain Developer</p>
                 </FrontSide>
@@ -172,15 +175,14 @@ const SectionTeam = (props) => {
                   flipDirection="horizontal" // horizontal or vertical
                 >
                 <FrontSide animationDuration="0">
-                  <Media query={{ maxWidth: 420 }}>
-                    {matches =>
-                          matches ? (
+                  <>
+                    {isTabletOrMobile && isPortrait ? (
                             <img src={tomm} className="team-box-photo" alt="Thomas Matzner" />
                           ) : (
                             <img src={tom} className="team-box-photo" alt="Thomas Matzner" />
                           )
                     }      
-                  </Media>
+                  </>
                   <p className="team-box-name">Thomas Matzner</p>
                   <p className="team-box-position">Co-Founder &amp; CBO</p>
                 </FrontSide>

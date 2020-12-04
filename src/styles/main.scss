@@ -34,9 +34,6 @@
 
 @import "pages/home";
 
-@import "responsive/mobile";
-
-
 // entrance and exit animations
 @import "animations/bounce.scss";
 @import "animations/zoom.scss";
@@ -44,3 +41,8 @@
 @import "animations/slide.scss";
 
 
+@import "responsive/mobile_375px";
+@import "responsive/mobile_428px";
+@import "responsive/mobile_iphoneproplus";
+@import "responsive/tablet_ipad97";
+@import "responsive/tablet_ipad129";

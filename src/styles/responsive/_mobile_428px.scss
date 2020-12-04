@@ -1,4 +1,8 @@
-@media only screen and (max-width: 420px){
+@media only screen and (min-width: 428px) 
+and (max-height: 926px)
+and (orientation: portrait) 
+and (-webkit-device-pixel-ratio: 3)
+{
   body, html { overflow-x:hidden; }
   body {
     // height: 100vh;
@@ -53,7 +57,7 @@
   .nav-links-divisor {
     top: -3px;
 			position: relative;
-			width: 300px;
+			width: 350px;
       height: 10px;
       line-height: 28px;
       background: $color-grey-dark !important;
@@ -87,7 +91,7 @@
       position: absolute;
       width: 1px;
       height: 49px;
-      left: 50px;
+      left: 60px;
       top: 0px;
       // left: 504px;
       // top: 362px;
@@ -102,7 +106,7 @@
     // display: none !important;
     position: relative;
     // left: -25px;
-    left: -180px;
+    left: -190px;
   }
 
   .responsive-navbar-nav {
@@ -146,15 +150,16 @@
       color: $color-dark-clean !important;
       text-decoration: none;
     }
+    // margin-left: 20px;
 	}
 
   .main {
     &-title{
       // position: absolute;
-      width: 312px;
+      width: 362px;
       height: 108px;
-      // left: calc(50% - 312px/2);
-      top: calc(50% - 108px/2 - 357px);
+      left: calc(50% - 362px/2 + 20px);
+      top: calc(50% - 108px/2 - 307px);
     }
 
     &-number-pink {
@@ -162,7 +167,7 @@
       width: 257px;
       height: 36px;
       left: calc(50% - 257px/2 - 30px);
-      top: calc(50% - 36px/2 - 241px);
+      top: calc(50% - 36px/2 - 181px);
   
       font-size: 18px;
       line-height: 36px;
@@ -175,7 +180,7 @@
       width: 342px;
       height: 22px;
       left: calc(50% - 312px/2 - 2.5px);
-      top: calc(50% - 22px/2 - 206px);
+      top: calc(50% - 22px/2 - 146px);
       font-size: 14px;
       line-height: 22px;
     }
@@ -188,7 +193,7 @@
       width: 312px;
       height: 22px;
       left: calc(50% - 312px/2 - 2.5px);
-      top: calc(50% - 22px/2 - 156px);
+      top: calc(50% - 22px/2 - 76px);
       font-size: 18px;
       line-height: 36px;
       
@@ -198,7 +203,7 @@
       width: 87px;
       height: 82px;
       left: calc(50% - 30px/2 - 140.7px);
-      top: calc(50% - 22px/2 - 149.55px);
+      top: calc(50% - 22px/2 - 69.55px);
 
       &-image {
         width: 20px;
@@ -236,10 +241,10 @@
 
     &-image {
       position: absolute;
-      width: 495.31px;
-      height: 508.6px;
-      left: calc(50% - 495.31px/2 - 20px);
-      top: calc(50% - 508.6px/2 + 228px);
+      width: 380px;
+      height: 391.27px;
+      left: calc(50% - 380px/2);
+      top: calc(50% - 391.27px/2 + 208px);
     }
 
     &-details {
@@ -281,10 +286,10 @@
     position: relative;
     &-title {
       position: absolute;
-      width: 312px;
+      width: 352px;
       height: 36px;
-      left: calc(50% - 312px/2 - 1.5px);
-      top: calc(50% - 36px/2 - 444px);
+      left: calc(50% - 312px/2 - 20.5px);
+      top: calc(50% - 36px/2 - 484px);
       font-size: 24px;
       line-height: 36px;
       letter-spacing: 0.3px;
@@ -302,9 +307,9 @@
       position: absolute;
       width: 82px;
       height: 74.25px;
-      left: 6.94%;
+      left: 12.94%;
       right: 6.94%;
-      top: 10.5%;
+      top: 14.5%;
       bottom: 12.16%;
     }
 
@@ -333,8 +338,8 @@
     &-box{
       &-mint {
         position: relative;
-        width: 300px;
-        height: 300px;
+        width: 360px;
+        height: 360px;
         background: #111131;
 				border: 1px solid rgba(255, 255, 255, 0.6);
 				box-sizing: border-box;
@@ -353,8 +358,8 @@
       }
       &-trade {
         position: relative;
-        width: 300px;
-        height: 300px;
+        width: 360px;
+        height: 360px;
         background: #111131;
 				border: 1px solid rgba(255, 255, 255, 0.6);
 				box-sizing: border-box;
@@ -373,8 +378,8 @@
       }
       &-pool {
         position: relative;
-        width: 300px;
-        height: 300px;
+        width: 360px;
+        height: 360px;
         background: #111131;
 				border: 1px solid rgba(255, 255, 255, 0.6);
 				box-sizing: border-box;
@@ -393,8 +398,8 @@
       }
       &-farm {
         position: relative;
-        width: 300px;
-        height: 300px;
+        width: 360px;
+        height: 360px;
         background: #111131;
 				border: 1px solid rgba(255, 255, 255, 0.6);
 				box-sizing: border-box;
@@ -421,7 +426,7 @@
       width: 312px;
       height: 36px;
       left: calc(50% - 312px/2 - 7.5px);
-      top: calc(50% - 36px/2 - 487px);
+      top: calc(50% - 36px/2 - 367px);
       font-size: 24px;
       line-height: 36px;
       letter-spacing: 0.3px;
@@ -435,7 +440,7 @@
       line-height: 22px;
       letter-spacing: 0.3px;
       left: calc(50% - 305px/2 - 11px);
-      top: calc(50% - 44px/2 - 421px);
+      top: calc(50% - 44px/2 - 281px);
     }
   
     &-divider {
@@ -451,12 +456,12 @@
     padding: 19px 47px;
 
     position: absolute;
-    width: 80%;
+    width: 85%;
     height: 54px;
     // left: calc(50% - 300px/2 - 2.7px);
     left: 28px;
     // top: 436px;
-    top: calc(50% - 22px/2 - 60.55px);
+    top: calc(50% - 54px/2 + 50.55px);
     font-size: 14px;
     line-height: 16px;
   }
@@ -473,22 +478,22 @@
     position: absolute  ;
     width: 100%;
     // left: calc(50% - 10.6875rem/2 - 33.6562Z5rem);
-    top: calc(50% - 166px/2 - 243.7px);
+    top: calc(50% - 166px/2 - 103.7px);
     // background-color: #212138;
   }
 
   .team-box {
     position: relative;
-    width: 325px;
-    height: 231px;
+    width: 375px;
+    height: auto;//231px;
     left: 10px;
 
     &-photo {
       position: relative;
       text-align:center;
-      width: 315px;
-      height: 161px;
-      border-radius: 0.125rem;
+      width: 365px;
+      height: auto;//161px;
+      border-radius: 2px;
     }
     &-name {
       width: 211px;
@@ -534,13 +539,13 @@
       font-size: 22px;
       line-height: 24px;
       left: calc(50% - 204px/2 + 140.5px);
-      top: calc(50% - 166px/2 + 1525px);
+      top: calc(50% - 166px/2 + 1850px);
     }
 
     .newsgroup {
       position: absolute;
       left: 10px;//calc(50% - 204px/2 + 7.8px);
-      top: calc(50% - 166px/2 + 1606px);
+      top: calc(50% - 166px/2 + 1956px);
       // padding-left: 22.76px;
     }
 
@@ -615,14 +620,14 @@
       width: 100%;
       // left: calc(50% - 312px/2 - 7.5px);
       left: 40px;
-      top: calc(50% - 36px/2 + 66px);
+      top: calc(50% - 36px/2 - 16px);
     }
 
     &-title {
       width: 312px;
       height: 36px;
       left: calc(50% - 312px/2 - 7.5px);
-      top: calc(50% - 36px/2 - 146px);
+      top: calc(50% - 36px/2 - 206px);
       font-size: 24px;
       line-height: 36px;
       letter-spacing: 0.3px;
@@ -632,7 +637,7 @@
       width: 305px;
       height: 22px;
       left: calc(50% - 305px/2 - 11px);
-      top: calc(50% - 22px/2 - 91px);
+      top: calc(50% - 22px/2 - 151px);
       font-size: 16px;
       line-height: 22px;
       letter-spacing: 0.3px;
@@ -738,10 +743,10 @@
 
     &-image {
       position: absolute;
-      width: 697.62px;
-      height: 578px;
-      left: calc(50% - 697.62px/2 - 24.5px);
-      top: calc(50% - 578px/2 + 374px);
+      width: 400px;
+      height: auto;//578px;
+      left: calc(50% - 400px/2);
+      top: calc(50% - 578px/2 + 384px);
     }
 
     &-subscribe {
@@ -761,8 +766,13 @@
         width: 316px;
         height: 54px;
         font-size: 12px;
-        left: calc(50% - 316px/2 - 1px);
+        left: calc(50% - 316px/2);
         top: calc(50% - 24px/2 + 45px);
+        border: 1px solid $color-grey;
+        box-sizing: border-box;
+        border-radius: 1px;
+        line-height: 14px;
+        padding: 24px 24px;
       }
   
       &-button {
@@ -779,42 +789,42 @@
 
   .section-main {
     position: relative;
-    height: 130vh;
+    height: 110vh;
     // display: block; 
     // padding-bottom: 27.66%;
     // background-color: khaki;
     .main-image {
       position: absolute;
-      width: 579.04px;
-      height: 572.96px;
-      left: calc(50% - 579.04px/2 - 14px);
-      top: calc(50% - 572.96px/2 + 148px);
+      width: 470px;
+      height: 465.94px;
+      left: calc(50% - 470px/2);
+      top: calc(50% - 465.94px/2 + 168px);
     }
   }
 
   .section-about {
-    height: 145vh;
+    height: 135vh;
     position: relative;
   }
 
   .section-features {
-    height: 185vh;
+    height: 150vh;
     position: relative;
   }
   
   .section-team {
-    height: 215vh;
+    height: 225vh;
     position: relative;
   }
   
   .section-faq {
-    height: 160vh;
+    height: 200vh;
     position: relative;
     // background-color: peachpuff;
   }
   
   .section-community {
-    height: 185vh;
+    height: 125vh;
     position: relative;
     // background-color: darkorange;
   }
