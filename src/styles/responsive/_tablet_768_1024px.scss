@@ -1,8 +1,7 @@
-@media only screen and (min-width: 428px) 
-and (max-height: 926px)
-and (orientation: portrait) 
-and (-webkit-device-pixel-ratio: 3)
-{
+@media only screen 
+and (min-device-width : 768px) 
+and (max-device-width : 1024px) 
+and (orientation : portrait) {
   body, html { overflow-x:hidden; }
   body {
     // height: 100vh;
@@ -28,8 +27,8 @@ and (-webkit-device-pixel-ratio: 3)
     background: $color-black;
     // padding-left: 48px !important;
     // padding-right: 48px !important;
-    padding-top: 60px;
-    padding-bottom: 44px;
+    padding-top: 100px;
+    padding-bottom: 74px;
     text-align:center;
     font-size: 18px;
     line-height: 28px;
@@ -45,7 +44,7 @@ and (-webkit-device-pixel-ratio: 3)
     }
 
     &:not(:first-child) { 
-      padding-top: 44px;
+      padding-top: 74px;
     }
 
     &:hover {
@@ -57,7 +56,7 @@ and (-webkit-device-pixel-ratio: 3)
   .nav-links-divisor {
     top: -3px;
 			position: relative;
-			width: 350px;
+			width: 680px;
       height: 10px;
       line-height: 28px;
       background: $color-grey-dark !important;
@@ -73,25 +72,25 @@ and (-webkit-device-pixel-ratio: 3)
 
   .responsive-app-button {
     position: fixed;
-    width: 140px;
+    width: 240px;
     margin-left: auto; 
     background: $color-navbar-button;
 		border: 1px solid $color-primary-pink;
 		box-sizing: border-box;
     box-shadow: 0px 10px 49px -10px $shadow-navbar-button;
-    padding-left: 30px;
+    padding-left: 80px;
   }
 
   .menu-logo {
-    width: 30px;
-    margin-left: -15px;
+    width: 120px;
+    margin-left: 5px;
     // padding-left: 20px;
     
     &-divider {
       position: absolute;
       width: 1px;
       height: 49px;
-      left: 60px;
+      left: 240px;
       top: 0px;
       // left: 504px;
       // top: 362px;
@@ -106,7 +105,7 @@ and (-webkit-device-pixel-ratio: 3)
     // display: none !important;
     position: relative;
     // left: -25px;
-    left: -190px;
+    left: -330px;
   }
 
   .responsive-navbar-nav {
@@ -150,26 +149,25 @@ and (-webkit-device-pixel-ratio: 3)
       color: $color-dark-clean !important;
       text-decoration: none;
     }
-    // margin-left: 20px;
 	}
 
   .main {
     &-title{
       // position: absolute;
-      width: 362px;
+      width: 682px;
       height: 108px;
-      left: calc(50% - 362px/2 + 20px);
-      top: calc(50% - 108px/2 - 307px);
+      // left: calc(50% - 312px/2);
+      top: calc(50% - 108px/2 - 357px);
     }
 
     &-number-pink {
       position: absolute;
       width: 257px;
       height: 36px;
-      left: calc(50% - 257px/2 - 30px);
-      top: calc(50% - 36px/2 - 181px);
+      left: calc(50% - 257px/2 - 210px);
+      top: calc(50% - 36px/2 - 241px);
   
-      font-size: 18px;
+      font-size: 20px;
       line-height: 36px;
   
       display: flex;
@@ -179,22 +177,31 @@ and (-webkit-device-pixel-ratio: 3)
     &-bold-text {
       width: 342px;
       height: 22px;
-      left: calc(50% - 312px/2 - 2.5px);
-      top: calc(50% - 22px/2 - 146px);
+      left: calc(50% - 312px/2 - 183px);
+      top: calc(50% - 22px/2 - 206px);
       font-size: 14px;
       line-height: 22px;
     }
 
     &-divider {
-      background: transparent !important;
+      position: absolute;
+      width: 1px;
+      height: 65px;
+      // left: 504px;
+      // top: 362px;
+
+      left: calc(50% - 1px/2 + 55.2px);
+      top: calc(50% - 82px/2 - 220.8px);
+
+      background: $color-grey-dark;
     }
 
     &-number-blue {
       width: 312px;
-      height: 22px;
-      left: calc(50% - 312px/2 - 2.5px);
-      top: calc(50% - 22px/2 - 76px);
-      font-size: 18px;
+      height: 36px;
+      left: calc(50% - 312px/2 + 265px);
+      top: calc(50% - 36px/2 - 241px);
+      font-size: 20px;
       line-height: 36px;
       
     }
@@ -202,11 +209,11 @@ and (-webkit-device-pixel-ratio: 3)
     &-tcap {
       width: 87px;
       height: 82px;
-      left: calc(50% - 30px/2 - 140.7px);
-      top: calc(50% - 22px/2 - 69.55px);
+      left: calc(50% - 30px/2 + 126.7px);
+      top: calc(50% - 22px/2 - 236px);
 
       &-image {
-        width: 20px;
+        width: 25px;
       }
 
       &-text {
@@ -222,7 +229,7 @@ and (-webkit-device-pixel-ratio: 3)
       position: absolute;
       width: 312px;
       height: 36px;
-      left: calc(50% - 312px/2 - 1.5px);
+      left: calc(50% - 312px/2 - 170.5px);
       top: calc(50% - 36px/2 - 425px);
       font-size: 24px;
       line-height: 36px;
@@ -232,7 +239,7 @@ and (-webkit-device-pixel-ratio: 3)
     &-content {
       width: 315px;
       height: 247px;
-      left: calc(50% - 315px/2);
+      left: calc(50% - 315px/2 - 170px);
       top: calc(50% - 247px/2 - 245.5px);
       font-size: 14px;
       line-height: 20px;
@@ -241,22 +248,22 @@ and (-webkit-device-pixel-ratio: 3)
 
     &-image {
       position: absolute;
-      width: 380px;
-      height: 391.27px;
-      left: calc(50% - 380px/2);
-      top: calc(50% - 391.27px/2 + 208px);
+      width: 660px;
+      height: auto;//508.6px;
+      left: calc(50% - 660px/2);
+      top: calc(50% - 508.6px/2 + 258px);
     }
 
     &-details {
       position: absolute;
       width: 315px;
       height: 353px;
-      left: calc(50% - 495.31px/2 + 92px);
-      top: calc(50% - 508.6px/2 + 88px);
+      left: calc(50% - 495.31px/2 + 320px);
+      top: calc(50% - 508.6px/2 - 218px);
 
       &-divisor {
         position: absolute;
-        width: 310px;
+        width: 240px;
         height: 1px;
         background: #494866;
       }
@@ -286,10 +293,10 @@ and (-webkit-device-pixel-ratio: 3)
     position: relative;
     &-title {
       position: absolute;
-      width: 352px;
+      width: 312px;
       height: 36px;
-      left: calc(50% - 312px/2 - 20.5px);
-      top: calc(50% - 36px/2 - 484px);
+      left: calc(50% - 312px/2 - 165.5px);
+      top: calc(50% - 36px/2 - 314px);
       font-size: 24px;
       line-height: 36px;
       letter-spacing: 0.3px;
@@ -297,27 +304,27 @@ and (-webkit-device-pixel-ratio: 3)
 
     &-row {
       position: absolute;
-      width: 355px;
+      width: 700px;
       // height: 403px;
-      left: 50px;
-      top: calc(50% - 36px/2 - 364px);
+      left: 70px;
+      top: calc(50% - 36px/2 - 224px);
     }
 
     &-icons {
       position: absolute;
-      width: 82px;
+      width: 102px;
       height: 74.25px;
-      left: 12.94%;
+      left: 8.94%;
       right: 6.94%;
-      top: 14.5%;
+      top: 10.5%;
       bottom: 12.16%;
     }
 
     &-subtitle {
       position: absolute;
-      width: 65px;
+      width: 95px;
       height: 24px;
-      left: calc(50% - 65px/2 - 86px);
+      left: calc(50% - 65px/2 - 76px);
       top: calc(50% - 24px/2 - 18px);
       font-size: 22px;
       line-height: 24px;
@@ -331,14 +338,14 @@ and (-webkit-device-pixel-ratio: 3)
       letter-spacing: 0.3px;
       width: 243px;
       height: 132px;
-      left: calc(50% - 243px/2);
-      top: calc(50% - 132px/2 + 90px);
+      left: calc(50% - 243px/2 + 10px);
+      top: calc(50% - 132px/2 + 95px);
     }
 
     &-box{
       &-mint {
         position: relative;
-        width: 360px;
+        width: 320px;
         height: 360px;
         background: #111131;
 				border: 1px solid rgba(255, 255, 255, 0.6);
@@ -355,10 +362,11 @@ and (-webkit-device-pixel-ratio: 3)
 					}
         }
         margin-bottom: 20px;
+        margin-right: 20px;
       }
       &-trade {
         position: relative;
-        width: 360px;
+        width: 320px;
         height: 360px;
         background: #111131;
 				border: 1px solid rgba(255, 255, 255, 0.6);
@@ -378,7 +386,7 @@ and (-webkit-device-pixel-ratio: 3)
       }
       &-pool {
         position: relative;
-        width: 360px;
+        width: 320px;
         height: 360px;
         background: #111131;
 				border: 1px solid rgba(255, 255, 255, 0.6);
@@ -395,10 +403,11 @@ and (-webkit-device-pixel-ratio: 3)
 					}
         }
         margin-bottom: 20px;
+        margin-right: 20px;
       }
       &-farm {
         position: relative;
-        width: 360px;
+        width: 320px;
         height: 360px;
         background: #111131;
 				border: 1px solid rgba(255, 255, 255, 0.6);
@@ -425,8 +434,8 @@ and (-webkit-device-pixel-ratio: 3)
       position: absolute;
       width: 312px;
       height: 36px;
-      left: calc(50% - 312px/2 - 7.5px);
-      top: calc(50% - 36px/2 - 367px);
+      left: calc(50% - 312px/2 - 167.5px);
+      top: calc(50% - 36px/2 - 567px);
       font-size: 24px;
       line-height: 36px;
       letter-spacing: 0.3px;
@@ -434,13 +443,13 @@ and (-webkit-device-pixel-ratio: 3)
   
     &-subtitle {
       position: absolute;
-      width: 305px;
+      width: 505px;
       height: 44px;
       font-size: 16px;
       line-height: 22px;
       letter-spacing: 0.3px;
-      left: calc(50% - 305px/2 - 11px);
-      top: calc(50% - 44px/2 - 281px);
+      left: calc(50% - 305px/2 - 170px);
+      top: calc(50% - 44px/2 - 500px);
     }
   
     &-divider {
@@ -456,12 +465,12 @@ and (-webkit-device-pixel-ratio: 3)
     padding: 19px 47px;
 
     position: absolute;
-    width: 85%;
+    width: 300px;
     height: 54px;
-    // left: calc(50% - 300px/2 - 2.7px);
-    left: 28px;
+    // left: calc(50% - 300px/2 + 47px);
+    left: 45px;
     // top: 436px;
-    top: calc(50% - 54px/2 + 50.55px);
+    top: calc(50% - 22px/2 - 120.55px);
     font-size: 14px;
     line-height: 16px;
   }
@@ -478,22 +487,22 @@ and (-webkit-device-pixel-ratio: 3)
     position: absolute  ;
     width: 100%;
     // left: calc(50% - 10.6875rem/2 - 33.6562Z5rem);
-    top: calc(50% - 166px/2 - 103.7px);
+    top: calc(50% - 166px/2 - 343.7px);
     // background-color: #212138;
   }
 
   .team-box {
     position: relative;
-    width: 375px;
-    height: auto;//231px;
+    width: 325px;
+    height: 231px;
     left: 10px;
 
     &-photo {
       position: relative;
       text-align:center;
-      width: 365px;
-      height: auto;//161px;
-      border-radius: 2px;
+      width: 315px;
+      height: 161px;
+      border-radius: 0.125rem;
     }
     &-name {
       width: 211px;
@@ -501,6 +510,7 @@ and (-webkit-device-pixel-ratio: 3)
       font-size: 14px;
       line-height: 22px;
       letter-spacing: 0.3px;
+      margin-left: 5px;
       // background-color: #212138;
     }
     &-position {
@@ -509,6 +519,7 @@ and (-webkit-device-pixel-ratio: 3)
       font-size: 12px;
       line-height: 16px;
       letter-spacing: -0.2px;
+      margin-left: 5px;
     }
 
     &-description {
@@ -520,7 +531,7 @@ and (-webkit-device-pixel-ratio: 3)
       line-height: 16px;
       letter-spacing: -0.2px;
       margin-top: 20px;
-      // background-color: #212138;
+      margin-left: 5px;
     }
   }
 
@@ -538,26 +549,31 @@ and (-webkit-device-pixel-ratio: 3)
       height: 24px;
       font-size: 22px;
       line-height: 24px;
-      left: calc(50% - 204px/2 + 140.5px);
-      top: calc(50% - 166px/2 + 1850px);
+      left: calc(50% - 204px/2 + 180.5px);
+      top: calc(50% - 166px/2 + 925px);
     }
 
     .newsgroup {
       position: absolute;
-      left: 10px;//calc(50% - 204px/2 + 7.8px);
-      top: calc(50% - 166px/2 + 1956px);
+      left: calc(50% - 50px/2 + 150px);
+      top: calc(50% - 166px/2 + 1006px);
       // padding-left: 22.76px;
     }
 
     .newsitem {
       display: inline-table;
       &-photo {
-        width: 0;
-        height: 0;
+        position: relative;
+        width: 120px;
+        height: 120px;
+        float: left;
+        margin-left: -102.76px;
+        margin-right: 32px;
+        border-radius: 2px;
       }
       &-title {
         position: relative;
-        width: 355px;
+        width: 555px;
         height: 48px;
         font-size: 12px;
         line-height: 20px;
@@ -607,7 +623,7 @@ and (-webkit-device-pixel-ratio: 3)
       }
     
       &:not(:last-child) { 
-        padding-bottom: 3rem !important;
+        padding-bottom: 48px !important;
         // padding-left: 2rem !important;
       }
     }
@@ -619,15 +635,15 @@ and (-webkit-device-pixel-ratio: 3)
       position: absolute;
       width: 100%;
       // left: calc(50% - 312px/2 - 7.5px);
-      left: 40px;
-      top: calc(50% - 36px/2 - 16px);
+      left: 80px;
+      top: calc(50% - 36px/2 - 156px);
     }
 
     &-title {
       width: 312px;
       height: 36px;
-      left: calc(50% - 312px/2 - 7.5px);
-      top: calc(50% - 36px/2 - 206px);
+      left: calc(50% - 312px/2 - 165.5px);
+      top: calc(50% - 36px/2 - 346px);
       font-size: 24px;
       line-height: 36px;
       letter-spacing: 0.3px;
@@ -636,15 +652,15 @@ and (-webkit-device-pixel-ratio: 3)
     &-subtitle {
       width: 305px;
       height: 22px;
-      left: calc(50% - 305px/2 - 11px);
-      top: calc(50% - 22px/2 - 151px);
+      left: calc(50% - 305px/2 - 168px);
+      top: calc(50% - 22px/2 - 291px);
       font-size: 16px;
       line-height: 22px;
       letter-spacing: 0.3px;
     }
 
     &-divider {
-      width: 315px;
+      width: 620px;
       height: 1px;
       margin-top: 16px;
       margin-bottom: 32px;
@@ -665,17 +681,16 @@ and (-webkit-device-pixel-ratio: 3)
   }
 
   .question {
-		width: 290px;
+		width: 620px;
     height: auto;
     font-size: 16px;
     line-height: 24px;
     letter-spacing: 0.3px;
-    // margin-top: 16px;
-      margin-bottom:12px;
+    margin-bottom:18px;
   }
   
   .answer {
-		width: 315px;
+		width: 605px;
     height: auto;
     font-size: 16px;
     line-height: 22px;
@@ -695,10 +710,10 @@ and (-webkit-device-pixel-ratio: 3)
   .community {
 	
     &-title {
-      width: 312px;
+      width: 512px;
       height: 72px;
-      left: calc(50% - 312px/2 - 1.5px);
-      top: calc(50% - 72px/2 - 508px);
+      left: calc(50% - 312px/2 - 165.5px);
+      top: calc(50% - 72px/2 - 458px);
       font-size: 24px;
       line-height: 36px;
       letter-spacing: 0.3px;
@@ -707,8 +722,8 @@ and (-webkit-device-pixel-ratio: 3)
     &-subtitle {
       width: 305px;
       height: 88px;
-      left: calc(50% - 305px/2 - 5px);
-      top: calc(50% - 88px/2 - 401px);
+      left: calc(50% - 305px/2 - 165px);
+      top: calc(50% - 88px/2 - 351px);
       font-size: 16px;
       line-height: 22px;
       letter-spacing: 0.3px;
@@ -716,14 +731,14 @@ and (-webkit-device-pixel-ratio: 3)
 
     &-icons-row {
       position: absolute;
-      width: 223px;
+      width: 740px;
       height: 42px;
-      left: 50px;//calc(50% - 375px/2 - 208.6px);
-      top: calc(50% - 104px/2 - 315px);
+      left: 80px;//calc(50% - 375px/2 - 208.6px);
+      top: calc(50% - 104px/2 - 215px);
     }
 
     &-item {
-      width: 250px;
+      width: 210px;
       &-icon {
         width: 82px;
         height: 82px;
@@ -743,10 +758,10 @@ and (-webkit-device-pixel-ratio: 3)
 
     &-image {
       position: absolute;
-      width: 400px;
-      height: auto;//578px;
-      left: calc(50% - 400px/2);
-      top: calc(50% - 578px/2 + 384px);
+      width: 697.62px;
+      height: 578px;
+      left: calc(50% - 697.62px/2 - 24.5px);
+      top: calc(50% - 578px/2 + 304px);
     }
 
     &-subscribe {
@@ -754,7 +769,7 @@ and (-webkit-device-pixel-ratio: 3)
         position: absolute;
         width: 309px;
         height: 24px;
-        left: calc(50% - 209px/2 - 53px);
+        left: calc(50% - 209px/2 - 213px);
         top: calc(50% - 24px/2 - 85px);
         font-size: 22px;
         line-height: 24px;
@@ -763,24 +778,19 @@ and (-webkit-device-pixel-ratio: 3)
   
       &-input {
         position: absolute;
-        width: 316px;
+        width: 426px;
         height: 54px;
         font-size: 12px;
-        left: calc(50% - 316px/2);
+        left: calc(50% - 316px/2 - 1px);
         top: calc(50% - 24px/2 + 45px);
-        border: 1px solid $color-grey;
-        box-sizing: border-box;
-        border-radius: 1px;
-        line-height: 14px;
-        padding: 24px 24px;
       }
   
       &-button {
         position: absolute;
-        width: 316px;
+        width: 216px;
         height: 54px;
-        left: calc(50% - 316px/2 - 3px);
-        top: calc(50% - 24px/2 + 25px);
+        left: calc(50% - 316px/2 + 280px);
+        top: calc(50% - 24px/2 - 40px);
       }
   
     }
@@ -789,36 +799,36 @@ and (-webkit-device-pixel-ratio: 3)
 
   .section-main {
     position: relative;
-    height: 110vh;
+    height: 100vh;
     // display: block; 
     // padding-bottom: 27.66%;
     // background-color: khaki;
     .main-image {
       position: absolute;
-      width: 470px;
-      height: 465.94px;
-      left: calc(50% - 470px/2);
-      top: calc(50% - 465.94px/2 + 168px);
+      width: 700px;
+      height: 693.95px;
+      left: calc(50% - 700px/2);
+      top: calc(50% - 693.95px/2 + 148px);
     }
   }
 
   .section-about {
-    height: 135vh;
+    height: 125vh;
     position: relative;
   }
 
   .section-features {
-    height: 150vh;
+    height: 100vh;
     position: relative;
   }
   
   .section-team {
-    height: 225vh;
+    height: 145vh;
     position: relative;
   }
   
   .section-faq {
-    height: 200vh;
+    height: 120vh;
     position: relative;
     // background-color: peachpuff;
   }

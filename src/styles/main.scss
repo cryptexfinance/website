@@ -41,8 +41,10 @@
 @import "animations/slide.scss";
 
 
-@import "responsive/mobile_375px";
-@import "responsive/mobile_428px";
+@import "responsive/mobile_375_667px";
+@import "responsive/mobile_375_812px";
+@import "responsive/mobile_428_926px";
 @import "responsive/mobile_iphoneproplus";
-@import "responsive/tablet_ipad97";
-@import "responsive/tablet_ipad129";
+@import "responsive/tablet_768_1024px";
+@import "responsive/tablet_834_1194px";
+@import "responsive/tablet_1024_1366px";

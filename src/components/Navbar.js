@@ -2,12 +2,16 @@ import React from "react"
 // import ThemeContext from "../utils/theme"
 import { Navbar, Nav } from "react-bootstrap"
 import { Link } from "gatsby"
-import Media from 'react-media';
+// import Media from 'react-media';
 import { useMediaQuery } from 'react-responsive';
 
 export default () => {
-  const isTabletOrMobile = useMediaQuery({ query: '(max-width: 1224px)' });
-  // const isTabletOrMobileDevice = useMediaQuery({ query: '(max-device-width: 1224px)' });
+  // const isTabletOrMobile = useMediaQuery({ query: '(max-width: 1224px)' });
+  const isMobileDevice = useMediaQuery({ query: '(max-device-width: 428px)' });
+  const isTabletDevice = useMediaQuery({ query: '(max-device-width: 768px)' });
+  const isTabletDevice2 = useMediaQuery({ query: '(max-device-width: 834px)' });
+  const isTabletDevice3 = useMediaQuery({ query: '(min-device-width: 1024px)' });
+  const isDesktopOrLaptop = useMediaQuery({ query: '(min-device-width: 1224px)' });   
   const isPortrait = useMediaQuery({ query: '(orientation: portrait)' });
   // const mediaQuery = "screen and (min-width: 768px)";
   // const mql = typeof window !== `undefined` ? window.matchMedia(mediaQuery) : null;
@@ -35,7 +39,9 @@ export default () => {
       <>
         <Navbar fixed="top" expand="lg md sm xl">
           <Navbar.Brand className="pl-5 ml-5" as={Link} to="/">
-            <img className="menu-logo" src="/logom.svg" alt="Logo" />
+            {isMobileDevice ? <img className="menu-logo" src="/logom.svg" alt="Logo" /> :
+             (isTabletDevice || isTabletDevice2 ) && <img className="menu-logo" src="/logo.svg" alt="Logo" />}
+            
             <div className="menu-logo-divider"></div>
           </Navbar.Brand>
           <Navbar.Toggle aria-controls="responsive-navbar-nav" className="mobile_menu_bar" aria-hidden="true"/>
@@ -107,9 +113,9 @@ export default () => {
 
   return (
       <>
-      {isTabletOrMobile && isPortrait ? (
+      {isTabletDevice3 ? <></> : (isMobileDevice || isTabletDevice || isTabletDevice2 ) && isPortrait ? (
               <NavMobile/> 
-            ) : (
+            ) : ( isDesktopOrLaptop && !isPortrait &&
               <NavDesktop/>
             )
           }      
