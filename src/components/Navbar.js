@@ -6,6 +6,7 @@ import { Link } from "gatsby"
 import { useMediaQuery } from 'react-responsive';
 
 export default () => {
+  const appEndpoint = "https://rinkeby.cryptex.finance/";
   // const isTabletOrMobile = useMediaQuery({ query: '(max-width: 1224px)' });
   const isMobileDevice = useMediaQuery({ query: '(max-device-width: 428px)' });
   const isTabletDevice = useMediaQuery({ query: '(max-device-width: 768px)' });
@@ -102,7 +103,7 @@ export default () => {
             <Nav.Link as={Link} to="#community" title="Comunity">
               Community
             </Nav.Link>
-            <a href="https://app.cryptex.finance" target="_blank" rel="noreferrer" className="button-navbar">
+            <a href={appEndpoint} target="_blank" rel="noreferrer" className="button-navbar">
               Go to App
             </a>
           </Nav>

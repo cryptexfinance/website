@@ -7,6 +7,7 @@ import image from '../../../../static/website/home/main.webp'
 import tcap from '../../../../static/website/home/tcap.svg'
 
 const SectionMain = () => {
+  const appEndpoint = "https://rinkeby.cryptex.finance/";
   const isMobileDevice = useMediaQuery({ query: '(max-device-width: 428px)' });
   const isTabletDevice = useMediaQuery({ query: '(max-device-width: 768px)' });
   const isTabletDevice2 = useMediaQuery({ query: '(max-device-width: 834px)' });
@@ -66,7 +67,7 @@ const SectionMain = () => {
         <div className="main-tcap-text">&nbsp;TCAP</div>
       </div>
       {/* <div className="main-number-green">+7.5%</div> */}
-      <Link to="https://app.cryptex.finance" rel="noreferrer" target="_blank">
+      <Link to={appEndpoint} rel="noreferrer" target="_blank">
         <button className="button-pink main-button">Go to App</button>
       </Link>
     </>
