@@ -125,7 +125,7 @@ module.exports = {
         // Url to query from
         url: "https://api.thegraph.com/subgraphs/name/cryptexglobal/tcap-oracle-graph",
         // refetch interval in seconds
-        refetchInterval: 60,
+        refetchInterval: 10,
       },
     },
     'gatsby-plugin-netlify',
