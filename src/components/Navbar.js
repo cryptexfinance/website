@@ -113,7 +113,7 @@ export default () => {
 
   return (
       <>
-      {isTabletDevice3 ? <></> : (isMobileDevice || isTabletDevice || isTabletDevice2 ) && isPortrait ? (
+      {(isTabletDevice3 && isPortrait) ? <></> : (isMobileDevice || isTabletDevice || isTabletDevice2 ) && isPortrait ? (
               <NavMobile/> 
             ) : ( isDesktopOrLaptop && !isPortrait &&
               <NavDesktop/>
