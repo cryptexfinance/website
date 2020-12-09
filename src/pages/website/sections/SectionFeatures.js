@@ -4,15 +4,17 @@ import mint from '../../../../static/website/features/mint.svg'
 import trade from '../../../../static/website/features/trade.svg'
 import pool from '../../../../static/website/features/pool.svg'
 import farm from '../../../../static/website/features/farm.svg'
+import appEndpoint from '../../../endpoint';
 
 const SectionFeatures = () => {
+  // const appEndpoint = "https://rinkeby.cryptex.finance/";
   return (
       <section id="features" className="section-features">
           <div className="features-title header">
             How to Use TCAP
           </div>
           <div className="features-row row">
-            <Link to="https://app.cryptex.finance/" rel="noreferrer" target="_blank" >
+            <Link to={appEndpoint} rel="noreferrer" target="_blank" >
               <div className="features-box-mint">
                 <img src={mint} className="features-icons" alt="Mint" />
                 <div className="features-subtitle heading-secondary">Mint</div>

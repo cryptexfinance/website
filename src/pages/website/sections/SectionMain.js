@@ -3,11 +3,12 @@ import { useStaticQuery, graphql } from "gatsby";
 import { BigNumber, utils } from "ethers";
 import { Link } from 'gatsby';
 import { useMediaQuery } from 'react-responsive';
-import image from '../../../../static/website/home/main.webp'
-import tcap from '../../../../static/website/home/tcap.svg'
+import image from '../../../../static/website/home/main.webp';
+import tcap from '../../../../static/website/home/tcap.svg';
+import appEndpoint from '../../../endpoint';
 
 const SectionMain = () => {
-  const appEndpoint = "https://rinkeby.cryptex.finance/";
+  // const appEndpoint = "https://rinkeby.cryptex.finance/";
   const isMobileDevice = useMediaQuery({ query: '(max-device-width: 428px)' });
   const isTabletDevice = useMediaQuery({ query: '(max-device-width: 768px)' });
   const isTabletDevice2 = useMediaQuery({ query: '(max-device-width: 834px)' });

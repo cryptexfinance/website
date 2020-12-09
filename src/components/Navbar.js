@@ -4,9 +4,10 @@ import { Navbar, Nav } from "react-bootstrap"
 import { Link } from "gatsby"
 // import Media from 'react-media';
 import { useMediaQuery } from 'react-responsive';
+import appEndpoint from '../endpoint';
 
 export default () => {
-  const appEndpoint = "https://rinkeby.cryptex.finance/";
+  // const appEndpoint = "https://rinkeby.cryptex.finance/";
   // const isTabletOrMobile = useMediaQuery({ query: '(max-width: 1224px)' });
   const isMobileDevice = useMediaQuery({ query: '(max-device-width: 428px)' });
   const isTabletDevice = useMediaQuery({ query: '(max-device-width: 768px)' });
@@ -71,7 +72,7 @@ export default () => {
           </Navbar.Collapse>
         </Navbar>
         <Navbar fixed="top" collapseOnSelect expand="sm" className="responsive-app-button">
-          <a href="https://app.cryptex.finance" target="_blank" rel="noreferrer" className="button-navbar">
+          <a href={appEndpoint} target="_blank" rel="noreferrer" className="button-navbar">
             Go to App
           </a>
         </Navbar>
