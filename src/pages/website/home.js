@@ -6,11 +6,12 @@ import SectionTeam from './sections/SectionTeam'
 import SectionFaq from './sections/SectionFaq'
 import SectionCommunity from './sections/SectionCommunity'
 
-const Home = () => {
+const Home = (data) => {
+  // console.log(data);
     return (
       <>
         <header className="section-main">
-          <SectionMain/>
+          <SectionMain price={data.price}/>
         </header>
         <main>
           <SectionAbout />

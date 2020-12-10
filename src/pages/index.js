@@ -8,7 +8,7 @@ import bgvideo from '../../static/bg.mp4'
 import bgvideom from '../../static/bg.webm'
 
 export default ({ data }) => {
-
+  // console.log(data.price);
   return (
     <PageLayout>
       <SEO title="Cryptex | TCAP" />
@@ -16,7 +16,7 @@ export default ({ data }) => {
         <source src={bgvideom} type="video/webm" />
         <source src={bgvideo} type="video/mp4" />
       </video>
-        <Home data={data}/>
+        <Home price={data.price.tcaps[0]}/>
     </PageLayout>
   )
 }
@@ -29,6 +29,15 @@ export const query = graphql`
         firstName
         lastName
         occupation
+      }
+    },
+    price {
+      tcaps(
+            first: 1, 
+            orderBy: updatedAt, 
+            orderDirection: desc
+      ) {
+        tcap
       }
     }
   }

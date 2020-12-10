@@ -1,13 +1,16 @@
 import React,{ useEffect, useState } from 'react';
-import { useStaticQuery, graphql } from "gatsby";
+// import { useStaticQuery, graphql } from "gatsby";
 import { BigNumber, utils } from "ethers";
 import { Link } from 'gatsby';
 import { useMediaQuery } from 'react-responsive';
 import image from '../../../../static/website/home/main.webp';
 import tcap from '../../../../static/website/home/tcap.svg';
 import appEndpoint from '../../../endpoint';
+import gql from 'graphql-tag';
+// import { useQuery } from '@apollo/react-hooks';
 
-const SectionMain = () => {
+const SectionMain = (dataq) => {
+  console.log(dataq.price);
   // const appEndpoint = "https://rinkeby.cryptex.finance/";
   const isMobileDevice = useMediaQuery({ query: '(max-device-width: 428px)' });
   const isTabletDevice = useMediaQuery({ query: '(max-device-width: 768px)' });
@@ -22,23 +25,26 @@ const SectionMain = () => {
   const [totalTcapPrice, setTotalTcapPrice] = useState(0.0);
   const [tcapPrice, setTcapPrice] = useState(0.0);
 
-  const dataq = useStaticQuery(graphql`
-    query {
-      price {
-        tcaps(
-              first: 1, 
-              orderBy: updatedAt, 
-              orderDirection: desc
-        ) {
-          tcap
-        }
-      }
-    }
-  `);
+  // const { loading, dataq } = useQuery(GET_TCAP_PRICE, {});
+  // const dataq = 0;
+
+  // const dataq = useStaticQuery(graphql`
+  //   query {
+  //     price {
+  //       tcaps(
+  //             first: 1, 
+  //             orderBy: updatedAt, 
+  //             orderDirection: desc
+  //       ) {
+  //         tcap
+  //       }
+  //     }
+  //   }
+  // `);
 
   useEffect(() => {
-    if (typeof(dataq.price.tcaps[0].tcap) !== `undefined`) {
-      const Tprice = dataq.price.tcaps[0].tcap;
+    if (typeof(dataq.price.tcap) !== `undefined`) {
+      const Tprice = dataq.price.tcap;
       const currentTotalPrice = BigNumber.from(Tprice);
       const TotalTcapPrice = currentTotalPrice.mul(10000000000);
       const tcapprice = currentTotalPrice.div(100000000);
@@ -77,3 +83,17 @@ const SectionMain = () => {
 }
 
 export default SectionMain
+
+// const GET_TCAP_PRICE = gql`
+//   query {
+//     price {
+//       tcaps(
+//             first: 1, 
+//             orderBy: updatedAt, 
+//             orderDirection: desc
+//       ) {
+//         tcap
+//       }
+//     }
+//   }
+// `
