@@ -13,7 +13,7 @@ module.exports = {
     author: `Luminode | Oscar Fonseca`,
     firstName: `Oscar`,
     lastName: `Fonseca`,
-    description: `TCAP is the World's First Total Cryptocurrency Market Capitalization Token created by Cryptex Finance.`,
+    description: `TCAP is the World&apos;s First Total Cryptocurrency Market Capitalization Token created by Cryptex Finance.`,
     occupation: `Software Engineer`,
     image: `https://raw.githubusercontent.com/cryptexglobal/website/main/static/website/home/main.webp?token=ABGEJ5LMW5N6YYPYLKPLXWS72MKVM`,
     keywords: [`Cryptex`, `Blockchain`, `DeFi`, `Ethereum`, `Bitcoin`, `Projects`, `Work`],
