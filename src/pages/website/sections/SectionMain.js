@@ -6,7 +6,7 @@ import { useMediaQuery } from 'react-responsive';
 import image from '../../../../static/website/home/main.webp';
 import tcap from '../../../../static/website/home/tcap.svg';
 import appEndpoint from '../../../endpoint';
-import gql from 'graphql-tag';
+// import gql from 'graphql-tag';
 // import { useQuery } from '@apollo/react-hooks';
 
 const SectionMain = (dataq) => {

@@ -4,15 +4,18 @@
  * See: https://www.gatsbyjs.org/docs/gatsby-config/
  */
 
+//  const metaImage = require('./static/website/home/main.webp');
+
 module.exports = {
   /* Your site config here */
   siteMetadata: {
-    title: `Cryptex Website`,
-    author: `Oscar Fonseca`,
+    title: `TCAP`,
+    author: `Luminode | Oscar Fonseca`,
     firstName: `Oscar`,
     lastName: `Fonseca`,
-    description: `Cryptex Website`,
+    description: `TCAP is the World's First Total Cryptocurrency Market Capitalization Token created by Cryptex Finance.`,
     occupation: `Software Engineer`,
+    image: `https://raw.githubusercontent.com/cryptexglobal/website/main/static/website/home/main.webp?token=ABGEJ5LMW5N6YYPYLKPLXWS72MKVM`,
     keywords: [`Cryptex`, `Blockchain`, `DeFi`, `Ethereum`, `Bitcoin`, `Projects`, `Work`],
     siteUrl:
       process.env.URL || process.env.DEPLOY_URL || `http://localhost:8000`,

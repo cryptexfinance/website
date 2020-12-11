@@ -11,7 +11,7 @@ export default ({ data }) => {
   // console.log(data.price);
   return (
     <PageLayout>
-      <SEO title="Cryptex | TCAP" />
+      <SEO title="Cryptex" />
       <video playsInline autoPlay loop muted poster={bg} className="video"  id="bgvid">
         <source src={bgvideom} type="video/webm" />
         <source src={bgvideo} type="video/mp4" />
