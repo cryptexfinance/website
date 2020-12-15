@@ -6,11 +6,10 @@ import { useMediaQuery } from 'react-responsive';
 import image from '../../../../static/website/home/main.webp';
 import tcap from '../../../../static/website/home/tcap.svg';
 import appEndpoint from '../../../endpoint';
-// import gql from 'graphql-tag';
-// import { useQuery } from '@apollo/react-hooks';
+import { useQuery } from '@apollo/client';
+import gql from 'graphql-tag';
 
-const SectionMain = (dataq) => {
-  console.log(dataq.price);
+const SectionMain = () => {
   // const appEndpoint = "https://rinkeby.cryptex.finance/";
   const isMobileDevice = useMediaQuery({ query: '(max-device-width: 428px)' });
   const isTabletDevice = useMediaQuery({ query: '(max-device-width: 768px)' });
@@ -25,39 +24,29 @@ const SectionMain = (dataq) => {
   const [totalTcapPrice, setTotalTcapPrice] = useState(0.0);
   const [tcapPrice, setTcapPrice] = useState(0.0);
 
-  // const { loading, dataq } = useQuery(GET_TCAP_PRICE, {});
-  // const dataq = 0;
-
-  // const dataq = useStaticQuery(graphql`
-  //   query {
-  //     price {
-  //       tcaps(
-  //             first: 1, 
-  //             orderBy: updatedAt, 
-  //             orderDirection: desc
-  //       ) {
-  //         tcap
-  //       }
-  //     }
-  //   }
-  // `);
+  const { loading, data } = useQuery(GET_TCAP_PRICE, {});
 
   useEffect(() => {
-    if (typeof(dataq.price.tcap) !== `undefined`) {
-      const Tprice = dataq.price.tcap;
-      const currentTotalPrice = BigNumber.from(Tprice);
-      const TotalTcapPrice = currentTotalPrice.mul(10000000000);
-      const tcapprice = currentTotalPrice.div(100000000);
-      setTotalTcapPrice(format(parseFloat(tcapprice), 0));
-      setTcapPrice(format(parseFloat(utils.formatEther(TotalTcapPrice.div(10000000000))),2));
-    } else {
-      console.log("Error with props in main");
-      console.log(dataq.price.tcaps[0].tcap);
+    const loadData = async () => {
+      if (typeof(data) !== `undefined`) {
+        const Tprice = await data?.tcaps[0].tcap;
+        const currentTotalPrice = BigNumber.from(Tprice);
+        const TotalTcapPrice = currentTotalPrice.mul(10000000000);
+        const tcapprice = currentTotalPrice.div(100000000);
+        setTotalTcapPrice(format(parseFloat(tcapprice), 0));
+        setTcapPrice(format(parseFloat(utils.formatEther(TotalTcapPrice.div(10000000000))),2));
+      } else {
+        console.log("Error with props in main");
+        console.log(data);
+      }
     }
-  }, [dataq]);
+
+    loadData();
+    // eslint-disable-next-line
+  }, [data]);
 
   return (
-  
+    
     <>
       {isMobileDevice && isPortrait ? <div className="main-title header">The World's <br/>First Total Crypto<br/>Market Cap Token</div> : 
       (isTabletDevice || isTabletDevice2 || isTabletDevice3) && isPortrait ? <div className="main-title header">The World's First <br/>Total Crypto Market Cap Token</div> :
@@ -65,10 +54,10 @@ const SectionMain = (dataq) => {
       <div className="main-image">
         <img src={image} alt="Main" className="main-image" />
       </div>
-      <div className="main-number-pink">${totalTcapPrice}</div>
+      <div className="main-number-pink">{loading && <p>Loading...</p>} {data && "$" + totalTcapPrice}</div>
       <div className="main-bold-text">Total Crypto Market Capitalization</div>
       <div className="main-divider"></div>
-      <div className="main-number-blue">${tcapPrice}</div>
+      <div className="main-number-blue">{loading && <p>Loading...</p>} {data && "$" + tcapPrice}</div>
       <div className="main-tcap">
         <img src={tcap} className="main-tcap-image" alt="TCAP" />
         <div className="main-tcap-text">&nbsp;TCAP</div>
@@ -84,16 +73,10 @@ const SectionMain = (dataq) => {
 
 export default SectionMain
 
-// const GET_TCAP_PRICE = gql`
-//   query {
-//     price {
-//       tcaps(
-//             first: 1, 
-//             orderBy: updatedAt, 
-//             orderDirection: desc
-//       ) {
-//         tcap
-//       }
-//     }
-//   }
-// `
+const GET_TCAP_PRICE = gql`
+  query {
+    tcaps(first: 1, orderBy: updatedAt, orderDirection: desc) {
+      tcap
+    }
+  }
+`

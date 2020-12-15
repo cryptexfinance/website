@@ -11,7 +11,8 @@ const Home = (data) => {
     return (
       <>
         <header className="section-main">
-          <SectionMain price={data.price}/>
+          {/* <SectionMain price={data.price}/> */}
+          <SectionMain />
         </header>
         <main>
           <SectionAbout />

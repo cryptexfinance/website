@@ -16,7 +16,8 @@ export default ({ data }) => {
         <source src={bgvideom} type="video/webm" />
         <source src={bgvideo} type="video/mp4" />
       </video>
-        <Home price={data.price.tcaps[0]}/>
+        {/* <Home price={data.price.tcaps[0]}/> */}
+        <Home />
     </PageLayout>
   )
 }
@@ -29,15 +30,6 @@ export const query = graphql`
         firstName
         lastName
         occupation
-      }
-    },
-    price {
-      tcaps(
-            first: 1, 
-            orderBy: updatedAt, 
-            orderDirection: desc
-      ) {
-        tcap
       }
     }
   }
