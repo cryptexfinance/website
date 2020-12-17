@@ -16,7 +16,15 @@ module.exports = {
     description: `TCAP is the World&apos;s First Total Cryptocurrency Market Capitalization Token created by Cryptex Finance.`,
     occupation: `Software Engineer`,
     image: `https://raw.githubusercontent.com/cryptexglobal/website/main/static/website/home/main.webp?token=ABGEJ5LMW5N6YYPYLKPLXWS72MKVM`,
-    keywords: [`Cryptex`, `Blockchain`, `DeFi`, `Ethereum`, `Bitcoin`, `Projects`, `Work`],
+    keywords: [
+      `Cryptex`,
+      `Blockchain`,
+      `DeFi`,
+      `Ethereum`,
+      `Bitcoin`,
+      `Projects`,
+      `Work`,
+    ],
     siteUrl:
       process.env.URL || process.env.DEPLOY_URL || `http://localhost:8000`,
     unemployed: true,
@@ -24,17 +32,17 @@ module.exports = {
   plugins: [
     {
       // keep as first gatsby-source-filesystem plugin for gatsby image support
-      resolve: 'gatsby-source-filesystem',
+      resolve: "gatsby-source-filesystem",
       options: {
         path: `${__dirname}/static/img`,
-        name: 'uploads',
+        name: "uploads",
       },
     },
     {
-      resolve: 'gatsby-source-filesystem',
+      resolve: "gatsby-source-filesystem",
       options: {
         path: `${__dirname}/src/pages`,
-        name: 'pages',
+        name: "pages",
       },
     },
     {
@@ -60,7 +68,7 @@ module.exports = {
     },
     `gatsby-plugin-sass`,
     {
-      resolve: 'gatsby-plugin-netlify-cms',
+      resolve: "gatsby-plugin-netlify-cms",
       options: {
         modulePath: `${__dirname}/src/cms/cms.js`,
       },
@@ -70,14 +78,14 @@ module.exports = {
       options: {
         plugins: [
           {
-            resolve: 'gatsby-remark-relative-images',
+            resolve: "gatsby-remark-relative-images",
             options: {
               path: `${__dirname}/static/img`,
-              name: 'uploads',
+              name: "uploads",
             },
           },
           {
-            resolve: 'gatsby-remark-images',
+            resolve: "gatsby-remark-images",
             options: {
               // It's important to specify the maxWidth (in pixels) of
               // the content container as this plugin uses this as the
@@ -86,9 +94,9 @@ module.exports = {
             },
           },
           {
-            resolve: 'gatsby-remark-copy-linked-files',
+            resolve: "gatsby-remark-copy-linked-files",
             options: {
-              destinationDir: 'static',
+              destinationDir: "static",
             },
           },
         ],
@@ -106,7 +114,7 @@ module.exports = {
         background_color: `#000`,
         theme_color: `#000`,
         display: `standalone`,
-        icon: `${__dirname}/static/favicon.ico`, // This path is relative to the root of the site.
+        icon: `${__dirname}/static/favicon.svg`, // This path is relative to the root of the site.
       },
     },
     `gatsby-plugin-offline`,
@@ -137,12 +145,13 @@ module.exports = {
     //     uri: 'https://api.thegraph.com/subgraphs/name/cryptexglobal/tcap-oracle-graph'
     //   }
     // },
-    'gatsby-plugin-netlify',
+    "gatsby-plugin-netlify",
     {
-      resolve: 'gatsby-plugin-mailchimp',
+      resolve: "gatsby-plugin-mailchimp",
       options: {
-          endpoint: 'https://finance.us2.list-manage.com/subscribe/post?u=7bc366d2c0af3bd7b71582974&amp;id=6c20752368', // string; add your MC list endpoint here; see instructions below
-          timeout: 3500, // number; the amount of time, in milliseconds, that you want to allow mailchimp to respond to your request before timing out. defaults to 3500
+        endpoint:
+          "https://finance.us2.list-manage.com/subscribe/post?u=7bc366d2c0af3bd7b71582974&amp;id=6c20752368", // string; add your MC list endpoint here; see instructions below
+        timeout: 3500, // number; the amount of time, in milliseconds, that you want to allow mailchimp to respond to your request before timing out. defaults to 3500
       },
     },
     {
@@ -153,7 +162,7 @@ module.exports = {
         defaultDataLayer: { platform: "gatsby" },
       },
     },
-    // { 
+    // {
     //   resolve: `gatsby-plugin-purgecss`,
     //   options: {
     //     printRejected: true, // Print removed selectors and processed file names
