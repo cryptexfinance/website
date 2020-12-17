@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { Link, useStaticQuery, graphql } from 'gatsby';
+import { useStaticQuery, graphql } from 'gatsby';
 import Flippy, { FrontSide, BackSide } from 'react-flippy';
 // const joe = lazy(() => import('../../../../static/website/team/joe.webp'));
 // const preston = lazy(() => import('../../../../static/website/team/preston.webp'));
@@ -79,8 +79,12 @@ const SectionTeam = (props) => {
         <img src={node.frontmatter.featuredimage.childImageSharp.fluid.src} className="newsitem-photo" alt="News" />
         <div className="newsitem-title terciary-header">{node.frontmatter.title}</div>
         {/* <div className="newsitem-description newsdescription">&nbsp;</div> */}
-        <div className="newsitem-tag-items"><a className="newsitem-tagbox taglink">{typeof(node.frontmatter.tags) !== `undefined` ? node.frontmatter.tags.map(tag => {return tag}) : ""}</a></div>
-        <Link to={node.excerpt} rel="noreferrer" target="_blank" className="newsitem-link link">Check it out</Link>
+        <div className="newsitem-tag-items">
+          <a href={node.excerpt} rel="noreferrer" target="_blank" className="newsitem-tagbox taglink">
+            {typeof(node.frontmatter.tags) !== `undefined` ? node.frontmatter.tags.map(tag => {return tag}) : ""}
+          </a>
+        </div>
+        <a href={node.excerpt} rel="noreferrer" target="_blank" className="newsitem-link link">Check it out</a>
       </div>
     )) : <div></div>;
   }

@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Link } from 'gatsby';
+// import { Link } from 'gatsby';
 import { toast, ToastContainer } from "react-toastify";
 import reddit from '../../../../static/website/community/reddit.svg';
 import discord from '../../../../static/website/community/discord.svg';
@@ -83,18 +83,18 @@ const SectionCommunity = ({ data }) => {
             We’re on a mission to make digital assets simple, accessible, and secure.
           </div>
           <div className="community-icons-row">
-            <Link to="https://www.reddit.com/r/totalcryptomarketcap" rel="noreferrer" target="_blank" className="community-item">
+            <a href="https://www.reddit.com/r/totalcryptomarketcap" rel="noreferrer" target="_blank" className="community-item">
               <img src={reddit} className="community-item-icon" alt="Reddit" />
               <div className="community-item-text terciary-header">Reddit</div>
-            </Link>
-            <Link to="https://discord.gg/N5zEq6b" rel="noreferrer" target="_blank" className="community-item">
+            </a>
+            <a href="https://discord.gg/N5zEq6b" rel="noreferrer" target="_blank" className="community-item">
               <img src={discord} className="community-item-icon" alt="Reddit" />
               <div className="community-item-text terciary-header">Discord</div>
-            </Link>
-            <Link to="https://twitter.com/cryptexfinance" rel="noreferrer" target="_blank" className="community-item">
+            </a>
+            <a href="https://twitter.com/cryptexfinance" rel="noreferrer" target="_blank" className="community-item">
               <img src={twitter} className="community-item-icon" alt="Reddit" />
               <div className="community-item-text terciary-header">Twitter</div>
-            </Link>
+            </a>
           </div>
           <form onSubmit={handleSubmit}>
             <label id="subslbl" htmlFor="subscribe" className="community-subscribe-title heading-secondary">

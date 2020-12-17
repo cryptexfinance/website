@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'gatsby';
+// import { Link } from 'gatsby';
 // import { Container } from 'react-bootstrap'
 // import auditPDF from '../../../../static/Cryptex_-_Final_Report.pdf';
 // import whitepaperPDF from '../../../../static/White_Paper.pdf';
@@ -36,11 +36,11 @@ const SectionAbout = () => {
               </div>
               <div className="about-details-divisor"></div>
               <div className="about-details-item">
-                <Link to="https://docs.cryptex.finance" rel="noreferrer" target="_blank" className="about-details-text"><img src={code} className="about-details-icons" alt="Code" />Code</Link>
+                <a href="https://docs.cryptex.finance" rel="noreferrer" target="_blank" className="about-details-text"><img src={code} className="about-details-icons" alt="Code" />Code</a>
               </div>
               <div className="about-details-divisor"></div>
               <div className="about-details-item">
-                <Link to="https://docs.chain.link/docs/get-the-latest-price" rel="noreferrer" target="_blank" className="about-details-text"><img src={oracles} className="about-details-icons" alt="Oracles" />Oracles</Link>
+                <a href="https://docs.chain.link/docs/get-the-latest-price" rel="noreferrer" target="_blank" className="about-details-text"><img src={oracles} className="about-details-icons" alt="Oracles" />Oracles</a>
               </div>
               <div className="about-details-divisor"></div>
               <div className="about-details-item">

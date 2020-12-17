@@ -1,7 +1,7 @@
 import React,{ useEffect, useState } from 'react';
 // import { useStaticQuery, graphql } from "gatsby";
 import { BigNumber, utils } from "ethers";
-import { Link } from 'gatsby';
+// import { Link } from 'gatsby';
 import { useMediaQuery } from 'react-responsive';
 import image from '../../../../static/website/home/main.webp';
 import tcap from '../../../../static/website/home/tcap.svg';
@@ -61,9 +61,9 @@ const SectionMain = () => {
         <div className="main-tcap-text">&nbsp;TCAP</div>
       </div>
       {/* <div className="main-number-green">+7.5%</div> */}
-      <Link to={appEndpoint} rel="noreferrer" target="_blank">
-        <button className="button-pink main-button">Go to App</button>
-      </Link>
+      <a href={appEndpoint} rel="noopener noreferrer" className="button-pink main-button main-button-link" target="_blank">
+        Go to App
+      </a>
       <div className="main-image">
         <img src={image} alt="Main" className="main-image" />
       </div>
