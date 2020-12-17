@@ -5,7 +5,6 @@ import { SEO } from "../utils"
 import Home from "./website/home";
 import bg from '../../static/bg.webp'
 import bgvideo from '../../static/bg.mp4'
-import bgvideom from '../../static/bg.webm'
 
 export default ({ data }) => {
   // console.log(data.price);
@@ -13,10 +12,8 @@ export default ({ data }) => {
     <PageLayout>
       <SEO title="Cryptex" />
       <video playsInline autoPlay loop muted poster={bg} className="video"  id="bgvid">
-        <source src={bgvideom} type="video/webm" />
         <source src={bgvideo} type="video/mp4" />
       </video>
-        {/* <Home price={data.price.tcaps[0]}/> */}
         <Home />
     </PageLayout>
   )

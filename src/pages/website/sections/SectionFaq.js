@@ -18,7 +18,7 @@ const SectionFaq = () => {
             </Toggle>
 
             <Toggle title="What is TCAP backed by?">
-              <div className="answer">Each TCAP is collateralized by more than 150% corresponding amount of ETH, WBTC or DAI.</div>
+              <div className="answer">Each TCAP is collateralized by more than 250% corresponding amount of ETH, WBTC or DAI.</div>
             </Toggle>
 
             <Toggle title="TCAP includes EVERY coin and token?">
