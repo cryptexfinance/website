@@ -51,9 +51,6 @@ const SectionMain = () => {
       {isMobileDevice && isPortrait ? <div className="main-title header">The World's <br/>First Total Crypto<br/>Market Cap Token</div> : 
       (isTabletDevice || isTabletDevice2 || isTabletDevice3) && isPortrait ? <div className="main-title header">The World's First <br/>Total Crypto Market Cap Token</div> :
       isDesktopOrLaptop && !isPortrait && <div className="main-title header">The World's First <br/>Total Crypto Market Cap Token</div>}
-      <div className="main-image">
-        <img src={image} alt="Main" className="main-image" />
-      </div>
       <div className="main-number-pink">{loading && <p>Loading...</p>} {data && "$" + totalTcapPrice}</div>
       <div className="main-bold-text">Total Crypto Market Capitalization</div>
       <div className="main-divider"></div>
@@ -66,6 +63,9 @@ const SectionMain = () => {
       <Link to={appEndpoint} rel="noreferrer" target="_blank">
         <button className="button-pink main-button">Go to App</button>
       </Link>
+      <div className="main-image">
+        <img src={image} alt="Main" className="main-image" />
+      </div>
     </>
 
   )
