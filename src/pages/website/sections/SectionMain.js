@@ -11,14 +11,14 @@ import gql from 'graphql-tag';
 
 const SectionMain = () => {
   // const appEndpoint = "https://rinkeby.cryptex.finance/";
-  const isMobileDevice = useMediaQuery({ query: '(max-device-width: 320px)' });
-  const isMobileDevice2 = useMediaQuery({ query: '(max-device-width: 375px)' });
-  const isMobileDevice3 = useMediaQuery({ query: '(max-device-width: 390px)' });
-  const isMobileDevice4 = useMediaQuery({ query: '(max-device-width: 414px)' });
-  const isMobileDevice5 = useMediaQuery({ query: '(max-device-width: 428px)' });
-  const isTabletDevice = useMediaQuery({ query: '(max-device-width: 768px)' });
-  const isTabletDevice2 = useMediaQuery({ query: '(max-device-width: 834px)' });
-  const isTabletDevice3 = useMediaQuery({ query: '(max-device-width: 1024px)' });
+  const isMobileDevice = useMediaQuery({ query: '(min-device-width: 320px)' });
+  const isMobileDevice2 = useMediaQuery({ query: '(min-device-width: 375px)' });
+  const isMobileDevice3 = useMediaQuery({ query: '(min-device-width: 390px)' });
+  const isMobileDevice4 = useMediaQuery({ query: '(min-device-width: 414px)' });
+  const isMobileDevice5 = useMediaQuery({ query: '(min-device-width: 428px)' });
+  const isTabletDevice = useMediaQuery({ query: '(min-device-width: 768px)' });
+  const isTabletDevice2 = useMediaQuery({ query: '(min-device-width: 834px)' });
+  const isTabletDevice3 = useMediaQuery({ query: '(min-device-width: 1024px)' });
   const isDesktopOrLaptop = useMediaQuery({ query: '(min-device-width: 1224px)' });
   const isPortrait = useMediaQuery({ query: '(orientation: portrait)' });
   const format = (num, decimals) => num.toLocaleString('en-US', {
