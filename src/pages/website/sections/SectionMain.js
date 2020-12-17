@@ -11,14 +11,10 @@ import gql from 'graphql-tag';
 
 const SectionMain = () => {
   // const appEndpoint = "https://rinkeby.cryptex.finance/";
-  const isMobileDevice = useMediaQuery({ query: '(min-device-width: 320px)' });
-  const isMobileDevice2 = useMediaQuery({ query: '(min-device-width: 375px)' });
-  const isMobileDevice3 = useMediaQuery({ query: '(min-device-width: 390px)' });
-  const isMobileDevice4 = useMediaQuery({ query: '(min-device-width: 414px)' });
-  const isMobileDevice5 = useMediaQuery({ query: '(min-device-width: 428px)' });
-  const isTabletDevice = useMediaQuery({ query: '(min-device-width: 768px)' });
-  const isTabletDevice2 = useMediaQuery({ query: '(min-device-width: 834px)' });
-  const isTabletDevice3 = useMediaQuery({ query: '(min-device-width: 1024px)' });
+  const isMobileDevice = useMediaQuery({ query: '(max-device-width: 428px)' });
+  const isTabletDevice = useMediaQuery({ query: '(max-device-width: 768px)' });
+  const isTabletDevice2 = useMediaQuery({ query: '(max-device-width: 834px)' });
+  const isTabletDevice3 = useMediaQuery({ query: '(max-device-width: 1024px)' });
   const isDesktopOrLaptop = useMediaQuery({ query: '(min-device-width: 1224px)' });
   const isPortrait = useMediaQuery({ query: '(orientation: portrait)' });
   const format = (num, decimals) => num.toLocaleString('en-US', {
@@ -52,7 +48,7 @@ const SectionMain = () => {
   return (
     
     <>
-      {(isMobileDevice || isMobileDevice2 || isMobileDevice3 || isMobileDevice4 || isMobileDevice5) && isPortrait ? <div className="main-title header">The World's <br/>First Total Crypto<br/>Market Cap Token</div> : 
+      {isMobileDevice && isPortrait ? <div className="main-title header">The World's <br/>First Total Crypto<br/>Market Cap Token</div> : 
       (isTabletDevice || isTabletDevice2 || isTabletDevice3) && isPortrait ? <div className="main-title header">The World's First <br/>Total Crypto Market Cap Token</div> :
       isDesktopOrLaptop && !isPortrait && <div className="main-title header">The World's First <br/>Total Crypto Market Cap Token</div>}
       <div className="main-number-pink">{loading && <p>Loading...</p>} {data && "$" + totalTcapPrice}</div>
