@@ -40,7 +40,7 @@ const SectionMain = () => {
         console.log(data);
       }
     }
-
+    console.log('DATA: ' + data)
     loadData();
     // eslint-disable-next-line
   }, [data]);
