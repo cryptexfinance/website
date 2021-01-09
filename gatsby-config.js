@@ -37,6 +37,10 @@ module.exports = {
         trackingIds: [
           "G-5PPNHXEBWZ", // Google Analytics / GA          
         ],
+        pluginConfig: {
+          // Puts tracking script in the head instead of the body
+          head: true,
+        }
       },
     },
     {
