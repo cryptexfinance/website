@@ -6,7 +6,7 @@ import { useMediaQuery } from 'react-responsive';
 import image from '../../../../static/website/home/main.webp';
 import tcap from '../../../../static/website/home/tcap.svg';
 import appEndpoint from '../../../endpoint';
-import { useQuery } from '@apollo/client';
+import { useQuery, NetworkStatus } from '@apollo/client';
 import gql from 'graphql-tag';
 
 const SectionMain = () => {
@@ -21,10 +21,16 @@ const SectionMain = () => {
     minimumFractionDigits: decimals,      
     maximumFractionDigits: decimals,
   });
+  const [firstLoad, setFirstLoad] = useState(true)
   const [totalTcapPrice, setTotalTcapPrice] = useState(0.0);
   const [tcapPrice, setTcapPrice] = useState(0.0);
-
-  const { loading, data } = useQuery(GET_TCAP_PRICE, {});
+  const { loading, data, networkStatus} = useQuery(GET_TCAP_PRICE, {
+      variables: {},
+      pollInterval: 600000,
+      fetchPolicy: "cache-and-network",
+      notifyOnNetworkStatusChange: true
+    }
+  );
 
   useEffect(() => {
     const loadData = async () => {
@@ -35,27 +41,30 @@ const SectionMain = () => {
         const tcapprice = currentTotalPrice.div(100000000);
         setTotalTcapPrice(format(parseFloat(tcapprice), 0));
         setTcapPrice(format(parseFloat(utils.formatEther(TotalTcapPrice.div(10000000000))),2));
+        setFirstLoad(false)
       } else {
-        console.log("Error with props in main");
         console.log(data);
       }
     }
-    console.log('DATA: ' + data)
+    
     loadData();
     // eslint-disable-next-line
-  }, [data]);
+  }, [networkStatus]);  
 
-  return (
-    
+  return ( 
     <>
       {isMobileDevice && isPortrait ? <div className="main-title header">The World's <br/>First Total Crypto<br/>Market Cap Token</div> : 
       (isTabletDevice || isTabletDevice2 || isTabletDevice3) && isPortrait ? <div className="main-title header">The World's First <br/>Total Crypto Market Cap Token</div> :
       isDesktopOrLaptop && !isPortrait ? <div className="main-title header">The World's First <br/>Total Crypto Market Cap Token</div>: 
       <div className="main-title header">The World's <br/>First Total Crypto<br/>Market Cap Token</div>}
-      <div className="main-number-pink">{loading && <p>Loading...</p>} {data && "$" + totalTcapPrice}</div>
+      
+      <div className="main-number-pink">{loading && firstLoad && <p>Loading...</p>} {data && "$" + totalTcapPrice}</div>
+      
       <div className="main-bold-text">Total Crypto Market Capitalization</div>
       <div className="main-divider"></div>
-      <div className="main-number-blue">{loading && <p>Loading...</p>} {data && "$" + tcapPrice}</div>
+      
+      <div className="main-number-blue">{loading && firstLoad  && <p>Loading...</p>} {data && "$" + tcapPrice}</div>
+      
       <div className="main-tcap">
         <img src={tcap} className="main-tcap-image" alt="TCAP" />
         <div className="main-tcap-text">&nbsp;TCAP</div>
