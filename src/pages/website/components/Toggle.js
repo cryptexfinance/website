@@ -11,19 +11,23 @@ export class Toggle extends Component {
         const { open } = this.state;  
         this.setState({  
             open: !open,  
-        });  
+        }); 
+        let value = !open ? 1 : -1
+        this.props.addToExpanded(value)
     }  
     render() {  
         var { title, children } = this.props;  
         const { open } = this.state;  
         let openclose = ''
+        let className = 'toggle'
         if (open) {  
             openclose = '→';  
+            className = 'toggle expand'
         } else {  
             openclose = '+';  
         }  
-        return (  
-            <div className="toggle" role="button" onClick={this.togglebutton} onKeyDown={this.togglebutton} aria-hidden="true">  
+        return (               
+            <div className={className} role="button" onClick={this.togglebutton} onKeyDown={this.togglebutton} aria-hidden="true">              
               <div className="question">  
                   {title}  
               </div>

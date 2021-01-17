@@ -634,9 +634,8 @@ and (orientation : portrait) {
     &-row {
       position: absolute;
       width: 100%;
-      // left: calc(50% - 312px/2 - 7.5px);
       left: 110px;
-      top: calc(50% - 36px/2 - 206px);
+      top: calc(50% - 100px/2 - 206px);
     }
 
     &-title {
@@ -653,7 +652,7 @@ and (orientation : portrait) {
       width: 305px;
       height: 22px;
       left: calc(50% - 305px/2 - 168px);
-      top: calc(50% - 22px/2 - 361px);
+      top: calc(50% - 50px/2 - 361px);
       font-size: 16px;
       line-height: 22px;
       letter-spacing: 0.3px;
@@ -828,14 +827,24 @@ and (orientation : portrait) {
   }
   
   .section-faq {
-    height: 120vh;
+    height: 90vh;
     position: relative;
-    // background-color: peachpuff;
+  }
+  .section-faq.expand1{
+    margin-bottom: 100px;
+  }
+  .section-faq.expand2{
+    margin-bottom: 300px;
+  }
+  .section-faq.expand4{
+    margin-bottom: 470px;
+  }
+  .section-faq.expand6{
+    margin-bottom: 600px;
   }
   
   .section-community {
-    height: 125vh;
+    height: 90vh;
     position: relative;
-    // background-color: darkorange;
   }
 }
