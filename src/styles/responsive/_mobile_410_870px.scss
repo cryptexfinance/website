@@ -1,10 +1,9 @@
-@media only screen and (min-device-width: 375px) and (max-device-height: 812px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 3) {
+@media only screen and (min-device-width: 410px) and (max-device-height: 870px) and (orientation: portrait) {
   body,
   html {
     overflow-x: hidden;
   }
   body {
-    // height: 100vh;
     width: 100vw;
   }
 
@@ -326,8 +325,7 @@
     &-row {
       position: absolute;
       width: 355px;
-      // height: 403px;
-      left: 50px;
+      left: 70px;
       top: calc(50% - 36px / 2 - 364px);
     }
 
@@ -457,7 +455,7 @@
       position: absolute;
       width: 312px;
       height: 36px;
-      left: calc(50% - 312px / 2 - 7.5px);
+      left: calc(50% - 350px / 2 - 7.5px);
       top: calc(50% - 36px / 2 - 467px);
       font-size: 24px;
       line-height: 36px;
@@ -471,8 +469,8 @@
       font-size: 16px;
       line-height: 22px;
       letter-spacing: 0.3px;
-      left: calc(50% - 305px / 2 - 11px);
-      top: calc(50% - 44px / 2 - 361px);
+      left: calc(50% - 340px / 2 - 11px);
+      top: calc(50% - 140px / 2 - 361px);
     }
 
     &-divider {
@@ -491,9 +489,7 @@
   .team-row {
     position: absolute;
     width: 100%;
-    // left: calc(50% - 10.6875rem/2 - 33.6562Z5rem);
-    top: calc(50% - 166px / 2 - 203.7px);
-    // background-color: #212138;
+    top: calc(50% - 300px / 2 - 203.7px);
   }
 
   .team-box {
@@ -554,14 +550,13 @@
       font-size: 22px;
       line-height: 24px;
       left: calc(50% - 204px / 2 + 140.5px);
-      top: calc(50% - 166px / 2 + 1650px);
+      top: calc(50% - 400px / 2 + 1650px);
     }
 
     .newsgroup {
       position: absolute;
-      left: 10px; //calc(50% - 204px/2 + 7.8px);
-      top: calc(50% - 166px / 2 + 1756px);
-      // padding-left: 22.76px;
+      left: 10px; 
+      top: calc(50% - 480px / 2 + 1756px);
     }
 
     .newsitem {
@@ -634,15 +629,14 @@
     &-row {
       position: absolute;
       width: 100%;
-      // left: calc(50% - 312px/2 - 7.5px);
       left: 40px;
-      top: calc(50% - 36px / 2 - 16px);
+      top: calc(50% - 200px / 2 - 16px);
     }
 
     &-title {
       width: 312px;
       height: 36px;
-      left: calc(50% - 312px / 2 - 7.5px);
+      left: calc(50% - 350px / 2 - 7.5px);
       top: calc(50% - 36px / 2 - 206px);
       font-size: 24px;
       line-height: 36px;
@@ -652,15 +646,15 @@
     &-subtitle {
       width: 305px;
       height: 22px;
-      left: calc(50% - 305px / 2 - 11px);
-      top: calc(50% - 22px / 2 - 151px);
+      left: calc(50% - 350px / 2 - 11px);
+      top: calc(50% - 50px / 2 - 151px);
       font-size: 16px;
       line-height: 22px;
       letter-spacing: 0.3px;
     }
 
     &-divider {
-      width: 315px;
+      width: 340px;
       height: 1px;
       margin-top: 16px;
       margin-bottom: 32px;
@@ -670,7 +664,6 @@
   .toggle {
     width: 120vw;
     height: auto;
-    // background: mediumaquamarine;
   }
 
   .toggle {
@@ -686,7 +679,6 @@
     font-size: 16px;
     line-height: 24px;
     letter-spacing: 0.3px;
-    // margin-top: 16px;
     margin-bottom: 12px;
   }
 
@@ -712,7 +704,7 @@
     &-title {
       width: 312px;
       height: 72px;
-      left: calc(50% - 312px / 2 - 1.5px);
+      left: calc(50% - 350px / 2 - 1.5px);
       top: calc(50% - 72px / 2 - 508px);
       font-size: 24px;
       line-height: 36px;
@@ -722,7 +714,7 @@
     &-subtitle {
       width: 305px;
       height: 88px;
-      left: calc(50% - 305px / 2 - 5px);
+      left: calc(50% - 345px / 2 - 5px);
       top: calc(50% - 88px / 2 - 401px);
       font-size: 16px;
       line-height: 22px;
@@ -802,10 +794,7 @@
 
   .section-main {
     position: relative;
-    height: 110vh;
-    // display: block;
-    // padding-bottom: 27.66%;
-    // background-color: khaki;
+    height: 130vh;
     .main-image {
       position: absolute;
       width: 470px;
@@ -816,31 +805,100 @@
   }
 
   .section-about {
-    height: 155vh;
+    height: 160vh;
     position: relative;
   }
 
   .section-features {
-    height: 155vh;
+    height: 180vh;
     position: relative;
   }
 
   .section-team {
     z-index: 12;
-    height: 235vh;
+    height: 250vh;
     position: relative;
   }
 
   .section-faq {
     z-index: 10;
-    height: 200vh;
+    height: 160vh;
     position: relative;
-    // background-color: peachpuff;
+  }
+  .section-faq.expand1{
+    margin-bottom: 150px;
+  }
+  .section-faq.expand2{
+    margin-bottom: 380px;
+  }
+  .section-faq.expand4{
+    margin-bottom: 700px;
+  }
+  .section-faq.expand6{
+    margin-bottom: 900px;
   }
 
   .section-community {
-    height: 125vh;
+    height: 135vh;
     position: relative;
-    // background-color: darkorange;
+  }
+
+  @media only screen and (min-device-height: 800px)  {
+    .section-main {
+      height: 110vh;
+    }      
+    .section-about {
+      height: 140vh;
+    }
+    .section-features {
+      height: 160vh;
+    }
+    .section-team {
+      height: 210vh;
+    }
+    .section-faq {
+      height: 150vh;
+    }
+    .section-community {
+      height: 100vh;
+    }    
+  }
+  @media only screen and (min-device-width: 440px)  {
+    .features {
+      &-row {
+        left: 90px;
+      }
+    }
+    .team {
+      position: relative;
+      &-title {
+        left: calc(50% - 380px / 2 - 7.5px);
+      }
+      &-subtitle {
+        left: calc(50% - 370px / 2 - 11px);
+      }
+    }
+    .team-row {
+      left: calc(50% - 1.6rem/2 - 33.65625rem);
+    }
+    .faq {
+      &-title {        
+        left: calc(50% - 400px / 2 - 7.5px);        
+      }
+      &-subtitle {        
+        left: calc(50% - 400px / 2 - 11px);        
+      }
+      &-row {
+        left: 50px;
+      }
+      &-divider {
+        width: 400px;        
+      }
+    }   
+    .community {
+      &-icons-row {
+        left: 80px; 
+      }
+    } 
   }
 }

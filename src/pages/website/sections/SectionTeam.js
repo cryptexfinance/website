@@ -1,14 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useStaticQuery, graphql } from 'gatsby';
 import Flippy, { FrontSide, BackSide } from 'react-flippy';
-// const joe = lazy(() => import('../../../../static/website/team/joe.webp'));
-// const preston = lazy(() => import('../../../../static/website/team/preston.webp'));
-// const cristian = lazy(() => import('../../../../static/website/team/cristian.webp'));
-// const tom = lazy(() => import('../../../../static/website/team/tom.webp'));
-// const joem = lazy(() => import('../../../../static/website/team/joem.webp'));
-// const prestonm = lazy(() => import('../../../../static/website/team/prestonm.webp'));
-// const cristianm = lazy(() => import('../../../../static/website/team/cristianm.webp'));
-// const tomm = lazy(() => import('../../../../static/website/team/tomm.webp'));
 import { useMediaQuery } from 'react-responsive';
 import joe from '../../../../static/website/team/joe.webp';
 import preston from '../../../../static/website/team/preston.webp';
@@ -22,14 +14,9 @@ import tomm from '../../../../static/website/team/tomm.webp';
 // const renderLoader = () => <p>Loading</p>;
 
 const SectionTeam = (props) => {
-  // const isDesktopOrLaptop = useMediaQuery({ query: '(min-device-width: 1224px)' });
-  // const isBigScreen = useMediaQuery({ query: '(min-device-width: 1824px)' });
   const isTabletOrMobile = useMediaQuery({ query: '(max-width: 1224px)' });
-  // const isTabletOrMobileDevice = useMediaQuery({ query: '(max-device-width: 1224px)' });
-  const isPortrait = useMediaQuery({ query: '(orientation: portrait)' });
-  // const isRetina = useMediaQuery({ query: '(min-resolution: 2dppx)' });
+  const isPortrait = useMediaQuery({ query: '(orientation: portrait)' });;
   const [tblog, setBlog] = useState({});
-  // const [device, setDevice] = useState('mobile');
 
   const dataq = useStaticQuery(graphql`
     query {

@@ -1,4 +1,4 @@
-@media only screen and (max-device-width: 375px) and (max-device-height: 667px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 2) {
+@media only screen and (max-device-width: 385px) and (max-device-height: 667px) and (orientation: portrait) and (-webkit-max-device-pixel-ratio: 2) {
   body,
   html {
     overflow-x: hidden;
@@ -23,21 +23,14 @@
 
   .nav-links a {
     z-index: 30;
-    // border: 1px solid red;
     height: 100vh;
-    background: $color-black;
-    // padding-left: 48px !important;
-    // padding-right: 48px !important;
+    background: $color-black;    
     padding-top: 60px;
     padding-bottom: 44px;
     text-align: center;
     font-size: 18px;
     line-height: 28px;
-    // display: flex;
-    // align-items: center;
-    // text-align: center;
     letter-spacing: 0.6px;
-    // margin-right: 0% !important;
     color: $color-grey !important;
 
     &::first-child {
@@ -544,7 +537,7 @@
   }
 
   .newsbox {
-    margin-top: 100px;
+    margin-top: 160px;
     position: absolute;
 
     &-title {
@@ -636,7 +629,7 @@
       width: 100%;
       // left: calc(50% - 312px/2 - 7.5px);
       left: 40px;
-      top: calc(50% - 36px / 2 - 16px);
+      top: calc(50% - 190px / 2 - 16px);
     }
 
     &-title {
@@ -668,7 +661,7 @@
   }
 
   .toggle {
-    width: 120vw;
+    width: 130vw;
     height: auto;
     // background: mediumaquamarine;
   }
@@ -812,7 +805,7 @@
       height: 465.94px;
       left: calc(50% - 470px / 2);
       top: calc(50% - 465.94px / 2 + 168px);
-    }
+    }    
   }
 
   .section-about {
@@ -832,14 +825,233 @@
 
   .section-faq {
     z-index: 10;
-    height: 260vh;
-    position: relative;
-    // background-color: peachpuff;
+    height: 210vh;
+    position: relative;    
+  }
+  .section-faq.expand1{
+    margin-bottom: 150px;
+  }
+  .section-faq.expand2{
+    margin-bottom: 400px;
+  }
+  .section-faq.expand4{
+    margin-bottom: 670px;
+  }
+  .section-faq.expand6{
+    margin-bottom: 900px;
   }
 
   .section-community {
-    height: 165vh;
+    height: 90vh;
     position: relative;
     // background-color: darkorange;
   }
+
+  @media only screen and (min-device-width: 370px)  {
+    .faq {
+      &-divider {
+        width: 335px;       
+      }
+    }
+  }
+
+  @media only screen and (max-device-height: 640px)  {
+    .section-faq {
+      z-index: 10;
+      height: 230vh;
+    }
+    .section-community {
+      height: 90vh;
+    }
+    .toggle {
+      width: 130vw;      
+    }
+    .newsbox {
+      &-title {
+        top: calc(50% - 280px / 2 + 2000px);
+      }
+      .newsgroup {
+        top: calc(50% - 240px / 2 + 2056px);
+      }      
+    }
+  }
+
+  @media only screen and (max-device-height: 600px) and (max-device-width: 350px) {
+    .main {
+      &-number-pink {
+        left: calc(50% - 257px / 2 - 10px);
+        top: calc(50% - 36px / 2 - 121px);
+        font-size: 16px;
+      }
+      &-bold-text {
+        left: calc(50% - 280px / 2 - 2.5px);
+        font-size: 13px;
+      }
+      &-number-blue {
+        left: calc(50% - 270px / 2 - 2.5px);        
+      }
+      &-tcap {
+        left: calc(50% - 5px / 2 - 140.7px);        
+      }
+    }
+    .section-main{
+      height: 130vh;
+    }
+    .section-about {
+      margin-left: 3%;
+      height: 170vh;
+    }
+    .section-features {
+      height: 200vh;
+      margin-left: 2%;
+    }
+    .section-team {
+      height: 330vh;
+      margin-left: 3%
+    }
+    .section-faq {
+      z-index: 10;
+      height: 260vh;
+      margin-left: 3%
+    }
+    .section-faq.expand1{
+      margin-bottom: 300px;
+    }
+    .section-faq.expand2{
+      margin-bottom: 500px;
+    }
+    .section-faq.expand4{
+      margin-bottom: 800px;
+    }
+    .section-faq.expand6{
+      margin-bottom: 1100px;
+    }
+    .section-community {
+      height: 120vh;
+      margin-left: 3%;
+    }
+    .about {
+      &-content {
+        width: 295px;        
+      }
+    }
+    .features {
+      &-box {
+        &-mint {
+          width: 292px;
+          height: 292px;          
+        }
+        &-trade {
+          width: 292px;
+          height: 292px; 
+        }
+        &-pool {
+          width: 292px;
+          height: 292px; 
+        }
+        &-farm {
+          width: 292px;
+          height: 292px; 
+        }
+      }
+      &-row {        
+        left: 20px;      
+      }
+    }
+    .team-box {
+      left: -5px;
+      &-photo {
+        width: 280px;      
+      }&-description {
+        width: 298px;
+        margin-top: 5px;
+      }
+    }
+    .newsbox {
+      margin-top: 50px;
+  
+      &-title {
+        left: calc(50% - 205px / 2 + 125.5px);
+        top: calc(50% - 280px / 2 + 2000px);
+      }
+      .newsgroup {
+        left: 0px; 
+        top: calc(50% - 270px / 2 + 2056px);
+      }
+      .newsitem {
+        &-title {
+          width: 290px;
+          line-height: 18px;          
+        }
+      }
+    }
+    .faq {
+      &-row {
+        left: 15px;
+      }
+      &-divider {
+        width: 300px;       
+      }
+    }
+    .question {
+      width: 260px;      
+    }
+    .answer {
+      width: 300px;      
+    }
+    .toggle {
+      width: 135vw;      
+    }
+    .community {
+      &-subscribe {
+        &-input {
+          width: 96%;          
+        }
+  
+        &-button {
+          width: 93%;
+        }
+      }
+    }
+    @media only screen and (max-device-height: 510px) {
+      .section-main{
+        height: 150vh;
+      }
+      .section-about {
+        height: 195vh;
+      }
+      .section-team {
+        height: 410vh;
+      }
+      .newsbox {
+        &-title {
+          top: calc(50% - 180px / 2 + 2000px);
+        }
+        .newsgroup {
+          top: calc(50% - 160px / 2 + 2056px);
+        }
+      }
+      .section-faq {
+        height: 260vh;
+      }
+      .section-community {
+        height: 150vh;
+      }
+    }
+    @media only screen and (max-device-height: 540px) and (min-device-height: 511px) {
+      .newsbox {
+        &-title {
+          top: calc(50% - 380px / 2 + 2000px);
+        }
+        .newsgroup {
+          top: calc(50% - 370px / 2 + 2056px);
+        }        
+      }
+      .section-faq {
+        height: 310vh;
+      }
+    }
+  }
+  
+  
 }

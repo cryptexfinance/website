@@ -4,7 +4,6 @@ and (max-device-width : 1366px)
 and (orientation : portrait) {
   body, html { overflow-x:hidden; }
   body {
-    // height: 100vh;
     width: 100vw;
   }
 
@@ -22,21 +21,14 @@ and (orientation : portrait) {
   }
 
   .nav-links a {
-    // border: 1px solid red;
     height: 100vh;
     background: $color-black;
-    // padding-left: 48px !important;
-    // padding-right: 48px !important;
     padding-top: 100px;
     padding-bottom: 74px;
     text-align:center;
     font-size: 18px;
     line-height: 28px;
-    // display: flex;
-    // align-items: center;
-    // text-align: center;
     letter-spacing: 0.6px;
-    // margin-right: 0% !important;
     color: $color-grey !important;
 
     &::first-child { 
@@ -84,7 +76,6 @@ and (orientation : portrait) {
   .menu-logo {
     width: 120px;
     margin-left: -15px;
-    // padding-left: 20px;
     
     &-divider {
       position: absolute;
@@ -92,8 +83,6 @@ and (orientation : portrait) {
       height: 49px;
       left: 240px;
       top: 0px;
-      // left: 504px;
-      // top: 362px;
   
       background-color: $color-grey-dark !important;//$color-grey-dark;
       z-index: 0;

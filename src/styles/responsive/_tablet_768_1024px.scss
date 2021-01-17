@@ -4,7 +4,6 @@ and (max-device-width : 1024px)
 and (orientation : portrait) {
   body, html { overflow-x:hidden; }
   body {
-    // height: 100vh;
     width: 100vw;
   }
 
@@ -22,21 +21,14 @@ and (orientation : portrait) {
   }
 
   .nav-links a {
-    // border: 1px solid red;
     height: 100vh;
     background: $color-black;
-    // padding-left: 48px !important;
-    // padding-right: 48px !important;
     padding-top: 100px;
     padding-bottom: 74px;
     text-align:center;
     font-size: 18px;
     line-height: 28px;
-    // display: flex;
-    // align-items: center;
-    // text-align: center;
     letter-spacing: 0.6px;
-    // margin-right: 0% !important;
     color: $color-grey !important;
 
     &::first-child { 
@@ -800,9 +792,7 @@ and (orientation : portrait) {
   .section-main {
     position: relative;
     height: 100vh;
-    // display: block; 
-    // padding-bottom: 27.66%;
-    // background-color: khaki;
+
     .main-image {
       position: absolute;
       width: 700px;
@@ -828,14 +818,72 @@ and (orientation : portrait) {
   }
   
   .section-faq {
-    height: 120vh;
+    height: 80vh;
     position: relative;
-    // background-color: peachpuff;
   }
+  .section-faq.expand1{
+    margin-bottom: 120px;
+  }
+  .section-faq.expand2{
+    margin-bottom: 350px;
+  }
+  .section-faq.expand4{
+    margin-bottom: 550px;
+  }
+  .section-faq.expand6{
+    margin-bottom: 700px;
+  }
+
   
   .section-community {
-    height: 125vh;
+    height: 110vh;
     position: relative;
-    // background-color: darkorange;
+  }
+
+  @media only screen and (min-device-height : 1100px) {
+    .section-main {
+      height: 80vh;
+    }
+    .section-about {
+      height: 100vh;
+    }
+    .section-features {
+      height: 85vh;
+    }
+    .section-team {
+      height: 110vh;
+    }
+    .section-faq {
+      height: 70vh;
+    }
+    .section-community {
+      height: 85vh;
+    }
+    .faq {
+      &-row {
+        position: absolute;
+        width: 100%;
+        left: 80px;
+        top: calc(50% - 36px/2 - 156px);
+      }
+      &-title {
+        left: calc(50% - 340px/2 - 165.5px);        
+      }
+      &-subtitle {
+        left: calc(50% - 340px/2 - 168px);
+      }
+      &-divider {
+        width: 650px;
+      }
+    }
+    .community {
+	
+      &-title {
+        left: calc(50% - 350px/2 - 165.5px);        
+      }
+      &-subtitle {
+        left: calc(50% - 345px/2 - 165px);        
+      }
+    }
   }
 }
