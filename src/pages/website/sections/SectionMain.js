@@ -52,11 +52,16 @@ const SectionMain = () => {
   }, [networkStatus]);  
 
   return ( 
-    <>
-      {isMobileDevice && isPortrait ? <div className="main-title header">The World's <br/>First Total Crypto<br/>Market Cap Token</div> : 
-      (isTabletDevice || isTabletDevice2 || isTabletDevice3) && isPortrait ? <div className="main-title header">The World's First <br/>Total Crypto Market Cap Token</div> :
-      isDesktopOrLaptop && !isPortrait ? <div className="main-title header">The World's First <br/>Total Crypto Market Cap Token</div>: 
-      <div className="main-title header">The World's <br/>First Total Crypto<br/>Market Cap Token</div>}
+    <>      
+      {isMobileDevice && isPortrait ? 
+        <div className="main-title header">The World's First <br/>Total Crypto<br/>Market Cap Token</div> 
+      : (isTabletDevice || isTabletDevice2 || isTabletDevice3) && isPortrait ? 
+          <div className="main-title header">The World's First <br/>Total Crypto Market Cap Token</div> 
+        : isDesktopOrLaptop && !isPortrait ? 
+          <div className="main-title header">The World's First <br/>Total Crypto Market Cap Token</div>
+        : 
+          <div className="main-title header">The World's <br/>First Total Crypto<br/>Market Cap Token</div>
+      }
       
       <div className="main-number-pink">{loading && firstLoad && <p>Loading...</p>} {data && "$" + totalTcapPrice}</div>
       
@@ -73,11 +78,11 @@ const SectionMain = () => {
       <a href={appEndpoint} rel="noopener noreferrer" className="button-pink main-button main-button-link" target="_blank">
         Go to App
       </a>
+    
       <div className="main-image">
         <img src={image} alt="Main" className="main-image" />
       </div>
     </>
-
   )
 }
 

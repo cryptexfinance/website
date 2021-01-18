@@ -1,11 +1,9 @@
-@media only screen and (min-device-width: 414px) and (max-device-height: 896px) and (orientation: portrait) {
-  // and (-webkit-device-pixel-ratio: 3) {
+@media only screen and (min-device-width: 414px) and (max-device-height: 896px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 2){
   body,
   html {
     overflow-x: hidden;
   }
   body {
-    // height: 100vh;
     width: 100vw;
   }
 
@@ -24,21 +22,14 @@
 
   .nav-links a {
     z-index: 30;
-    // border: 1px solid red;
     height: 100vh;
     background: $color-black;
-    // padding-left: 48px !important;
-    // padding-right: 48px !important;
     padding-top: 60px;
     padding-bottom: 44px;
     text-align: center;
     font-size: 18px;
     line-height: 28px;
-    // display: flex;
-    // align-items: center;
-    // text-align: center;
     letter-spacing: 0.6px;
-    // margin-right: 0% !important;
     color: $color-grey !important;
 
     &::first-child {
@@ -64,7 +55,6 @@
     background: $color-grey-dark !important;
     background-color: $color-grey-dark !important;
     z-index: 10;
-    // border: 1px solid $color-grey-dark;
     border: 1px solid #494866;
     box-sizing: border-box;
     margin-left: 35px;
@@ -86,7 +76,6 @@
   .menu-logo {
     width: 30px;
     margin-left: -15px;
-    // padding-left: 20px;
 
     &-divider {
       position: absolute;
@@ -94,19 +83,14 @@
       height: 49px;
       left: 60px;
       top: 0px;
-      // left: 504px;
-      // top: 362px;
-
-      background-color: $color-grey-dark !important; //$color-grey-dark;
+      background-color: $color-grey-dark !important; 
       z-index: 0;
     }
   }
 
   .navbar-toggler,
   .navbar-toggler-icon {
-    // display: none !important;
     position: relative;
-    // left: -25px;
     left: -190px;
   }
 
@@ -118,7 +102,6 @@
   .navbar-toggler:focus {
     position: relative;
     padding: 10px 20px 10px 20px;
-    // left: -25;
   }
 
   .mobile_menu_bar:before {
@@ -129,12 +112,9 @@
     font-family: $font-primary;
     content: "MENU";
     position: relative;
-    // left: -175px;
     padding: 10px 20px 10px 20px;
-    // background-color: #3e4555;
     color: $color-dark-clean !important;
     text-decoration: none;
-    // cursor: pointer;
     &:focus {
       outline: none !important;
     }
@@ -152,12 +132,10 @@
       color: $color-dark-clean !important;
       text-decoration: none;
     }
-    // margin-left: 20px;
   }
 
   .main {
     &-title {
-      // position: absolute;
       width: 362px;
       height: 108px;
       left: calc(50% - 362px / 2 + 20px);
@@ -238,9 +216,7 @@
     position: absolute;
     width: 85%;
     height: 54px;
-    // left: calc(50% - 300px/2 - 2.7px);
     left: 28px;
-    // top: 436px;
     top: calc(50% - 54px / 2 + 50.55px);
     font-size: 14px;
     line-height: 16px;
@@ -328,8 +304,8 @@
       position: absolute;
       width: 355px;
       // height: 403px;
-      left: 50px;
-      top: calc(50% - 36px / 2 - 364px);
+      left: 35px;
+      top: calc(50% - 100px / 2 - 364px);
     }
 
     &-icons {
@@ -458,7 +434,7 @@
       position: absolute;
       width: 312px;
       height: 36px;
-      left: calc(50% - 312px / 2 - 7.5px);
+      left: calc(50% - 340px / 2 - 7.5px);
       top: calc(50% - 36px / 2 - 367px);
       font-size: 24px;
       line-height: 36px;
@@ -472,8 +448,8 @@
       font-size: 16px;
       line-height: 22px;
       letter-spacing: 0.3px;
-      left: calc(50% - 305px / 2 - 11px);
-      top: calc(50% - 44px / 2 - 281px);
+      left: calc(50% - 340px / 2 - 11px);
+      top: calc(50% - 100px / 2 - 281px);
     }
 
     &-divider {
@@ -492,9 +468,7 @@
   .team-row {
     position: absolute;
     width: 100%;
-    // left: calc(50% - 10.6875rem/2 - 33.6562Z5rem);
-    top: calc(50% - 166px / 2 - 103.7px);
-    // background-color: #212138;
+    top: calc(50% - 260px / 2 - 103.7px);
   }
 
   .team-box {
@@ -554,14 +528,13 @@
       font-size: 22px;
       line-height: 24px;
       left: calc(50% - 204px / 2 + 140.5px);
-      top: calc(50% - 166px / 2 + 1960px);
+      top: calc(50% - 250px / 2 + 1960px);
     }
 
     .newsgroup {
       position: absolute;
-      left: 10px; //calc(50% - 204px/2 + 7.8px);
-      top: calc(50% - 166px / 2 + 2056px);
-      // padding-left: 22.76px;
+      left: 10px; 
+      top: calc(50% - 280px / 2 + 2056px);
     }
 
     .newsitem {
@@ -634,16 +607,15 @@
     &-row {
       position: absolute;
       width: 100%;
-      // left: calc(50% - 312px/2 - 7.5px);
       left: 40px;
-      top: calc(50% - 36px / 2 - 16px);
+      top: calc(50% - 200px / 2 - 16px);
     }
 
     &-title {
       width: 312px;
       height: 36px;
-      left: calc(50% - 312px / 2 - 7.5px);
-      top: calc(50% - 36px / 2 - 206px);
+      left: calc(50% - 350px / 2 - 7.5px);
+      top: calc(50% - 60px / 2 - 206px);
       font-size: 24px;
       line-height: 36px;
       letter-spacing: 0.3px;
@@ -652,15 +624,15 @@
     &-subtitle {
       width: 305px;
       height: 22px;
-      left: calc(50% - 305px / 2 - 11px);
-      top: calc(50% - 22px / 2 - 151px);
+      left: calc(50% - 350px / 2 - 11px);
+      top: calc(50% - 70px / 2 - 151px);
       font-size: 16px;
       line-height: 22px;
       letter-spacing: 0.3px;
     }
 
     &-divider {
-      width: 325px;
+      width: 350px;
       height: 1px;
       margin-top: 16px;
       margin-bottom: 32px;
@@ -801,7 +773,7 @@
   }
 
   .section-main {
-    margin-top: 50px; //TODO: REMOVE
+    margin-top: 10px; 
     position: relative;
     height: 100vh;
     // display: block;
@@ -817,33 +789,109 @@
   }
 
   .section-about {
-    margin-top: 150px; //TODO: REMOVE
+    margin-top: 30px; 
     height: 135vh;
     position: relative;
   }
 
   .section-features {
-    margin-top: 100px; //TODO: REMOVE
-    height: 150vh;
+    margin-top: 0px; 
+    height: 140vh;
     position: relative;
   }
 
   .section-team {
-    height: 235vh;
+    height: 215vh;
     position: relative;
   }
 
   .section-faq {
-    margin-top: 150px; //TODO: REMOVE
     z-index: 10;
-    height: 200vh;
+    height: 140vh;
     position: relative;
-    // background-color: peachpuff;
   }
-
+  .section-faq.expand1{
+    margin-bottom: 160px;
+  }
+  .section-faq.expand2{
+    margin-bottom: 400px;
+  }
+  .section-faq.expand4{
+    margin-bottom: 670px;
+  }
+  .section-faq.expand6{
+    margin-bottom: 900px;
+  }
   .section-community {
-    height: 125vh;
+    height: 95vh;
     position: relative;
-    // background-color: darkorange;
+  }
+  @media only screen and (max-device-height: 720px)  {
+    .section-main {
+      margin-top: 90px;
+    } 
+    .section-about {
+      margin-top: 170px; 
+    }
+    .section-features {
+      margin-top: 200px; 
+    }
+    .section-team {
+      height: 330vh;
+    }
+    .section-faq{
+      height: 140vh;
+    }
+    .newsbox {
+      margin-top: 200px;
+      .newsgroup {
+        top: calc(50% - 280px / 2 + 2056px);
+      }
+    }
+    .section-community {
+      height: 140vh;
+    }
+  }
+  @media only screen and (min-device-height: 721px) and (max-device-height: 800px)  {
+    .section-main {
+      margin-top: 90px;
+    } 
+    .section-about {
+      margin-top: 170px; 
+    }
+    .section-features {
+      margin-top: 200px; 
+    }
+    .section-team {
+      height: 290vh;
+    }
+    .newsbox {
+      .newsgroup {
+        top: calc(50% - 280px / 2 + 2056px);
+      }
+    }
+    .section-community {
+      height: 140vh;
+    }
+  }
+  @media only screen and (min-device-height: 801px) and (max-device-height: 890px)  {
+    .section-features {
+      margin-top: 50px; 
+    }
+    .section-team {
+      height: 240vh;
+    }
+    .newsbox {
+      margin-top: 30px;
+      .newsgroup {
+        top: calc(50% - 210px / 2 + 2056px);
+      }
+      &-title {
+        top: calc(50% - 250px / 2 + 1960px);
+      }
+    }
+    .section-community {
+      height: 105vh;
+    }
   }
 }

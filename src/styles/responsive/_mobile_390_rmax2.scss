@@ -1,10 +1,9 @@
-@media only screen and (max-device-width: 390px) and (max-device-height: 844px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 3) {
+@media only screen and (max-device-width: 390px) and (max-device-height: 890px) and (orientation: portrait) and (-webkit-max-device-pixel-ratio: 2) {
   body,
   html {
     overflow-x: hidden;
   }
   body {
-    // height: 100vh;
     width: 100vw;
   }
 
@@ -23,29 +22,22 @@
 
   .nav-links a {
     z-index: 30;
-    // border: 1px solid red;
     height: 100vh;
-    background: $color-black;
-    // padding-left: 48px !important;
-    // padding-right: 48px !important;
+    background: $color-black;    
     padding-top: 60px;
     padding-bottom: 44px;
     text-align: center;
     font-size: 18px;
     line-height: 28px;
-    // display: flex;
-    // align-items: center;
-    // text-align: center;
     letter-spacing: 0.6px;
-    // margin-right: 0% !important;
     color: $color-grey !important;
 
     &::first-child {
-      margin-top: 60px;
+      margin-top: 20px;
     }
 
     &:not(:first-child) {
-      padding-top: 44px;
+      padding-top: 24px;
     }
 
     &:hover {
@@ -160,7 +152,7 @@
       width: 312px;
       height: 108px;
       // left: calc(50% - 312px/2);
-      top: calc(50% - 108px / 2 - 307px);
+      top: calc(50% - 108px / 2 - 220px);
     }
 
     &-number-pink {
@@ -168,7 +160,7 @@
       width: 257px;
       height: 36px;
       left: calc(50% - 257px / 2 - 30px);
-      top: calc(50% - 36px / 2 - 181px);
+      top: calc(50% - 36px / 2 - 121px);
 
       font-size: 18px;
       line-height: 36px;
@@ -181,7 +173,7 @@
       width: 342px;
       height: 22px;
       left: calc(50% - 312px / 2 - 2.5px);
-      top: calc(50% - 22px / 2 - 146px);
+      top: calc(50% - 22px / 2 - 86px);
       font-size: 14px;
       line-height: 22px;
     }
@@ -194,7 +186,7 @@
       width: 312px;
       height: 22px;
       left: calc(50% - 312px / 2 - 2.5px);
-      top: calc(50% - 22px / 2 - 76px);
+      top: calc(50% - 22px / 2 - 36px);
       font-size: 18px;
       line-height: 36px;
     }
@@ -203,7 +195,7 @@
       width: 87px;
       height: 82px;
       left: calc(50% - 30px / 2 - 140.7px);
-      top: calc(50% - 22px / 2 - 69.55px);
+      top: calc(50% - 22px / 2 - 29.55px);
 
       &-image {
         width: 30px;
@@ -230,7 +222,7 @@
   }
 
   .button-pink {
-    display: block;
+    display: flex;
     flex-direction: column;
     align-items: center;
     padding: 19px 47px;
@@ -240,7 +232,7 @@
     // left: calc(50% - 300px/2 - 2.7px);
     left: 28px;
     // top: 436px;
-    top: calc(50% - 54px / 2 + 50.55px);
+    top: calc(50% - 54px / 2 + 70.55px);
     font-size: 14px;
     line-height: 16px;
   }
@@ -251,7 +243,7 @@
       width: 312px;
       height: 36px;
       left: calc(50% - 312px / 2 - 1.5px);
-      top: calc(50% - 36px / 2 - 405px);
+      top: calc(50% - 36px / 2 - 225px);
       font-size: 24px;
       line-height: 36px;
       letter-spacing: 0.3px;
@@ -261,7 +253,7 @@
       width: 315px;
       height: 247px;
       left: calc(50% - 315px / 2);
-      top: calc(50% - 247px / 2 - 225.5px);
+      top: calc(50% - 247px / 2 - 45.5px);
       font-size: 14px;
       line-height: 20px;
       letter-spacing: 0.3px;
@@ -272,7 +264,7 @@
       width: 380px;
       height: 391.27px;
       left: calc(50% - 380px / 2);
-      top: calc(50% - 391.27px / 2 + 228px);
+      top: calc(50% - 391.27px / 2 + 288px);
     }
 
     &-details {
@@ -280,7 +272,7 @@
       width: 315px;
       height: 353px;
       left: calc(50% - 495.31px / 2 + 92px);
-      top: calc(50% - 508.6px / 2 + 128px);
+      top: calc(50% - 508.6px / 2 + 288px);
 
       &-divisor {
         position: absolute;
@@ -317,7 +309,7 @@
       width: 312px;
       height: 36px;
       left: calc(50% - 312px / 2 - 1.5px);
-      top: calc(50% - 36px / 2 - 444px);
+      top: calc(50% - 36px / 2 - 124px);
       font-size: 24px;
       line-height: 36px;
       letter-spacing: 0.3px;
@@ -328,7 +320,7 @@
       width: 355px;
       // height: 403px;
       left: 50px;
-      top: calc(50% - 36px / 2 - 364px);
+      top: calc(50% - 36px / 2 - 44px);
     }
 
     &-icons {
@@ -458,7 +450,7 @@
       width: 312px;
       height: 36px;
       left: calc(50% - 312px / 2 - 7.5px);
-      top: calc(50% - 36px / 2 - 447px);
+      top: calc(50% - 36px / 2 - 147px);
       font-size: 24px;
       line-height: 36px;
       letter-spacing: 0.3px;
@@ -472,7 +464,7 @@
       line-height: 22px;
       letter-spacing: 0.3px;
       left: calc(50% - 305px / 2 - 11px);
-      top: calc(50% - 44px / 2 - 361px);
+      top: calc(50% - 44px / 2 - 91px);
     }
 
     &-divider {
@@ -492,7 +484,7 @@
     position: absolute;
     width: 100%;
     // left: calc(50% - 10.6875rem/2 - 33.6562Z5rem);
-    top: calc(50% - 166px / 2 - 203.7px);
+    top: calc(50% - 166px / 2 + 63.7px);
     // background-color: #212138;
   }
 
@@ -544,7 +536,7 @@
   }
 
   .newsbox {
-    margin-top: 150px;
+    margin-top: 160px;
     position: absolute;
 
     &-title {
@@ -554,13 +546,13 @@
       font-size: 22px;
       line-height: 24px;
       left: calc(50% - 204px / 2 + 140.5px);
-      top: calc(50% - 166px / 2 + 1650px);
+      top: calc(50% - 166px / 2 + 2000px);
     }
 
     .newsgroup {
       position: absolute;
       left: 10px; //calc(50% - 204px/2 + 7.8px);
-      top: calc(50% - 166px / 2 + 1756px);
+      top: calc(50% - 166px / 2 + 2056px);
       // padding-left: 22.76px;
     }
 
@@ -636,7 +628,7 @@
       width: 100%;
       // left: calc(50% - 312px/2 - 7.5px);
       left: 40px;
-      top: calc(50% - 36px / 2 - 16px);
+      top: calc(50% - 190px / 2 - 16px);
     }
 
     &-title {
@@ -668,7 +660,7 @@
   }
 
   .toggle {
-    width: 120vw;
+    width: 130vw;
     height: auto;
     // background: mediumaquamarine;
   }
@@ -686,7 +678,6 @@
     font-size: 16px;
     line-height: 24px;
     letter-spacing: 0.3px;
-    // margin-top: 16px;
     margin-bottom: 12px;
   }
 
@@ -803,16 +794,13 @@
   .section-main {
     position: relative;
     height: 110vh;
-    // display: block;
-    // padding-bottom: 27.66%;
-    // background-color: khaki;
     .main-image {
       position: absolute;
       width: 470px;
       height: 465.94px;
       left: calc(50% - 470px / 2);
       top: calc(50% - 465.94px / 2 + 168px);
-    }
+    }    
   }
 
   .section-about {
@@ -826,21 +814,239 @@
   }
 
   .section-team {
-    margin-top: 150px;
-    height: 235vh;
+    height: 315vh;
     position: relative;
   }
 
   .section-faq {
     z-index: 10;
-    height: 200vh;
-    position: relative;
-    // background-color: peachpuff;
+    height: 210vh;
+    position: relative;    
+  }
+  .section-faq.expand1{
+    margin-bottom: 150px;
+  }
+  .section-faq.expand2{
+    margin-bottom: 400px;
+  }
+  .section-faq.expand4{
+    margin-bottom: 670px;
+  }
+  .section-faq.expand6{
+    margin-bottom: 900px;
   }
 
   .section-community {
-    height: 125vh;
+    height: 90vh;
     position: relative;
     // background-color: darkorange;
   }
+
+  @media only screen and (min-device-width: 370px)  {
+    .faq {
+      &-divider {
+        width: 335px;       
+      }
+    }
+  }
+
+  @media only screen and (max-device-height: 640px)  {
+    .section-faq {
+      z-index: 10;
+      height: 230vh;
+    }
+    .section-community {
+      height: 90vh;
+    }
+    .toggle {
+      width: 130vw;      
+    }
+    .newsbox {
+      &-title {
+        top: calc(50% - 280px / 2 + 2000px);
+      }
+      .newsgroup {
+        top: calc(50% - 240px / 2 + 2056px);
+      }      
+    }
+  }
+
+  @media only screen and (max-device-height: 600px) and (max-device-width: 350px) {
+    .main {
+      &-number-pink {
+        left: calc(50% - 257px / 2 - 10px);
+        top: calc(50% - 36px / 2 - 121px);
+        font-size: 16px;
+      }
+      &-bold-text {
+        left: calc(50% - 280px / 2 - 2.5px);
+        font-size: 13px;
+      }
+      &-number-blue {
+        left: calc(50% - 270px / 2 - 2.5px);        
+      }
+      &-tcap {
+        left: calc(50% - 5px / 2 - 140.7px);        
+      }
+    }
+    .section-main{
+      height: 130vh;
+    }
+    .section-about {
+      margin-left: 3%;
+      height: 170vh;
+    }
+    .section-features {
+      height: 200vh;
+      margin-left: 2%;
+    }
+    .section-team {
+      height: 330vh;
+      margin-left: 3%
+    }
+    .section-faq {
+      z-index: 10;
+      height: 260vh;
+      margin-left: 3%
+    }
+    .section-faq.expand1{
+      margin-bottom: 300px;
+    }
+    .section-faq.expand2{
+      margin-bottom: 500px;
+    }
+    .section-faq.expand4{
+      margin-bottom: 800px;
+    }
+    .section-faq.expand6{
+      margin-bottom: 1100px;
+    }
+    .section-community {
+      height: 120vh;
+      margin-left: 3%;
+    }
+    .about {
+      &-content {
+        width: 295px;        
+      }
+    }
+    .features {
+      &-box {
+        &-mint {
+          width: 292px;
+          height: 292px;          
+        }
+        &-trade {
+          width: 292px;
+          height: 292px; 
+        }
+        &-pool {
+          width: 292px;
+          height: 292px; 
+        }
+        &-farm {
+          width: 292px;
+          height: 292px; 
+        }
+      }
+      &-row {        
+        left: 20px;      
+      }
+    }
+    .team-box {
+      left: -5px;
+      &-photo {
+        width: 280px;      
+      }&-description {
+        width: 298px;
+        margin-top: 5px;
+      }
+    }
+    .newsbox {
+      margin-top: 50px;
+  
+      &-title {
+        left: calc(50% - 205px / 2 + 125.5px);
+        top: calc(50% - 280px / 2 + 2000px);
+      }
+      .newsgroup {
+        left: 0px; 
+        top: calc(50% - 270px / 2 + 2056px);
+      }
+      .newsitem {
+        &-title {
+          width: 290px;
+          line-height: 18px;          
+        }
+      }
+    }
+    .faq {
+      &-row {
+        left: 15px;
+      }
+      &-divider {
+        width: 300px;       
+      }
+    }
+    .question {
+      width: 260px;      
+    }
+    .answer {
+      width: 300px;      
+    }
+    .toggle {
+      width: 135vw;      
+    }
+    .community {
+      &-subscribe {
+        &-input {
+          width: 96%;          
+        }
+  
+        &-button {
+          width: 93%;
+        }
+      }
+    }
+    @media only screen and (max-device-height: 510px) {
+      .section-main{
+        height: 150vh;
+      }
+      .section-about {
+        height: 195vh;
+      }
+      .section-team {
+        height: 410vh;
+      }
+      .newsbox {
+        &-title {
+          top: calc(50% - 180px / 2 + 2000px);
+        }
+        .newsgroup {
+          top: calc(50% - 160px / 2 + 2056px);
+        }
+      }
+      .section-faq {
+        height: 260vh;
+      }
+      .section-community {
+        height: 150vh;
+      }
+    }
+    @media only screen and (max-device-height: 540px) and (min-device-height: 511px) {
+      .newsbox {
+        &-title {
+          top: calc(50% - 380px / 2 + 2000px);
+        }
+        .newsgroup {
+          top: calc(50% - 370px / 2 + 2056px);
+        }        
+      }
+      .section-faq {
+        height: 310vh;
+      }
+    }
+  }
+  
+  
 }

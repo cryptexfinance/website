@@ -10890,6 +10890,20 @@ body {
   color: #F6F6F7;
 }
 
+.header-mobile {
+  font-family: "Nineteen Ninety Seven";
+  font-style: normal;
+  font-weight: normal;
+  font-size: 1.5rem;
+  line-height: 2.25rem;
+
+  /* or 150% */
+  display: flex;
+  align-items: center;
+  letter-spacing: 0.3px;
+  text-transform: capitalize;
+}
+
 .heading-secondary {
   font-family: "Nineteen Ninety Seven";
   font-style: normal;
@@ -11003,6 +11017,15 @@ body {
   height: 6rem;
   left: calc(50% - 43.88rem/2 - 18.06rem);
   top: calc(50% - 6rem/2 - 13.625rem);
+  letter-spacing: 0.6px;
+}
+
+.main-title-mobile {
+  position: absolute;
+  width: 19.5rem;
+  height: 6.75rem;
+  left: calc(50% - 19.5rem/2 - 0.094rem);
+  top: calc(50% - 6.75rem/2 - 22.94rem);
   letter-spacing: 0.6px;
 }
 

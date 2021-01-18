@@ -134,25 +134,7 @@ module.exports = {
         showSpinner: true,
       },
     },
-    // {
-    //   resolve: "gatsby-source-graphql",
-    //   options: {
-    //     // Arbitrary name for the remote schema Query type
-    //     typeName: "CRYPTEX",
-    //     // Field under which the remote schema will be accessible. You'll use this in your Gatsby query
-    //     fieldName: "price",
-    //     // Url to query from
-    //     url: "https://api.thegraph.com/subgraphs/name/cryptexglobal/tcap-oracle-graph",
-    //     // refetch interval in seconds
-    //     refetchInterval: 10,
-    //   },
-    // },
-    // {
-    //   resolve: 'gatsby-plugin-apollo',
-    //   options: {
-    //     uri: 'https://api.thegraph.com/subgraphs/name/cryptexglobal/tcap-oracle-graph'
-    //   }
-    // },
+  
     "gatsby-plugin-netlify",
     {
       resolve: "gatsby-plugin-mailchimp",
