@@ -1,4 +1,4 @@
-@media only screen and (min-device-width: 414px) and (max-device-height: 896px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 2){
+@media only screen and (min-device-width: 391px) and (max-device-height: 999px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 2){
   body,
   html {
     overflow-x: hidden;
@@ -303,7 +303,6 @@
     &-row {
       position: absolute;
       width: 355px;
-      // height: 403px;
       left: 35px;
       top: calc(50% - 100px / 2 - 364px);
     }
@@ -520,6 +519,7 @@
 
   .newsbox {
     position: absolute;
+    margin-top: 0px;
 
     &-title {
       position: absolute;
@@ -773,12 +773,9 @@
   }
 
   .section-main {
-    margin-top: 10px; 
+    margin-top: 30px; 
     position: relative;
     height: 100vh;
-    // display: block;
-    // padding-bottom: 27.66%;
-    // background-color: khaki;
     .main-image {
       position: absolute;
       width: 470px;
@@ -789,25 +786,25 @@
   }
 
   .section-about {
-    margin-top: 30px; 
+    margin-top: 70px; 
     height: 135vh;
     position: relative;
   }
 
   .section-features {
     margin-top: 0px; 
-    height: 140vh;
+    height: 160vh;
     position: relative;
   }
 
   .section-team {
-    height: 215vh;
+    height: 225vh;
     position: relative;
   }
 
   .section-faq {
     z-index: 10;
-    height: 140vh;
+    height: 165vh;
     position: relative;
   }
   .section-faq.expand1{
@@ -823,36 +820,39 @@
     margin-bottom: 900px;
   }
   .section-community {
-    height: 95vh;
+    height: 70vh;
     position: relative;
-  }
-  @media only screen and (max-device-height: 720px)  {
-    .section-main {
-      margin-top: 90px;
-    } 
-    .section-about {
-      margin-top: 170px; 
-    }
-    .section-features {
-      margin-top: 200px; 
-    }
-    .section-team {
-      height: 330vh;
-    }
-    .section-faq{
-      height: 140vh;
-    }
-    .newsbox {
-      margin-top: 200px;
-      .newsgroup {
-        top: calc(50% - 280px / 2 + 2056px);
+  } 
+  @media only screen and (min-device-width: 440px) {
+    .features {
+      &-row {
+        left: 15%;
       }
     }
-    .section-community {
-      height: 140vh;
+    .faq {
+      &-row {
+        left: 12%;
+      }
+      &-title {
+        left: 8%;
+      }
+      &-subtitle {
+        left: 8%;
+      }
+      &-divider {
+        width: 395px;        
+      }
+    }
+    .newsbox {
+      .newsgroup {
+        left: 40px;
+      }
+      &-title {
+        left: calc(50% - 204px / 2 + 170.5px);
+      }
     }
   }
-  @media only screen and (min-device-height: 721px) and (max-device-height: 800px)  {
+  @media only screen and (max-device-height: 820px)  {
     .section-main {
       margin-top: 90px;
     } 
@@ -866,6 +866,7 @@
       height: 290vh;
     }
     .newsbox {
+      margin-top: 60px;
       .newsgroup {
         top: calc(50% - 280px / 2 + 2056px);
       }
@@ -874,24 +875,43 @@
       height: 140vh;
     }
   }
-  @media only screen and (min-device-height: 801px) and (max-device-height: 890px)  {
-    .section-features {
-      margin-top: 50px; 
-    }
+  @media only screen and (min-device-height: 880px) and (max-device-height: 910px)  {
     .section-team {
-      height: 240vh;
+      height: 210vh;
     }
     .newsbox {
-      margin-top: 30px;
       .newsgroup {
-        top: calc(50% - 210px / 2 + 2056px);
+        top: calc(50% - 210px / 2 + 2010px);
       }
       &-title {
-        top: calc(50% - 250px / 2 + 1960px);
+        top: calc(50% - 250px / 2 + 1930px);
       }
     }
     .section-community {
-      height: 105vh;
+      height: 70vh;
+    }
+  }
+  @media only screen and (min-device-height: 911px)  {
+    .section-team {
+      height: 220vh;
+    }
+    .section-features{
+      height: 140vh;
+    }
+    .section-faq{
+      height: 150vh;
+    }
+    .newsbox {
+      margin-top: 90px;
+      .newsgroup {
+        top: calc(50% - 210px / 2 + 2010px);
+      }
+      &-title {
+        top: calc(50% - 250px / 2 + 1930px);
+      }
+    }
+    .section-community {
+      height: 80vh;
     }
   }
 }
