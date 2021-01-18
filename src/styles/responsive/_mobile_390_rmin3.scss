@@ -1,4 +1,4 @@
-@media only screen and (max-device-width: 390px) and (max-device-height: 890px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 3) {
+@media only screen and (max-device-width: 390px) and (max-device-height: 990px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 3) {
   body,
   html {
     overflow-x: hidden;
@@ -545,14 +545,13 @@
       font-size: 22px;
       line-height: 24px;
       left: calc(50% - 204px / 2 + 140.5px);
-      top: calc(50% - 300px / 2 + 1650px);
+      top: calc(50% - 300px / 2 + 1600px);
     }
 
     .newsgroup {
       position: absolute;
-      left: 10px; //calc(50% - 204px/2 + 7.8px);
-      top: calc(50% - 370px / 2 + 1756px);
-      // padding-left: 22.76px;
+      left: 10px; 
+      top: calc(50% - 370px / 2 + 1710px);
     }
 
     .newsitem {
@@ -805,24 +804,24 @@
   }
 
   .section-about {
-    height: 180vh;
+    height: 195vh;
     position: relative;
   }
 
   .section-features {
-    height: 190vh;
+    height: 200vh;
     position: relative;
   }
 
   .section-team {
-    margin-top: 100px;
+    margin-top: 140px;
     height: 235vh;
     position: relative;
   }
 
   .section-faq {
     z-index: 10;
-    height: 210vh;
+    height: 250vh;
     position: relative;
   }
   .section-faq.expand1{
@@ -839,11 +838,18 @@
   }
 
   .section-community {
-    height: 100vh;
+    height: 90vh;
     position: relative;
   }
 
-  @media only screen and (min-device-height: 710px) and (max-device-height: 760px)  {
+  @media only screen and (min-device-width: 375px) {
+    .faq{
+      &-divider {
+        width: 330px;        
+      }
+    }
+  }
+  @media only screen and (min-device-height: 710px) and (max-device-height: 790px)  {
     .section-main {
       height: 120vh;
     }   
@@ -858,25 +864,66 @@
     }   
     .newsbox {
       &-title {        
-        top: calc(50% - 120px / 2 + 1650px);
+        top: calc(50% - 120px / 2 + 1700px);
       }
       .newsgroup {
-        top: calc(50% - 180px / 2 + 1756px);
+        top: calc(50% - 180px / 2 + 1800px);
       }
     } 
     .section-faq {
-      height: 150vh
+      height: 170vh
     }
     .section-community {
       height: 120vh;
     }
+    @media only screen and (min-device-height: 750px){
+      .section-faq {
+        height: 140vh
+      }
+      .section-community {
+        height: 130vh;
+      }
+    }
   } 
-  @media only screen and (min-device-height: 760px) and (max-device-height: 820px)  {
+  @media only screen and (min-device-height: 791px) and (max-device-height: 860px)  {
     .section-main {
       height: 110vh;
     }   
     .section-about {
       height: 150vh;
+    }      
+    .section-features {
+      height: 145vh;  
+    } 
+    .section-team {
+      height: 185vh;
+    } 
+    .newsbox {
+      &-title {        
+        top: calc(50% - 200px / 2 + 1610px);
+      }
+      .newsgroup {
+        top: calc(50% - 250px / 2 + 1720px);
+      }
+    } 
+    .section-faq {
+      height: 200vh
+    }
+    .section-community {
+      height: 70vh;
+    }
+    @media only screen and (min-device-height: 840px){
+      .section-faq {
+        height: 180vh
+      }      
+    }
+  }
+  @media only screen and (min-device-height: 861px) {
+    .section-main {
+      height: 90vh;
+    }   
+    .section-about {
+      height: 110vh;
     }      
     .section-features {
       height: 145vh;  
@@ -899,4 +946,5 @@
       height: 90vh;
     }
   }
+
 }
