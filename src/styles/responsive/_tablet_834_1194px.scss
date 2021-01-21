@@ -25,18 +25,12 @@ and (orientation : portrait) {
     // border: 1px solid red;
     height: 100vh;
     background: $color-black;
-    // padding-left: 48px !important;
-    // padding-right: 48px !important;
     padding-top: 100px;
     padding-bottom: 74px;
     text-align:center;
     font-size: 18px;
     line-height: 28px;
-    // display: flex;
-    // align-items: center;
-    // text-align: center;
     letter-spacing: 0.6px;
-    // margin-right: 0% !important;
     color: $color-grey !important;
 
     &::first-child { 
@@ -98,6 +92,10 @@ and (orientation : portrait) {
       background-color: $color-grey-dark !important;//$color-grey-dark;
       z-index: 0;
     }
+  }
+
+  .menu-logo.mobile {
+    display: None;
   }
 
   .navbar-toggler,
@@ -497,7 +495,7 @@ and (orientation : portrait) {
     height: 231px;
     left: 10px;
 
-    &-photo {
+    &-photo-mobile {
       position: relative;
       text-align:center;
       width: 315px;

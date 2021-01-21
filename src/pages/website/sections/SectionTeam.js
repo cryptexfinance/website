@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useStaticQuery, graphql } from 'gatsby';
 import Flippy, { FrontSide, BackSide } from 'react-flippy';
-import { useMediaQuery } from 'react-responsive';
 import joe from '../../../../static/website/team/joe.webp';
 import preston from '../../../../static/website/team/preston.webp';
 import cristian from '../../../../static/website/team/cristian.webp';
@@ -11,12 +10,9 @@ import prestonm from '../../../../static/website/team/prestonm.webp';
 import cristianm from '../../../../static/website/team/cristianm.webp';
 import tomm from '../../../../static/website/team/tomm.webp';
 
-// const renderLoader = () => <p>Loading</p>;
 
 const SectionTeam = (props) => {
-  const isTabletOrMobile = useMediaQuery({ query: '(max-width: 1224px)' });
-  const isPortrait = useMediaQuery({ query: '(orientation: portrait)' });;
-  const [tblog, setBlog] = useState({});
+ const [tblog, setBlog] = useState({});
 
   const dataq = useStaticQuery(graphql`
     query {
@@ -65,7 +61,7 @@ const SectionTeam = (props) => {
       <div className="newsitem" key={node.id}>
         <img src={node.frontmatter.featuredimage.childImageSharp.fluid.src} className="newsitem-photo" alt="News" />
         <div className="newsitem-title terciary-header">{node.frontmatter.title}</div>
-        {/* <div className="newsitem-description newsdescription">&nbsp;</div> */}
+        
         <div className="newsitem-tag-items">
           <a href={node.excerpt} rel="noreferrer" target="_blank" className="newsitem-tagbox taglink">
             {typeof(node.frontmatter.tags) !== `undefined` ? node.frontmatter.tags.map(tag => {return tag}) : ""}
@@ -95,13 +91,9 @@ const SectionTeam = (props) => {
                 >
                   <FrontSide animationDuration="0">
                   <>
-                    {isTabletOrMobile && isPortrait ? (
-                            <img src={joem} className="team-box-photo" alt="Joseph Sticoo" /> 
-                          ) : (
-                            <img src={joe} className="team-box-photo" alt="Joseph Sticoo" />
-                          )
-                    }      
-                  </>
+                    <img src={joem} className="team-box-photo-mobile" alt="Joseph Sticoo" /> 
+                    <img src={joe} className="team-box-photo" alt="Joseph Sticoo" />        
+                  </>              
                   <p className="team-box-name">Joe Sticco</p>
                   <p className="team-box-position">Co-Founder &amp; CEO</p>
                 </FrontSide>
@@ -119,13 +111,9 @@ const SectionTeam = (props) => {
                 >
                 <FrontSide animationDuration="0">
                   <>
-                    {isTabletOrMobile && isPortrait ? (
-                            <img src={prestonm} className="team-box-photo" alt="Preston Van Loon" /> 
-                          ) : (
-                            <img src={preston} className="team-box-photo" alt="Preston Van Loon" />
-                          )
-                    }      
-                  </>
+                    <img src={prestonm} className="team-box-photo-mobile" alt="Preston Van Loon" /> 
+                    <img src={preston} className="team-box-photo" alt="Preston Van Loon" />
+                  </> 
                   <p className="team-box-name">Preston Van Loon</p>
                   <p className="team-box-position">Co-Founder &amp; Blockchain Lead</p>
                 </FrontSide>
@@ -143,12 +131,8 @@ const SectionTeam = (props) => {
                 >
                 <FrontSide animationDuration="0">
                   <>
-                    {isTabletOrMobile && isPortrait ? (
-                            <img src={cristianm} className="team-box-photo" alt="Cristian Espinoza" />
-                          ) : (
-                            <img src={cristian} className="team-box-photo" alt="Cristian Espinoza" />
-                          )
-                    }      
+                    <img src={cristianm} className="team-box-photo-mobile" alt="Cristian Espinoza" />
+                    <img src={cristian} className="team-box-photo" alt="Cristian Espinoza" />
                   </>
                   <p className="team-box-name">Cristian Espinoza</p>
                   <p className="team-box-position">Blockchain Developer</p>
@@ -167,12 +151,8 @@ const SectionTeam = (props) => {
                 >
                 <FrontSide animationDuration="0">
                   <>
-                    {isTabletOrMobile && isPortrait ? (
-                            <img src={tomm} className="team-box-photo" alt="Thomas Matzner" />
-                          ) : (
-                            <img src={tom} className="team-box-photo" alt="Thomas Matzner" />
-                          )
-                    }      
+                    <img src={tomm} className="team-box-photo-mobile" alt="Thomas Matzner" />
+                    <img src={tom} className="team-box-photo" alt="Thomas Matzner" />
                   </>
                   <p className="team-box-name">Thomas Matzner</p>
                   <p className="team-box-position">Co-Founder &amp; CBO</p>

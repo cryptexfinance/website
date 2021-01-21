@@ -1,17 +1,15 @@
 @import "../../node_modules/bootstrap/scss/bootstrap.scss";
-// Abstracts
 
+// Abstracts
 @import "abstracts/variables";
 @import "abstracts/mixing";
 
 // Base
-
 @import "base/base";
 @import "base/page";
 @import "base/typography";
 
 // Components
-
 @import "components/button";
 @import "components/closeButton";
 @import "components/faqbox";

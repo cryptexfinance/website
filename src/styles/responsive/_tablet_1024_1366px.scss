@@ -54,7 +54,6 @@ and (orientation : portrait) {
       background: $color-grey-dark !important;
       background-color: $color-grey-dark !important;
       z-index: 10;
-      // border: 1px solid $color-grey-dark;
       border: 1px solid #494866;
       box-sizing: border-box;
       margin-left: 35px;
@@ -74,6 +73,7 @@ and (orientation : portrait) {
   }
 
   .menu-logo {
+    display: None;
     width: 120px;
     margin-left: -15px;
     
@@ -475,9 +475,7 @@ and (orientation : portrait) {
   .team-row {
     position: absolute  ;
     width: 100%;
-    // left: calc(50% - 10.6875rem/2 - 33.6562Z5rem);
     top: calc(50% - 166px/2 - 363.7px);
-    // background-color: #212138;
   }
 
   .team-box {
@@ -486,7 +484,7 @@ and (orientation : portrait) {
     height: 231px;
     left: 10px;
 
-    &-photo {
+    &-photo-mobile {
       position: relative;
       text-align:center;
       width: 315px;
@@ -500,7 +498,6 @@ and (orientation : portrait) {
       line-height: 22px;
       letter-spacing: 0.3px;
       margin-left: 5px;
-      // background-color: #212138;
     }
     &-position {
       width: 220px;
