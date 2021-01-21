@@ -1,8 +1,4 @@
 import React from "react"
-// import { Link } from 'gatsby';
-// import { Container } from 'react-bootstrap'
-// import auditPDF from '../../../../static/Cryptex_-_Final_Report.pdf';
-// import whitepaperPDF from '../../../../static/White_Paper.pdf';
 import image from "../../../../static/website/about/about.webp"
 import audit from "../../../../static/website/about/audit.svg"
 import code from "../../../../static/website/about/code.svg"

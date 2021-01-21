@@ -77,7 +77,6 @@
   .menu-logo {
     width: 30px;
     margin-left: -15px;
-    // padding-left: 20px;
 
     &-divider {
       position: absolute;
@@ -85,12 +84,14 @@
       height: 49px;
       left: 50px;
       top: 0px;
-      // left: 504px;
-      // top: 362px;
 
-      background-color: $color-grey-dark !important; //$color-grey-dark;
+      background-color: $color-grey-dark !important; 
       z-index: 0;
     }
+  }
+
+  .menu-logo.tablet {
+    display: None;
   }
 
   .navbar-toggler,
@@ -494,7 +495,7 @@
     height: 231px;
     left: 10px;
 
-    &-photo {
+    &-photo-mobile {
       position: relative;
       text-align: center;
       width: 315px;

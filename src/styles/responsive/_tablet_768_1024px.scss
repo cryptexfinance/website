@@ -76,27 +76,25 @@ and (orientation : portrait) {
   .menu-logo {
     width: 120px;
     margin-left: 5px;
-    // padding-left: 20px;
-    
+
     &-divider {
       position: absolute;
       width: 1px;
       height: 49px;
       left: 240px;
       top: 0px;
-      // left: 504px;
-      // top: 362px;
-  
       background-color: $color-grey-dark !important;//$color-grey-dark;
       z-index: 0;
     }
   }
 
+  .menu-logo.mobile {
+    display: None;
+  }
+
   .navbar-toggler,
   .navbar-toggler-icon {
-    // display: none !important;
     position: relative;
-    // left: -25px;
     left: -330px;
   }
 
@@ -107,7 +105,6 @@ and (orientation : portrait) {
   .navbar-toggler:hover, .navbar-toggler:focus {
     position: relative;
     padding: 10px 20px 10px 20px;
-    // left: -25;
   }
 
   .mobile_menu_bar:before {
@@ -118,12 +115,9 @@ and (orientation : portrait) {
     font-family: $font-primary;
     content: "MENU";
     position: relative;
-    // left: -175px;
     padding: 10px 20px 10px 20px;
-    // background-color: #3e4555;
     color: $color-dark-clean!important;
     text-decoration: none;
-    // cursor: pointer;
     &:focus {
 			outline:none !important;
 		}
@@ -145,10 +139,8 @@ and (orientation : portrait) {
 
   .main {
     &-title{
-      // position: absolute;
       width: 682px;
       height: 108px;
-      // left: calc(50% - 312px/2);
       top: calc(50% - 108px/2 - 357px);
     }
 
@@ -179,9 +171,6 @@ and (orientation : portrait) {
       position: absolute;
       width: 1px;
       height: 65px;
-      // left: 504px;
-      // top: 362px;
-
       left: calc(50% - 1px/2 + 55.2px);
       top: calc(50% - 82px/2 - 220.8px);
 
@@ -262,20 +251,12 @@ and (orientation : portrait) {
 
       &-icons {
         margin-right: 24px;
-        // background: transparent;
-        // text-shadow: 0rem 0rem 0.156565rem #6450FB, 0rem 0rem 0.13011875rem #3626B0;
-        // filter: drop-shadow(0 0 0.25rem #6450FB);
       }
 
       &-text {
-        // left: calc(50% - 9.625rem/2 + 26.9375rem);
-			  // top: calc(50% - 1.5rem/2 - 9.625rem);
-        // width: 139px;
         height: 72px;
         font-size: 18px;
         line-height: 24px;
-        // display: flex;
-        // letter-spacing: 0.3px;
       }
     }
   }
@@ -459,9 +440,7 @@ and (orientation : portrait) {
     position: absolute;
     width: 300px;
     height: 54px;
-    // left: calc(50% - 300px/2 + 47px);
     left: 45px;
-    // top: 436px;
     top: calc(50% - 22px/2 - 120.55px);
     font-size: 14px;
     line-height: 16px;
@@ -478,9 +457,7 @@ and (orientation : portrait) {
   .team-row {
     position: absolute  ;
     width: 100%;
-    // left: calc(50% - 10.6875rem/2 - 33.6562Z5rem);
     top: calc(50% - 166px/2 - 343.7px);
-    // background-color: #212138;
   }
 
   .team-box {
@@ -489,7 +466,7 @@ and (orientation : portrait) {
     height: 231px;
     left: 10px;
 
-    &-photo {
+    &-photo-mobile {
       position: relative;
       text-align:center;
       width: 315px;
@@ -503,7 +480,6 @@ and (orientation : portrait) {
       line-height: 22px;
       letter-spacing: 0.3px;
       margin-left: 5px;
-      // background-color: #212138;
     }
     &-position {
       width: 220px;
@@ -834,7 +810,6 @@ and (orientation : portrait) {
     margin-bottom: 700px;
   }
 
-  
   .section-community {
     height: 110vh;
     position: relative;
