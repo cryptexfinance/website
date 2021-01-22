@@ -1,10 +1,9 @@
 @media only screen 
-and (min-device-width : 834px) 
-and (max-device-width : 1194px) 
+and (min-device-width : 768px) 
+and (max-device-width : 1000px) 
 and (orientation : portrait) {
   body, html { overflow-x:hidden; }
   body {
-    // height: 100vh;
     width: 100vw;
   }
 
@@ -22,7 +21,6 @@ and (orientation : portrait) {
   }
 
   .nav-links a {
-    // border: 1px solid red;
     height: 100vh;
     background: $color-black;
     padding-top: 100px;
@@ -50,13 +48,12 @@ and (orientation : portrait) {
   .nav-links-divisor {
     top: -3px;
 			position: relative;
-			width: 750px;
+			width: 680px;
       height: 10px;
       line-height: 28px;
       background: $color-grey-dark !important;
       background-color: $color-grey-dark !important;
       z-index: 10;
-      // border: 1px solid $color-grey-dark;
       border: 1px solid #494866;
       box-sizing: border-box;
       margin-left: 35px;
@@ -77,19 +74,15 @@ and (orientation : portrait) {
 
   .menu-logo {
     width: 120px;
-    margin-left: -15px;
-    // padding-left: 20px;
-    
+    margin-left: 5px;
+
     &-divider {
       position: absolute;
       width: 1px;
       height: 49px;
       left: 240px;
       top: 0px;
-      // left: 504px;
-      // top: 362px;
-  
-      background-color: $color-grey-dark !important;//$color-grey-dark;
+      background-color: $color-grey-dark !important;
       z-index: 0;
     }
   }
@@ -100,10 +93,8 @@ and (orientation : portrait) {
 
   .navbar-toggler,
   .navbar-toggler-icon {
-    // display: none !important;
     position: relative;
-    // left: -25px;
-    left: -360px;
+    left: -330px;
   }
 
   .responsive-navbar-nav {
@@ -113,7 +104,6 @@ and (orientation : portrait) {
   .navbar-toggler:hover, .navbar-toggler:focus {
     position: relative;
     padding: 10px 20px 10px 20px;
-    // left: -25;
   }
 
   .mobile_menu_bar:before {
@@ -124,12 +114,9 @@ and (orientation : portrait) {
     font-family: $font-primary;
     content: "MENU";
     position: relative;
-    // left: -175px;
     padding: 10px 20px 10px 20px;
-    // background-color: #3e4555;
     color: $color-dark-clean!important;
     text-decoration: none;
-    // cursor: pointer;
     &:focus {
 			outline:none !important;
 		}
@@ -151,11 +138,9 @@ and (orientation : portrait) {
 
   .main {
     &-title{
-      // position: absolute;
       width: 682px;
       height: 108px;
-      left: calc(50% - 312px/2 - 180px);
-      top: calc(50% - 108px/2 - 417px);
+      top: calc(50% - 108px/2 - 357px);
     }
 
     &-number-pink {
@@ -163,7 +148,7 @@ and (orientation : portrait) {
       width: 257px;
       height: 36px;
       left: calc(50% - 257px/2 - 210px);
-      top: calc(50% - 36px/2 - 261px);
+      top: calc(50% - 36px/2 - 241px);
   
       font-size: 20px;
       line-height: 36px;
@@ -176,7 +161,7 @@ and (orientation : portrait) {
       width: 342px;
       height: 22px;
       left: calc(50% - 312px/2 - 183px);
-      top: calc(50% - 22px/2 - 226px);
+      top: calc(50% - 22px/2 - 206px);
       font-size: 14px;
       line-height: 22px;
     }
@@ -185,11 +170,8 @@ and (orientation : portrait) {
       position: absolute;
       width: 1px;
       height: 65px;
-      // left: 504px;
-      // top: 362px;
-
       left: calc(50% - 1px/2 + 55.2px);
-      top: calc(50% - 82px/2 - 240.8px);
+      top: calc(50% - 82px/2 - 220.8px);
 
       background: $color-grey-dark;
     }
@@ -198,7 +180,7 @@ and (orientation : portrait) {
       width: 312px;
       height: 36px;
       left: calc(50% - 312px/2 + 265px);
-      top: calc(50% - 36px/2 - 261px);
+      top: calc(50% - 36px/2 - 241px);
       font-size: 20px;
       line-height: 36px;
       
@@ -208,7 +190,7 @@ and (orientation : portrait) {
       width: 87px;
       height: 82px;
       left: calc(50% - 30px/2 + 126.7px);
-      top: calc(50% - 22px/2 - 256px);
+      top: calc(50% - 22px/2 - 236px);
 
       &-image {
         width: 25px;
@@ -268,20 +250,12 @@ and (orientation : portrait) {
 
       &-icons {
         margin-right: 24px;
-        // background: transparent;
-        // text-shadow: 0rem 0rem 0.156565rem #6450FB, 0rem 0rem 0.13011875rem #3626B0;
-        // filter: drop-shadow(0 0 0.25rem #6450FB);
       }
 
       &-text {
-        // left: calc(50% - 9.625rem/2 + 26.9375rem);
-			  // top: calc(50% - 1.5rem/2 - 9.625rem);
-        // width: 139px;
         height: 72px;
         font-size: 18px;
         line-height: 24px;
-        // display: flex;
-        // letter-spacing: 0.3px;
       }
     }
   }
@@ -294,7 +268,7 @@ and (orientation : portrait) {
       width: 312px;
       height: 36px;
       left: calc(50% - 312px/2 - 165.5px);
-      top: calc(50% - 36px/2 - 364px);
+      top: calc(50% - 36px/2 - 314px);
       font-size: 24px;
       line-height: 36px;
       letter-spacing: 0.3px;
@@ -302,9 +276,9 @@ and (orientation : portrait) {
 
     &-row {
       position: absolute;
-      width: 780px;
+      width: 700px;
       // height: 403px;
-      left: 100px;
+      left: 70px;
       top: calc(50% - 36px/2 - 224px);
     }
 
@@ -433,7 +407,7 @@ and (orientation : portrait) {
       width: 312px;
       height: 36px;
       left: calc(50% - 312px/2 - 167.5px);
-      top: calc(50% - 36px/2 - 627px);
+      top: calc(50% - 36px/2 - 567px);
       font-size: 24px;
       line-height: 36px;
       letter-spacing: 0.3px;
@@ -447,7 +421,7 @@ and (orientation : portrait) {
       line-height: 22px;
       letter-spacing: 0.3px;
       left: calc(50% - 305px/2 - 170px);
-      top: calc(50% - 44px/2 - 550px);
+      top: calc(50% - 44px/2 - 500px);
     }
   
     &-divider {
@@ -465,9 +439,7 @@ and (orientation : portrait) {
     position: absolute;
     width: 300px;
     height: 54px;
-    left: calc(50% - 300px/2 - 187px);
-    // left: 45px;
-    // top: 436px;
+    left: 45px;
     top: calc(50% - 22px/2 - 120.55px);
     font-size: 14px;
     line-height: 16px;
@@ -484,14 +456,12 @@ and (orientation : portrait) {
   .team-row {
     position: absolute  ;
     width: 100%;
-    // left: calc(50% - 10.6875rem/2 - 33.6562Z5rem);
-    top: calc(50% - 166px/2 - 363.7px);
-    // background-color: #212138;
+    top: calc(50% - 166px/2 - 343.7px);
   }
 
   .team-box {
     position: relative;
-    width: 350px;
+    width: 325px;
     height: 231px;
     left: 10px;
 
@@ -509,7 +479,6 @@ and (orientation : portrait) {
       line-height: 22px;
       letter-spacing: 0.3px;
       margin-left: 5px;
-      // background-color: #212138;
     }
     &-position {
       width: 220px;
@@ -548,13 +517,13 @@ and (orientation : portrait) {
       font-size: 22px;
       line-height: 24px;
       left: calc(50% - 204px/2 + 180.5px);
-      top: calc(50% - 166px/2 + 1045px);
+      top: calc(50% - 166px/2 + 925px);
     }
 
     .newsgroup {
       position: absolute;
       left: calc(50% - 50px/2 + 150px);
-      top: calc(50% - 166px/2 + 1186px);
+      top: calc(50% - 166px/2 + 1006px);
       // padding-left: 22.76px;
     }
 
@@ -632,15 +601,16 @@ and (orientation : portrait) {
     &-row {
       position: absolute;
       width: 100%;
-      left: 110px;
-      top: calc(50% - 100px/2 - 206px);
+      // left: calc(50% - 312px/2 - 7.5px);
+      left: 80px;
+      top: calc(50% - 36px/2 - 156px);
     }
 
     &-title {
       width: 312px;
       height: 36px;
       left: calc(50% - 312px/2 - 165.5px);
-      top: calc(50% - 36px/2 - 446px);
+      top: calc(50% - 36px/2 - 346px);
       font-size: 24px;
       line-height: 36px;
       letter-spacing: 0.3px;
@@ -650,14 +620,14 @@ and (orientation : portrait) {
       width: 305px;
       height: 22px;
       left: calc(50% - 305px/2 - 168px);
-      top: calc(50% - 50px/2 - 361px);
+      top: calc(50% - 22px/2 - 291px);
       font-size: 16px;
       line-height: 22px;
       letter-spacing: 0.3px;
     }
 
     &-divider {
-      width: 670px;
+      width: 620px;
       height: 1px;
       margin-top: 16px;
       margin-bottom: 32px;
@@ -678,7 +648,7 @@ and (orientation : portrait) {
   }
 
   .question {
-		width: 640px;
+		width: 620px;
     height: auto;
     font-size: 16px;
     line-height: 24px;
@@ -710,17 +680,17 @@ and (orientation : portrait) {
       width: 512px;
       height: 72px;
       left: calc(50% - 312px/2 - 165.5px);
-      top: calc(50% - 72px/2 - 528px);
+      top: calc(50% - 72px/2 - 458px);
       font-size: 24px;
       line-height: 36px;
       letter-spacing: 0.3px;
     }
 
     &-subtitle {
-      width: 425px;
+      width: 305px;
       height: 88px;
       left: calc(50% - 305px/2 - 165px);
-      top: calc(50% - 88px/2 - 381px);
+      top: calc(50% - 88px/2 - 351px);
       font-size: 16px;
       line-height: 22px;
       letter-spacing: 0.3px;
@@ -728,9 +698,9 @@ and (orientation : portrait) {
 
     &-icons-row {
       position: absolute;
-      width: 780px;
+      width: 740px;
       height: 42px;
-      left: 110px;//calc(50% - 375px/2 - 208.6px);
+      left: 80px;//calc(50% - 375px/2 - 208.6px);
       top: calc(50% - 104px/2 - 215px);
     }
 
@@ -797,15 +767,13 @@ and (orientation : portrait) {
   .section-main {
     position: relative;
     height: 100vh;
-    // display: block; 
-    // padding-bottom: 27.66%;
-    // background-color: khaki;
+
     .main-image {
       position: absolute;
-      width: 780px;
-      height: 773.25px;
-      left: calc(50% - 780px/2);
-      top: calc(50% - 773.25px/2 + 168px);
+      width: 700px;
+      height: 693.95px;
+      left: calc(50% - 700px/2);
+      top: calc(50% - 693.95px/2 + 148px);
     }
   }
 
@@ -825,24 +793,71 @@ and (orientation : portrait) {
   }
   
   .section-faq {
-    height: 90vh;
+    height: 80vh;
     position: relative;
   }
   .section-faq.expand1{
-    margin-bottom: 100px;
+    margin-bottom: 120px;
   }
   .section-faq.expand2{
-    margin-bottom: 300px;
+    margin-bottom: 350px;
   }
   .section-faq.expand4{
-    margin-bottom: 470px;
+    margin-bottom: 550px;
   }
   .section-faq.expand6{
-    margin-bottom: 600px;
+    margin-bottom: 700px;
   }
-  
+
   .section-community {
-    height: 90vh;
+    height: 110vh;
     position: relative;
+  }
+
+  @media only screen and (min-device-height : 1100px) {
+    .section-main {
+      height: 80vh;
+    }
+    .section-about {
+      height: 100vh;
+    }
+    .section-features {
+      height: 85vh;
+    }
+    .section-team {
+      height: 110vh;
+    }
+    .section-faq {
+      height: 70vh;
+    }
+    .section-community {
+      height: 85vh;
+    }
+    .faq {
+      &-row {
+        position: absolute;
+        width: 100%;
+        left: 80px;
+        top: calc(50% - 36px/2 - 156px);
+      }
+      &-title {
+        left: calc(50% - 340px/2 - 165.5px);        
+      }
+      &-subtitle {
+        left: calc(50% - 340px/2 - 168px);
+      }
+      &-divider {
+        width: 650px;
+      }
+    }
+    .community {
+	
+      &-title {
+        left: calc(50% - 350px/2 - 165.5px);        
+      }
+      &-subtitle {
+        left: calc(50% - 345px/2 - 165px);        
+      }
+    }
   }
 }
