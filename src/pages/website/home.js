@@ -1,6 +1,7 @@
 import React from 'react'
 import SectionMain from './sections/SectionMain'
 import SectionAbout from './sections/SectionAbout'
+import SectionGovernance from './sections/SectionGovernance'
 import SectionFeatures from './sections/SectionFeatures'
 import SectionTeam from './sections/SectionTeam'
 import SectionFaq from './sections/SectionFaq'

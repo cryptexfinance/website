@@ -2,10 +2,6 @@
 and (min-device-width : 1001px) 
 and (max-device-width : 1090px) 
 and (orientation : portrait) {
-  body, html { overflow-x:hidden; }
-  body {
-    width: 100vw;
-  }
 
   .navbar,
   .navbar div {
