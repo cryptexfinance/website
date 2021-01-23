@@ -1,12 +1,8 @@
 @media only screen 
 and (min-device-width : 768px) 
-and (max-device-width : 1024px) 
+and (max-device-width : 1000px) 
 and (orientation : portrait) {
-  body, html { overflow-x:hidden; }
-  body {
-    width: 100vw;
-  }
-
+  
   .navbar,
   .navbar div {
     height: 49px;
@@ -54,7 +50,6 @@ and (orientation : portrait) {
       background: $color-grey-dark !important;
       background-color: $color-grey-dark !important;
       z-index: 10;
-      // border: 1px solid $color-grey-dark;
       border: 1px solid #494866;
       box-sizing: border-box;
       margin-left: 35px;
@@ -83,7 +78,7 @@ and (orientation : portrait) {
       height: 49px;
       left: 240px;
       top: 0px;
-      background-color: $color-grey-dark !important;//$color-grey-dark;
+      background-color: $color-grey-dark !important;
       z-index: 0;
     }
   }

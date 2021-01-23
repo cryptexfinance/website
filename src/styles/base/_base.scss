@@ -23,16 +23,13 @@ body {
   }
 }
 
-@media only screen and (min-device-width: 1024px) and (max-device-width: 1080px) {
-  .nav-mobile {
-    display: None;
-  }
+@media only screen and (min-device-width: 1024px) and (max-device-width: 1090px) {
   .nav-default {
     display: None;
   }
 }
 
-@media only screen and (min-device-width: 1081px) {
+@media only screen and (min-device-width: 1091px) {
   .nav-mobile {
     display: None;
   }

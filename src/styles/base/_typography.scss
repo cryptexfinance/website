@@ -310,6 +310,92 @@
 	}
 }
 
+.governance {
+	&-title {
+		position: absolute;
+		width: 26.375rem;
+		height: 3rem;
+		left: calc(50% - 18.75rem/2 - 30.625rem);
+		top: calc(50% - 3rem/2 - 9.5125rem);
+		letter-spacing: 0.3px;
+	}
+
+	&-content {
+		position: absolute;
+		width: 30.625rem;
+		height: 8.25rem;
+		left: calc(50% - 26.8125rem/2 - 26.59375rem);
+		top: calc(50% - 16.75rem/2 + 2.6125rem);
+		font-family: $font-tertiary;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 1rem;
+		line-height: 1.375rem;
+		text-align: left;
+		letter-spacing: 0.3px;
+		color: $color-grey;
+	}
+
+	&-image {
+		position: absolute;
+		width: 21.8125rem;
+		height: 25.0605rem;
+		left: calc(50% - 22.5875rem/3 - 1.625rem);
+		top: calc(50% - 23.809375rem/2 - .3125rem);
+		
+	}
+
+	&-details {
+		position: absolute;
+		width: 22.375rem;
+		height: 22.0625rem;
+		top: calc(50% - 3rem/2 - 8.5125rem);
+		left: calc(50% - 22.0625rem/2 + 30.825rem);
+		text-align: left !important;
+
+		&-item {
+			&:not(:first-child) { 
+				padding-top: 1.5rem;
+			}
+			margin-bottom: 1.2rem;
+			
+		}
+
+		&-icons {
+			margin-right: 1rem;
+			filter: drop-shadow(0 0 0.25rem #6450FB);
+		}
+		
+		&-text {
+			left: calc(50% - 9.625rem/2 + 26.9375rem);
+			top: calc(50% - 1.5rem/2 - 9.625rem);
+			font-family: $font-primary;
+			font-style: normal;
+			font-weight: normal;
+			font-size: 1.25rem;
+			line-height: 1.5rem;
+			display: flex;
+			align-items: center;
+			letter-spacing: 0.3px;
+			color: $color-grey;
+			text-shadow: 0rem 0.25rem 0.8125rem #A440F2;//$shadow-purple-neon;
+			&:hover {
+				color: $color-dark-clean;
+				text-decoration: none;
+			}
+		}
+	}
+
+	&-button {
+		position: relative;
+		width: 12.625rem;
+		height: 3.875rem;
+		left: calc(50% - 26.8125rem/2 - 26.59375rem);
+		top: calc(50% - 16.75rem/2 + 15.1125rem);
+	}
+}
+
+
 .features {
 	display: block;
 	position: relative;

@@ -1,3 +1,20 @@
+body,
+html {
+  height: 100%;
+  overflow-x: hidden;
+}
+
+@-moz-document url-prefix() {
+  body,
+  html {
+    height: auto;
+  }
+}
+
+body {
+  width: 100vw;
+}
+
 .menu-logo {
     width: 120px;
 }
@@ -33,8 +50,6 @@
     position: absolute;
     width: 0.0625rem;
     height: 5.125rem;
-    // left: 31.5rem;
-    // top: 22.625rem;
 
     left: calc(50% - 0.0625rem/2 - 13.7rem);
     top: calc(50% - 5.125rem/2 - 3.8rem);
@@ -78,35 +93,36 @@
 }
 
 .section-about {
-  // background-color: turquoise;
   position: relative;
   width: 100%;
   height: 100vh;
 }
 
+.section-governance {
+  position: relative;
+  width: 100%;
+  height: 80vh;
+}
+
 .section-features {
-  // background-color: pink;
   position: relative;
   width: 100%;
   height: 100vh;
 }
 
 .section-team {
-  // background-color: black;
   position: relative;
   width: 100%;
   height: 100vh;
 }
 
 .section-faq {
-  // background-color: purple;
   position: relative;
   width: 100%;
   height: 100vh;
 }
 
 .section-community {
-  // background-color: blue;
   position: relative;
   width: 100%;
   height: 100vh;
