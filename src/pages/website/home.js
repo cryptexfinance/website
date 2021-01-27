@@ -18,6 +18,7 @@ const Home = (data) => {
         <main>
           <SectionAbout />
           <SectionFeatures />
+          <SectionGovernance />
           <SectionTeam />
           <SectionFaq />
           <SectionCommunity />

@@ -34,9 +34,14 @@ export default () => {
                 How to use TCAP?
               </Nav.Link>
               <div className="nav-links-divisor"></div>
+              <Nav.Link as={Link} to="#governance" title="CTX Governance">
+                CTX Governance
+              </Nav.Link>
+              <div className="nav-links-divisor"></div>
               <Nav.Link as={Link} to="#team" title="Team">
                 Team
               </Nav.Link>
+
               <div className="nav-links-divisor"></div>
               <Nav.Link as={Link} to="#faq" title="FAQ">
                 FAQ
@@ -72,6 +77,9 @@ export default () => {
               </Nav.Link>
               <Nav.Link as={Link} to="#features" title="How to use TCAP?">
                 How to use TCAP?
+              </Nav.Link>
+              <Nav.Link as={Link} to="#governance" title="CTX Governance">
+                CTX Governance
               </Nav.Link>
               <Nav.Link as={Link} to="#team" title="Team">
                 Team

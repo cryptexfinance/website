@@ -1,5 +1,5 @@
 @media only screen and (min-device-width: 391px) and (max-device-height: 999px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 2){
-
+ 
   .navbar,
   .navbar div {
     height: 49px;
@@ -275,6 +275,56 @@
     }
   }
 
+  .governance {
+    &-title {
+      width: 312px;
+      height: 36px;
+      left: calc(50% - 312px / 2 - 1.5px);
+      top: calc(50% - 36px / 2 - 405px);      
+    }
+
+    &-content {
+      width: 315px;
+      height: 247px;
+      left: calc(50% - 315px / 2);
+      top: calc(50% - 247px / 2 - 225.5px);
+      font-size: 14px;
+      line-height: 20px;
+    }
+
+    &-image {
+      position: absolute;
+      width: 380px;
+      height: 391.27px;
+      left: calc(50% - 380px / 2);
+      top: calc(50% - 391.27px / 2 + 285px);
+    }
+
+    &-details {
+      position: absolute;
+      width: 315px;
+      height: 353px;
+      left: calc(50% - 495.31px / 2 + 92px);
+      top: calc(50% - 280.6px / 2 + 128px);
+
+      &-icons {
+        margin-right: 24px;
+      }
+
+      &-text {
+        height: 72px;
+        font-size: 18px;
+        line-height: 24px;
+      }
+    }
+
+    &-button {
+      top: calc(50% - 60.75rem/2 + 1.1125rem);
+      width: 315px;
+      left: calc(50% - 315px / 2);
+    }
+  }
+
   .features {
     display: block;
     position: relative;
@@ -517,13 +567,13 @@
       font-size: 22px;
       line-height: 24px;
       left: calc(50% - 204px / 2 + 140.5px);
-      top: calc(50% - 250px / 2 + 1960px);
+      top: calc(50% - 250px / 2 + 1260px);
     }
 
     .newsgroup {
       position: absolute;
       left: 10px; 
-      top: calc(50% - 280px / 2 + 2056px);
+      top: calc(50% - 280px / 2 + 1360px);
     }
 
     .newsitem {
@@ -571,8 +621,6 @@
         margin: 0px 20px 20px 0px;
         line-height: 30px;
         padding: 2px 0 2px 2px;
-        // margin-top: 12px;
-        // margin-bottom: 24px;
       }
       .taglink {
         font-size: 16px;
@@ -587,7 +635,6 @@
 
       &:not(:last-child) {
         padding-bottom: 3rem !important;
-        // padding-left: 2rem !important;
       }
     }
   }
@@ -631,7 +678,6 @@
   .toggle {
     width: 120vw;
     height: auto;
-    // background: mediumaquamarine;
   }
 
   .toggle {
@@ -647,7 +693,6 @@
     font-size: 16px;
     line-height: 24px;
     letter-spacing: 0.3px;
-    // margin-top: 16px;
     margin-bottom: 12px;
   }
 
@@ -779,21 +824,24 @@
     height: 135vh;
     position: relative;
   }
-
   .section-features {
     margin-top: 0px; 
-    height: 160vh;
+    height: 170vh;
     position: relative;
+  }
+  .section-governance {
+    height: 240vh;
   }
 
   .section-team {
-    height: 225vh;
+    height: 60vh;
     position: relative;
   }
 
   .section-faq {
     z-index: 10;
-    height: 165vh;
+    height: 210vh;
+    margin-top: 70vh;
     position: relative;
   }
   .section-faq.expand1{
@@ -809,7 +857,7 @@
     margin-bottom: 900px;
   }
   .section-community {
-    height: 70vh;
+    height: 55vh;
     position: relative;
   } 
   @media only screen and (min-device-width: 420px) {
@@ -857,57 +905,99 @@
     }
     .section-features {
       margin-top: 200px; 
+      height: 150vh;
+    }
+    .section-governance {
+      height: 310vh;  
     }
     .section-team {
-      height: 290vh;
+      height: 30vh;
     }
     .newsbox {
       margin-top: 60px;
+      &-title {
+        top: calc(50% - 250px / 2 + 1080px);
+      }
       .newsgroup {
-        top: calc(50% - 280px / 2 + 2056px);
+        top: calc(50% - 280px / 2 + 1180px);
       }
     }
+    .section-faq {
+      margin-top: 110vh;
+    }
     .section-community {
-      height: 140vh;
+      height: 80vh;
     }
   }
-  @media only screen and (min-device-height: 880px) and (max-device-height: 910px)  {
+  @media only screen and (min-device-height: 860px) and (max-device-height: 879px)  {
+    .section-features{
+      height: 160vh;
+    } 
     .section-team {
-      height: 210vh;
+      height: 50vh;
+    }   
+    .section-community {
+      height: 45vh;
+    }  
+  }
+  @media only screen and (min-device-height: 880px) and (max-device-height: 910px)  {
+    .section-about {
+      height: 125vh;
+    }
+    .section-features{
+      height: 150vh;
+    } 
+    .section-governance{
+      height: 230vh;
+    }
+    .section-team {
+      height: 50vh;
     }
     .newsbox {
       .newsgroup {
-        top: calc(50% - 210px / 2 + 2010px);
+        top: calc(50% - 210px / 2 + 1330px);
       }
       &-title {
-        top: calc(50% - 250px / 2 + 1930px);
+        top: calc(50% - 250px / 2 + 1240px);
       }
     }
+    .section-faq {
+      height: 195vh;
+    }
     .section-community {
-      height: 70vh;
+      height: 50vh;
     }
   }
   @media only screen and (min-device-height: 911px)  {
-    .section-team {
-      height: 220vh;
+    .section-main {
+      height: 95vh;
+    }
+    .section-about {
+      height: 120vh;
     }
     .section-features{
-      height: 140vh;
+      height: 150vh;
+    }
+    .section-governance {
+      height: 210vh;  
+    }    
+    .section-team {
+      height: 60vh;
     }
     .section-faq{
-      height: 150vh;
+      height: 185vh;
     }
     .newsbox {
       margin-top: 90px;
       .newsgroup {
-        top: calc(50% - 210px / 2 + 2010px);
+        top: calc(50% - 210px / 2 + 1310px);
       }
       &-title {
-        top: calc(50% - 250px / 2 + 1930px);
+        top: calc(50% - 250px / 2 + 1220px);
       }
     }
     .section-community {
-      height: 80vh;
+      height: 55vh;
     }
   }
 }
