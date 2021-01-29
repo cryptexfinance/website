@@ -396,6 +396,55 @@ and (orientation : portrait) {
     }
   }
 
+  .governance {
+    &-title {
+      position: absolute;
+      width: 312px;
+      height: 36px;
+      left: calc(50% - 312px/2 - 170.5px);
+      top: calc(50% - 36px/2 - 425px);
+      font-size: 24px;
+      line-height: 36px;
+      letter-spacing: 0.3px;
+    }
+
+    &-content {
+      width: 315px;
+      height: 247px;
+      left: calc(50% - 315px/2 - 170px);
+      top: calc(50% - 247px/2 - 245.5px);
+      font-size: 14px;
+      line-height: 20px;
+      letter-spacing: 0.3px;
+    }
+
+    &-image {
+      position: absolute;
+      width: 660px;
+      height: auto;//508.6px;
+      left: calc(50% - 660px/2);
+      top: calc(50% - 508.6px/2 + 258px);
+    }
+
+    &-details {
+      position: absolute;
+      width: 315px;
+      height: 353px;
+      left: calc(50% - 495.31px/2 + 320px);
+      top: calc(50% - 508.6px/2 - 218px);
+
+      &-icons {
+        margin-right: 24px;
+      }
+
+      &-text {
+        height: 72px;
+        font-size: 18px;
+        line-height: 24px;
+      }
+    }
+  }
+
   .team {
     position: relative;
     &-title {
@@ -597,7 +646,6 @@ and (orientation : portrait) {
     &-row {
       position: absolute;
       width: 100%;
-      // left: calc(50% - 312px/2 - 7.5px);
       left: 80px;
       top: calc(50% - 36px/2 - 156px);
     }
@@ -782,7 +830,11 @@ and (orientation : portrait) {
     height: 100vh;
     position: relative;
   }
-  
+
+  .section-governance {
+    height: 130vh;
+  }
+
   .section-team {
     height: 145vh;
     position: relative;
@@ -815,10 +867,13 @@ and (orientation : portrait) {
       height: 80vh;
     }
     .section-about {
-      height: 100vh;
+      height: 120vh;
     }
     .section-features {
       height: 85vh;
+    }
+    .section-governance {
+      height: 120vh;
     }
     .section-team {
       height: 110vh;
@@ -853,6 +908,21 @@ and (orientation : portrait) {
       }
       &-subtitle {
         left: calc(50% - 345px/2 - 165px);        
+      }
+    }
+    @media only screen and (max-device-height : 1150px) { 
+      .section-faq {
+        height: 120vh;
+      }
+      .section-community {
+        height: 80vh;
+      }
+    }
+  }
+  @media only screen and (min-device-width : 820px)  {
+    .faq {
+      &-divider {
+        width: 675px;
       }
     }
   }

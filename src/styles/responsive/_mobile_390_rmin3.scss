@@ -578,13 +578,13 @@
       font-size: 22px;
       line-height: 24px;
       left: calc(50% - 204px / 2 + 140.5px);
-      top: calc(50% - 300px / 2 + 1240px);
+      top: calc(50% - 300px / 2 + 1410px);
     }
 
     .newsgroup {
       position: absolute;
       left: 10px; 
-      top: calc(50% - 370px / 2 + 1370px);
+      top: calc(50% - 370px / 2 + 1530px);
     }
 
     .newsitem {
@@ -824,6 +824,8 @@
   .section-main {
     position: relative;
     height: 140vh;
+    margin-bottom: 20vh;
+
     .main-image {
       position: absolute;
       width: 470px;
@@ -834,46 +836,51 @@
   }
 
   .section-about {
-    height: 195vh;
+    height: 150vh;
+    margin-bottom: 40vh;
     position: relative;
-  }
-
-  .section-governance {
-    height: 270vh;
   }
 
   .section-features {
-    height: 200vh;
+    height: 160vh;
     position: relative;
+    margin-bottom: 70vh;
+  }
+
+  .section-governance {
+    height: 160vh;
+    margin-bottom: 40vh;
   }
 
   .section-team {
     margin-top: 140px;
-    height: 100vh;
+    height: 160vh;
+    margin-bottom: 110vh;
     position: relative;
   }
 
   .section-faq {
     z-index: 10;
-    height: 260vh;
+    height: 100vh;
     margin-top: 70vh;
+    margin-bottom: 40vh;
     position: relative;
   }
   .section-faq.expand1{
-    margin-bottom: 160px;
+    margin-bottom: 65vh;
   }
   .section-faq.expand2{
-    margin-bottom: 400px;
+    margin-bottom: 95vh;
   }
   .section-faq.expand4{
-    margin-bottom: 670px;
+    margin-bottom: 140vh;
   }
   .section-faq.expand6{
-    margin-bottom: 900px;
+    margin-bottom: 165vh;
   }
 
   .section-community {
-    height: 80vh;
+    height: 150vh;
     position: relative;
   }
 
@@ -902,37 +909,41 @@
   @media only screen and (min-device-height: 710px) and (max-device-height: 790px)  {
     .section-main {
       height: 120vh;
+      margin-bottom: 10vh;
     }   
     .section-about {
-      height: 160vh;
+      height: 130vh;
+      margin-bottom: 30vh;
     }  
     .section-features {
-      height: 170vh;
+      height: 140vh;
+      margin-bottom: 55vh;
     }  
     .section-governance {
-      height: 230vh;
+      height: 130vh;      
     }
     .section-team {
       margin-top: 0px;
-      height: 110vh;
+      height: 130vh;
+      margin-bottom: 80vh;
     }   
     .newsbox {
       &-title {        
-        top: calc(50% - 120px / 2 + 1220px);
+        top: calc(50% - 120px / 2 + 1300px);
       }
       .newsgroup {
-        top: calc(50% - 180px / 2 + 1340px);
+        top: calc(50% - 180px / 2 + 1390px);
       }
     } 
     .section-faq {
-      height: 160vh
+      height: 110vh
     }
     .section-community {
       height: 130vh;
     }
     @media only screen and (min-device-height: 750px){
       .section-faq {
-        height: 140vh
+        height: 90vh
       }
       .section-community {
         height: 130vh;
@@ -942,36 +953,43 @@
   @media only screen and (min-device-height: 791px) and (max-device-height: 860px)  {
     .section-main {
       height: 110vh;
+      margin-bottom: 10vh;
     }   
     .section-about {
-      height: 150vh;
-    }    
-    .section-governance {
-      height: 195vh;
+      height: 120vh;
+      margin-bottom: 25vh;
     }  
     .section-features {
-      height: 165vh;  
-    } 
+      height: 130vh;  
+      margin-bottom: 50vh;
+    }  
+    .section-governance {
+      height: 130vh;
+      margin-bottom: 20vh;
+    }  
+     
     .section-team {
-      height: 90vh;
+      margin-top: 0px;
+      height: 130vh;
+      margin-bottom: 80vh;
     } 
     .newsbox {
       &-title {        
-        top: calc(50% - 200px / 2 + 1250px);
+        top: calc(50% - 200px / 2 + 1370px);
       }
       .newsgroup {
-        top: calc(50% - 250px / 2 + 1380px);
+        top: calc(50% - 250px / 2 + 1490px);
       }
     } 
     .section-faq {
-      height: 165vh
+      height: 100vh
     }
     .section-community {
       height: 100vh;
     }
     @media only screen and (min-device-height: 840px){
       .section-faq {
-        height: 150vh
+        height: 80vh
       }      
     }
   }
@@ -993,10 +1011,10 @@
     } 
     .newsbox {
       &-title {        
-        top: calc(50% - 200px / 2 + 1650px);
+        top: calc(50% - 200px / 2 + 1750px);
       }
       .newsgroup {
-        top: calc(50% - 250px / 2 + 1756px);
+        top: calc(50% - 250px / 2 + 1856px);
       }
     } 
     .section-faq {
