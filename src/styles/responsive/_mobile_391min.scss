@@ -1,4 +1,4 @@
-@media only screen and (min-device-width: 391px) and (max-device-height: 990px) and (orientation: portrait) {
+@media only screen and (min-device-width: 391px) and (max-device-height: 1100px) and (orientation: portrait) {
   
   .navbar,
   .navbar div {
@@ -933,5 +933,22 @@
         left: 80px; 
       }
     } 
+  }
+  @media only screen and (min-device-width: 500px) and (max-device-width: 749px){
+    .menu-logo {
+      margin-left: -30px;
+    }
+    .navbar-toggler {
+      margin-right: 15%;
+    }
+    .button-pink{
+      width: 70%;
+      left: 15%;
+    }
+    .main {
+      &-title {
+        left: 22%;
+      }
+    }
   }
 }

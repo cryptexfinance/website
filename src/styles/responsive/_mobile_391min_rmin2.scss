@@ -1,4 +1,4 @@
-@media only screen and (min-device-width: 391px) and (max-device-height: 999px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 2){
+@media only screen and (min-device-width: 391px) and (max-device-height: 1100px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 2){
  
   .navbar,
   .navbar div {
@@ -1018,6 +1018,18 @@
     }
     .section-community {
       height: 40vh;
+    }
+  }
+  @media only screen and (min-device-width: 500px) and (max-device-width: 749px){
+    .menu-logo {
+      margin-left: -30px;
+    }
+    .navbar-toggler {
+      margin-right: 15%;
+    }
+    .button-pink{
+      width: 70%;
+      left: 15%;
     }
   }
 }

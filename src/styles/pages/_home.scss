@@ -69,7 +69,6 @@ body {
     
     &-image{
       width: 1.75rem;
-      // height: 1.065rem;
     }
   }
 
@@ -81,8 +80,6 @@ body {
     position: absolute;
 		width: 13.4375rem;
 		height: 3.875rem;
-		// left: 5rem;
-    // top: 30.9375rem;
     left: calc(50% - 13.4375rem/2 - 33.3rem);
     top: calc(50% - 3.875rem/2 + 4.4rem);
     &:hover {
