@@ -1,4 +1,4 @@
-@media only screen and (min-device-width: 391px) and (max-device-height: 990px) and (orientation: portrait) {
+@media only screen and (min-device-width: 391px) and (max-device-height: 1100px) and (orientation: portrait) {
   
   .navbar,
   .navbar div {
@@ -327,7 +327,6 @@
       left: calc(50% - 315px / 2);
     }
   }
-
 
   .features {
     display: block;
@@ -829,37 +828,41 @@
     position: relative;
   }
 
-  .section-governance {
-    height: 190vh;
-  }
-
   .section-features {
     height: 180vh;
     position: relative;
+    margin-bottom: 40vh;
+  }
+
+  .section-governance {
+    height: 120vh;
+    margin-bottom: 30vh;
   }
 
   .section-team {
     z-index: 12;
     height: 140vh;
     position: relative;
+    margin-bottom: 80vh;
   }
 
   .section-faq {
     z-index: 10;
-    height: 160vh;
+    height: 90vh;
     position: relative;
+    margin-bottom: 50vh;
   }
   .section-faq.expand1{
-    margin-bottom: 150px;
+    margin-bottom: 70vh;
   }
   .section-faq.expand2{
-    margin-bottom: 380px;
+    margin-bottom: 90vh;
   }
   .section-faq.expand4{
-    margin-bottom: 700px;
+    margin-bottom: 120vh;
   }
   .section-faq.expand6{
-    margin-bottom: 900px;
+    margin-bottom: 135vh;
   }
 
   .section-community {
@@ -881,10 +884,10 @@
       height: 120vh;
     }
     .section-faq {
-      height: 240vh;
+      height: 90vh;
     }
     .section-community {
-      height: 20vh;
+      height: 70vh;
     }    
   }
   @media only screen and (min-device-height: 750px)  {
@@ -930,5 +933,22 @@
         left: 80px; 
       }
     } 
+  }
+  @media only screen and (min-device-width: 500px) and (max-device-width: 749px){
+    .menu-logo {
+      margin-left: -30px;
+    }
+    .navbar-toggler {
+      margin-right: 15%;
+    }
+    .button-pink{
+      width: 70%;
+      left: 15%;
+    }
+    .main {
+      &-title {
+        left: 22%;
+      }
+    }
   }
 }

@@ -1,4 +1,4 @@
-@media only screen and (min-device-width: 391px) and (max-device-height: 999px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 2){
+@media only screen and (min-device-width: 391px) and (max-device-height: 1100px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 2){
  
   .navbar,
   .navbar div {
@@ -567,13 +567,13 @@
       font-size: 22px;
       line-height: 24px;
       left: calc(50% - 204px / 2 + 140.5px);
-      top: calc(50% - 250px / 2 + 1260px);
+      top: calc(50% - 250px / 2 + 1390px);
     }
 
     .newsgroup {
       position: absolute;
       left: 10px; 
-      top: calc(50% - 280px / 2 + 1360px);
+      top: calc(50% - 280px / 2 + 1500px);
     }
 
     .newsitem {
@@ -822,39 +822,42 @@
   .section-about {
     margin-top: 70px; 
     height: 135vh;
-    position: relative;
+    position: relative;    
   }
   .section-features {
     margin-top: 0px; 
     height: 170vh;
+    margin-bottom: 55vh;
     position: relative;
   }
   .section-governance {
-    height: 240vh;
+    height: 130vh;
+    margin-bottom: 40vh;
   }
 
   .section-team {
-    height: 60vh;
+    height: 95vh;
     position: relative;
+    margin-bottom: 110vh;
   }
 
   .section-faq {
     z-index: 10;
-    height: 210vh;
-    margin-top: 70vh;
+    height: 100vh;
+    margin-bottom: 60vh;
     position: relative;
   }
   .section-faq.expand1{
-    margin-bottom: 160px;
+    margin-bottom: 80vh;
   }
   .section-faq.expand2{
-    margin-bottom: 400px;
+    margin-bottom: 100vh;
   }
   .section-faq.expand4{
-    margin-bottom: 670px;
+    margin-bottom: 125vh;
   }
   .section-faq.expand6{
-    margin-bottom: 900px;
+    margin-bottom: 147vh;
   }
   .section-community {
     height: 55vh;
@@ -906,24 +909,32 @@
     .section-features {
       margin-top: 200px; 
       height: 150vh;
+      margin-bottom: 85vh;
     }
     .section-governance {
-      height: 310vh;  
+      height: 160vh;  
     }
     .section-team {
-      height: 30vh;
+      height: 100vh;
+      margin-bottom: 130vh;
     }
     .newsbox {
       margin-top: 60px;
       &-title {
-        top: calc(50% - 250px / 2 + 1080px);
+        top: calc(50% - 250px / 2 + 1310px);
       }
       .newsgroup {
-        top: calc(50% - 280px / 2 + 1180px);
+        top: calc(50% - 280px / 2 + 1430px);
       }
     }
     .section-faq {
       margin-top: 110vh;
+    }
+    .section-faq.expand4{
+      margin-bottom: 140vh;
+    }
+    .section-faq.expand6{
+      margin-bottom: 165vh;
     }
     .section-community {
       height: 80vh;
@@ -934,11 +945,20 @@
       height: 160vh;
     } 
     .section-team {
-      height: 50vh;
+      height: 70vh;
     }   
     .section-community {
       height: 45vh;
     }  
+    .newsbox {
+      &-title {
+        top: calc(50% - 250px / 2 + 1320px);
+      }
+  
+      .newsgroup {
+        top: calc(50% - 280px / 2 + 1430px);
+      }
+    }
   }
   @media only screen and (min-device-height: 880px) and (max-device-height: 910px)  {
     .section-about {
@@ -948,21 +968,21 @@
       height: 150vh;
     } 
     .section-governance{
-      height: 230vh;
+      height: 120vh;
     }
     .section-team {
-      height: 50vh;
+      height: 80vh;
     }
     .newsbox {
       .newsgroup {
-        top: calc(50% - 210px / 2 + 1330px);
+        top: calc(50% - 210px / 2 + 1440px);
       }
       &-title {
-        top: calc(50% - 250px / 2 + 1240px);
+        top: calc(50% - 250px / 2 + 1360px);
       }
     }
     .section-faq {
-      height: 195vh;
+      height: 80vh;
     }
     .section-community {
       height: 50vh;
@@ -979,25 +999,37 @@
       height: 150vh;
     }
     .section-governance {
-      height: 210vh;  
+      height: 110vh;  
     }    
     .section-team {
-      height: 60vh;
+      height: 70vh;
     }
     .section-faq{
-      height: 185vh;
+      height: 90vh;
     }
     .newsbox {
       margin-top: 90px;
       .newsgroup {
-        top: calc(50% - 210px / 2 + 1310px);
+        top: calc(50% - 210px / 2 + 1330px);
       }
       &-title {
-        top: calc(50% - 250px / 2 + 1220px);
+        top: calc(50% - 250px / 2 + 1240px);
       }
     }
     .section-community {
-      height: 55vh;
+      height: 40vh;
+    }
+  }
+  @media only screen and (min-device-width: 500px) and (max-device-width: 749px){
+    .menu-logo {
+      margin-left: -30px;
+    }
+    .navbar-toggler {
+      margin-right: 15%;
+    }
+    .button-pink{
+      width: 70%;
+      left: 15%;
     }
   }
 }

@@ -27,13 +27,30 @@
     margin-bottom: 0.5rem;
   }
   
-  @media only screen and (max-device-width: 1366px) {
+  @media only screen and (max-device-width: 1199px) and (orientation : portrait) {
     &-photo {
       display: None;
     }
   }
   
-  @media only screen and (min-device-width: 1367px) {
+  @media only screen and (min-device-width: 1200px) {
+    .team-box {
+      &-photo {
+        position: relative;
+        width: 14.375rem;
+        height: 10.0625rem;
+        background: rgba(116, 80, 192, 0.67);
+        mix-blend-mode: lighten;
+        border-radius: 0.125rem;
+      }
+    
+      &-photo-mobile{
+        display: None;
+      }
+    }
+  }
+
+  @media only screen and (min-device-width: 1000px) and (max-device-width: 1199px) and (orientation : landscape)  {
     .team-box {
       &-photo {
         position: relative;

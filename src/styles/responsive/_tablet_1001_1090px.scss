@@ -131,10 +131,8 @@ and (orientation : portrait) {
     content: "MENU";
     position: relative;
     padding: 10px 20px 10px 20px;
-    // background-color: #3e4555;
     color: $color-dark-clean!important;
     text-decoration: none;
-    // cursor: pointer;
     &:focus {
 			outline:none !important;
 		}
@@ -272,20 +270,12 @@ and (orientation : portrait) {
 
       &-icons {
         margin-right: 24px;
-        // background: transparent;
-        // text-shadow: 0rem 0rem 0.156565rem #6450FB, 0rem 0rem 0.13011875rem #3626B0;
-        // filter: drop-shadow(0 0 0.25rem #6450FB);
       }
 
       &-text {
-        // left: calc(50% - 9.625rem/2 + 26.9375rem);
-			  // top: calc(50% - 1.5rem/2 - 9.625rem);
-        // width: 139px;
         height: 72px;
         font-size: 18px;
         line-height: 24px;
-        // display: flex;
-        // letter-spacing: 0.3px;
       }
     }
   }
@@ -307,7 +297,6 @@ and (orientation : portrait) {
     &-row {
       position: absolute;
       width: 780px;
-      // height: 403px;
       left: 18%;
       top: calc(50% - 36px/2 - 224px);
     }
@@ -426,6 +415,55 @@ and (orientation : portrait) {
 					}
         }
         margin-bottom: 20px;
+      }
+    }
+  }
+
+  .governance {
+    &-title {
+      position: absolute;
+      width: 312px;
+      height: 36px;
+      left: calc(50% - 312px/2 - 170.5px);
+      top: calc(50% - 36px/2 - 425px);
+      font-size: 24px;
+      line-height: 36px;
+      letter-spacing: 0.3px;
+    }
+
+    &-content {
+      width: 315px;
+      height: 247px;
+      left: calc(50% - 315px/2 - 170px);
+      top: calc(50% - 247px/2 - 245.5px);
+      font-size: 14px;
+      line-height: 20px;
+      letter-spacing: 0.3px;
+    }
+
+    &-image {
+      position: absolute;
+      width: 660px;
+      height: auto;//508.6px;
+      left: calc(50% - 660px/2);
+      top: calc(50% - 508.6px/2 + 258px);
+    }
+
+    &-details {
+      position: absolute;
+      width: 315px;
+      height: 353px;
+      left: calc(50% - 495.31px/2 + 320px);
+      top: calc(50% - 508.6px/2 - 218px);
+
+      &-icons {
+        margin-right: 24px;
+      }
+
+      &-text {
+        height: 72px;
+        font-size: 18px;
+        line-height: 24px;
       }
     }
   }
@@ -820,6 +858,10 @@ and (orientation : portrait) {
     height: 130vh;
     position: relative;
   }
+
+  .section-governance {
+    height: 90vh;
+  }
   
   .section-faq {
     height: 75vh;
@@ -830,7 +872,7 @@ and (orientation : portrait) {
   }
 
   .section-community {
-    height: 110vh;
+    height: 90vh;
     position: relative;
   }
 }
