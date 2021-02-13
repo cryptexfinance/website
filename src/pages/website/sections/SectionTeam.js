@@ -76,8 +76,8 @@ const SectionTeam = (props) => {
 
 
   const RenderBlog = () => {
-    return typeof(tblog.edges) !== `undefined` ? tblog.edges.map (({node}) => (
-      <div className="newsitem" key={node.id}>
+    return typeof(tblog.edges) !== `undefined` ? tblog.edges.map (({node}, index) => (
+      <div className={Math.ceil((index+1) / 3)  == activePage+1 ? "newsitem " : "newsitem hide"} key={node.id}>
         <img src={node.frontmatter.featuredimage.childImageSharp.fluid.src} className="newsitem-photo" alt="News" />
         <div className="newsitem-title terciary-header">{node.frontmatter.title}</div>
         
@@ -111,7 +111,7 @@ const SectionTeam = (props) => {
   const RenderPagination = () => {
     let edges = (typeof(tblog.edges) !== `undefined` ? tblog.edges.length : 0)
     let pages = edges > 0 ? Math.ceil(edges / 3) : 0
-    //let pages = Math.ceil(edgesTest.length / 3) 
+     
     let newsLastPage = pages*3 - edges
 
     let pagClass = "newsbox-pagination"
