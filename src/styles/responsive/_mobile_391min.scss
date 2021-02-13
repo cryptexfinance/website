@@ -321,7 +321,7 @@
         line-height: 24px;
       }
     }
-    &-button {
+    &-buttons {
       top: calc(50% - 70.75rem/2 + 10.1125rem);
       width: 315px;
       left: calc(50% - 315px / 2);
@@ -578,9 +578,26 @@
       top: calc(50% - 480px / 2 + 1430px);
     }
 
+    &-pagination {
+      position: absolute;
+      width: 57rem;
+      margin-top: 12%;  
+
+      &.one {
+        margin-top: 79.5%;
+      }
+      &.two {
+        margin-top: 46%;
+      }
+    }
+
     .newsitem {
       display: inline-table;
       z-index: 20;
+      &.hide {
+        display: None;
+      }
+
       &-photo {
         width: 0;
         height: 0;
@@ -843,7 +860,7 @@
     z-index: 12;
     height: 140vh;
     position: relative;
-    margin-bottom: 80vh;
+    margin-bottom: 100vh;
   }
 
   .section-faq {
@@ -895,6 +912,31 @@
       margin-top: 140px;
     }
 
+  }
+  @media only screen and (min-device-height: 950px)  {
+    .section-main {
+      height: 95vh;
+    } 
+    .section-about {
+      height: 120vh;
+    } 
+    .section-features {
+      height: 120vh;
+    }
+    .section-governance {
+      margin-bottom: 10vh;
+    }
+    .section-team {
+      margin-bottom: 60vh;
+    }
+    .section-faq {
+      margin-bottom: 35vh;
+    }
+    .governance {
+      &-buttons {
+        top: calc(50% - 68.75rem/2 + 10.1125rem);
+      }
+    }
   }
   @media only screen and (min-device-width: 440px)  {
     .features {
@@ -948,6 +990,49 @@
     .main {
       &-title {
         left: 22%;
+      }
+    }
+    .features {
+      &-row {
+        left: 22%;
+      }      
+      &-title {
+        left: 22%;         
+      }
+    }
+    .faq {
+      &-title {        
+        left: calc(50% - 470px / 2 - 7.5px);        
+      }
+      &-subtitle {        
+        left: calc(50% - 470px / 2 - 11px);        
+      }
+      &-row {
+        left: 70px;
+      }
+      &-divider {
+        width: 490px;        
+      }
+    }
+    .community {
+      &-title {
+        width: 400px;
+        left: calc(50% - 450px / 2 - 1.5px);       
+      }
+      &-subtitle {
+        left: calc(50% - 440px / 2 - 1.5px);       
+      }
+      &-icons-row {
+        left: 100px; 
+      }
+      &-subscribe {
+        &-title {          
+          left: calc(50% - 340px / 2 - 53px);          
+        }
+        &-button {
+          width: 316px;
+          left: calc(50% - 341px / 2 - 53px);  
+        }
       }
     }
   }

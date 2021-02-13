@@ -318,7 +318,7 @@
       }
     }
 
-    &-button {
+    &-buttons {
       top: calc(50% - 60.75rem/2 + 1.1125rem);
       width: 315px;
       left: calc(50% - 315px / 2);
@@ -579,6 +579,10 @@
     .newsitem {
       display: inline-table;
       z-index: 20;
+      &.hide {
+        display: None;
+      }
+
       &-photo {
         width: 0;
         height: 0;
@@ -810,6 +814,8 @@
     margin-top: 30px; 
     position: relative;
     height: 100vh;
+    margin-bottom: 18vh;
+
     .main-image {
       position: absolute;
       width: 470px;
@@ -838,7 +844,7 @@
   .section-team {
     height: 95vh;
     position: relative;
-    margin-bottom: 110vh;
+    margin-bottom: 135vh;
   }
 
   .section-faq {
@@ -894,6 +900,12 @@
       .newsgroup {
         left: 40px;
       }
+
+      &-pagination {
+        position: absolute;
+        width: 50rem;       
+      }
+
       &-title {
         left: calc(50% - 204px / 2 + 170.5px);
       }
@@ -902,6 +914,7 @@
   @media only screen and (max-device-height: 820px)  {
     .section-main {
       margin-top: 90px;
+      margin-bottom: 35vh;
     } 
     .section-about {
       margin-top: 170px; 
@@ -916,7 +929,7 @@
     }
     .section-team {
       height: 100vh;
-      margin-bottom: 130vh;
+      margin-bottom: 160vh;
     }
     .newsbox {
       margin-top: 60px;
@@ -1020,6 +1033,13 @@
       height: 40vh;
     }
   }
+  @media only screen and (min-device-height: 950px)  {
+    .governance {
+      &-buttons {
+        top: calc(50% - 60.75rem/2 + 6.1125rem);
+      }
+    }
+  }
   @media only screen and (min-device-width: 500px) and (max-device-width: 749px){
     .menu-logo {
       margin-left: -30px;
@@ -1028,8 +1048,81 @@
       margin-right: 15%;
     }
     .button-pink{
-      width: 70%;
-      left: 15%;
+      width: 65%;
+      left: 18%;
+    }
+    .features {
+      &-row {
+        left: 20%;
+      }
+      &-title {
+        left: 20%;         
+      }
+    }
+    .team-row {
+      left: calc(50% - 1.6rem/2 - 28.65625rem);
+    }
+    .newsbox {
+      .newsgroup {
+        left: 52px;
+      }
+      &-title {
+        left: calc(50% - 204px / 2 + 200.5px);
+      }
+    }
+    .faq {
+      &-divider {
+        width: 480px;        
+      }
+    }
+    .community {
+      &-title {
+        width: 400px;
+        left: calc(50% - 312px/2 - 80.5px);
+      }
+      &-subtitle {
+        left: calc(50% - 305px/2 - 80.5px);
+      }
+      &-icons-row {
+        width: 700px;
+        top: calc(50% - 104px/2 - 260px);
+        left: calc(50% - 305px/2 - 80.5px);
+      }
+      &-item {
+        width: 145px;
+      }
+      &-image {
+        position: absolute;
+        width: 697.62px;
+        height: 578px;
+        left: calc(50% - 697.62px/2 - 24.5px);
+        top: calc(50% - 578px/2 + 304px);
+      }
+  
+      &-subscribe {
+        &-title {
+          position: absolute;
+          width: 309px;
+          height: 24px;
+          left: calc(50% - 312px/2 - 80.5px);
+          top: calc(50% - 24px/2 - 85px);
+          font-size: 22px;
+          line-height: 24px;
+          letter-spacing: 0.3px;
+        }
+    
+        &-input {
+          width: 426px;
+          left: calc(50% - 316px/2 - 1px);
+          top: calc(50% - 24px/2 + 45px);
+        }
+    
+        &-button {
+          left: calc(50% - 305px/2 - 80.5px);
+        }
+    
+      }
+    
     }
   }
 }

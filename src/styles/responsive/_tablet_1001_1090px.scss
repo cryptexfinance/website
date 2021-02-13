@@ -466,6 +466,11 @@ and (orientation : portrait) {
         line-height: 24px;
       }
     }
+    &-buttons {
+      top: calc(50% - 46.75rem/2 + 10.1125rem);
+      width: 290px;
+      left: calc(50% - 650px / 2);
+    }
   }
 
   .team {
@@ -593,11 +598,27 @@ and (orientation : portrait) {
       position: absolute;
       left: calc(50% - 10px/2 + 190px);
       top: calc(50% - 80px/2 + 1186px);
-      // padding-left: 22.76px;
+    }
+
+    &-pagination {
+      position: absolute;
+      width: 35rem;
+      margin-top: 5%;  
+
+      &.one {
+        margin-top: 60%;
+      }
+      &.two {
+        margin-top: 32.5%;
+      }
     }
 
     .newsitem {
       display: inline-table;
+      &.hide {
+        display: None;
+      }
+
       &-photo {
         position: relative;
         width: 120px;
@@ -856,6 +877,7 @@ and (orientation : portrait) {
   
   .section-team {
     height: 130vh;
+    margin-bottom: 10vh;
     position: relative;
   }
 

@@ -386,12 +386,34 @@
 		}
 	}
 
-	&-button {
+	&-buttons {
 		position: relative;
-		width: 12.625rem;
+		width: 15.625rem;
 		height: 3.875rem;
 		left: calc(50% - 26.8125rem/2 - 26.59375rem);
-		top: calc(50% - 16.75rem/2 + 15.1125rem);
+		top: calc(50% - 17.75rem/2 + 15.1125rem);
+	}
+
+	&-icon {
+		position: absolute;
+		width: 32px;
+		height: 32px;
+
+		&.gecko {
+			left: 2px;
+			top: 5px;
+		}
+		&.uni {
+			left: 60px;
+			width: 33px;
+			height: 38px;
+		}
+		&.dfp {
+			left: 124px;
+			width: 26px;
+			height: 31px;
+			top: 7px;
+		}		
 	}
 }
 
@@ -559,12 +581,11 @@
 	&-divider {
 		position: absolute;
 		width: 1px;
-		height: 33.5rem;
+		height: 35.5rem;
 		left: 50%;
 		top: calc(50% - 33.5rem/2 + 4.5rem);
 
 		/* dark-grey */
-
 		background: #494866;
 	}
 }

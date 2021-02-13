@@ -330,7 +330,7 @@
       }
     }
 
-    &-button {
+    &-buttons {
       top: calc(50% - 75.75rem/2 + 1.1125rem);
       width: 315px;
       left: calc(50% - 315px / 2);
@@ -587,9 +587,26 @@
       top: calc(50% - 370px / 2 + 1530px);
     }
 
+    &-pagination {
+      position: absolute;
+      width: 60rem;
+      margin-top: 12%;  
+
+      &.one {
+        margin-top: 79%;
+      }
+      &.two {
+        margin-top: 45%;
+      }
+    }
+
     .newsitem {
       display: inline-table;
       z-index: 20;
+      &.hide {
+        display: None;
+      }
+
       &-photo {
         width: 0;
         height: 0;
@@ -824,7 +841,7 @@
   .section-main {
     position: relative;
     height: 140vh;
-    margin-bottom: 20vh;
+    margin-bottom: 25vh;
 
     .main-image {
       position: absolute;
@@ -837,14 +854,14 @@
 
   .section-about {
     height: 150vh;
-    margin-bottom: 40vh;
+    margin-bottom: 43vh;
     position: relative;
   }
 
   .section-features {
     height: 160vh;
     position: relative;
-    margin-bottom: 70vh;
+    margin-bottom: 73vh;
   }
 
   .section-governance {
@@ -855,7 +872,7 @@
   .section-team {
     margin-top: 140px;
     height: 160vh;
-    margin-bottom: 110vh;
+    margin-bottom: 140vh;
     position: relative;
   }
 
@@ -909,7 +926,7 @@
   @media only screen and (min-device-height: 710px) and (max-device-height: 790px)  {
     .section-main {
       height: 120vh;
-      margin-bottom: 10vh;
+      margin-bottom: 23vh;
     }   
     .section-about {
       height: 130vh;
@@ -917,7 +934,7 @@
     }  
     .section-features {
       height: 140vh;
-      margin-bottom: 55vh;
+      margin-bottom: 65vh;
     }  
     .section-governance {
       height: 130vh;      
@@ -925,7 +942,7 @@
     .section-team {
       margin-top: 0px;
       height: 130vh;
-      margin-bottom: 80vh;
+      margin-bottom: 110vh;
     }   
     .newsbox {
       &-title {        
@@ -953,7 +970,7 @@
   @media only screen and (min-device-height: 791px) and (max-device-height: 860px)  {
     .section-main {
       height: 110vh;
-      margin-bottom: 10vh;
+      margin-bottom: 20vh;
     }   
     .section-about {
       height: 120vh;
@@ -961,17 +978,17 @@
     }  
     .section-features {
       height: 130vh;  
-      margin-bottom: 50vh;
+      margin-bottom: 53vh;
     }  
     .section-governance {
       height: 130vh;
-      margin-bottom: 20vh;
+      margin-bottom: 28vh;
     }  
      
     .section-team {
       margin-top: 0px;
       height: 130vh;
-      margin-bottom: 80vh;
+      margin-bottom: 100vh;
     } 
     .newsbox {
       &-title {        
