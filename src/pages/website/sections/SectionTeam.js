@@ -9,10 +9,14 @@ import joem from '../../../../static/website/team/joem.webp';
 import prestonm from '../../../../static/website/team/prestonm.webp';
 import cristianm from '../../../../static/website/team/cristianm.webp';
 import tomm from '../../../../static/website/team/tomm.webp';
+import arrowInactive from '../../../../static/website/news/arrow-down.svg';
+import arrowActive from '../../../../static/website/news/arrow-up.svg';
 
 
 const SectionTeam = (props) => {
- const [tblog, setBlog] = useState({});
+  const [tblog, setBlog] = useState({});
+  const [activePage, setActivePage] = useState(0)
+  const [edgesTest, setEdgesTest] = useState([])
 
   const dataq = useStaticQuery(graphql`
     query {
@@ -55,6 +59,21 @@ const SectionTeam = (props) => {
       console.log(dataq);
     }
   }, [dataq]);
+  
+  const changePage = (index) => {
+    setActivePage(index)
+  }
+
+  const backPage = () => {
+    changePage(activePage == 0 ? 0 : activePage-1) 
+  }
+
+  const nextPage = () => {
+    let pages = typeof(tblog.edges) !== `undefined` ? Math.ceil(tblog.edges.length / 3) : 0
+    //let pages =  Math.ceil(edgesTest.length/3)
+    changePage(activePage == pages-1 ? 0 : activePage+1) 
+  }
+
 
   const RenderBlog = () => {
     return typeof(tblog.edges) !== `undefined` ? tblog.edges.map (({node}) => (
@@ -72,6 +91,65 @@ const SectionTeam = (props) => {
     )) : <div></div>;
   }
 
+  const RenderBlogTest = () => {
+    return edgesTest.map ((node, index) => (
+
+      <div className={Math.ceil((index+1) / 3)  == activePage+1 ? "newsitem " : "newsitem hide"} key={node.id}>
+        <img src={node.src} className="newsitem-photo" alt="News" />
+        <div className="newsitem-title terciary-header">{node.title}</div>
+        
+        <div className="newsitem-tag-items">
+          <a rel="noreferrer" target="_blank" className="newsitem-tagbox taglink">            
+          </a>
+        </div>
+        <a rel="noreferrer" target="_blank" className="newsitem-link link">Check it out</a>
+      </div>
+    ));
+  }
+
+
+  const RenderPagination = () => {
+    let edges = (typeof(tblog.edges) !== `undefined` ? tblog.edges.length : 0)
+    let pages = edges > 0 ? Math.ceil(edges / 3) : 0
+    //let pages = Math.ceil(edgesTest.length / 3) 
+    let newsLastPage = pages*3 - edges
+
+    let pagClass = "newsbox-pagination"
+    if (activePage == pages-1)
+      pagClass = "newsbox-pagination" + (newsLastPage == 1 ? " two" : (newsLastPage == 2 ? " one" : "")) 
+
+
+    let backImgClass = "pag-arrow" + (activePage == 0 ? "" : " active") 
+    let nextImgClass = "pag-arrow" + (activePage == pages-1 ? "" : " active") 
+    let backClass = "pag-group pag-box back" + (activePage == 0 ? "" : " active") 
+    let nextClass = "pag-group pag-box next" + (activePage == pages-1 ? "" : " active") 
+
+    let itemsClass = ["pag-items", "pag-items", "pag-items three", "pag-items four", "pag-items five"]
+    let itemClass = ["pag-item", "pag-item second", "pag-item third", "pag-item fourth", "pag-item fifth"]
+    let items = []
+    for (let i = 0; i < pages; i++) {
+      let iClass = itemClass[i] + (activePage == i ? " active" : "")
+      items.push(iClass)
+    }
+
+    return pages > 1 ?
+      <div className={pagClass}>
+        <button className={backClass} onClick={() => backPage()}>   
+          <img className={backImgClass} src={activePage == 0 ? arrowInactive : arrowActive} alt="Back" />                                              
+        </button>
+          <div className={itemsClass[pages-1]}> 
+            {items.map( (item, index) => (
+              <a className={item} onClick={() => changePage(index)} ></a>
+            ))}
+          </div>
+        <button className={nextClass}  onClick={() => nextPage()}>                
+          <img className={nextImgClass}  src={activePage == pages-1 ? arrowInactive : arrowActive} alt="Next" />                                              
+        </button>
+      </div>
+      :
+        <div></div>;
+  }
+
   return (
     <>
       <section id="team" className="section-team">
@@ -85,9 +163,9 @@ const SectionTeam = (props) => {
           <div className="team-row row">
             <div className="team-box">
               <Flippy
-                  flipOnHover={true} // default false
-                  flipOnClick={false} // default false
-                  flipDirection="horizontal" // horizontal or vertical
+                  flipOnHover={true} 
+                  flipOnClick={false}
+                  flipDirection="horizontal" 
                 >
                   <FrontSide animationDuration="0">
                   <>
@@ -171,8 +249,9 @@ const SectionTeam = (props) => {
           <div className="newsbox">
             <div className="newsbox-title heading-secondary">Latest Posts</div>
             <div className="newsgroup">    
-              <RenderBlog/>          
-            </div>
+              <RenderBlog />    
+              <RenderPagination />        
+            </div>                      
           </div>
         </div>
       </section>

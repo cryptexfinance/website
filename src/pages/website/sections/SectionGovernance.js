@@ -1,5 +1,8 @@
 import React from 'react'
 import governance from '../../../../static/website/governance/governance.png'
+import coinGecko from '../../../../static/website/governance/coin-gecko.svg'
+import uniLogo from '../../../../static/website/governance/uni-logo.svg'
+import dfpLogo from '../../../../static/website/governance/dfp-logo.svg'
 import ctx from '../../../../static/website/governance/ctx.svg'
 import docs from '../../../../static/website/governance/docs.svg'
 import forum from '../../../../static/website/governance/forum.svg'
@@ -21,8 +24,18 @@ const SectionGovernance = () => {
             Oracle and Nomics, the market leader in 
             transparent crypto data.
         </div>
-        <button className="governance-button button-pink">Get CTX</button>
-        <div className="governance-image">
+        <div className="governance-buttons">
+            <a>
+                <img src={coinGecko} className="governance-icon gecko" alt="Coin Gecko" />
+            </a>
+            <a>
+                <img src={uniLogo}  className="governance-icon uni" alt="Uni Logo" />
+            </a>
+            <a>
+                <img src={dfpLogo} className="governance-icon dfp" alt="DFP"  />        
+            </a>
+        </div>
+        <div className="governance-image">            
             <img src={governance} alt="Governance" className="governance-image" />
         </div>
         <div className="governance-details">
