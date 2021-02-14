@@ -9,7 +9,8 @@
   &-pagination {
     position: absolute;
     width: 13.75rem;
-    
+    z-index: 12;  
+
     &.one {
       margin-top: 56%;
     }

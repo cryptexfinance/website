@@ -848,24 +848,24 @@
   .section-features {
     height: 180vh;
     position: relative;
-    margin-bottom: 40vh;
+    margin-bottom: 45vh;
   }
 
   .section-governance {
     height: 120vh;
-    margin-bottom: 30vh;
+    margin-bottom: 40vh;
   }
 
   .section-team {
     z-index: 12;
     height: 140vh;
     position: relative;
-    margin-bottom: 100vh;
+    margin-bottom: 110vh;
   }
 
   .section-faq {
     z-index: 10;
-    height: 90vh;
+    height: 80vh;
     position: relative;
     margin-bottom: 50vh;
   }
@@ -890,9 +890,11 @@
   @media only screen and (min-device-height: 800px)  {
     .section-main {
       height: 110vh;
+      margin-bottom: 10vh;
     }      
     .section-about {
       height: 140vh;
+      margin-bottom: 10vh;
     }
     .section-features {
       height: 150vh;
@@ -924,10 +926,10 @@
       height: 120vh;
     }
     .section-governance {
-      margin-bottom: 10vh;
+      margin-bottom: 20vh;
     }
     .section-team {
-      margin-bottom: 60vh;
+      margin-bottom: 70vh;
     }
     .section-faq {
       margin-bottom: 35vh;

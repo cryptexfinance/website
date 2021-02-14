@@ -77,7 +77,7 @@ const SectionTeam = (props) => {
 
   const RenderBlog = () => {
     return typeof(tblog.edges) !== `undefined` ? tblog.edges.map (({node}, index) => (
-      <div className={Math.ceil((index+1) / 3)  == activePage+1 ? "newsitem " : "newsitem hide"} key={node.id}>
+      <div className={Math.ceil((index+1) / 3)  == activePage+1 ? "newsitem " +index : "newsitem hide"} key={node.id}>
         <img src={node.frontmatter.featuredimage.childImageSharp.fluid.src} className="newsitem-photo" alt="News" />
         <div className="newsitem-title terciary-header">{node.frontmatter.title}</div>
         
