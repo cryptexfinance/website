@@ -396,8 +396,8 @@
 
 	&-icon {
 		position: absolute;
-		width: 32px;
-		height: 32px;
+		width: 40px;
+		height: 40px;
 
 		&.gecko {
 			left: 2px;
@@ -405,13 +405,13 @@
 		}
 		&.uni {
 			left: 60px;
-			width: 33px;
-			height: 38px;
+			width: 40.25px;
+			height: 47.5px;
 		}
 		&.dfp {
 			left: 124px;
-			width: 26px;
-			height: 31px;
+			width: 32.5px;
+			height: 38.75px;
 			top: 7px;
 		}		
 	}

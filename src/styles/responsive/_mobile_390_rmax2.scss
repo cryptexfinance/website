@@ -840,7 +840,7 @@
   .section-main {
     position: relative;
     height: 110vh;
-    margin-bottom: 30vh;
+    margin-bottom: 35vh;
 
     .main-image {
       position: absolute;
@@ -854,7 +854,7 @@
   .section-about {
     height: 110vh;
     position: relative;
-    margin-bottom: 60vh;
+    margin-bottom: 65vh;
   }
 
   .section-features {
@@ -865,20 +865,20 @@
 
   .section-governance {
     height: 100vh;
-    margin-bottom: 90vh;
+    margin-bottom: 95vh;
   }
 
   .section-team {
     height: 50vh;//330vh;
     position: relative;
-    margin-bottom: 230vh;
+    margin-bottom: 240vh;
   }
 
   .section-faq {
     z-index: 10;
     height: 90vh;
     position: relative;  
-    margin-bottom: 30vh;  
+    margin-bottom: 35vh;  
   }
   .section-faq.expand1{
     margin-bottom: 35vh;
@@ -909,7 +909,7 @@
   @media only screen and (max-device-height: 640px)  {
     .section-faq {
       z-index: 10;
-      height: 110vh;
+      height: 100vh;
     }
     .section-governance {
       height: 120vh;
@@ -950,24 +950,24 @@
     }
     .section-main{
       height: 130vh;
-      margin-bottom: 45vh;
+      margin-bottom: 50vh;
     }
     .section-about {
       margin-left: 3%;
       height: 120vh;
-      margin-bottom: 80vh,
+      margin-bottom: 90vh,
     }
     .section-features {
-      margin-bottom: 170vh;
+      margin-bottom: 175vh;
     }
     .section-governance {
       height: 110vh;
-      margin-bottom: 100vh;
+      margin-bottom: 110vh;
     }
     .section-team {
       height: 90vh;
       margin-left: 3%;
-      margin-bottom: 260vh;
+      margin-bottom: 265vh;
     }
     .section-faq {
       z-index: 10;
@@ -1077,24 +1077,24 @@
     @media only screen and (max-device-height: 510px) {
       .section-main{
         height: 150vh;
-        margin-bottom: 45vh;
+        margin-bottom: 50vh;
       }
       .section-about {
         height: 130vh;
-        margin-bottom: 110vh;
+        margin-bottom: 120vh;
       }
       .section-features {
         height: 80vh;
-        margin-bottom: 230vh;
+        margin-bottom: 235vh;
       }
       .section-governance {
         height: 120vh;
         margin-top: 90vh;
-        margin-bottom: 120vh;
+        margin-bottom: 125vh;
       }
       .section-team {
         height: 100vh;
-        margin-bottom: 300vh;
+        margin-bottom: 305vh;
       }
       .newsbox {
         &-title {

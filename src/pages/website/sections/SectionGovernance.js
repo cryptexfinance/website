@@ -12,17 +12,13 @@ import voting from '../../../../static/website/governance/voting.svg'
 const SectionGovernance = () => {
 
   return (
-    <section id="governance" className="section-governance">
-
-         
+    <section id="governance" className="section-governance"> 
         <div className="governance-title header">What Governs TCAP?</div>
         <div className="governance-content">
-            Like a conventional index fund, TCAP.X gives 
-            investors real-time price exposure to the total 
-            cryptocurrency market cap. Our tokenized 
-            investment product is synched via the Cryptex 
-            Oracle and Nomics, the market leader in 
-            transparent crypto data.
+            Introducing CTX: Decentralized Governance <br /><br />
+            CTX is a governance token that powers and secures the Cryptex protocol. 
+            Holders of CTX can vote on protocol upgrades for TCAP as well as all 
+            future products within the Cryptex ecosystem.
         </div>
         <div className="governance-buttons">
             <a>
@@ -42,7 +38,6 @@ const SectionGovernance = () => {
             <div className="governance-details-item">
                 <a
                  rel="noopener noreferrer"
-                 href="./White_Paper.pdf" 
                  target="_blank"
                  className="governance-details-text"
                 >
@@ -56,7 +51,6 @@ const SectionGovernance = () => {
             </div>
             <div className="about-details-item">
                 <a
-                href="#"
                 rel="noreferrer"
                 target="_blank"
                 className="governance-details-text"
@@ -67,7 +61,6 @@ const SectionGovernance = () => {
             </div>
             <div className="governance-details-item">
                 <a
-                href="#"
                 rel="noreferrer"
                 target="_blank"
                 className="governance-details-text"
@@ -79,7 +72,6 @@ const SectionGovernance = () => {
             <div className="governance-details-item">
             <a
             rel="noopener noreferrer"
-            href="#"
             target="_blank"
             className="governance-details-text"
             >

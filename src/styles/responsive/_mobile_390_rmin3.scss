@@ -331,7 +331,7 @@
     }
 
     &-buttons {
-      top: calc(50% - 75.75rem/2 + 1.1125rem);
+      top: calc(50% - 72.75rem/2 + 1.1125rem);
       width: 315px;
       left: calc(50% - 315px / 2);
     }
@@ -872,7 +872,7 @@
   .section-team {
     margin-top: 140px;
     height: 160vh;
-    margin-bottom: 140vh;
+    margin-bottom: 143vh;
     position: relative;
   }
 
@@ -930,7 +930,7 @@
     }   
     .section-about {
       height: 130vh;
-      margin-bottom: 30vh;
+      margin-bottom: 40vh;
     }  
     .section-features {
       height: 140vh;
@@ -942,7 +942,7 @@
     .section-team {
       margin-top: 0px;
       height: 130vh;
-      margin-bottom: 110vh;
+      margin-bottom: 115vh;
     }   
     .newsbox {
       &-title {        
@@ -974,21 +974,21 @@
     }   
     .section-about {
       height: 120vh;
-      margin-bottom: 25vh;
+      margin-bottom: 33vh;
     }  
     .section-features {
       height: 130vh;  
-      margin-bottom: 53vh;
+      margin-bottom: 55vh;
     }  
     .section-governance {
       height: 130vh;
-      margin-bottom: 28vh;
+      margin-bottom: 30vh;
     }  
      
     .section-team {
       margin-top: 0px;
       height: 130vh;
-      margin-bottom: 100vh;
+      margin-bottom: 120vh;
     } 
     .newsbox {
       &-title {        
@@ -999,10 +999,11 @@
       }
     } 
     .section-faq {
-      height: 100vh
+      height: 60vh;
+      margin-bottom: 50vh;
     }
     .section-community {
-      height: 100vh;
+      height: 110vh;
     }
     @media only screen and (min-device-height: 840px){
       .section-faq {
