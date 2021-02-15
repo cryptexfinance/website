@@ -1,11 +1,4 @@
-@media only screen and (max-device-width: 390px) and (max-device-height: 890px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 3) {
-  body,
-  html {
-    overflow-x: hidden;
-  }
-  body {
-    width: 100vw;
-  }
+@media only screen and (max-device-width: 390px) and (max-device-height: 990px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 3) {
 
   .navbar,
   .navbar div {
@@ -55,7 +48,6 @@
     background: $color-grey-dark !important;
     background-color: $color-grey-dark !important;
     z-index: 10;
-    // border: 1px solid $color-grey-dark;
     border: 1px solid #494866;
     box-sizing: border-box;
     margin-left: 35px;
@@ -77,7 +69,6 @@
   .menu-logo {
     width: 30px;
     margin-left: -15px;
-    // padding-left: 20px;
 
     &-divider {
       position: absolute;
@@ -85,19 +76,18 @@
       height: 49px;
       left: 50px;
       top: 0px;
-      // left: 504px;
-      // top: 362px;
-
-      background-color: $color-grey-dark !important; //$color-grey-dark;
+      background-color: $color-grey-dark !important; 
       z-index: 0;
     }
   }
 
+  .menu-logo.tablet {
+    display: None;
+  }
+  
   .navbar-toggler,
   .navbar-toggler-icon {
-    // display: none !important;
     position: relative;
-    // left: -25px;
     left: -180px;
   }
 
@@ -109,7 +99,6 @@
   .navbar-toggler:focus {
     position: relative;
     padding: 10px 20px 10px 20px;
-    // left: -25;
   }
 
   .mobile_menu_bar:before {
@@ -120,12 +109,9 @@
     font-family: $font-primary;
     content: "MENU";
     position: relative;
-    // left: -175px;
     padding: 10px 20px 10px 20px;
-    // background-color: #3e4555;
     color: $color-dark-clean !important;
     text-decoration: none;
-    // cursor: pointer;
     &:focus {
       outline: none !important;
     }
@@ -143,15 +129,12 @@
       color: $color-dark-clean !important;
       text-decoration: none;
     }
-    // margin-left: 20px;
   }
 
   .main {
     &-title {
-      // position: absolute;
       width: 312px;
       height: 108px;
-      // left: calc(50% - 312px/2);
       top: calc(50% - 108px / 2 - 307px);
     }
 
@@ -229,9 +212,7 @@
     position: absolute;
     width: 85%;
     height: 54px;
-    // left: calc(50% - 300px/2 - 2.7px);
     left: 28px;
-    // top: 436px;
     top: calc(50% - 54px / 2 + 50.55px);
     font-size: 14px;
     line-height: 16px;
@@ -298,6 +279,61 @@
         // display: flex;
         // letter-spacing: 0.3px;
       }
+    }
+  }
+
+  .governance {
+    &-title {
+      position: absolute;
+      width: 312px;
+      height: 36px;
+      left: calc(50% - 312px / 2 - 1.5px);
+      top: calc(50% - 30px / 2 - 380px);
+      font-size: 24px;
+      line-height: 36px;
+      letter-spacing: 0.3px;
+    }
+
+    &-content {
+      width: 315px;
+      height: 247px;
+      left: calc(50% - 315px / 2);
+      top: calc(50% - 247px / 2 - 170.5px);
+      font-size: 14px;
+      line-height: 20px;
+      letter-spacing: 0.3px;
+    }
+
+    &-image {
+      position: absolute;
+      width: 380px;
+      height: 391.27px;
+      left: calc(50% - 380px / 2);
+      top: calc(50% - 311.27px / 2 + 228px);
+    }
+
+    &-details {
+      position: absolute;
+      width: 315px;
+      height: 353px;
+      left: calc(50% - 495.31px / 2 + 92px);
+      top: calc(50% - 308.6px / 2 + 128px);
+
+      &-icons {
+        margin-right: 24px;
+      }
+
+      &-text {
+        height: 72px;
+        font-size: 18px;
+        line-height: 24px;
+      }
+    }
+
+    &-buttons {
+      top: calc(50% - 77.75rem/2 + 1.1125rem);
+      width: 315px;
+      left: calc(50% - 315px / 2);
     }
   }
 
@@ -483,9 +519,7 @@
   .team-row {
     position: absolute;
     width: 100%;
-    // left: calc(50% - 10.6875rem/2 - 33.6562Z5rem);
     top: calc(50% - 166px / 2 - 203.7px);
-    // background-color: #212138;
   }
 
   .team-box {
@@ -494,7 +528,7 @@
     height: 231px;
     left: 10px;
 
-    &-photo {
+    &-photo-mobile {
       position: relative;
       text-align: center;
       width: 315px;
@@ -507,7 +541,6 @@
       font-size: 14px;
       line-height: 22px;
       letter-spacing: 0.3px;
-      // background-color: #212138;
     }
     &-position {
       width: 220px;
@@ -545,19 +578,35 @@
       font-size: 22px;
       line-height: 24px;
       left: calc(50% - 204px / 2 + 140.5px);
-      top: calc(50% - 300px / 2 + 1650px);
+      top: calc(50% - 300px / 2 + 1410px);
     }
 
     .newsgroup {
       position: absolute;
-      left: 10px; //calc(50% - 204px/2 + 7.8px);
-      top: calc(50% - 370px / 2 + 1756px);
-      // padding-left: 22.76px;
+      left: 10px; 
+      top: calc(50% - 370px / 2 + 1530px);
+    }
+
+    &-pagination {
+      position: absolute;
+      width: 60rem;
+      margin-top: 12%;  
+
+      &.one {
+        margin-top: 79%;
+      }
+      &.two {
+        margin-top: 45%;
+      }
     }
 
     .newsitem {
       display: inline-table;
       z-index: 20;
+      &.hide {
+        display: None;
+      }
+
       &-photo {
         width: 0;
         height: 0;
@@ -625,7 +674,6 @@
     &-row {
       position: absolute;
       width: 100%;
-      // left: calc(50% - 312px/2 - 7.5px);
       left: 40px;
       top: calc(50% - 200px / 2 - 16px);
     }
@@ -661,7 +709,6 @@
   .toggle {
     width: 120vw;
     height: auto;
-    // background: mediumaquamarine;
   }
 
   .toggle {
@@ -677,7 +724,6 @@
     font-size: 16px;
     line-height: 24px;
     letter-spacing: 0.3px;
-    // margin-top: 16px;
     margin-bottom: 12px;
   }
 
@@ -795,6 +841,8 @@
   .section-main {
     position: relative;
     height: 140vh;
+    margin-bottom: 25vh;
+
     .main-image {
       position: absolute;
       width: 470px;
@@ -805,79 +853,174 @@
   }
 
   .section-about {
-    height: 180vh;
+    height: 150vh;
+    margin-bottom: 43vh;
     position: relative;
   }
 
   .section-features {
-    height: 190vh;
+    height: 160vh;
     position: relative;
+    margin-bottom: 73vh;
+  }
+
+  .section-governance {
+    height: 160vh;
+    margin-bottom: 40vh;
   }
 
   .section-team {
-    margin-top: 100px;
-    height: 235vh;
+    margin-top: 140px;
+    height: 160vh;
+    margin-bottom: 143vh;
     position: relative;
   }
 
   .section-faq {
     z-index: 10;
-    height: 210vh;
+    height: 100vh;
+    margin-top: 70vh;
+    margin-bottom: 40vh;
     position: relative;
   }
   .section-faq.expand1{
-    margin-bottom: 160px;
+    margin-bottom: 65vh;
   }
   .section-faq.expand2{
-    margin-bottom: 400px;
+    margin-bottom: 95vh;
   }
   .section-faq.expand4{
-    margin-bottom: 670px;
+    margin-bottom: 140vh;
   }
   .section-faq.expand6{
-    margin-bottom: 900px;
+    margin-bottom: 165vh;
   }
 
   .section-community {
-    height: 100vh;
+    height: 150vh;
     position: relative;
   }
 
-  @media only screen and (min-device-height: 710px) and (max-device-height: 760px)  {
+
+  @media only screen and (min-device-width: 375px) {
+    .faq{
+      &-divider {
+        width: 330px;        
+      }
+    }
+  }
+  @media only screen and (max-device-height: 599px)  {
+    .section-main {
+      height: 150vh;      
+    }
+    .section-features {
+      height: 220vh;      
+    }
+    .section-faq {
+      margin-top: 80vh;
+    }
+    .section-community {
+      height: 90vh;
+    }
+  }
+  @media only screen and (min-device-height: 710px) and (max-device-height: 790px)  {
     .section-main {
       height: 120vh;
+      margin-bottom: 23vh;
     }   
     .section-about {
-      height: 160vh;
+      height: 130vh;
+      margin-bottom: 40vh;
     }  
     .section-features {
-      height: 160vh;
+      height: 140vh;
+      margin-bottom: 65vh;
     }  
+    .section-governance {
+      height: 130vh;      
+    }
     .section-team {
       margin-top: 0px;
+      height: 130vh;
+      margin-bottom: 115vh;
     }   
     .newsbox {
       &-title {        
-        top: calc(50% - 120px / 2 + 1650px);
+        top: calc(50% - 120px / 2 + 1300px);
       }
       .newsgroup {
-        top: calc(50% - 180px / 2 + 1756px);
+        top: calc(50% - 180px / 2 + 1390px);
       }
     } 
     .section-faq {
-      height: 150vh
+      height: 110vh
     }
     .section-community {
-      height: 120vh;
+      height: 130vh;
+    }
+    @media only screen and (min-device-height: 750px){
+      .section-faq {
+        height: 90vh
+      }
+      .section-community {
+        height: 130vh;
+      }
     }
   } 
-  @media only screen and (min-device-height: 760px) and (max-device-height: 820px)  {
+  @media only screen and (min-device-height: 791px) and (max-device-height: 860px)  {
     .section-main {
       height: 110vh;
+      margin-bottom: 20vh;
     }   
     .section-about {
-      height: 150vh;
-    }      
+      height: 120vh;
+      margin-bottom: 33vh;
+    }  
+    .section-features {
+      height: 130vh;  
+      margin-bottom: 55vh;
+    }  
+    .section-governance {
+      height: 130vh;
+      margin-bottom: 30vh;
+    }  
+     
+    .section-team {
+      margin-top: 0px;
+      height: 130vh;
+      margin-bottom: 120vh;
+    } 
+    .newsbox {
+      &-title {        
+        top: calc(50% - 200px / 2 + 1370px);
+      }
+      .newsgroup {
+        top: calc(50% - 250px / 2 + 1490px);
+      }
+    } 
+    .section-faq {
+      height: 60vh;
+      margin-bottom: 50vh;
+    }
+    .section-community {
+      height: 110vh;
+    }
+    @media only screen and (min-device-height: 840px){
+      .section-faq {
+        height: 80vh
+      }      
+    }
+  }
+  @media only screen and (min-device-height: 861px) {
+    .section-main {
+      height: 90vh;
+    }   
+    .section-about {
+      height: 110vh;
+    }     
+    .section-governance {
+      height: 110vh;
+    }  
     .section-features {
       height: 145vh;  
     } 
@@ -886,10 +1029,10 @@
     } 
     .newsbox {
       &-title {        
-        top: calc(50% - 200px / 2 + 1650px);
+        top: calc(50% - 200px / 2 + 1750px);
       }
       .newsgroup {
-        top: calc(50% - 250px / 2 + 1756px);
+        top: calc(50% - 250px / 2 + 1856px);
       }
     } 
     .section-faq {
@@ -899,4 +1042,5 @@
       height: 90vh;
     }
   }
+
 }

@@ -7,7 +7,7 @@ import bg from '../../static/bg.webp'
 import bgvideo from '../../static/bg.mp4'
 
 export default ({ data }) => {
-  // console.log(data.price);
+  
   return (
     <PageLayout>
       <SEO title="Cryptex" />

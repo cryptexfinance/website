@@ -7,11 +7,42 @@
 }
 
 html {
-  // font-size: 62.5%;
   font-size: 1.1vw;  
 }
 
 body {
   box-sizing: border-box;
   background-color: black;
+}
+
+
+@media only screen and (min-device-width: 1000px) and (max-device-width: 1199px) {
+  .pl-5, .px-5 {
+    padding-left: 0rem !important;
+  }
+}
+
+@media only screen and (min-device-width: 1000px) and (max-device-width: 1090px)  {
+  img.menu-logo.mobile, .menu-logo-divider {
+    display: none;
+  } 
+}
+
+
+@media only screen and (max-device-width: 1000px) {
+  .nav-default {
+    display: None;
+  }
+}
+
+@media only screen and (min-device-width: 1001px) and (max-device-width: 1090px) and (orientation : portrait) {
+  .nav-default {
+    display: None;
+  }
+}
+
+@media only screen and (min-device-width: 1091px) {
+  .nav-mobile {
+    display: None;
+  }
 }

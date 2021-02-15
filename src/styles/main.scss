@@ -1,17 +1,15 @@
 @import "../../node_modules/bootstrap/scss/bootstrap.scss";
-// Abstracts
 
+// Abstracts
 @import "abstracts/variables";
 @import "abstracts/mixing";
 
 // Base
-
 @import "base/base";
 @import "base/page";
 @import "base/typography";
 
 // Components
-
 @import "components/button";
 @import "components/closeButton";
 @import "components/faqbox";
@@ -45,8 +43,10 @@
 @import "responsive/mobile_390_rmax2";
 @import "responsive/mobile_391min";
 @import "responsive/mobile_390_rmin3";
-@import "responsive/mobile_414min_rmin2";
-@import "responsive/tablet_768_1024px";
-@import "responsive/tablet_834_1194px";
-@import "responsive/tablet_1024_1366px";
+@import "responsive/mobile_391min_rmin2";
+
+@import "responsive/tablet_768_1000px";
+@import "responsive/tablet_1001_1090px";
+
+
 @import "responsive/mobile_315px";

@@ -1,5 +1,4 @@
 import React from 'react'
-// import { Link } from 'gatsby'
 import mint from '../../../../static/website/features/mint.svg'
 import trade from '../../../../static/website/features/trade.svg'
 import pool from '../../../../static/website/features/pool.svg'

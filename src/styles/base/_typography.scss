@@ -310,6 +310,114 @@
 	}
 }
 
+.governance {
+	&-title {
+		position: absolute;
+		width: 32.375rem;
+		height: 3rem;
+		left: calc(50% - 18.75rem/2 - 30.625rem);
+		top: calc(50% - 3rem/2 - 7.9125rem);
+		letter-spacing: 0.3px;
+	}
+
+	&-content {
+		position: absolute;
+		width: 32.375rem;
+		height: 8.25rem;
+		left: calc(50% - 26.8125rem/2 - 26.59375rem);
+		top: calc(50% - 10.35rem/2 + 2.4125rem);
+		font-family: $font-tertiary;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 1rem;
+		line-height: 1.375rem;
+		text-align: left;
+		letter-spacing: 0.3px;
+		color: $color-grey;
+	}
+
+	&-image {
+		position: absolute;
+		width: 21.8125rem;
+		height: 25.0605rem;
+		left: calc(50% - 22.5875rem/3 - 0.7rem);
+		top: calc(50% - 23.809375rem/2 - .3125rem);
+		
+	}
+
+	&-details {
+		position: absolute;
+		width: 22.375rem;
+		height: 22.0625rem;
+		top: calc(50% - 3rem/2 - 8.5125rem);
+		left: calc(50% - 22.0625rem/2 + 30.825rem);
+		text-align: left !important;
+
+		&-item {
+			&:not(:first-child) { 
+				padding-top: 1.5rem;
+			}
+			margin-bottom: 1.1rem;
+			
+		}
+
+		&-icons {
+			margin-right: 1rem;
+			filter: drop-shadow(0 0 0.25rem #6450FB);
+		}
+		
+		&-text {
+			left: calc(50% - 9.625rem/2 + 26.9375rem);
+			top: calc(50% - 1.5rem/2 - 9.625rem);
+			font-family: $font-primary;
+			font-style: normal;
+			font-weight: normal;
+			font-size: 1.25rem;
+			line-height: 1.5rem;
+			display: flex;
+			align-items: center;
+			letter-spacing: 0.3px;
+			color: $color-grey;
+			text-shadow: 0rem 0.25rem 0.8125rem #A440F2;//$shadow-purple-neon;
+			&:hover {
+				color: $color-dark-clean;
+				text-decoration: none;
+			}
+		}
+	}
+
+	&-buttons {
+		position: relative;
+		width: 15.625rem;
+		height: 3.875rem;
+		left: calc(50% - 26.8125rem/2 - 26.59375rem);
+		top: calc(50% - 17.75rem/2 + 14.1125rem);
+	}
+
+	&-icon {
+		position: absolute;
+		width: 40px;
+		height: 40px;
+
+		&.gecko {
+			left: 2px;
+			top: 5px;
+		}
+		&.uni {
+			left: 60px;
+			width: 40.25px;
+			height: 47.5px;
+		}
+		&.dfp {
+			left: 124px;
+			width: 32.5px;
+			height: 38.75px;
+			top: 7px;
+		}		
+	}
+}
+
+
 .features {
 	display: block;
 	position: relative;
@@ -473,12 +581,11 @@
 	&-divider {
 		position: absolute;
 		width: 1px;
-		height: 33.5rem;
+		height: 35.5rem;
 		left: 50%;
 		top: calc(50% - 33.5rem/2 + 4.5rem);
 
 		/* dark-grey */
-
 		background: #494866;
 	}
 }

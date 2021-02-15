@@ -1,12 +1,5 @@
-@media only screen and (min-device-width: 414px) and (max-device-height: 896px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 2){
-  body,
-  html {
-    overflow-x: hidden;
-  }
-  body {
-    width: 100vw;
-  }
-
+@media only screen and (min-device-width: 391px) and (max-device-height: 1100px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 2){
+ 
   .navbar,
   .navbar div {
     height: 49px;
@@ -86,6 +79,10 @@
       background-color: $color-grey-dark !important; 
       z-index: 0;
     }
+  }
+
+  .menu-logo.tablet {
+    display: None;
   }
 
   .navbar-toggler,
@@ -248,7 +245,7 @@
       position: absolute;
       width: 380px;
       height: 391.27px;
-      left: calc(50% - 380px / 2);
+      left: calc(50% - 386px / 2);
       top: calc(50% - 391.27px / 2 + 208px);
     }
 
@@ -268,21 +265,63 @@
 
       &-icons {
         margin-right: 24px;
-        // background: transparent;
-        // text-shadow: 0rem 0rem 0.156565rem #6450FB, 0rem 0rem 0.13011875rem #3626B0;
-        // filter: drop-shadow(0 0 0.25rem #6450FB);
       }
 
       &-text {
-        // left: calc(50% - 9.625rem/2 + 26.9375rem);
-        // top: calc(50% - 1.5rem/2 - 9.625rem);
-        // width: 139px;
         height: 72px;
         font-size: 18px;
         line-height: 24px;
-        // display: flex;
-        // letter-spacing: 0.3px;
       }
+    }
+  }
+
+  .governance {
+    &-title {
+      width: 312px;
+      height: 36px;
+      left: calc(50% - 312px / 2 - 1.5px);
+      top: calc(50% - 36px / 2 - 405px);      
+    }
+
+    &-content {
+      width: 315px;
+      height: 247px;
+      left: calc(50% - 315px / 2);
+      top: calc(50% - 247px / 2 - 200.5px);
+      font-size: 14px;
+      line-height: 20px;
+    }
+
+    &-image {
+      position: absolute;
+      width: 380px;
+      height: 391.27px;
+      left: calc(50% - 380px / 2);
+      top: calc(50% - 391.27px / 2 + 255px);
+    }
+
+    &-details {
+      position: absolute;
+      width: 315px;
+      height: 353px;
+      left: calc(50% - 495.31px / 2 + 92px);
+      top: calc(50% - 360.6px / 2 + 128px);
+
+      &-icons {
+        margin-right: 24px;
+      }
+
+      &-text {
+        height: 72px;
+        font-size: 18px;
+        line-height: 24px;
+      }
+    }
+
+    &-buttons {
+      top: calc(50% - 72.75rem/2 + 1.1125rem);
+      width: 315px;
+      left: calc(50% - 315px / 2);
     }
   }
 
@@ -303,8 +342,7 @@
     &-row {
       position: absolute;
       width: 355px;
-      // height: 403px;
-      left: 35px;
+      left: 40px;
       top: calc(50% - 100px / 2 - 364px);
     }
 
@@ -477,7 +515,7 @@
     height: auto; //231px;
     left: 10px;
 
-    &-photo {
+    &-photo-mobile {
       position: relative;
       text-align: center;
       width: 365px;
@@ -520,6 +558,7 @@
 
   .newsbox {
     position: absolute;
+    margin-top: 0px;
 
     &-title {
       position: absolute;
@@ -528,18 +567,22 @@
       font-size: 22px;
       line-height: 24px;
       left: calc(50% - 204px / 2 + 140.5px);
-      top: calc(50% - 250px / 2 + 1960px);
+      top: calc(50% - 250px / 2 + 1390px);
     }
 
     .newsgroup {
       position: absolute;
       left: 10px; 
-      top: calc(50% - 280px / 2 + 2056px);
+      top: calc(50% - 280px / 2 + 1500px);
     }
 
     .newsitem {
       display: inline-table;
       z-index: 20;
+      &.hide {
+        display: None;
+      }
+
       &-photo {
         width: 0;
         height: 0;
@@ -582,8 +625,6 @@
         margin: 0px 20px 20px 0px;
         line-height: 30px;
         padding: 2px 0 2px 2px;
-        // margin-top: 12px;
-        // margin-bottom: 24px;
       }
       .taglink {
         font-size: 16px;
@@ -598,7 +639,6 @@
 
       &:not(:last-child) {
         padding-bottom: 3rem !important;
-        // padding-left: 2rem !important;
       }
     }
   }
@@ -642,7 +682,6 @@
   .toggle {
     width: 120vw;
     height: auto;
-    // background: mediumaquamarine;
   }
 
   .toggle {
@@ -658,7 +697,6 @@
     font-size: 16px;
     line-height: 24px;
     letter-spacing: 0.3px;
-    // margin-top: 16px;
     margin-bottom: 12px;
   }
 
@@ -773,12 +811,11 @@
   }
 
   .section-main {
-    margin-top: 10px; 
+    margin-top: 30px; 
     position: relative;
     height: 100vh;
-    // display: block;
-    // padding-bottom: 27.66%;
-    // background-color: khaki;
+    margin-bottom: 18vh;
+
     .main-image {
       position: absolute;
       width: 470px;
@@ -789,109 +826,314 @@
   }
 
   .section-about {
-    margin-top: 30px; 
+    margin-top: 70px; 
     height: 135vh;
-    position: relative;
+    position: relative; 
+    margin-bottom: 10vh;   
   }
-
   .section-features {
     margin-top: 0px; 
-    height: 140vh;
+    height: 170vh;
+    margin-bottom: 60vh;
     position: relative;
+  }
+  .section-governance {
+    height: 130vh;
+    margin-bottom: 40vh;
   }
 
   .section-team {
-    height: 215vh;
+    height: 95vh;
     position: relative;
+    margin-bottom: 145vh;
   }
 
   .section-faq {
     z-index: 10;
-    height: 140vh;
+    height: 90vh;
+    margin-bottom: 60vh;
     position: relative;
   }
   .section-faq.expand1{
-    margin-bottom: 160px;
+    margin-bottom: 80vh;
   }
   .section-faq.expand2{
-    margin-bottom: 400px;
+    margin-bottom: 100vh;
   }
   .section-faq.expand4{
-    margin-bottom: 670px;
+    margin-bottom: 125vh;
   }
   .section-faq.expand6{
-    margin-bottom: 900px;
+    margin-bottom: 147vh;
   }
   .section-community {
-    height: 95vh;
+    height: 55vh;
     position: relative;
-  }
-  @media only screen and (max-device-height: 720px)  {
-    .section-main {
-      margin-top: 90px;
-    } 
-    .section-about {
-      margin-top: 170px; 
-    }
-    .section-features {
-      margin-top: 200px; 
-    }
-    .section-team {
-      height: 330vh;
-    }
-    .section-faq{
-      height: 140vh;
-    }
-    .newsbox {
-      margin-top: 200px;
-      .newsgroup {
-        top: calc(50% - 280px / 2 + 2056px);
+  } 
+  @media only screen and (min-device-width: 420px) {
+    .features {
+      &-row {
+        left: 45px;
       }
     }
-    .section-community {
-      height: 140vh;
-    }
   }
-  @media only screen and (min-device-height: 721px) and (max-device-height: 800px)  {
-    .section-main {
-      margin-top: 90px;
-    } 
-    .section-about {
-      margin-top: 170px; 
-    }
-    .section-features {
-      margin-top: 200px; 
-    }
-    .section-team {
-      height: 290vh;
-    }
-    .newsbox {
-      .newsgroup {
-        top: calc(50% - 280px / 2 + 2056px);
+  @media only screen and (min-device-width: 440px) {
+    .features {
+      &-row {
+        left: 15%;
       }
     }
-    .section-community {
-      height: 140vh;
-    }
-  }
-  @media only screen and (min-device-height: 801px) and (max-device-height: 890px)  {
-    .section-features {
-      margin-top: 50px; 
-    }
-    .section-team {
-      height: 240vh;
-    }
-    .newsbox {
-      margin-top: 30px;
-      .newsgroup {
-        top: calc(50% - 210px / 2 + 2056px);
+    .faq {
+      &-row {
+        left: 12%;
       }
       &-title {
-        top: calc(50% - 250px / 2 + 1960px);
+        left: 8%;
+      }
+      &-subtitle {
+        left: 8%;
+      }
+      &-divider {
+        width: 395px;        
+      }
+    }
+    .newsbox {
+      .newsgroup {
+        left: 40px;
+      }
+
+      &-pagination {
+        position: absolute;
+        width: 50rem;       
+      }
+
+      &-title {
+        left: calc(50% - 204px / 2 + 170.5px);
+      }
+    }
+  }
+  @media only screen and (max-device-height: 820px)  {
+    .section-main {
+      margin-top: 90px;
+      margin-bottom: 35vh;
+    } 
+    .section-about {
+      margin-top: 170px; 
+      margin-bottom: 30vh;
+    }
+    .section-features {
+      margin-top: 200px; 
+      height: 150vh;
+      margin-bottom: 85vh;
+    }
+    .section-governance {
+      height: 160vh;  
+    }
+    .section-team {
+      height: 100vh;
+      margin-bottom: 170vh;
+    }
+    .newsbox {
+      margin-top: 60px;
+      &-title {
+        top: calc(50% - 250px / 2 + 1310px);
+      }
+      .newsgroup {
+        top: calc(50% - 280px / 2 + 1430px);
+      }
+    }
+    .section-faq {
+      margin-top: 110vh;
+    }
+    .section-faq.expand4{
+      margin-bottom: 140vh;
+    }
+    .section-faq.expand6{
+      margin-bottom: 165vh;
+    }
+    .section-community {
+      height: 80vh;
+    }
+    .governance {
+      &-buttons {
+        top: calc(50% - 65.75rem/2 + 1.1125rem); 
+      }
+    }
+    
+  }
+  @media only screen and (min-device-height: 860px) and (max-device-height: 879px)  {
+    .section-features{
+      height: 160vh;
+    } 
+    .section-team {
+      height: 85vh;
+      margin-bottom: 155vh;
+    }   
+    .section-community {
+      height: 45vh;
+    }  
+    .newsbox {
+      &-title {
+        top: calc(50% - 250px / 2 + 1320px);
+      }
+  
+      .newsgroup {
+        top: calc(50% - 280px / 2 + 1430px);
+      }
+    }
+  }
+  @media only screen and (min-device-height: 880px) and (max-device-height: 910px)  {
+    .section-about {
+      height: 125vh;
+    }
+    .section-features{
+      height: 150vh;
+    } 
+    .section-governance{
+      height: 120vh;
+    }
+    .section-team {
+      height: 80vh;
+    }
+    .newsbox {
+      .newsgroup {
+        top: calc(50% - 210px / 2 + 1440px);
+      }
+      &-title {
+        top: calc(50% - 250px / 2 + 1360px);
+      }
+    }
+    .section-faq {
+      height: 80vh;
+    }
+    .section-community {
+      height: 50vh;
+    }
+  }
+  @media only screen and (min-device-height: 911px)  {
+    .section-main {
+      height: 95vh;
+    }
+    .section-about {
+      height: 120vh;
+      margin-bottom: 10vh;
+    }
+    .section-features{
+      height: 150vh;
+    }
+    .section-governance {
+      height: 110vh;  
+    }    
+    .section-team {
+      height: 80vh;
+      margin-bottom: 120vh;
+    }
+    .section-faq{
+      height: 80vh;
+    }
+    .newsbox {
+      margin-top: 90px;
+      .newsgroup {
+        top: calc(50% - 210px / 2 + 1330px);
+      }
+      &-title {
+        top: calc(50% - 250px / 2 + 1240px);
       }
     }
     .section-community {
-      height: 105vh;
+      height: 40vh;
+    }
+  }
+  @media only screen and (min-device-height: 950px)  {
+    .governance {
+      &-buttons {
+        top: calc(50% - 60.75rem/2 + 6.1125rem);
+      }
+    }
+  }
+  @media only screen and (min-device-width: 500px) and (max-device-width: 749px){
+    .menu-logo {
+      margin-left: -30px;
+    }
+    .navbar-toggler {
+      margin-right: 15%;
+    }
+    .button-pink{
+      width: 65%;
+      left: 18%;
+    }
+    .features {
+      &-row {
+        left: 20%;
+      }
+      &-title {
+        left: 20%;         
+      }
+    }
+    .team-row {
+      left: calc(50% - 1.6rem/2 - 28.65625rem);
+    }
+    .newsbox {
+      .newsgroup {
+        left: 52px;
+      }
+      &-title {
+        left: calc(50% - 204px / 2 + 200.5px);
+      }
+    }
+    .faq {
+      &-divider {
+        width: 480px;        
+      }
+    }
+    .community {
+      &-title {
+        width: 400px;
+        left: calc(50% - 312px/2 - 80.5px);
+      }
+      &-subtitle {
+        left: calc(50% - 305px/2 - 80.5px);
+      }
+      &-icons-row {
+        width: 700px;
+        top: calc(50% - 104px/2 - 260px);
+        left: calc(50% - 305px/2 - 80.5px);
+      }
+      &-item {
+        width: 145px;
+      }
+      &-image {
+        position: absolute;
+        width: 697.62px;
+        height: 578px;
+        left: calc(50% - 697.62px/2 - 24.5px);
+        top: calc(50% - 578px/2 + 304px);
+      }
+  
+      &-subscribe {
+        &-title {
+          position: absolute;
+          width: 309px;
+          height: 24px;
+          left: calc(50% - 312px/2 - 80.5px);
+          top: calc(50% - 24px/2 - 85px);
+          font-size: 22px;
+          line-height: 24px;
+          letter-spacing: 0.3px;
+        }
+    
+        &-input {
+          width: 426px;
+          left: calc(50% - 316px/2 - 1px);
+          top: calc(50% - 24px/2 + 45px);
+        }
+    
+        &-button {
+          left: calc(50% - 305px/2 - 80.5px);
+        }
+    
+      }
+    
     }
   }
 }

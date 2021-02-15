@@ -1,12 +1,5 @@
 @media only screen and (max-device-width: 390px) and (max-device-height: 890px) and (orientation: portrait) and (-webkit-max-device-pixel-ratio: 2) {
-  body,
-  html {
-    overflow-x: hidden;
-  }
-  body {
-    width: 100vw;
-  }
-
+  
   .navbar,
   .navbar div {
     height: 49px;
@@ -55,7 +48,6 @@
     background: $color-grey-dark !important;
     background-color: $color-grey-dark !important;
     z-index: 10;
-    // border: 1px solid $color-grey-dark;
     border: 1px solid #494866;
     box-sizing: border-box;
     margin-left: 35px;
@@ -77,7 +69,6 @@
   .menu-logo {
     width: 30px;
     margin-left: -15px;
-    // padding-left: 20px;
 
     &-divider {
       position: absolute;
@@ -85,19 +76,19 @@
       height: 49px;
       left: 50px;
       top: 0px;
-      // left: 504px;
-      // top: 362px;
 
-      background-color: $color-grey-dark !important; //$color-grey-dark;
+      background-color: $color-grey-dark !important; 
       z-index: 0;
     }
   }
 
+  .menu-logo.tablet {
+    display: None;
+  }
+
   .navbar-toggler,
   .navbar-toggler-icon {
-    // display: none !important;
     position: relative;
-    // left: -25px;
     left: -180px;
   }
 
@@ -109,7 +100,6 @@
   .navbar-toggler:focus {
     position: relative;
     padding: 10px 20px 10px 20px;
-    // left: -25;
   }
 
   .mobile_menu_bar:before {
@@ -120,12 +110,9 @@
     font-family: $font-primary;
     content: "MENU";
     position: relative;
-    // left: -175px;
     padding: 10px 20px 10px 20px;
-    // background-color: #3e4555;
     color: $color-dark-clean !important;
     text-decoration: none;
-    // cursor: pointer;
     &:focus {
       outline: none !important;
     }
@@ -143,15 +130,12 @@
       color: $color-dark-clean !important;
       text-decoration: none;
     }
-    // margin-left: 20px;
   }
 
   .main {
     &-title {
-      // position: absolute;
       width: 312px;
       height: 108px;
-      // left: calc(50% - 312px/2);
       top: calc(50% - 108px / 2 - 220px);
     }
 
@@ -229,9 +213,7 @@
     position: absolute;
     width: 85%;
     height: 54px;
-    // left: calc(50% - 300px/2 - 2.7px);
     left: 28px;
-    // top: 436px;
     top: calc(50% - 54px / 2 + 70.55px);
     font-size: 14px;
     line-height: 16px;
@@ -298,6 +280,61 @@
         // display: flex;
         // letter-spacing: 0.3px;
       }
+    }
+  }
+
+  .governance {
+    &-title {
+      position: absolute;
+      width: 312px;
+      height: 36px;
+      left: calc(50% - 290px / 2 - 1.5px);
+      top: calc(50% - 20px / 2 - 225px);
+      font-size: 24px;
+      line-height: 36px;
+      letter-spacing: 0.3px;
+    }
+
+    &-content {
+      width: 300px;
+      height: 247px;
+      left: calc(50% - 290px / 2);
+      top: calc(50% - 170px / 2 - 45.5px);
+      font-size: 14px;
+      line-height: 20px;
+      letter-spacing: 0.3px;
+    }
+
+    &-image {
+      position: absolute;
+      width: 380px;
+      height: 391.27px;
+      left: calc(50% - 380px / 2);
+      top: calc(50% - 290.27px / 2 + 280px);
+    }
+
+    &-details {
+      position: absolute;
+      width: 315px;
+      height: 353px;
+      left: calc(50% - 475.31px / 2 + 92px);
+      top: calc(50% - 290.6px / 2 + 270px);
+
+      &-icons {
+        margin-right: 24px;
+      }
+
+      &-text {
+        height: 72px;
+        font-size: 18px;
+        line-height: 24px;
+      }
+    }
+
+    &-buttons {
+      top: calc(50% - 18.75rem/2 + 10.1125rem);
+      width: 290px;
+      left: calc(50% - 290px / 2);
     }
   }
 
@@ -483,9 +520,7 @@
   .team-row {
     position: absolute;
     width: 100%;
-    // left: calc(50% - 10.6875rem/2 - 33.6562Z5rem);
     top: calc(50% - 166px / 2 + 63.7px);
-    // background-color: #212138;
   }
 
   .team-box {
@@ -494,7 +529,7 @@
     height: 231px;
     left: 10px;
 
-    &-photo {
+    &-photo-mobile {
       position: relative;
       text-align: center;
       width: 315px;
@@ -507,7 +542,6 @@
       font-size: 14px;
       line-height: 22px;
       letter-spacing: 0.3px;
-      // background-color: #212138;
     }
     &-position {
       width: 220px;
@@ -526,7 +560,6 @@
       line-height: 16px;
       letter-spacing: -0.2px;
       margin-top: 20px;
-      // background-color: #212138;
     }
   }
 
@@ -536,7 +569,7 @@
   }
 
   .newsbox {
-    margin-top: 160px;
+    margin-top: 10px;
     position: absolute;
 
     &-title {
@@ -546,19 +579,35 @@
       font-size: 22px;
       line-height: 24px;
       left: calc(50% - 204px / 2 + 140.5px);
-      top: calc(50% - 166px / 2 + 2000px);
+      top: calc(50% - 166px / 2 + 1250px);
     }
 
     .newsgroup {
       position: absolute;
-      left: 10px; //calc(50% - 204px/2 + 7.8px);
-      top: calc(50% - 166px / 2 + 2056px);
-      // padding-left: 22.76px;
+      left: 10px; 
+      top: calc(50% - 166px / 2 + 1340px);
+    }
+
+    &-pagination {
+      position: absolute;
+      width: 60rem;
+      margin-top: 12%;  
+
+      &.one {
+        margin-top: 80%;
+      }
+      &.two {
+        margin-top: 46%;
+      }
     }
 
     .newsitem {
       display: inline-table;
       z-index: 20;
+      &.hide {
+        display: None;
+      }
+
       &-photo {
         width: 0;
         height: 0;
@@ -601,9 +650,8 @@
         margin: 0px 20px 20px 0px;
         line-height: 30px;
         padding: 2px 0 2px 2px;
-        // margin-top: 12px;
-        // margin-bottom: 24px;
-      }
+      }      
+
       .taglink {
         font-size: 16px;
         padding: 2px;
@@ -617,7 +665,6 @@
 
       &:not(:last-child) {
         padding-bottom: 3rem !important;
-        // padding-left: 2rem !important;
       }
     }
   }
@@ -662,7 +709,6 @@
   .toggle {
     width: 130vw;
     height: auto;
-    // background: mediumaquamarine;
   }
 
   .toggle {
@@ -794,6 +840,8 @@
   .section-main {
     position: relative;
     height: 110vh;
+    margin-bottom: 35vh;
+
     .main-image {
       position: absolute;
       width: 470px;
@@ -804,44 +852,52 @@
   }
 
   .section-about {
-    height: 155vh;
+    height: 110vh;
     position: relative;
+    margin-bottom: 65vh;
   }
 
   .section-features {
-    height: 155vh;
+    height: 100vh;//155vh;
     position: relative;
+    margin-bottom: 150vh;
+  }
+
+  .section-governance {
+    height: 100vh;
+    margin-bottom: 95vh;
   }
 
   .section-team {
-    height: 315vh;
+    height: 50vh;//330vh;
     position: relative;
+    margin-bottom: 240vh;
   }
 
   .section-faq {
     z-index: 10;
-    height: 210vh;
-    position: relative;    
+    height: 90vh;
+    position: relative;  
+    margin-bottom: 35vh;  
   }
   .section-faq.expand1{
-    margin-bottom: 150px;
+    margin-bottom: 35vh;
   }
   .section-faq.expand2{
-    margin-bottom: 400px;
+    margin-bottom: 75vh;
   }
   .section-faq.expand4{
-    margin-bottom: 670px;
+    margin-bottom: 120vh;
   }
   .section-faq.expand6{
-    margin-bottom: 900px;
+    margin-bottom: 145vh;
   }
 
   .section-community {
-    height: 90vh;
+    height: 180vh;
     position: relative;
-    // background-color: darkorange;
   }
-
+  
   @media only screen and (min-device-width: 370px)  {
     .faq {
       &-divider {
@@ -853,20 +909,23 @@
   @media only screen and (max-device-height: 640px)  {
     .section-faq {
       z-index: 10;
-      height: 230vh;
+      height: 100vh;
+    }
+    .section-governance {
+      height: 120vh;
     }
     .section-community {
-      height: 90vh;
+      height: 175vh;
     }
     .toggle {
       width: 130vw;      
     }
     .newsbox {
       &-title {
-        top: calc(50% - 280px / 2 + 2000px);
+        top: calc(50% - 280px / 2 + 1310px);
       }
       .newsgroup {
-        top: calc(50% - 240px / 2 + 2056px);
+        top: calc(50% - 240px / 2 + 1380px);
       }      
     }
   }
@@ -891,38 +950,45 @@
     }
     .section-main{
       height: 130vh;
+      margin-bottom: 50vh;
     }
     .section-about {
       margin-left: 3%;
-      height: 170vh;
+      height: 120vh;
+      margin-bottom: 90vh,
     }
     .section-features {
-      height: 200vh;
-      margin-left: 2%;
+      margin-bottom: 175vh;
+    }
+    .section-governance {
+      height: 110vh;
+      margin-bottom: 110vh;
     }
     .section-team {
-      height: 330vh;
-      margin-left: 3%
+      height: 90vh;
+      margin-left: 3%;
+      margin-bottom: 265vh;
     }
     .section-faq {
       z-index: 10;
-      height: 260vh;
-      margin-left: 3%
+      height: 110vh;
+      margin-left: 3%;
+      margin-bottom: 100vh; 
     }
     .section-faq.expand1{
-      margin-bottom: 300px;
+      margin-bottom: 125vh;
     }
     .section-faq.expand2{
-      margin-bottom: 500px;
+      margin-bottom: 170vh;
     }
     .section-faq.expand4{
-      margin-bottom: 800px;
+      margin-bottom: 230vh;
     }
     .section-faq.expand6{
-      margin-bottom: 1100px;
+      margin-bottom: 260vh;
     }
     .section-community {
-      height: 120vh;
+      height: 80vh;
       margin-left: 3%;
     }
     .about {
@@ -963,15 +1029,15 @@
       }
     }
     .newsbox {
-      margin-top: 50px;
+      margin-top: 170px;
   
       &-title {
         left: calc(50% - 205px / 2 + 125.5px);
-        top: calc(50% - 280px / 2 + 2000px);
+        top: calc(50% - 280px / 2 + 1250px);
       }
       .newsgroup {
         left: 0px; 
-        top: calc(50% - 270px / 2 + 2056px);
+        top: calc(50% - 270px / 2 + 1340px);
       }
       .newsitem {
         &-title {
@@ -1011,39 +1077,66 @@
     @media only screen and (max-device-height: 510px) {
       .section-main{
         height: 150vh;
+        margin-bottom: 50vh;
       }
       .section-about {
-        height: 195vh;
+        height: 130vh;
+        margin-bottom: 120vh;
+      }
+      .section-features {
+        height: 80vh;
+        margin-bottom: 235vh;
+      }
+      .section-governance {
+        height: 120vh;
+        margin-top: 90vh;
+        margin-bottom: 125vh;
       }
       .section-team {
-        height: 410vh;
+        height: 100vh;
+        margin-bottom: 305vh;
       }
       .newsbox {
         &-title {
-          top: calc(50% - 180px / 2 + 2000px);
+          top: calc(50% - 180px / 2 + 1170px);
         }
         .newsgroup {
-          top: calc(50% - 160px / 2 + 2056px);
+          top: calc(50% - 160px / 2 + 1250px);
         }
       }
       .section-faq {
-        height: 260vh;
+        margin-top: 110vh;
+      }
+      .section-faq.expand6{
+        margin-bottom: 280vh;
       }
       .section-community {
-        height: 150vh;
+        height: 160vh;
       }
     }
-    @media only screen and (max-device-height: 540px) and (min-device-height: 511px) {
+    @media only screen and (min-device-height: 511px) and (max-device-height: 540px) {
+      .section-features {
+        margin-bottom: 200vh;
+      }
+      .section-governance {
+        margin-top: 60vh;
+      }
+      .section-team {
+        height: 100vh;
+      }
       .newsbox {
         &-title {
-          top: calc(50% - 380px / 2 + 2000px);
+          top: calc(50% - 380px / 2 + 1300px);
         }
         .newsgroup {
-          top: calc(50% - 370px / 2 + 2056px);
+          top: calc(50% - 370px / 2 + 1380px);
         }        
       }
       .section-faq {
-        height: 310vh;
+        margin-top: 110vh;
+      }
+      .section-community {
+        height: 100vh;
       }
     }
   }

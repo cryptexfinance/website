@@ -1,8 +1,4 @@
 import React from "react"
-// import { Link } from 'gatsby';
-// import { Container } from 'react-bootstrap'
-// import auditPDF from '../../../../static/Cryptex_-_Final_Report.pdf';
-// import whitepaperPDF from '../../../../static/White_Paper.pdf';
 import image from "../../../../static/website/about/about.webp"
 import audit from "../../../../static/website/about/audit.svg"
 import code from "../../../../static/website/about/code.svg"
@@ -39,7 +35,6 @@ const SectionAbout = () => {
           </a>
           {/* <Link to="/White_Paper.pdf" rel="noreferrer" target="_blank" className="about-details-text"><img src={whitepaper} className="about-details-icons" alt="Whitepaper" />Whitepaper</Link> */}
         </div>
-        <div className="about-details-divisor"></div>
         <div className="about-details-item">
           <a
             href="https://docs.cryptex.finance"
@@ -51,7 +46,6 @@ const SectionAbout = () => {
             Code
           </a>
         </div>
-        <div className="about-details-divisor"></div>
         <div className="about-details-item">
           <a
             href="https://medium.com/cryptexfinance/cryptex-selects-chainlink-to-power-its-flagship-token-tcap-71461e73579f"
@@ -63,7 +57,6 @@ const SectionAbout = () => {
             Oracles
           </a>
         </div>
-        <div className="about-details-divisor"></div>
         <div className="about-details-item">
           <a
             rel="noopener noreferrer"

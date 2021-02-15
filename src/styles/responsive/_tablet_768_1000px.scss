@@ -1,12 +1,8 @@
 @media only screen 
-and (min-device-width : 768px) 
-and (max-device-width : 1024px) 
+and (min-device-width : 750px) 
+and (max-device-width : 1000px) 
 and (orientation : portrait) {
-  body, html { overflow-x:hidden; }
-  body {
-    width: 100vw;
-  }
-
+  
   .navbar,
   .navbar div {
     height: 49px;
@@ -54,7 +50,6 @@ and (orientation : portrait) {
       background: $color-grey-dark !important;
       background-color: $color-grey-dark !important;
       z-index: 10;
-      // border: 1px solid $color-grey-dark;
       border: 1px solid #494866;
       box-sizing: border-box;
       margin-left: 35px;
@@ -73,30 +68,32 @@ and (orientation : portrait) {
     padding-left: 80px;
   }
 
+  .menu-logo.tablet {
+    display: block;
+  }
+
   .menu-logo {
     width: 120px;
     margin-left: 5px;
-    // padding-left: 20px;
-    
+
     &-divider {
       position: absolute;
       width: 1px;
       height: 49px;
       left: 240px;
       top: 0px;
-      // left: 504px;
-      // top: 362px;
-  
-      background-color: $color-grey-dark !important;//$color-grey-dark;
+      background-color: $color-grey-dark !important;
       z-index: 0;
     }
   }
 
+  .menu-logo.mobile {
+    display: None;
+  }
+
   .navbar-toggler,
   .navbar-toggler-icon {
-    // display: none !important;
     position: relative;
-    // left: -25px;
     left: -330px;
   }
 
@@ -107,7 +104,6 @@ and (orientation : portrait) {
   .navbar-toggler:hover, .navbar-toggler:focus {
     position: relative;
     padding: 10px 20px 10px 20px;
-    // left: -25;
   }
 
   .mobile_menu_bar:before {
@@ -118,12 +114,9 @@ and (orientation : portrait) {
     font-family: $font-primary;
     content: "MENU";
     position: relative;
-    // left: -175px;
     padding: 10px 20px 10px 20px;
-    // background-color: #3e4555;
     color: $color-dark-clean!important;
     text-decoration: none;
-    // cursor: pointer;
     &:focus {
 			outline:none !important;
 		}
@@ -145,11 +138,10 @@ and (orientation : portrait) {
 
   .main {
     &-title{
-      // position: absolute;
       width: 682px;
       height: 108px;
-      // left: calc(50% - 312px/2);
       top: calc(50% - 108px/2 - 357px);
+      left: 15%;
     }
 
     &-number-pink {
@@ -179,9 +171,6 @@ and (orientation : portrait) {
       position: absolute;
       width: 1px;
       height: 65px;
-      // left: 504px;
-      // top: 362px;
-
       left: calc(50% - 1px/2 + 55.2px);
       top: calc(50% - 82px/2 - 220.8px);
 
@@ -262,20 +251,12 @@ and (orientation : portrait) {
 
       &-icons {
         margin-right: 24px;
-        // background: transparent;
-        // text-shadow: 0rem 0rem 0.156565rem #6450FB, 0rem 0rem 0.13011875rem #3626B0;
-        // filter: drop-shadow(0 0 0.25rem #6450FB);
       }
 
       &-text {
-        // left: calc(50% - 9.625rem/2 + 26.9375rem);
-			  // top: calc(50% - 1.5rem/2 - 9.625rem);
-        // width: 139px;
         height: 72px;
         font-size: 18px;
         line-height: 24px;
-        // display: flex;
-        // letter-spacing: 0.3px;
       }
     }
   }
@@ -420,6 +401,61 @@ and (orientation : portrait) {
     }
   }
 
+  .governance {
+    &-title {
+      position: absolute;
+      width: 312px;
+      height: 36px;
+      left: calc(50% - 312px/2 - 170.5px);
+      top: calc(50% - 36px/2 - 410px);
+      font-size: 24px;
+      line-height: 36px;
+      letter-spacing: 0.3px;
+    }
+
+    &-content {
+      width: 315px;
+      height: 247px;
+      left: calc(50% - 315px/2 - 170px);
+      top: calc(50% - 247px/2 - 205.5px);
+      font-size: 14px;
+      line-height: 20px;
+      letter-spacing: 0.3px;
+    }
+
+    &-image {
+      position: absolute;
+      width: 660px;
+      height: auto;//508.6px;
+      left: calc(50% - 660px/2);
+      top: calc(50% - 508.6px/2 + 258px);
+    }
+
+    &-details {
+      position: absolute;
+      width: 315px;
+      height: 353px;
+      left: calc(50% - 495.31px/2 + 320px);
+      top: calc(50% - 508.6px/2 - 218px);
+
+      &-icons {
+        margin-right: 24px;
+      }
+
+      &-text {
+        height: 72px;
+        font-size: 18px;
+        line-height: 24px;
+      }
+    }
+
+    &-buttons {
+      top: calc(50% - 63.75rem/2 + 10.1125rem);
+      width: 290px;
+      left: calc(50% - 650px / 2);
+    }
+  }
+
   .team {
     position: relative;
     &-title {
@@ -432,7 +468,7 @@ and (orientation : portrait) {
       line-height: 36px;
       letter-spacing: 0.3px;
     }
-  
+    
     &-subtitle {
       position: absolute;
       width: 505px;
@@ -443,7 +479,11 @@ and (orientation : portrait) {
       left: calc(50% - 305px/2 - 170px);
       top: calc(50% - 44px/2 - 500px);
     }
-  
+    
+    &-row {
+      left: calc(50% - 1.6rem/2 - 38.65625rem);
+    }
+
     &-divider {
       background: transparent;
     }
@@ -459,9 +499,7 @@ and (orientation : portrait) {
     position: absolute;
     width: 300px;
     height: 54px;
-    // left: calc(50% - 300px/2 + 47px);
     left: 45px;
-    // top: 436px;
     top: calc(50% - 22px/2 - 120.55px);
     font-size: 14px;
     line-height: 16px;
@@ -478,9 +516,7 @@ and (orientation : portrait) {
   .team-row {
     position: absolute  ;
     width: 100%;
-    // left: calc(50% - 10.6875rem/2 - 33.6562Z5rem);
     top: calc(50% - 166px/2 - 343.7px);
-    // background-color: #212138;
   }
 
   .team-box {
@@ -489,7 +525,7 @@ and (orientation : portrait) {
     height: 231px;
     left: 10px;
 
-    &-photo {
+    &-photo-mobile {
       position: relative;
       text-align:center;
       width: 315px;
@@ -503,7 +539,6 @@ and (orientation : portrait) {
       line-height: 22px;
       letter-spacing: 0.3px;
       margin-left: 5px;
-      // background-color: #212138;
     }
     &-position {
       width: 220px;
@@ -534,7 +569,7 @@ and (orientation : portrait) {
 
   .newsbox {
     position: absolute;
-  
+    
     &-title {
       position: absolute;
       width: 304px;
@@ -545,15 +580,31 @@ and (orientation : portrait) {
       top: calc(50% - 166px/2 + 925px);
     }
 
+    &-pagination {
+      position: absolute;
+      width: 35rem;
+      margin-top: 5%;  
+
+      &.one {
+        margin-top: 60%;
+      }
+      &.two {
+        margin-top: 32.5%;
+      }
+    }
+
     .newsgroup {
       position: absolute;
       left: calc(50% - 50px/2 + 150px);
       top: calc(50% - 166px/2 + 1006px);
-      // padding-left: 22.76px;
     }
 
     .newsitem {
       display: inline-table;
+      &.hide {
+        display: None;
+      }
+
       &-photo {
         position: relative;
         width: 120px;
@@ -626,7 +677,6 @@ and (orientation : portrait) {
     &-row {
       position: absolute;
       width: 100%;
-      // left: calc(50% - 312px/2 - 7.5px);
       left: 80px;
       top: calc(50% - 36px/2 - 156px);
     }
@@ -792,7 +842,7 @@ and (orientation : portrait) {
   .section-main {
     position: relative;
     height: 100vh;
-
+    
     .main-image {
       position: absolute;
       width: 700px;
@@ -804,21 +854,30 @@ and (orientation : portrait) {
 
   .section-about {
     height: 125vh;
+    margin-bottom: 5vh;
     position: relative;
   }
 
   .section-features {
     height: 100vh;
+    margin-bottom: 15vh;
     position: relative;
   }
-  
+
+  .section-governance {
+    height: 100vh;
+    margin-bottom: 20vh;
+  }
+
   .section-team {
     height: 145vh;
+    margin-bottom: 30vh;
     position: relative;
   }
   
   .section-faq {
     height: 80vh;
+    margin-bottom: 5vh;
     position: relative;
   }
   .section-faq.expand1{
@@ -834,7 +893,6 @@ and (orientation : portrait) {
     margin-bottom: 700px;
   }
 
-  
   .section-community {
     height: 110vh;
     position: relative;
@@ -845,13 +903,16 @@ and (orientation : portrait) {
       height: 80vh;
     }
     .section-about {
-      height: 100vh;
+      height: 120vh;
     }
     .section-features {
-      height: 85vh;
+      height: 70vh;
+    }
+    .section-governance {
+      height: 90vh;
     }
     .section-team {
-      height: 110vh;
+      height: 100vh;
     }
     .section-faq {
       height: 70vh;
@@ -883,6 +944,42 @@ and (orientation : portrait) {
       }
       &-subtitle {
         left: calc(50% - 345px/2 - 165px);        
+      }
+    }
+    @media only screen and (max-device-height : 1150px) { 
+      .section-main {
+        margin-top: 10vh;
+        margin-bottom: 20vh;
+      }
+      .section-about {
+        margin-bottom: 20vh;
+      }
+      .section-features {
+        margin-bottom: 30vh;
+      }
+      .section-team {
+        height: 130vh;
+      }
+      .section-faq {
+        height: 80vh;
+      }
+      .section-community {
+        height: 100vh;
+      }
+      .button-pink {        
+        left: 85px;       
+      }
+      .governance {
+        &-buttons {
+          top: calc(50% - 59.75rem/2 + 10.1125rem);
+        }
+      }
+    }
+  }
+  @media only screen and (min-device-width : 820px)  {
+    .faq {
+      &-divider {
+        width: 675px;
       }
     }
   }
