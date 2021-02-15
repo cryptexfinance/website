@@ -425,7 +425,7 @@ and (orientation : portrait) {
       width: 312px;
       height: 36px;
       left: calc(50% - 312px/2 - 170.5px);
-      top: calc(50% - 36px/2 - 425px);
+      top: calc(50% - 36px/2 - 410px);
       font-size: 24px;
       line-height: 36px;
       letter-spacing: 0.3px;
@@ -435,7 +435,7 @@ and (orientation : portrait) {
       width: 315px;
       height: 247px;
       left: calc(50% - 315px/2 - 170px);
-      top: calc(50% - 247px/2 - 245.5px);
+      top: calc(50% - 247px/2 - 200.5px);
       font-size: 14px;
       line-height: 20px;
       letter-spacing: 0.3px;
@@ -467,7 +467,7 @@ and (orientation : portrait) {
       }
     }
     &-buttons {
-      top: calc(50% - 46.75rem/2 + 10.1125rem);
+      top: calc(50% - 48.75rem/2 + 10.1125rem);
       width: 290px;
       left: calc(50% - 650px / 2);
     }

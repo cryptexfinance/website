@@ -280,7 +280,7 @@
       width: 312px;
       height: 36px;
       left: calc(50% - 312px / 2 - 1.5px);
-      top: calc(50% - 36px / 2 - 405px);
+      top: calc(50% - 25px / 2 - 405px);
       font-size: 24px;
       line-height: 36px;
       letter-spacing: 0.3px;
@@ -290,7 +290,7 @@
       width: 315px;
       height: 247px;
       left: calc(50% - 315px / 2);
-      top: calc(50% - 247px / 2 - 225.5px);
+      top: calc(50% - 247px / 2 - 190px);
       font-size: 14px;
       line-height: 20px;
       letter-spacing: 0.3px;
@@ -309,7 +309,7 @@
       width: 315px;
       height: 353px;
       left: calc(50% - 495.31px / 2 + 92px);
-      top: calc(50% - 308.6px / 2 + 128px);
+      top: calc(50% - 320.6px / 2 + 128px);
 
       &-icons {
         margin-right: 24px;
@@ -322,7 +322,7 @@
       }
     }
     &-buttons {
-      top: calc(50% - 70.75rem/2 + 10.1125rem);
+      top: calc(50% - 80.75rem/2 + 10.1125rem);
       width: 315px;
       left: calc(50% - 315px / 2);
     }

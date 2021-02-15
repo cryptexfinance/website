@@ -13,9 +13,8 @@ const SectionGovernance = () => {
 
   return (
     <section id="governance" className="section-governance"> 
-        <div className="governance-title header">What Governs TCAP?</div>
+        <div className="governance-title header">Introducing CTX: <br/>Decentralized Governance</div>
         <div className="governance-content">
-            Introducing CTX: Decentralized Governance <br /><br />
             CTX is a governance token that powers and secures the Cryptex protocol. 
             Holders of CTX can vote on protocol upgrades for TCAP as well as all 
             future products within the Cryptex ecosystem.
