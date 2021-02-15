@@ -287,7 +287,7 @@
       width: 315px;
       height: 247px;
       left: calc(50% - 315px / 2);
-      top: calc(50% - 247px / 2 - 225.5px);
+      top: calc(50% - 247px / 2 - 200.5px);
       font-size: 14px;
       line-height: 20px;
     }
@@ -297,7 +297,7 @@
       width: 380px;
       height: 391.27px;
       left: calc(50% - 380px / 2);
-      top: calc(50% - 391.27px / 2 + 285px);
+      top: calc(50% - 391.27px / 2 + 255px);
     }
 
     &-details {
@@ -305,7 +305,7 @@
       width: 315px;
       height: 353px;
       left: calc(50% - 495.31px / 2 + 92px);
-      top: calc(50% - 280.6px / 2 + 128px);
+      top: calc(50% - 360.6px / 2 + 128px);
 
       &-icons {
         margin-right: 24px;
@@ -319,7 +319,7 @@
     }
 
     &-buttons {
-      top: calc(50% - 60.75rem/2 + 1.1125rem);
+      top: calc(50% - 72.75rem/2 + 1.1125rem);
       width: 315px;
       left: calc(50% - 315px / 2);
     }
@@ -956,7 +956,7 @@
     }
     .governance {
       &-buttons {
-        top: calc(50% - 58.75rem/2 + 1.1125rem); 
+        top: calc(50% - 65.75rem/2 + 1.1125rem); 
       }
     }
     

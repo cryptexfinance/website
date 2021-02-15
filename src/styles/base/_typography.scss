@@ -313,19 +313,19 @@
 .governance {
 	&-title {
 		position: absolute;
-		width: 26.375rem;
+		width: 32.375rem;
 		height: 3rem;
 		left: calc(50% - 18.75rem/2 - 30.625rem);
-		top: calc(50% - 3rem/2 - 9.5125rem);
+		top: calc(50% - 3rem/2 - 7.9125rem);
 		letter-spacing: 0.3px;
 	}
 
 	&-content {
 		position: absolute;
-		width: 30.625rem;
+		width: 32.375rem;
 		height: 8.25rem;
 		left: calc(50% - 26.8125rem/2 - 26.59375rem);
-		top: calc(50% - 16.75rem/2 + 2.6125rem);
+		top: calc(50% - 10.35rem/2 + 2.4125rem);
 		font-family: $font-tertiary;
 		font-style: normal;
 		font-weight: normal;
@@ -340,7 +340,7 @@
 		position: absolute;
 		width: 21.8125rem;
 		height: 25.0605rem;
-		left: calc(50% - 22.5875rem/3 - 1.625rem);
+		left: calc(50% - 22.5875rem/3 - 0.7rem);
 		top: calc(50% - 23.809375rem/2 - .3125rem);
 		
 	}
@@ -357,7 +357,7 @@
 			&:not(:first-child) { 
 				padding-top: 1.5rem;
 			}
-			margin-bottom: 1.2rem;
+			margin-bottom: 1.1rem;
 			
 		}
 
@@ -391,7 +391,7 @@
 		width: 15.625rem;
 		height: 3.875rem;
 		left: calc(50% - 26.8125rem/2 - 26.59375rem);
-		top: calc(50% - 17.75rem/2 + 15.1125rem);
+		top: calc(50% - 17.75rem/2 + 14.1125rem);
 	}
 
 	&-icon {
