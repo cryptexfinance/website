@@ -608,17 +608,21 @@
       }
 
       &-photo {
-        width: 0;
-        height: 0;
+        margin-left: 0rem;
+        margin-right: 12px;
+        margin-bottom: 20px;
+        width: 13rem;
+        height: 13rem;
+        top: 1.6rem; 
       }
       &-title {
         position: relative;
-        width: 355px;
+        width: 330px;
         height: 48px;
         font-size: 12px;
         line-height: 20px;
         letter-spacing: 0.3px;
-        margin-bottom: 12px;
+        margin-bottom: 15px;
       }
       &-description {
         position: relative;
@@ -634,6 +638,7 @@
         font-size: 10px;
         line-height: 12px;
         letter-spacing: 0.6px;
+        display: none;
       }
 
       &-tag-items {
@@ -649,11 +654,9 @@
         margin: 0px 20px 20px 0px;
         line-height: 30px;
         padding: 2px 0 2px 2px;
-        // margin-top: 12px;
-        // margin-bottom: 24px;
       }
       .taglink {
-        font-size: 16px;
+        font-size: 14px;
         padding: 2px;
       }
 
@@ -664,8 +667,7 @@
       }
 
       &:not(:last-child) {
-        padding-bottom: 3rem !important;
-        // padding-left: 2rem !important;
+        padding-bottom: 4rem !important;
       }
     }
   }
@@ -996,6 +998,12 @@
       }
       .newsgroup {
         top: calc(50% - 250px / 2 + 1490px);
+      }
+
+      .newsitem {
+        &-photo {
+          top: 0.8rem;          
+        }
       }
     } 
     .section-faq {

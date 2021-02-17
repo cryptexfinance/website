@@ -8,14 +8,6 @@ import { useQuery, NetworkStatus } from '@apollo/client';
 import gql from 'graphql-tag';
 
 const SectionMain = () => {
-  // const appEndpoint = "https://rinkeby.cryptex.finance/";
-  /**const isMobileDevice = useMediaQuery({ query: '(max-device-width: 428px)' });
-  const isTabletDevice = useMediaQuery({ query: '(max-device-width: 768px)' });
-  const isTabletDevice2 = useMediaQuery({ query: '(max-device-width: 834px)' });
-  const isTabletDevice3 = useMediaQuery({ query: '(max-device-width: 1024px)' });
-  const isDesktopOrLaptop = useMediaQuery({ query: '(min-device-width: 1224px)' });
-  const isPortrait = useMediaQuery({ query: '(orientation: portrait)' });
-  **/
 
   const format = (num, decimals) => num.toLocaleString('en-US', {
     minimumFractionDigits: decimals,      

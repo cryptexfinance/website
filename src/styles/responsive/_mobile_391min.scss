@@ -599,8 +599,10 @@
       }
 
       &-photo {
-        width: 0;
-        height: 0;
+        margin-left: 0rem;
+        width: 13rem;
+        height: 13rem;
+        top: 1.2rem;
       }
       &-title {
         position: relative;
@@ -625,6 +627,7 @@
         font-size: 10px;
         line-height: 12px;
         letter-spacing: 0.6px;
+        display: none;
       }
 
       &-tag-items {
@@ -640,11 +643,9 @@
         margin: 0px 20px 20px 0px;
         line-height: 30px;
         padding: 2px 0 2px 2px;
-        // margin-top: 12px;
-        // margin-bottom: 24px;
       }
       .taglink {
-        font-size: 16px;
+        font-size: 14px;
         padding: 2px;
       }
 
@@ -655,8 +656,7 @@
       }
 
       &:not(:last-child) {
-        padding-bottom: 3rem !important;
-        // padding-left: 2rem !important;
+        padding-bottom: 4rem !important;
       }
     }
   }
@@ -957,6 +957,20 @@
     }
     .team-row {
       left: calc(50% - 1.6rem/2 - 33.65625rem);
+    }
+    .newsbox {
+      .newsitem {
+        &-photo {
+          width: 15rem;
+          height: 15rem;
+          top: 1.2rem;
+          margin-right: 20px;
+        }
+        &-title {
+          width: 370px;  
+        }
+      }
+
     }
     .faq {
       &-title {        

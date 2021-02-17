@@ -74,13 +74,13 @@ const SectionTeam = (props) => {
     changePage(activePage == pages-1 ? 0 : activePage+1) 
   }
 
-
   const RenderBlog = () => {
     return typeof(tblog.edges) !== `undefined` ? tblog.edges.map (({node}, index) => (
       <div className={Math.ceil((index+1) / 3)  == activePage+1 ? "newsitem " +index : "newsitem hide"} key={node.id}>
         <img src={node.frontmatter.featuredimage.childImageSharp.fluid.src} className="newsitem-photo" alt="News" />
-        <div className="newsitem-title terciary-header">{node.frontmatter.title}</div>
-        
+        <a href={node.excerpt} rel="noreferrer" target="_blank" className="newsitem-title-link" >
+          <div className="newsitem-title terciary-header">{node.frontmatter.title}</div>
+        </a>
         <div className="newsitem-tag-items">
           <a href={node.excerpt} rel="noreferrer" target="_blank" className="newsitem-tagbox taglink">
             {typeof(node.frontmatter.tags) !== `undefined` ? node.frontmatter.tags.map(tag => {return tag}) : ""}
@@ -90,23 +90,6 @@ const SectionTeam = (props) => {
       </div>
     )) : <div></div>;
   }
-
-  const RenderBlogTest = () => {
-    return edgesTest.map ((node, index) => (
-
-      <div className={Math.ceil((index+1) / 3)  == activePage+1 ? "newsitem " : "newsitem hide"} key={node.id}>
-        <img src={node.src} className="newsitem-photo" alt="News" />
-        <div className="newsitem-title terciary-header">{node.title}</div>
-        
-        <div className="newsitem-tag-items">
-          <a rel="noreferrer" target="_blank" className="newsitem-tagbox taglink">            
-          </a>
-        </div>
-        <a rel="noreferrer" target="_blank" className="newsitem-link link">Check it out</a>
-      </div>
-    ));
-  }
-
 
   const RenderPagination = () => {
     let edges = (typeof(tblog.edges) !== `undefined` ? tblog.edges.length : 0)

@@ -584,8 +584,11 @@
       }
 
       &-photo {
-        width: 0;
-        height: 0;
+        margin-left: 0rem;
+        width: 18rem;
+        height: 18rem;
+        top: 1.2rem;
+        margin-right: 15px;
       }
       &-title {
         position: relative;
@@ -610,11 +613,12 @@
         font-size: 10px;
         line-height: 12px;
         letter-spacing: 0.6px;
+        display: none;
       }
 
       &-tag-items {
-        margin-top: 12px;
-        margin-bottom: 12px;
+        margin-top: 13px;
+        margin-bottom: 12px;        
       }
 
       &-tagbox {
@@ -627,7 +631,7 @@
         padding: 2px 0 2px 2px;
       }
       .taglink {
-        font-size: 16px;
+        font-size: 14px;
         padding: 2px;
       }
 
@@ -638,7 +642,7 @@
       }
 
       &:not(:last-child) {
-        padding-bottom: 3rem !important;
+        padding-bottom: 4rem !important;
       }
     }
   }
@@ -900,6 +904,18 @@
     .newsbox {
       .newsgroup {
         left: 40px;
+      }
+
+      .newsitem {
+        &-photo {
+          top: 0.6rem;
+        }
+        &-title {
+          width: 380px;          
+        }
+        &-tag-items {
+          margin-top: 20px;
+        }
       }
 
       &-pagination {

@@ -609,12 +609,16 @@
       }
 
       &-photo {
-        width: 0;
-        height: 0;
+        margin-left: 0rem;
+        margin-right: 12px;
+        margin-bottom: 20px;
+        width: 13rem;
+        height: 13rem;
+        top: 1.1rem;        
       }
       &-title {
         position: relative;
-        width: 355px;
+        width: 315px;
         height: 48px;
         font-size: 12px;
         line-height: 20px;
@@ -631,10 +635,11 @@
       &-link {
         position: relative;
         width: 95.53px;
-        height: 15.26px;
+        height: 10.26px;
         font-size: 10px;
         line-height: 12px;
         letter-spacing: 0.6px;
+        display: none;
       }
 
       &-tag-items {
@@ -653,7 +658,7 @@
       }      
 
       .taglink {
-        font-size: 16px;
+        font-size: 14px;
         padding: 2px;
       }
 
@@ -664,7 +669,7 @@
       }
 
       &:not(:last-child) {
-        padding-bottom: 3rem !important;
+        padding-bottom: 4rem !important;
       }
     }
   }
@@ -899,6 +904,18 @@
   }
   
   @media only screen and (min-device-width: 370px)  {
+    .newsbox {
+      .newsitem {
+        &-photo {
+          top: 0.9rem;
+        }
+        &-title {
+          width: 320px; 
+        }
+      }
+
+    }
+    
     .faq {
       &-divider {
         width: 335px;       
@@ -1030,7 +1047,7 @@
     }
     .newsbox {
       margin-top: 170px;
-  
+      
       &-title {
         left: calc(50% - 205px / 2 + 125.5px);
         top: calc(50% - 280px / 2 + 1250px);
@@ -1040,8 +1057,11 @@
         top: calc(50% - 270px / 2 + 1340px);
       }
       .newsitem {
+        &-photo {
+          margin-bottom: 10px;
+        }
         &-title {
-          width: 290px;
+          width: 285px;
           line-height: 18px;          
         }
       }
