@@ -74,12 +74,19 @@ const SectionTeam = (props) => {
     changePage(activePage == pages-1 ? 0 : activePage+1) 
   }
 
+  const titleClass = (titleLength) => {
+    return "newsitem-title terciary-header" + 
+           (titleLength <= 28 ? " short" : (titleLength <= 56 ? " medium" : ""));
+  }
+
   const RenderBlog = () => {
     return typeof(tblog.edges) !== `undefined` ? tblog.edges.map (({node}, index) => (
-      <div className={Math.ceil((index+1) / 3)  == activePage+1 ? "newsitem " +index : "newsitem hide"} key={node.id}>
+      <div className={Math.ceil((index+1) / 3)  == activePage+1 ? "newsitem" : "newsitem hide"} key={node.id}>
         <img src={node.frontmatter.featuredimage.childImageSharp.fluid.src} className="newsitem-photo" alt="News" />
         <a href={node.excerpt} rel="noreferrer" target="_blank" className="newsitem-title-link" >
-          <div className="newsitem-title terciary-header">{node.frontmatter.title}</div>
+          <div className={titleClass(node.frontmatter.title.length)}>
+            {node.frontmatter.title}
+          </div>
         </a>
         <div className="newsitem-tag-items">
           <a href={node.excerpt} rel="noreferrer" target="_blank" className="newsitem-tagbox taglink">

@@ -581,13 +581,13 @@
     &-pagination {
       position: absolute;
       width: 57rem;
-      margin-top: 12%;  
+      margin-top: 10%;  
 
       &.one {
-        margin-top: 79.5%;
+        margin-top: 71%;
       }
       &.two {
-        margin-top: 46%;
+        margin-top: 40.5%;
       }
     }
 
@@ -937,6 +937,11 @@
     .governance {
       &-buttons {
         top: calc(50% - 68.75rem/2 + 10.1125rem);
+      }
+    }
+    .newsbox {
+      &-title {
+        top: calc(50% - 400px / 2 + 1330px);
       }
     }
   }

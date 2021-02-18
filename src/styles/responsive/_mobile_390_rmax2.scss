@@ -591,13 +591,13 @@
     &-pagination {
       position: absolute;
       width: 60rem;
-      margin-top: 12%;  
+      margin-top: 7%;  
 
       &.one {
-        margin-top: 80%;
+        margin-top: 71%;
       }
       &.two {
-        margin-top: 46%;
+        margin-top: 39%;
       }
     }
 
@@ -611,19 +611,18 @@
       &-photo {
         margin-left: 0rem;
         margin-right: 12px;
-        margin-bottom: 20px;
-        width: 13rem;
-        height: 13rem;
+        margin-bottom: 10px;
+        width: 19rem;
+        height: 19rem;
         top: 1.1rem;        
       }
       &-title {
         position: relative;
-        width: 315px;
+        width: 330px;
         height: 48px;
-        font-size: 12px;
-        line-height: 20px;
+        font-size: 11.5px;
+        line-height: 18px;
         letter-spacing: 0.3px;
-        margin-bottom: 12px;
       }
       &-description {
         position: relative;
@@ -643,7 +642,7 @@
       }
 
       &-tag-items {
-        margin-top: 12px;
+        margin-top: 7px;
         margin-bottom: 12px;
       }
 
@@ -658,7 +657,7 @@
       }      
 
       .taglink {
-        font-size: 14px;
+        font-size: 12px;
         padding: 2px;
       }
 
@@ -910,7 +909,7 @@
           top: 0.9rem;
         }
         &-title {
-          width: 320px; 
+          width: 335px; 
         }
       }
 
@@ -1058,11 +1057,18 @@
       }
       .newsitem {
         &-photo {
+          top: 1.2rem;  
+          height: 20rem;
+          margin-right: 8px;
           margin-bottom: 10px;
         }
         &-title {
-          width: 285px;
-          line-height: 18px;          
+          width: 295px;
+          font-size: 11px;
+          line-height: 16px;          
+        }
+        &-tag-items {
+          margin-top: 2px;
         }
       }
     }

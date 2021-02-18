@@ -570,6 +570,19 @@
       top: calc(50% - 250px / 2 + 1390px);
     }
 
+    &-pagination {
+      position: absolute;
+      width: 57rem;
+      margin-top: 6%;  
+  
+      &.one {
+        margin-top: 69%;
+      }
+      &.two {
+        margin-top: 37.5%;
+      }
+    }
+
     .newsgroup {
       position: absolute;
       left: 10px; 
@@ -983,7 +996,7 @@
     } 
     .section-team {
       height: 85vh;
-      margin-bottom: 155vh;
+      margin-bottom: 142vh;
     }   
     .section-community {
       height: 45vh;
@@ -1060,13 +1073,6 @@
       height: 40vh;
     }
   }
-  @media only screen and (min-device-height: 950px)  {
-    .governance {
-      &-buttons {
-        top: calc(50% - 60.75rem/2 + 6.1125rem);
-      }
-    }
-  }
   @media only screen and (min-device-width: 500px) and (max-device-width: 749px){
     .menu-logo {
       margin-left: -30px;
@@ -1094,6 +1100,7 @@
         left: 52px;
       }
       &-title {
+        top: calc(50% - 210px / 2 + 1300px);
         left: calc(50% - 204px / 2 + 200.5px);
       }
     }
@@ -1150,6 +1157,18 @@
     
       }
     
+    }
+  }
+  @media only screen and (min-device-height: 950px)  {
+    .governance {
+      &-buttons {
+        top: calc(50% - 60.75rem/2 + 6.1125rem);
+      }
+    }
+    .newsbox {
+      &-title {
+        top: calc(50% - 210px / 2 + 1260px);        
+      }
     }
   }
 }
