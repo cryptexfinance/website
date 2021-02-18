@@ -570,6 +570,19 @@
       top: calc(50% - 250px / 2 + 1390px);
     }
 
+    &-pagination {
+      position: absolute;
+      width: 57rem;
+      margin-top: 6%;  
+  
+      &.one {
+        margin-top: 69%;
+      }
+      &.two {
+        margin-top: 37.5%;
+      }
+    }
+
     .newsgroup {
       position: absolute;
       left: 10px; 
@@ -584,8 +597,11 @@
       }
 
       &-photo {
-        width: 0;
-        height: 0;
+        margin-left: 0rem;
+        width: 18rem;
+        height: 18rem;
+        top: 1.2rem;
+        margin-right: 15px;
       }
       &-title {
         position: relative;
@@ -610,11 +626,12 @@
         font-size: 10px;
         line-height: 12px;
         letter-spacing: 0.6px;
+        display: none;
       }
 
       &-tag-items {
-        margin-top: 12px;
-        margin-bottom: 12px;
+        margin-top: 13px;
+        margin-bottom: 12px;        
       }
 
       &-tagbox {
@@ -627,7 +644,7 @@
         padding: 2px 0 2px 2px;
       }
       .taglink {
-        font-size: 16px;
+        font-size: 14px;
         padding: 2px;
       }
 
@@ -638,7 +655,7 @@
       }
 
       &:not(:last-child) {
-        padding-bottom: 3rem !important;
+        padding-bottom: 4rem !important;
       }
     }
   }
@@ -902,6 +919,18 @@
         left: 40px;
       }
 
+      .newsitem {
+        &-photo {
+          top: 0.6rem;
+        }
+        &-title {
+          width: 380px;          
+        }
+        &-tag-items {
+          margin-top: 20px;
+        }
+      }
+
       &-pagination {
         position: absolute;
         width: 50rem;       
@@ -967,7 +996,7 @@
     } 
     .section-team {
       height: 85vh;
-      margin-bottom: 155vh;
+      margin-bottom: 142vh;
     }   
     .section-community {
       height: 45vh;
@@ -1044,13 +1073,6 @@
       height: 40vh;
     }
   }
-  @media only screen and (min-device-height: 950px)  {
-    .governance {
-      &-buttons {
-        top: calc(50% - 60.75rem/2 + 6.1125rem);
-      }
-    }
-  }
   @media only screen and (min-device-width: 500px) and (max-device-width: 749px){
     .menu-logo {
       margin-left: -30px;
@@ -1078,6 +1100,7 @@
         left: 52px;
       }
       &-title {
+        top: calc(50% - 210px / 2 + 1300px);
         left: calc(50% - 204px / 2 + 200.5px);
       }
     }
@@ -1134,6 +1157,18 @@
     
       }
     
+    }
+  }
+  @media only screen and (min-device-height: 950px)  {
+    .governance {
+      &-buttons {
+        top: calc(50% - 60.75rem/2 + 6.1125rem);
+      }
+    }
+    .newsbox {
+      &-title {
+        top: calc(50% - 210px / 2 + 1260px);        
+      }
     }
   }
 }

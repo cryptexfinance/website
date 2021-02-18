@@ -11,7 +11,7 @@ const Home = (data) => {
   // console.log(data);
     return (
       <>
-        <header className="section-main">
+        <header id="home" className="section-main">
           {/* <SectionMain price={data.price}/> */}
           <SectionMain />
         </header>

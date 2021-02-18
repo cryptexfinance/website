@@ -43,6 +43,10 @@
     position: relative;
     width: 28.25rem;
     height: 2.9875rem;
+
+    &-link {
+      text-decoration: none !important;
+    }
   }
   &-description {
     position: relative;
