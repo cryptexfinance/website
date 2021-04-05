@@ -38,7 +38,7 @@ const SectionFeatures = () => {
               <div className="features-box-farm">
                 <img src={farm} className="features-icons" alt="Farm" />
                 <div className="features-subtitle heading-secondary">Farm</div>
-                <p className="features-content content">Earn CTX Rewards for minting TCAP tokens and Staking TCAP LP tokens</p>
+                <p className="features-content content">Earn CTX Rewards for minting TCAP tokens and Staking TCAP LP tokens.</p>
               </div>
             </a>
           </div>
