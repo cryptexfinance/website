@@ -153,6 +153,11 @@ and (orientation: landscape)
     }
   }
   
+  .flippy-back {
+    background: $color-black !important;
+    background-color: $color-black !important;
+  }
+
   .section-main {
     position: relative;
     height: 85vh;    
