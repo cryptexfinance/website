@@ -1,0 +1,176 @@
+@media only screen 
+and (min-device-width : 600px) 
+and (max-device-width : 1000px) 
+and (orientation: landscape) 
+{
+  .navbar,
+  .navbar div {
+    height: 50px;
+    background: $color-black;
+    font-family: $font-primary;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 12px;
+    letter-spacing: 0.6px;
+    padding: 0%;
+  }
+  .navbar-light {
+      .navbar-toggler-icon {
+          display: none;
+      }
+  }
+
+  .nav-links a {
+    height: 100vh;
+    background: $color-black;
+    padding-top: 40px;
+    padding-bottom: 45px;
+    text-align:center;
+    font-size: 20px;
+    line-height: 28px;
+    letter-spacing: 0.6px;
+    color: $color-grey !important;
+
+    &::first-child { 
+      margin-top: 60px;
+    }
+
+    &:not(:first-child) { 
+      padding-top: 40px;
+    }
+
+    &:hover {
+      color: $color-dark-clean !important;
+      text-decoration: none;
+    }
+  }
+
+  .nav-links-divisor {
+    top: -3px;
+			position: relative;
+			width: 92%;
+      height: 10px;
+      line-height: 28px;
+      background: $color-grey-dark !important;
+      background-color: $color-grey-dark !important;
+      z-index: 10;
+      border: 1px solid #494866;
+      box-sizing: border-box;
+      margin-left: 35px;
+      margin-bottom: -2px;
+      padding-top: -2px;
+  }
+
+  .responsive-app-button {
+    position: fixed;
+    width: 240px;
+    margin-left: auto; 
+    background: $color-navbar-button;
+		border: 1px solid $color-primary-pink;
+		box-sizing: border-box;
+    box-shadow: 0px 10px 49px -10px $shadow-navbar-button;
+    padding-left: 80px;
+  }
+
+  .menu-logo {
+    width: 120px;
+    margin-left: -15px;
+    
+    &-divider {
+      position: absolute;
+      width: 1px;
+      height: 49px;
+      left: 240px;
+      top: 0px;
+  
+      background-color: $color-grey-dark !important;//$color-grey-dark;
+      z-index: 0;
+    }
+  }
+  .menu-logo.mobile {
+    display: None;
+  }
+
+  .navbar-toggler,
+  .navbar-toggler-icon {
+    position: relative;
+    left: 25%;
+  }
+  .responsive-navbar-nav {
+    background: $color-black;
+  }
+  .navbar-toggler:hover, .navbar-toggler:focus {
+    position: relative;
+    padding: 10px 20px 10px 20px;
+  }
+
+  .navbar-expand-lg {
+    flex-flow: row wrap;
+
+    .navbar-nav {
+      flex-direction: column;
+      width: 100%;
+    }
+    .navbar-toggler {
+      display: flex;
+    }
+    .navbar-collapse.collapse {
+      flex-basis: 100%;
+      display: none !important;
+    }
+    .navbar-collapse.collapse.show {
+      flex-basis: 100%;
+      display: block !important;
+    }
+  }
+  .mobile_menu_bar:before {
+    display:none;
+  }
+  .mobile_menu_bar::after {
+    font-size: 12px;
+    font-family: $font-primary;
+    content: "MENU";
+    position: relative;
+    padding: 10px 20px 10px 20px;
+    color: $color-dark-clean!important;
+    text-decoration: none;
+    &:focus {
+        outline:none !important;
+    }
+  }
+  .mobile_nav.opened .mobile_menu_bar:after {
+    content: "";
+  }
+  .button-navbar {
+    position: fixed;
+    color: $color-grey;
+		border: 0px solid $color-primary-pink;
+    box-sizing: border-box;
+    &:hover {
+      color: $color-dark-clean !important;
+      text-decoration: none;
+    }
+  }
+  
+  .section-main {
+    position: relative;
+    height: 85vh;    
+  }
+  .section-about {
+    position: relative;
+    height: 50vh;    
+  }
+  .section-governance {
+    position: relative;
+    height: 50vh;  
+  }
+  .section-faq {
+    position: relative;
+    height: 85vh;   
+  }
+  .section-community {
+    position: relative;
+    height: 80vh;     
+  }
+}
