@@ -50,7 +50,7 @@
     }
   }
 
-  @media only screen and (min-device-width: 1000px) and (max-device-width: 1199px) and (orientation : landscape)  {
+  @media only screen and (min-device-width: 800px) and (max-device-width: 1199px) and (orientation : landscape)  {
     .team-box {
       &-photo {
         position: relative;
