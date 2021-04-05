@@ -4,7 +4,7 @@ import { useMediaQuery } from 'react-responsive';
 import image from '../../../../static/website/home/main.webp';
 import tcap from '../../../../static/website/home/tcap.svg';
 import appEndpoint from '../../../endpoint';
-import { useQuery, NetworkStatus } from '@apollo/client';
+import { useQuery } from '@apollo/client';
 import gql from 'graphql-tag';
 
 const SectionMain = () => {

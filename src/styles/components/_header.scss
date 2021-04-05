@@ -25,9 +25,15 @@
   padding-top: 1rem;
   margin-right: 0% !important;
   color: $color-grey !important;
+
+  @media only screen and (min-device-width: 1000px) and (max-device-width: 1300px) {
+    padding-left: 2.5rem !important;
+    padding-right: 2.5rem !important;
+  }
+
   &:not(:last-child) { 
-    padding-right: 2rem !important;
-    padding-left: 2rem !important;
+    padding-right: 1.5rem !important;
+    padding-left: 1.5rem !important;    
   }
   &:hover {
     color: $color-dark-clean !important;

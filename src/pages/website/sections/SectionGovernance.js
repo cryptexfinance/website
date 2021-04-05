@@ -1,7 +1,7 @@
 import React from 'react'
 import governance from '../../../../static/website/governance/governance.png'
 import coinGecko from '../../../../static/website/governance/coin-gecko.svg'
-import uniLogo from '../../../../static/website/governance/uni-logo.svg'
+import sushiLogo from '../../../../static/website/governance/sushi-logo.svg'
 import dfpLogo from '../../../../static/website/governance/dfp-logo.svg'
 import ctx from '../../../../static/website/governance/ctx.svg'
 import docs from '../../../../static/website/governance/docs.svg'
@@ -24,7 +24,7 @@ const SectionGovernance = () => {
                 <img src={coinGecko} className="governance-icon gecko" alt="Coin Gecko" />
             </a>
             <a>
-                <img src={uniLogo}  className="governance-icon uni" alt="Uni Logo" />
+                <img src={sushiLogo}  className="governance-icon uni" alt="Uni Logo" />
             </a>
             <a>
                 <img src={dfpLogo} className="governance-icon dfp" alt="DFP"  />        
