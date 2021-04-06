@@ -20,7 +20,8 @@ const SectionFaq = () => {
           <div className="faq-subtitle content">Common questions we are asked.</div>
         </div>
         <div className="faq-row row">
-          <div className="faq-box">            
+          <div className="faq-box">
+            
             <Toggle title="Is TCAP decentralized?" addToExpanded={addToExpanded}> 
               <div className="answer">TCAP uses Admin Keys to pause deposits and minting in case of a bug to protect users, also uses the key to change state variables, we are securing this process by adding a timelock of three days, allowing users to see which value is going to change ahead of time. We expect to further decentralize TCAP as time goes on.</div>
             </Toggle>
@@ -37,11 +38,9 @@ const SectionFaq = () => {
           <div className="faq-main-divider"></div>
 
           <div className="faq-box">
+
             <Toggle title="Is TCAP live yet?" addToExpanded={addToExpanded}>
-              <div className="answer">
-                TCAP is live! You can use TCAP by visiting <a href="https://app.cryptex.finance" target="_blank">app.cryptex.finance</a>. We recommend you give our testnet a spin first to get familiar with the protocol by visiting <a href="https://medium.com/cryptexfinance/how-to-use-tcap-on-testnet-a0cef1c1f19c" target="_blank">https://medium.com/cryptexfinance/how-to-use-tcap-on-testnet-a0cef1c1f19c
-                </a> 
-              </div>
+              <div className="answer">TCAP is currently live on Rinkeby Testnet, you can try TCAP by going to app.cryptex.finance</div>
             </Toggle>
 
             <Toggle title="Who is TCAP for?" addToExpanded={addToExpanded}>

@@ -1,5 +1,6 @@
 import React,{ useEffect, useState } from 'react';
 import { BigNumber, utils } from "ethers";
+import { useMediaQuery } from 'react-responsive';
 import image from '../../../../static/website/home/main.webp';
 import tcap from '../../../../static/website/home/tcap.svg';
 import appEndpoint from '../../../endpoint';
