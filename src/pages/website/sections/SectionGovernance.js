@@ -20,13 +20,13 @@ const SectionGovernance = () => {
             future products within the Cryptex ecosystem.
         </div>
         <div className="governance-buttons">
-            <a rel="noreferrer" target="_blank">
+            <a>
                 <img src={coinGecko} className="governance-icon gecko" alt="Coin Gecko" />
             </a>
-            <a rel="noreferrer" target="_blank">
-                <img src={sushiLogo}  className="governance-icon uni" alt="Sushi Logo" />
+            <a>
+                <img src={sushiLogo}  className="governance-icon uni" alt="Uni Logo" />
             </a>
-            <a rel="noreferrer" target="_blank">
+            <a>
                 <img src={dfpLogo} className="governance-icon dfp" alt="DFP"  />        
             </a>
         </div>
@@ -52,7 +52,6 @@ const SectionGovernance = () => {
                 <a
                 rel="noreferrer"
                 target="_blank"
-                href="https://app.cryptex.finance/governance"
                 className="governance-details-text"
                 >
                 <img src={voting} className="governance-details-icons" alt="Voting" />
@@ -62,8 +61,7 @@ const SectionGovernance = () => {
             <div className="governance-details-item">
                 <a
                 rel="noreferrer"
-                href="https://docs.cryptex.finance/governance"
-                target="_blank"      
+                target="_blank"
                 className="governance-details-text"
                 >
                 <img src={docs} className="governance-details-icons" alt="Documentation" />
@@ -72,10 +70,9 @@ const SectionGovernance = () => {
             </div>
             <div className="governance-details-item">
             <a
-             href="https://discord.com/invite/p3FSPxAxcm"         
-             rel="noopener noreferrer"
-             target="_blank"
-             className="governance-details-text"
+            rel="noopener noreferrer"
+            target="_blank"
+            className="governance-details-text"
             >
             <img src={forum} className="governance-details-icons" alt="Forum" />
                 Forum
