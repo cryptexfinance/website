@@ -13,28 +13,28 @@ const SectionFeatures = () => {
             How to Use TCAP
           </div>
           <div className="features-row row">
-            <a href={appEndpoint} rel="noreferrer" target="_blank" >
+            <a href="https://app.cryptex.finance/vault" rel="noreferrer" target="_blank">
               <div className="features-box-mint">
                 <img src={mint} className="features-icons" alt="Mint" />
                 <div className="features-subtitle heading-secondary">Mint</div>
                 <p className="features-content content">Create and approve a vault, add collateral and begin minting TCAP.</p>
               </div>
             </a>
-            <a href="https://app.sushi.com/swap" rel="noreferrer" target="_blank" >
+            <a href="https://app.sushi.com/swap" rel="noreferrer" target="_blank">
               <div className="features-box-trade">
                 <img src={trade} className="features-icons" alt="Trade" />
                 <div className="features-subtitle heading-secondary">Trade</div>
                 <p className="features-content content">Buy and sell TCAP on Sushiswap.</p>
               </div>
             </a>
-            <a href="https://app.sushi.com/swap" rel="noreferrer" target="_blank" >
+            <a href="https://app.sushi.com/swap" rel="noreferrer" target="_blank">
               <div className="features-box-pool">
                 <img src={pool} className="features-icons" alt="Pool" />
                 <div className="features-subtitle heading-secondary">Pool</div>
                 <p className="features-content content">Provide liquidity to TCAP pairs on Sushiswap and earn a portion of the trading fees.</p>
               </div>
             </a>
-            <a href="https://rinkeby.cryptex.finance/farm" rel="noreferrer" target="_blank" >
+            <a href="https://app.cryptex.finance/farm" rel="noreferrer" target="_blank">
               <div className="features-box-farm">
                 <img src={farm} className="features-icons" alt="Farm" />
                 <div className="features-subtitle heading-secondary">Farm</div>
