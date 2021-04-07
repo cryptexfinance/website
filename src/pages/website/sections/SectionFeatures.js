@@ -20,14 +20,14 @@ const SectionFeatures = () => {
                 <p className="features-content content">Create and approve a vault, add collateral and begin minting TCAP.</p>
               </div>
             </a>
-            <a href="https://app.sushi.com/swap" rel="noreferrer" target="_blank" >
+            <a href="https://app.sushi.com/pair/0xa87e2c5d5964955242989b954474ff2eb08dd2f5" rel="noreferrer" target="_blank">
               <div className="features-box-trade">
                 <img src={trade} className="features-icons" alt="Trade" />
                 <div className="features-subtitle heading-secondary">Trade</div>
                 <p className="features-content content">Buy and sell TCAP on Sushiswap.</p>
               </div>
             </a>
-            <a href="https://app.sushi.com/swap" rel="noreferrer" target="_blank" >
+            <a href="https://app.cryptex.finance/pools" rel="noreferrer" target="_blank">
               <div className="features-box-pool">
                 <img src={pool} className="features-icons" alt="Pool" />
                 <div className="features-subtitle heading-secondary">Pool</div>

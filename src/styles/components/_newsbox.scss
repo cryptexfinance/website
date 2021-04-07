@@ -36,12 +36,12 @@
     height: 6.4225rem;
     float: left;
     margin-left: -6.4225rem;
-    margin-right: 2rem;
+    margin-right: 1.5rem;
     border-radius: 2px;
   }
   &-title {
     position: relative;
-    width: 28.25rem;
+    width: 29.25rem;
     height: 2.9875rem;
 
     &-link {
@@ -90,6 +90,10 @@
 
   &:not(:last-child) { 
     padding-bottom: 3rem !important;    
+  }
+
+  .terciary-header {
+    font-size: 0.8rem;
   }
 }
 
