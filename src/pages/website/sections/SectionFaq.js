@@ -40,7 +40,10 @@ const SectionFaq = () => {
           <div className="faq-box">
 
             <Toggle title="Is TCAP live yet?" addToExpanded={addToExpanded}>
-              <div className="answer">TCAP is currently live on Rinkeby Testnet, you can try TCAP by going to app.cryptex.finance</div>
+              <div className="answer">
+                TCAP is live! You can use TCAP by visiting <a href="https://app.cryptex.finance" target="_blank">app.cryptex.finance</a>. We recommend you give our testnet a spin first to get familiar with the protocol by visiting <a href="https://medium.com/cryptexfinance/how-to-use-tcap-on-testnet-a0cef1c1f19c" target="_blank">https://medium.com/cryptexfinance/how-to-use-tcap-on-testnet-a0cef1c1f19c
+                </a> 
+              </div>
             </Toggle>
 
             <Toggle title="Who is TCAP for?" addToExpanded={addToExpanded}>
