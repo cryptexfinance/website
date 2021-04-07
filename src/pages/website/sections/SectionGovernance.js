@@ -62,7 +62,7 @@ const SectionGovernance = () => {
             <div className="governance-details-item">
                 <a
                 rel="noreferrer"
-                href="https://docs.cryptex.finance/governance/reference"
+                href="https://docs.cryptex.finance/"
                 target="_blank"      
                 className="governance-details-text"
                 >

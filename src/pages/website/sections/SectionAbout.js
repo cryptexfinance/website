@@ -37,7 +37,7 @@ const SectionAbout = () => {
         </div>
         <div className="about-details-item">
           <a
-            href="https://docs.cryptex.finance"
+            href="https://github.com/cryptexfinance"
             rel="noreferrer"
             target="_blank"
             className="about-details-text"
