@@ -27,7 +27,7 @@ const SectionFeatures = () => {
                 <p className="features-content content">Buy and sell TCAP on Sushiswap.</p>
               </div>
             </a>
-            <a href="https://app.sushi.com/swap" rel="noreferrer" target="_blank">
+            <a href="https://app.cryptex.finance/pools" rel="noreferrer" target="_blank">
               <div className="features-box-pool">
                 <img src={pool} className="features-icons" alt="Pool" />
                 <div className="features-subtitle heading-secondary">Pool</div>
