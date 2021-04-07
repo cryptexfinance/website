@@ -73,6 +73,7 @@ const SectionGovernance = () => {
             <div className="governance-details-item">
             <a
             rel="noopener noreferrer"
+            href="https://discord.com/invite/p3FSPxAxcm"
             target="_blank"
             className="governance-details-text"
             >
