@@ -38,6 +38,7 @@ const SectionGovernance = () => {
                 <a
                  rel="noopener noreferrer"
                  target="_blank"
+                 href="https://medium.com/cryptexfinance/introducing-ctx-governance-powering-the-tcap-protocol-6f4611cedf13"     
                  className="governance-details-text"
                 >
                 <img
