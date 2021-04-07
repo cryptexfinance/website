@@ -51,8 +51,7 @@ const SectionGovernance = () => {
             <div className="about-details-item">
                 <a
                 rel="noreferrer"
-                target="_blank"
-                href="https://app.cryptex.finance/governance"
+                target="_blank"                
                 className="governance-details-text"
                 >
                 <img src={voting} className="governance-details-icons" alt="Voting" />
@@ -62,7 +61,7 @@ const SectionGovernance = () => {
             <div className="governance-details-item">
                 <a
                 rel="noreferrer"
-                href="https://docs.cryptex.finance/governance/reference"
+                href="https://docs.cryptex.finance/"
                 target="_blank"      
                 className="governance-details-text"
                 >
