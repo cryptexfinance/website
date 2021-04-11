@@ -22,12 +22,19 @@ const SEO = ({ description, lang, meta, image: img, title, pathname }) => {
       meta={[
         { name: `description`, content: metaDescription },
         { name: `keywords`, content: site.siteMetadata.keywords.join(`,`) },
+        { property: `og:site_name`, content: "TCAP by Cryptex Finance." },
         { property: `og:title`, content: title },
         { property: `og:description`, content: metaDescription },
         { property: `og:type`, content: `website` },
+        { property: "og:image", content: image },
         { name: `twitter:creator`, content: site.siteMetadata.author },
-        { name: `twitter:title`, content: `title` },
+        { name: `twitter:title`, content: title },
         { name: `twitter:description`, content: metaDescription },
+        {
+          name: "twitter:image",
+          content: "https://ctx-rinkeby.s3.amazonaws.com/TCAP_meta.png",
+        },
+        { name: "twitter:card", content: "summary_large_image" },
       ]
         .concat(
           img
