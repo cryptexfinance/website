@@ -31,11 +31,10 @@ const SectionFaq = () => {
         <div className="faq-box">
           <Toggle title="Is TCAP decentralized?" addToExpanded={addToExpanded}>
             <div className="answer">
-              TCAP uses Admin Keys to pause deposits and minting in case of a
-              bug to protect users, also uses the key to change state variables,
-              we are securing this process by adding a timelock of three days,
-              allowing users to see which value is going to change ahead of
-              time. We expect to further decentralize TCAP as time goes on.
+              TCAP uses Developer Keys to pause deposits and minting in case of
+              a bug to protect users, this can only be activated once per vault.
+              To change protocol parameters a governance token CTX is used in
+              combination with a Timelock contract.
             </div>
           </Toggle>
 
