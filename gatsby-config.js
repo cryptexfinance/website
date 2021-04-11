@@ -9,13 +9,10 @@
 module.exports = {
   /* Your site config here */
   siteMetadata: {
-    title: `TCAP`,
-    author: `Luminode | Oscar Fonseca`,
-    firstName: `Oscar`,
-    lastName: `Fonseca`,
-    description: `TCAP is the Worlds First Total Cryptocurrency Market Capitalization Token created by Cryptex Finance.`,
-    occupation: `Software Engineer`,
-    image: `https://raw.githubusercontent.com/cryptexglobal/website/main/static/website/home/main.webp?token=ABGEJ5LMW5N6YYPYLKPLXWS72MKVM`,
+    title: `TCAP - By Cryptex Finance`,
+    author: `Cryptex Finance`,
+    description: `TCAP is the World's First Total Cryptocurrency Market Capitalization Token created by Cryptex Finance.`,
+    image: `https://raw.githubusercontent.com/cryptexglobal/website/main/static/website/home/main.webp`,
     keywords: [
       `Cryptex`,
       `Blockchain`,
@@ -24,10 +21,10 @@ module.exports = {
       `Bitcoin`,
       `Projects`,
       `Work`,
+      `TCAP`,
     ],
     siteUrl:
       process.env.URL || process.env.DEPLOY_URL || `http://localhost:8000`,
-    unemployed: true,
   },
   plugins: [
     {
@@ -35,12 +32,12 @@ module.exports = {
       options: {
         // You can add multiple tracking ids and a pageview event will be fired for all of them.
         trackingIds: [
-          "G-5PPNHXEBWZ", // Google Analytics / GA          
+          "G-5PPNHXEBWZ", // Google Analytics / GA
         ],
         pluginConfig: {
           // Puts tracking script in the head instead of the body
           head: true,
-        }
+        },
       },
     },
     {
@@ -134,15 +131,15 @@ module.exports = {
         showSpinner: true,
       },
     },
-  
+
     "gatsby-plugin-netlify",
     {
       resolve: "gatsby-plugin-mailchimp",
       options: {
         endpoint:
-          "https://finance.us1.list-manage.com/subscribe/post?u=1cb08bbc3427b6daa4cc0ba8e&amp;id=7e4519bdcf",// string; add your MC list endpoint here; see instructions below
+          "https://finance.us1.list-manage.com/subscribe/post?u=1cb08bbc3427b6daa4cc0ba8e&amp;id=7e4519bdcf", // string; add your MC list endpoint here; see instructions below
         timeout: 3500, // number; the amount of time, in milliseconds, that you want to allow mailchimp to respond to your request before timing out. defaults to 3500
       },
-    },        
+    },
   ],
 }
