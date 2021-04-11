@@ -26,7 +26,10 @@ const SEO = ({ description, lang, meta, image: img, title, pathname }) => {
         { property: `og:title`, content: title },
         { property: `og:description`, content: metaDescription },
         { property: `og:type`, content: `website` },
-        { property: "og:image", content: image },
+        {
+          property: "og:image",
+          content: "https://ctx-rinkeby.s3.amazonaws.com/TCAP_meta.png",
+        },
         { name: `twitter:creator`, content: site.siteMetadata.author },
         { name: `twitter:title`, content: title },
         { name: `twitter:description`, content: metaDescription },
@@ -35,18 +38,7 @@ const SEO = ({ description, lang, meta, image: img, title, pathname }) => {
           content: "https://ctx-rinkeby.s3.amazonaws.com/TCAP_meta.png",
         },
         { name: "twitter:card", content: "summary_large_image" },
-      ]
-        .concat(
-          img
-            ? [
-                { property: "og:image", content: image },
-                { property: "og:image:width", content: img.width },
-                { property: "og:image:height", content: img.height },
-                { name: "twitter:card", content: "summary_large_image" },
-              ]
-            : [{ name: "twitter:card", content: "summary" }]
-        )
-        .concat(meta)}
+      ].concat(meta)}
     />
   )
 }
