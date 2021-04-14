@@ -8,7 +8,7 @@
   }
   &-pagination {
     position: absolute;
-    width: 13.75rem;
+    width: 14.75rem;
     z-index: 12;  
 
     &.one {
@@ -158,6 +158,12 @@
     &.five{
       left: 52%;
     }
+    &.six{
+      left: 49%;
+    }
+    &.seven{
+      left: 46%;
+    }
   }
 
   &-item {
@@ -179,6 +185,12 @@
     }
     &.fifth {
       margin-left: 60px;  
+    }
+    &.sixth {
+      margin-left: 75px;  
+    }
+    &.seventh {
+      margin-left: 90px;  
     }
 
     &.active {

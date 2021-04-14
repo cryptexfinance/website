@@ -15,8 +15,7 @@ import arrowActive from '../../../../static/website/news/arrow-up.svg';
 
 const SectionTeam = (props) => {
   const [tblog, setBlog] = useState({});
-  const [activePage, setActivePage] = useState(0)
-  const [edgesTest, setEdgesTest] = useState([])
+  const [activePage, setActivePage] = useState(0)  
 
   const dataq = useStaticQuery(graphql`
     query {
@@ -101,7 +100,6 @@ const SectionTeam = (props) => {
   const RenderPagination = () => {
     let edges = (typeof(tblog.edges) !== `undefined` ? tblog.edges.length : 0)
     let pages = edges > 0 ? Math.ceil(edges / 3) : 0
-     
     let newsLastPage = pages*3 - edges
 
     let pagClass = "newsbox-pagination"
@@ -114,8 +112,8 @@ const SectionTeam = (props) => {
     let backClass = "pag-group pag-box back" + (activePage == 0 ? "" : " active") 
     let nextClass = "pag-group pag-box next" + (activePage == pages-1 ? "" : " active") 
 
-    let itemsClass = ["pag-items", "pag-items", "pag-items three", "pag-items four", "pag-items five"]
-    let itemClass = ["pag-item", "pag-item second", "pag-item third", "pag-item fourth", "pag-item fifth"]
+    let itemsClass = ["pag-items", "pag-items", "pag-items three", "pag-items four", "pag-items five", "pag-items six", "pag-items seven"]
+    let itemClass = ["pag-item", "pag-item second", "pag-item third", "pag-item fourth", "pag-item fifth", "pag-item sixth", "pag-item seventh"]
     let items = []
     for (let i = 0; i < pages; i++) {
       let iClass = itemClass[i] + (activePage == i ? " active" : "")

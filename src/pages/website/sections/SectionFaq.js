@@ -61,7 +61,6 @@ const SectionFaq = () => {
         <div className="faq-box">
           <Toggle title="Is TCAP live yet?" addToExpanded={addToExpanded}>
             <div className="answer">
-              TCAP is live! You can use TCAP by visiting  with the protocol by visiting 
               TCAP is live! You can use TCAP by visiting{" "}
               <a href="https://app.cryptex.finance" target="_blank">
                 app.cryptex.finance
