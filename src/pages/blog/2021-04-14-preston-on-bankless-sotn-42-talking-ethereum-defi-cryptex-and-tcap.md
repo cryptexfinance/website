@@ -6,6 +6,6 @@ description: https://www.youtube.com/watch?v=iF5O1rPbsm4
 featuredpost: true
 featuredimage: /img/prestonbankless.png
 tags:
-  - YouTube
+  - Bankless
 ---
 https://www.youtube.com/watch?v=iF5O1rPbsm4
