@@ -61,6 +61,7 @@ const SectionFaq = () => {
         <div className="faq-box">
           <Toggle title="Is TCAP live yet?" addToExpanded={addToExpanded}>
             <div className="answer">
+              TCAP is live! You can use TCAP by visiting  with the protocol by visiting 
               TCAP is live! You can use TCAP by visiting{" "}
               <a href="https://app.cryptex.finance" target="_blank">
                 app.cryptex.finance
@@ -78,11 +79,12 @@ const SectionFaq = () => {
 
           <Toggle title="Who is TCAP for?" addToExpanded={addToExpanded}>
             <div className="answer">
-              TCAP is for users that want to speculate in the total crypto
-              currency market by buying a token that it’s the representation of
-              the market. It’s also for DeFi users that want to earn fees by
-              minting TCAP tokens and adding liquidity on decentralized
-              exchanges or taking advantage of arbitrage opportunities.
+              TCAP is for users that want to speculate in the total
+              cryptocurrency market by buying a token that is the
+              representation of the entire market. It’s also for DeFi
+              users that want to earn fees by minting TCAP tokens and
+              adding liquidity on decentralized exchanges or taking
+              advantage of arbitrage opportunities.
             </div>
           </Toggle>
 
