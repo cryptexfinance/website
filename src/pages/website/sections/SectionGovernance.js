@@ -23,7 +23,7 @@ const SectionGovernance = () => {
             <a>
                 <img src={coinGecko} className="governance-icon gecko" alt="Coin Gecko" />
             </a>
-            <a>
+            <a href="https://analytics.sushi.com/pairs/0x2a93167ed63a31f35ca4788e2eb9fbd9fa6089d0" rel="noreferrer" target="_blank">
                 <img src={sushiLogo}  className="governance-icon uni" alt="Uni Logo" />
             </a>
             <a>
