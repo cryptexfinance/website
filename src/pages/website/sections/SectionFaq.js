@@ -50,8 +50,10 @@ const SectionFaq = () => {
             addToExpanded={addToExpanded}
           >
             <div className="answer">
-              TCAP includes every coin and token supported in one of our crypto
-              data providers.
+              TCAP includes every coin and token supported by the following 9 oracles and 5 data providers{" "}
+              <a href="https://data.chain.link/mcap-usd" target="_blank">
+                https://data.chain.link/mcap-usd
+              </a>     
             </div>
           </Toggle>
         </div>

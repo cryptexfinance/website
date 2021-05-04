@@ -20,13 +20,13 @@ const SectionGovernance = () => {
             future products within the Cryptex ecosystem.
         </div>
         <div className="governance-buttons">
-            <a>
+            <a href="https://www.coingecko.com/en/coins/cryptex-finance" rel="noreferrer" target="_blank">
                 <img src={coinGecko} className="governance-icon gecko" alt="Coin Gecko" />
             </a>
             <a href="https://analytics.sushi.com/pairs/0x2a93167ed63a31f35ca4788e2eb9fbd9fa6089d0" rel="noreferrer" target="_blank">
                 <img src={sushiLogo}  className="governance-icon uni" alt="Uni Logo" />
             </a>
-            <a>
+            <a href="https://defipulse.com/cryptex" rel="noreferrer" target="_blank">
                 <img src={dfpLogo} className="governance-icon dfp" alt="DFP"  />        
             </a>
         </div>
@@ -73,7 +73,7 @@ const SectionGovernance = () => {
             <div className="governance-details-item">
             <a
             rel="noopener noreferrer"
-            href="https://discord.com/invite/p3FSPxAxcm"
+            href="https://forum.cryptex.finance/"
             target="_blank"
             className="governance-details-text"
             >
