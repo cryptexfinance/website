@@ -51,8 +51,8 @@ const SectionFaq = () => {
           >
             <div className="answer">
               TCAP includes every coin and token supported by the following 9 oracles and 5 data providers{" "}
-              <a href="https://data.chain.link/mcap-usd" target="_blank">
-                https://data.chain.link/mcap-usd
+              <a href="https://data.chain.link/ethereum/mainnet/indexes/mcap-usd" target="_blank">
+                https://data.chain.link/ethereum/{" "}mainnet/indexes/mcap-usd
               </a>     
             </div>
           </Toggle>
