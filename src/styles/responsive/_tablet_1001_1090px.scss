@@ -477,31 +477,23 @@ and (orientation: portrait)
   .team {
     position: relative;
     &-title {
-      position: absolute;
-      width: 312px;
-      height: 36px;
-      left: calc(50% - 400px/2 - 167.5px);
-      top: calc(50% - 36px/2 - 627px);
+      margin: 1rem 0rem 2rem 0rem;
       font-size: 24px;
       line-height: 36px;
       letter-spacing: 0.3px;
     }
   
     &-subtitle {
-      position: absolute;
+      margin: 5rem 0rem;
       width: 505px;
-      height: 44px;
       font-size: 16px;
       line-height: 22px;
       letter-spacing: 0.3px;
-      left: calc(50% - 390px/2 - 170px);
-      top: calc(50% - 44px/2 - 550px);
     }
   
     &-divider {
-      background: transparent;
+      display: none;
     }
-
   }
 
   .button-pink {
@@ -528,10 +520,7 @@ and (orientation: portrait)
   }
 
   .team-row {
-    position: absolute  ;
     width: 100%;
-    top: calc(50% - 166px/2 - 363.7px);
-    left: calc(50% - 1.6875rem/2 - 32.65625rem)
   }
 
   .team-box {
@@ -563,17 +552,31 @@ and (orientation: portrait)
       letter-spacing: -0.2px;
       margin-left: 5px;
     }
-
     &-description {
-      position: absolute;
       width: 315px;
       height: 225px;
       border-radius: 2px;
       font-size: 12px;
-      line-height: 16px;
+      line-height: 15px;
       letter-spacing: -0.2px;
       margin-top: 20px;
       margin-left: 5px;
+    }
+    .flippy-back {
+      width: 100%;
+    }
+  }
+
+  .team-pagination {  
+    padding: 0.5rem 0rem 0.5rem 0rem;
+    &-container {
+      width: 50rem;
+    }
+    .items {
+      width: 20rem;
+    }
+    &.two {
+      padding-top: 58.5rem;
     }
   }
 
@@ -583,22 +586,12 @@ and (orientation: portrait)
   }
 
   .newsbox {
-    position: absolute;
-  
+    padding-top: 12rem;
     &-title {
-      position: absolute;
+      padding: 20px 0px;
       width: 304px;
-      height: 24px;
       font-size: 22px;
       line-height: 24px;
-      left: calc(50% - 60px/2 + 180.5px);
-      top: calc(50% - 10px/2 + 1045px);
-    }
-
-    .newsgroup {
-      position: absolute;
-      left: calc(50% - 10px/2 + 190px);
-      top: calc(50% - 80px/2 + 1186px);
     }
 
     &-pagination {
@@ -606,16 +599,16 @@ and (orientation: portrait)
       width: 35rem;
       margin-top: 5%;  
 
-      &.one {
-        margin-top: 60%;
-      }
       &.two {
-        margin-top: 32.5%;
+        padding-top: 32rem;
       }
+      &.one {
+        padding-top: 50rem;
+      } 
     }
 
     .newsitem {
-      display: inline-table;
+      flex-wrap: nowrap;
       &.hide {
         display: None;
       }
@@ -667,8 +660,6 @@ and (orientation: portrait)
         margin:0px 20px 20px 0px;
         line-height: 30px;
         padding:2px 0 2px 2px;
-        // margin-top: 12px;
-        // margin-bottom: 24px;
          
       }
       .taglink  {
@@ -880,6 +871,7 @@ and (orientation: portrait)
     height: 130vh;
     margin-bottom: 10vh;
     position: relative;
+
   }
 
   .section-governance {
