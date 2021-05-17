@@ -39,7 +39,7 @@ const teamData  =  [
     {
         name: "Preston Van Loon",
         position: "Co-Founder & Blockchain Lead",
-        description: "Preston is CEO and co-founder of Prysmatic Labs and leads a team of dedicated blockchain developers in building critical layer one scaling solutions for Ethereum 2.0. Since January 2018, Preston and team have received nearly $2MM in grant funding to pursue these efforts from the Ethereum Foundation, Vitalik Buterin, Ethereum Community Fund, and many other community members.",
+        description: "Preston is a co-founder of Prysmatic Labs and leads a team of dedicated blockchain developers in building critical layer one scaling solutions for Ethereum 2.0. Since January 2018, Preston and team have received nearly $2MM in grant funding to pursue these efforts from the Ethereum Foundation, Vitalik Buterin, Ethereum Community Fund, and many other community members.",
         image: preston,
         mobile_image: prestonm
     },
