@@ -460,35 +460,20 @@ and (orientation: portrait)
   .team {
     position: relative;
     &-title {
-      position: absolute;
-      width: 312px;
-      height: 36px;
-      left: calc(50% - 312px/2 - 167.5px);
-      top: calc(50% - 36px/2 - 567px);
+      margin: 1rem 0rem 2rem 0rem;
       font-size: 24px;
       line-height: 36px;
       letter-spacing: 0.3px;
     }
-    
     &-subtitle {
-      position: absolute;
-      width: 505px;
-      height: 44px;
+      margin: 5rem 0rem;
       font-size: 16px;
       line-height: 22px;
       letter-spacing: 0.3px;
-      left: calc(50% - 305px/2 - 170px);
-      top: calc(50% - 44px/2 - 500px);
     }
-    
-    &-row {
-      left: calc(50% - 1.6rem/2 - 38.65625rem);
-    }
-
     &-divider {
-      background: transparent;
+      display: none;
     }
-
   }
 
   .button-pink {
@@ -515,9 +500,7 @@ and (orientation: portrait)
   }
 
   .team-row {
-    position: absolute  ;
     width: 100%;
-    top: calc(50% - 166px/2 - 343.7px);
   }
 
   .team-box {
@@ -551,7 +534,6 @@ and (orientation: portrait)
     }
 
     &-description {
-      position: absolute;
       width: 315px;
       height: 225px;
       border-radius: 2px;
@@ -561,6 +543,22 @@ and (orientation: portrait)
       margin-top: 20px;
       margin-left: 5px;
     }
+    .flippy-back {
+      width: 100%;
+    }
+  }
+
+  .team-pagination {  
+    padding: 0.5rem 0rem 0.5rem 0rem;
+    &-container {
+      width: 50rem;
+    }
+    .items {
+      width: 20rem;
+    }
+    &.two {
+      padding-top: 0.5rem;
+    }
   }
 
   .flippy-back {
@@ -569,39 +567,28 @@ and (orientation: portrait)
   }
 
   .newsbox {
-    position: absolute;
+    padding-top: 5rem;
     
     &-title {
-      position: absolute;
+      padding: 20px 0px;
       width: 304px;
-      height: 24px;
       font-size: 22px;
       line-height: 24px;
-      left: calc(50% - 204px/2 + 180.5px);
-      top: calc(50% - 166px/2 + 925px);
     }
-
     &-pagination {
-      position: absolute;
-      width: 35rem;
-      margin-top: 5%;  
+      width: 100%;
+      margin-top: 6rem;  
 
       &.one {
-        margin-top: 60%;
+        margin-top: -5rem;
       }
       &.two {
-        margin-top: 32.5%;
+        margin-top: 0rem;
       }
-    }
-
-    .newsgroup {
-      position: absolute;
-      left: calc(50% - 50px/2 + 150px);
-      top: calc(50% - 166px/2 + 1006px);
     }
 
     .newsitem {
-      display: inline-table;
+      flex-wrap: nowrap;
       &.hide {
         display: None;
       }
@@ -611,7 +598,6 @@ and (orientation: portrait)
         width: 120px;
         height: 120px;
         float: left;
-        margin-left: -102.76px;
         margin-right: 32px;
         border-radius: 2px;
       }
@@ -639,12 +625,10 @@ and (orientation: portrait)
         line-height: 12px;
         letter-spacing: 0.6px;
       }
-
       &-tag-items {
         margin-top: 12px;
         margin-bottom: 12px;
       }
-
       &-tagbox { 
         position: relative;
         color: $color-dark-clean;
@@ -653,9 +637,6 @@ and (orientation: portrait)
         margin:0px 20px 20px 0px;
         line-height: 30px;
         padding:2px 0 2px 2px;
-        // margin-top: 12px;
-        // margin-bottom: 24px;
-         
       }
       .taglink  {
         font-size: 16px;
@@ -668,7 +649,6 @@ and (orientation: portrait)
     
       &:not(:last-child) { 
         padding-bottom: 48px !important;
-        // padding-left: 2rem !important;
       }
     }
   }
@@ -872,8 +852,15 @@ and (orientation: portrait)
 
   .section-team {
     height: 145vh;
-    margin-bottom: 30vh;
+    margin-bottom: 40vh;
     position: relative;
+    .team-container {
+      .members-container {
+        .team-members {
+          padding: 1rem 0rem;
+        }
+      }
+    }
   }
   
   .section-faq {
@@ -913,7 +900,7 @@ and (orientation: portrait)
       height: 90vh;
     }
     .section-team {
-      height: 100vh;
+      height: 120vh;
     }
     .section-faq {
       height: 70vh;

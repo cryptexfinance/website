@@ -264,20 +264,12 @@
 
       &-icons {
         margin-right: 24px;
-        // background: transparent;
-        // text-shadow: 0rem 0rem 0.156565rem #6450FB, 0rem 0rem 0.13011875rem #3626B0;
-        // filter: drop-shadow(0 0 0.25rem #6450FB);
       }
 
       &-text {
-        // left: calc(50% - 9.625rem/2 + 26.9375rem);
-        // top: calc(50% - 1.5rem/2 - 9.625rem);
-        // width: 139px;
         height: 72px;
         font-size: 18px;
         line-height: 24px;
-        // display: flex;
-        // letter-spacing: 0.3px;
       }
     }
   }
@@ -482,32 +474,22 @@
   .team {
     position: relative;
     &-title {
-      position: absolute;
-      width: 312px;
-      height: 36px;
-      left: calc(50% - 312px / 2 - 7.5px);
-      top: calc(50% - 36px / 2 - 447px);
+      margin: 1rem 0rem 2rem 0rem;
       font-size: 24px;
       line-height: 36px;
       letter-spacing: 0.3px;
     }
-
     &-subtitle {
-      position: absolute;
-      width: 305px;
-      height: 44px;
+      margin: 5rem 0rem;
+      width: 100%;
       font-size: 16px;
       line-height: 22px;
       letter-spacing: 0.3px;
-      left: calc(50% - 305px / 2 - 11px);
-      top: calc(50% - 44px / 2 - 361px);
     }
-
     &-divider {
-      background: transparent;
+      display: none;
     }
   }
-
   .header {
     font-size: 22px;
     line-height: 36px;
@@ -515,11 +497,8 @@
     align-items: center;
     text-transform: capitalize;
   }
-
   .team-row {
-    position: absolute;
     width: 100%;
-    top: calc(50% - 166px / 2 - 203.7px);
   }
 
   .team-box {
@@ -549,17 +528,30 @@
       line-height: 16px;
       letter-spacing: -0.2px;
     }
-
     &-description {
-      position: absolute;
       width: 315px;
       height: 225px;
       border-radius: 2px;
       font-size: 12px;
-      line-height: 16px;
+      line-height: 15px;
       letter-spacing: -0.2px;
-      margin-top: 20px;
-      // background-color: #212138;
+      margin-top: 15px;
+    }
+    .flippy-back {
+      width: 100%;
+    }
+  }
+
+  .team-pagination {  
+    padding: 0.5rem 0rem 0.5rem 0rem;
+    &-container {
+      width: 50rem;
+    }
+    .items {
+      width: 20rem;
+    }
+    &.two {
+      padding-top: 58.5rem;
     }
   }
 
@@ -569,39 +561,29 @@
   }
 
   .newsbox {
-    position: absolute;
-
+    padding-top: 12rem;
     &-title {
-      position: absolute;
-      width: 304px;
-      height: 24px;
+      padding: 20px 0px;
+      width: 304px;      
       font-size: 22px;
-      line-height: 24px;
-      left: calc(50% - 204px / 2 + 140.5px);
-      top: calc(50% - 300px / 2 + 1410px);
+      line-height: 24px;      
     }
-
-    .newsgroup {
-      position: absolute;
-      left: 10px; 
-      top: calc(50% - 370px / 2 + 1530px);
-    }
-
     &-pagination {
-      position: absolute;
-      width: 60rem;
+      width: 100%;
       margin-top: 7%;  
-
-      &.one {
-        margin-top: 70%;
-      }
       &.two {
-        margin-top: 38%;
+        padding-top: 32rem;
       }
+      &.one {
+        padding-top: 59rem;
+      }      
+      &-container {
+        display: flex;
+        width: 50rem;
+      } 
     }
-
     .newsitem {
-      display: inline-table;
+      flex-wrap: nowrap;
       z-index: 20;
       &.hide {
         display: None;
@@ -617,7 +599,7 @@
       }
       &-title {
         position: relative;
-        width: 330px;
+        width: 100%;
         height: 52px;
         font-size: 10.3px;
         line-height: 18px;
@@ -646,7 +628,6 @@
         letter-spacing: 0.6px;
         display: none;
       }
-
       &-tag-items {
         margin-top: 5px;
         margin-bottom: 5px;
@@ -676,6 +657,15 @@
         padding-bottom: 5rem !important;
       }
     }
+  }
+
+  .pag {
+    &-items {
+      width: 40rem;
+    }
+  }
+  .newsgroup {
+    justify-content: normal;    
   }
 
   .faq {
@@ -882,6 +872,10 @@
     height: 160vh;
     margin-bottom: 143vh;
     position: relative;
+
+    .team-posts{
+      padding: 10rem 0rem; 
+    }
   }
 
   .section-faq {
@@ -952,14 +946,6 @@
       height: 130vh;
       margin-bottom: 115vh;
     }   
-    .newsbox {
-      &-title {        
-        top: calc(50% - 120px / 2 + 1300px);
-      }
-      .newsgroup {
-        top: calc(50% - 180px / 2 + 1390px);
-      }
-    } 
     .section-faq {
       height: 110vh
     }
@@ -998,20 +984,6 @@
       height: 130vh;
       margin-bottom: 120vh;
     } 
-    .newsbox {
-      &-title {        
-        top: calc(50% - 200px / 2 + 1370px);
-      }
-      .newsgroup {
-        top: calc(50% - 250px / 2 + 1490px);
-      }
-
-      .newsitem {
-        &-photo {
-          top: 0.9rem;          
-        }
-      }
-    } 
     .section-faq {
       height: 60vh;
       margin-bottom: 50vh;
@@ -1040,14 +1012,6 @@
     } 
     .section-team {
       height: 195vh;
-    } 
-    .newsbox {
-      &-title {        
-        top: calc(50% - 200px / 2 + 1750px);
-      }
-      .newsgroup {
-        top: calc(50% - 250px / 2 + 1856px);
-      }
     } 
     .section-faq {
       height: 160vh
