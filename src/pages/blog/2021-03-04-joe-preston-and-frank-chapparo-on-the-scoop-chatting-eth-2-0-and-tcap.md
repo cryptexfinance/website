@@ -6,6 +6,6 @@ description: https://podcasts.apple.com/us/podcast/deep-dive-into-eth-2-0-scalin
 featuredpost: true
 featuredimage: /img/thescoop.jpg
 tags:
-  - Podcast
+  - The Scoop
 ---
 https://podcasts.apple.com/us/podcast/deep-dive-into-eth-2-0-scaling-project-that-lets-users/id1460134454?i=1000511344422
