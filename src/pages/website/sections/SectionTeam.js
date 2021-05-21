@@ -119,7 +119,7 @@ const SectionTeam = (props) => {
       allMarkdownRemark(
         sort: { order: DESC, fields: [frontmatter___date] }
         filter: { frontmatter: { templateKey: { eq: "blog-post" } } }
-        limit: 21
+        limit: 21 
       ) {
         edges {
           node {

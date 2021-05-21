@@ -52,7 +52,8 @@ const SectionGovernance = () => {
             <div className="about-details-item">
                 <a
                 rel="noreferrer"
-                target="_blank"                
+                target="_blank"
+                href=" https://www.withtally.com/governance/cryptex"      
                 className="governance-details-text"
                 >
                 <img src={voting} className="governance-details-icons" alt="Voting" />
