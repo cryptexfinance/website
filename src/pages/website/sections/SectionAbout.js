@@ -11,7 +11,7 @@ const SectionAbout = () => {
       <div className="about-title header">What is TCAP?</div>
       <div className="about-content">
         TCAP gives holders real-time price exposure to total cryptocurrency
-        market cap. It's a new, 200% fully backed, fully collateralized asset
+        market cap. It's a new, 150% fully backed, fully collateralized asset
         that’s both audited and accurately representative of the entire
         cryptocurrency complex by total market capitalization.
       </div>

@@ -40,7 +40,7 @@ const SectionFaq = () => {
 
           <Toggle title="What is TCAP backed by?" addToExpanded={addToExpanded}>
             <div className="answer">
-              Each TCAP is collateralized by more than 200% corresponding amount
+              Each TCAP is collateralized by more than 150% corresponding amount
               of ETH or DAI.
             </div>
           </Toggle>
