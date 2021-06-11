@@ -30,8 +30,8 @@ const SectionGovernance = () => {
             <a href="https://defipulse.com/cryptex" rel="noreferrer" target="_blank">
                 <img src={dfpLogo} className="governance-icon dfp" alt="DFP"  />        
             </a>
-            <a>
-                <img  src={geminiLogo} className="governance-icon gemini" alt="gemini logo" /> 
+            <a href="https://www.gemini.com/prices/cryptex?utm_source=cryptex&utm_medium=link&utm_campaign=web_referral" rel="noreferrer" target="_blank">
+                <img src={geminiLogo} className="governance-icon gemini" alt="gemini logo" /> 
             </a>
         </div>
         <div className="governance-image">            
