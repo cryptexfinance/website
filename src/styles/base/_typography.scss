@@ -418,6 +418,7 @@
       width: 36.5px;
       height: 40.75px;
       top: 7px;
+      display: none;
     }
   }
 }
@@ -589,7 +590,15 @@
     width: 45rem;
     height: 6.5rem;
     left: calc(50% - 45rem / 2 - 13.0375rem);
-    top: calc(50% - 6.5rem / 2 - 2.1875rem);
+    top: calc(50% - 10rem / 2 - 2.1875rem);
+  }
+
+  &-icons-row-2 {
+    position: absolute;
+    width: 45rem;
+    height: 6.5rem;
+    left: calc(50% - 45rem / 2 - 13.0375rem);
+    top: calc(50% - 1rem / 2 - 1.1875rem);
   }
 
   &-item {
@@ -599,11 +608,6 @@
     text-decoration: none !important;
 
     &:hover {
-      //box-sizing: border-box;
-      // filter:drop-shadow(5.00246px -4.66487px 0px $shadow-purple-neon) drop-shadow(-5.00246px 4.66487px 0px $shadow-pink-neon);
-      // filter:drop-shadow(5.00246px -4.66487px 0px rgb(0, 255, 255)) drop-shadow(-5.00246px 4.66487px 0px rgb(255, 0, 255));
-      //box-shadow: 0px 0px 1px $shadow-green-neon, 0px 0px 34px $shadow-green-neon-second; rgb(0, 255, 255) rgb(255, 0, 255)
-      // color:#fa0000;
       text-shadow: 0 0 80px $shadow-purple-neon, 0 0 70px $shadow-purple-neon,
         0 0 60px $shadow-purple-neon, 0 0 50px $shadow-purple-neon,
         0 0 40px $shadow-purple-neon, 0 0 30px $shadow-purple-neon;
