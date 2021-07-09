@@ -782,7 +782,14 @@ and (orientation: portrait)
       width: 780px;
       height: 42px;
       left: 20%;
-      top: calc(50% - 104px/2 - 215px);
+      top: calc(50% - 250px/2 - 215px);
+    }
+    &-icons-row-2 {
+      position: absolute;
+      width: 780px;
+      height: 42px;
+      left: 20%;
+      top: calc(50% - 140px/2 - 180px);
     }
 
     &-item {

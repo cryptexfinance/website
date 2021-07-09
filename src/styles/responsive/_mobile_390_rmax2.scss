@@ -771,7 +771,15 @@
       position: absolute;
       width: 223px;
       height: 42px;
-      left: 50px; //calc(50% - 375px/2 - 208.6px);
+      left: 50px; 
+      top: calc(50% - 104px / 2 - 315px);
+    }
+
+    &-icons-row-2 {
+      position: absolute;
+      width: 223px;
+      height: 42px;
+      left: 215px; 
       top: calc(50% - 104px / 2 - 315px);
     }
 
