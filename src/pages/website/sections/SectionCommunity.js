@@ -4,9 +4,6 @@ import { toast, ToastContainer } from "react-toastify";
 import reddit from '../../../../static/website/community/reddit.svg';
 import discord from '../../../../static/website/community/discord.svg';
 import twitter from '../../../../static/website/community/twitter.svg';
-import medium from '../../../../static/website/community/medium.svg';
-import youtube from '../../../../static/website/community/youtube.svg';
-import telegram from '../../../../static/website/community/telegram.svg';
 import community from '../../../../static/website/community/community.webp';
 import addToMailchimp from 'gatsby-plugin-mailchimp';
 import toasty from "../../../../static/toasty.png";
@@ -97,20 +94,6 @@ const SectionCommunity = ({ data }) => {
             <a href="https://twitter.com/cryptexfinance" rel="noreferrer" target="_blank" className="community-item">
               <img src={twitter} className="community-item-icon" alt="Reddit" />
               <div className="community-item-text terciary-header">Twitter</div>
-            </a>
-          </div>
-          <div className="community-icons-row-2">
-            <a href=" https://medium.com/cryptexfinance" rel="noreferrer" target="_blank" className="community-item">
-              <img src={medium} className="community-item-icon" alt="Reddit" />
-              <div className="community-item-text terciary-header">Medium</div>
-            </a>
-            <a href="https://t.me/totalcryptomarketcap" rel="noreferrer" target="_blank" className="community-item">
-              <img src={telegram} className="community-item-icon" alt="Reddit" />
-              <div className="community-item-text terciary-header">Telegram</div>
-            </a>
-            <a href="https://www.youtube.com/channel/UCdN17zdr5MCDph75srdhutQ" rel="noreferrer" target="_blank" className="community-item">
-              <img src={youtube} className="community-item-icon" alt="Reddit" />
-              <div className="community-item-text terciary-header">Youtube</div>
             </a>
           </div>
           <form onSubmit={handleSubmit}>

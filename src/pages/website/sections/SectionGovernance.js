@@ -3,7 +3,6 @@ import governance from '../../../../static/website/governance/governance.png'
 import coinGecko from '../../../../static/website/governance/coin-gecko.svg'
 import sushiLogo from '../../../../static/website/governance/sushi-logo.svg'
 import dfpLogo from '../../../../static/website/governance/dfp-logo.svg'
-import geminiLogo from '../../../../static/website/governance/gemini-hor-white-full.svg'
 import ctx from '../../../../static/website/governance/ctx.svg'
 import docs from '../../../../static/website/governance/docs.svg'
 import forum from '../../../../static/website/governance/forum.svg'
@@ -29,9 +28,6 @@ const SectionGovernance = () => {
             </a>
             <a href="https://defipulse.com/cryptex" rel="noreferrer" target="_blank">
                 <img src={dfpLogo} className="governance-icon dfp" alt="DFP"  />        
-            </a>
-            <a href="https://www.gemini.com/prices/cryptex?utm_source=cryptex&utm_medium=link&utm_campaign=web_referral" rel="noreferrer" target="_blank">
-                <img src={geminiLogo} className="governance-icon gemini" alt="gemini logo" /> 
             </a>
         </div>
         <div className="governance-image">            
