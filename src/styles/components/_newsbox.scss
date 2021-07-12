@@ -1,10 +1,11 @@
 .newsbox {
-  padding: 2rem 0rem 0rem 2rem;
+  padding: 0rem 0rem 0rem 2rem;
 
   &-title {
     position: relative;
-    width: 13.75rem;
+    width: 17.75rem;
     height: 1.5rem;    
+    font-size: 1.7rem;
   }
   &-pagination {
     display: flex;
@@ -29,7 +30,7 @@
     position: relative;
     display: flex;
     flex-direction: column;
-    height: 100%;
+    height: 98%;
     padding-top: 4rem;
     justify-content: space-between;
     align-content: center;
@@ -97,7 +98,7 @@
   }
 
   &:not(:last-child) { 
-    padding-bottom: 3rem !important;    
+    padding-bottom: 5rem !important;    
   }
 
   .terciary-header {
