@@ -100,11 +100,11 @@ const SectionCommunity = ({ data }) => {
             </a>
           </div>
           <div className="community-icons-row-2">
-            <a href=" https://medium.com/cryptexfinance" rel="noreferrer" target="_blank" className="community-item">
+            <a href="https://medium.com/cryptexfinance" rel="noreferrer" target="_blank" className="community-item">
               <img src={medium} className="community-item-icon" alt="Reddit" />
               <div className="community-item-text terciary-header">Medium</div>
             </a>
-            <a href="https://t.me/totalcryptomarketcap" rel="noreferrer" target="_blank" className="community-item">
+            <a href="https://t.me/cryptexfinance" rel="noreferrer" target="_blank" className="community-item">
               <img src={telegram} className="community-item-icon" alt="Reddit" />
               <div className="community-item-text terciary-header">Telegram</div>
             </a>
