@@ -13,59 +13,63 @@ tags:
   - TCAP Protocol
   - Total Crypto Market Cap
 ---
-A well ajusted DAO treasury is fundamental to expand the development of the DAO's project be it software integration or marketing on the web.
+A well-adjusted DAO treasury is fundamental to expand the development of the DAO's scope - be it software integration or online marketing.
 
-In the search for a diversified, reliable and bulletproof DAO treasury several alternatives are often taken:
+In the search for a diversified, reliable, and failsafe DAO treasury, governance participants often must take a multi-layered approach that incorporates different aspects:
 
 **Growth oriented side**
 
-1. Native Token : In most cases DAOs will allocate an important part of their treasury to their crypto project's Native Token. While it is good to hold an important part of the DAO's native token to show confidence in its value and use cases, it also poses a great problem for the stability of the treasury. Depending on the scale of development of the project and its token or on the security viability of the token, volatility will result. This leads to the treasury's value being based solely on the market value of the DAO's native token and having great swings in treasury fund that can compromise future development or even the entire project.
-2. Proved Ecosystem Cryptos (ETH/BTC) : DAOs will necessarly have confidence in the blockchain on which they have developped their crypto project and may want to invest in the crypto asset associated with the wider blockchain (ETH being the mainet asset for Ethereum). Along with ETH (or the specific mainet blockchain crypto) DAOs might allocate a smaller part of the treasury to BTC because of its status as "digital gold" and its ability to stir the market.
+1. **Native Token**: In most cases, DAOs will allocate a significant proportion of their treasury holdings to their own Native Token. While it is good to hold an important part of the DAO's native token to show confidence in its value and use cases, it also poses a problem for the stability of the treasury. Depending on the scale of the project's development, volatility can increase, which may shake investor confidence. This leads to the treasury's value being based solely on the market value of the DAO's native token. Therefore, great swings in the total value of the treasury can compromise future development, and may even doom the project entirely.
+2. **Proven Ecosystem Cryptos** (ETH/BTC): DAOs should have full faith that the blockchain mainnet on which their project has been developed can facilitate all of the project's functions and add value to the entire ecosystem. As a result, the DAO will likely desire to invest in the mainnet's native crypto asset. For example, a crypto project and DAO built on the Ethereum network will likely want to hold ETH in its treasury. DAOs might also allocate a smaller portion of the treasury to BTC because of its status as "digital gold".
 
 **Stability oriented side**
 
-1. Stablecoin : In the search for a reliable short/middle term treasury DAOs may allocate a minor part of their assets to Stablecoins like USDT, BUSD or USDC. This type of allocation favors a balanced approch to treasury funding and is proven in times of wild market volatility.
-2. Liquidity Pool Pair : For stable and consistent returns on investments some DAOs will chose to provide liquidity for their Native Token pairs on Decentralised Exchanges. Depending on the chosen pair it can lead to high returns bringing unparalled and liquid revenue streams for the treasury.
+1. Stablecoins: In the search for reliability, or stability, DAOs should allocate a portion of their assets to Stablecoins like USDT, BUSD or USDC. This balanced approach to allocate a greater proportion of the treasury to stablecoins is favored by DAOs during wild market volatility.
+2. Liquidity Pool Pair: For consistent returns, some DAOs choose to provide liquidity for their native token pairs on Decentralised Exchanges (DEX) in order to rake in incentives. This strategy can lead to unparalleled returns through liquid revenue streams for the treasury, especially in times of high trading volume.
 
-Here's a graph on the typical allocation for a DAO's treasury.
+View the circle chart on typical allocations for a DAO treasury.
 
 ![](/img/dao-terasury-circle-chart.png "DAO treasury allocations circle chart")
 
-As you can see, the common allocation of funds goes like :
+As you can see, the common allocation of treasury funds looks something like this:
 
-* 60% - 85% to Native Token
+* 60% - 85% to Native Tokens
 * 5% - 15% to Ecosystem Cryptos
 * 5% - 15% to Stablecoins
 * 5% - 10% to Liquidity Pool Pair
 
-Most treasuries will have a mix of growth-oriented and stability-oriented investments with an amphasis on growth due to an over exposure to Native Tokens.
+Most treasuries will have a mix of Growth-oriented and Stability-oriented investments, with an emphasis on growth if they are deemed to be overexposed to native tokens.
 
-DAO's will hold their native token between 60% and 90% of the treasury's fund, some will even allocate 100% of the treasury to their token.
+DAO's will allocate anywhere between 60% and 90% of the treasury's holdings to their native token. Some will even allocate 100% of the treasury to their token.
 
-This concentration of allocation will lead to higher risk factors for the DAO treasury by replicating the market value of their token thus affecting negatively the fund during troubled times.
+This concentrated allocation is a high-risk strategy for a DAO treasury because it leaves the DAO vulnerable to the full negative effects of a downturn in price and extended bear markets.
 
-Consider a risk factor between 1 and 3 (1 being a non volatile asset like a stablecoin and 3 being a very volatile asset) with this scale we can categorize and evaluate the reliability and security of the DAO treasury for future growth.
+### Risk Factors
 
-A Native Token will have a risk factor of 3 because of its inherent volatility as a low/middle tier market cap token and the early developments of the project.
+If we evaluate risk factors on a scale between 1 and 3 (1 being a non volatile asset, like a stablecoin, and 3 being a highly-volatile asset), we can categorize and evaluate the reliability and security of a DAO treasury for future growth.
+
+Native tokens have a risk factor of 3 because of their inherent volatility, especially if they are low/middle tier market cap tokens.
 
 Ecosystem cryptos can be assessed with a risk factor of 2 because of their long term viability and the trust of the crypto community but they are equally risky during market cycles.
 
-Stablecoins by their nature replicate the US Dollar and so have no risk whatsoever. The different stablecoins offered by crypto companies can stumble on legal issues but the risk is negligible putting stablecoins at a risk factor of 1.
+Stablecoins, by their nature, remain pegged to the value of a different asset and so have little risk and have a risk factor of 1. The different stablecoins offered by crypto companies can stumble into legal issues, but the risk is usually negligible. Another risk is the coin losing its stable peg, but this is a very rare occurrence in the case of the top stablecoins on the market.
 
-Liquidity Pool Pair are usually thought as more risky than solely investing but it actually is a pretty safe way to hold long term on two assets while accumulating "dividends". If one of the asset depreciate the other appreciate to offset the loss in liquidity.
+Liquidity Pool Pairs tend to present the greatest risk with a risk factor of 3. However, the rewards they pay out allow the DAO treasury to accumulate wealth over a long period. Another condition that adds risk to this strategy is impermanent loss, which is where the balance of tokens a liquidity provider initially provides can shift based on fluctuations in the market.
 
-**TCAP : the answer for growth and stability.**
+### **TCAP: the answer for growth and stability**
 
-Some aggregated data on TCAP's performance :
+Inherent risk factors in DAO treasury investments makes TCAP an ideal token for a treasury to hold. TCAP is a coin based on the value of the TCAP Index, which tracks the total cryptocurrency market capitalization.
 
-YTD performance : +138%
+Some aggregated data on TCAP's performance:
 
-QTD performance (July 1st) : +31%
+YTD performance: +138%
+
+QTD performance (July 1st): +31%
 
 ![](/img/dune-tcap.jpg "Dune TCAP Chart")
 
-With a current Crypto Market Capitalisation of $2 Trillion, TCAP gives DAOs the opportunity to capture the growth of the entire crypto ecosystem without compromising on decentralisation, security and governance flexibility.
+With a current Crypto Market Capitalization of $2 Trillion, TCAP gives DAOs the opportunity to capture the growth of the entire crypto ecosystem without compromising on decentralization, security and governance flexibility.
 
 TCAP gives the opportunity for DAOs to allocate a part of their treasury to the S&P 500 of cryptocurrency. The crypto sector is known for its volatile cycles and otherwise unimaginable returns on obscure altcoins.
 
-With TCAP's ability to replicate the total capitalisation of the cryptocurrency market DAOs can capture exponential future growth while offsetting the inherent risk of investing in single cryptocurrencies or token. TCAP positions itself with a risk factor of 2 comparable to Ecosystem Cryptos like BTC or ETH but with bigger historical performance
+With TCAP's ability to replicate the total capitalisation of the cryptocurrency market DAOs can capture exponential future growth while offsetting the inherent risk of investing in a single class of cryptocurrencies. TCAP comes with a risk factor of 2 - comparable to Ecosystem Cryptos like BTC or ETH - but with greater historical performance.
