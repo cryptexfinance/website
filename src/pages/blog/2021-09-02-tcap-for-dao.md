@@ -58,13 +58,15 @@ Liquidity Pool Pairs tend to present the greatest risk with a risk factor of 3. 
 
 ### **TCAP: the answer for growth and stability**
 
-Inherent risk factors in DAO treasury investments makes TCAP an ideal token for a treasury to hold. TCAP is a coin based on the value of the TCAP Index, which tracks the total cryptocurrency market capitalization.
+Inherent risk factors in DAO treasury investments makes TCAP an ideal token for a treasury to hold. TCAP is a coin based on the value of the total cryptocurrency market capitalization.
 
-Some aggregated data on TCAP's performance:
+It acts as a token index replicating the movements of the whole crypto market with a divisor of 10,000,000,000, meaning that when the whole capitalization of the market is valued at $2 Trillion, TCAP is $200.
 
-YTD performance: +138%
+Some aggregated data on TCAP's performance as of September 6th, 2021:
 
-QTD performance (July 1st): +31%
+YTD performance: +210%
+
+QTD performance (July 1st): +71.6%
 
 ![](/img/dune-tcap.jpg "Dune TCAP Chart")
 
@@ -72,4 +74,4 @@ With a current Crypto Market Capitalization of $2 Trillion, TCAP gives DAOs the 
 
 TCAP gives the opportunity for DAOs to allocate a part of their treasury to the S&P 500 of cryptocurrency. The crypto sector is known for its volatile cycles and otherwise unimaginable returns on obscure altcoins.
 
-With TCAP's ability to replicate the total capitalisation of the cryptocurrency market DAOs can capture exponential future growth while offsetting the inherent risk of investing in a single class of cryptocurrencies. TCAP comes with a risk factor of 2 - comparable to Ecosystem Cryptos like BTC or ETH - but with greater historical performance.
+With TCAP's ability to replicate the total capitalization of the cryptocurrency market DAOs can capture exponential future growth while offsetting the inherent risk of investing in a single class of cryptocurrencies. TCAP comes with a risk factor of 2 - comparable to Ecosystem Cryptos like BTC or ETH - but with greater historical performance.
