@@ -25,7 +25,7 @@ In the search for a diversified, reliable, and failsafe DAO treasury, governance
 **Stability oriented side**
 
 1. Stablecoins: In the search for reliability, or stability, DAOs should allocate a portion of their assets to Stablecoins like USDT, BUSD or USDC. This balanced approach to allocate a greater proportion of the treasury to stablecoins is favored by DAOs during wild market volatility.
-2. Liquidity Pool Pair: For consistent returns, some DAOs choose to provide liquidity for their native token pairs on Decentralised Exchanges (DEX) in order to rake in incentives. This strategy can lead to unparalleled returns through liquid revenue streams for the treasury, especially in times of high trading volume.
+2. Liquidity Pool Pair: For consistent returns, some DAOs choose to provide liquidity for their native token pairs on Decentralized Exchanges (DEX) in order to rake in incentives. This strategy can lead to unparalleled returns through liquid revenue streams for the treasury, especially in times of high trading volume.
 
 View the circle chart on typical allocations for a DAO treasury.
 
@@ -58,9 +58,9 @@ Liquidity Pool Pairs tend to present the greatest risk with a risk factor of 3. 
 
 ### **TCAP: the answer for growth and stability**
 
-Inherent risk factors in DAO treasury investments makes TCAP an ideal token for a treasury to hold. TCAP is a coin based on the value of the total cryptocurrency market capitalization.
+Inherent risk factors in DAO treasury investments makes [TCAP](https://cryptex.finance/#about) an ideal token for a treasury to hold. TCAP is a coin based on the value of the total cryptocurrency market capitalization.
 
-It acts as a token index replicating the movements of the whole crypto market with a divisor of 10,000,000,000, meaning that when the whole capitalization of the market is valued at $2 Trillion, TCAP is $200.
+It acts as a [token index](https://www.gemini.com/cryptopedia/crypto-index-fund-tcap-token-cryptex-trade) replicating the movements of the whole crypto market with a divisor of 10,000,000,000, meaning that when the whole capitalization of the market is valued at $2 Trillion, TCAP is $200.
 
 Some aggregated data on TCAP's performance as of September 6th, 2021:
 
@@ -72,6 +72,6 @@ QTD performance (July 1st): +71.6%
 
 With a current Crypto Market Capitalization of $2 Trillion, TCAP gives DAOs the opportunity to capture the growth of the entire crypto ecosystem without compromising on decentralization, security and governance flexibility.
 
-TCAP gives the opportunity for DAOs to allocate a part of their treasury to the S&P 500 of cryptocurrency. The crypto sector is known for its volatile cycles and otherwise unimaginable returns on obscure altcoins.
+DAOs can now allocate a part of their treasury to the S&P 500 of cryptocurrency. The crypto sector is known for its volatile cycles and otherwise unimaginable returns and is getting adopted by institutions, companies and retail investors by the day proving that it is here to stay.
 
-With TCAP's ability to replicate the total capitalization of the cryptocurrency market DAOs can capture exponential future growth while offsetting the inherent risk of investing in a single class of cryptocurrencies. TCAP comes with a risk factor of 2 - comparable to Ecosystem Cryptos like BTC or ETH - but with greater historical performance.
+With TCAP's ability to replicate the total capitalization of the cryptocurrency market DAOs can capture exponential future growth while offsetting the inherent risk of investing in a single class of cryptocurrencies. TCAP comes with a risk factor of 2 - the worldwide adoption of crypto as an asset class makes for a proven and trusted exotic market - but with greater historical performance than ETH or BTC.
