@@ -76,5 +76,12 @@ DAOs can now allocate a part of their treasury to the S&P 500 of cryptocurrency.
 
 With TCAP's ability to replicate the total capitalization of the cryptocurrency market DAOs can capture exponential future growth while offsetting the inherent risk of investing in a single class of cryptocurrencies. TCAP comes with a risk factor of 2 - the worldwide adoption of crypto as an asset class makes for a proven and trusted exotic market - but with greater historical performance than ETH or BTC.
 
-* [👥 Cryptex - Creators of TCAP and CTX](https://cryptex.finance/)
-* [👉 Join the Cryptex Community](https://cryptex.finance/#community)
+* W**ant to get involved? Check out:**
+
+  * [👥 Cryptex - Creators of TCAP and CTX](https://cryptex.finance/)
+  * [👉 Join the Cryptex Community](https://cryptex.finance/#community)
+  * [Website](https://cryptex.finance/) | [Twitter](https://twitter.com/CryptexFinance) | [Discord](https://discord.gg/b8XgHYbkaN) | [Reddit](https://www.reddit.com/r/TotalCryptoMarketCap/) | [Telegram](https://t.me/cryptexfinance) | [Medium](https://medium.com/cryptexfinance) | [YouTube](https://www.youtube.com/channel/UCdN17zdr5MCDph75srdhutQ)
+
+  **Disclaimer**
+
+  Cryptex.finance is not a registered investment, legal or tax advisor or broker/dealer. All investment/financial opinions expressed by Cryptex.finance are from the personal research and experience of the owner of the site and are included as educational material. It is very important to do your own analysis before making any investment based on your own personal circumstances. You should take independent financial advice from a professional in connection with, or independently research and verify, any information that you find on our Website and wish to rely upon, whether for the purpose of making an investment decision or otherwise. Past performance is not a guarantee of future return, nor is it necessarily indicative of future performance. Keep in mind investing involves risk. The value of your investment will fluctuate over time and you may gain or lose money.
