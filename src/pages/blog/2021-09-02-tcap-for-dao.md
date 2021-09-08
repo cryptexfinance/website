@@ -75,3 +75,6 @@ With a current Crypto Market Capitalization of $2 Trillion, TCAP gives DAOs the 
 DAOs can now allocate a part of their treasury to the S&P 500 of cryptocurrency. The crypto sector is known for its volatile cycles and otherwise unimaginable returns and is getting adopted by institutions, companies and retail investors by the day proving that it is here to stay.
 
 With TCAP's ability to replicate the total capitalization of the cryptocurrency market DAOs can capture exponential future growth while offsetting the inherent risk of investing in a single class of cryptocurrencies. TCAP comes with a risk factor of 2 - the worldwide adoption of crypto as an asset class makes for a proven and trusted exotic market - but with greater historical performance than ETH or BTC.
+
+* [👥 Cryptex - Creators of TCAP and CTX](https://cryptex.finance/)
+* [👉 Join the Cryptex Community](https://cryptex.finance/#community)
