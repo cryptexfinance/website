@@ -5,6 +5,11 @@ date: 2021-09-14T01:20:03.931Z
 description: How does TCAP stack up against Indexed?
 featuredpost: true
 featuredimage: /img/tcap-indexed.jpg
+tags:
+  - TCAP
+  - TCAP Index
+  - Cryptex
+  - Indexed
 ---
 Does the sheer number of different cryptocurrencies make your head spin? Or perhaps keeping track of the taxable events while rebalancing your portfolio and having to shell out for gas fees has you down? Enter crypto index tokens: offering broad crypto exposure, savings on gas fees, and automatic rebalancing all to make your investing journey easier. However, as always in crypto, there's more than one option to choose from; let's dig into the various options offered by [Indexed](https://indexed.finance/) and [Total Crypto Market Cap Token (TCAP)](https://cryptex.finance/) to see how they stack up.
 
