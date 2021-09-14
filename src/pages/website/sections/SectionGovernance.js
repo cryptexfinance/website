@@ -1,4 +1,5 @@
 import React from 'react'
+import Col from "react-bootstrap/esm/Col";
 import governance from '../../../../static/website/governance/governance.png'
 import coinGecko from '../../../../static/website/governance/coin-gecko.svg'
 import sushiLogo from '../../../../static/website/governance/sushi-logo.svg'
@@ -13,7 +14,8 @@ import voting from '../../../../static/website/governance/voting.svg'
 const SectionGovernance = () => {
 
   return (
-    <section id="governance" className="section-governance"> 
+    <section id="governance" className="section-governance">
+      <Col xs={12} sm={12} md={6} lg={4} className="governance-info">
         <div className="governance-title header">Introducing CTX: <br/>Decentralized Governance</div>
         <div className="governance-content">
             CTX is a governance token that powers and secures the Cryptex protocol. 
@@ -34,9 +36,13 @@ const SectionGovernance = () => {
                 <img src={geminiLogo} className="governance-icon gemini" alt="gemini logo" /> 
             </a>
         </div>
+      </Col>
+      <Col xs={12} sm={12} md={12} lg={5} className="governance-img-container" >
         <div className="governance-image">            
-            <img src={governance} alt="Governance" className="governance-image" />
+          <img src={governance} alt="Governance" className="governance-image" />
         </div>
+      </Col>
+      <Col xs={12} sm={12} md={6} lg={3} className="governance-details">
         <div className="governance-details">
             <div className="governance-details-item">
                 <a
@@ -76,18 +82,18 @@ const SectionGovernance = () => {
                 </a>
             </div>
             <div className="governance-details-item">
-            <a
-            rel="noopener noreferrer"
-            href="https://forum.cryptex.finance/"
-            target="_blank"
-            className="governance-details-text"
-            >
-            <img src={forum} className="governance-details-icons" alt="Forum" />
-                Forum
-            </a>
-            
+                <a
+                rel="noopener noreferrer"
+                href="https://forum.cryptex.finance/"
+                target="_blank"
+                className="governance-details-text"
+                >
+                <img src={forum} className="governance-details-icons" alt="Forum" />
+                    Forum
+                </a>  
+            </div>
         </div>
-        </div>
+      </Col> 
     </section>
   )
 }

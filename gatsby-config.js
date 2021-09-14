@@ -6,25 +6,37 @@
 
 //  const metaImage = require('./static/website/home/main.webp');
 
+const CustomMediaQueries = {
+    xs: "(max-width: 320px)",
+    sm: "(max-width: 720px)",
+    smmin: "(min-width: 721px)",
+    mdesp: "(max-width: 800px)",
+    md: "(max-width: 1024px)",
+    mdmin: "(min-width: 1025px)",
+    l: "(max-width: 1536px)",
+    xl: "(max-width: 2000px)",
+    portrait: "(orientation: portrait)",
+};
+
 module.exports = {
   /* Your site config here */
   siteMetadata: {
-    title: `TCAP - By Cryptex Finance`,
-    author: `Cryptex Finance`,
-    description: `TCAP is the World's First Total Cryptocurrency Market Capitalization Token created by Cryptex Finance.`,
-    image: `https://raw.githubusercontent.com/cryptexglobal/website/main/static/website/home/main.webp`,
+    title: "TCAP - By Cryptex Finance",
+    author: "Cryptex Finance",
+    description: "TCAP is the World's First Total Cryptocurrency Market Capitalization Token created by Cryptex Finance.",
+    image: "https://raw.githubusercontent.com/cryptexglobal/website/main/static/website/home/main.webp",
     keywords: [
-      `Cryptex`,
-      `Blockchain`,
-      `DeFi`,
-      `Ethereum`,
-      `Bitcoin`,
-      `Projects`,
-      `Work`,
-      `TCAP`,
+      "Cryptex",
+      "Blockchain",
+      "DeFi",
+      "Ethereum",
+      "Bitcoin",
+      "Projects",
+      "Work",
+      "TCAP",
     ],
     siteUrl:
-      process.env.URL || process.env.DEPLOY_URL || `http://localhost:8000`,
+      process.env.URL || process.env.DEPLOY_URL || "http://localhost:8000",
   },
   plugins: [
     {
@@ -62,8 +74,8 @@ module.exports = {
         path: `${__dirname}/src/pages/blog`,
       },
     },
-    `gatsby-plugin-preload-link-crossorigin`,
-    `gatsby-plugin-catch-links`,
+    "gatsby-plugin-preload-link-crossorigin",
+    "gatsby-plugin-catch-links",
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -71,7 +83,7 @@ module.exports = {
         path: `${__dirname}/src/`,
       },
     },
-    `gatsby-plugin-sass`,
+    "gatsby-plugin-sass",
     {
       resolve: "gatsby-plugin-netlify-cms",
       options: {
@@ -107,8 +119,8 @@ module.exports = {
         ],
       },
     },
-    `gatsby-transformer-sharp`,
-    `gatsby-plugin-sharp`,
+    "gatsby-transformer-sharp",
+    "gatsby-plugin-sharp",
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
@@ -122,8 +134,8 @@ module.exports = {
         icon: `${__dirname}/static/favicon.svg`, // This path is relative to the root of the site.
       },
     },
-    `gatsby-plugin-offline`,
-    `gatsby-plugin-react-helmet`,
+    "gatsby-plugin-offline",
+    "gatsby-plugin-react-helmet",
     {
       resolve: `gatsby-plugin-nprogress`,
       options: {
@@ -131,7 +143,6 @@ module.exports = {
         showSpinner: true,
       },
     },
-
     "gatsby-plugin-netlify",
     {
       resolve: "gatsby-plugin-mailchimp",
@@ -139,6 +150,12 @@ module.exports = {
         endpoint:
           "https://finance.us1.list-manage.com/subscribe/post?u=1cb08bbc3427b6daa4cc0ba8e&amp;id=7e4519bdcf", // string; add your MC list endpoint here; see instructions below
         timeout: 3500, // number; the amount of time, in milliseconds, that you want to allow mailchimp to respond to your request before timing out. defaults to 3500
+      },
+    },
+    {
+      resolve: "gatsby-plugin-breakpoints",
+      options: {
+        queries: CustomMediaQueries,
       },
     },
   ],
