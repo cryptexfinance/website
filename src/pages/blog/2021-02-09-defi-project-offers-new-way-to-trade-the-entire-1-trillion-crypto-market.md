@@ -8,6 +8,6 @@ description: A decentralized finance (DeFi) project is gearing up to debut a
 featuredpost: true
 featuredimage: /img/block-article.jpg
 tags:
-  - TheBlock
+  - The Block
 ---
 https://www.theblockcrypto.com/linked/90641/defi-project-offers-new-way-to-trade-the-entire-1-trillion-crypto-market
