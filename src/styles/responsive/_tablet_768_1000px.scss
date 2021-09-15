@@ -1,6 +1,6 @@
 @media only screen 
-and (min-device-width : 750px) 
-and (max-device-width : 1000px) 
+and (min-device-width : 601px) 
+and (max-device-width : 1090px) 
 and (orientation: portrait)
  {
   
@@ -101,7 +101,6 @@ and (orientation: portrait)
   .responsive-navbar-nav {
     background: $color-black;
   }
-
   .navbar-toggler:hover, .navbar-toggler:focus {
     position: relative;
     padding: 10px 20px 10px 20px;
@@ -125,7 +124,6 @@ and (orientation: portrait)
   .mobile_nav.opened .mobile_menu_bar:after {
     content: "";
   }
-
   .button-navbar {
     position: fixed;
     color: $color-grey;
@@ -141,63 +139,35 @@ and (orientation: portrait)
     &-title{
       width: 682px;
       height: 108px;
-      top: calc(50% - 108px/2 - 357px);
       left: 15%;
     }
-
     &-number-pink {
-      position: absolute;
-      width: 257px;
       height: 36px;
-      left: calc(50% - 257px/2 - 210px);
-      top: calc(50% - 36px/2 - 241px);
-  
       font-size: 20px;
       line-height: 36px;
   
       display: flex;
       align-items: center;
     }
-
     &-bold-text {
-      width: 342px;
       height: 22px;
-      left: calc(50% - 312px/2 - 183px);
-      top: calc(50% - 22px/2 - 206px);
       font-size: 14px;
       line-height: 22px;
     }
-
     &-divider {
-      position: absolute;
       width: 1px;
       height: 65px;
-      left: calc(50% - 1px/2 + 55.2px);
-      top: calc(50% - 82px/2 - 220.8px);
-
       background: $color-grey-dark;
     }
-
     &-number-blue {
-      width: 312px;
       height: 36px;
-      left: calc(50% - 312px/2 + 265px);
-      top: calc(50% - 36px/2 - 241px);
       font-size: 20px;
       line-height: 36px;
-      
     }
-
     &-tcap {
-      width: 87px;
-      height: 82px;
-      left: calc(50% - 30px/2 + 126.7px);
-      top: calc(50% - 22px/2 - 236px);
-
       &-image {
         width: 25px;
       }
-
       &-text {
 				font-size: 14px;
         line-height: 37px;
@@ -206,121 +176,108 @@ and (orientation: portrait)
     }
   }
 
-  .about {
-    &-title {
-      position: absolute;
-      width: 312px;
-      height: 36px;
-      left: calc(50% - 312px/2 - 170.5px);
-      top: calc(50% - 36px/2 - 425px);
-      font-size: 24px;
-      line-height: 36px;
-      letter-spacing: 0.3px;
+  .section-main {
+    position: relative;
+    .main-image {
+      width: 700px;
+      height: 693.95px;
     }
+  }
+  .section-about {
+    position: relative;
+  }
+  .section-features {
+    position: relative;
+  }
+  .section-governance {
+    margin-top: 10rem;
+  }
+  .section-team {
+    position: relative;
+    .team-container {
+      .members-container {
+        .team-members {
+          padding: 1rem 0rem;
+        }
+      }
+    }
+  }
+  .section-faq {
+    position: relative;
+  }
+  .section-community {
+    position: relative;
+    margin-bottom: 0rem;
+  }
 
+  .about {
+    &-info {
+      justify-content: center;
+    }
+    &-details {
+      order: 2;
+      height: 330px;
+      padding-left: 10%;
+      &-item {
+        padding: 0rem;
+      }
+      &-icons {
+        margin-right: 24px;
+      }
+      &-text {
+        font-size: 18px;
+        line-height: 24px;
+      }
+    }
+    &-img-container {
+      order: 3;
+      margin: 10rem 0rem;
+    }
     &-content {
       width: 315px;
-      height: 247px;
-      left: calc(50% - 315px/2 - 170px);
-      top: calc(50% - 247px/2 - 245.5px);
       font-size: 14px;
       line-height: 20px;
       letter-spacing: 0.3px;
     }
-
     &-image {
-      position: absolute;
       width: 660px;
-      height: auto;//508.6px;
-      left: calc(50% - 660px/2);
-      top: calc(50% - 508.6px/2 + 258px);
-    }
-
-    &-details {
-      position: absolute;
-      width: 315px;
-      height: 353px;
-      left: calc(50% - 495.31px/2 + 320px);
-      top: calc(50% - 508.6px/2 - 218px);
-
-      &-divisor {
-        position: absolute;
-        width: 240px;
-        height: 1px;
-        background: #494866;
-      }
-
-      &-icons {
-        margin-right: 24px;
-      }
-
-      &-text {
-        height: 72px;
-        font-size: 18px;
-        line-height: 24px;
-      }
+      height: auto;
     }
   }
 
   .features {
     display: block;
     position: relative;
+    &-row {
+      padding-top: 3rem;
+    }
     &-title {
-      position: absolute;
-      width: 312px;
-      height: 36px;
-      left: calc(50% - 312px/2 - 165.5px);
-      top: calc(50% - 36px/2 - 314px);
+      padding-left: 2rem;
       font-size: 24px;
       line-height: 36px;
       letter-spacing: 0.3px;
     }
-
-    &-row {
-      position: absolute;
-      width: 700px;
-      // height: 403px;
-      left: 70px;
-      top: calc(50% - 36px/2 - 224px);
-    }
-
     &-icons {
-      position: absolute;
       width: 102px;
       height: 74.25px;
-      left: 8.94%;
-      right: 6.94%;
-      top: 10.5%;
-      bottom: 12.16%;
     }
-
     &-subtitle {
-      position: absolute;
-      width: 95px;
-      height: 24px;
-      left: calc(50% - 65px/2 - 76px);
-      top: calc(50% - 24px/2 - 18px);
       font-size: 22px;
-      line-height: 24px;
       letter-spacing: 0.3px;
+      padding-top: 3rem;
     }
-  
     &-content {
-      position: absolute;
       font-size: 16px;
       line-height: 22px;
       letter-spacing: 0.3px;
-      width: 243px;
-      height: 132px;
-      left: calc(50% - 243px/2 + 10px);
-      top: calc(50% - 132px/2 + 95px);
+      margin: 3rem 0rem;
     }
 
     &-box{
       &-mint {
         position: relative;
         width: 320px;
-        height: 360px;
+        height: 340px;
         background: #111131;
 				border: 1px solid rgba(255, 255, 255, 0.6);
 				box-sizing: border-box;
@@ -337,11 +294,12 @@ and (orientation: portrait)
         }
         margin-bottom: 20px;
         margin-right: 20px;
+        padding: 4rem;
       }
       &-trade {
         position: relative;
         width: 320px;
-        height: 360px;
+        height: 340px;
         background: #111131;
 				border: 1px solid rgba(255, 255, 255, 0.6);
 				box-sizing: border-box;
@@ -357,11 +315,12 @@ and (orientation: portrait)
 					}
         }
         margin-bottom: 20px;
+        padding: 4rem;
       }
       &-pool {
         position: relative;
         width: 320px;
-        height: 360px;
+        height: 340px;
         background: #111131;
 				border: 1px solid rgba(255, 255, 255, 0.6);
 				box-sizing: border-box;
@@ -378,11 +337,12 @@ and (orientation: portrait)
         }
         margin-bottom: 20px;
         margin-right: 20px;
+        padding: 4rem;
       }
       &-farm {
         position: relative;
         width: 320px;
-        height: 360px;
+        height: 340px;
         background: #111131;
 				border: 1px solid rgba(255, 255, 255, 0.6);
 				box-sizing: border-box;
@@ -398,75 +358,63 @@ and (orientation: portrait)
 					}
         }
         margin-bottom: 20px;
+        padding: 4rem;
       }
     }
   }
 
   .governance {
-    &-title {
-      position: absolute;
-      width: 312px;
-      height: 36px;
-      left: calc(50% - 312px/2 - 170.5px);
-      top: calc(50% - 36px/2 - 410px);
-      font-size: 24px;
-      line-height: 36px;
-      letter-spacing: 0.3px;
+    &-info {
+      justify-content: center;
     }
-
-    &-content {
-      width: 315px;
-      height: 247px;
-      left: calc(50% - 315px/2 - 170px);
-      top: calc(50% - 247px/2 - 205.5px);
-      font-size: 14px;
-      line-height: 20px;
-      letter-spacing: 0.3px;
-    }
-
-    &-image {
-      position: absolute;
-      width: 660px;
-      height: auto;//508.6px;
-      left: calc(50% - 660px/2);
-      top: calc(50% - 508.6px/2 + 258px);
-    }
-
     &-details {
-      position: absolute;
-      width: 315px;
-      height: 353px;
-      left: calc(50% - 495.31px/2 + 320px);
-      top: calc(50% - 508.6px/2 - 218px);
-
+      order: 2;
+      padding-left: 5%;
       &-icons {
         margin-right: 24px;
       }
-
       &-text {
         height: 72px;
         font-size: 18px;
         line-height: 24px;
       }
     }
-
+    &-img-container {
+      order: 3;
+    }
+    &-title {
+      width: 312px;
+      font-size: 24px;
+      line-height: 36px;
+      letter-spacing: 0.3px;
+    }
+    &-content {
+      padding: 2rem 0rem;
+      width: 315px;
+      font-size: 14px;
+      line-height: 20px;
+      letter-spacing: 0.3px;
+    }
+    &-image {
+      width: 660px;
+      height: auto;
+    }
     &-buttons {
-      top: calc(50% - 63.75rem/2 + 10.1125rem);
       width: 290px;
-      left: calc(50% - 650px / 2);
     }
   }
 
   .team {
     position: relative;
     &-title {
-      margin: 1rem 0rem 2rem 0rem;
+      margin: 0rem 0rem 0rem 2rem;
       font-size: 24px;
       line-height: 36px;
       letter-spacing: 0.3px;
     }
     &-subtitle {
-      margin: 5rem 0rem;
+      margin: 2rem 0rem;
+      width: 90%;
       font-size: 16px;
       line-height: 22px;
       letter-spacing: 0.3px;
@@ -481,12 +429,9 @@ and (orientation: portrait)
     flex-direction: column;
     align-items: center;
     padding: 19px 47px;
-
-    position: absolute;
     width: 300px;
     height: 54px;
     left: 45px;
-    top: calc(50% - 22px/2 - 120.55px);
     font-size: 14px;
     line-height: 16px;
   }
@@ -505,16 +450,11 @@ and (orientation: portrait)
 
   .team-box {
     position: relative;
-    width: 325px;
+    width: 375px;
     height: 231px;
-    left: 10px;
-
-    &-photo-mobile {
-      position: relative;
-      text-align:center;
-      width: 315px;
-      height: 161px;
-      border-radius: 0.125rem;
+    margin-bottom: 3rem;
+    &.page2 {
+      margin-bottom: 3rem;
     }
     &-name {
       width: 211px;
@@ -534,8 +474,7 @@ and (orientation: portrait)
     }
 
     &-description {
-      width: 315px;
-      height: 225px;
+      width: 310px;
       border-radius: 2px;
       font-size: 12px;
       line-height: 16px;
@@ -544,20 +483,18 @@ and (orientation: portrait)
       margin-left: 5px;
     }
     .flippy-back {
-      width: 100%;
+      width: 340px;
     }
   }
 
   .team-pagination {  
     padding: 0.5rem 0rem 0.5rem 0rem;
+    justify-content: center;
     &-container {
       width: 50rem;
     }
     .items {
       width: 20rem;
-    }
-    &.two {
-      padding-top: 0.5rem;
     }
   }
 
@@ -565,123 +502,25 @@ and (orientation: portrait)
     background: $color-black !important;
     background-color: $color-black !important;
   }
-
-  .newsbox {
-    padding-top: 5rem;
-    
-    &-title {
-      padding: 20px 0px;
-      width: 304px;
-      font-size: 22px;
-      line-height: 24px;
-    }
-    &-pagination {
-      width: 100%;
-      margin-top: 6rem;  
-
-      &.one {
-        margin-top: -5rem;
-      }
-      &.two {
-        margin-top: 0rem;
-      }
-    }
-
-    .newsitem {
-      flex-wrap: nowrap;
-      &.hide {
-        display: None;
-      }
-
-      &-photo {
-        position: relative;
-        width: 120px;
-        height: 120px;
-        float: left;
-        margin-right: 32px;
-        border-radius: 2px;
-      }
-      &-title {
-        position: relative;
-        width: 555px;
-        height: 48px;
-        font-size: 12px;
-        line-height: 20px;
-        letter-spacing: 0.3px;
-        margin-bottom: 12px;
-      }
-      &-description {
-        position: relative;
-        width: 315px;
-        height: 35px;
-        font-size: 12px;
-        line-height: 16px;
-      }
-      &-link {
-        position: relative;
-        width: 95.53px;
-        height: 15.26px;
-        font-size: 10px;
-        line-height: 12px;
-        letter-spacing: 0.6px;
-      }
-      &-tag-items {
-        margin-top: 12px;
-        margin-bottom: 12px;
-      }
-      &-tagbox { 
-        position: relative;
-        color: $color-dark-clean;
-        background-color:$color-black;
-        border: 1px solid $shadow-purple-neon;
-        margin:0px 20px 20px 0px;
-        line-height: 30px;
-        padding:2px 0 2px 2px;
-      }
-      .taglink  {
-        font-size: 16px;
-        padding:2px;
-      }
-        
-      .tagbox a, .tagbox a:visited, .tagbox a:active { 
-        text-decoration:none;
-      }
-    
-      &:not(:last-child) { 
-        padding-bottom: 48px !important;
-      }
-    }
-  }
-
   
   .faq {
     &-row {
-      position: absolute;
       width: 100%;
-      left: 80px;
-      top: calc(50% - 36px/2 - 156px);
+      flex-direction: column;
+      padding: 5rem 0rem;
     }
-
     &-title {
       width: 312px;
       height: 36px;
-      left: calc(50% - 312px/2 - 165.5px);
-      top: calc(50% - 36px/2 - 346px);
       font-size: 24px;
       line-height: 36px;
       letter-spacing: 0.3px;
     }
-
     &-subtitle {
-      width: 305px;
-      height: 22px;
-      left: calc(50% - 305px/2 - 168px);
-      top: calc(50% - 22px/2 - 291px);
       font-size: 16px;
       line-height: 22px;
       letter-spacing: 0.3px;
     }
-
     &-divider {
       width: 620px;
       height: 1px;
@@ -693,7 +532,6 @@ and (orientation: portrait)
   .toggle {
     width: 120vw;
     height: auto;
-    // background: mediumaquamarine;
   }
 
   .toggle {
@@ -713,7 +551,7 @@ and (orientation: portrait)
   }
   
   .answer {
-		width: 605px;
+		width: 70%;
     height: auto;
     font-size: 16px;
     line-height: 22px;
@@ -731,42 +569,28 @@ and (orientation: portrait)
   }
   
   .community {
-	
     &-title {
-      width: 512px;
-      height: 72px;
-      left: calc(50% - 312px/2 - 165.5px);
-      top: calc(50% - 72px/2 - 458px);
       font-size: 24px;
       line-height: 36px;
       letter-spacing: 0.3px;
     }
-
+    &-content {
+      flex-direction: column;
+      .col-md-6 {
+        flex: 0 0 100%;
+        max-width: 100%;
+      }
+    }
     &-subtitle {
-      width: 305px;
-      height: 88px;
-      left: calc(50% - 305px/2 - 165px);
-      top: calc(50% - 88px/2 - 351px);
+      width: 360px;
       font-size: 16px;
       line-height: 22px;
       letter-spacing: 0.3px;
     }
-
-    &-icons-row {
-      position: absolute;
-      width: 740px;
-      height: 42px;
-      left: 80px;
-      top: calc(50% - 180px/2 - 215px);
+    &-icons {
+      padding: 2rem 4rem;
+      margin-bottom: 3rem;
     }
-    &-icons-row-2 {
-      position: absolute;
-      width: 740px;
-      height: 42px;
-      left: 80px;
-      top: calc(50% - 90px/2 - 180px);
-    }
-
     &-item {
       width: 210px;
       &-icon {
@@ -775,7 +599,6 @@ and (orientation: portrait)
         float: left;
         margin-left: -42.76px;
       }
-        
       &-text {
         width: 63px;
         height: 75px;
@@ -785,196 +608,25 @@ and (orientation: portrait)
         letter-spacing: 0.3px;
       }
     }
-
     &-image {
-      position: absolute;
       width: 697.62px;
       height: 578px;
-      left: calc(50% - 697.62px/2 - 24.5px);
-      top: calc(50% - 578px/2 + 304px);
     }
-
     &-subscribe {
       &-title {
-        position: absolute;
-        width: 309px;
-        height: 24px;
-        left: calc(50% - 209px/2 - 213px);
-        top: calc(50% - 24px/2 - 85px);
         font-size: 22px;
         line-height: 24px;
         letter-spacing: 0.3px;
       }
-  
       &-input {
-        position: absolute;
         width: 426px;
         height: 54px;
         font-size: 12px;
-        left: calc(50% - 316px/2 - 1px);
-        top: calc(50% - 24px/2 + 45px);
       }
-  
       &-button {
-        position: absolute;
         width: 216px;
         height: 54px;
-        left: calc(50% - 316px/2 + 280px);
-        top: calc(50% - 24px/2 - 40px);
-      }
-  
-    }
-  
-  }
-
-  .section-main {
-    position: relative;
-    height: 100vh;
-    
-    .main-image {
-      position: absolute;
-      width: 700px;
-      height: 693.95px;
-      left: calc(50% - 700px/2);
-      top: calc(50% - 693.95px/2 + 148px);
-    }
-  }
-
-  .section-about {
-    height: 125vh;
-    margin-bottom: 5vh;
-    position: relative;
-  }
-
-  .section-features {
-    height: 100vh;
-    margin-bottom: 15vh;
-    position: relative;
-  }
-
-  .section-governance {
-    height: 100vh;
-    margin-bottom: 20vh;
-  }
-
-  .section-team {
-    height: 145vh;
-    margin-bottom: 40vh;
-    position: relative;
-    .team-container {
-      .members-container {
-        .team-members {
-          padding: 1rem 0rem;
-        }
-      }
-    }
-  }
-  
-  .section-faq {
-    height: 80vh;
-    margin-bottom: 5vh;
-    position: relative;
-  }
-  .section-faq.expand1{
-    margin-bottom: 120px;
-  }
-  .section-faq.expand2{
-    margin-bottom: 350px;
-  }
-  .section-faq.expand4{
-    margin-bottom: 550px;
-  }
-  .section-faq.expand6{
-    margin-bottom: 700px;
-  }
-
-  .section-community {
-    height: 110vh;
-    position: relative;
-  }
-
-  @media only screen and (min-device-height : 1100px) {
-    .section-main {
-      height: 80vh;
-    }
-    .section-about {
-      height: 120vh;
-    }
-    .section-features {
-      height: 70vh;
-    }
-    .section-governance {
-      height: 90vh;
-    }
-    .section-team {
-      height: 120vh;
-    }
-    .section-faq {
-      height: 70vh;
-    }
-    .section-community {
-      height: 85vh;
-    }
-    .faq {
-      &-row {
-        position: absolute;
-        width: 100%;
-        left: 80px;
-        top: calc(50% - 36px/2 - 156px);
-      }
-      &-title {
-        left: calc(50% - 340px/2 - 165.5px);        
-      }
-      &-subtitle {
-        left: calc(50% - 340px/2 - 168px);
-      }
-      &-divider {
-        width: 650px;
-      }
-    }
-    .community {
-	
-      &-title {
-        left: calc(50% - 350px/2 - 165.5px);        
-      }
-      &-subtitle {
-        left: calc(50% - 345px/2 - 165px);        
-      }
-    }
-    @media only screen and (max-device-height : 1150px) { 
-      .section-main {
-        margin-top: 10vh;
-        margin-bottom: 20vh;
-      }
-      .section-about {
-        margin-bottom: 20vh;
-      }
-      .section-features {
-        margin-bottom: 30vh;
-      }
-      .section-team {
-        height: 130vh;
-      }
-      .section-faq {
-        height: 80vh;
-      }
-      .section-community {
-        height: 100vh;
-      }
-      .button-pink {        
-        left: 85px;       
-      }
-      .governance {
-        &-buttons {
-          top: calc(50% - 59.75rem/2 + 10.1125rem);
-        }
-      }
-    }
-  }
-  @media only screen and (min-device-width : 820px)  {
-    .faq {
-      &-divider {
-        width: 675px;
+        margin-left: -5rem;
       }
     }
   }
