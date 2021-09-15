@@ -1,4 +1,4 @@
-@media only screen and (max-device-width: 600px) and (max-device-height: 1100px) and (orientation: portrait) {
+@media only screen and (max-device-width: 600px) and (max-device-height: 1200px) and (orientation: portrait) {
  
   .navbar,
   .navbar div {
@@ -17,8 +17,8 @@
     z-index: 30;
     height: 100vh;
     background: $color-black;
-    padding-top: 60px;
-    padding-bottom: 44px;
+    padding-top: 40px;
+    padding-bottom: 37px;
     text-align: center;
     font-size: 18px;
     line-height: 28px;

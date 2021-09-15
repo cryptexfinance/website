@@ -20,8 +20,8 @@ and (orientation: portrait)
   .nav-links a {
     height: 100vh;
     background: $color-black;
-    padding-top: 100px;
-    padding-bottom: 74px;
+    padding-top: 50px !important;
+    padding-bottom: 50px;
     text-align:center;
     font-size: 18px;
     line-height: 28px;

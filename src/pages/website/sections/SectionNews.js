@@ -21,7 +21,7 @@ const SectionNews = (props) => {
       allMarkdownRemark(
         sort: { order: DESC, fields: [frontmatter___date] }
         filter: { frontmatter: { templateKey: { eq: "blog-post" } } }
-        limit: 21 
+        limit: 42 
       ) {
         edges {
           node {
@@ -87,6 +87,7 @@ const SectionNews = (props) => {
   }
 
   const onSearchChange = (criteria) => {
+    setActivePage(0);
     const filterKeys = blogKeys.filter(key => key.includes(criteria.toLowerCase()));
     setFilteredBlogKeys(filterKeys);
   }
