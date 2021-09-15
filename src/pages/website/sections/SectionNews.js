@@ -87,6 +87,7 @@ const SectionNews = (props) => {
   }
 
   const onSearchChange = (criteria) => {
+    setActivePage(0);
     const filterKeys = blogKeys.filter(key => key.includes(criteria.toLowerCase()));
     setFilteredBlogKeys(filterKeys);
   }

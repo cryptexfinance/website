@@ -34,7 +34,10 @@ export default () => {
               <Nav.Link as={Link} to="#team" title="Team">
                 Team
               </Nav.Link>
-
+              <div className="nav-links-divisor"></div>
+              <Nav.Link as={Link} to="#news" title="News">
+                News
+              </Nav.Link>
               <div className="nav-links-divisor"></div>
               <Nav.Link as={Link} to="#faq" title="FAQ">
                 FAQ
@@ -76,6 +79,9 @@ export default () => {
               </Nav.Link>
               <Nav.Link as={Link} to="#team" title="Team">
                 Team
+              </Nav.Link>
+              <Nav.Link as={Link} to="#news" title="News">
+                News
               </Nav.Link>
               <Nav.Link as={Link} to="#faq" title="FAQ">
                 FAQ
