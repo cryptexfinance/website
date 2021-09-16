@@ -11,14 +11,11 @@ description: Have you ever wondered why indexes are always talked about in the
 featuredpost: true
 featuredimage: /img/chart.png
 ---
-* [👥 Cryptex - Creators of TCAP and CTX](https://cryptex.finance/)
-* [👉 Join the Cryptex Community](https://cryptex.finance/#community)
-
 As an investor, you are likely aware of the traditional options you have when deciding what positions to take up. Just a few examples available on the traditional market are stocks, real estate, and physical assets like gold and art. Times are changing, though. The world of investing is being turned on its head with the emergence of cryptocurrencies as a viable tool with which to build wealth.
 
 Savvy investors have known it for years, young people are diving into cryptocurrency as if their lives depend on it, and the largest governments in the world are deliberating on just how to handle crypto assets. The change in the world of investing has occurred in such a short time, that many skilled investors have still not figured out what cryptocurrencies even are.
 
-**The writing on the wall**
+**The Writing on the Wall**
 
 Consider a quote from Michael Sonnenshein, the CEO of Grayscale Investments, who noted that *“Over just the last 12 to 18 months, the asset class has really turned the corner as some well-known and experienced investors have publicly come out in support of crypto…”*
 
