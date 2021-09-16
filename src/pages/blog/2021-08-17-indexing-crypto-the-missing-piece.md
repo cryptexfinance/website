@@ -1,7 +1,7 @@
 ---
 templateKey: blog-post
 title: Indexing Crypto; The Missing Piece?
-date: 2021-08-17T00:23:08.986Z
+date: 2021-09-15T00:23:08.986Z
 description: Have you ever wondered why indexes are always talked about in the
   stock market? Think the S&P 500 Index - this is an index that tracks 500
   top-performing stocks. It is the benchmark against which any investment firm
