@@ -1,10 +1,39 @@
-import React from "react"
+import React, { useEffect, useState } from "react"
 import { Navbar, Nav } from "react-bootstrap"
+import { useStaticQuery, graphql } from 'gatsby';
 import { Link } from "gatsby"
 import appEndpoint from '../endpoint';
 
 
-export default () => {
+export default (props) => {
+  const [siteUrl, setSiteUrl] = useState("");
+  const dataq = useStaticQuery(graphql`
+    query {
+      site {
+        siteMetadata {
+          siteUrl
+        }
+      }
+    }`);
+  
+  useEffect(() => {
+    if (typeof (dataq.site) !== "undefined") {
+      setSiteUrl(dataq.site.siteMetadata.siteUrl)
+    } else {
+      console.log("Error with props in team");
+      console.log(dataq);
+    }
+  }, [dataq]);
+
+  const blogView = (typeof props.blogPost !== "undefined" ? props.blogPost : false);
+  const aboutUrl = blogView ? `${siteUrl}/#about` : "#about";
+  const featuresUrl = blogView ? `${siteUrl}/#features` : "#features";
+  const governanceUrl = blogView ? `${siteUrl}/#governance` : "#governance";
+  const teamUrl = blogView ? `${siteUrl}/#team` : "#team";
+  const newsUrl = blogView ? `${siteUrl}/#news` : "#news";
+  const faqUrl = blogView ? `${siteUrl}/#faq` : "#faq";
+  const communityUrl = blogView ? `${siteUrl}/#community` : "#community";
+
 
   const NavMobile = () => {
     return (
@@ -19,31 +48,31 @@ export default () => {
           <Navbar.Toggle aria-controls="responsive-navbar-nav" className="mobile_menu_bar" aria-hidden="true"/>
           <Navbar.Collapse id="responsive-navbar-nav" className="justify-content-end">
           <Nav className="nav-links">
-              <Nav.Link as={Link} to="#about" className="nav-links" title="What is TCAP?">
+              <Nav.Link as={Link} href={aboutUrl} className="nav-links" title="What is TCAP?">
                 What is TCAP?
               </Nav.Link>
               <div className="nav-links-divisor"></div>
-              <Nav.Link as={Link} to="#features" title="How to use TCAP?">
+              <Nav.Link as={Link} href={featuresUrl} title="How to use TCAP?">
                 How to use TCAP?
               </Nav.Link>
               <div className="nav-links-divisor"></div>
-              <Nav.Link as={Link} to="#governance" title="CTX Governance">
+              <Nav.Link as={Link} href={governanceUrl} title="CTX Governance">
                 CTX Governance
               </Nav.Link>
               <div className="nav-links-divisor"></div>
-              <Nav.Link as={Link} to="#team" title="Team">
+              <Nav.Link as={Link} href={teamUrl} title="Team">
                 Team
               </Nav.Link>
               <div className="nav-links-divisor"></div>
-              <Nav.Link as={Link} to="#news" title="News">
+              <Nav.Link as={Link} href={newsUrl} title="News">
                 News
               </Nav.Link>
               <div className="nav-links-divisor"></div>
-              <Nav.Link as={Link} to="#faq" title="FAQ">
+              <Nav.Link as={Link} href={faqUrl} title="FAQ">
                 FAQ
               </Nav.Link>
               <div className="nav-links-divisor"></div>
-              <Nav.Link as={Link} to="#community" title="Community">
+              <Nav.Link as={Link} href={communityUrl} title="Community">
                 Community
               </Nav.Link>
             </Nav>
@@ -68,25 +97,25 @@ export default () => {
           <Navbar.Toggle aria-controls="responsive-navbar-nav" className="mobile_menu_bar" aria-hidden="true"/>
           <Navbar.Collapse id="responsive-navbar-nav" className="justify-content-end">
             <Nav className="nav-links">
-              <Nav.Link as={Link} to="#about" className="nav-links" title="What is TCAP?">
+              <Nav.Link as={Link} href={aboutUrl} className="nav-links" title="What is TCAP?">
                 What is TCAP?
               </Nav.Link>
-              <Nav.Link as={Link} to="#features" title="How to use TCAP?">
+              <Nav.Link as={Link} href={featuresUrl} title="How to use TCAP?">
                 How to use TCAP?
               </Nav.Link>
-              <Nav.Link as={Link} to="#governance" title="CTX Governance">
+              <Nav.Link as={Link} href={governanceUrl} title="CTX Governance">
                 CTX Governance
               </Nav.Link>
-              <Nav.Link as={Link} to="#team" title="Team">
+              <Nav.Link as={Link} href={teamUrl} title="Team">
                 Team
               </Nav.Link>
-              <Nav.Link as={Link} to="#news" title="News">
+              <Nav.Link as={Link} href={newsUrl} title="News">
                 News
               </Nav.Link>
-              <Nav.Link as={Link} to="#faq" title="FAQ">
+              <Nav.Link as={Link} href={faqUrl} title="FAQ">
                 FAQ
               </Nav.Link>
-              <Nav.Link as={Link} to="#community" title="Comunity">
+              <Nav.Link as={Link} href={communityUrl} title="Comunity">
                 Community
               </Nav.Link>
               <a href={appEndpoint} target="_blank" rel="noreferrer" className="button-navbar">

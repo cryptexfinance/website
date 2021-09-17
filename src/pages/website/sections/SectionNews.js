@@ -99,6 +99,15 @@ const SectionNews = (props) => {
       return description.slice(0, 90) + "...";
   }
 
+  const postUrl = (node) => {
+    if (node.excerpt.length < 100 && node.excerpt.includes("https://")) {
+      return node.excerpt;
+    }
+    else {
+      return node.fields.slug;
+    }
+  }
+
   const NewsItem = (node) => {
     const tags = node.frontmatter.tags.join("+++").toLowerCase();
     const key = [node.frontmatter.title.toLowerCase(), tags].join("+++");
@@ -109,11 +118,15 @@ const SectionNews = (props) => {
           <img src={node.frontmatter.featuredimage.childImageSharp.fluid.src} className="newsitem-photo" alt="News" />
           <div className="newsitem-info">
             <div className="newsitem-tag-items">
-              <a href={node.excerpt} rel="noreferrer" target="_blank" className="newsitem-tagbox taglink">
-                {typeof (node.frontmatter.tags) !== `undefined` ? node.frontmatter.tags.map(tag => { return tag }) : ""}
-              </a>
+              {Array.isArray(node.frontmatter.tags) &&     
+                node.frontmatter.tags.slice(0,4).map(tag => {
+                  return <a href={postUrl(node)} rel="noreferrer" target="_blank" className="newsitem-tagbox taglink">
+                            {tag}
+                          </a>
+                })              
+              }
             </div>
-            <a href={node.excerpt} rel="noreferrer" target="_blank" className="newsitem-title-link" >
+            <a href={postUrl(node)} rel="noreferrer" target="_blank" className="newsitem-title-link" >
               <div className={titleClass(node.frontmatter.title.length)}>
                 {node.frontmatter.title}
               </div>
@@ -121,7 +134,7 @@ const SectionNews = (props) => {
             <p className="newsitem-brief">
               {sliceDescription(node.frontmatter.description)}
             </p>
-            <a href={node.excerpt} rel="noreferrer" target="_blank" className="newsitem-link link">Check it out</a>
+            <a href={postUrl(node)} rel="noreferrer" target="_blank" className="newsitem-link link">Check it out</a>
           </div>
         </div>
       )
