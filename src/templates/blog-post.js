@@ -19,6 +19,7 @@ export const BlogPostTemplate = ({
   title,
   date,
   helmet,
+  slug
 }) => {
   const PostContent = contentComponent || Content;
   
@@ -47,7 +48,7 @@ export const BlogPostTemplate = ({
           </h1>
           <h6 className="post-date">{date}</h6>
           <PostContent content={buildContent()} />
-          <ShareSocial />
+          <ShareSocial title={title}  shareSlug={slug} tags={tags} />
         </Col>
         <NextNews postIndex={postIndex} />         
     </section>
@@ -55,17 +56,17 @@ export const BlogPostTemplate = ({
 }
 
 BlogPostTemplate.propTypes = {
+  postIndex: PropTypes.number,
   content: PropTypes.node.isRequired,
   contentComponent: PropTypes.func,
   description: PropTypes.string,
   title: PropTypes.string,
   helmet: PropTypes.object,
+  slug: PropTypes.string
 }
 
 const BlogPost = ({ data, pageContext }) => {
   const { markdownRemark: post } = data
-  console.log("Context---");
-  console.log(pageContext);
   return (
     <Layout>
       <video
@@ -98,6 +99,7 @@ const BlogPost = ({ data, pageContext }) => {
         tags={post.frontmatter.tags}
         title={post.frontmatter.title}
         date={post.frontmatter.date}
+        slug={post.fields.slug}
       />
     </Layout>
   )
@@ -116,6 +118,9 @@ export const pageQuery = graphql`
     markdownRemark(id: { eq: $id }) {
       id
       html
+      fields {
+        slug
+      }
       frontmatter {
         date(formatString: "MMMM DD, YYYY")
         title

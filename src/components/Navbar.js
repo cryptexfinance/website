@@ -21,7 +21,6 @@ export default (props) => {
       setSiteUrl(dataq.site.siteMetadata.siteUrl)
     } else {
       console.log("Error with props in team");
-      console.log(dataq);
     }
   }, [dataq]);
 
