@@ -101,7 +101,7 @@ const SectionNews = (props) => {
 
   const postUrl = (node) => {
     if (node.excerpt.length < 100 && node.excerpt.includes("https://")) {
-      return node.fields.slug;
+      return node.excerpt;
     }
     else {
       return node.fields.slug;
