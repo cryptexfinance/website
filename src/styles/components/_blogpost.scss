@@ -1,0 +1,196 @@
+.section-blogpost {
+  display: flex;
+  padding: 5rem 2rem;
+
+  .post {
+    padding-right: 1rem;
+  }
+  h1 {
+    margin-bottom: 2rem;
+  }
+  h3 {
+    margin-top: 2rem;
+    color: $color-dark-clean;
+    font-size: 1.3rem;
+  }
+  h4 {
+    margin-top: 2rem;
+    color: $color-dark-clean;
+    font-size: 1.1rem;
+    margin-bottom: -0.5rem;
+  }
+  h5 {
+    font-family: $font-tertiary;
+    color: $color-dark-clean;
+  }
+  h6 {
+    font-family: $font-tertiary;
+    color: $color-dark-clean;
+  }
+  p {
+    font-family: $font-tertiary;
+    color: $color-dark-clean;
+    font-size: 16px;
+    line-height: 22px;
+    letter-spacing: 0.6px;
+    margin: 3rem 0rem;
+
+    strong {
+      font-weight: bolder;
+    }
+  }
+  a {
+    color: $color-dark-clean;
+  }
+  ul {
+    color: $color-dark-clean;
+    padding-left: 2rem;  
+    margin-top: 1.5rem;  
+  }
+  ol {
+    color: $color-dark-clean;
+    padding-left: 3rem;
+    margin-top: 1.5rem;    
+  }
+  li {
+    font-family: $font-tertiary;
+    font-size: 16px;
+    line-height: 22px;
+    letter-spacing: 0.6px;
+    margin-bottom: 2rem;
+  }
+  img {
+    margin-bottom: -2rem;
+    width: 100%;
+    height: auto;
+  }
+  .post-date {
+    margin-top: -1rem;
+    color: $color-grey;
+  }
+  .tags {
+    display: flex;
+    .tagbox { 
+      color: $color-dark-clean !important;
+      background-color:$color-black;
+      border: 1px solid $shadow-purple-neon;
+      margin:0px 10px 10px 0px;
+      line-height: 150%;
+      padding: 0.2rem 0.5rem;
+      margin-top: 0.5rem;
+      margin-bottom: 1.5rem;
+    }
+  }
+  .share-post {
+    display: flex;
+    flex-direction: row;
+    border-top-style: solid;
+    border-color: $color-grey-dark;
+    border-width: 1px;
+    padding-top: 2rem;
+    .share-caption{
+      flex: 1;
+    }
+    .share-buttons {
+      display: flex;
+      justify-content: flex-end;
+      flex: 1;      
+      img {
+        width: auto;
+        height: 80px;
+        margin-top: -2rem;
+        margin-right: -1.5rem;
+      }
+      button {
+        background: transparent;
+        border: transparent;
+      }
+    }
+  }
+  blockquote {
+    padding: 3.5rem 5rem;
+    font-family: $font-tertiary;
+    font-size: 17px;
+    text-align: center;
+    background-color: #111131; 
+    color: $color-dark-clean;
+    border: 1px solid rgba(255, 255, 255, 0.6);
+    box-shadow: 0px 0px 4px rgba(203, 6, 255, 0.1), 0px 0px 34px rgba(111, 19, 202, 0.8);
+    border-radius: 4px;  
+    background-image: url("../../static/quote-left.svg");
+    background-repeat: no-repeat;
+    background-position: 3% 9%;
+    @media only screen and (max-device-width: 900px) {
+        padding: 3.5rem 7rem;    
+    }
+  } 
+
+  @media only screen and (max-device-width: 800px) {
+    flex-direction: column;
+    h1 {
+      font-size: 4.5rem;
+      line-height: 5.5rem;
+      margin-bottom: 7rem;
+    }
+    h3 {
+      font-size: 3.5rem;
+      margin-top: 8rem;
+    }
+    h4 {
+      font-size: 3.2rem;
+      margin-top: 8rem;
+    }
+    p {
+      font-size: 14px;
+    }
+    .tags {
+      margin-bottom: 2rem;
+      .tagbox { 
+        font-size: 2.5rem;
+      }
+    }
+    .post-date {
+      margin-top: -3rem;
+      margin-bottom: 5rem;
+      font-size: 3rem;
+    }
+    .share-post {
+      margin-bottom: 1rem;
+      h6 {
+        font-size: 1.8rem;
+      }
+      .share-caption {
+        padding-top: 1rem;
+      }
+      .share-buttons {
+        img {
+          height: 70px;
+          margin-top: -1.5rem;
+          margin-right: -2rem;
+        }
+      }
+      @media only screen and (max-device-width: 600px) {
+        h6 {
+            font-size: 3.1rem;
+        }
+        .share-caption {
+          padding-top: 2.5rem;
+        }
+        .share-buttons {
+          img {
+            margin-top: -3rem;
+            margin-right: -5rem;
+          }    
+        }
+      } 
+    }
+    blockquote {
+      padding: 4rem 7rem;    
+      
+      @media only screen and (max-device-width: 600px) {
+        padding: 13rem 5rem; 
+        background-position: 7% 4%;
+      }
+    }
+  }
+}
