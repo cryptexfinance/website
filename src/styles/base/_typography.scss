@@ -1,4 +1,16 @@
 // Main Website
+
+h1, h2, h3, h4, h5, h6  {
+  font-family: $font-primary;
+}
+
+h1 {
+  color: $color-dark-clean;
+  text-transform: capitalize;
+  font-size: 1.75rem;
+  line-height: 3rem;
+}
+
 .menu-logo {
   width: 100px;
 }
