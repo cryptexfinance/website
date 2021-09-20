@@ -27,13 +27,12 @@ const SectionMain = () => {
 
   useEffect(() => {
     const loadData = async () => {
-      if (typeof(data) !== `undefined`) {
-        const Tprice = await data?.tcaps[0].tcap;
-        const currentTotalPrice = BigNumber.from(Tprice);
+      if (typeof (data) !== `undefined`) {
+        const currentTotalPrice = BigNumber.from(await data?.oracles[0].answer);
         const TotalTcapPrice = currentTotalPrice.mul(10000000000);
-        const tcapprice = currentTotalPrice.div(100000000);
-        setTotalTcapPrice(format(parseFloat(tcapprice), 0));
-        setTcapPrice(format(parseFloat(utils.formatEther(TotalTcapPrice.div(10000000000))),2));
+
+        setTotalTcapPrice(format( parseFloat(utils.formatEther(TotalTcapPrice)), 0));
+        setTcapPrice(format(parseFloat(utils.formatEther(TotalTcapPrice.div(10000000000))), 2));
         setFirstLoad(false)
       } else {
         console.log(data);
@@ -83,8 +82,8 @@ export default SectionMain
 
 const GET_TCAP_PRICE = gql`
   query {
-    tcaps(first: 1, orderBy: updatedAt, orderDirection: desc) {
-      tcap
+    oracles(first: 1, orderBy: updatedAt, orderDirection: desc) {
+      answer
     }
   }
 `
