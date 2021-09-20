@@ -17,19 +17,21 @@ tags:
   - Cryptex Finance
   - Index
 ---
-As an investor, you are likely aware of the traditional options you have when deciding what positions to take up. Just a few examples available on the traditional market are stocks, real estate, and physical assets like gold and art. Times are changing, though. The world of investing is being turned on its head with the emergence of cryptocurrencies as a viable tool with which to build wealth.
+# **Indexing crypto; the missing piece?**
 
-Savvy investors have known it for years, young people are diving into cryptocurrency as if their lives depend on it, and the largest governments in the world are deliberating on just how to handle crypto assets. The change in the world of investing has occurred in such a short time, that many skilled investors have still not figured out what cryptocurrencies even are.
+As an investor, you are likely aware of the traditional options you have when deciding what positions to take up. Just a few examples available on the traditional market are stocks, real estate, and physical assets like gold and art. Times are changing, though. The world of investing is being turned on its head with the emergence of cryptocurrencies as a viable wealth-building tool.
 
-**The Writing on the Wall**
+Savvy investors have known it for years. Young people are diving into cryptocurrency as if their lives depended on it, and the largest governments in the world are deliberating on just how to handle crypto assets. The change in the world of investing has occurred in such a short time, that many skilled investors have still not figured out what cryptocurrencies even are.
+
+## **The writing on the wall**
 
 Consider a quote from Michael Sonnenshein, the CEO of Grayscale Investments, who noted that *“Over just the last 12 to 18 months, the asset class has really turned the corner as some well-known and experienced investors have publicly come out in support of crypto…”*
 
-It doesn’t stop at individuals though: corporations, such as Tesla, have embraced crypto as an asset class worth keeping on their balance sheets as a reserve asset. The signals are obvious that the investment community is now clamoring to get into the cryptocurrency ecosystem as they explore volumes of history and charts on the field.
+It doesn’t stop at individuals though: corporations, such as Tesla, have embraced crypto as an asset class worth keeping on their balance sheets as a reserve asset. The signals are so clear that the investment community is now clamoring to get into the cryptocurrency ecosystem as they explore volumes of history and charts on the field.
 
 These days, the most famous of investors, like Ray Dalio and even the heads of JP Morgan, have begun to change their once-negative tunes about Bitcoin and other cryptocurrencies. However much they hate being wrong, they know when to cut the charade and open their eyes to the writing on the wall. Famous investors of the past few decades who have failed to see the benefits of cryptocurrency from a wealth-building viewpoint have lost airtime (and net worth) not only to those in their class who have changed but to new entrants to their class who now appear on Bloomberg and CNBC in their stead to talk about cryptocurrency.
 
-This acknowledgment of crypto assets as an asset class by financial institutions is an important indicator that the existential risk for crypto assets is behind us. In other words, the total market cap of all crypto assets maintains a value greater than zero. Consider the trend line of the total cryptocurrency market cap chart since 2014:
+This acknowledgment of cryptocurrency as an asset class worth investing in by financial institutions is an important indicator that the existential risk for crypto assets is behind us. In other words, the total market cap of all crypto assets will maintain a value greater than zero. Consider the trend line of the total cryptocurrency market cap chart since 2014:
 
 *Note: Log scale is used to smooth fluctuations caused by market cycles.*
 
@@ -41,11 +43,11 @@ This acknowledgment of crypto assets as an asset class by financial institutions
 
 ### The Cryptex Hypothesis
 
-A position based on the S&P 500 over the same period of time above would have seen about 300% growth.
+A position based on the [S&P 500](https://finance.yahoo.com/quote/%5EGSPC/chart/#eyJpbnRlcnZhbCI6IndlZWsiLCJwZXJpb2RpY2l0eSI6MSwiY2FuZGxlV2lkdGgiOjIuOTEyMTQ0NzAyODQyMzc3MywiZmxpcHBlZCI6ZmFsc2UsInZvbHVtZVVuZGVybGF5Ijp0cnVlLCJhZGoiOnRydWUsImNyb3NzaGFpciI6dHJ1ZSwiY2hhcnRUeXBlIjoibGluZSIsImV4dGVuZGVkIjpmYWxzZSwibWFya2V0U2Vzc2lvbnMiOnt9LCJhZ2dyZWdhdGlvblR5cGUiOiJvaGxjIiwiY2hhcnRTY2FsZSI6ImxpbmVhciIsInN0dWRpZXMiOnsi4oCMdm9sIHVuZHLigIwiOnsidHlwZSI6InZvbCB1bmRyIiwiaW5wdXRzIjp7ImlkIjoi4oCMdm9sIHVuZHLigIwiLCJkaXNwbGF5Ijoi4oCMdm9sIHVuZHLigIwifSwib3V0cHV0cyI6eyJVcCBWb2x1bWUiOiIjMDBiMDYxIiwiRG93biBWb2x1bWUiOiIjZmYzMzNhIn0sInBhbmVsIjoiY2hhcnQiLCJwYXJhbWV0ZXJzIjp7IndpZHRoRmFjdG9yIjowLjQ1LCJjaGFydE5hbWUiOiJjaGFydCJ9fX0sInBhbmVscyI6eyJjaGFydCI6eyJwZXJjZW50IjoxLCJkaXNwbGF5IjoiXkdTUEMiLCJjaGFydE5hbWUiOiJjaGFydCIsImluZGV4IjowLCJ5QXhpcyI6eyJuYW1lIjoiY2hhcnQiLCJwb3NpdGlvbiI6bnVsbH0sInlheGlzTEhTIjpbXSwieWF4aXNSSFMiOlsiY2hhcnQiLCLigIx2b2wgdW5kcuKAjCJdfX0sInNldFNwYW4iOm51bGwsImxpbmVXaWR0aCI6Miwic3RyaXBlZEJhY2tncm91bmQiOnRydWUsImV2ZW50cyI6dHJ1ZSwiY29sb3IiOiIjMDA4MWYyIiwic3RyaXBlZEJhY2tncm91ZCI6dHJ1ZSwiZXZlbnRNYXAiOnsiY29ycG9yYXRlIjp7ImRpdnMiOnRydWUsInNwbGl0cyI6dHJ1ZX0sInNpZ0RldiI6e319LCJjdXN0b21SYW5nZSI6bnVsbCwicmFuZ2UiOm51bGwsInN5bWJvbHMiOlt7InN5bWJvbCI6Il5HU1BDIiwic3ltYm9sT2JqZWN0Ijp7InN5bWJvbCI6Il5HU1BDIiwicXVvdGVUeXBlIjoiSU5ERVgiLCJleGNoYW5nZVRpbWVab25lIjoiQW1lcmljYS9OZXdfWW9yayJ9LCJwZXJpb2RpY2l0eSI6MSwiaW50ZXJ2YWwiOiJ3ZWVrIiwic2V0U3BhbiI6bnVsbH1dfQ--) over the same period of time above would have seen about 300% growth.
 
 A wise investor thinks on the margins. What marginal utility can you, as an investor, gain from investing in cryptocurrency? The answers are broad and still relatively vague but are being cleared up more and more quickly as time goes by. As a result of the lingering opaqueness in what marginal utility exists for active crypto investors, the necessity for a bridge or gateway into the crypto space has emerged for curious investors to gain exposure without suffering from wild price volatility. This is where index tokens come into play.
 
-The hypothesis at cryptex.finance is that individuals can derive significant benefit from a non-zero allocation to the cryptocurrency asset class, which they may currently be underexposed to. Rather than committing to a single token, it will benefit under-initiated crypto investors – especially those with little to no experience with the asset class – to gain exposure through an index token, such as Cryptex’s own TCAP.
+**The hypothesis at [cryptex.finance](http://cryptex.finance) is that individuals can derive significant benefit from a non-zero allocation to cryptocurrency, which they may currently be underexposed to.** Rather than committing to a single token, it will benefit under-initiated crypto investors – especially those with little to no experience with the asset class – to gain exposure through an index token, such as Cryptex’s own $TCAP.
 
 **What Is an Index Fund/Index Token?**
 
@@ -70,13 +72,13 @@ Vanguard also describes the benefits of allocating a portion of your portfolio t
 2. Second, the tax burden is reduced. Index funds don't change their stock or bond holdings as often as actively managed funds. This often results in fewer taxable capital gains distributions from the fund, which could reduce your tax bill.
 3. Third, investors incur far lower costs to invest in an index. All index funds have professional portfolio managers. What they don't have is the need to pay more for the expertise and time it takes to hand-select stocks or bonds for each fund.
 
-In addition to the benefits outlined by Vanguard, and perhaps on an anecdotal level, researching individual crypto assets is a time-consuming process that may require technical knowledge that investors would prefer to avoid. Investing in index tokens eliminates the need to do heavy due diligence on each asset.
+In addition to the benefits outlined by Vanguard, investing in index tokens eliminates the need to do heavy due diligence on each asset. Researching individual crypto assets is a time-consuming process that may require technical knowledge which investors would prefer to avoid.
 
 Furthermore, Americans who trade crypto assets trigger a taxable event with every trade, which they may want to avoid by taking a position in an index token. When the portfolio manager adjusts the index, the individual investors do not trigger a taxable event.
 
 Each of these benefits also applies to index tokens, which derive their value from the aggregated price of their respective index. In the case of TCAP, price is derived from the total market cap of the cryptocurrency market as aggregated by Cryptex.
 
-#### Drawbacks of Index Tokens
+## Drawbacks of Index Tokens
 
 It should be noted that there are drawbacks to investing in index tokens. Just as the index protects investors from dramatic short-term drops in price, there is an equal limit to the positive growth an investor has exposure to. Considering the regular occurrence of cryptocurrencies that may pump 100x, the index limits the amount of growth of one’s portfolio.
 
