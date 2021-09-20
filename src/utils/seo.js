@@ -22,24 +22,24 @@ const SEO = ({ description, lang, meta, image: img, title, pathname }) => {
       meta={[
         { name: `description`, content: metaDescription },
         { name: `keywords`, content: site.siteMetadata.keywords.join(`,`) },
-        { property: `og:title`, content: title },
+        { property: `og:site_name`, content: "TCAP by Cryptex Finance." },
+        { property: `og:title`, content: `TCAP - By Cryptex Finance` },
         { property: `og:description`, content: metaDescription },
         { property: `og:type`, content: `website` },
+        { property: `og:url`, content: `https://cryptex.finance` },
+        {
+          property: "og:image",
+          content: "https://ctx-rinkeby.s3.amazonaws.com/TCAP_meta.png",
+        },
         { name: `twitter:creator`, content: site.siteMetadata.author },
-        { name: `twitter:title`, content: `title` },
+        { name: `twitter:title`, content: `TCAP - By Cryptex Finance` },
         { name: `twitter:description`, content: metaDescription },
-      ]
-        .concat(
-          img
-            ? [
-                { property: "og:image", content: image },
-                { property: "og:image:width", content: img.width },
-                { property: "og:image:height", content: img.height },
-                { name: "twitter:card", content: "summary_large_image" },
-              ]
-            : [{ name: "twitter:card", content: "summary" }]
-        )
-        .concat(meta)}
+        {
+          name: "twitter:image",
+          content: "https://ctx-rinkeby.s3.amazonaws.com/TCAP_meta.png",
+        },
+        { name: "twitter:card", content: "summary_large_image" },
+      ].concat(meta)}
     />
   )
 }

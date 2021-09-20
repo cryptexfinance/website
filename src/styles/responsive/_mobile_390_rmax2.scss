@@ -483,32 +483,22 @@
   .team {
     position: relative;
     &-title {
-      position: absolute;
-      width: 312px;
-      height: 36px;
-      left: calc(50% - 312px / 2 - 7.5px);
-      top: calc(50% - 36px / 2 - 147px);
+      margin: 1rem 0rem 2rem 0rem;
       font-size: 24px;
       line-height: 36px;
       letter-spacing: 0.3px;
     }
-
     &-subtitle {
-      position: absolute;
-      width: 305px;
-      height: 44px;
+      margin: 5rem 0rem;
+      width: 100%;
       font-size: 16px;
       line-height: 22px;
       letter-spacing: 0.3px;
-      left: calc(50% - 305px / 2 - 11px);
-      top: calc(50% - 44px / 2 - 91px);
     }
-
     &-divider {
-      background: transparent;
+      display: none;
     }
   }
-
   .header {
     font-size: 22px;
     line-height: 36px;
@@ -518,9 +508,7 @@
   }
 
   .team-row {
-    position: absolute;
     width: 100%;
-    top: calc(50% - 166px / 2 + 63.7px);
   }
 
   .team-box {
@@ -550,16 +538,30 @@
       line-height: 16px;
       letter-spacing: -0.2px;
     }
-
     &-description {
       position: absolute;
       width: 315px;
       height: 225px;
       border-radius: 2px;
       font-size: 12px;
-      line-height: 16px;
+      line-height: 15px;
       letter-spacing: -0.2px;
-      margin-top: 20px;
+      margin-top: 15px;
+    }
+    .flippy-back {
+      width: 100%;
+    }
+  }
+  .team-pagination {  
+    padding: 0.5rem 0rem 0.5rem 0rem;
+    &-container {
+      width: 50rem;
+    }
+    .items {
+      width: 20rem;
+    }
+    &.two {
+      padding-top: 58.5rem;
     }
   }
 
@@ -569,40 +571,31 @@
   }
 
   .newsbox {
-    margin-top: 10px;
-    position: absolute;
+    padding-top: 12rem;
 
     &-title {
-      position: absolute;
+      padding: 50px 0px;
       width: 304px;
-      height: 24px;
       font-size: 22px;
       line-height: 24px;
-      left: calc(50% - 204px / 2 + 140.5px);
-      top: calc(50% - 166px / 2 + 1250px);
     }
-
-    .newsgroup {
-      position: absolute;
-      left: 10px; 
-      top: calc(50% - 166px / 2 + 1340px);
-    }
-
     &-pagination {
-      position: absolute;
-      width: 60rem;
+      width: 100%;
       margin-top: 7%;  
-
-      &.one {
-        margin-top: 71%;
-      }
       &.two {
-        margin-top: 39%;
+        padding-top: 32rem;
       }
+      &.one {
+        padding-top: 59rem;
+      } 
+      &-container {
+        display: flex;
+        width: 50rem;
+      } 
     }
 
     .newsitem {
-      display: inline-table;
+      flex-wrap: nowrap;
       z-index: 20;
       &.hide {
         display: None;
@@ -618,15 +611,15 @@
       }
       &-title {
         position: relative;
-        width: 330px;
+        width: 100%;
         height: 48px;
-        font-size: 11.5px;
+        font-size: 10px;
         line-height: 18px;
         letter-spacing: 0.3px;
       }
       &-description {
         position: relative;
-        width: 315px;
+        width: 100%;
         height: 35px;
         font-size: 12px;
         line-height: 16px;
@@ -640,12 +633,10 @@
         letter-spacing: 0.6px;
         display: none;
       }
-
       &-tag-items {
         margin-top: 7px;
         margin-bottom: 12px;
       }
-
       &-tagbox {
         position: relative;
         color: $color-dark-clean;
@@ -660,7 +651,6 @@
         font-size: 12px;
         padding: 2px;
       }
-
       .tagbox a,
       .tagbox a:visited,
       .tagbox a:active {
@@ -672,12 +662,19 @@
       }
     }
   }
+  .pag {
+    &-items {
+      width: 40rem;
+    }
+  }
+  .newsgroup {
+    justify-content: normal;    
+  }
 
   .faq {
     &-row {
       position: absolute;
       width: 100%;
-      // left: calc(50% - 312px/2 - 7.5px);
       left: 40px;
       top: calc(50% - 190px / 2 - 16px);
     }
@@ -734,7 +731,7 @@
   .answer {
     width: 315px;
     height: auto;
-    font-size: 16px;
+    font-size: 13.5px;
     line-height: 22px;
     letter-spacing: 0.3px;
   }
@@ -774,7 +771,15 @@
       position: absolute;
       width: 223px;
       height: 42px;
-      left: 50px; //calc(50% - 375px/2 - 208.6px);
+      left: 50px; 
+      top: calc(50% - 104px / 2 - 315px);
+    }
+
+    &-icons-row-2 {
+      position: absolute;
+      width: 223px;
+      height: 42px;
+      left: 215px; 
       top: calc(50% - 104px / 2 - 315px);
     }
 
@@ -873,9 +878,9 @@
   }
 
   .section-team {
-    height: 50vh;//330vh;
+    height: 50vh;
     position: relative;
-    margin-bottom: 240vh;
+    margin-bottom: 250vh;
   }
 
   .section-faq {
@@ -908,11 +913,7 @@
         &-photo {
           top: 0.9rem;
         }
-        &-title {
-          width: 335px; 
-        }
       }
-
     }
     
     .faq {
@@ -935,14 +936,6 @@
     }
     .toggle {
       width: 130vw;      
-    }
-    .newsbox {
-      &-title {
-        top: calc(50% - 280px / 2 + 1310px);
-      }
-      .newsgroup {
-        top: calc(50% - 240px / 2 + 1380px);
-      }      
     }
   }
 
@@ -1046,15 +1039,7 @@
     }
     .newsbox {
       margin-top: 170px;
-      
-      &-title {
-        left: calc(50% - 205px / 2 + 125.5px);
-        top: calc(50% - 280px / 2 + 1250px);
-      }
-      .newsgroup {
-        left: 0px; 
-        top: calc(50% - 270px / 2 + 1340px);
-      }
+
       .newsitem {
         &-photo {
           top: 1.2rem;  
@@ -1063,7 +1048,7 @@
           margin-bottom: 10px;
         }
         &-title {
-          width: 295px;
+          width: 100%;
           font-size: 11px;
           line-height: 16px;          
         }
@@ -1122,14 +1107,6 @@
         height: 100vh;
         margin-bottom: 305vh;
       }
-      .newsbox {
-        &-title {
-          top: calc(50% - 180px / 2 + 1170px);
-        }
-        .newsgroup {
-          top: calc(50% - 160px / 2 + 1250px);
-        }
-      }
       .section-faq {
         margin-top: 110vh;
       }
@@ -1149,14 +1126,6 @@
       }
       .section-team {
         height: 100vh;
-      }
-      .newsbox {
-        &-title {
-          top: calc(50% - 380px / 2 + 1300px);
-        }
-        .newsgroup {
-          top: calc(50% - 370px / 2 + 1380px);
-        }        
       }
       .section-faq {
         margin-top: 110vh;

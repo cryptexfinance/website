@@ -3,6 +3,7 @@ import governance from '../../../../static/website/governance/governance.png'
 import coinGecko from '../../../../static/website/governance/coin-gecko.svg'
 import sushiLogo from '../../../../static/website/governance/sushi-logo.svg'
 import dfpLogo from '../../../../static/website/governance/dfp-logo.svg'
+import geminiLogo from '../../../../static/website/governance/gemini-hor-white-full.svg'
 import ctx from '../../../../static/website/governance/ctx.svg'
 import docs from '../../../../static/website/governance/docs.svg'
 import forum from '../../../../static/website/governance/forum.svg'
@@ -20,14 +21,17 @@ const SectionGovernance = () => {
             future products within the Cryptex ecosystem.
         </div>
         <div className="governance-buttons">
-            <a>
+            <a href="https://www.coingecko.com/en/coins/cryptex-finance" rel="noreferrer" target="_blank">
                 <img src={coinGecko} className="governance-icon gecko" alt="Coin Gecko" />
             </a>
-            <a>
+            <a href="https://analytics.sushi.com/pairs/0x2a93167ed63a31f35ca4788e2eb9fbd9fa6089d0" rel="noreferrer" target="_blank">
                 <img src={sushiLogo}  className="governance-icon uni" alt="Uni Logo" />
             </a>
-            <a>
+            <a href="https://defipulse.com/cryptex" rel="noreferrer" target="_blank">
                 <img src={dfpLogo} className="governance-icon dfp" alt="DFP"  />        
+            </a>
+            <a href="https://www.gemini.com/prices/cryptex?utm_source=cryptex&utm_medium=link&utm_campaign=web_referral" rel="noreferrer" target="_blank">
+                <img src={geminiLogo} className="governance-icon gemini" alt="gemini logo" /> 
             </a>
         </div>
         <div className="governance-image">            
@@ -38,6 +42,7 @@ const SectionGovernance = () => {
                 <a
                  rel="noopener noreferrer"
                  target="_blank"
+                 href="https://medium.com/cryptexfinance/introducing-ctx-governance-powering-the-tcap-protocol-c1b32ce084bc"     
                  className="governance-details-text"
                 >
                 <img
@@ -52,6 +57,7 @@ const SectionGovernance = () => {
                 <a
                 rel="noreferrer"
                 target="_blank"
+                href=" https://www.withtally.com/governance/cryptex"      
                 className="governance-details-text"
                 >
                 <img src={voting} className="governance-details-icons" alt="Voting" />
@@ -61,7 +67,8 @@ const SectionGovernance = () => {
             <div className="governance-details-item">
                 <a
                 rel="noreferrer"
-                target="_blank"
+                href="https://docs.cryptex.finance/"
+                target="_blank"      
                 className="governance-details-text"
                 >
                 <img src={docs} className="governance-details-icons" alt="Documentation" />
@@ -71,6 +78,7 @@ const SectionGovernance = () => {
             <div className="governance-details-item">
             <a
             rel="noopener noreferrer"
+            href="https://forum.cryptex.finance/"
             target="_blank"
             className="governance-details-text"
             >

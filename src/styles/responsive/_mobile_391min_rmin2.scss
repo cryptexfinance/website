@@ -469,29 +469,21 @@
   .team {
     position: relative;
     &-title {
-      position: absolute;
-      width: 312px;
-      height: 36px;
-      left: calc(50% - 340px / 2 - 7.5px);
-      top: calc(50% - 36px / 2 - 367px);
+      margin: 1rem 0rem 2rem 0rem;
       font-size: 24px;
       line-height: 36px;
       letter-spacing: 0.3px;
     }
-
     &-subtitle {
-      position: absolute;
-      width: 305px;
-      height: 44px;
+      margin: 5rem 0rem;
+      width: 100%;
       font-size: 16px;
       line-height: 22px;
       letter-spacing: 0.3px;
-      left: calc(50% - 340px / 2 - 11px);
-      top: calc(50% - 100px / 2 - 281px);
-    }
 
+    }
     &-divider {
-      background: transparent;
+      display: none;
     }
   }
 
@@ -502,11 +494,8 @@
     align-items: center;
     text-transform: capitalize;
   }
-
   .team-row {
-    position: absolute;
     width: 100%;
-    top: calc(50% - 260px / 2 - 103.7px);
   }
 
   .team-box {
@@ -519,7 +508,7 @@
       position: relative;
       text-align: center;
       width: 365px;
-      height: auto; //161px;
+      height: auto; 
       border-radius: 2px;
     }
     &-name {
@@ -528,7 +517,6 @@
       font-size: 14px;
       line-height: 22px;
       letter-spacing: 0.3px;
-      // background-color: #212138;
     }
     &-position {
       width: 220px;
@@ -537,9 +525,7 @@
       line-height: 16px;
       letter-spacing: -0.2px;
     }
-
     &-description {
-      position: absolute;
       width: 315px;
       height: 225px;
       border-radius: 2px;
@@ -547,50 +533,55 @@
       line-height: 16px;
       letter-spacing: -0.2px;
       margin-top: 20px;
-      // background-color: #212138;
+    }
+    .flippy-back {
+      width: 100%;
     }
   }
 
+  .team-pagination {  
+    padding: 0.5rem 0rem 0.5rem 0rem;
+    &-container {
+      width: 50rem;
+    }
+    .items {
+      width: 20rem;
+    }
+    &.two {
+      padding-top: 55rem;
+    }
+  }
+  
   .flippy-back {
     background: $color-black !important;
     background-color: $color-black !important;
   }
 
   .newsbox {
-    position: absolute;
-    margin-top: 0px;
+    padding-top: 0rem;
 
     &-title {
-      position: absolute;
+      padding: 30px 0px;
       width: 304px;
-      height: 24px;
       font-size: 22px;
       line-height: 24px;
-      left: calc(50% - 204px / 2 + 140.5px);
-      top: calc(50% - 250px / 2 + 1390px);
     }
-
     &-pagination {
-      position: absolute;
-      width: 57rem;
+      width: 100%;
       margin-top: 6%;  
-  
-      &.one {
-        margin-top: 69%;
-      }
       &.two {
-        margin-top: 37.5%;
+        padding-top: 32rem;
       }
+      &.one {
+        padding-top: 55.5rem;
+      }  
+      &-container {
+        display: flex;
+        width: 50rem;
+      } 
     }
-
-    .newsgroup {
-      position: absolute;
-      left: 10px; 
-      top: calc(50% - 280px / 2 + 1500px);
-    }
-
     .newsitem {
-      display: inline-table;
+      flex-wrap: nowrap;
       z-index: 20;
       &.hide {
         display: None;
@@ -605,9 +596,9 @@
       }
       &-title {
         position: relative;
-        width: 355px;
+        width: 100%;
         height: 48px;
-        font-size: 12px;
+        font-size: 11px;
         line-height: 20px;
         letter-spacing: 0.3px;
         margin-bottom: 12px;
@@ -628,12 +619,10 @@
         letter-spacing: 0.6px;
         display: none;
       }
-
       &-tag-items {
         margin-top: 13px;
         margin-bottom: 12px;        
       }
-
       &-tagbox {
         position: relative;
         color: $color-dark-clean;
@@ -658,6 +647,14 @@
         padding-bottom: 4rem !important;
       }
     }
+  }
+  .pag {
+    &-items {
+      width: 40rem;
+    }
+  }
+  .newsgroup {
+    justify-content: normal;    
   }
 
   .faq {
@@ -720,7 +717,7 @@
   .answer {
     width: 315px;
     height: auto;
-    font-size: 16px;
+    font-size: 15px;
     line-height: 22px;
     letter-spacing: 0.3px;
   }
@@ -761,6 +758,14 @@
       width: 223px;
       height: 42px;
       left: calc(50% - 375px / 2 + 48.6px);
+      top: calc(50% - 104px / 2 - 315px);
+    }
+
+    &-icons-row-2 {
+      position: absolute;
+      width: 223px;
+      height: 42px;
+      left: calc(50% - 10px / 2 + 48.6px);
       top: calc(50% - 104px / 2 - 315px);
     }
 
@@ -862,7 +867,7 @@
   .section-team {
     height: 95vh;
     position: relative;
-    margin-bottom: 145vh;
+    margin-bottom: 155vh;
   }
 
   .section-faq {
@@ -913,33 +918,7 @@
       &-divider {
         width: 395px;        
       }
-    }
-    .newsbox {
-      .newsgroup {
-        left: 40px;
-      }
-
-      .newsitem {
-        &-photo {
-          top: 0.6rem;
-        }
-        &-title {
-          width: 380px;          
-        }
-        &-tag-items {
-          margin-top: 20px;
-        }
-      }
-
-      &-pagination {
-        position: absolute;
-        width: 50rem;       
-      }
-
-      &-title {
-        left: calc(50% - 204px / 2 + 170.5px);
-      }
-    }
+    }   
   }
   @media only screen and (max-device-height: 820px)  {
     .section-main {
@@ -960,15 +939,9 @@
     }
     .section-team {
       height: 100vh;
-      margin-bottom: 170vh;
-    }
-    .newsbox {
-      margin-top: 60px;
-      &-title {
-        top: calc(50% - 250px / 2 + 1310px);
-      }
-      .newsgroup {
-        top: calc(50% - 280px / 2 + 1430px);
+      margin-bottom: 180vh;
+      .team-posts{
+        padding-top: 20rem;
       }
     }
     .section-faq {
@@ -996,20 +969,11 @@
     } 
     .section-team {
       height: 85vh;
-      margin-bottom: 142vh;
+      margin-bottom: 157vh;
     }   
     .section-community {
       height: 45vh;
     }  
-    .newsbox {
-      &-title {
-        top: calc(50% - 250px / 2 + 1320px);
-      }
-  
-      .newsgroup {
-        top: calc(50% - 280px / 2 + 1430px);
-      }
-    }
   }
   @media only screen and (min-device-height: 880px) and (max-device-height: 910px)  {
     .section-about {
@@ -1022,15 +986,7 @@
       height: 120vh;
     }
     .section-team {
-      height: 80vh;
-    }
-    .newsbox {
-      .newsgroup {
-        top: calc(50% - 210px / 2 + 1440px);
-      }
-      &-title {
-        top: calc(50% - 250px / 2 + 1360px);
-      }
+      height: 95vh;
     }
     .section-faq {
       height: 80vh;
@@ -1055,19 +1011,10 @@
     }    
     .section-team {
       height: 80vh;
-      margin-bottom: 120vh;
+      margin-bottom: 140vh;
     }
     .section-faq{
       height: 80vh;
-    }
-    .newsbox {
-      margin-top: 90px;
-      .newsgroup {
-        top: calc(50% - 210px / 2 + 1330px);
-      }
-      &-title {
-        top: calc(50% - 250px / 2 + 1240px);
-      }
     }
     .section-community {
       height: 40vh;
@@ -1094,15 +1041,6 @@
     }
     .team-row {
       left: calc(50% - 1.6rem/2 - 28.65625rem);
-    }
-    .newsbox {
-      .newsgroup {
-        left: 52px;
-      }
-      &-title {
-        top: calc(50% - 210px / 2 + 1300px);
-        left: calc(50% - 204px / 2 + 200.5px);
-      }
     }
     .faq {
       &-divider {
@@ -1163,11 +1101,6 @@
     .governance {
       &-buttons {
         top: calc(50% - 60.75rem/2 + 6.1125rem);
-      }
-    }
-    .newsbox {
-      &-title {
-        top: calc(50% - 210px / 2 + 1260px);        
       }
     }
   }

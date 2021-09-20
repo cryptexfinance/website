@@ -1,3 +1,3 @@
-const appEndpoint = "https://rinkeby.cryptex.finance/";
+const appEndpoint = "https://app.cryptex.finance/";
 
 export default appEndpoint;
