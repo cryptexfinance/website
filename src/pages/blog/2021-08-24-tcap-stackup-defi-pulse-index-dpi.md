@@ -2,11 +2,7 @@
 templateKey: blog-post
 title: "TCAP StackUp: DeFi Pulse Index (DPI)"
 date: 2021-08-24T00:09:24.501Z
-description: crypto index tokens offer broad crypto exposure, savings on gas
-  fees, and automatic rebalancing all to make your investing journey easier.
-  However, as always in crypto, there's more than one option to choose from;
-  let's dig into the popular DeFi Pulse Index (DPI) and Total Crypto Market Cap
-  Token (TCAP) to see how they stack up.
+description: How does the TCAP Index stack up against DeFi Pulse Index (DPI)?
 featuredpost: true
 featuredimage: /img/tcap-stack-up-dp.jpg
 tags:
