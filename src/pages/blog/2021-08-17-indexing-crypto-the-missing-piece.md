@@ -29,7 +29,7 @@ Consider a quote from Michael Sonnenshein, the CEO of Grayscale Investments, who
 
 It doesn’t stop at individuals though: corporations, such as Tesla, have embraced crypto as an asset class worth keeping on their balance sheets as a reserve asset. The signals are so clear that the investment community is now clamoring to get into the cryptocurrency ecosystem as they explore volumes of history and charts on the field.
 
-These days, the most famous of investors, like Ray Dalio and even the heads of JP Morgan, have begun to change their once-negative tunes about Bitcoin and other cryptocurrencies. However much they hate being wrong, they know when to cut the charade and open their eyes to the writing on the wall. Famous investors of the past few decades who have failed to see the benefits of cryptocurrency from a wealth-building viewpoint have lost airtime (and net worth) not only to those in their class who have changed but to new entrants to their class who now appear on Bloomberg and CNBC in their stead to talk about cryptocurrency.
+These days, the most famous of investors, like [Ray Dalio](https://fortune.com/2021/05/24/bitcoin-ray-dalio-bonds/) and even the heads of [JP Morgan](https://www.coindesk.com/business/2021/04/26/jpmorgan-to-let-clients-invest-in-bitcoin-fund-for-first-time-sources/), have begun to change their once-negative tunes about Bitcoin and other cryptocurrencies. However much they hate being wrong, they know when to cut the charade and open their eyes to the writing on the wall. Famous investors of the past few decades who have failed to see the benefits of cryptocurrency from a wealth-building viewpoint have lost airtime (and net worth) not only to those in their class who have changed but to new entrants to their class who now appear on Bloomberg and [CNBC](https://www.cnbc.com/video/2021/07/20/pro-watch-cnbcs-interview-with-ftx-founder-sam-bankman-fried.html) in their stead to talk about cryptocurrency.
 
 This acknowledgment of cryptocurrency as an asset class worth investing in by financial institutions is an important indicator that the existential risk for crypto assets is behind us. In other words, the total market cap of all crypto assets will maintain a value greater than zero. Consider the trend line of the total cryptocurrency market cap chart since 2014:
 
@@ -47,7 +47,7 @@ A position based on the [S&P 500](https://finance.yahoo.com/quote/%5EGSPC/chart/
 
 A wise investor thinks on the margins. What marginal utility can you, as an investor, gain from investing in cryptocurrency? The answers are broad and still relatively vague but are being cleared up more and more quickly as time goes by. As a result of the lingering opaqueness in what marginal utility exists for active crypto investors, the necessity for a bridge or gateway into the crypto space has emerged for curious investors to gain exposure without suffering from wild price volatility. This is where index tokens come into play.
 
-**The hypothesis at [cryptex.finance](http://cryptex.finance) is that individuals can derive significant benefit from a non-zero allocation to cryptocurrency, which they may currently be underexposed to.** Rather than committing to a single token, it will benefit under-initiated crypto investors – especially those with little to no experience with the asset class – to gain exposure through an index token, such as Cryptex’s own $TCAP.
+**The hypothesis at [cryptex.finance](http://cryptex.finance) is that individuals can derive significant benefit from a non-zero allocation to cryptocurrency, which they may currently be underexposed to.** Rather than committing to a single token, it will benefit under-initiated crypto investors – especially those with little to no experience with the asset class – to gain exposure through an index token, such as Cryptex’s own [$TCAP](https://cryptex.finance/#about).
 
 **What Is an Index Fund/Index Token?**
 
@@ -84,7 +84,7 @@ It should be noted that there are drawbacks to investing in index tokens. Just a
 
 Index tokens offer exposure to the long-term upside of crypto assets while reducing, if not eliminating, the risk of an asset becoming worthless. These index tokens are an exciting tool for investors to consider when designing their personal portfolio's asset mix.
 
-**TCAP by Cryptex**
+## **TCAP by Cryptex**
 
 $TCAP is the ticker for the Total Market Cap token from Cryptex Finance, which is designed to give investors accurate, real-time price exposure to the total capitalization of the cryptocurrency market via a single, synthetic asset.
 
