@@ -2,10 +2,7 @@
 templateKey: blog-post
 title: "TCAP StackUp: BasketDAO DeFi Index (BDI)"
 date: 2021-08-27T00:09:43.262Z
-description: "Does the sheer number of different cryptocurrencies make your head
-  spin? Enter: crypto index tokens. Let's dig into the popular, yield-bearing
-  BasketDAO DeFi Index (BDI) and Total Crypto Market Cap Token (TCAP) to see how
-  they stack up."
+description: How does $TCAP stack up against BasketDAO (BDI)?
 featuredpost: true
 featuredimage: /img/tcap-bdi-stackup.jpg
 tags:
