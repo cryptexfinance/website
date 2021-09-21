@@ -9,7 +9,7 @@ description: Have you ever wondered why indexes are always talked about in the
   well. The Total Market Cap (TCAP) index gives crypto newcomers easy exposure,
   and provides a hedge against sudden price volatility.
 featuredpost: true
-featuredimage: /img/chart.png
+featuredimage: /img/tcap.png
 tags:
   - TCAP
   - TCAP Index
