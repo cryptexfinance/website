@@ -90,7 +90,7 @@ const SectionCommunity = ({ data }) => {
               <img src={reddit} className="community-item-icon" alt="Reddit" />
               <div className="community-item-text terciary-header">Reddit</div>
             </a>
-            <a href="https://discord.gg/N5zEq6b" rel="noreferrer" target="_blank" className="community-item">
+            <a href="https://discord.gg/b8XgHYbkaN" rel="noreferrer" target="_blank" className="community-item">
               <img src={discord} className="community-item-icon" alt="Reddit" />
               <div className="community-item-text terciary-header">Discord</div>
             </a>
