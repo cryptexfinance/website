@@ -90,26 +90,26 @@ const SectionCommunity = ({ data }) => {
               <img src={reddit} className="community-item-icon" alt="Reddit" />
               <div className="community-item-text terciary-header">Reddit</div>
             </a>
-            <a href="https://discord.gg/b8XgHYbkaN" rel="noreferrer" target="_blank" className="community-item">
-              <img src={discord} className="community-item-icon" alt="Reddit" />
+            <a href="https://discord.gg/cryptex" rel="noreferrer" target="_blank" className="community-item">
+              <img src={discord} className="community-item-icon" alt="Discord" />
               <div className="community-item-text terciary-header">Discord</div>
             </a>
             <a href="https://twitter.com/cryptexfinance" rel="noreferrer" target="_blank" className="community-item">
-              <img src={twitter} className="community-item-icon" alt="Reddit" />
+              <img src={twitter} className="community-item-icon" alt="Twitter" />
               <div className="community-item-text terciary-header">Twitter</div>
             </a>
           </div>
           <div className="community-icons-row-2">
             <a href="https://medium.com/cryptexfinance" rel="noreferrer" target="_blank" className="community-item">
-              <img src={medium} className="community-item-icon" alt="Reddit" />
+              <img src={medium} className="community-item-icon" alt="Medium" />
               <div className="community-item-text terciary-header">Medium</div>
             </a>
             <a href="https://t.me/cryptexfinance" rel="noreferrer" target="_blank" className="community-item">
-              <img src={telegram} className="community-item-icon" alt="Reddit" />
+              <img src={telegram} className="community-item-icon" alt="Telegram" />
               <div className="community-item-text terciary-header">Telegram</div>
             </a>
             <a href="https://www.youtube.com/channel/UCdN17zdr5MCDph75srdhutQ" rel="noreferrer" target="_blank" className="community-item">
-              <img src={youtube} className="community-item-icon" alt="Reddit" />
+              <img src={youtube} className="community-item-icon" alt="Youtube" />
               <div className="community-item-text terciary-header">Youtube</div>
             </a>
           </div>
