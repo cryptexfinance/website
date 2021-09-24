@@ -168,16 +168,16 @@ const SectionNews = (props) => {
     if (indexOf >= 0) {
       return(
         <div className={Math.ceil((indexOf + 1) / itemsPerPage) == activePage + 1 ? "newsitem" : "newsitem hide"} key={node.id}>
-          <img src={node.frontmatter.featuredimage.childImageSharp.fluid.src} className="newsitem-photo" alt="News" />
+          <a href={postUrl(node)} target="_top" rel="noreferrer">
+            <img src={node.frontmatter.featuredimage.childImageSharp.fluid.src} className="newsitem-photo" alt="News" />
+          </a>  
           <div className="newsitem-info">
             <div className="newsitem-tag-items">
               {Array.isArray(node.frontmatter.tags) &&     
                 node.frontmatter.tags.slice(0,4).map(tag => {
                   const tColor = tagColor(tag);
                   return <a
-                          href={postUrl(node)}
                           rel="noreferrer"
-                          target="_blank"
                           className="newsitem-tagbox taglink"
                           style={{ color: tColor, borderColor: tColor }} 
                         >
@@ -186,15 +186,17 @@ const SectionNews = (props) => {
                 })              
               }
             </div>
-            <a href={postUrl(node)} rel="noreferrer" target="_blank" className="newsitem-title-link" >
+            <a href={postUrl(node)} target="_top"  rel="noreferrer" className="newsitem-title-link" >
               <div className={titleClass(node.frontmatter.title.length)}>
                 {node.frontmatter.title}
               </div>
             </a>
-            <p className="newsitem-brief">
-              {sliceDescription(node.frontmatter.description)}
-            </p>
-            <a href={postUrl(node)} rel="noreferrer" target="_blank" className="newsitem-link link">Check it out</a>
+            <a href={postUrl(node)} target="_top" rel="noreferrer" className="newsitem-title-link" >
+              <p className="newsitem-brief">
+                  {sliceDescription(node.frontmatter.description)}              
+              </p>
+            </a>  
+            <a href={postUrl(node)} target="_top" rel="noreferrer" className="newsitem-link link">Check it out</a>
           </div>
         </div>
       )

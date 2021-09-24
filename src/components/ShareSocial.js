@@ -54,18 +54,18 @@ const ShareSocial = (props) => {
         <h6>Share with</h6>        
       </div>
       <div className="share-buttons">
-        <RedditShareButton url={shareUrl()} title={title}>
-          <img src="/Reddit.svg" alt="Reddit" />
-        </RedditShareButton>
         <OverlayTrigger
           key="bottom"
           placement="bottom"
           overlay={<Tooltip id="tooltip-bottom">Click to copy post link</Tooltip>}
         >
           <button onClick={copyCodeToClipboard}>
-            <img src="/Discord.svg" alt="Discord" />
+            <img src="/copy.svg" alt="Discord" />
           </button>
         </OverlayTrigger>  
+        <RedditShareButton url={shareUrl()} title={title}>
+          <img src="/Reddit.svg" alt="Reddit" />
+        </RedditShareButton>
         <TwitterShareButton url={shareUrl()} title={title} hashtags={tags}>
           <img src="/Twitter.svg" alt="Twitter" />
         </TwitterShareButton>

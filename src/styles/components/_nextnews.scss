@@ -34,6 +34,11 @@
       font-size: 0.7rem;
       margin: 1rem 0rem;
     }
+     &-tag-items { 
+      a {
+        text-decoration: none;
+      } 
+     }
     &-tagbox { 
       font-size: 0.65rem;  
       color: $color-dark-clean;

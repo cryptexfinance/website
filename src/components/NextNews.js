@@ -69,15 +69,15 @@ const NextNews = (props) => {
     if (index > props.postIndex && index <= props.postIndex + 4)
       return (
         <div className={"newsitem"} key={node.id}>
-          <img src={node.frontmatter.featuredimage.childImageSharp.fluid.src} className="newsitem-photo" alt="News" />
+          <a href={postUrl(node)} target="_top" rel="noreferrer" className="newsitem-title-link" >
+            <img src={node.frontmatter.featuredimage.childImageSharp.fluid.src} className="newsitem-photo" alt="News" />
+          </a>  
           <div className="newsitem-info">
             <div className="newsitem-tag-items">
               {Array.isArray(node.frontmatter.tags) &&
                 node.frontmatter.tags.slice(0, 2).map(tag => {
                   const tColor = tagColor(tag);  
                   return <a
-                            href={postUrl(node)}
-                            rel="noreferrer"
                             className="newsitem-tagbox taglink"
                             style={{ color: tColor, borderColor: tColor }}
                           >
@@ -86,12 +86,12 @@ const NextNews = (props) => {
                 })
               }
             </div>
-            <a href={postUrl(node)} rel="noreferrer" className="newsitem-title-link" >
+            <a href={postUrl(node)} target="_top"  rel="noreferrer" className="newsitem-title-link" >
               <div className={titleClass(node.frontmatter.title.length)}>
                 {node.frontmatter.title}
               </div>
             </a>
-            <a href={postUrl(node)} rel="noreferrer" className="newsitem-link link">Check it out</a>
+            <a href={postUrl(node)} target="_top" rel="noreferrer" className="newsitem-link link">Check it out</a>
           </div>
         </div>
       );
