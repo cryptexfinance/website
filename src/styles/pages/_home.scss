@@ -15,6 +15,17 @@ body {
   width: 100vw;
 }
 
+.btn-primary:focus {
+  color: $color-grey;
+  background-color: $color-navbar-button;
+  border-color: $color-grey;
+  box-shadow: 0 0 0 0.2rem $shadow-purple-neon-secondary;
+}
+.btn-primary:hover {
+  background-color: $color-navbar-button;
+  border-color: $shadow-purple-neon-secondary;
+}
+
 .menu-logo {
     width: 120px;
 }
@@ -58,7 +69,7 @@ body {
   display: flex;
   flex-wrap:wrap;
   position: relative;
-  padding: 2rem;
+  padding: 1rem 2rem;
   
   &-divider {
     width: 0.0625rem;

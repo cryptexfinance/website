@@ -73,7 +73,7 @@
       }
     }
     &-tagbox { 
-      color: $color-dark-clean !important;
+      color: $color-dark-clean;
       background-color:$color-black;
       border: 1px solid $shadow-purple-neon;
       margin:0px 10px 10px 0px;
@@ -87,7 +87,7 @@
     }
 
     .taglink  { 
-      padding:2px;
+      padding:4px;
     }
       
     .tagbox a, .tagbox a:visited, .tagbox a:active { 
@@ -104,20 +104,33 @@
     align-items: center;
     padding: 1rem 1rem;    
 
-    svg {
+    .search-icon {
       color: $color-grey;
       position: absolute;
       margin-left: 0.6rem;
+      align-self: center;
       font-size: 1.2rem
+    }
+    .filter-box{
+      display: flex;
+      width: 50%;
+    }
+    .select-cryptex {
+      margin-left: 1rem;
+      width: 40% !important;
+    }
+    .select-cryptex__control {
+      height: 3rem;
+      min-height: 3rem !important;
     }
   }
   &-search {
     width: 50%;
     height: 3rem;
     background: $color-navbar-button;
-    border: 0.0625rem solid $color-grey;
+    border: 0.8px solid $color-grey;
     box-sizing: border-box;
-    border-radius: 0.0625rem;
+    border-radius: 1px;
     font-family: $font-tertiary;
     font-style: normal;
     font-weight: normal;
@@ -125,6 +138,9 @@
     line-height: 0.875rem;
     color: $color-grey;
     padding: 1.5rem 2.3rem;
+  }
+  &-search:focus {
+    border: 0.8px solid $shadow-purple-neon-secondary !important;
   }
   @media only screen and (max-device-width: 800px) {
     height: 100%;
@@ -144,9 +160,32 @@
     }
     &-inputs {
       padding: 2rem 3rem;
+      .filter-box{
+        width: 80%;
+      }
+      .select-cryptex {
+        width: 30% !important;  
+        &__control {
+          height: 4rem;
+        }
+        &__placeholder {
+          font-size: 1.5rem;
+        }
+        &__single-value {
+          font-size: 1.5rem;
+        }
+        &__input {
+          font-size: 1.5rem;
+        }
+        &__option {
+          font-size: 1.5rem;
+        }
+      } 
     }
     &-search {
       font-size: 1.5rem;
+      height: 4rem;
+      width: 50%;
     }
     &-pagination {
       padding-right: 0rem;
@@ -197,16 +236,44 @@
     }
     &-inputs {
       padding: 3rem 4.5rem;
-      svg {
-        margin-left: 1rem;
+      .search-icon {
+        margin-left: 1.1rem;
         font-size: 2.5rem;
+      }
+      .filter-box{
+        width: 100%;
+      }
+      .select-cryptex {
+        width: 50% !important;  
+        &__control {
+          height: 7rem;
+        }
+        &__placeholder {
+          font-size: 3rem;
+        }
+        &__indicators {
+          height: 7rem;
+        }
+        &__indicator-separator {
+          margin-top: 4px;
+          margin-bottom: 4px;
+        }
+        &__input {
+          font-size: 3rem;
+        }
+        &__single-value {
+          font-size: 3rem;
+        }
+        &__option {
+          font-size: 3rem;
+        }
       }
     }
     &-search {
-      width: 100%;
+      width: 50%;
       height: 7rem;
       font-size: 3rem;
-      padding-left: 4rem;
+      padding-left: 4.5rem;
     }
     &-pagination {
       width: 90%;
@@ -246,6 +313,12 @@
       }
     }
   }
+}
+
+
+#newsbox-tags-list {
+  height: 3rem;
+  margin-left: 1rem;
 }
 
 .pag {

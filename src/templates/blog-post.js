@@ -6,10 +6,9 @@ import Col from "react-bootstrap/esm/Col";
 import Layout from '../components/Layout';
 import Content, { HTMLContent } from '../components/Content';
 import Header from '../components/Header';
-import bg from "../../static/bg.webp";
-import bgvideo from "../../static/bg.mp4";
 import NextNews from "../components/NextNews";
 import ShareSocial from "../components/ShareSocial";
+import { tagColor } from "../components/utils/tags";
 
 export const BlogPostTemplate = ({
   postIndex,
@@ -17,6 +16,7 @@ export const BlogPostTemplate = ({
   contentComponent,
   tags,
   title,
+  author,
   date,
   helmet,
   slug
@@ -36,17 +36,22 @@ export const BlogPostTemplate = ({
         <Col sm={12} md={12} lg={8} className="post" >
           {tags && tags.length ? (
             <div className="tags">
-              {tags.map((tag) => (
-                <a target="_blank" className="tagbox">
-                  {tag}
-                </a>
-              ))}
+            {tags.map((tag) => {
+              const tColor = tagColor(tag);
+              return  <a
+                        target="_blank"
+                        className="tagbox"
+                        style={{ color: tColor, borderColor: tColor }}
+                      >
+                        {tag}
+                      </a>
+            })}
             </div>
           ) : null}
           <h1 className="title is-size-2 has-text-weight-bold is-bold-light">
             {title}
           </h1>
-          <h6 className="post-date">{date}</h6>
+          <h6 className="post-date">{date} | {author}</h6>
           <PostContent content={buildContent()} />
           <ShareSocial title={title}  shareSlug={slug} tags={tags} />
         </Col>
@@ -69,18 +74,7 @@ const BlogPost = ({ data, pageContext }) => {
   const { markdownRemark: post } = data
   return (
     <Layout>
-      <video
-        playsInline
-        autoPlay
-        loop
-        muted
-        poster={bg}
-        className="video"
-        id="bgvid"
-      >
-        <source src={bgvideo} type="video/mp4" />
-      </video>
-      <header id="home" className="section-main">
+      <header id="home">
         <Header blogPost={true} />
       </header>
       <BlogPostTemplate
@@ -98,6 +92,7 @@ const BlogPost = ({ data, pageContext }) => {
         }
         tags={post.frontmatter.tags}
         title={post.frontmatter.title}
+        author={post.frontmatter.author}
         date={post.frontmatter.date}
         slug={post.fields.slug}
       />
@@ -124,6 +119,7 @@ export const pageQuery = graphql`
       frontmatter {
         date(formatString: "MMMM DD, YYYY")
         title
+        author
         description
         tags
       }

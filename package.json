@@ -59,6 +59,7 @@
     "react-helmet": "^6.1.0",
     "react-media": "^1.10.0",
     "react-responsive": "^8.2.0",
+    "react-select": "^4.3.1",
     "react-share": "^4.4.0",
     "react-toastify": "^6.1.0"
   },

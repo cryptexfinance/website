@@ -1,20 +1,37 @@
-import React, { useEffect, useState } from 'react';
-import { useStaticQuery, graphql } from 'gatsby';
+import React, { useEffect, useState } from "react";
+import { useStaticQuery, graphql } from "gatsby";
 import Col from "react-bootstrap/esm/Col";
-import { useBreakpoint } from 'gatsby-plugin-breakpoints';
+import SelectCryptex from "../components/Select";
+import { useBreakpoint } from "gatsby-plugin-breakpoints";
 import { FaSearch } from "@react-icons/all-files/fa/FaSearch";
-import arrowInactive from '../../../../static/website/news/arrow-down.svg';
-import arrowActive from '../../../../static/website/news/arrow-up.svg';
+import arrowInactive from "../../../../static/website/news/arrow-down.svg";
+import arrowActive from "../../../../static/website/news/arrow-up.svg";
+import { tagColor } from "../../../components/utils/tags";
 
+
+const sortAlpha = (a, b) => {
+  if (a.value > b.value) {
+    return 1;
+  }
+  if (a.value < b.value) {
+    return -1;
+  }
+  // a must be equal to b
+  return 0;
+}
 
 const SectionNews = (props) => {
   const itemsPerPage = 6;
+  const keysDivider = "+++";
+  const dbDefaultTitle = "Filter";
   const breakpoints = useBreakpoint();
   const [tblog, setBlog] = useState({});
   const [activePage, setActivePage] = useState(0);
   const [blogKeys, setBlogKeys] = useState([]);
   const [filteredBlogKeys, setFilteredBlogKeys] = useState([]);
-  const [search, setSearch] = useState();
+  const [tagList, setTagList] = useState([]);
+  const [searchCriteria, setSearchCriteria] = useState("");
+  const [selectedTag, setSelectedTag] = useState(dbDefaultTitle);
 
   const dataq = useStaticQuery(graphql`
     query {
@@ -52,16 +69,24 @@ const SectionNews = (props) => {
   `);
 
   useEffect(() => {
-    if (typeof (dataq.allMarkdownRemark.edges) !== `undefined`) {
-      const bKeys = [];
+    if (typeof (dataq.allMarkdownRemark.edges) !== "undefined") {
+      const bKeys = [], tList = [];
       setBlog(dataq.allMarkdownRemark);
       dataq.allMarkdownRemark.edges.map(({ node }) => {
-        const tags = node.frontmatter.tags.join("+++").toLowerCase();
-        const bkey = [node.frontmatter.title.toLowerCase(), tags].join("+++");
-        bKeys.push(bkey); 
+        let tags = "";
+        if (Array.isArray(node.frontmatter.tags)) {
+          tags = node.frontmatter.tags.join(keysDivider).toLowerCase();
+          node.frontmatter.tags.forEach(tag => {
+            if (tList.findIndex(item => item.value === tag.toLowerCase()) === -1)
+              tList.push({ value: tag.toLowerCase(), label: tag });
+          });
+        }
+        const bkey = [node.frontmatter.title.toLowerCase(), tags].join(keysDivider) + keysDivider;
+        bKeys.push(bkey);
       });
       setBlogKeys(bKeys);
       setFilteredBlogKeys(bKeys);
+      setTagList(tList.sort(sortAlpha));
     } else {
       console.log("Error with props in team");
       console.log(dataq);
@@ -86,9 +111,36 @@ const SectionNews = (props) => {
            (titleLength <= 28 ? " short" : (titleLength <= 56 ? " medium" : ""));
   }
 
-  const onSearchChange = (criteria) => {
+  const onChange = (criteria) => {
+    setSearchCriteria(criteria);
+    filterPosts(criteria, selectedTag);
+  }
+
+  const onSelectChange = (inputValue, { action }) => {
+    if (action === "clear") {
+      setSelectedTag(dbDefaultTitle);
+       filterPosts(searchCriteria, dbDefaultTitle);
+    }
+    else {
+      setSelectedTag(inputValue.value);
+      filterPosts(searchCriteria, inputValue.value);
+    }
+  }
+
+  const filterPosts = (criteria, filterTag) => {
     setActivePage(0);
-    const filterKeys = blogKeys.filter(key => key.includes(criteria.toLowerCase()));
+    let filterKeys = [];
+    if (filterTag === dbDefaultTitle && criteria !== "")
+      filterKeys = blogKeys.filter(key => key.includes(criteria.toLowerCase()));
+    else if (criteria === "" && filterTag !== dbDefaultTitle)
+      filterKeys = blogKeys.filter(key => key.includes([keysDivider, filterTag.toLowerCase(), keysDivider].join("")));
+    else if (criteria !== "" && filterTag !== dbDefaultTitle) {
+      const tagF = [keysDivider, filterTag.toLowerCase(), keysDivider].join("");
+      filterKeys = blogKeys.filter(key => key.includes(tagF) && key.includes(criteria.toLowerCase()));
+    }
+    else {
+      filterKeys = blogKeys;
+    }
     setFilteredBlogKeys(filterKeys);
   }
 
@@ -108,9 +160,10 @@ const SectionNews = (props) => {
     }
   }
 
+
   const NewsItem = (node) => {
-    const tags = node.frontmatter.tags.join("+++").toLowerCase();
-    const key = [node.frontmatter.title.toLowerCase(), tags].join("+++");
+    const tags = node.frontmatter.tags.join(keysDivider).toLowerCase() + keysDivider;
+    const key = [node.frontmatter.title.toLowerCase(), tags].join(keysDivider);
     const indexOf = filteredBlogKeys.indexOf(key.toLowerCase());
     if (indexOf >= 0) {
       return(
@@ -120,9 +173,16 @@ const SectionNews = (props) => {
             <div className="newsitem-tag-items">
               {Array.isArray(node.frontmatter.tags) &&     
                 node.frontmatter.tags.slice(0,4).map(tag => {
-                  return <a href={postUrl(node)} rel="noreferrer" target="_blank" className="newsitem-tagbox taglink">
-                            {tag}
-                          </a>
+                  const tColor = tagColor(tag);
+                  return <a
+                          href={postUrl(node)}
+                          rel="noreferrer"
+                          target="_blank"
+                          className="newsitem-tagbox taglink"
+                          style={{ color: tColor, borderColor: tColor }} 
+                        >
+                          {tag}
+                        </a>
                 })              
               }
             </div>
@@ -198,9 +258,23 @@ const SectionNews = (props) => {
           Building the investments of tomorrow, today.
         </Col>  
         <div className="newsbox-inputs">
-          <FaSearch />
-          <input id="news-search" value={search} onChange={(e) => onSearchChange(e.target.value)} className="newsbox-search" placeholder="Search" />
-          
+          <div className="filter-box">
+            <FaSearch className="search-icon" />
+            <input
+              id="news-search"
+              value={searchCriteria} onChange={(e) => onChange(e.target.value)}
+              className="newsbox-search"
+              placeholder="Search"
+            />
+            <SelectCryptex
+              isClearable={true}
+              isMulti={false}
+              isSearchable={true}
+              options={tagList}
+              placeholder="Filter"
+              onSelectChange={onSelectChange}
+            />
+          </div>  
           {!breakpoints.mdesp && <Pagination />}
         </div>
         <div className="news-container">

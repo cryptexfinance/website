@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useStaticQuery, graphql } from 'gatsby';
 import Col from "react-bootstrap/esm/Col";
-
+import { tagColor } from "./utils/tags";
 
 const NextNews = (props) => {
   const [tblog, setBlog] = useState({});
@@ -74,9 +74,15 @@ const NextNews = (props) => {
             <div className="newsitem-tag-items">
               {Array.isArray(node.frontmatter.tags) &&
                 node.frontmatter.tags.slice(0, 2).map(tag => {
-                  return <a href={postUrl(node)} rel="noreferrer" className="newsitem-tagbox taglink">
-                    {tag}
-                  </a>
+                  const tColor = tagColor(tag);  
+                  return <a
+                            href={postUrl(node)}
+                            rel="noreferrer"
+                            className="newsitem-tagbox taglink"
+                            style={{ color: tColor, borderColor: tColor }}
+                          >
+                            {tag}
+                          </a>
                 })
               }
             </div>

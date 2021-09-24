@@ -1,0 +1,12 @@
+.select-cryptex {
+    width: 100%;
+}
+.select-cryptex__control--is-focused {
+  background-color: $color-navbar-button !important;
+  border-radius: 1px !important;
+  border-color: $shadow-purple-neon-secondary !important;
+  box-shadow: 0 0 0 1px $shadow-purple-neon-secondary !important;
+}
+.css-1pahdxg-control:hover {
+  border-color: $shadow-purple-neon-secondary !important;
+}

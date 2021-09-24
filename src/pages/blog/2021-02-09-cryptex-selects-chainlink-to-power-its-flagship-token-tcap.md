@@ -1,6 +1,7 @@
 ---
 templateKey: blog-post
 title: Cryptex Selects Chainlink to Power Its Flagship Token, TCAP
+author: Thomas Matzner
 date: 2020-12-18T03:03:58.502Z
 description: After months of anticipation, Cryptex is beyond proud to announce
   the launch of TCAP, The World’s First Total Cryptocurrency Market Cap Token.
