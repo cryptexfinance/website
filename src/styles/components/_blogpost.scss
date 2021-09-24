@@ -1,22 +1,24 @@
 .section-blogpost {
   display: flex;
-  padding: 5rem 2rem;
+  padding: 7rem  2rem 5rem 2rem;
+  background-color: $color-black-light;
 
   .post {
     padding-right: 1rem;
   }
   h1 {
     margin-bottom: 2rem;
+    font-size: 28px;
   }
   h3 {
     margin-top: 2rem;
     color: $color-dark-clean;
-    font-size: 1.3rem;
+    font-size: 22px;
   }
   h4 {
     margin-top: 2rem;
     color: $color-dark-clean;
-    font-size: 1.1rem;
+    font-size: 20px;
     margin-bottom: -0.5rem;
   }
   h5 {
@@ -30,11 +32,11 @@
   p {
     font-family: $font-tertiary;
     color: $color-dark-clean;
-    font-size: 16px;
+    font-size: 18px;
     line-height: 22px;
     letter-spacing: 0.6px;
     margin: 3rem 0rem;
-
+    font-weight: bold;
     strong {
       font-weight: bolder;
     }
@@ -54,7 +56,7 @@
   }
   li {
     font-family: $font-tertiary;
-    font-size: 16px;
+    font-size: 18px;
     line-height: 22px;
     letter-spacing: 0.6px;
     margin-bottom: 2rem;
@@ -71,7 +73,7 @@
   .tags {
     display: flex;
     .tagbox { 
-      color: $color-dark-clean !important;
+      color: $color-dark-clean;
       background-color:$color-black;
       border: 1px solid $shadow-purple-neon;
       margin:0px 10px 10px 0px;
@@ -127,32 +129,43 @@
 
   @media only screen and (max-device-width: 800px) {
     flex-direction: column;
+    padding-top: 11rem;
     h1 {
       font-size: 4.5rem;
       line-height: 5.5rem;
       margin-bottom: 7rem;
+      @media only screen and (max-device-width: 600px) {
+        font-size: 4.8rem;
+        line-height: 6rem;
+      }
     }
     h3 {
-      font-size: 3.5rem;
+      font-size: 20px;
       margin-top: 8rem;
     }
     h4 {
-      font-size: 3.2rem;
+      font-size: 19px;
       margin-top: 8rem;
     }
     p {
-      font-size: 14px;
+      font-size: 16px;
     }
     .tags {
       margin-bottom: 2rem;
       .tagbox { 
-        font-size: 2.5rem;
+        font-size: 2rem;
+        @media only screen and (max-device-width: 600px) {
+          font-size: 2.8rem;
+        }
       }
     }
     .post-date {
-      margin-top: -3rem;
+      margin-top: -5rem;
       margin-bottom: 5rem;
-      font-size: 3rem;
+      font-size: 2.2rem;
+      @media only screen and (max-device-width: 600px) {
+        font-size: 3.1rem;
+      }
     }
     .share-post {
       margin-bottom: 1rem;
@@ -191,6 +204,10 @@
         padding: 13rem 5rem; 
         background-position: 7% 4%;
       }
+    }
+
+    @media only screen and (max-device-width: 600px) {
+      padding-top: 18rem;
     }
   }
 }

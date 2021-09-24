@@ -21,7 +21,7 @@
 @import "components/progressBar";
 @import "components/teambox";
 @import "components/toast";
-// @import "components/toast";
+@import "components/select";
 @import "components/toastContainer";
 @import "components/toggle";
 
@@ -41,7 +41,5 @@
 @import "animations/slide.scss";
 
 
-@import "responsive/mobile_391min_rmin2";
-
-@import "responsive/tablet_768_1000px";
-// @import "responsive/tablet_landscape";
+@import "responsive/mobile";
+@import "responsive/tablet";

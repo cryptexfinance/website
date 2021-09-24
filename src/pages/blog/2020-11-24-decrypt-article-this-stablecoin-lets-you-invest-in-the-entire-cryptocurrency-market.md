@@ -1,6 +1,7 @@
 ---
 templateKey: blog-post
 title: This stablecoin lets you invest in the entire cryptocurrency market
+author: Robert Stevens
 date: 2020-05-22T02:23:03.889Z
 description: TCAP, a decentralized stablecoin in development by Cryptex,
   tokenizes the entire crypto market cap into one neat package.

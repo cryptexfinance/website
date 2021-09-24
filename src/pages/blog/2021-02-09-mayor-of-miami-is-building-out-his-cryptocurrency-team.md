@@ -1,6 +1,7 @@
 ---
 templateKey: blog-post
 title: Mayor of Miami Is Building Out His Cryptocurrency Team
+author: Scott Chipolina
 date: 2021-01-23T03:18:59.483Z
 description: The Mayor of Miami revealed a few details about the city’s plans
   yesterday—with big announcements coming next week.

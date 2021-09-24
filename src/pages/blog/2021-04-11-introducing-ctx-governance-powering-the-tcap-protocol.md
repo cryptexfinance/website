@@ -1,6 +1,7 @@
 ---
 templateKey: blog-post
 title: "Introducing CTX Governance: Powering the TCAP Protocol"
+author: Thomas Matzner
 date: 2021-04-11T17:39:19.931Z
 description: TCAP is a fully decentralized ERC-20 compatible smart contract 
   that tokenizes real-time Total Market Capitalization from ALL cryptocurrencies and 
