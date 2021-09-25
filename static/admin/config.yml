@@ -1,6 +1,6 @@
 backend:
   name: git-gateway
-  branch: main
+  branch: develop
   commit_messages:
     create: 'Create {{collection}} “{{slug}}”'
     update: 'Update {{collection}} “{{slug}}”'
@@ -30,3 +30,14 @@ collections:
       - {label: "Featured Image", name: "featuredimage", widget: image}
       - {label: "Body", name: "body", widget: "markdown"}
       - {label: "Tags", name: "tags", widget: "list"}
+  - name: 'tag'
+    label: 'Tags'
+    folder: "src/pages/tags"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    editor:
+      preview: true
+    fields:
+      - {label: "Template Key", name: "templateKey", widget: "hidden", default: "blog-tag"}
+      - {label: "Tag", name: "tag", widget: "string"}
+      - {label: "Color", name: "color", widget: "color"}
