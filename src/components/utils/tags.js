@@ -1,34 +1,5 @@
 import { COLORS } from "./colors";
 
-/** 
-export const TAGS = [
-  { name: "announcement", color: COLORS.PRIMARY_PINK },
-  { name: "bankless", color: "#93FCFF" },
-  { name: "blog", color: COLORS.PRIMARY_BLUE },
-  { name: "block", color: COLORS.AQUA }, 
-  { name: "chainlink", color: COLORS.CYAN }, 
-  { name: "chainlink youtube", color: COLORS.CYAN }, 
-  { name: "cryptex", color: COLORS.PRIMARY_PURPLE }, 
-  { name: "cryptex finance", color: COLORS.PRIMARY_PURPLE }, 
-  { name: "ctx", color: COLORS.PURPLE_DARKEST }, 
-  { name: "decrypt", color:  "#01FFF0" }, 
-  { name: "defi", color: "#FFDEF3" }, 
-  { name: "defi rate", color:  "#FFDEF3" }, 
-  { name: "defi times", color: COLORS.RED_DARK }, 
-  { name: "defiant", color: COLORS.ORANGE_DARK },
-  { name: "index", color: "#3CB9FC" },
-  { name: "learn",  color: COLORS.SHADOW_BLUE_NEON }, 
-  { name: "podcast", color: "#D9EB4B"}, 
-  { name: "rate", color: COLORS.PURPLE_DARK }, 
-  { name: "tcap",  color: COLORS.PRIMARY_ORANGE }, 
-  { name: "tcap index", color: COLORS.PRIMARY_ORANGE }, 
-  { name: "the block", color: COLORS.BLUE_LIGHT }, 
-  { name: "the defiant", color: COLORS.GREEN_LIGHT }, 
-  { name: "youtube", color: COLORS.RED }, 
-  { name: "zapper", color: COLORS.GREY }, 
-  { name: "zapper learn", color: COLORS.GREY }, 
-];
-*/
 export const OPTIONAL_COLORS = [
   "#FF9472",
   COLORS.GREEN,
@@ -45,7 +16,6 @@ export const OPTIONAL_COLORS = [
   "#c1f80a",
   "#372d52",
 ];
-
 
 export function tagColor(tagsAndColors, postTag) {
   const indexOfTag = tagsAndColors.findIndex(item => item.name === postTag.toLowerCase());
