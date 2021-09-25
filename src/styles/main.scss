@@ -10,16 +10,18 @@
 @import "base/typography";
 
 // Components
+@import "components/blogpost";
 @import "components/button";
 @import "components/closeButton";
 @import "components/faqbox";
 @import "components/flipcard";
 @import "components/header";
 @import "components/newsbox";
+@import "components/nextnews";
 @import "components/progressBar";
 @import "components/teambox";
 @import "components/toast";
-// @import "components/toast";
+@import "components/select";
 @import "components/toastContainer";
 @import "components/toggle";
 
@@ -39,15 +41,5 @@
 @import "animations/slide.scss";
 
 
-
-@import "responsive/mobile_390_rmax2";
-@import "responsive/mobile_391min";
-@import "responsive/mobile_390_rmin3";
-@import "responsive/mobile_391min_rmin2";
-
-@import "responsive/tablet_768_1000px";
-@import "responsive/tablet_1001_1090px";
-@import "responsive/tablet_landscape";
-
-
-@import "responsive/mobile_315px";
+@import "responsive/mobile";
+@import "responsive/tablet";

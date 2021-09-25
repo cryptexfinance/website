@@ -1,4 +1,5 @@
 import React, { useState } from "react"
+import Col from "react-bootstrap/esm/Col";
 import Toggle from "../components/Toggle"
 
 const SectionFaq = () => {
@@ -21,14 +22,12 @@ const SectionFaq = () => {
 
   return (
     <section id="faq" className={className}>
-      <div className="row">
         <div className="faq-title header">FAQ</div>
         <div className="faq-subtitle content">
           Common questions we are asked.
         </div>
-      </div>
-      <div className="faq-row row">
-        <div className="faq-box">
+      <Col md={12} lg={12} className="faq-row row">
+        <Col xs={12} sm={12} md={6} lg={6} className="faq-box">
           <Toggle title="Is TCAP decentralized?" addToExpanded={addToExpanded}>
             <div className="answer">
               TCAP uses Developer Keys to pause deposits and minting in case of
@@ -56,11 +55,8 @@ const SectionFaq = () => {
               </a>     
             </div>
           </Toggle>
-        </div>
-
-        <div className="faq-main-divider"></div>
-
-        <div className="faq-box">
+        </Col>
+        <Col xs={12} sm={12} md={6} lg={6} className="faq-box">
           <Toggle title="Is TCAP live yet?" addToExpanded={addToExpanded}>
             <div className="answer">
               TCAP is live! You can use TCAP by visiting{" "}
@@ -99,8 +95,8 @@ const SectionFaq = () => {
               world, bringing that data on chain using Ethereum smart contract.
             </div>
           </Toggle>
-        </div>
-      </div>
+        </Col>
+      </Col>
     </section>
   )
 }

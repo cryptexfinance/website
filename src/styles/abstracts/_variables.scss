@@ -8,6 +8,7 @@ $color-grey-dark: #494866;
 $color-grey: #A9A7BE;
 $color-dark-clean: #F6F6F7;
 $color-black: #212138;
+$color-black-light: #31314f;
 $color-navbar-button: #1D1D3C;
 $color-background-features: #111131;
 
@@ -50,19 +51,6 @@ $rt-color-progress-dark: #bb86fc !default;
 $rt-mobile: "only screen and (max-width : 480px)" !default;
 $rt-z-index: 9999 !default;
 
-// Font.
-// @font-face {
-//   font-family: 'Space Mono Bold Italic';
-//   src: url('../fonts/SpaceMono-BoldItalic.eot');
-//   src: url('../fonts/SpaceMono-BoldItalic.eot?#iefix') format('embedded-opentype'),
-//       url('../fonts/SpaceMono-BoldItalic.woff2') format('woff2'),
-//       url('../fonts/SpaceMono-BoldItalic.woff') format('woff'),
-//       url('../fonts/SpaceMono-BoldItalic.ttf') format('truetype'),
-//       url('../fonts/SpaceMono-BoldItalic.svg#SpaceMono-BoldItalic') format('svg');
-//   font-weight: bold;
-//   font-style: italic;
-//   font-display: swap;
-// }
 
 @font-face {
   font-family: 'Space Mono Bold';

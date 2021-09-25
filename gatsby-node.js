@@ -8,7 +8,10 @@ exports.createPages = ({ actions, graphql }) => {
 
   return graphql(`
     {
-      allMarkdownRemark(limit: 1000) {
+      allMarkdownRemark(
+        sort: { fields: [frontmatter___date] }
+        limit: 1000
+      ) {
         edges {
           node {
             id
@@ -30,7 +33,7 @@ exports.createPages = ({ actions, graphql }) => {
     }
 
     const posts = result.data.allMarkdownRemark.edges
-
+    let index = 0;
     posts.forEach((edge) => {
       const id = edge.node.id
       createPage({
@@ -42,8 +45,10 @@ exports.createPages = ({ actions, graphql }) => {
         // additional data can be passed via context
         context: {
           id,
+          index
         },
       })
+      index++;
     })
 
     // Tag pages:
@@ -84,4 +89,51 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
       value,
     })
   }
+}
+
+exports.createSchemaCustomization = ({ actions }) => {
+  const { createFieldExtension, createTypes } = actions
+
+  createFieldExtension({
+    name: 'fileByDataPath',
+    extend: () => ({
+      resolve: function (src, args, context, info) {
+        const partialPath = src.featureImage
+          if (!partialPath) {
+            return null
+          }
+
+        const filePath = path.join(__dirname, 'src/data', partialPath)
+        const fileNode = context.nodeModel.runQuery({
+          firstOnly: true,
+          type: 'File',
+          query: {
+            filter: {
+              absolutePath: {
+                eq: filePath
+              }
+            }
+          }
+        })
+
+        if (!fileNode) {
+          return null
+        }
+
+        return fileNode
+      }
+    })
+  })
+
+  const typeDefs = `
+    type Frontmatter @infer {
+      featureImage: File @fileByDataPath
+    }
+
+    type MarkdownRemark implements Node @infer {
+      frontmatter: Frontmatter
+    }
+  `
+
+  createTypes(typeDefs)
 }

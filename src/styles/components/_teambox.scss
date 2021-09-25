@@ -1,11 +1,17 @@
 .team {	
 	&-title {
-		position: relative;
-		margin-bottom: 1rem;
+    position: relative;
+		display: flex;
+    margin-bottom: 1rem;
+    padding: 0rem 2rem;
 	}
+  &-subheader {
+    display: flex;
+    flex-direction: row;
+  }
 	&-subtitle {
-		position: relative;
-		width: 27.8125rem;
+    display: flex;
+    align-items: center;
 		color: $color-grey;
 	}
 	&-divider {
@@ -16,21 +22,19 @@
     margin-top: 0rem;
     margin-right: 2rem;
 	}
+  &-members {
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    flex-direction: row;
+    padding: 1rem 1rem 1rem 0rem;
+  }
 }
 
-.team-row {
-  position: relative;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;  
-  justify-content: space-between;  
-}
 .team-box {
   text-align: left !important;
   position: relative;
-  height: 15rem;
-  margin-right: 1rem;
-  margin-bottom: 2rem; 
+  margin-bottom: 1rem; 
 
   &-name {
     position: relative;
@@ -47,49 +51,21 @@
     margin-top: 1rem;
     margin-bottom: 0.5rem;
   }
-
   &.hide {
     display: none;
   }
-
-  @media only screen and (max-device-width: 1199px) and (orientation : portrait) {
-    &-photo {
-      display: None;
-    }
+  &.page2 {
+    margin-bottom: 15rem;
   }
-  
-  @media only screen and (min-device-width: 1200px) {
-    .team-box {
-      &-photo {
-        position: relative;
-        width: 14.375rem;
-        height: 10.0625rem;
-        background: rgb(0, 0, 0);
-        mix-blend-mode: lighten;
-        border-radius: 0.125rem;
-      }
-    
-      &-photo-mobile{
-        display: None;
-      }
+  &-photo {
+    position: relative;
+    background: rgb(0, 0, 0);
+    mix-blend-mode: lighten;
+    border-radius: 0.125rem;
+    @media screen and (min-device-width : 1024px){
+      width: 16rem;
+      height: 11rem;
     }
-  }
-
-  @media only screen and (min-device-width: 750px) and (max-device-width: 1199px) and (orientation : landscape)  {
-    .team-box {
-      &-photo {
-        position: relative;
-        width: 14.375rem;
-        height: 10.0625rem;
-        background: rgb(0, 0, 0);
-        mix-blend-mode: lighten;
-        border-radius: 0.125rem;
-      }
-    
-      &-photo-mobile{
-        display: None;
-      }
-    }    
   }
 
   &-position {
@@ -130,23 +106,20 @@
 .team-pagination {  
   position: relative;
   display: flex;
-  padding: 0.5rem 3rem 0.5rem 1rem;
-  justify-content: center;  
-  z-index: 12;  
-
+  justify-content: flex-end;
+  padding: 0.5rem 3.5rem 0.5rem 1rem;
+  
   &-container {
     display: flex;
     width: 17rem;
     justify-content: space-between;
   }
-
   .group {
     width: 29px;
     height: 29px;
     left: 1122.94px;
     top: 678px;
   }
-
   .box {
     background: #1D1D3C;
     border: 1px solid #494866;
@@ -168,7 +141,7 @@
       box-sizing: border-box;
       box-shadow: 0px 6px 39px -6px rgba(203, 6, 255, 0.53);
       border-radius: 2px;       
-    }  
+    }   
   } 
   .arrow {
     width: 12.69px;
@@ -181,7 +154,7 @@
     display: flex;
     padding: 0rem 1rem;
     justify-content: center;
-    width: 10rem;
+    width: 90%;
     align-items: center;
   }
   .item {
@@ -200,5 +173,8 @@
     }
   }
 
-}
+  @media screen and (max-device-width : 1536px){
+    padding-right: 2rem;
+  }
+} 
 

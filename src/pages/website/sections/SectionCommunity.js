@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-// import { Link } from 'gatsby';
+import Col from "react-bootstrap/esm/Col";
 import { toast, ToastContainer } from "react-toastify";
 import reddit from '../../../../static/website/community/reddit.svg';
 import discord from '../../../../static/website/community/discord.svg';
@@ -76,12 +76,13 @@ const SectionCommunity = ({ data }) => {
   };
 
   return (
-      <section id="community" className="section-community">
-        <ToastContainer />
-        <div className="row">
-          <div className="community-title header">
-            Join Our Community
-          </div>
+    <section id="community" className="section-community">
+      <ToastContainer />
+      <div className="community-title header">
+        Join Our Community
+      </div>
+      <div className="community-content">
+        <Col sm={12}  md={6} lg={6}>
           <div className="community-subtitle content">
             We’re on a mission to make digital assets simple, accessible, and secure.
           </div>
@@ -116,13 +117,18 @@ const SectionCommunity = ({ data }) => {
           <form onSubmit={handleSubmit}>
             <label id="subslbl" htmlFor="subscribe" className="community-subscribe-title heading-secondary">
               Stay in Touch
-            <input id="email" value={email} onChange={handleEmailChange} className="community-subscribe-input" placeholder="Email" />
             </label>
-            <button className="community-subscribe-button button-pink">Subscribe</button>
+            <div className="community-subscribe-data">
+              <input id="email" value={email} onChange={handleEmailChange} className="community-subscribe-input" placeholder="Email" /> 
+              <button className="community-subscribe-button button-pink">Subscribe</button>
+            </div>  
           </form>
+        </Col>
+        <Col sm={12} md={6} lg={6}>
           <img src={community} className="community-image" alt="Community" />
-        </div>
-      </section>
+        </Col>
+      </div>  
+    </section>
   )
 }
 
