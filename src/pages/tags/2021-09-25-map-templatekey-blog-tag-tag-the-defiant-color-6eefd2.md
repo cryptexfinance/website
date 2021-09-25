@@ -1,5 +1,5 @@
 ---
 templateKey: blog-tag
-tag: the defiant
+tag: defiant
 color: "#6eefd2"
 ---
