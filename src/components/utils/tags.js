@@ -1,5 +1,6 @@
 import { COLORS } from "./colors";
 
+/** 
 export const TAGS = [
   { name: "announcement", color: COLORS.PRIMARY_PINK },
   { name: "bankless", color: "#93FCFF" },
@@ -27,8 +28,8 @@ export const TAGS = [
   { name: "zapper", color: COLORS.GREY }, 
   { name: "zapper learn", color: COLORS.GREY }, 
 ];
-
-export const TAGS_COLORS = [
+*/
+export const OPTIONAL_COLORS = [
   "#FF9472",
   COLORS.GREEN,
   "#EBF875",
@@ -46,15 +47,15 @@ export const TAGS_COLORS = [
 ];
 
 
-export function tagColor(tag) {
-  const indexOfTag = TAGS.findIndex(item => item.name === tag.toLowerCase());
+export function tagColor(tagsAndColors, postTag) {
+  const indexOfTag = tagsAndColors.findIndex(item => item.name === postTag.toLowerCase());
   if (indexOfTag !== -1) {
-    return TAGS[indexOfTag].color;
+    return tagsAndColors[indexOfTag].color;
   }
   
-  const index = Math.floor(Math.random() * (TAGS_COLORS.length));
-  if (index < TAGS_COLORS.length)
-    return TAGS_COLORS[index];
+  const index = Math.floor(Math.random() * (OPTIONAL_COLORS.length));
+  if (index < OPTIONAL_COLORS.length)
+    return OPTIONAL_COLORS[index];
   else
     return COLORS.SHADOW_PURPLE_NEON_SECONDARY;
 }

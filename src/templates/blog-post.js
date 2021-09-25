@@ -1,7 +1,7 @@
-import React from 'react'
+import React, { useEffect, useState } from "react";
+import { graphql } from "gatsby";
 import PropTypes from 'prop-types'
 import { Helmet } from 'react-helmet'
-import { graphql } from 'gatsby'
 import Col from "react-bootstrap/esm/Col";
 import Layout from '../components/Layout';
 import Content, { HTMLContent } from '../components/Content';
@@ -19,10 +19,22 @@ export const BlogPostTemplate = ({
   author,
   date,
   helmet,
-  slug
+  slug,
+  tagsColorAll
 }) => {
   const PostContent = contentComponent || Content;
-  
+  const [tagsColor, setTagsColor] = useState([]);
+
+  useEffect(() => {
+    if (typeof (tagsColorAll.edges) !== "undefined") {
+      const tags = [];
+      tagsColorAll.edges.map(({ node }) => {
+        tags.push({ name: node.frontmatter.tag, color:  node.frontmatter.color });
+      });
+      setTagsColor(tags);
+    }
+  }, []);
+
   const buildContent = () => {
     let newContent = content.replace(/<p><strong>/g, "<h4>");
     newContent = newContent.replace(/<\/strong><\/p>/g, "</h4>");
@@ -37,7 +49,7 @@ export const BlogPostTemplate = ({
           {tags && tags.length ? (
             <div className="tags">
             {tags.map((tag) => {
-              const tColor = tagColor(tag);
+              const tColor = tagColor(tagsColor, tag);
               return  <a
                         target="_blank"
                         className="tagbox"
@@ -55,7 +67,7 @@ export const BlogPostTemplate = ({
           <PostContent content={buildContent()} />
           <ShareSocial title={title}  shareSlug={slug} tags={tags} />
         </Col>
-        <NextNews postIndex={postIndex} />         
+        <NextNews postIndex={postIndex} tagsColor={tagsColor} />         
     </section>
   )
 }
@@ -71,7 +83,9 @@ BlogPostTemplate.propTypes = {
 }
 
 const BlogPost = ({ data, pageContext }) => {
-  const { markdownRemark: post } = data
+  const { markdownRemark: post } = data;
+  const { allMarkdownRemark: tagsColor } = data;
+
   return (
     <Layout>
       <header id="home">
@@ -95,6 +109,7 @@ const BlogPost = ({ data, pageContext }) => {
         author={post.frontmatter.author}
         date={post.frontmatter.date}
         slug={post.fields.slug}
+        tagsColorAll={tagsColor}
       />
     </Layout>
   )
@@ -110,7 +125,7 @@ export default BlogPost
 
 export const pageQuery = graphql`
   query BlogPostByID($id: String!) {
-    markdownRemark(id: { eq: $id }) {
+    markdownRemark(id: { eq: $id }, frontmatter: {templateKey: {eq: "blog-post"}}) {
       id
       html
       fields {
@@ -124,5 +139,20 @@ export const pageQuery = graphql`
         tags
       }
     }
+    allMarkdownRemark(
+        sort: { order: DESC, fields: [frontmatter___date] }
+        filter: { frontmatter: { templateKey: { eq: "blog-tag" } } }
+      ) {
+        edges {
+          node {
+            excerpt(pruneLength: 400)
+            id
+            frontmatter {
+              tag
+              color  
+            }
+          }
+        }
+      }
   }
 `
