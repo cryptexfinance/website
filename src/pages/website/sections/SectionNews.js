@@ -86,7 +86,7 @@ const SectionNews = (props) => {
       });
       setBlogKeys(bKeys);
       setFilteredBlogKeys(bKeys);
-      setTagList(tList.sort(sortAlpha));
+      setTagList(tList.sort(sortAlpha));      
     } else {
       console.log("Error with props in team");
       console.log(dataq);
@@ -175,7 +175,7 @@ const SectionNews = (props) => {
             <div className="newsitem-tag-items">
               {Array.isArray(node.frontmatter.tags) &&     
                 node.frontmatter.tags.slice(0,4).map(tag => {
-                  const tColor = tagColor(tag);
+                  const tColor = tagColor(props.tagsColor, tag);
                   return <a
                           rel="noreferrer"
                           className="newsitem-tagbox taglink"
