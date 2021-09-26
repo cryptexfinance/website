@@ -1,7 +1,7 @@
 body,
 html {
-  height: 100%;
-  overflow-x: hidden;
+  height: auto;
+  overflow: auto;
 }
 
 @-moz-document url-prefix() {
@@ -12,7 +12,7 @@ html {
 }
 
 body {
-  width: 100vw;
+  width: 100%;
 }
 
 .btn-primary:focus {

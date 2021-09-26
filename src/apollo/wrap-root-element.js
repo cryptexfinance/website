@@ -18,10 +18,3 @@ export const wrapRootElement = ({ element }) => (
       </ApolloProvider>
     
 );
-
-// export const wrapRootElement = ({ element }) => (
-//   <ThemeProvider>
-//     <ThemeContext.Consumer>
-//       {({ toString }) => <div className={`theme-${toString()}`}>{element}</div>}
-//     </ThemeContext.Consumer>
-//   </ThemeProvider>
