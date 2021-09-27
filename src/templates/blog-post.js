@@ -43,7 +43,7 @@ export const BlogPostTemplate = ({
   }
 
   return (
-    <section className="section-blogpost">
+    <section id="news" className="section-blogpost">
       {helmet || ''}
         <Col sm={12} md={12} lg={8} className="post" >
           {tags && tags.length ? (

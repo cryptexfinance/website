@@ -186,17 +186,17 @@ const SectionNews = (props) => {
                 })              
               }
             </div>
-            <a href={postUrl(node)} target="_top"  rel="noreferrer" className="newsitem-title-link" >
+            <a href={postUrl(node)} className="newsitem-title-link" >
               <div className={titleClass(node.frontmatter.title.length)}>
                 {node.frontmatter.title}
               </div>
             </a>
-            <a href={postUrl(node)} target="_top" rel="noreferrer" className="newsitem-title-link" >
+            <a href={postUrl(node)} className="newsitem-title-link" >
               <p className="newsitem-brief">
                   {sliceDescription(node.frontmatter.description)}              
               </p>
             </a>  
-            <a href={postUrl(node)} target="_top" rel="noreferrer" className="newsitem-link link">Check it out</a>
+            <a href={postUrl(node)} className="newsitem-link link">Check it out</a>
           </div>
         </div>
       )
