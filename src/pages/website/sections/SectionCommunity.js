@@ -100,7 +100,7 @@ const SectionCommunity = ({ data }) => {
               <div className="community-item-text terciary-header">Twitter</div>
             </a>
           </div>
-          <div className="community-icons-row-2">
+          <div className="community-icons-row">
             <a href="https://medium.com/cryptexfinance" rel="noreferrer" target="_blank" className="community-item">
               <img src={medium} className="community-item-icon" alt="Medium" />
               <div className="community-item-text terciary-header">Medium</div>
