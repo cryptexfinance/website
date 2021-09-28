@@ -1,6 +1,6 @@
 ---
 templateKey: blog-post
-title: "Indexing Crypto: The Missing Piece? (For Cryptex)"
+title: "Indexing Crypto: The Missing Piece?"
 date: 2021-09-28T01:10:01.920Z
 description: "The writing is on the wall: the crypto industry needs more indexes
   to give investors actionable data they can use to pick the right positions and
