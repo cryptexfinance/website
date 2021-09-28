@@ -16,7 +16,7 @@ Does the sheer number of different cryptocurrencies make your head spin? Or perh
 
 [DPI-TCAP StackUp](https://www.notion.so/461406bbe09040ca9a8f4b63bc9beb1c)
 
-![](/img/tcap-dpi-shareable-stackup.png "How we stacked up TCAP and DPI")
+![](/img/stackup_tcap_vs._dpi_infographic_final_draft_.png "How we stacked up TCAP and DPI")
 
 \*\*Market Cap figures as of 9/26/2021 (*[](https://www.coingecko.com/)<https://www.coingecko.com/>).
 
