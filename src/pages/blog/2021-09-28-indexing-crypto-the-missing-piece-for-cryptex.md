@@ -1,6 +1,7 @@
 ---
 templateKey: blog-post
 title: "Indexing Crypto: The Missing Piece?"
+author: Slishyslice
 date: 2021-09-28T01:10:01.920Z
 description: "The writing is on the wall: the crypto industry needs more indexes
   to give investors actionable data they can use to pick the right positions and
@@ -10,10 +11,7 @@ featuredpost: true
 featuredimage: /img/tcap.png
 tags:
   - TCAP
-  - Cryptex
   - TCAP Index
-  - Cryptocurrency
-  - CTX
   - Index Token
 ---
 As an investor, you are likely aware of the traditional options you have when deciding what positions to take up. Just a few examples available on the traditional market are stocks, real estate, and physical assets like gold and art. Times are changing, though. The world of investing is being turned on its head with the emergence of cryptocurrencies as a viable wealth-building tool.
