@@ -1,12 +1,13 @@
 ---
 templateKey: blog-post
 title: "TCAP StackUp: DeFi Pulse Index (DPI)"
+author: Mkatx5
 date: 2021-09-28T01:50:29.761Z
 description: How does the TCAP Index stack up against DeFi Pulse Index (DPI) by Index Coop?
 featuredpost: true
 featuredimage: /img/tcap-dpi-stackup.jpg
 tags:
-  - TCAP Index
+  - Cryptex
   - TCAP
   - DPI
   - DeFi Pulse Index
@@ -15,13 +16,13 @@ Does the sheer number of different cryptocurrencies make your head spin? Or perh
 
 [DPI-TCAP StackUp](https://www.notion.so/461406bbe09040ca9a8f4b63bc9beb1c)
 
-![](/img/tcap-dpi-shareable-stackup.png "How we stacked up TCAP and DPI")
+![](/img/stackup_tcap_vs._dpi_infographic_final_draft_.png "How we stacked up TCAP and DPI")
 
 \*\*Market Cap figures as of 9/26/2021 (*[](https://www.coingecko.com/)<https://www.coingecko.com/>).
 
 \*\**TCAP Polygon deployment currently in development.*
 
-### **StackUp Verdict**
+## **StackUp Verdict**
 
 DPI & TCAP each come with their own strengths to consider:
 
