@@ -18,7 +18,7 @@ Does the sheer number of different cryptocurrencies make your head spin? Or perh
 
 ![](/img/stackup_tcap_vs._dpi_infographic_final_draft_.png "How we stacked up TCAP and DPI")
 
-\*\*Market Cap figures as of 9/26/2021 (*[](https://www.coingecko.com/)<https://www.coingecko.com/>).
+\*\*Market Cap figures as of 9/21/2021 (*[](https://www.coingecko.com/)<https://www.coingecko.com/>).
 
 \*\**TCAP Polygon deployment currently in development.*
 
