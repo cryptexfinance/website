@@ -20,7 +20,7 @@ Savvy investors have known it for years. Young people are diving into cryptocurr
 
 ![](/img/tcap.png)
 
-## **The writing on the wall**
+## The Writing on the Wall
 
 Consider a quote from Michael Sonnenshein, the CEO of Grayscale Investments, who noted that *“Over just the last 12 to 18 months, the asset class has really turned the corner as some well-known and experienced investors have publicly come out in support of crypto…”*
 
@@ -42,7 +42,7 @@ A wise investor thinks on the margins. What marginal utility can you, as an inve
 
 **The hypothesis at [cryptex.finance](http://cryptex.finance) is that individuals can derive significant benefit from a non-zero allocation to cryptocurrency, which they may currently be underexposed to.** Rather than committing to a single token, it will benefit under-initiated crypto investors – especially those with little to no experience with the asset class – to gain exposure through an index token, such as Cryptex’s own $TCAP.
 
-## **What Is an Index Fund/Index Token?**
+## What Is an Index Fund/Index Token?
 
 As a quick refresher, here’s how Vanguard describes an index fund:
 
@@ -55,7 +55,7 @@ For a visual representation, check out [coinmarketcap.com](http://coinmarketcap.
 
 ![](/img/chart_-1-.png "Total crypto market cap distribution August 08, 2020 - August 08, 2021")
 
-## **Overall Benefits of Using Index Funds**
+## Overall Benefits of Using Index Funds
 
 Vanguard also describes the benefits of allocating a portion of your portfolio to an index fund versus hand-picking individual stocks and bonds.
 
@@ -75,7 +75,7 @@ It should be noted that there are drawbacks to investing in index tokens. Just a
 
 Index tokens offer exposure to the long-term upside of crypto assets while reducing, if not eliminating, the risk of an asset becoming worthless. These index tokens are an exciting tool for investors to consider when designing their personal portfolio's asset mix.
 
-## **TCAP by Cryptex**
+## TCAP by Cryptex
 
 $TCAP is the ticker for the Total Market Cap token from Cryptex Finance, which is designed to give investors accurate, real-time price exposure to the total capitalization of the cryptocurrency market via a single, synthetic asset.
 
@@ -94,8 +94,6 @@ Whether you are new to crypto or are looking for a solid hedge to your more vola
 * [](https://www.goldmansachs.com/insights/pages/crypto-a-new-asset-class.html)<https://www.goldmansachs.com/insights/pages/crypto-a-new-asset-class.html>
 * [](https://coinmarketcap.com/charts/)<https://coinmarketcap.com/charts/>
 * [](https://investor.vanguard.com/index-funds/what-is-an-index-fund)<https://investor.vanguard.com/index-funds/what-is-an-index-fund>
-
-
 
 Want to get involved? Check out:
 
