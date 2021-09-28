@@ -8,6 +8,13 @@ description: "The writing is on the wall: the crypto industry needs more indexes
   investors - crypto investors should too."
 featuredpost: true
 featuredimage: /img/tcap.png
+tags:
+  - TCAP
+  - Cryptex
+  - TCAP Index
+  - Cryptocurrency
+  - CTX
+  - Index Token
 ---
 As an investor, you are likely aware of the traditional options you have when deciding what positions to take up. Just a few examples available on the traditional market are stocks, real estate, and physical assets like gold and art. Times are changing, though. The world of investing is being turned on its head with the emergence of cryptocurrencies as a viable wealth-building tool.
 
