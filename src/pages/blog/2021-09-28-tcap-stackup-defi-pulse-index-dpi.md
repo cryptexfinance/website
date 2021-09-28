@@ -6,10 +6,8 @@ description: How does the TCAP Index stack up against DeFi Pulse Index (DPI) by 
 featuredpost: true
 featuredimage: /img/tcap-dpi-stackup.jpg
 tags:
-  - Cryptex
   - TCAP Index
   - TCAP
-  - Cryptocurrency
   - DPI
   - DeFi Pulse Index
 ---
