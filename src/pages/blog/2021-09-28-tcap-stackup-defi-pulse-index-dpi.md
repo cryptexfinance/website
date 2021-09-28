@@ -22,7 +22,7 @@ Does the sheer number of different cryptocurrencies make your head spin? Or perh
 
 \*\**TCAP Polygon deployment currently in development.*
 
-### **StackUp Verdict**
+## **StackUp Verdict**
 
 DPI & TCAP each come with their own strengths to consider:
 
