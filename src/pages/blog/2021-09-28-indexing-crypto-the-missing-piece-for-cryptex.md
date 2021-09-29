@@ -1,7 +1,7 @@
 ---
 templateKey: blog-post
 title: "Indexing Crypto: The Missing Piece?"
-author: Slishyslice
+author: Slishyslice and Mkatx5
 date: 2021-09-28T01:10:01.920Z
 description: "The writing is on the wall: the crypto industry needs more indexes
   to give investors actionable data they can use to pick the right positions and
