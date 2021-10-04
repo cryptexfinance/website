@@ -2,7 +2,7 @@
 templateKey: blog-post
 title: TCAP Index Token Strategies
 author: Slishyslice
-date: 2021-10-04T02:10:34.626Z
+date: 2021-10-05T00:00:00.000Z
 description: Have you ever wondered how to make a profit from index tokens like
   $TCAP? Read on to discover some investing strategies our community uses to
   make the most of the $TCAP token and index.
