@@ -2,7 +2,7 @@
 templateKey: blog-post
 title: "TCAP StackUp: BasketDAO DeFi Index (BDI)"
 author: Mkatx5
-date: 2021-10-05T12:00:00.000Z
+date: 2021-10-06T00:00:00.000Z
 description: How does TCAP stack up against DeFi Index (BDI) by BasketDAO?
 featuredpost: true
 featuredimage: /img/tcap-bdi.jpg
