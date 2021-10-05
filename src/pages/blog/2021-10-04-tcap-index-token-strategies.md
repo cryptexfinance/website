@@ -27,15 +27,15 @@ TCAP is a collateralized token, meaning you must deposit collateral in the [Cryp
 
 There are a few ways to leverage this system. We will use “Jack” as our sample user for these scenarios.
 
-### Scenario One:
+### Scenario One: Riding the market and trading with TCAP and DAI
 
 Jack senses that the market is currently overvalued. He decides to reduce his position in $TCAP since he expects the market value to drop in the short term. To do this, he burns his $TCAP and removes his DAI collateral from the Cryptex protocol to keep in his personal wallet. After the market indeed cools down and the total crypto market cap falls, Jack returns his DAI to Cryptex and mints more $TCAP than he had before the dip.
 
-### Scenario Two:
+### Scenario Two: Longing ETH while capitalizing on TCAP Gains
 
 Jack senses that ETH is undervalued. He deposits ETH in Cryptex to mint $TCAP, then buys ETH on Sushiswap with his newly-minted $TCAP. Here Jack is longing ETH dominance - he believes that both the price and market dominance of ETH will increase in the short term. If his prediction is right and ETH rises, Jack will swap his ETH for a greater amount of $TCAP than he started with since his ETH buying power increased in greater proportion than the price of $TCAP.
 
-### Scenario Three:
+### Scenario Three: Yield Farming
 
 Jack senses that the whole crypto market is overvalued. Instead of selling his ETH to catch the top, Jack chooses to deposit his ETH and mint $TCAP. He sells the minted $TCAP for DAI and uses DAI to participate in yield farming on another protocol. With this strategy, Jack takes advantage of the correlation between ETH and $TCAP price. If the market keeps trending up, Jack can maintain his exposure to ETH and enjoy yield farming profits with his DAI. Hopefully his yield is at least high enough to cover the difference in his DAI amount and $TCAP price. If the market is trending down, he can use his DAI to buy back a greater amount of $TCAP than he started with on Sushiswap and unstake his collateral.
 
