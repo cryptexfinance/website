@@ -23,6 +23,8 @@ One of our community members devised a series of scenarios that $TCAP investors 
 
 TCAP is a collateralized token, meaning you must deposit collateral in the [Cryptex vault](https://app.cryptex.finance/) to receive minted TCAP. With this in mind, one must remember that the original collateral is in the Cryptex protocol and the minted TCAP tokens must be burned to retrieve that collateral.
 
+![designer: Sucito](/img/tcap-general.png)
+
 There are a few ways to leverage this system. We will use “Jack” as our sample user for these scenarios.
 
 ### Scenario One:
