@@ -39,7 +39,7 @@ Jack senses that ETH is undervalued. He deposits ETH in Cryptex to mint $TCAP, t
 
 Jack senses that the whole crypto market is overvalued. Instead of selling his ETH to catch the top, Jack chooses to deposit his ETH and mint $TCAP. He sells the minted $TCAP for DAI and uses DAI to participate in yield farming on another protocol. With this strategy, Jack takes advantage of the correlation between ETH and $TCAP price. If the market keeps trending up, Jack can maintain his exposure to ETH and enjoy yield farming profits with his DAI. Hopefully his yield is at least high enough to cover the difference in his DAI amount and $TCAP price. If the market is trending down, he can use his DAI to buy back a greater amount of $TCAP than he started with on Sushiswap and unstake his collateral.
 
-![](/img/hodling-tcap.jpg "Hodling TCAP.")
+![designer: Sucito](/img/hodling-tcap.jpg "Hodling TCAP.")
 
 ## Scenario Insights
 
