@@ -2,7 +2,7 @@
 templateKey: blog-post
 title: "TCAP StackUp: BasketDAO DeFi Index (BDI)"
 author: Mkatx5
-date: 2021-10-06T00:00:00.000Z
+date: 2021-10-05T00:00:00.000Z
 description: How does TCAP stack up against DeFi Index (BDI) by BasketDAO?
 featuredpost: true
 featuredimage: /img/tcap-bdi.jpg
@@ -13,7 +13,7 @@ tags:
 ---
 Does the sheer number of different cryptocurrencies make your head spin? Or perhaps keeping track of the taxable events while rebalancing your portfolio and having to shell out for gas fees has you down? Enter crypto index tokens: offering broad crypto exposure, savings on gas fees, and automatic rebalancing - all to make your investing journey easier. However, as always in crypto, there's more than one option to choose from; let's dig into the popular, yield-bearing [DeFi Index (BDI)](https://basketdao.org/BDI) and Total Crypto Market Cap Token ([TCAP](https://cryptex.finance/)) to see how they stack up.
 
-![](/img/tcap-bdi-stackup-ifg.png "Stacking up TCAP and BDI")
+![](/img/stackup_tcap_vs._basktdao_infographic_draft_5.png "Stacking up TCAP and BDI")
 
 ### **StackUp Verdict**
 
