@@ -2,7 +2,7 @@
 templateKey: blog-post
 title: Cryptex Announces Single Side System Staking and LP Extensions
 author: Matz
-date: 2021-10-07T00:00:00.000Z
+date: 2021-10-06T23:01:23.209Z
 description: Single-sided staking for CTX is now live, and incentivized LP
   staking has been extended.
 featuredpost: true
