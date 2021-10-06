@@ -1,6 +1,6 @@
 ---
 templateKey: blog-post
-title: Single-Sided Staking for CTX Now Live
+title: Single-Side Staking for CTX Now Live
 author: Matz
 date: 2021-10-07T00:00:00.000Z
 description: Single-sided staking for CTX is now live, and incentivized LP
