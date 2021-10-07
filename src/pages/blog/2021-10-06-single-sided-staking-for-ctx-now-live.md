@@ -1,7 +1,7 @@
 ---
 templateKey: blog-post
 title: Cryptex Announces Single Side System Staking and LP Extensions
-author: Matz
+author: Joecryptex
 date: 2021-10-06T23:52:45.707Z
 description: Single-sided staking for CTX is now live, and incentivized LP
   staking has been extended.
@@ -12,6 +12,8 @@ tags:
   - Cryptex
   - CTX
 ---
+![](/img/thumbnail_staking.jpeg)
+
 Liquidity incentives have averaged triple digit rewards for system providers since the launch of TCAP on April 8th, 2021 and CTX on April 21, 2021.
 
 Between October 7th, 2021 (ETH/TCAP) and October 17th, 2021 (ETH/CTX) a total of 700,000 CTX will unlock from initial liquidity pool incentives established upon launch and are available for continued staking.
@@ -54,8 +56,6 @@ With a minimum of 400,000 CTX staked to the new Single Side Staking System and t
 We look forward to continuing this journey together.
 
 \-Team Cryptex
-
-
 
 ### DISCLAIMER:
 
