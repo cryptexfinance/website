@@ -11,9 +11,11 @@ tags:
   - Ribbon
   - Alpha Leaks
 ---
-On September 30th, 2021, Cryptex welcomed BFresh as host and [Ribbon.Finance](http://Ribbon.Finance)'s Julian Koh as the guest of the 6th episode of Space Invaders. Typically these episodes are recorded live on Twitter Spaces then published on YouTube and a variety of podcast platforms.
+Cryptex (CTX) the protocol and community behind Total Crypto Market Cap token (TCAP), is constantly inspired and impressed with the creators and builders of web3. Cryptex created Space Invaders to help people get an inside look into the minds of the most important web3 creators and builders of our time. \*\*\*\*
 
-In this post, we are sharing the most thought-provoking and alpha-infused pieces of the conversation. These are things most people would not get a chance to find out unless they were listening to the conversation at air time, which you can find on our [Youtube](https://www.youtube.com/channel/UCdN17zdr5MCDph75srdhutQ) channel.
+On September 30th, 2021, Cryptex welcomed BFresh and Cris as host and [Ribbon.Finance](http://Ribbon.Finance)'s Julian Koh as the guest of the 6th episode of Space Invaders. Typically these episodes are recorded live on Twitter Spaces then published on YouTube and a variety of podcast platforms.
+
+In this post, we are sharing the most thought-provoking and alpha-infused pieces of the conversation. These are things most people would not get a chance to find out unless they were listening to the conversation at air time, which you can find on our [Youtube](https://www.youtube.com/channel/UCdN17zdr5MCDph75srdhutQ) channel and podcast formats.
 
 Read on for the alpha leaks from Space Invaders Episode 6 with Julian Koh from Ribbon Finance.
 
@@ -57,7 +59,7 @@ So by setting this non-transferability, mercenaries opted out entirely. We also 
 
 That's going to unlock a new leg of growth for us. I'm quite excited for the next few months.
 
-
+Want to hear the whole conversation? Check out the recorded version available on YouTube and podcast formats.
 
 **To catch the full episode, go to:**
 
