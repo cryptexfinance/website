@@ -52,7 +52,7 @@ Stablecoins, by their nature, remain pegged to the value of a different asset an
 
 Liquidity Pool Pairs tend to present the greatest risk with a risk factor of 3. However, the rewards that they pay out allow the DAO treasury to accumulate wealth over a long period. Another condition that adds risk to this strategy is impermanent loss, which is where the balance of tokens a liquidity provider initially provides can shift based on fluctuations in the market.
 
-### **TCAP: the answer for growth and stability**
+### **TCAP: The Answer for Growth and Stability**
 
 Inherent risk factors in DAO treasury investments makes [TCAP](https://cryptex.finance/#about) an ideal token for a treasury to hold. TCAP is a coin based on the value of the total cryptocurrency market capitalization.
 
