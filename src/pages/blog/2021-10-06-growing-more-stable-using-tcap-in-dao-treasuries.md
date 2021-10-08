@@ -64,7 +64,7 @@ Some aggregated data on TCAP's performance (as of October 8th):
 
 **YTD performance: +203%**
 
-**QTD performance (October 1st): +11%**
+**QTD performance (October 8): +11%**
 
 With a current Crypto Market Capitalization of more than $2 trillion, TCAP gives DAOs the opportunity to capture the growth of the entire crypto ecosystem without compromising on decentralization, security, and governance flexibility.
 
