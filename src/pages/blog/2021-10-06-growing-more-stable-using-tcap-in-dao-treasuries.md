@@ -62,9 +62,9 @@ It acts as a token index replicating the movements of the whole crypto market wi
 
 Some aggregated data on TCAP's performance (as of October 8th):
 
-**YTD performance: +158%**
+**YTD performance: +203%**
 
-**QTD performance (October 1st): +0.25%**
+**QTD performance (October 1st): +11%**
 
 With a current Crypto Market Capitalization of more than $2 trillion, TCAP gives DAOs the opportunity to capture the growth of the entire crypto ecosystem without compromising on decentralization, security, and governance flexibility.
 
