@@ -6,7 +6,7 @@ date: 2021-10-08T01:08:48.185Z
 description: Julian Koh shared some alpha leaks with BFresh during the Space
   Invaders show on September 30th. Check out the alpha leaks here!
 featuredpost: true
-featuredimage: /img/20210405_thescoop_preston_joe_vitalik_francis_square-675x675.jpg
+featuredimage: /img/space-invaders.png
 tags:
   - Ribbon
   - Alpha Leaks
@@ -56,6 +56,10 @@ So by setting this non-transferability, mercenaries opted out entirely. We also 
 **Julian**: Yeah, right now V2 is capped at two million bucks of TVL. We are going to increase that massively in the next few weeks, and I think once we remove those caps, it has set up just a biz-dev effort to add more assets like crazy.
 
 That's going to unlock a new leg of growth for us. I'm quite excited for the next few months.
+
+
+
+**To catch the full episode, go to:** (<https://youtu.be/jwPkiEITp_Y>)
 
 **Learn more about Cryptex & TCAP:**
 
