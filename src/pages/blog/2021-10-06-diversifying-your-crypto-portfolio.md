@@ -40,10 +40,6 @@ $TCAP is also an excellent hedge against declining crypto prices. For example, m
 
 ![](/img/tcap-value.jpg "Total Crypto Market Cap and $TCAP price (10/08/21)")
 
-**TCAP price and total market cap stats from cryptex homepage**
-
-**image**
-
 By increasing the circulating supply, the value of each token may drop, but the market cap of that crypto may actually increase if it outpaces the drop in price due to inflation. Under this arrangement where the token's market cap increase outpaces inflationary price reduction, the total crypto market cap also increase. Therefore, $TCAP would enjoy an increase in price that reflects the increase in the total crypto market cap.
 
 ## Crypto Collecting and how to Maintain a Strong Crypto Portfolio
