@@ -59,11 +59,25 @@ That's going to unlock a new leg of growth for us. I'm quite excited for the nex
 
 
 
-**To catch the full episode, go to:** (<https://youtu.be/jwPkiEITp_Y>)
+**To catch the full episode, go to:**
+
+**Youtube:** [](https://youtu.be/jwPkiEITp_Y)<https://youtu.be/jwPkiEITp_Y>
+
+**Podcast:** [](https://anchor.fm/cryptex)<https://anchor.fm/cryptex>
+
+
+
+**Learn more about Julian and Ribbon:**
+
+**Julian's Twitter:** [](https://twitter.com/juliankoh)<https://twitter.com/juliankoh>
+
+**Ribbon:** [Ribbon.finance](http://Ribbon.finance)
+
+
 
 **Learn more about Cryptex & TCAP:**
 
-**Website**: [](https://cryptex.finance/)<https://cryptex.finance/>
+**Website:** [](https://cryptex.finance/)<https://cryptex.finance/>
 
 **Twitter:** [](https://twitter.com/cryptexfinance)<https://twitter.com/cryptexfinance>
 
