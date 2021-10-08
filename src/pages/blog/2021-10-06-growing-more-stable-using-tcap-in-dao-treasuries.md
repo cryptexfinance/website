@@ -7,7 +7,7 @@ description: TCAP gives the opportunity for DAOs to allocate a part of their
   treasury to cryptos in the same way they gain exposure to blue chip stocks
   with the S&P 500.
 featuredpost: true
-featuredimage: /img/dao-treasury-funds.png
+featuredimage: /img/tcap-in-dao.png
 tags:
   - TCAP
   - DAO
@@ -15,12 +15,12 @@ tags:
 ---
 In the search for a diversified, reliable, and failsafe DAO treasury, governance participants often must take a multi-layered approach that incorporates different aspects:
 
-**Growth oriented side**
+**Growth-Oriented side**
 
 1. **Native Token**: In most cases, DAOs will allocate a significant proportion of their treasury holdings to their own Native Token. While it is good to hold an important part of the DAO's native token to show confidence in its value and use cases, it also poses a problem for the stability of the treasury. Depending on the scale of the project's development, volatility can increase, which may shake investor confidence. This leads to the treasury's value being based solely on the market value of the DAO's native token. Therefore, great swings in the total value of the treasury can compromise future development, and may even doom the project entirely.
 2. **Proven Ecosystem Cryptos** (ETH/BTC): DAOs should have full faith that the blockchain mainnet on which their project has been developed can facilitate all of the project's functions and add value to the entire ecosystem. As a result, the DAO will likely desire to invest in the mainnet's native crypto asset. For example, a crypto project and DAO built on the Ethereum network will likely want to hold ETH in its treasury. DAOs might also allocate a smaller portion of the treasury to BTC because of its status as "digital gold".
 
-**Stability oriented side**
+**Stability-Oriented side**
 
 1. Stablecoins: In the search for reliability, or stability, DAOs should allocate a portion of their assets to stablecoins like USDT, BUSD, or USDC. This balanced approach to allocating a greater proportion of the treasury to stablecoins is favored by DAOs during wild market volatility.
 2. Liquidity Pool Pair: For consistent returns, some DAOs choose to provide liquidity for their native token pairs on Decentralized Exchanges (DEX) in order to rake in incentives. This strategy can lead to unparalleled returns through liquid revenue streams for the treasury, especially in times of high trading volume.
@@ -29,10 +29,10 @@ Here's a graph of the typical allocation for a DAO's treasury.
 
 ![](/img/dao-treasury-funds.png "Typical treasury fund distributions.")
 
-* 60% - 85% to Native Tokens
-* 5% - 15% to Ecosystem Cryptos
-* 5% - 15% to Stablecoins
-* 5% - 10% to Liquidity Pool Pair
+* **60% - 85% to Native Tokens**
+* **5% - 15% to Ecosystem Cryptos**
+* **5% - 15% to Stablecoins**
+* **5% - 10% to Liquidity Pool Pair**
 
 Most treasuries will have a mix of Growth-oriented and Stability-oriented investments, with an emphasis on growth if they are deemed to be overexposed to native tokens.
 
@@ -60,11 +60,11 @@ It acts as a token index replicating the movements of the whole crypto market wi
 
 ![](/img/tcap-price-september-21.png)
 
-Some aggregated data on TCAP's performance (as of October 4th):
+Some aggregated data on TCAP's performance (as of October 8th):
 
-YTD performance: +179.5%
+**YTD performance: +158%**
 
-QTD performance (October 1st): +0.25%
+**QTD performance (October 1st): +0.25%**
 
 With a current Crypto Market Capitalization of more than $2 trillion, TCAP gives DAOs the opportunity to capture the growth of the entire crypto ecosystem without compromising on decentralization, security, and governance flexibility.
 
