@@ -18,9 +18,7 @@ With an average volume of about [$60M USD](https://ycharts.com/companies/SPY/ave
 
 So why do so many investors chose to diversify, rather than create their own ETFs? Put simply, diversification through indexing can increase the liquidity of an investor's portfolio, while maximizing returns, if you wish to invest in a single sector of a stock market.
 
-**30 day average volume on spy** https://ycharts.com/companies/SPY/average_volume_30
-
-
+![https://ycharts.com/companies/SPY/average_volume_30](/img/spy-30d-average.jpg "SPY 30-Day Average Daily Volume (10/07/21 - 10/08/21)")
 
 Other crypto indexes, such as the [DeFi Pulse Index](https://www.indexcoop.com/dpi) offer investors exposure to just the DeFi market. It is only exposed to 16 DeFi tokens. The top three tokens included in the index are Uniswap, Aave, and Maker, and they make up 55.8% of the Index. Furthermore, you are limited to Zerion, Argent, and Dharma wallets if you want to store the index token.
 
@@ -32,15 +30,15 @@ Through TCAP, cryptocurrency investors gain exposure to the cryptocurrency marke
 
 Other crypto indexes, such as the [DeFi Pulse Index](https://www.indexcoop.com/dpi) offer investors exposure to just the DeFi market. It is only exposed to 16 DeFi tokens. The top three tokens included in the index are Uniswap, Aave, and Maker, and they make up 55.8% of the Index. Furthermore, you are limited to Zerion, Argent, and Dharma wallets if you want to store the index token.
 
-**DeFi Pulse INdex allos image** https://www.indexcoop.com/dpi
-
-
+![https://www.indexcoop.com/dpi](/img/defi-pulse-index-allocations.jpg "DeFi Pulse Index Weightings (10/08/21)")
 
 ### How $TCAP Might Gain Value Faster Than a Traditional ETF
 
 The importance of diversification cannot be understated, particularly for investors with a cryptocurrency portfolio. Cryptocurrency markets are notoriously volatile, and it is for that reason that many veteran investors refuse to invest in cryptocurrency. Such price action highlights how $TCAP is a vital asset to have for crypto bulls.
 
 $TCAP is also an excellent hedge against declining crypto prices. For example, many cryptocurrencies function on a Proof-of-Stake (PoS) model. Popular PoS cryptocurrencies include Cardano, Solana, Polkadot, and Algorand. In such a model, users stake their tokens on a protocol and receive rewards in exchange for their collateral. Rewards are often paid in the token that has been staked; if you stake DOT, you earn DOT rewards. The rewards paid increase the circulating supply of that token.
+
+![](/img/tcap-value.jpg "Total Crypto Market Cap and $TCAP price (10/08/21)")
 
 **TCAP price and total market cap stats from cryptex homepage**
 
@@ -57,8 +55,6 @@ When looking to diversify your portfolio, many investors look to centralized exc
 $TCAP is the ideal investment for long-term investors who are looking to gain exposure to the whole crypto market and want to bet on the long-term viability and value of cryptocurrency. And while $TCAP will likely not make dramatic price movements in the short term, the long-term outlook for the total crypto market appears to be positive in a big way, judging by sentiments shared on [Bitcoinist](https://bitcoinist.com/usd-10-trillion-total-crypto-market-cap/). Therefore, $TCAP's peg to the total market cap of crypto makes it an excellent addition to any cryptocurrency portfolio.
 
 SPY continues to be one of the most popular ETFs on the stock market, and TCAP aims to provide the same services, but for the cryptocurrency market. Just as SPY tracks the S&P 500 index, TCAP tracks the TCAP index, which follows the total crypto market cap, and allows investors to gain exposure to the entire market. Over time, the TCAP index, and $TCAP by extension, could become just as popular to crypto investors as SPY is for traditional ETF investors.
-
-
 
 **Want to get involved? Check out:**
 
