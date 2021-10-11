@@ -14,9 +14,7 @@ tags:
 ---
 Does the sheer number of different cryptocurrencies make your head spin? Or perhaps keeping track of the taxable events while rebalancing your portfolio and having to shell out for gas fees has you down? Enter crypto index tokens: offering broad crypto exposure, savings on gas fees, and automatic rebalancing - all to make your investing journey easier. However, as always in crypto, there's more than one option to choose from; let's dig into the [10 Crypto Index Fund (BITW)](https://www.bitwiseinvestments.com/funds/Bitwise-10) and [Total Crypto Market Cap Token (TCAP)](https://cryptex.finance/) to see how they stack up.
 
-
-
-
+![](/img/stackup-btw-tcap.png)
 
 \*\*Market Cap figures as of 10/10/2021 (*[](https://www.coingecko.com/)<https://www.coingecko.com/>).
 
