@@ -10,6 +10,11 @@
     margin-bottom: 2rem;
     font-size: 28px;
   }
+  h2 {
+    margin-top: 2rem;
+    color: $color-dark-clean;
+    font-size: 25px;
+  }
   h3 {
     margin-top: 2rem;
     color: $color-dark-clean;
@@ -62,7 +67,6 @@
     margin-bottom: 2rem;
   }
   img {
-    margin-bottom: -2rem;
     width: 100%;
     height: auto;
   }

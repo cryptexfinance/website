@@ -86,35 +86,33 @@ const SectionCommunity = ({ data }) => {
           <div className="community-subtitle content">
             We’re on a mission to make digital assets simple, accessible, and secure.
           </div>
-          <div className="community-icons">
-            <Col sm={6} md={12} lg={12} className="community-icons-row">
-              <a href="https://www.reddit.com/r/totalcryptomarketcap" rel="noreferrer" target="_blank" className="community-item">
-                <img src={reddit} className="community-item-icon" alt="Reddit" />
-                <div className="community-item-text terciary-header">Reddit</div>
-              </a>
-              <a href="https://discord.gg/N5zEq6b" rel="noreferrer" target="_blank" className="community-item">
-                <img src={discord} className="community-item-icon" alt="Reddit" />
-                <div className="community-item-text terciary-header">Discord</div>
-              </a>
-              <a href="https://twitter.com/cryptexfinance" rel="noreferrer" target="_blank" className="community-item">
-                <img src={twitter} className="community-item-icon" alt="Reddit" />
-                <div className="community-item-text terciary-header">Twitter</div>
-              </a>
-            </Col>
-            <Col sm={6} md={12} lg={12} className="community-icons-row">
-              <a href="https://medium.com/cryptexfinance" rel="noreferrer" target="_blank" className="community-item">
-                <img src={medium} className="community-item-icon" alt="Reddit" />
-                <div className="community-item-text terciary-header">Medium</div>
-              </a>
-              <a href="https://t.me/cryptexfinance" rel="noreferrer" target="_blank" className="community-item">
-                <img src={telegram} className="community-item-icon" alt="Reddit" />
-                <div className="community-item-text terciary-header">Telegram</div>
-              </a>
-              <a href="https://www.youtube.com/channel/UCdN17zdr5MCDph75srdhutQ" rel="noreferrer" target="_blank" className="community-item">
-                <img src={youtube} className="community-item-icon" alt="Reddit" />
-                <div className="community-item-text terciary-header">Youtube</div>
-              </a>
-            </Col>
+          <div className="community-icons-row">
+            <a href="https://www.reddit.com/r/totalcryptomarketcap" rel="noreferrer" target="_blank" className="community-item">
+              <img src={reddit} className="community-item-icon" alt="Reddit" />
+              <div className="community-item-text terciary-header">Reddit</div>
+            </a>
+            <a href="https://discord.gg/cryptex" rel="noreferrer" target="_blank" className="community-item">
+              <img src={discord} className="community-item-icon" alt="Discord" />
+              <div className="community-item-text terciary-header">Discord</div>
+            </a>
+            <a href="https://twitter.com/cryptexfinance" rel="noreferrer" target="_blank" className="community-item">
+              <img src={twitter} className="community-item-icon" alt="Twitter" />
+              <div className="community-item-text terciary-header">Twitter</div>
+            </a>
+          </div>
+          <div className="community-icons-row">
+            <a href="https://medium.com/cryptexfinance" rel="noreferrer" target="_blank" className="community-item">
+              <img src={medium} className="community-item-icon" alt="Medium" />
+              <div className="community-item-text terciary-header">Medium</div>
+            </a>
+            <a href="https://t.me/cryptexfinance" rel="noreferrer" target="_blank" className="community-item">
+              <img src={telegram} className="community-item-icon" alt="Telegram" />
+              <div className="community-item-text terciary-header">Telegram</div>
+            </a>
+            <a href="https://www.youtube.com/channel/UCdN17zdr5MCDph75srdhutQ" rel="noreferrer" target="_blank" className="community-item">
+              <img src={youtube} className="community-item-icon" alt="Youtube" />
+              <div className="community-item-text terciary-header">Youtube</div>
+            </a>
           </div>
           <form onSubmit={handleSubmit}>
             <label id="subslbl" htmlFor="subscribe" className="community-subscribe-title heading-secondary">

@@ -18,7 +18,7 @@ export const OPTIONAL_COLORS = [
 ];
 
 export function tagColor(tagsAndColors, postTag) {
-  const indexOfTag = tagsAndColors.findIndex(item => item.name === postTag.toLowerCase());
+  const indexOfTag = tagsAndColors.findIndex(item => item.name.toLowerCase() === postTag.toLowerCase());
   if (indexOfTag !== -1) {
     return tagsAndColors[indexOfTag].color;
   }
