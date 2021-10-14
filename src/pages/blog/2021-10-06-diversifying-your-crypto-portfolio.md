@@ -50,14 +50,12 @@ $TCAP is the ideal investment for long-term investors who are looking to gain ex
 
 SPY continues to be one of the most popular ETFs on the stock market, and TCAP aims to provide the same services, but for the cryptocurrency market. Just as SPY tracks the S&P 500 index, TCAP tracks the TCAP index, which follows the total crypto market cap, and allows investors to gain exposure to the entire market. Over time, the TCAP index, and $TCAP by extension, could become just as popular to crypto investors as SPY is for traditional ETF investors.
 
-Follow Matthew R on Twitter: https://twitter.com/Hypercrypt0?t=gWrWQgm5iGDxnETi5j2MCw&s=09
+Follow Matthew R on Twitter: [https://twitter.com/Hypercrypt0](https://twitter.com/Hypercrypt0 "https\://twitter.com/Hypercrypt0")
 
-**Want to get involved? Check out:**
+DISCLAIMER: Any views expressed in this post represent the sole analysis of Cryptex, (“Cryptex”) whose opinions are based solely on publicly available information. No representation or warranty, express or implied, is made as to the accuracy or completeness of any information contained herein. Cryptex expressly disclaims any and all liability based, in whole or in part, on such information, any errors therein or omissions therefrom. Cryptex also reserves the right to modify or change its views or conclusions at any time in the future without notice. Cryptex is an open-source, fully decentralized protocol. Cryptex is NOT an ICO. No sale has been solicited. The information contained in this post DOES NOT recommend the use of any Cryptex token, nor is it an offer to sell, a solicitation, or an offer to buy any Cryptex tokenized asset. Furthermore, CTX token rewards governing the protocol are granted by Cryptex to system providers with a value of ZERO. Always do your own research. The information contained in this post is not intended to be, nor should it be construed or used as, investment advice. No representation, recommendation, or warranty, express or implied, is made as to the future performance or functionality of any Cryptex token. Any unaffiliated use of this document, or the contents herein, is strictly prohibited without the prior written consent of Cryptex. 
 
-* [👥 Cryptex - Creators of TCAP and CTX](https://cryptex.finance/)
-* [👉 Join the Cryptex Community](https://cryptex.finance/#community)
-* [Website](https://cryptex.finance/) | [Twitter](https://twitter.com/CryptexFinance) | [Discord](https://discord.gg/b8XgHYbkaN) | [Reddit](https://www.reddit.com/r/TotalCryptoMarketCap/) | [Telegram](https://t.me/cryptexfinance) | [Medium](https://medium.com/cryptexfinance) | [YouTube](https://www.youtube.com/channel/UCdN17zdr5MCDph75srdhutQ)
-
-**Disclaimer**
-
-Cryptex.finance is not a registered investment, legal or tax advisor or broker/dealer. All investment/financial opinions expressed by Cryptex.finance are from the personal research and experience of the owner of the site and are included as educational material. It is very important to do your own analysis before making any investment based on your own personal circumstances. You should take independent financial advice from a professional in connection with, or independently research and verify, any information that you find on our Website and wish to rely upon, whether for the purpose of making an investment decision or otherwise. Past performance is not a guarantee of future return, nor is it necessarily indicative of future performance. Keep in mind investing involves risk. The value of your investment will fluctuate over time and you may gain or lose money.
+CRYPTEX IS A FAIR LAUNCH PROTOCOL \
+1. NO ICO \
+2. NO VC FUNDING \
+3. NO PRE-SALE \
+4. CTX TOKENS ARE REWARDED AND ARE NEVER PURCHASED FROM CRYPTEX.
