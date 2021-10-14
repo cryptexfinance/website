@@ -20,8 +20,6 @@ So why do so many investors chose to diversify, rather than create their own ETF
 
 ![https://ycharts.com/companies/SPY/average_volume_30](/img/spy-30d-average.jpg "SPY 30-Day Average Daily Volume (10/07/21 - 10/08/21)")
 
-Other crypto indexes, such as the [DeFi Pulse Index](https://www.indexcoop.com/dpi) offer investors exposure to just the DeFi market. It is only exposed to 16 DeFi tokens. The top three tokens included in the index are Uniswap, Aave, and Maker, and they make up 55.8% of the Index. Furthermore, you are limited to Zerion, Argent, and Dharma wallets if you want to store the index token.
-
 ETFs on the stock market make money by charging an expense ratio. This is similar to a fee for using the ETF. The [SPY ETF](<https://www.investopedia.com/articles/investing/122215/spy-spdr-sp-500-trust-etf.asp#:~:text=What%20Is%20the%20SPY%20ETF,size%2C%20liquidity%2C%20and%20industry.)>) has a low expense ratio compared to other ETFs at 0.095%. Meaning if you invested $10,000, you would only pay $9.5 per year.
 
 Decentralized indexes, however, do not charge an expense ratio. This is an advantage that indexes, like the TCAP Total Crypto Market Cap Index, have over-centralized counterparts. You would only need to pay network and exchange fees to purchase it. You incur no holding fees and no user fees.
