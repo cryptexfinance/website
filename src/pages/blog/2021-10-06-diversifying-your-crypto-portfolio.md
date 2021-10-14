@@ -50,6 +50,8 @@ $TCAP is the ideal investment for long-term investors who are looking to gain ex
 
 SPY continues to be one of the most popular ETFs on the stock market, and TCAP aims to provide the same services, but for the cryptocurrency market. Just as SPY tracks the S&P 500 index, TCAP tracks the TCAP index, which follows the total crypto market cap, and allows investors to gain exposure to the entire market. Over time, the TCAP index, and $TCAP by extension, could become just as popular to crypto investors as SPY is for traditional ETF investors.
 
+Follow Matthew R on Twitter: https://twitter.com/Hypercrypt0?t=gWrWQgm5iGDxnETi5j2MCw&s=09
+
 **Want to get involved? Check out:**
 
 * [👥 Cryptex - Creators of TCAP and CTX](https://cryptex.finance/)
