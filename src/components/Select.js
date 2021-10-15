@@ -1,6 +1,6 @@
 import React from 'react';
 import Select from 'react-select';
-import { COLORS } from "../../../components/utils/colors";
+import { COLORS } from "./utils/colors";
 
 
 const customStyles = {

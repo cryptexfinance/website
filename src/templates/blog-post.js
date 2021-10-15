@@ -140,19 +140,19 @@ export const pageQuery = graphql`
       }
     }
     allMarkdownRemark(
-        sort: { order: DESC, fields: [frontmatter___date] }
-        filter: { frontmatter: { templateKey: { eq: "blog-tag" } } }
-      ) {
-        edges {
-          node {
-            excerpt(pruneLength: 400)
-            id
-            frontmatter {
-              tag
-              color  
-            }
+      sort: { order: DESC, fields: [frontmatter___date] }
+      filter: { frontmatter: { templateKey: { eq: "blog-tag" } } }
+    ) {
+      edges {
+        node {
+          excerpt(pruneLength: 400)
+          id
+          frontmatter {
+            tag
+            color  
           }
         }
       }
+    }
   }
 `
