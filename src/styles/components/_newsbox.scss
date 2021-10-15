@@ -86,21 +86,16 @@
       padding:2px 0 2px 2px;
       margin-top: 0.5rem;
       margin-bottom: 1.5rem;
-
-
     }
     &.hide {
       display: None;
     }
-
     .taglink  { 
       padding:4px;
-    }
-      
+    } 
     .tagbox a, .tagbox a:visited, .tagbox a:active { 
       text-decoration:none;
     }
-
     .terciary-header {
       font-size: 0.8rem;
     }
@@ -109,27 +104,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1rem 1rem;    
-
-    .search-icon {
-      color: $color-grey;
-      position: absolute;
-      margin-left: 0.6rem;
-      align-self: center;
-      font-size: 1.2rem
-    }
-    .filter-box{
-      display: flex;
-      width: 50%;
-    }
-    .select-cryptex {
-      margin-left: 1rem;
-      width: 40% !important;
-    }
-    .select-cryptex__control {
-      height: 3rem;
-      min-height: 3rem !important;
-    }
+    padding: 1rem 1rem;
   }
   &-search {
     width: 50%;
@@ -167,27 +142,6 @@
     }
     &-inputs {
       padding: 2rem 3rem;
-      .filter-box{
-        width: 80%;
-      }
-      .select-cryptex {
-        width: 30% !important;  
-        &__control {
-          height: 4rem;
-        }
-        &__placeholder {
-          font-size: 1.5rem;
-        }
-        &__single-value {
-          font-size: 1.5rem;
-        }
-        &__input {
-          font-size: 1.5rem;
-        }
-        &__option {
-          font-size: 1.5rem;
-        }
-      } 
     }
     &-search {
       font-size: 1.5rem;
@@ -243,38 +197,6 @@
     }
     &-inputs {
       padding: 3rem 4.5rem;
-      .search-icon {
-        margin-left: 1.1rem;
-        font-size: 2.5rem;
-      }
-      .filter-box{
-        width: 100%;
-      }
-      .select-cryptex {
-        width: 50% !important;  
-        &__control {
-          height: 7rem;
-        }
-        &__placeholder {
-          font-size: 3rem;
-        }
-        &__indicators {
-          height: 7rem;
-        }
-        &__indicator-separator {
-          margin-top: 4px;
-          margin-bottom: 4px;
-        }
-        &__input {
-          font-size: 3rem;
-        }
-        &__single-value {
-          font-size: 3rem;
-        }
-        &__option {
-          font-size: 3rem;
-        }
-      }
     }
     &-search {
       width: 50%;
@@ -322,6 +244,78 @@
   }
 }
 
+.filter-box{
+  display: flex;
+  width: 50%;
+  @media only screen and (max-device-width: 600px) {
+    width: 80%;
+  }
+  @media only screen and (max-device-width: 600px) {
+    width: 95%;
+  }
+}
+.search-icon {
+  color: $color-grey;
+  position: absolute;
+  margin-left: 0.6rem;
+  align-self: center;
+  font-size: 1.2rem;
+  @media only screen and (max-device-width: 600px) {
+    margin-left: 1.1rem;
+    font-size: 2.5rem;
+  }
+}
+.select-cryptex__control {
+  height: 3rem;
+  min-height: 3rem !important;
+}
+.select-cryptex {
+  margin-left: 1rem;
+  width: 40% !important;
+  @media only screen and (max-device-width: 800px) {
+    width: 50% !important;  
+    &__control {
+      height: 4rem;
+    }
+    &__placeholder {
+      font-size: 1.5rem;
+    }
+    &__single-value {
+      font-size: 1.5rem;
+    }
+    &__input {
+      font-size: 1.5rem;
+    }
+    &__option {
+      font-size: 1.5rem;
+    }
+  }
+  @media only screen and (max-device-width: 600px) {
+    width: 50% !important;  
+    &__control {
+      height: 7rem;
+    }
+    &__placeholder {
+      font-size: 3rem;
+    }
+    &__indicators {
+      height: 7rem;
+    }
+    &__indicator-separator {
+      margin-top: 4px;
+      margin-bottom: 4px;
+    }
+    &__input {
+      font-size: 3rem;
+    }
+    &__single-value {
+      font-size: 3rem;
+    }
+    &__option {
+      font-size: 3rem;
+    }
+  }
+}
 
 #newsbox-tags-list {
   height: 3rem;

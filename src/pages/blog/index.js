@@ -1,32 +1,33 @@
-import React from 'react'
+import React from "react";
 
-import Layout from '../../components/Layout'
-import BlogRoll from '../../components/BlogRoll'
+import Layout from "../../components/Layout";
+import BlogRoll from "../../components/BlogRoll";
+import Header from "../../components/Header";
+import bg from "../../../static/bg.webp"
+import bgvideo from "../../../static/bg.mp4"
 
 export default class BlogIndexPage extends React.Component {
   render() {
     return (
       <Layout>
-        <div
-          className="full-width-image-container margin-top-0"
+        <video
+          playsInline
+          autoPlay
+          loop
+          muted
+          poster={bg}
+          className="video"
+          id="bgvid"
         >
-          <h1
-            className="has-text-weight-bold is-size-1"
-            style={{
-              boxShadow: '0.5rem 0 0 #f40, -0.5rem 0 0 #f40',
-              backgroundColor: '#f40',
-              color: 'white',
-              padding: '1rem',
-            }}
-          >
-            Latest Stories
-          </h1>
-        </div>
-        <section className="section">
-          <div className="container">
-            <div className="content">
-              <BlogRoll />
-            </div>
+          <source src={bgvideo} type="video/mp4" />
+        </video>
+
+        <header id="home">
+          <Header blogPost={true} />
+        </header>
+        <section className="section-blogroll">          
+          <div className="content">
+            <BlogRoll />
           </div>
         </section>
       </Layout>
