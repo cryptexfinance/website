@@ -1,0 +1,142 @@
+.blogroll {
+  margin-top: 3rem;
+  .search-content {
+    display: flex;
+    flex-direction: row;
+    padding-top: 3rem;
+    padding-left: 3rem; 
+    .filter-box{
+      width: 70%; 
+      @media only screen and (max-device-width: 800px) {
+        padding-left: 1rem;
+        width: 95%;
+      }
+      @media only screen and (max-device-width: 600px) {
+        padding-top: 5rem;
+        padding-left: 4rem;
+        margin-bottom: 1rem;
+      }
+    }
+  }
+  .news {
+    display: flex;
+    flex-direction: row;
+    flex-flow: wrap;
+  }  
+  .newsitem {
+    display: flex;
+    flex-direction: column;
+    margin-top: 2rem;
+    margin-bottom: 2rem; 
+    padding: 1rem 2rem;
+    
+    a {
+      text-decoration: none;
+    }
+    &-photo {
+     width: 98%;
+     height: 20rem;
+    }
+    &-info {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;  
+      padding: 1rem 0rem; 
+    }
+    &-title {
+      font-size: 1.2rem;
+      margin: 1rem 0rem;
+      line-height: 1.5rem;
+    }
+    &-brief{
+      font-family: "Space Mono";
+      margin: 0.44rem 0rem;
+      font-size: 1rem;
+      width: 98%;
+      color: #A9A7BE;
+      letter-spacing: 0.3px;
+      line-height: 1.5rem;
+      text-align: justify;      
+    }
+    &-link {
+      position: relative;
+      margin-top: 0.5rem;
+      font-size: 0.9rem;
+      &:hover {
+        color: $color-dark-clean;
+        text-decoration: none;
+      }
+    }
+    &-tag-items {
+      a {
+        text-decoration: none;
+      }
+    }
+    &-tagbox { 
+      color: $color-dark-clean;
+      background-color:$color-black;
+      border: 1px solid $shadow-purple-neon;
+      margin:0px 10px 10px 0px;
+      line-height: 200%;
+      padding: 2px 5px 2px 5px;  
+    }
+  }
+
+  @media only screen and (max-device-width: 770px) {
+    margin-top: 8rem;
+    .newsitem {
+      margin-bottom: 3rem;
+      &-photo {
+        height: 35rem;  
+      }
+      &-info {
+        padding: 2rem 0rem;
+      }
+      &-tag-items {
+        font-size: 2rem;
+      }
+      &-title {
+        font-size: 2rem;
+        margin: 1.5rem 0rem;
+        line-height: 2.5rem;
+      }
+      &-brief{
+        margin: 1rem 0rem;
+        font-size: 2rem;
+        line-height: 2.5rem;
+      } 
+      &-link {
+        font-size: 1.8rem;
+        margin-top: 1rem;
+      }
+    }
+  }
+  @media only screen and (max-device-width: 500px) {
+    margin-top: 12rem;
+    .newsitem {
+      margin-bottom: 5rem;     
+      &-photo {
+        height: 42rem;  
+      }
+      &-info {
+        padding: 2.6rem 0rem;
+      }
+      &-tag-items {
+        font-size: 2.5rem;
+      }
+      &-title {
+        font-size: 3rem;
+        margin: 3rem 0rem;
+        line-height: 3.5rem;
+      }
+      &-brief{
+        font-size: 2.8rem;
+        line-height: 3.2rem;
+      }
+      &-link {
+        font-size: 2.4rem;
+        margin-top: 2rem;
+      }      
+    }  
+  }
+}

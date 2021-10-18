@@ -1,61 +1,136 @@
-import React from 'react'
-import PropTypes from 'prop-types'
-import { Link, graphql, StaticQuery } from 'gatsby'
-import PreviewCompatibleImage from './PreviewCompatibleImage'
+import React, { useEffect, useState } from "react";
+import Col from "react-bootstrap/esm/Col";
+import { useBreakpoint } from "gatsby-plugin-breakpoints";
+import PropTypes from "prop-types";
+import { graphql, StaticQuery } from "gatsby";
+import SearchNews from "./SearchNews";
+import { tagColor } from "./utils/tags";
+import { sortAlpha } from "./utils/utils";
 
-class BlogRoll extends React.Component {
-  render() {
-    const { data } = this.props
-    const { edges: posts } = data.allMarkdownRemark
 
-    return (
-      <div className="columns is-multiline">
-        {posts &&
-          posts.map(({ node: post }) => (
-            <div className="is-parent column is-6" key={post.id}>
-              <article
-                className={`blog-list-item tile is-child box notification ${
-                  post.frontmatter.featuredpost ? 'is-featured' : ''
-                }`}
-              >
-                <header>
-                  {post.frontmatter.featuredimage ? (
-                    <div className="featured-thumbnail">
-                      <PreviewCompatibleImage
-                        imageInfo={{
-                          image: post.frontmatter.featuredimage,
-                          alt: `featured image thumbnail for post ${post.frontmatter.title}`,
-                        }}
-                      />
-                    </div>
-                  ) : null}
-                  <p className="post-meta">
-                    <Link
-                      className="title has-text-primary is-size-4"
-                      to={post.fields.slug}
-                    >
-                      {post.frontmatter.title}
-                    </Link>
-                    <span> &bull; </span>
-                    <span className="subtitle is-size-5 is-block">
-                      {post.frontmatter.date}
-                    </span>
-                  </p>
-                </header>
-                <p>
-                  {post.excerpt}
-                  <br />
-                  <br />
-                  <Link className="button" to={post.fields.slug}>
-                    Keep Reading →
-                  </Link>
-                </p>
-              </article>
-            </div>
-          ))}
-      </div>
-    )
+export const BlogRoll = ({ data }) => {
+  const keysDivider = "+++";
+  const [tags, setTags] = useState([]);
+  const [posts, setPosts] = useState([]);
+  const breakpoints = useBreakpoint();
+  const [activePage, setActivePage] = useState(0);
+  const [blogKeys, setBlogKeys] = useState([]);
+  const [filteredBlogKeys, setFilteredBlogKeys] = useState([]);
+  const [tagList, setTagList] = useState([]);
+
+  useEffect(() => {
+    if (Array.isArray(data.news.edges)) {
+      const bKeys = [], tList = [];
+      setPosts(data.news.edges);
+      data.news.edges.map(({ node }) => {
+        let postTags = "";
+        if (Array.isArray(node.frontmatter.tags)) {
+          postTags = node.frontmatter.tags.join(keysDivider).toLowerCase();
+          node.frontmatter.tags.forEach(tag => {
+            if (tList.findIndex(item => item.value === tag.toLowerCase()) === -1)
+              tList.push({ value: postTags.toLowerCase(), label: tag });
+          });
+        }
+        const bkey = [node.frontmatter.title.toLowerCase(), postTags].join(keysDivider) + keysDivider;
+        bKeys.push(bkey);
+      });
+      setBlogKeys(bKeys);
+      setFilteredBlogKeys(bKeys);
+      setTagList(tList.sort(sortAlpha));
+    } else {
+      console.log("Error with props in team");
+    }
+
+    if (Array.isArray(data.tags)) {
+      console.log("Entra aqui ---------------");
+      const t = [];
+      data.tags.map(({ node }) => {
+        t.push({
+          name: node.frontmatter.tag,
+          color: node.frontmatter.color
+        })
+      });
+      setTags(t);
+    }
+  }, [data]);
+
+  const postUrl = (node) => {
+    if (node.excerpt.length < 100 && node.excerpt.includes("https://")) {
+      return node.excerpt;
+    }
+    else {
+      return node.fields.slug;
+    }
   }
+
+  const sliceDescription = (description) => {
+    if (description.length < 300)
+      return description;
+    else
+      return description.slice(0, 300) + "...";
+  }
+
+  const NewsItem = ({ node }) => {
+    const postTags = node.frontmatter.tags.join(keysDivider).toLowerCase() + keysDivider;
+    const key = [node.frontmatter.title.toLowerCase(), postTags].join(keysDivider);
+    const indexOf = filteredBlogKeys.indexOf(key.toLowerCase());
+    if (indexOf >= 0) {
+      return (
+        <Col xs={12} md={6} lg={6} className={"newsitem"}>
+          <a href={postUrl(node)} target="_top" rel="noreferrer">
+            <img src={node.frontmatter.featuredimage.childImageSharp.fluid.src} className="newsitem-photo" alt="News" />
+          </a>
+          <div className="newsitem-info">
+            <div className="newsitem-tag-items">
+              {Array.isArray(node.frontmatter.tags) &&
+                node.frontmatter.tags.slice(0, 5).map(tag => {
+                  const tColor = tagColor(tags, tag);;
+                  return <a
+                    rel="noreferrer"
+                    className="newsitem-tagbox taglink"
+                    style={{ color: tColor, borderColor: tColor }}
+                  >
+                    {tag}
+                  </a>
+                })
+              }
+            </div>
+            <a href={postUrl(node)} className="newsitem-title-link" >
+              <div className="newsitem-title terciary-header">
+                {node.frontmatter.title}
+              </div>
+            </a>
+            <a href={postUrl(node)} className="newsitem-title-link" >
+              <p className="newsitem-brief">
+                {sliceDescription(node.frontmatter.description)}
+              </p>
+            </a>
+            <a href={postUrl(node)} className="newsitem-link link">Check it out</a>
+          </div>
+        </Col>
+      );
+    }
+    return <></>;
+  };
+
+  return (
+    <div className="blogroll">
+      <Col md={12} lg={12} className="search-content">
+        <SearchNews
+          blogKeys={blogKeys}
+          setFilteredBlogKeys={setFilteredBlogKeys}
+          tagList={tagList}
+          setActivePage={setActivePage}
+        />
+      </Col>
+      <Col md={12} lg={12} className="news">
+        {posts.map(({ node }) => (
+           <NewsItem node={node} />
+          )
+        )}
+      </Col>  
+    </div>
+  )
 }
 
 BlogRoll.propTypes = {
@@ -70,7 +145,7 @@ export default () => (
   <StaticQuery
     query={graphql`
       query BlogRollQuery {
-        allMarkdownRemark(
+        news: allMarkdownRemark(
           sort: { order: DESC, fields: [frontmatter___date] }
           filter: { frontmatter: { templateKey: { eq: "blog-post" } } }
         ) {
@@ -83,9 +158,11 @@ export default () => (
               }
               frontmatter {
                 title
+                description
                 templateKey
                 date(formatString: "MMMM DD, YYYY")
                 featuredpost
+                tags
                 featuredimage {
                   childImageSharp {
                     fluid(maxWidth: 600) {
@@ -93,6 +170,21 @@ export default () => (
                     }
                   }
                 }
+              }
+            }
+          }
+        },
+        tags: allMarkdownRemark(
+          sort: { order: DESC, fields: [frontmatter___date] }
+          filter: { frontmatter: { templateKey: { eq: "blog-tag" } } }
+        ) {
+          edges {
+            node {
+              excerpt(pruneLength: 400)
+              id
+              frontmatter {
+                tag
+                color  
               }
             }
           }
