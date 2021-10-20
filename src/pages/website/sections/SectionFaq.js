@@ -1,36 +1,9 @@
-import React, { useContext, useState } from "react"
+import React, { useState } from "react"
 import Col from "react-bootstrap/esm/Col";
-import { Accordion, AccordionContext, Button, Card, Tabs, Tab, TabContent } from "react-bootstrap";
-import { useAccordionToggle } from 'react-bootstrap/AccordionToggle';
-import { useBreakpoint } from 'gatsby-plugin-breakpoints';
-import Toggle from "../components/Toggle";
-import { faq } from "../../../components/utils/faq";
-
-
-const MobileQuestionButton = ({ children, eventKey, callback }) => {
-  const currentEventKey = useContext(AccordionContext);
-  const decoratedOnClick = useAccordionToggle(
-    eventKey,
-    () => callback && callback(eventKey),
-  );
-
-  const isCurrentEventKey = currentEventKey === eventKey;
-
-  return (
-    <button
-      type="button"
-      onClick={decoratedOnClick}
-      className={isCurrentEventKey ? "btn-faq-group active" : "btn-faq-group"}
-    >
-      {children}
-    </button>
-  );
-};
+import Toggle from "../components/Toggle"
 
 const SectionFaq = () => {
-  const breakpoints = useBreakpoint();
   const [expanded, setExpanded] = useState(0)
-  const [tabKey, setTabKey] = useState("tcap");
 
   const addToExpanded = num => {
     setExpanded(expanded + num)
@@ -47,80 +20,83 @@ const SectionFaq = () => {
       ? "section-faq expand4"
       : "section-faq expand6"
 
-  const tabContent = (questions) => {
-    const middle = Math.ceil(questions.length / 2);
-    const questions1 = questions.slice(0, middle);
-    const questions2 = questions.slice(middle, questions.length);
-
-    return (
-      <Col md={12} lg={12} className="faq-row row">
-        <Col xs={12} sm={12} md={6} lg={6} className="faq-box">
-          {questions1.map((q) => 
-            <Toggle title={q.question} addToExpanded={addToExpanded} showDivider={true}>
-              {q.answer}
-            </Toggle>
-          )}
-        </Col>
-        <Col xs={12} sm={12} md={6} lg={6} className="faq-box">
-          {questions2.map((q) => 
-            <Toggle title={q.question} addToExpanded={addToExpanded} showDivider={true}>
-              {q.answer}
-            </Toggle>  
-          )}
-        </Col>
-      </Col>  
-    );
-  }
-
   return (
     <section id="faq" className={className}>
-      <div className="faq-title header">FAQ</div>
-      <div className="faq-subtitle content">
-        Common questions we are asked.
-      </div>
-      <div>
-        {breakpoints.smm ? (
-          <Accordion className="faq-mobile">
-            {faq.map((q) => {
-              return  <Card>
-                        <Card.Header>
-                          <MobileQuestionButton eventKey={q.group_key}>
-                            <div className="btn-faq-container">
-                              <div className="title">
-                                {q.group_name}
-                              </div>
-                              <div className="icon">
-                                <span>▼</span>
-                              </div>
-                            </div>  
-                          </MobileQuestionButton>
-                        </Card.Header>
-                        <Accordion.Collapse eventKey={q.group_key}>
-                          <Card.Body>{tabContent(q.questions)}</Card.Body>
-                        </Accordion.Collapse>
-                      </Card>     
-            })}
-          </Accordion>
-        ) : (
-          <Tabs
-            id="faq-tab"
-            activeKey={tabKey}
-            onSelect={(k) => setTabKey(k)}
+        <div className="faq-title header">FAQ</div>
+        <div className="faq-subtitle content">
+          Common questions we are asked.
+        </div>
+      <Col md={12} lg={12} className="faq-row row">
+        <Col xs={12} sm={12} md={6} lg={6} className="faq-box">
+          <Toggle title="Is TCAP decentralized?" addToExpanded={addToExpanded}>
+            <div className="answer">
+              TCAP uses Developer Keys to pause deposits and minting in case of
+              a bug to protect users, this can only be activated once per vault.
+              To change protocol parameters a governance token CTX is used in
+              combination with a Timelock contract.
+            </div>
+          </Toggle>
+
+          <Toggle title="What is TCAP backed by?" addToExpanded={addToExpanded}>
+            <div className="answer">
+              Each TCAP is collateralized by more than 150% corresponding amount
+              of ETH or DAI.
+            </div>
+          </Toggle>
+
+          <Toggle
+            title="TCAP includes EVERY coin and token?"
+            addToExpanded={addToExpanded}
           >
-            {faq.map((q) => {
-              return <Tab
-                eventKey={q.group_key}
-                tabClassName="faq-tab"
-                title={<h6>{q.group_name}</h6>}
+            <div className="answer">
+              TCAP includes every coin and token supported by the following 9 oracles and 5 data providers{" "}
+              <a href="https://data.chain.link/ethereum/mainnet/indexes/mcap-usd" target="_blank">
+                https://data.chain.link/ethereum/{" "}mainnet/indexes/mcap-usd
+              </a>     
+            </div>
+          </Toggle>
+        </Col>
+        <Col xs={12} sm={12} md={6} lg={6} className="faq-box">
+          <Toggle title="Is TCAP live yet?" addToExpanded={addToExpanded}>
+            <div className="answer">
+              TCAP is live! You can use TCAP by visiting{" "}
+              <a href="https://app.cryptex.finance" target="_blank">
+                app.cryptex.finance
+              </a>
+              . We recommend you give our testnet a spin first to get familiar
+              with the protocol by visiting{" "}
+              <a
+                href="https://medium.com/cryptexfinance/how-to-use-tcap-on-testnet-a0cef1c1f19c"
+                target="_blank"
               >
-                <TabContent className="faq-content">
-                  {tabContent(q.questions)}
-                </TabContent>
-              </Tab>
-            })}
-          </Tabs>
-        )}
-      </div>
+                https://medium.com/cryptexfinance/how-to-use-tcap-on-testnet-a0cef1c1f19c
+              </a>
+            </div>
+          </Toggle>
+
+          <Toggle title="Who is TCAP for?" addToExpanded={addToExpanded}>
+            <div className="answer">
+              TCAP is for users that want to speculate in the total
+              cryptocurrency market by buying a token that is the
+              representation of the entire market. It’s also for DeFi
+              users that want to earn fees by minting TCAP tokens and
+              adding liquidity on decentralized exchanges or taking
+              advantage of arbitrage opportunities.
+            </div>
+          </Toggle>
+
+          <Toggle
+            title="How is TCAP pegged to the price of total crypto market cap?"
+            addToExpanded={addToExpanded}
+          >
+            <div className="answer">
+              TCAP uses Chainlink oracles which enables Cryptex to aggregate
+              multiple data points from the top crypto data providers in the
+              world, bringing that data on chain using Ethereum smart contract.
+            </div>
+          </Toggle>
+        </Col>
+      </Col>
     </section>
   )
 }

@@ -5,9 +5,7 @@ export class Toggle extends Component {
         this.state = {  
             open: false,  
         };  
-        this.togglebutton = this.togglebutton.bind(this);
-        this.customClassName = typeof (props.className) !== "undefined" ? props.className : "";
-        this.showDivider = typeof (props.showDivider) !== "undefined" && props.showDivider;
+        this.togglebutton = this.togglebutton.bind(this);  
     }  
     togglebutton() {  
         const { open } = this.state;  
@@ -20,13 +18,13 @@ export class Toggle extends Component {
     render() {  
         var { title, children } = this.props;  
         const { open } = this.state;  
-        let openclose = "";
-        let className = this.customClassName.concat(" toggle").trim();
+        let openclose = ''
+        let className = 'toggle'
         if (open) {  
-            openclose = "→";  
-            className = this.customClassName.concat("toggle expand").trim();
+            openclose = '→';  
+            className = 'toggle expand'
         } else {  
-            openclose = "+";  
+            openclose = '+';  
         }  
         return (               
             <div className={className} role="button" onClick={this.togglebutton} onKeyDown={this.togglebutton} aria-hidden="true">              
@@ -34,13 +32,13 @@ export class Toggle extends Component {
                   {title}  
               </div>
               <div className="plus">{openclose}</div>
-              {this.showDivider && <div className="faq-divider"></div>}
+              <div className="faq-divider"></div>
               {open && (  
                 <>  
                     {children}  
                 </>  
               )}           
-            </div>
+            </div>  
         );  
     }  
 }  

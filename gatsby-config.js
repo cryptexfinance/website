@@ -7,16 +7,15 @@
 //  const metaImage = require('./static/website/home/main.webp');
 
 const CustomMediaQueries = {
-  xs: "(max-width: 320px)",
-  smm: "(max-width: 600px)",
-  sm: "(max-width: 720px)",
-  smmin: "(min-width: 721px)",
-  mdesp: "(max-width: 800px)",
-  md: "(max-width: 1024px)",
-  mdmin: "(min-width: 1025px)",
-  l: "(max-width: 1536px)",
-  xl: "(max-width: 2000px)",
-  portrait: "(orientation: portrait)",
+    xs: "(max-width: 320px)",
+    sm: "(max-width: 720px)",
+    smmin: "(min-width: 721px)",
+    mdesp: "(max-width: 800px)",
+    md: "(max-width: 1024px)",
+    mdmin: "(min-width: 1025px)",
+    l: "(max-width: 1536px)",
+    xl: "(max-width: 2000px)",
+    portrait: "(orientation: portrait)",
 };
 
 module.exports = {
