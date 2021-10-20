@@ -86,9 +86,7 @@ const SectionFaq = () => {
                         <Card.Header>
                           <MobileQuestionButton eventKey={q.group_key}>
                             <div className="btn-faq-container">
-                              <div className="title">
-                                {q.group_name}
-                              </div>
+                              <div className="title">{q.group_name}</div>
                               <div className="icon">
                                 <span>▼</span>
                               </div>
