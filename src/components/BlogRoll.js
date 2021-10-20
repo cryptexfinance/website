@@ -115,6 +115,9 @@ export const BlogRoll = ({ data }) => {
 
   return (
     <div className="blogroll">
+      <Col md={12} lg={12} className="page-title">
+        <h2>Lastets News</h2>
+      </Col>
       <Col md={12} lg={12} className="search-content">
         <SearchNews
           blogKeys={blogKeys}

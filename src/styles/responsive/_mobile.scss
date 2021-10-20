@@ -518,13 +518,13 @@
 
   .section-faq {
     padding-top: 30rem;
-    padding-bottom: 10rem;
+    padding-bottom: 55rem;
     position: relative;
   }
   .faq {
     &-row {
       width: 100%;
-      margin: 12rem 0rem 12rem -2rem;
+      margin: 4rem 0rem 0rem -2.5rem;
     }
     &-title {
       width: 312px;
@@ -536,18 +536,24 @@
       font-size: 16px;
       line-height: 22px;
       letter-spacing: 0.3px;
+      margin-bottom: 5rem;
     }
     &-divider {
       width: 72%;
       height: 1px;
       margin-top: 16px;
       margin-bottom: 32px;
+      background: transparent;
+    }
+    &-tab {
+      h6 {
+        font-size: 16px;
+      }
     }
   }
 
   .toggle {
     width: 120vw;
-    height: auto;
   }
 
   .toggle {
@@ -558,10 +564,10 @@
   }
 
   .question {
-    width: 300px;
+    width: 290px;
     height: auto;
-    font-size: 16px;
-    line-height: 24px;
+    font-size: 15px;
+    line-height: 23px;
     letter-spacing: 0.3px;
     margin-bottom: 12px;
   }
@@ -572,6 +578,13 @@
     font-size: 15px;
     line-height: 22px;
     letter-spacing: 0.3px;
+    text-align: left;
+    @media only screen and (min-device-width: 400px) {
+      width: 330px;
+    }
+    @media only screen and (max-device-width: 365px) {
+      width: 290px;
+    }
   }
 
   .plus {
@@ -609,9 +622,15 @@
     &-icons{
       display: flex;
       padding: 5rem 5rem;
+      &-container {
+        display: flex;
+        margin-left: 25px;
+        margin-bottom: 35px;
+      }
       &-row {
         display: flex;
         flex-direction: column;
+        flex: 1;
       }
     }
     &-item {
