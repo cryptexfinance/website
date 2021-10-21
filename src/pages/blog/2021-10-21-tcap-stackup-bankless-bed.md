@@ -14,8 +14,6 @@ tags:
 ---
 Does the sheer number of different cryptocurrencies make your head spin? Or perhaps keeping track of the taxable events while rebalancing your portfolio and having to shell out for gas fees has you down? Enter crypto index tokens: offering broad crypto exposure, savings on gas fees, and automatic rebalancing - all to make your investing journey easier. However, as always in crypto, there's more than one option to choose from; let's dig into the [BED Index (BED)](https://www.indexcoop.com/) and [Total Crypto Market Cap Token (TCAP)](https://cryptex.finance/) to see how they stack up.
 
-
-
 * Are you new to crypto or unsure which tokens to buy, but believe in the long-term growth of the crypto asset class and want broad exposure to it? - TCAP might be for you.
 * Are you looking for broad exposure to the largest market cap cryptocurrencies, including the well known Bitcoin and Ethereum, in a single asset? - BED could be a good option to consider.
 * Or perhaps you've called the top of the bull market and you want to open up a short position? - Both BED's and TCAP's minting capabilities offer this to advanced users.
