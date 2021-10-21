@@ -3,7 +3,8 @@ templateKey: blog-post
 title: "TCAP StackUp: Bankless (BED)"
 author: Mkatx5
 date: 2021-10-26T02:32:33.000Z
-description: How does TCAP stackup to the Bankless (BED) token?
+description: How does the $TCAP index token stack up against BTC-ETH-DPI Index
+  (BED) by Bankless & Index Coop?
 featuredpost: true
 featuredimage: /img/tcap-stackup-bed.jpg
 tags:
