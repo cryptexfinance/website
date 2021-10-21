@@ -507,7 +507,7 @@ and (orientation: portrait)
     &-row {
       width: 100%;
       flex-direction: column;
-      padding: 5rem 0rem;
+      padding: 1rem 0rem 1rem 3rem;
     }
     &-title {
       width: 312px;
@@ -522,10 +522,15 @@ and (orientation: portrait)
       letter-spacing: 0.3px;
     }
     &-divider {
-      width: 620px;
+      width: 660px;
       height: 1px;
       margin-top: 16px;
       margin-bottom: 32px;
+    }
+    &-tab {
+      h6 {
+        font-size: 1.3rem;
+      }
     }
   }
 
@@ -551,7 +556,7 @@ and (orientation: portrait)
   }
   
   .answer {
-		width: 70%;
+		width: 65%;
     height: auto;
     font-size: 16px;
     line-height: 22px;

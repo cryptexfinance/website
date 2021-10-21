@@ -1,3 +1,4 @@
+
 // Main Website
 
 h1, h2, h3, h4, h5, h6  {
@@ -62,6 +63,7 @@ h1 {
   letter-spacing: 0.3px;
   color: $color-dark-clean;
   text-align: left;
+  padding-right: 10px;
 }
 
 .answer {
@@ -71,7 +73,7 @@ h1 {
   font-size: 1rem;
   line-height: 1.375rem;
   letter-spacing: 0.3px;
-  text-align: left;
+  text-align: justify;
   color: $color-grey;
 
   a {

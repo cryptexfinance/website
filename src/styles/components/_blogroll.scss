@@ -1,9 +1,16 @@
 .blogroll {
   margin-top: 3rem;
+
+  h2 {
+    color: $color-dark-clean;
+  }
+  .page-title {
+    margin: 6rem 2rem 0rem 2rem;
+  }
   .search-content {
     display: flex;
     flex-direction: row;
-    padding-top: 3rem;
+    padding-top: 2rem;
     padding-left: 3rem; 
     .filter-box{
       width: 70%; 
@@ -12,7 +19,7 @@
         width: 95%;
       }
       @media only screen and (max-device-width: 600px) {
-        padding-top: 5rem;
+        padding-top: 3rem;
         padding-left: 4rem;
         margin-bottom: 1rem;
       }
@@ -84,6 +91,12 @@
 
   @media only screen and (max-device-width: 770px) {
     margin-top: 8rem;
+    .page-title {
+      margin: 12rem 2rem 0rem 3rem;
+      h2 {
+        font-size: 3.1rem;
+      }
+    }
     .newsitem {
       margin-bottom: 3rem;
       &-photo {
@@ -113,6 +126,12 @@
   }
   @media only screen and (max-device-width: 500px) {
     margin-top: 12rem;
+    .page-title {
+      margin: 20rem 2rem 0rem 4rem;
+      h2 {
+        font-size: 5rem;
+      }
+    }
     .newsitem {
       margin-bottom: 5rem;     
       &-photo {
