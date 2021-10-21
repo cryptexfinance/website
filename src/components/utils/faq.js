@@ -100,7 +100,7 @@ export const faq = [
   },
   {
     group_key: "ctx",    
-    group_name: "$CTX FAQ",
+    group_name: "CTX FAQ",
     questions: [
       {
         question: "What is CTX (and Cryptex as a DAO)?",
