@@ -14,7 +14,7 @@ tags:
 ---
 Cryptex (CTX) the protocol and community behind Total Crypto Market Cap token (TCAP), is constantly inspired and impressed with the creators and builders of web3. Cryptex created Space Invaders to help people get an inside look into the minds of the most important web3 creators and builders of our time. \*\*\*\*
 
-![](/img/sasssal.png)
+![](/img/sasssal.png "Anthony Sassano visited BFresh and Preston Van Loom for Cryptex's Space Invaders to share Alpha Leaks.")
 
 On October 14th, 2021, Cryptex welcomed Preston van Loon and BFresh as host, and [The Daily Gwei](https://thedailygwei.substack.com/)'s Anthony Sassano ([@sassal0x](https://twitter.com/sassal0x)) as the guest of the 7th episode of Space Invaders. Typically these episodes are recorded live on Twitter Spaces then published on YouTube and a variety of podcast platforms.
 
