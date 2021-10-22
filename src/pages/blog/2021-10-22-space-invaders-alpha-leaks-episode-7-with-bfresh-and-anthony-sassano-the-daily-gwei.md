@@ -4,7 +4,8 @@ title: "Space Invaders Alpha Leaks: Episode 7 with BFresh and Anthony Sassano
   (The Daily Gwei)"
 author: Slishyslice
 date: 2021-10-22T00:49:55.621Z
-description: dasdf
+description: Anthony Sassano shared some alpha leaks with BFresh during the
+  Space Invaders show n October 14th. Check out the recap here!
 featuredpost: true
 featuredimage: /img/sasssal.png
 tags:
