@@ -19,7 +19,7 @@ export const faq = [
         question: "TCAP includes EVERY coin and token?",
         answer:
           <div className="answer">
-            TCAP includes every coin and token supported by the following 9 oracles and 5 data providers{" "}
+            TCAP includes every coin and token supported by the following nine oracles and five data providers{" "}
             <a href="https://data.chain.link/ethereum/mainnet/indexes/mcap-usd" target="_blank">
                https://data.chain.link/ethereum/mainnet/indexes/mcap-usd.
             </a>        
