@@ -1,5 +1,5 @@
 ---
 templateKey: blog-tag
-tag: cryptex
+tag: Cryptex
 color: "#a440f2"
 ---

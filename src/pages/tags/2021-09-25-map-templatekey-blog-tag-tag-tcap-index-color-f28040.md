@@ -1,5 +1,5 @@
 ---
 templateKey: blog-tag
-tag: tcap index
-color: "#f28040"
+tag: TCAP Index
+color: "#b9602b"
 ---
