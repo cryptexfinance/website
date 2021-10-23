@@ -32,7 +32,7 @@ The TCAP Index uses the dollar value of the entire crypto market capitalization 
 
 ![](/img/defi-pulse-tcap-copy.png "90-day stats on TCAP price from DeFi Pulse.")
 
-While the TCAP Index is far from the only index being used by DeFi enthusiasts and those in the general crypto community, it makes a strong case for its inherent benefits.
+While the TCAP Index is far from the only index being used by DeFi enthusiasts, who can check TCAP stats on [DeFi Pulse](https://defipulse.com/cryptex), and those in the general crypto community, it makes a strong case for its inherent benefits.
 
 ## Governance Is Key
 
