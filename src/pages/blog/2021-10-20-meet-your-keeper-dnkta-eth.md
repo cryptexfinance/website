@@ -44,7 +44,7 @@ I think there should not be a single crypt keeper with most of the votes, we sho
 
 Besides crypto - listening and playing electronic music. Walking with my dog and enjoying time in nature.
 
-This concludes our interview with dnkta.eth. If you have any questions for them please feel free to reach out on [Twitter](%5B%3Chttps://twitter.com/dnkta%3E%5D(%3Chttps://twitter.com/dnkta%3E)) or Discord. Check out [this](%5B%3Chttps://cryptex.finance/blog/2021-10-07-how-to-use-single-side-staking-delegate-to-crypt-keepers/%3E%5D(%3Chttps://cryptex.finance/blog/2021-10-07-how-to-use-single-side-staking-delegate-to-crypt-keepers/%3E)) blog post to learn more about delegating to Crypt Keepers and CTX staking. Be sure to look out for our next Keeper interview!"
+This concludes our interview with dnkta.eth. If you have any questions for them please feel free to reach out on [Twitter](https://twitter.com/dnkta) or Discord. Check out [this](%5B%3Chttps://cryptex.finance/blog/2021-10-07-how-to-use-single-side-staking-delegate-to-crypt-keepers/%3E%5D(%3Chttps://cryptex.finance/blog/2021-10-07-how-to-use-single-side-staking-delegate-to-crypt-keepers/%3E)) blog post to learn more about delegating to Crypt Keepers and CTX staking. Be sure to look out for our next Keeper interview!"
 
 Find Matthew R. on Twitter -[https://twitter.com/Hypercrypt0](https://twitter.com/Hypercrypt0 "https\://twitter.com/Hypercrypt0")
 
