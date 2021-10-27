@@ -73,7 +73,7 @@ export const faq = [
           </div>
       },
       {
-        question: "Why would I mint TCAP over trading it? (note collateral ratio)",
+        question: "Why would I mint TCAP over trading it?",
         answer:
           <div className="answer">
             There are various strategies that can be employed when minting TCAP.Traders may use TCAP to speculate longing/ shorting the total crypto market
