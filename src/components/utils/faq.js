@@ -100,7 +100,7 @@ export const faq = [
   },
   {
     group_key: "ctx",    
-    group_name: "$CTX FAQ",
+    group_name: "CTX FAQ",
     questions: [
       {
         question: "What is CTX (and Cryptex as a DAO)?",
@@ -183,7 +183,7 @@ export const faq = [
           <div className="answer">
             The Cryptex DAO is always looking for contributors. Are you a developer, artist, writer, or looking to help in any way?
             Hop in the Cryptex Discord and send us a message{" "}
-            <a href="https://discord.gg/b8XgHYbkaN" target="_blank">https://discord.gg/b8XgHYbkaN.</a>
+            <a href="https://discord.gg/cryptex" target="_blank">https://discord.gg/cryptexs.</a>
           </div>,
       },
     ]  

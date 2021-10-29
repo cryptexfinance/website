@@ -1,12 +1,19 @@
 import React, { useContext, useState } from "react"
 import Col from "react-bootstrap/esm/Col";
-import { Accordion, AccordionContext, Button, Card, Tabs, Tab, TabContent } from "react-bootstrap";
-import { useAccordionToggle } from 'react-bootstrap/AccordionToggle';
+import { Accordion, Tabs, Tab, TabContent } from "react-bootstrap";
+import Fade from 'react-bootstrap/Fade'
 import { useBreakpoint } from 'gatsby-plugin-breakpoints';
 import Toggle from "../components/Toggle";
 import { faq } from "../../../components/utils/faq";
 
 
+const CustomFade = ({ children }) => {
+  return <Fade in={true} timeout={1000}>
+    {children}  
+  </Fade>
+}
+
+/*
 const MobileQuestionButton = ({ children, eventKey, callback }) => {
   const currentEventKey = useContext(AccordionContext);
   const decoratedOnClick = useAccordionToggle(
@@ -25,7 +32,7 @@ const MobileQuestionButton = ({ children, eventKey, callback }) => {
       {children}
     </button>
   );
-};
+};*/
 
 const SectionFaq = () => {
   const breakpoints = useBreakpoint();
@@ -82,41 +89,37 @@ const SectionFaq = () => {
         {breakpoints.smm ? (
           <Accordion className="faq-mobile">
             {faq.map((q) => {
-              return  <Card>
-                        <Card.Header>
-                          <MobileQuestionButton eventKey={q.group_key}>
-                            <div className="btn-faq-container">
-                              <div className="title">{q.group_name}</div>
-                              <div className="icon">
-                                <span>▼</span>
-                              </div>
-                            </div>  
-                          </MobileQuestionButton>
-                        </Card.Header>
-                        <Accordion.Collapse eventKey={q.group_key}>
-                          <Card.Body>{tabContent(q.questions)}</Card.Body>
-                        </Accordion.Collapse>
-                      </Card>     
+              return <Accordion.Item eventKey={q.group_key}>
+                        <Accordion.Header>{q.group_name}</Accordion.Header>
+                        <Accordion.Body>
+                          {tabContent(q.questions)}
+                        </Accordion.Body>
+                     </Accordion.Item>     
             })}
           </Accordion>
         ) : (
           <Tabs
-            id="faq-tab"
-            activeKey={tabKey}
-            onSelect={(k) => setTabKey(k)}
+           id="faq-tab"
+           fill
+           justify
+           activeKey={tabKey}
+           onSelect={(k) => setTabKey(k)}
+           transition={Fade}   
           >
             {faq.map((q) => {
-              return <Tab
-                eventKey={q.group_key}
-                tabClassName="faq-tab"
-                title={<h6>{q.group_name}</h6>}
-              >
-                <TabContent className="faq-content">
-                  {tabContent(q.questions)}
-                </TabContent>
-              </Tab>
+              return (
+                <Tab
+                  eventKey={q.group_key}
+                  tabClassName="faq-tab"
+                  title={<h6>{q.group_name}</h6>}
+                >
+                  <TabContent className="faq-content">
+                    {tabContent(q.questions)}
+                  </TabContent>
+                </Tab>
+              )
             })}
-          </Tabs>
+          </Tabs> 
         )}
       </div>
     </section>
