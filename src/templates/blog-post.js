@@ -64,7 +64,7 @@ export const BlogPostTemplate = ({
             {title}
           </h1>
           <h6 className="post-date">{date} | {author}</h6>
-          <PostContent content={buildContent()} />
+          <PostContent content={content} />
           <ShareSocial title={title}  shareSlug={slug} tags={tags} />
         </Col>
         <NextNews postIndex={postIndex} tagsColor={tagsColor} />         
