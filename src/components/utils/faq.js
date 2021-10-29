@@ -19,7 +19,7 @@ export const faq = [
         question: "TCAP includes EVERY coin and token?",
         answer:
           <div className="answer">
-            TCAP includes every coin and token supported by the following 9 oracles and 5 data providers{" "}
+            TCAP includes every coin and token supported by the following nine oracles and five data providers{" "}
             <a href="https://data.chain.link/ethereum/mainnet/indexes/mcap-usd" target="_blank">
                https://data.chain.link/ethereum/mainnet/indexes/mcap-usd.
             </a>        
@@ -73,7 +73,7 @@ export const faq = [
           </div>
       },
       {
-        question: "Why would I mint TCAP over trading it? (note collateral ratio)",
+        question: "Why would I mint TCAP over trading it?",
         answer:
           <div className="answer">
             There are various strategies that can be employed when minting TCAP.Traders may use TCAP to speculate longing/ shorting the total crypto market
@@ -183,7 +183,7 @@ export const faq = [
           <div className="answer">
             The Cryptex DAO is always looking for contributors. Are you a developer, artist, writer, or looking to help in any way?
             Hop in the Cryptex Discord and send us a message{" "}
-            <a href="https://discord.gg/cryptex" target="_blank">https://discord.gg/cryptexs.</a>
+            <a href="https://discord.gg/cryptex" target="_blank">https://discord.gg/cryptex.</a>
           </div>,
       },
     ]  

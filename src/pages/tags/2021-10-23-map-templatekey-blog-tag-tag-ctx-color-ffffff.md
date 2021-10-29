@@ -1,5 +1,5 @@
 ---
 templateKey: blog-tag
-tag: defi
-color: "#ffdef3"
+tag: CTX
+color: "#ffffff"
 ---
