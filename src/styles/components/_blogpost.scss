@@ -43,7 +43,9 @@
     margin: 3rem 0rem;
     font-weight: bold;
     strong {
-      font-weight: bolder;
+      font-family: $font-primary;
+      font-weight: 400;
+      font-size: 18px;
     }
   }
   a {

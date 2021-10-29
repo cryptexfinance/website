@@ -35,13 +35,6 @@ export const BlogPostTemplate = ({
     }
   }, []);
 
-  const buildContent = () => {
-    let newContent = content.replace(/<p><strong>/g, "<h4>");
-    newContent = newContent.replace(/<\/strong><\/p>/g, "</h4>");
-
-    return newContent;
-  }
-
   return (
     <section id="news" className="section-blogpost">
       {helmet || ''}
