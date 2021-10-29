@@ -35,13 +35,6 @@ export const BlogPostTemplate = ({
     }
   }, []);
 
-  const buildContent = () => {
-    let newContent = content.replace(/<p><strong>/g, "<h4>");
-    newContent = newContent.replace(/<\/strong><\/p>/g, "</h4>");
-
-    return newContent;
-  }
-
   return (
     <section id="news" className="section-blogpost">
       {helmet || ''}
@@ -64,7 +57,7 @@ export const BlogPostTemplate = ({
             {title}
           </h1>
           <h6 className="post-date">{date} | {author}</h6>
-          <PostContent content={buildContent()} />
+          <PostContent content={content} />
           <ShareSocial title={title}  shareSlug={slug} tags={tags} />
         </Col>
         <NextNews postIndex={postIndex} tagsColor={tagsColor} />         
