@@ -82,7 +82,7 @@ const SectionCommunity = ({ data }) => {
         Join Our Community
       </div>
       <div className="community-content">
-        <Col sm={12}  md={6} lg={6}>
+        <Col sm={12}  md={12} lg={6}>
           <div className="community-subtitle content">
             We’re on a mission to make digital assets simple, accessible, and secure.
           </div>
