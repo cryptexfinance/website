@@ -1,3 +1,4 @@
+
 .faq {
   &-row {
     position: relative;
@@ -18,6 +19,7 @@
   ul {
     padding: 0px 24px;
   }
+
   .nav-tabs {
 	display: flex;
 	flex-direction: row;
@@ -25,18 +27,19 @@
 	border-bottom: 2px solid $shadow-purple-neon-secondary !important;
   }
   &-tab {
-	display: flex;  
-    width: 25%;
+	display: flex;
 	height: 5rem;
 	margin-right: 0%;
 	padding-top: 1rem;
 	padding-bottom: 1rem;
 	border-radius: 0px;
-	background-color: rgba(29, 29, 60, 0.4);
+	background-color: rgba(29, 29, 60, 0.4) !important;
 	justify-content: center;
 	align-items: center;
+	transition: none;
 	h6 {
 	  color: $color-dark-clean;	
+	  width: 100%;
 	}
   }
   &-tab:hover {
@@ -57,6 +60,7 @@
   &-content {
 	padding-top: 30px;  
     background-color: rgba(29, 29, 60, 0.6);
+	transition: opacity 0.7s cubic-bezier(.79,.14,.15,.86) !important;
   }
   &-divider {
 	width: 36.25rem;
@@ -68,55 +72,51 @@
 	transform: matrix(-1, 0, 0, 1, 0, 0);
   }
   &-mobile {
-	.card {
-	  background-color: rgba(29, 29, 60, 0.1);
-	  &-header {
-		height: 15rem;
-		background-color: rgba(29, 29, 60, 0.8);
-		padding: 0px;
-	  }
-	  .btn-faq-group {
-		color: $color-dark-clean;
-		padding-left: 10px;
-		background-color: transparent;
-		border: none;
-		border-bottom: 1.5px solid $shadow-purple-neon-secondary;
-		font-size: 17px;
-		font-family: "Nineteen Ninety Seven";
-		text-align: left;
-		text-decoration: none;
-		width: 100%;
-		height: 100%;
-		box-shadow: none;
-	  }
-	  .btn-faq-group.active {
-		border-bottom: 2.5px solid $shadow-purple-neon-secondary !important;
-		text-shadow: 0.2rem -0.25rem 0.8125rem $shadow-navbar-button;
-		.icon {
-		  transform: rotate(180deg);
-		  text-align: left;
-		  padding-left: 10px;
-		}
-	  }
-	  .btn-faq-container {
-		display: flex;
-		.title {
-		  flex: 5;
-		}
-		.icon {
-		  flex: 1;
-		  text-align: right;
-		  padding-right: 10px;
-		}
-	  }
-	  &-body {
-        background-color: rgba(29, 29, 60, 0.5);  		  
-	  }
+	.accordion-item {
+	  background-color: rgba(29, 29, 60, 0.1); 	
+	}
+	.accordion-header {
+	  height: 15rem;
+	  background-color: rgba(29, 29, 60, 0.8);
+	  padding: 0px;	
+	}
+	.accordion-button {
+	  height: 100%;
+	  background-color: rgba(29, 29, 60, 0.8);
+	  font-size: 17px;	
+	  color: $color-dark-clean;
+	  padding: 1rem 2.7rem;
+	}
+	.accordion-button:focus {
+	  border-color: rgba(29, 29, 60, 0.8);
+	  box-shadow: none;	
+	}
+	.accordion-button::after {
+	  width: 15px;
+	  height: 15px;
+	  background-image: none;
+	  border: solid $color-dark-clean;
+	  border-width: 0 3px 3px 0;
+	  display: inline-block;
+	  padding: 3px;
+	  transform: rotate(45deg);
+  	  -webkit-transform: rotate(45deg);
+	}
+	.accordion-button:not(.collapsed) {
+	  border-bottom: 2px solid $shadow-purple-neon-secondary;	
+	}
+	.accordion-button:not(.collapsed)::after {
+	  transform: rotate(-135deg);
+  	  -webkit-transform: rotate(-135deg);
+	}
+	.accordion-collapse {
+	  background-color: rgba(29, 29, 60, 0.5);
 	}
   }
 }
+
 .section-faq {
-  .fade { 
-    transition: opacity 0.7s cubic-bezier(.79,.14,.15,.86) !important;
-  }
+  .fade {
+    transition: opacity .7s cubic-bezier(.79,.14,.15,.86)!important;
+  }	
 }

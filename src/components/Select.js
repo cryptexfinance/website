@@ -57,15 +57,15 @@ const customStyles = {
 const SelectCryptex = (props) => {
   return (
     <Select
-        className="select-cryptex"
-        classNamePrefix="select-cryptex"
-        isClearable={props.isClearable}
-        isMulti={props.isMulti}
-        isSearchable={props.isSearchable}
-        placeholder={props.placeholder}
-        options={props.options}
-        onChange={props.onSelectChange}
-        styles={customStyles}
+      className="select-cryptex"
+      classNamePrefix="select-cryptex"
+      isClearable={props.isClearable}
+      isMulti={props.isMulti}
+      isSearchable={props.isSearchable}
+      placeholder={props.placeholder}
+      options={props.options}
+      onChange={props.onSelectChange}
+      styles={customStyles}
     />)
 }
 

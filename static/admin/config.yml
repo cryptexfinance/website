@@ -11,6 +11,7 @@ backend:
 media_folder: static/img
 public_folder: /img
 publish_mode: editorial_workflow
+show_preview_links: true
 
 collections:
   - name: 'blog'
@@ -36,7 +37,7 @@ collections:
     create: true
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     editor:
-      preview: true
+      preview: false
     fields:
       - {label: "Template Key", name: "templateKey", widget: "hidden", default: "blog-tag"}
       - {label: "Tag", name: "tag", widget: "string"}
