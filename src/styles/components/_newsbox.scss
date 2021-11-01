@@ -155,13 +155,16 @@
       }
     }
     .newsitem {
-      margin-bottom: 3.5rem;
+      margin-bottom: 4rem;
       &-info {
         width: 60%;
-        padding: 0rem 1.2rem;
+        padding: 0rem 1rem 0rem 3rem;
+      }
+      .imglink{
+        width: 40%;
       }
       &-photo {
-        width: 35%; 
+        width: 100%; 
         height: auto; 
       }
       &-tagbox{
@@ -218,6 +221,9 @@
       &-info {
         width: 90%;
         padding: 2rem 0rem;
+      }
+      .imglink{
+       width: 90%; 
       }
       &-photo {
         width: 90%; 
@@ -287,7 +293,7 @@
       font-size: 1.5rem;
     }
     &__option {
-      font-size: 1.5rem;
+      font-size: 1.7rem;
     }
   }
   @media only screen and (max-device-width: 600px) {

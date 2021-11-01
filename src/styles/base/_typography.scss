@@ -75,6 +75,7 @@ h1 {
   letter-spacing: 0.3px;
   text-align: justify;
   color: $color-grey;
+  word-wrap: break-word;
 
   a {
     color: $color-grey;
@@ -222,65 +223,64 @@ h1 {
 		justify-content: flex-start;
 		padding-bottom: 1rem;
 		order: 1;
-	}
-	&-title {
+  }
+  &-title {
 		padding: 1rem 0rem 2rem 0rem;
 		letter-spacing: 0.3px;
+  }
+  &-content {
+	padding: 2rem 0rem;
+	width: 26.8125rem;
+	font-family: $font-tertiary;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 1rem;
+	line-height: 1.375rem;
+	text-align: left;
+	letter-spacing: 0.3px;
+	color: $color-grey;
+  }
+  &-img-container {
+	display: flex;
+	justify-content: center;
+	order: 2;
+  }
+  &-image {
+	width: 23.1875rem;
+	height: 23.809375rem;
+  }
+  &-details {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-evenly;
+	padding-top: 0.5rem;
+	padding-bottom: 0.5rem;
+	order: 3;
+
+	&-item {
+		padding: 1rem 0rem 1rem 0rem;
 	}
-	&-content {
-		padding: 2rem 0rem;
-		width: 26.8125rem;
-		font-family: $font-tertiary;
+	&-icons {
+		margin-right: 1rem;
+		filter: drop-shadow(0 0 0.25rem #6450FB);
+	}	
+	&-text {
+		font-family: $font-primary;
 		font-style: normal;
 		font-weight: normal;
-		font-size: 1rem;
-		line-height: 1.375rem;
-		text-align: left;
+		font-size: 1.25rem;
+		line-height: 1.5rem;
+		display: flex;
+		align-items: center;
 		letter-spacing: 0.3px;
 		color: $color-grey;
-	}
-	&-img-container {
-		display: flex;
-		justify-content: center;
-		order: 2;
-	}
-	&-image {
-		width: 23.1875rem;
-		height: 23.809375rem;
-	}
-	&-details {
-		display: flex;
-		flex-direction: column;
-		justify-content: space-evenly;
-		padding-top: 0.5rem;
-		padding-bottom: 0.5rem;
-		width: 22.375rem;
-		order: 3;
-
-		&-item {
-			padding: 1rem 0rem 1rem 0rem;
-		}
-		&-icons {
-			margin-right: 1rem;
-			filter: drop-shadow(0 0 0.25rem #6450FB);
-		}	
-		&-text {
-			font-family: $font-primary;
-			font-style: normal;
-			font-weight: normal;
-			font-size: 1.25rem;
-			line-height: 1.5rem;
-			display: flex;
-			align-items: center;
-			letter-spacing: 0.3px;
-			color: $color-grey;
-			text-shadow: 0rem 0.25rem 0.8125rem #A440F2;
-			&:hover {
-				color: $color-dark-clean;
-				text-decoration: none;
-			}
+		text-shadow: 0rem 0.25rem 0.8125rem #A440F2;
+		&:hover {
+			color: $color-dark-clean;
+			text-decoration: none;
 		}
 	}
+   }
 }
 
 .governance {

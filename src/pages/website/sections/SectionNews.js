@@ -24,7 +24,7 @@ const SectionNews = (props) => {
       allMarkdownRemark(
         sort: { order: DESC, fields: [frontmatter___date] }
         filter: { frontmatter: { templateKey: { eq: "blog-post" } } }
-        limit: 42 
+        limit: 54 
       ) {
         edges {
           node {
@@ -120,7 +120,7 @@ const SectionNews = (props) => {
     if (indexOf >= 0) {
       return(
         <div className={Math.ceil((indexOf + 1) / itemsPerPage) == activePage + 1 ? "newsitem" : "newsitem hide"} key={node.id}>
-          <a href={postUrl(node)} target="_top" rel="noreferrer">
+          <a className="imglink" href={postUrl(node)} target="_top" rel="noreferrer">
             <img src={node.frontmatter.featuredimage.childImageSharp.fluid.src} className="newsitem-photo" alt="News" />
           </a>  
           <div className="newsitem-info">
