@@ -8,6 +8,11 @@ description: Co-founder and CEO Joe Sticco, a lifelong trader and investment
   blockchain development.
 featuredpost: true
 featuredimage: /img/joe-team-blog-post.jpg
+tags:
+  - interview
+  - cryptex finance
+  - tcap
+  - blog
 ---
 Weekly, Cryptex will interview one of the core team members involved in building the world's first Total Crypto Market Cap Token (TCAP). This week, co-founder and CEO Joe Sticco, a lifelong trader and investment manager, shares his vision of combining Wall Street with world-class blockchain development. Read on to learn about how the Cryptex team came together, Joe's favorite community meme, and more.
 
