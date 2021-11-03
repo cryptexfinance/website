@@ -8,11 +8,11 @@ description: Upon the launch of Single Side CTX Staking, Cryptex rolled out the
   protocol, users must select a delegator when staking. Crypt Keepers are
   responsible for actively viewing and participating in governance proposals.
   This is a big responsibility! We decided to host a series of interviews on
-  each Crypt Keeper to help the community make informed decisions. The first
-  edition of this series features our Keeper Indigo. We asked Indigo a series of
-  questions on their background, experience, and vision for Cryptex.
+  each Crypt Keeper to help the community make informed decisions. This edition
+  of our series features our Keeper Leo. We asked Leo a series of questions on
+  their background, experience, and vision for Cryptex.
 featuredpost: true
-featuredimage: /img/2.png
+featuredimage: /img/leo-meet-your-delegator.png
 tags:
   - Crypt Keepers
   - CTX
@@ -20,34 +20,34 @@ tags:
   - TCAP Index
   - blog
 ---
-Upon the launch of Single Side CTX Staking, Cryptex rolled out the Crypt Keeper delegator program. In an effort to further decentralize the protocol, users must select a delegator when staking. Crypt Keepers are responsible for actively viewing and participating in governance proposals. This is a big responsibility! We decided to host a series of interviews on each Crypt Keeper to help the community make informed decisions. This edition of our series features our Keeper Indigo. We asked Indigo a series of questions on their background, experience, and vision for Cryptex.
+Upon the launch of Single Side CTX Staking, Cryptex rolled out the Crypt Keeper delegator program. In an effort to further decentralize the protocol, users must select a delegator when staking. Crypt Keepers are responsible for actively viewing and participating in governance proposals. This is a big responsibility! We decided to host a series of interviews on each Crypt Keeper to help the community make informed decisions. This edition of our series features our Keeper Leo. We asked Leo a series of questions on their background, experience, and vision for Cryptex.
 
 **What is your background?**
 
-I am a Security Engineer by trade at a top tech company. I'm also a huge crypto hobbyist and like to perform security audits of smart contracts and blockchain company OpSec for fun and profit. I love to learn about blockchains and DeFi in my free time and have been active in the space for almost a year now. I have been following Cryptex since its inception.
+* I am a software engineer building a layer one public blockchain.
 
 **What's your experience working with DAOs?**
 
-Cryptex is the first project that I have seriously gotten involved with through a DAO. I've been active in other project communities but haven't been passionate about a DAO until Cryptex.
+* I have participated in several DAOs focusing on NFT investment, and Defi products.
 
 **What about Cryptex excites you the most?**
 
-I love the talent and philosophy of the core team. What excites me most, though, is the idea of bringing an easily accessible crypto-index to the masses. I think a lot of people are more passive investors and just throw their savings into index funds. These are people that crypto misses, and TCAP makes it possible to passively invest in the whole space for people who know nothing about it.
+* I love the synthetic asset sectors. The S&P500 for all crypto market cap is so cool. Also, the fair launch is the key to bootstrap the community and supporters of the project. That’s the key spirit of a blockchain project.
 
 **What is the future you see for Cryptex?**
 
-It's hard to say what direction we will take. I expect to see TCAP become a major player in the token space because it is such a solid token that I think everyone can easily get behind. I believe people will invest in TCAP just as they have invested in the S&P 500, and Cryptex products will be a huge target for more passive investors that crypto generally has a hard time attracting.
+* I see Cryptex can expand to other synthetic assets not only on TCAP but also sectors like the DeFi sector, NFT sector, or even more like S&P500, NASDAQ, etc. Cryptex can be a strong protocol of all kinds of synthetic assets by working with the Chainlink oracle.
 
 **In your view, what are the most important developments that should be prioritized?** 
 
-Expansion to L2 networks (Polygon, Arbitrum, Optimism, etc.), listing on more exchanges, and development of more oracle-pegged tokens. Expansion requires liquidity, so I feel it is really important to continue to incentivize liquidity providers and adopters of TCAP and CTX. I think we also need to reduce the barrier to entry of minting TCAP (decreasing minimum collateral requirements, utilizing locked collateral for yield farming opportunities, accepting more tokens as collateral).
+* There are two things we need to consider. One is to increase the adoption of the TCAP product in the DeFi world, such as using it as collateral for lending protocol. Another one is to increase the TVL of Cryptex and the liquidity of TCAP.
 
 **Why should people choose you as their crypt keeper?**
 
-People should choose me if they feel strongly aligned with my core vision for Cryptex. I think it is healthier to distribute votes evenly among crypt keepers, though. Consider delegating to smaller crypt keepers so no one crypt keeper gets too big.
+* First of all, I love this project and took part in it since the testnet. Second, I worked in the crypto industry for a few years so that I am very familiar with various crypto projects, including L1/L2, DeFi, and NFT. I would like to contribute my time and ideas to help grow and improve the project. Third, I have a strong connection with a large global Chinese crypto community, which provided me with a diversified view to help the project outreach to more community members.
 
 **What is a hobby of yours?**
 
-I am an avid musician and love to learn to play new instruments. I mostly play piano and guitar and love to challenge myself with new music. I also like playing video games and have an extensive collection of mechanical keyboards. I like birbs. 🐦
+* I love long-distance running, and hiking/backpacking
 
-This concludes our interview with Indigo, if you have any questions for them please feel free to reach out on Discord: Indigo#3132. Check out [this](https://cryptex.finance/blog/2021-10-07-how-to-use-single-side-staking-delegate-to-crypt-keepers/) blog post to learn more about delegating to Crypt Keepers and CTX staking. Be sure to look out for our next Keeper interview!
+This concludes our interview with Leo, if you have any questions for them please feel free to reach out on Discord: lc#4331. Check out [this](https://cryptex.finance/blog/2021-10-07-how-to-use-single-side-staking-delegate-to-crypt-keepers/) blog post to learn more about delegating to Crypt Keepers and CTX staking. Be sure to look out for our next Keeper interview!
