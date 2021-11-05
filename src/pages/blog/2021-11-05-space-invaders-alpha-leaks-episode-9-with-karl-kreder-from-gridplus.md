@@ -13,7 +13,8 @@ tags:
 ---
 ![Space Invaders Alpha Leaks #9 with Karl Kreder from GridPlus](/img/space-invaders-9.png "Space Invaders Alpha Leaks #9 with Karl Kreder from GridPlus")
 
-Cryptex (CTX) the protocol and community behind Total Crypto Market Cap token (TCAP), is constantly inspired and impressed with the creators and builders of web3. Cryptex created Space Invaders to help people get an inside look into the minds of the most important web3 creators and builders of our time.
+Cryptex (CTX) the protocol and community behind Total Crypto Market Cap token (TCAP), is constantly inspired and impressed with the creators and builders of web3. Cryptex created Space Invaders to help people get an inside look into the minds of the most important web3 creators and builders of our time.\
+
 Typically these episodes are recorded live on Twitter Spaces then published on YouTube and a variety of podcast platforms.
 
 On October 29th, 2021 Cryptex welcomed BFresh as our host. Cryptex featured Karl Kreder and Nate as our guests for the ninth episode of Space Invaders. Karl Kreder is the cofounder of GridPlus, and Nate is an GridPlus engineer.
@@ -34,7 +35,7 @@ After I got a job working for a Consensus, in early 2017, I got set up with Alex
 
 **Nate**: Last year I came across GridPlus, and I saw what was going on and I thought this is something I can really get behind. So I ended up with the job here, I'm working on the Phonon project, which is something very interesting.
 
-**BFresh**: That's cool. And I guess, furthering the conversation, as long as it's not too much alpha that you guys will leak on the Phonon, what are you working on ?
+**BFresh**: That's cool. And I guess, furthering the conversation, as long as it's not too much alpha that you guys will leak on the Phonon, what are you working on?
 
 **Karl**: Well, I'll leave it loose. Phonon is actually a super interesting thing. So basically it's a hardware and forced off chain, scalable payments solution. So what it basically does is it allows you to securely and privately transfer keys between smart cards.
 
