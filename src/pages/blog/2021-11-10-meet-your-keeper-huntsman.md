@@ -12,7 +12,7 @@ description: Upon the launch of Single Side CTX Staking, Cryptex rolled out the
   of our series features our Keeper Huntsman. We asked Huntsman a series of
   questions on their background, experience, and vision for Cryptex.
 featuredpost: true
-featuredimage: /img/20210405_thescoop_preston_joe_vitalik_francis_square-675x675.jpg
+featuredimage: /img/huntsman-interview.jpg
 tags:
   - Crypt Keepers
   - CTX
@@ -50,4 +50,4 @@ Upon the launch of Single Side CTX Staking, Cryptex rolled out the Crypt Keeper 
 
 * My hobbies include strategy games, gardening, making public comments at city council meetings, and getting out and into nature as often as possible.
 
-This concludes our interview with Leo, if you have any questions for them please feel free to reach out on Discord: Huntsman202#2502. Check out [this](https://cryptex.finance/blog/2021-10-07-how-to-use-single-side-staking-delegate-to-crypt-keepers/) blog post to learn more about delegating to Crypt Keepers and CTX staking. Be sure to look out for our next Keeper interview!
+This concludes our interview with Huntsman. If you have any questions for them, please feel free to reach out on Discord: Huntsman202#2502. Check out [this](https://cryptex.finance/blog/2021-10-07-how-to-use-single-side-staking-delegate-to-crypt-keepers/) blog post to learn more about delegating to Crypt Keepers and CTX staking. Be sure to look out for our next Keeper interview!
