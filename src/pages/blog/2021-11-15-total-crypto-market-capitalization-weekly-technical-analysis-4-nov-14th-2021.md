@@ -4,7 +4,8 @@ title: Total Crypto Market Capitalization - Weekly Technical Analysis (#4 - Nov
   14th, 2021)
 author: ScalpMaster21
 date: 2021-11-15T00:27:59.890Z
-description: fdgh
+description: Total Crypto Market Capitalization - Weekly Technical Analysis (#4
+  - Nov 14th, 2021)
 featuredpost: true
 featuredimage: /img/tanalysis.png
 tags:
