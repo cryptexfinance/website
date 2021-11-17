@@ -3,10 +3,9 @@ templateKey: blog-post
 title: Meet the Team - Cris
 author: Cristian Espinoza
 date: 2021-11-17T13:44:30.321Z
-description: Cris -- Smart Contract Developer certified by ConsenSys, Coffee
-  Lover & Prev. Devcon Scholar at Ethereum Foundation, and Leader of the
-  Honduras Ethereum Community -- shares his background and his role in
-  development at Cryptex.
+description: This week, Blockchain Developer Cris - a Coffee Lover, Prev. Devcon
+  Scholar at Ethereum Foundation, and Leader of the Honduras Ethereum Community
+  - shares his background and his role in development at Cryptex.
 featuredpost: true
 featuredimage: /img/cris-meet-the-team.jpg
 tags:
@@ -15,7 +14,7 @@ tags:
   - tcap
   - blog
 ---
-Weekly, Cryptex will interview one of the core team members involved in building the world's first Total Crypto Market Cap Token (TCAP). This week, Blockchain Developer Cris, a Coffee Lover, Prev. Devcon Scholar at Ethereum Foundation, and Leader of the Honduras Ethereum Community, shares his background and his role in development at Cryptex. Read on to learn about how Cris got into crypto, Cris's favorite community meme, and more.
+Weekly, Cryptex will interview one of the core team members involved in building the world's first Total Crypto Market Cap Token (TCAP). This week, Blockchain Developer Cris - a Coffee Lover, Prev. Devcon Scholar at Ethereum Foundation, and Leader of the Honduras Ethereum Community - shares his background and his role in development at Cryptex. Read on to learn about how Cris got into crypto, Cris's favorite community meme, and more.
 
 **"What did you do before Cryptex?"**
 
