@@ -10,7 +10,6 @@ featuredimage: /img/pool-together-alpha-copy.jpg
 tags:
   - Alpha leaks
   - Interview
-  - ""
 ---
 ![](/img/pool-together-alpha-copy.jpg "Alpha Leaks from Pool Together's Leighton Cusak")
 
