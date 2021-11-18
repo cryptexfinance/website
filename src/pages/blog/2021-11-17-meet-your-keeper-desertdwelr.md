@@ -7,12 +7,12 @@ description: CTX holders now have the privilege of staking their tokens to
   delegate representatives - or Crypt Keepers - to make governance votes on
   their behalf. This series helps you get more familiar with the Crypt Keepers.
 featuredpost: true
-featuredimage: /img/3.png
+featuredimage: /img/desertdwelr-keeper.jpg
 tags:
   - Crypt Keepers
   - Cryptex
 ---
-![](/img/3.png "DesertDwelr - Crypt Keeper")
+![](/img/desertdwelr-keeper.jpg "DesertDwelr - Crypt Keeper")
 
 **What is your name?**
 
