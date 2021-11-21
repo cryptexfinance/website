@@ -11,6 +11,7 @@ featuredimage: /img/tanalysis.png
 tags:
   - cryptex finance
   - TCAP
+  - TCAP Index
 ---
 Hello Everyone,
 
@@ -30,7 +31,7 @@ TA is simply deriving the events that we think have the highest probability of o
 
 ![TCAP 2-Day Chart 11-21-2021](/img/11-21-2-day-chart.jpg "TCAP 2-Day Chart 11-21-2021")
 
-**Analysis:** This week I've chosen to start with the 2 Day chart rather than the 1 Day. The 50 2D SMA (blue line) seems to be a visually clear level of support. Exactly as we anticipated in last week's analysis, this week we saw a dip to the support levels of $2.4T - $2.6T before recovering back and hitting **Resistance 1** around the $2.7T level.
+**Analysis:** This week I've chosen to start with the 2-Day chart rather than the 1-Day. The 50 2D SMA (blue line) seems to be a visually clear level of support. Exactly as we anticipated in last week's analysis, this week we saw a dip to the support levels of $2.4T - $2.6T before recovering back and hitting **Resistance 1** around the $2.7T level.
 
 Looking at the chart from a long-term view from left to right, after the crash in May 2021, price consolidation, and the eventual market recovery back from ~$1.4T total capitalization (TCAP) to $2.5T TCAP - Over $1.1 trillion worth of recovery. We saw **Dip #1** in this uptrend from $2.5T back down to around $1.8T at the lowest - around $700M worth. After bottoming out, we saw the next leg up in this uptrend to a new ATH of exactly $3T TCAP. We had predicted a topping off at the $3T price level as it represented a significant round number for the market. Looking at the size of the past dip, we predicted a new dip worth around $500M-700M TCAP and saw clear support at $2.4T.
 
@@ -64,9 +65,9 @@ However, if the price does not cross **Resistance 1**, we will look for a break 
 
 ![TCAP Monthly Chart 11-21-2021](/img/11-21-monthly-chart.jpg "TCAP Monthly Chart 11-21-2021")
 
-**Analysis:** As we are expecting more consolidation this upcoming week from the previous two charts, and looking at the monthly chart as it is now, I expect our current monthly candle (C) to resemble candle A by the time it closes.
+**Analysis:** As we are expecting more consolidation this upcoming week from the previous two charts, and looking at the monthly chart as it is now, I expect our current monthly candle **C** to resemble candle **A** by the time it closes.
 
-As I am bullish on the extended timeframe of the market I expect next month's candle (D) to resemble candle B as a long green candle with a topping tail at $3.5T TCAP. After that, we could see the next crash as it will represent the 2nd large up-leg of the uptrend on the monthly chart, but that is just early speculation.
+As I am bullish on the extended timeframe of the market I expect next month's candle **D** to resemble candle **B** as a long green candle with a topping tail at $3.5T TCAP. After that, we could see the next crash as it will represent the 2nd large up-leg of the uptrend on the monthly chart, but that is just early speculation.
 
 ### Monthly Indicators:
 
