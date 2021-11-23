@@ -10,8 +10,8 @@ featuredimage: /img/zombomeme_22112021122656.jpg
 tags:
   - TCAP
   - StackUp
-  - GDLC
-  - Grayscale
+  - DEGEN
+  - Indexed.finance
 ---
 Does the sheer number of different cryptocurrencies make your head spin? Or perhaps keeping track of the taxable events while rebalancing your portfolio and having to shell out for gas fees has you down? Enter crypto index tokens: offering broad crypto exposure, savings on gas fees, and automatic rebalancing - all to make your investing journey easier. However, as always in crypto, there's more than one option to choose from; let's dig into the [DEGEN Index (DEGEN)](https://indexed.finance/), by Indexed, and [Total Crypto Market Cap Token (TCAP)](https://cryptex.finance/) to see how they stack up.
 
