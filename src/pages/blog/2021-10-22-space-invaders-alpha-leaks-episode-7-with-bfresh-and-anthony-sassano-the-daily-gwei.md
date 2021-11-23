@@ -10,7 +10,6 @@ featuredpost: true
 featuredimage: /img/sasssal.png
 tags:
   - TCAP
-  - StackUp
 ---
 Cryptex (CTX) the protocol and community behind Total Crypto Market Cap token (TCAP), is constantly inspired and impressed with the creators and builders of web3. Cryptex created Space Invaders to help people get an inside look into the minds of the most important web3 creators and builders of our time. \*\*\*\*
 
