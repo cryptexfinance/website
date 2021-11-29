@@ -5,8 +5,8 @@ author: Matz
 date: 2021-11-29T21:04:51.105Z
 description: "You have ETH that you want to be stored in a safe place, and have
   the ability to utilize a portion of it to generate yield. If you want to use a
-  correlated broad market token, instead of a stablecoin or altcoin, what better
-  way to do that than depositing your ETH and borrowing TCAP? "
+  correlated, broad market index token, instead of a stablecoin or altcoin, what
+  better way to do that than depositing your ETH and borrowing TCAP? "
 featuredpost: true
 featuredimage: /img/theborrooooower.png
 tags:
@@ -28,41 +28,27 @@ There are plenty of great use cases for borrowing a stablecoin for yield generat
 
 ![](/img/eth1yr.png "1 Year ETH chart")
 
-
-
 This is quite different when you deposit ETH to borrow TCAP. Since ETH makes up a large portion of the market cap, but not as large as BTC, ETH and TCAP move closer to one another, with ETH beating the overall market in most cases. During times of drawdowns, the assets are moving in the same direction, at a similar velocity, which allows for less time spent worrying about the collateral ratio. As you can see with the 1 Year chart, ETH has performed close or better than the total market:
 
 ![](/img/eth1yrvstcap.png "1 Year ETH and TCAP chart")
-
-
 
 Borrowing an altcoin with your ETH is even more challenging compared to a stablecoin or TCAP. You'd need the conviction that the ETH you deposit as collateral will grow faster than the altcoin you borrow. If not, you'll have to continue to add ETH to avoid getting liquidated. This 1 Year chart of UNI vs ETH is a good example. UNI exploded in comparison to ETH, you would have to keep adding ETH to cover the UNI you borrowed!
 
 ![](/img/eth1yrtcapuni.png "1 Year ETH, TCAP and UNI")
 
-
-
 Let's use another altcoin example, this time we will look at what happens when ETH does grow faster than the altcoin you borrow. In the 1 Year chart we'll use LINK as the example. Since ETH grew faster than LINK, I do not have to worry about adding more ETH to avoid liquidations. However, once I borrow the LINK what do I do with it? You can deposit it directly into a lending protocol but in most cases, it won't earn more than what you are paying to borrow it. Your options to use LINK itself are limited. Or you'd sell LINK, but what would you sell the LINK for? Another asset you assume will grow faster than LINK.
 
 ![](/img/eth1yrtcaplink.png "1 Year ETH, TCAP and LINK")
 
-
-
 Depositing ETH as collateral and borrowing TCAP, is a way to borrow an asset that moves very close to one another (because of its market cap weight) and also gives you the ability to borrow broad exposure to the entire market. If you think a coin/token will grow faster than the total market cap, you can borrow TCAP and sell it for a coin/token you think would outpace the total market, like a few examples here in the 1 Year chart:
 
 ![](/img/eth1yrmany.png "1 Year ETH and others")
-
-
-
-
 
 ### WE CALL THESE STRATEGIES:
 
 **The Windoooor**
 
 Deposit ETH > Borrow TCAP > Sell TCAP for ETH > Repeat Process
-
-
 
 **The VvvvvvvvCeeeeeee**
 
@@ -72,43 +58,29 @@ Deposit ETH > Borrow TCAP > Sell TCAP for an altcoin
 
 If you don't want to go long another asset vs TCAP, you can sell TCAP for ETH and put that ETH directly in yield generating opportunities. Some options in DeFi include (Please note, all APYs were quoted at the time of writing):
 
-
-
 **The LP Farmoooor**
 
 Deposit ETH > Borrow TCAP > Sell 50% of TCAP for ETH > Deposits 50% ETH / 50% TCAP into SushiSwap LP > Stake LP token
-
-
 
 Why do this?
 
 Earn LP fees (1% APY) & CTX staking rewards (31% APY)
 
-
-
 **The Ribbon Vaultoooor**
 
 Deposit ETH > Borrow TCAP > Sell 100% of TCAP for ETH > Deposits ETH into Ribbon covered call options vaults.
-
-
 
 Why do this?
 
 Earn Variable APY (10.48% APY) using covered call options vaults.
 
-
-
 **The Insurooor**
 
 Deposit ETH > Borrow TCAP > Sell 100% of TCAP for ETH > Deposit 100% of ETH into Unslashed
 
-
-
 Why do this?
 
 Earn variable APY for underwriting and collecting premium (11.42% APY)
-
-
 
 **The Hoppooooor**
 
@@ -122,9 +94,7 @@ Earn variable APY (9% APY) for bridging L2's and mainnet
 
 ### LAST REMARKS:
 
-You have ETH that you want to be stored in a safe place, and have the ability to utilize a portion of it to generate yield. If you want to use a correlated broad market token, instead of a stablecoin or altcoin, what better way to do that than depositing your ETH and borrowing TCAP?
-
-
+You have ETH that you want to be stored in a safe place, and have the ability to utilize a portion of it to generate yield. If you want to use a correlated broad market index token, instead of a stablecoin or altcoin, what better way to do that than depositing your ETH and borrowing TCAP?
 
 ### LINKS:
 
@@ -135,8 +105,6 @@ You can borrow TCAP here: [](https://app.cryptex.finance/vault)<https://app.cryp
 Chat with the Cryptex community on Discord: [](https://discord.gg/cryptex)<https://discord.gg/cryptex>
 
 Stay up to date with announcements on Twitter: [](https://twitter.com/cryptexfinance)<https://twitter.com/cryptexfinance>
-
-
 
 ### DISCLAIMER:
 
