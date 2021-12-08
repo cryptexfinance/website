@@ -15,7 +15,7 @@ tags:
   - tcap
   - blog
 ---
-Weekly, Cryptex will interview one of the core team members involved in building the world's first Total Crypto Market Cap Token (TCAP). This week, Blockchain Developer Cris - a Coffee Lover, Prev. Devcon Scholar at Ethereum Foundation, and Leader of the Honduras Ethereum Community - shares his background and his role in development at Cryptex. Read on to learn about how Cris got into crypto, Cris's favorite community meme, and more.
+Weekly, Cryptex will interview one of the core team members involved in building the world's first Total Crypto Market Cap Token (TCAP). This week, Prysmatic Labs co-founder Preston Van Loon shares his background and his role in development at Cryptex. His time leading blockchain developers at Prysmatic and receiving a $2M grant from the Ethereum Foundation gives him valuable insight into how to make Cryptex a world-class project.
 
 **"What did you do before Cryptex?"**
 
