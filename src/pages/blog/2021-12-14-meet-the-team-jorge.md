@@ -8,7 +8,7 @@ description: Full Stack developer with more than seven years of experience using
   holds a M.S. in Computer Science degree, also he published a paper on the 2015
   IEEE International Conference on Big Data.
 featuredpost: true
-featuredimage: /img/jorge-meme-copy.png
+featuredimage: /img/jorge-cryptex.jpg
 tags:
   - interview
   - tcap
