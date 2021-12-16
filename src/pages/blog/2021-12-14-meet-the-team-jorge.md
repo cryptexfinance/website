@@ -16,7 +16,7 @@ tags:
 ---
 **"What did you do before Cryptex?"**
 
-I was working at a local company in Honduras. The main product was EP software. I was a full-stack developer there and I used to develop APIs and design databases. Last year I was developing some mobile apps and also I started work with Cris on Affogato. That was my full-time job, I was working on other projects too.
+I was working at a local company in Honduras. The main product was ERP software. I was a full-stack developer there and I used to develop APIs and design databases. Last year I was developing some mobile apps and also I started work with Cris on Affogato. That was my full-time job, I was working on other projects too.
 
 **"What is your role at Cryptex?"**
 
