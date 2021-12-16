@@ -3,7 +3,7 @@ templateKey: blog-post
 title: "How to mint TCAP on Optimism  Testnet "
 author: Cryptex
 date: 2021-12-15T23:31:39.566Z
-description: This is a tutorial on how to mint TCAP tokens on Optimism Testnet
+description: This is a tutorial on how to mint TCAP tokens on Optimism Testnet.
 featuredpost: true
 featuredimage: /img/tcap-optimism.png
 tags:
