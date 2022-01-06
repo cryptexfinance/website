@@ -43,4 +43,4 @@ I don’t know, there's just so many strange things. I craft, I literally have t
 
 **"What's the best Cryptex meme you've seen?"**
 
-https://www.youtube.com/watch?v=T3WDXj9qwRE
+![](/img/mtt-james-copy.png)
