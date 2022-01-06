@@ -11,7 +11,7 @@ description: A multifaceted media producer, James brings two decades of
   entertainment industry, the question isn't 'can it be done', its 'what's your
   budget'.
 featuredpost: true
-featuredimage: /img/1.jpeg
+featuredimage: /img/james-mtt-copy.jpg
 tags:
   - Interview
   - TCAP
