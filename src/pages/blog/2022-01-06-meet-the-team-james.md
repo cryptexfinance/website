@@ -42,3 +42,5 @@ We have a little more flexibility as far as what we can put in the videos or wha
 I don’t know, there's just so many strange things. I craft, I literally have to keep my hands busy. I cannot stay still. I have to keep busy yesterday. I made like 30 candles last night. I bought an e-bike a couple of years ago and I was deep in that rabbit hole. I was working on it every day. I took the thing apart twice, I took every screw out of that bike. Took everything apart multiple times. I just need to keep my hands busy.
 
 **"What's the best Cryptex meme you've seen?"**
+
+https://www.youtube.com/watch?v=T3WDXj9qwRE
