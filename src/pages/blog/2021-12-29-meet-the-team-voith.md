@@ -14,7 +14,7 @@ tags:
 ---
 **"What did you do before Cryptex?"**
 
-I was working at a company called Opus. I was the lead engineer there. Opus is trying to make healthcare or benefits available at cheaper rates for freelancers. I also did a bit of payroll automation or stuff like that. Yeah. So I was a lead engineer there.
+I was working at a company called Opolis. I was the lead engineer there. Opolis is trying to make healthcare or benefits available at cheaper rates for freelancers. I also did a bit of payroll automation or stuff like that. Yeah. So I was a lead engineer there.
 
 **"What is your role at Cryptex?"**
 
