@@ -7,6 +7,8 @@ import twitter from '../../../../static/website/community/twitter.svg';
 import medium from '../../../../static/website/community/medium.svg';
 import youtube from '../../../../static/website/community/youtube.svg';
 import telegram from '../../../../static/website/community/telegram.svg';
+import facebook from '../../../../static/website/community/facebook.svg';
+import stocktwits from '../../../../static/website/community/stocktwits.svg';
 import community from '../../../../static/website/community/community.webp';
 import addToMailchimp from 'gatsby-plugin-mailchimp';
 import toasty from "../../../../static/toasty.png";
@@ -100,6 +102,10 @@ const SectionCommunity = ({ data }) => {
                 <img src={twitter} className="community-item-icon" alt="Twitter" />
                 <div className="community-item-text terciary-header">Twitter</div>
               </a>
+              <a href="https://www.facebook.com/groups/889684121923268/?ref=share" rel="noreferrer" target="_blank" className="community-item">
+                <img src={facebook} className="community-item-icon" alt="Facebook" />
+                <div className="community-item-text terciary-header">Facebook</div>
+              </a>
             </div>
             <div className="community-icons-row">
               <a href="https://medium.com/cryptexfinance" rel="noreferrer" target="_blank" className="community-item">
@@ -113,6 +119,10 @@ const SectionCommunity = ({ data }) => {
               <a href="https://www.youtube.com/channel/UCdN17zdr5MCDph75srdhutQ" rel="noreferrer" target="_blank" className="community-item">
                 <img src={youtube} className="community-item-icon" alt="Youtube" />
                 <div className="community-item-text terciary-header">Youtube</div>
+              </a>
+              <a href="https://stocktwits.com/symbol/CTX.X" rel="noreferrer" target="_blank" className="community-item">
+                <img src={stocktwits} className="community-item-icon" alt="Stocktwits" />
+                <div className="community-item-text terciary-header">Stocktwits</div>
               </a>
             </div>
           </div>
