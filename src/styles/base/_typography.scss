@@ -534,6 +534,9 @@ h1 {
   &-icons {
     margin-bottom: 2rem;
     margin-left: -3rem;
+    &-container {
+      margin-left: -15px;
+    }
     &-row {
       position: relative;
       display: flex;
@@ -544,6 +547,7 @@ h1 {
   &-item {
     display: flex;
     text-decoration: none !important;
+    width: 25%;
 
     &:hover {
       text-shadow: 0 0 80px $shadow-purple-neon, 0 0 70px $shadow-purple-neon,
