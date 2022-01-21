@@ -1,0 +1,141 @@
+{
+  "title": {
+    "line1": "The World's First",
+    "line2": "Total Crypto Market Cap Token"
+  }, 
+  "subtitle": "Total Crypto Market Capitalization",
+  "go-to-app": "Go to App",
+  "what-is": {
+    "title": "What is TCAP?",
+    "description": "TCAP gives holders real-time price exposure to total cryptocurrency market cap. It's a new, 200% fully backed, fully collateralized asset that’s both audited and accurately representative of the entire cryptocurrency complex by total market capitalization.",
+    "whitepaper": "Whitepaper",
+    "code": "Code",
+    "oracles": "Oracles",
+    "audit": "Audit"
+  },
+  "how-to": {
+    "title": "How to Use TCAP",
+    "mint": "Mint",
+    "mint2": "Create and approve a vault, add collateral and begin minting TCAP.Create and approve a vault, add collateral and begin minting TCAP.",
+    "trade": "Trade",
+    "trade2": "Buy and sell TCAP on Sushiswap.",
+    "pool": "Pool",
+    "pool2": "Provide liquidity to TCAP pairs on Sushiswap and earn a portion of the trading fees.",
+    "farm": "Farm",
+    "farm2": "Earn CTX Rewards for minting TCAP tokens and Staking TCAP LP tokens."
+  },
+  "governance": {
+    "title": {
+      "line1": "Introducing CTX:",
+      "line2": "Decentralized Governance"
+    },
+    "subtitle": "CTX is a governance token that powers and secures the Cryptex protocol. Holders of CTX can vote on protocol upgrades for TCAP as well as all  future products within the Cryptex ecosystem.",
+    "ctx": "CTX Token",
+    "voting": "Voting",
+    "documentation": "Documentation",
+    "forum": "Forum"
+  },
+  "team": {
+    "title": "Team",
+    "subtitle": "Building the investments of tomorrow, today.",
+    "joe1": "Co-Founder & CEO",
+    "joe2": "A lifelong trader and investment manager, Joseph brings immense knowledge of traditional market structure to the project. He founded Cryptex Finance with the vision of combining Wall Street with world class blockchain development in building state of the art investment solutions for tomorrow.",
+    "preston1": "Co-Founder & Blockchain Lead",
+    "preston2": "Preston is a co-founder of Prysmatic Labs and leads a team of dedicated blockchain developers in building critical layer one scaling solutions for Ethereum 2.0. Since January 2018, Preston and team have received nearly $2MM in grant funding to pursue these efforts from the Ethereum Foundation, Vitalik Buterin, Ethereum Community Fund, and many other community members.",
+    "cris1": "Blockchain Developer",
+    "cris2": "Smart Contract Developer certified by ConsenSys, Coffee Lover & Prev. Devcon Scholar at Ethereum Foundation. Leader of the Honduras Ethereum Community.",
+    "tom1": "Co-Founder & CBO",
+    "tom2": "Thomas has led planning, branding and marketing initiatives at world class companies and startups. He has taken high volume and celebrity endorsed products from concept to launch with an omnichannel strategy. Thomas' passion is building brands with bold visions of leaving a legacy.",
+    "jorge1": "Full Stack Developer",
+    "jorge2": "Full Stack developer with more than seven years of experience using technologies like react, react native, python, postgreSQL, among others. Jorge holds a M.S. in Computer Science degree, also he published a paper on the 2015 IEEE International Conference on Big Data.",
+    "cullen1": "Graphic Designer",
+    "cullen2": "Writer, Director, and VFX Artist, who's done VFX for shows like Man in the High Castle, Room 104, and Silicon Valley. Born and raised in the Midwest, Cullen always had a passion for movies and storytelling. After years of studying to be a doctor, he abandoned that dream for another and moved to Hollywood. SCUBA diver, adventure seeker, and salsa dancer.",
+    "james1": "Media Production",
+    "james2": "A multifaceted media producer, James brings two decades of experience in content creation to the team. As a musician, sound designer, audio engineer, event organizer, and meme page administrator, James is always nurturing his creative instincts and dreaming up interesting ways to tell a story. With a vast network of cohorts, spanning all spectrums of the entertainment industry, the question isn't 'can it be done', its 'what's your budget'.",
+    "oliver1": "Music Production",
+    "oliver2": "Most likely cuddling with your girlfriend or wife when he isn't making beats.",
+    "brendan1": "Brand Manager",
+    "brendan2": "Brendan builds and nurtures a DeFi community with a passion for education and social media development. A blockchain enthusiast, he is skilled in video editing, enjoys music, and pursues photography.",
+    "zak1": "Advisor",
+    "zak2": "Co-Founder and CTO, Slingshot. Zak serves as technical advisor to several blockchain related companies such as DeFi Pulse and the Syscoin foundation. Previously Zak founded Whiteblock, which specialized in blockchain protocol testing, research and development.",
+    "don1": "Advisor",
+    "don2": "Co-Founder and Managing Director, Quantstamp. Don is an investor and entrepreneur with global perspectives and cross functional experiences supporting investments, product, and growth. Don previously worked at IDG Ventures and PNP Ventures where he helped launch Nexla, Ayasdi, and the Los Angeles Football Club."
+  },
+  "news": {
+    "title": "News",
+    "subtitle": "Building the investments of tomorrow, today.",
+    "search": "Search",
+    "filter": "Filter",
+    "checkt-it": "Check it out"
+  },
+  "faq": {
+    "title": "FAQ",
+    "subtitle": "Common questions we are asked.",
+    "what-is": {
+      "title": "What is TCAP?",
+      "q1": "Is TCAP live yet?",
+      "a1": "TCAP is live! You can use TCAP by visiting app.cryptex.finance. We recommend you give our testnet a spin first to get familiar with the protocol by visiting {{url}}",
+      "q2": "TCAP includes EVERY coin and token?",
+      "a2": "TCAP includes every coin and token supported by the following nine oracles and five data providers {{url}}",
+      "q3": "Who is TCAP for?",
+      "a3": "TCAP is for users that want to speculate in the total cryptocurrency market by buying a token that is the representation of the entire market. It’s also for DeFi users that want to earn fees by minting TCAP tokens and adding liquidity on decentralized exchanges or taking advantage of arbitrage opportunities.",
+      "q4": "Is TCAP decentralized?",
+      "a4": "TCAP uses Developer Keys to pause deposits and minting in case of a bug to protect users, this can only be activated once per vault. To change protocol parameters a governance token CTX is used in combination with a Timelock contract.TCAP uses Developer Keys to pause deposits and minting in case of a bug to protect users, this can only be activated once per vault. To change protocol parameters a governance token CTX is used in combination with a Timelock contract.",
+      "q5": "Where can I get TCAP?",
+      "a5": "TCAP is available to be minted on the Cryptex app, or traded on Sushiswap. TCAP is also available on Gemini for custody."
+    },
+    "how-work": {
+      "title": "How does TCAP work?",
+      "q1": "Is TCAP audited?",
+      "a1": "Yes! TCAP is audited by Quantstamp, the leader in blockchain security. See {{url}}",
+      "q2": "What is TCAP backed by?",
+      "a2": "Each TCAP is collateralized by more than 150% corresponding amount of ETH or DAI.",
+      "q3": "How is TCAP pegged to the price of total crypto market cap?",
+      "a3": "TCAP uses Chainlink oracles which enables Cryptex to aggregate multiple data points from the top crypto data providers in the world, bringing that data on chain using Ethereum smart contracts.",
+      "q4": "Why would I mint TCAP over trading it?",
+      "a4": "There are various strategies that can be employed when minting TCAP.Traders may use TCAP to speculate longing/ shorting the total crypto market cap. Remember when minting TCAP that there is a 150 % minimum collateral ratio to prevent users from getting liquidated.",
+      "q5": "Why is the TCAP market price different from the oracle price?",
+      "a5": "The Cryptex protocol is able to control the price to which TCAP is minted at, but not for what it sells at on the secondary market. The team is currently building Vaults V2 which will help keep TCAP closer to its peg.",
+      "q6": "Are there any fees?",
+      "a6": "There are no fees for buying, selling, or holding TCAP on the secondary market. There are also no fees for minting new TCAP within the Cryptex protocol, however there is a 1% burn fee which goes towards funding future Cryptex DAO activities."
+    },
+    "ctx-faq": {
+      "title": "CTX FAQ",
+      "q1": "What is CTX (and Cryptex as a DAO)?",
+      "a1": "CTX is an ERC20 token powering the Cryptex protocol.The Cryptex protocol is a DAO specializing in bringing traditional assets to the decentralized world. You can vote on DAO proposals with the CTX token.",
+      "q2": "Who is CTX for?",
+      "a2": "CTX is for anyone wishing to participate in governance for the Cryptex DAO. Holders can vote on and create proposals.",
+      "q3": "Where can I find CTX?",
+      "a3": "CTX is currently available on Gemini and Sushiswap for trading.",
+      "q4": "What's the total supply of CTX, and how much is in circulation?",
+      "a4": {
+        "line1": "CTX has a max supply of 10,000,000. Of the max supply, the circulating supply is reduced by:",
+        "line2": "The time-locked Founder's Fund.",
+        "line3": "Initial Protocol Incentives.",
+        "line4": "Furthermore, a maximum 2% supply inflation is hardcoded into the protocol, which, in the case of a black swan event, is available only by governance proposals. For more information, please see the detailed breakdown of the circulating supply available on CoinGecko."
+      }
+    },
+    "cryptex-faq": {
+      "title": "Cryptex FAQ",
+      "q1": "Is there a whitepaper?",
+      "a1": "Yes! See {{url}}",
+      "q2": "Did Joe really pitch the Winklevoss twins?",
+      "a2": "People ask all the time how we got on Gemini; Joe just tells them: Well, I was eating pizza in the west village in 2019, the twins ran by me, I chased them 6 blocks and pitched them in the middle of the street. I lost half a slice that day, it was like 95 out and I had to run my ass off because those two “jog” like I run. Thankfully the light turned red. They were very polite and cordial. Asked if I had a card, I said no I was just eating pizza. They gave me someone on their team to email and it went from there for 2 years.",
+      "q3": "How did the team meet?",
+      "a3": "The story involves hiding out in the basement of a deli gathering intel as part of an investigation, but we don't want to spoil it... check out TCAP's backstory on {{url}}",
+      "q4": "When did the team start building TCAP?",
+      "a4": "We started building Cryptex in October of 2018, and launched it on April 8th, 2021.",
+      "q5": "What is Cryptex's mission?",
+      "a5": "The mission of Cryptex is to get TCAP, CTX, and any subsequent launches that we have, into the hands of as many people around the world as we can. We want to do that safely, we want to do that securely, and we want to do that on a trustless basis. That’s something that we work for every minute of every day accomplishing as a decentralized community.",
+      "q6": "How can I work with Cryptex?",
+      "a6": "The Cryptex DAO is always looking for contributors. Are you a developer, artist, writer, or looking to help in any way? Hop in the Cryptex Discord and send us a message {{ur}}"
+    }
+  },
+  "community": {
+    "title": "Join Our Community",
+    "subtitle": "We’re on a mission to make digital assets simple, accessible, and secure.",
+    "in-touch": "Stay in Touch",
+    "email": "Email",
+    "subscribe": "Subscribe" 
+  } 
+}

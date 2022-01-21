@@ -74,7 +74,6 @@ const SectionNews = (props) => {
       setFilteredBlogKeys(bKeys);
       setTagList(tList.sort(sortAlpha));      
     } else {
-      console.log("Error with props in team");
       console.log(dataq);
     }
   }, [dataq]);
