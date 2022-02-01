@@ -30,7 +30,7 @@ TA is simply deriving the events that we think have the highest probability of o
 
 ## Daily Chart
 
-
+![](/img/daily-chart-2-1.png)
 
 **Analysis:** Starting the daily chart’s analysis with a clean slate and only support lines which I’ve drawn in green, and resistance lines that I’ve added in red. From last week’s analysis we pinpointed the areas of highest resistance to be between $1.76T - $1.82T TCAP. I’ve seen a lot of people saying that the bottom of the market is in. While it always looks cool to be pre-emptive and call something before it happens, technically ‘the bottom’ can’t be identified until the price puts in a new higher-high and higher-low than the previous one. In this case, the market would have to exceed the previous high of $2.1T and then put in a dip that does not go under $1.5T before recovering. At that point we can safely say that there is evidence & proof that this is the bottom, until then we will continue to expect the market to follow the trend which it has been taking, which in this case is a down-trend.
 
@@ -38,19 +38,23 @@ The bullish perspective that the TCAP is consolidating upwards, getting ready fo
 
 However, to me the pattern is still a longer-term down-trend that has not put in a clear bottom and is now appearing to resemble a bearish-flag pattern.
 
-Example of Bearish Flag:
+### Example of Bearish Flag:
 
-
+![](/img/bear-flag-2-1.png)
 
 This is represented by strong & significant red candles and then small-bodies consolidation candles, which consolidate upwards before a big drop. To further illustrate this, I’ve changed the settings on my TradingView account to a white background and taken a smaller side by side view of the bear-flag example above and the current daily chart.
 
+![](/img/bear-flag-2-2-1.png)
 
+...
+
+![](/img/bear-flag-3-2-1.png)
 
 As you can see, the patterns are almost identical. I think there is a strong possibility for TCAP to recover above the first resistance level of $1.76T, but the chances are it will not continue upwards from there. As the long-term trend is a down-trend, the bear-flag pattern, and the close proximity of all 3 resistance levels vs the relative larger distance between the support levels makes selling/shorting a more profitable scenario for market makers. This doesn’t mean that this is certain, but for now, this is what I believe has the highest odds of happening.
 
 ### Daily Indicators
 
-
+![](/img/daily-indicators-2-1.png)
 
 * **MACD:** Continuing upwards after a bullish cross, indicating price will continue to rise.
 * **RSI:** On an up-wards consolidation trend, but pointing sideways, could possibly suggest consolidation before drop.
@@ -58,13 +62,13 @@ As you can see, the patterns are almost identical. I think there is a strong pos
 
 ### Weekly Chart
 
-
+![](/img/weekly-chart-2-1.png)
 
 **Analysis:** I have drawn the two main points of support and resistance that I see on the weekly chart. $1.82T level here matches the second level of resistance on the daily chart. Because we have double-confirmation of resistance and daily, we can consider this the main resistance point. As you can see, $1.76T does not look like a significant resistance level on this chart, and because it is only on visible on the daily chart, I believe it will be broken on the way to hit this level of $1.82T before continuing lower. Should this happen, under $1.5T, the main level of support looks like it will be around the $1.1T level. We should also be vary wary and conscious of the possible head-and-shoulders formation that could happen if TCAP cannot the $2.4T - $2.5T level. Also, according to this chart, we cannot call a long-term bottom until TCAP has surpassed this $2.4T - $2.5T level, ruling out the possibility of a bearish pattern.
 
 ### Weekly Indicators
 
-
+![](/img/weekly-indicators-201.png)
 
 * **MACD:** Continuing lower after bearish cross, early signs of curling up which are too early to say for sure, but overall, still indicating price will continue lower.
 * **RSI:** Pointing upwards, but on a downwards trend signaling price could temporarily rise from here but continue further overall.
@@ -74,13 +78,13 @@ Mixed signals overall, which is why I think the market will rebound temporarily,
 
 ## Monthly Chart
 
-
+![](/img/monthly-chart-2-1.png)
 
 **Analysis:** The monthly chart just started as it’s the first day of the month, and as you can see the previous 3 candles have topping tails, which means they started the month by going up, and closed the month by going down. There is a topping tail on almost every monthly candle, so there will definitely be one on this one so we can safely expect the market to start the month off in the green. However, this chart presents no indication whatsoever that the downwards trend is over and the support line of $1.1T that we saw on the weekly chart is also visible here, indicating that this is a strong point of support. The most likely scenario going forward, in my eyes, is the market rising to touch $1.82T level before consolidating and finishing the month in the red on the way to the $1.1T level of support.
 
 ### Monthly Indicators
 
-
+![](/img/monthly-indicators-2-1.png)
 
 * **MACD:** Put in a bearish cross and continuing lower, indicating price will continue lower.
 * **RSI:** Pointing sideways, looking like a double-top and could put in classic under-sold to over-sold move. On a downwards trend overall.
