@@ -24,7 +24,7 @@ const SectionNews = (props) => {
       allMarkdownRemark(
         sort: { order: DESC, fields: [frontmatter___date] }
         filter: { frontmatter: { templateKey: { eq: "blog-post" } } }
-        limit: 70 
+        limit: 70
       ) {
         edges {
           node {

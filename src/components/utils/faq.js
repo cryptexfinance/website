@@ -62,7 +62,7 @@ export const faq = [
       },
       {
         question: "What is TCAP backed by?",
-        answer: <div className="answer">Each TCAP is collateralized by more than 150% corresponding amount of ETH or DAI.</div>
+        answer: <div className="answer">Each TCAP is collateralized by more than 150% corresponding amount of ETH, DAI, AAVE or LINK.</div>
       },
       {
         question: "How is TCAP pegged to the price of total crypto market cap?",
@@ -116,7 +116,7 @@ export const faq = [
       },
       {
         question: "Where can I find CTX?",
-        answer: <div className="answer">CTX is currently available on Gemini and Sushiswap for trading.</div>,
+        answer: <div className="answer">CTX is currently available on Gemini, Sushiswap and Coinbase for trading.</div>,
       },
       {
         question: "What's the total supply of CTX, and how much is in circulation?",

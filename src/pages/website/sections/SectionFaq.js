@@ -13,27 +13,6 @@ const CustomFade = ({ children }) => {
   </Fade>
 }
 
-/*
-const MobileQuestionButton = ({ children, eventKey, callback }) => {
-  const currentEventKey = useContext(AccordionContext);
-  const decoratedOnClick = useAccordionToggle(
-    eventKey,
-    () => callback && callback(eventKey),
-  );
-
-  const isCurrentEventKey = currentEventKey === eventKey;
-
-  return (
-    <button
-      type="button"
-      onClick={decoratedOnClick}
-      className={isCurrentEventKey ? "btn-faq-group active" : "btn-faq-group"}
-    >
-      {children}
-    </button>
-  );
-};*/
-
 const SectionFaq = () => {
   const breakpoints = useBreakpoint();
   const [expanded, setExpanded] = useState(0)
