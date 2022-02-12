@@ -2,7 +2,7 @@
 templateKey: blog-post
 title: How To Mint TCAP On Optimism
 author: Matz
-date: 2022-02-12T18:52:00.000Z
+date: 2022-02-12T18:59:00.000Z
 description: Instructions on how to mint new TCAP tokens on Optimism.
 featuredpost: true
 featuredimage: /img/opt.jpeg
