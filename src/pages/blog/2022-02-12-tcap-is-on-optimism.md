@@ -2,7 +2,7 @@
 templateKey: blog-post
 title: TCAP is on Optimism!
 author: Voith
-date: 2022-02-12T00:04:53.229Z
+date: 2022-02-12T19:04:00.000Z
 description: TCAP is now available for trade on the Optimism Layer-2 solution for Ethereum!
 featuredpost: true
 featuredimage: /img/tcap-optimism.png
