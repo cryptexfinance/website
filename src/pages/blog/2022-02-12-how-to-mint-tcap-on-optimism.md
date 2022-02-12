@@ -5,10 +5,12 @@ author: Matz
 date: 2022-02-12T02:52:33.542Z
 description: Instructions on how to mint new TCAP tokens on Optimism.
 featuredpost: true
-featuredimage: /img/tcap-optimism.png
+featuredimage: /img/opt.jpeg
 tags:
   - TCAP
 ---
+![](/img/opt.jpeg)
+
 Cryptex Finance provides users access to the markets of tomorrow. In an effort to get Cryptex Finance on a L2 while not sacrificing security, governance, and decentralization we've decided to begin our L2 journey on Optimism. Check out the launch blog post here:
 
 Below is a step by step guide on how to mint TCAP using ETH on Optimism. You’re also able to mint TCAP using DAI, LINK, UNI, SNX on Optimism as well, but for this guide, we are going to utilize ETH.
