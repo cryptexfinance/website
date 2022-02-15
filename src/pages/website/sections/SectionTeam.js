@@ -66,7 +66,7 @@ const teamData  =  [
     },
     {
         name: "Cullen",
-        position: "Graphic Designer",
+        position: "Video Director",
         description: "Writer, Director, and VFX Artist, who's done VFX for shows like Man in the High Castle, Room 104, and Silicon Valley. Born and raised in the Midwest, Cullen always had a passion for movies and storytelling. After years of studying to be a doctor, he abandoned that dream for another and moved to Hollywood. SCUBA diver, adventure seeker, and salsa dancer.",
         image: cullen,
         mobile_image: cullenm
