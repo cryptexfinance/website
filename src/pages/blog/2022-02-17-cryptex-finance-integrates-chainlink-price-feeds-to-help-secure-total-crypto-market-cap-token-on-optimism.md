@@ -12,6 +12,8 @@ tags:
   - TCAP
   - Cryptex Finance
 ---
+![Cryptex-Chainlink](/img/image0.jpg "Cryptex-Chainlink")
+
 We’re excited to announce that [Cryptex Finance](https://cryptex.finance/)—an open-source financial instrument for the global crypto community—has integrated [Chainlink Price Feeds](https://data.chain.link/) on Optimism mainnet. By integrating the industry-leading decentralized oracle network, Cryptex Finance has access to high-quality, tamper-proof price feeds needed to help secure the minting of TCAP, a token tracking the total crypto market capitalization. This will provide our users with stronger assurances that TCAP is always referencing high-quality price data.
 
 Our initial integration involves the use of the [Total Marketcap/USD](https://docs.chain.link/docs/optimism-price-feeds/) Chainlink Price Feed on Optimism. We chose Chainlink as our go-to oracle solution because its infrastructure is seamless to integrate and time-tested in production. Chainlink already helps secure leading [DeFi](https://chain.link/education/defi) protocols responsible for tens of billions of dollars in smart contract value, maintaining robust security and high availability even amidst unexpected events, such as exchange downtime, flash crashes, and [data manipulation attacks via flash loans](https://blog.chain.link/flash-loans-and-the-importance-of-tamper-proof-oracles/). 
