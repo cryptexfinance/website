@@ -17,7 +17,7 @@ tags:
   - TCAP
   - blog
 ---
-**Weekly, Cryptex Finance will interview one of the core team members involved in building the world's first Total Crypto Market Cap Token (TCAP). This week, Voith shares his background and his role in development at Cryptex.**
+**Weekly, Cryptex Finance will interview one of the core team members involved in building the world's first Total Crypto Market Cap Token (TCAP). This week, James shares his background and his role in development at Cryptex.**
 
 **"What did you do before Cryptex?"**
 
