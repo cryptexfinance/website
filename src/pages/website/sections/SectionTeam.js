@@ -52,7 +52,7 @@ const teamData  =  [
     },
     {
         name: "Thomas Matzner",
-        position: "Co-Founder & CBO",
+        position: "Co-Founder & Brand Lead",
         description: "Thomas has led planning, branding and marketing initiatives at world class companies and startups. He has taken high volume and celebrity endorsed products from concept to launch with an omnichannel strategy. Thomas' passion is building brands with bold visions of leaving a legacy.",
         image: tom,
         mobile_image: tomm
