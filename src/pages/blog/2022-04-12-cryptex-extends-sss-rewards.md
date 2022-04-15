@@ -1,9 +1,9 @@
 ---
 templateKey: blog-post
-title: Cryptex Extends SSS Rewards
+title: Cryptex Extends SSS Rewards + LP Rewards
 author: Cryptex
-date: 2022-04-12T20:36:36.396Z
-description: Cryptex Extends SSS Rewards
+date: 2022-04-15T16:01:01.795Z
+description: Cryptex Extends SSS Rewards + LP Rewards
 featuredpost: true
 featuredimage: /img/thumbnail_staking.jpeg
 tags:
