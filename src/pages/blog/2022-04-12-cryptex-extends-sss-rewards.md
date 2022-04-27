@@ -12,13 +12,17 @@ tags:
   - TCAP
   - Index
 ---
+![](/img/thumbnail_staking.jpeg)
+
+By Cryptex
+
 Since October 7th, 2021, Cryptex has incentivized Single-Sided CTX staking with CTX rewards. We are happy to announce that we are extending CTX SSS today, April 12th, 2022 with 12,655 CTX. It’s important to remember that these rewards are streamed per block and contain no lockup. These rewards are sourced from the team multi-sig, which now contains a balance of (444,059 CTX), with the balance of our treasury (5,045,094 CTX) fully locked up and subject to DAO vote before ever being accessed.
 
 Starting today, April 12, 2022, CTX Single-Sided staking has been extended for 3 months. Here are the details:
 
 • SINGLE SIDE STAKING IS NOW LIVE WITH 12,655 CTX ADDED TO THE POOL FOR STAKING, ZERO LOCKUP, REWARDS 100% PER BLOCK BASIS FOR 3 MONTHS, 7-DAY MINIMUM STAKING PERIOD. BEGINS TUESDAY APRIL 12TH.
 
-In keeping with our DAO's mission of TCAP and CTX reaching the hands of the world in a fully decentralized manner, the core team will not be operating as Crypt Keepers (protocol delegates) and rewards this task to members of our community. When users stake CTX, they delegate it to Crypt Keepers.
+In keeping with our DAO's mission of TCAP and CTX reaching the hands of the world in a fully decentralized manner, the core team will not be operating as Crypt Keepers (protocol delegates) and rewards this task to members of our community. When users stake CTX, they delegate to Crypt Keepers.
 
 You can find the full list of Crypt Keepers here: [](https://app.cryptex.finance/governance)<https://app.cryptex.finance/governance>
 
@@ -29,10 +33,14 @@ Reminder that:
 
 With a minimum of 400,000 CTX staked to the new Single Side Staking System and the extension of ETH/TCAP and ETH/CTX liquidity pools, our community has the power to continue earning CTX rewards, at the same time they can delegate voting to members of our community to pass the proposals needed for the DAO to continue to thrive.
 
-**In addition to extending SSS rewards, we’ve also extended the Sushiswap TCAP/WETH LP rewards. Here are the details:**
+In addition to extending SSS rewards, we’ve also extended the Sushiswap TCAP/WETH LP rewards. Here are the details:
 
 * STARTING APRIL 15TH, 2022, 26,038 CTX HAVE BEEN ADDED AS REWARDS FOR THE TCAP/WETH SUSHISWAP LIQUIDITY POOL. THESE REWARDS WILL STREAM FOR 3 MONTHS ON A PER-BLOCK BASIS, WITH NO LOCKUP.
 * NEW TCAP POOL TO BE ANNOUNCED SHORTLY 👀
+
+We’ve also extended the Sushiswap CTX/WETH LP rewards. Here are the details:
+
+* STARTING APRIL 27TH, 2022, 13,348 CTX HAVE BEEN ADDED AS REWARDS FOR THE CTX/WETH SUSHISWAP LIQUIDITY POOL. THESE REWARDS WILL STREAM FOR 3 MONTHS ON A PER-BLOCK BASIS, WITH NO LOCKUP.
 
 We look forward to continuing this journey together.
 
@@ -44,7 +52,7 @@ Any views expressed in this post represent the sole analysis of Cryptex, (“Cry
 
 CRYPTEX IS A FAIR LAUNCH PROTOCOL
 
-1. NO ICO
-2. NO VC FUNDING
-3. NO PRE-SALE
-4. CTX TOKENS ARE REWARDED AND ARE NEVER PURCHASED FROM CRYPTEX.
+1. 1. NO ICO
+2. 2. NO VC FUNDING
+3. 3. NO PRE-SALE
+4. 4. CTX TOKENS ARE REWARDED AND ARE NEVER PURCHASED FROM CRYPTEX.
