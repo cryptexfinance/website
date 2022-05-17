@@ -121,7 +121,9 @@ const SectionNews = (props) => {
       return(
         <div className={Math.ceil((indexOf + 1) / itemsPerPage) == activePage + 1 ? "newsitem" : "newsitem hide"} key={node.id}>
           <a className="imglink" href={postUrl(node)} target="_top" rel="noreferrer">
-            <img src={node.frontmatter.featuredimage.childImageSharp.fluid.src} className="newsitem-photo" alt="News" />
+            {node.frontmatter.featuredimage.childImageSharp !== null && (
+              <img src={node.frontmatter.featuredimage.childImageSharp.fluid.src} className="newsitem-photo" alt="News" />
+            )}  
           </a>  
           <div className="newsitem-info">
             <div className="newsitem-tag-items">
