@@ -6,7 +6,7 @@ date: 2022-05-17T03:59:09.259Z
 description: Today, we announce the launch of Cryptex Tower, the next phase in
   the World’s First Total Crypto Market Cap Token, TCAP.
 featuredpost: true
-featuredimage: /img/introducing-cryptex-tower.jfif
+featuredimage: /img/introducing-cryptex-tower.png
 tags:
   - TCAP
   - Cryptex Finance
