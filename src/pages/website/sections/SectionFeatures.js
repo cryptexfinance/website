@@ -26,7 +26,7 @@ const SectionFeatures = () => {
               <Col className="features-box-trade">
                 <img src={trade} className="features-icons" alt="Trade" />
                 <div className="features-subtitle heading-secondary">Trade</div>
-                <p className="features-content content">Buy and sell TCAP on Sushiswap.</p>
+                <p className="features-content content">Buy and sell TCAP on Uniswap.</p>
               </Col>
             </a>
           </Col>
@@ -35,7 +35,7 @@ const SectionFeatures = () => {
               <Col className="features-box-pool">
                 <img src={pool} className="features-icons" alt="Pool" />
                 <div className="features-subtitle heading-secondary">Pool</div>
-                <p className="features-content content">Provide liquidity to TCAP pairs on Sushiswap and earn a portion of the trading fees.</p>
+                <p className="features-content content">Provide liquidity to TCAP pairs on Uniswap and earn a portion of the trading fees.</p>
               </Col>
             </a>
           </Col>

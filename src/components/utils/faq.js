@@ -44,7 +44,7 @@ export const faq = [
       },
       {
         question: "Where can I get TCAP?",
-        answer: <div className="answer">TCAP is available to be minted on the Cryptex app, or traded on Sushiswap. TCAP is also available on Gemini for custody.</div>
+        answer: <div className="answer">TCAP is available to be minted on the Cryptex app, or traded on Uniswap. TCAP is also available on Gemini for custody.</div>
       },
     ]  
   },
