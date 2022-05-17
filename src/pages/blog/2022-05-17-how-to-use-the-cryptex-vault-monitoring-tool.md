@@ -16,7 +16,7 @@ tags:
 
 Since our launch in April of 2021, Cryptex vault operators have maintained healthy collateral ratios. However, our community has expressed interest in making vaults more visible and liquidations easier. We’re happy to introduce these upgrades in our new Cryptex Vault Monitoring Tool, enabling users to view the health of the protocol & individual vaults plus liquidating undercollateralized vaults in a few clicks. Here’s how you can use it:
 
-1. Head to \[LINK]
+1. Head to the [Vault Monitoring Tool](https://app.cryptex.finance/vault-monitoring).
 2. Here, you can see a list of *all* TCAP vaults. On the top of the list, you can see a list of vault filters. You can filter by collateral type, vault type or between all/your vaults. If you want to look for liquidation opportunities, you can filter under status to “Liquidation.”
 
 ![](/img/v1.png)
