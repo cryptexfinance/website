@@ -6,7 +6,7 @@ date: 2022-05-17T03:57:56.178Z
 description: We’re happy to introduce these upgrades in our new Cryptex Vault
   Monitoring Tool.
 featuredpost: true
-featuredimage: /img/how-to-use-the-cryptex-vault-monitoring-tool.jfif
+featuredimage: /img/how-to-use-the-cryptex-vault-monitoring-tool.png
 tags:
   - TCAP
   - Cryptex Finance
