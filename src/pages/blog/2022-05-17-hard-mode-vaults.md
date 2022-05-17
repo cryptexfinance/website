@@ -6,7 +6,7 @@ date: 2022-05-17T03:51:10.073Z
 description: Cryptex “Hard Mode” vaults are now live! Hard mode vaults allow for
   more TCAP to be minted with posted collateral.
 featuredpost: true
-featuredimage: /img/hard-mode-vaults.jfif
+featuredimage: /img/hard-mode-vaults.png
 tags:
   - TCAP
   - Cryptex Finance
