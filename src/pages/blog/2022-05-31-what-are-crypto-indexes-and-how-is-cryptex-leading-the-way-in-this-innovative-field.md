@@ -1,11 +1,10 @@
 ---
 templateKey: blog-post
-title: What are Crypto Indexes and how is Cryptex leading the way in this
-  innovative field?
+title: Crypto indexes and market volatility
 author: RaphizZ
 date: 2022-05-31T21:18:41.933Z
-description: "Like traditional indexes, a crypto index tracks a specific asset
-  class, in that case: cryptocurrencies."
+description: What are Crypto Indexes and how is Cryptex leading the way in this
+  innovative field?
 featuredpost: true
 featuredimage: /img/stock-market-forex-trading-graph-graphic-concept.png
 tags:
