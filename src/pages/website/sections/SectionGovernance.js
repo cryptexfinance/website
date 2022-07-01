@@ -110,6 +110,7 @@ const SectionGovernance = () => {
         {breakpoints.smm && (
           <div
             id="crypto-widget-CoinList"
+            data-transparent="true"
             data-theme="dark"
             data-design="modern"
             data-coin-ids="4784"
