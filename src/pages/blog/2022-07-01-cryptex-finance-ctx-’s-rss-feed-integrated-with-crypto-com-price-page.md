@@ -3,10 +3,10 @@ templateKey: blog-post
 title: CRYPTEX FINANCE (CTX)’s RSS FEED INTEGRATED WITH CRYPTO.COM PRICE PAGE
 author: Tom Matzner
 date: 2022-07-01T16:06:55.837Z
-description: Through Crypto.com’s Cryptex Finance (CTX) Price Page, you can now
-  directly access Cryptex Finance’s RSS news feed. This feature will enable
-  Crypto.com users to obtain the latest news and updates on Cryptex Finance, a
-  leader in synthetic assets.
+description: Through Crypto.com’s Cryptex Finance (CTX) Price
+  Page, you can now directly access Cryptex Finance’s RSS news feed. This feature will 
+  enable Crypto.com users to obtain the latest news and updates on Cryptex Finance, 
+  a leader in synthetic assets.
 featuredpost: true
 featuredimage: /img/cryptex_cryptocom-min.jpeg
 tags:
@@ -24,7 +24,7 @@ Crypto.com users can stay on top of the latest updates regarding Cryptex Finance
 
 Cryptex is laser-focused on building innovative, open-source financial products for the global Crypto community. Using Ethereum’s smart contract system, Cryptex is able to build decentralized synthetics such as Total Market Cap Index Token and many more others soon to come. Pairing real-world data supplied on the Ethereum blockchain alongside collateralized backings for generating innovative new tokens, we’re introducing DeFi products that were previously not possible without a centralized custodian or manager. Now, Cryptex Finance is providing the framework for decentralized financial products that offer exposure to more than just BTC, ETH, and other DeFi tokens.
 
-You can keep up with Cryptex on [Twitter](http://www.twitter.com/cryptexfinance), [Telegram](https://t.me/cryptexfinance), and [Discord](https://discord.com/invite/cryptex). You can access the technical documentation, whitepaper, and Quantstamp audit by visiting the [Cryptex website](https://cryptex.finance/)
+You can keep up with Cryptex on [Twitter](http://www.twitter.com/cryptexfinance), [Telegram](https://t.me/cryptexfinance), and [Discord](https://discord.com/invite/cryptex). You can access the technical documentation, whitepaper, and Quantstamp audit by visiting the [Cryptex website](https://cryptex.finance/).
 
 ## **About Crypto.com**
 
