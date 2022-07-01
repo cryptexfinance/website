@@ -321,10 +321,17 @@ h1 {
     height: 25.0605rem;
   }
 
+  &-ctx-price {
+    height: 100%;
+    width: 100%;
+    padding-left: 4rem;
+    margin-top: -1.5rem;
+  }
+
   &-details {
     display: flex;
 		flex-direction: column;
-		justify-content: space-evenly;
+		justify-content: space-between;
 		padding-top: 0.5rem;
 		padding-bottom: 0.5rem;
 		order: 3;

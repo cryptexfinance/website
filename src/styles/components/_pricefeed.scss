@@ -1,0 +1,44 @@
+.price-feed {
+  position: fixed;
+  background-color: rgb(2, 30, 63);
+  padding: 1rem;
+  width: 32rem;
+  z-index: 1;
+  bottom:0;
+  right:0;
+  &-hide {
+    display: none;
+  }
+  .title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .btn {
+      background-color: transparent;
+      border-color: transparent;
+    }
+  }
+  
+  h5 {
+    color: white;
+  }
+  @media only screen and (max-device-width: 1290px) {
+    height: 20rem;
+    width: 35rem;
+  }
+  @media only screen and (max-device-width: 500px) {
+    height: 57rem;
+    width: 100%;
+    h5 {
+      font-size: 4rem;  
+    }
+    .title {
+      .btn {
+        font-size: 4rem;    
+      }  
+    }
+  }
+}
+.css-199ifvl {
+  background-color: #212138 !important;
+}

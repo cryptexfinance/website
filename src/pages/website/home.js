@@ -42,17 +42,16 @@ const Home = (data) => {
 
   return (
     <>
-      <header id="home" className="section-main">
-        <SectionMain />
-      </header>
+      <header id="home" className="section-main" />
       <main>
+        <SectionMain />
         <SectionAbout />
         <SectionFeatures />
         <SectionGovernance />
         <SectionTeam />
         <SectionNews tagsColor={tagsColor} />
         <SectionFaq />
-        <SectionCommunity />
+        <SectionCommunity />        
       </main>
     </>
   )
