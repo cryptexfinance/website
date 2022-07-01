@@ -1,7 +1,7 @@
 ---
 templateKey: blog-post
 title: CRYPTEX FINANCE (CTX)’s RSS FEED INTEGRATED WITH CRYPTO.COM PRICE PAGE
-author: Tom Matzer
+author: Tom Matzner
 date: 2022-07-01T16:06:55.837Z
 description: Through Crypto.com’s Cryptex Finance (CTX) Price
   Page, you can now directly access Cryptex Finance’s RSS news feed. This feature will 
