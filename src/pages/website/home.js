@@ -8,7 +8,6 @@ import SectionTeam from './sections/SectionTeam';
 import SectionNews from './sections/SectionNews';
 import SectionFaq from './sections/SectionFaq';
 import SectionCommunity from './sections/SectionCommunity';
-import PriceFeed from "./components/PriceFeed";
 
 const Home = (data) => {
   const [tagsColor, setTagsColor] = useState([]);
@@ -45,7 +44,6 @@ const Home = (data) => {
     <>
       <header id="home" className="section-main" />
       <main>
-        <PriceFeed />
         <SectionMain />
         <SectionAbout />
         <SectionFeatures />

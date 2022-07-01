@@ -16,7 +16,6 @@ const PriceFeed = () => {
       </div>  
       <div
         id="crypto-widget-CoinList"
-        transparent="true"
         data-theme="dark"
         data-design="modern"
         data-coin-ids="4434,4784"

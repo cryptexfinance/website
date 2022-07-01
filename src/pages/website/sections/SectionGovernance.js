@@ -1,5 +1,6 @@
-import React from 'react'
+import React from "react";
 import Col from "react-bootstrap/esm/Col";
+import { useBreakpoint } from "gatsby-plugin-breakpoints";
 import governance from '../../../../static/website/governance/governance.png'
 import coinGecko from '../../../../static/website/governance/coin-gecko.svg'
 import sushiLogo from '../../../../static/website/governance/sushi-logo.svg'
@@ -12,7 +13,8 @@ import voting from '../../../../static/website/governance/voting.svg'
 
 
 const SectionGovernance = () => {
-
+  const breakpoints = useBreakpoint();
+    
   return (
     <section id="governance" className="section-governance">
       <Col xs={12} sm={12} md={6} lg={4} className="governance-info">
@@ -24,23 +26,35 @@ const SectionGovernance = () => {
         </div>
         <div className="governance-buttons">
             <a href="https://www.coingecko.com/en/coins/cryptex-finance" rel="noreferrer" target="_blank">
-                <img src={coinGecko} className="governance-icon gecko" alt="Coin Gecko" />
+              <img src={coinGecko} className="governance-icon gecko" alt="Coin Gecko" />
             </a>
             <a href="https://analytics.sushi.com/pairs/0x2a93167ed63a31f35ca4788e2eb9fbd9fa6089d0" rel="noreferrer" target="_blank">
-                <img src={sushiLogo}  className="governance-icon uni" alt="Uni Logo" />
+              <img src={sushiLogo}  className="governance-icon uni" alt="Uni Logo" />
             </a>
             <a href="https://defipulse.com/cryptex" rel="noreferrer" target="_blank">
-                <img src={dfpLogo} className="governance-icon dfp" alt="DFP"  />        
+              <img src={dfpLogo} className="governance-icon dfp" alt="DFP"  />        
             </a>
             <a href="https://www.gemini.com/prices/cryptex?utm_source=cryptex&utm_medium=link&utm_campaign=web_referral" rel="noreferrer" target="_blank">
-                <img src={geminiLogo} className="governance-icon gemini" alt="gemini logo" /> 
-            </a>
-        </div>
+              <img src={geminiLogo} className="governance-icon gemini" alt="gemini logo" /> 
+            </a>                  
+        </div>            
       </Col>
       <Col xs={12} sm={12} md={12} lg={5} className="governance-img-container" >
-        <div className="governance-image">            
-          <img src={governance} alt="Governance" className="governance-image" />
-        </div>
+        {breakpoints.smm ? (
+          <div className="governance-image">
+            <img src={governance} alt="Governance" className="governance-image" />
+          </div>
+        ) : (
+          <div className="governance-ctx-price">
+            <div
+              id="crypto-widget-CoinTicker"
+              data-transparent="true"
+              data-theme="dark"
+              data-design="modern"
+              data-coin-ids="4784"
+            />
+          </div>  
+        )}
       </Col>
       <Col xs={12} sm={12} md={6} lg={3} className="governance-details">
         <div className="governance-details">
@@ -93,6 +107,14 @@ const SectionGovernance = () => {
                 </a>  
             </div>
         </div>
+        {breakpoints.smm && (
+          <div
+            id="crypto-widget-CoinList"
+            data-theme="dark"
+            data-design="modern"
+            data-coin-ids="4784"
+          />
+        )}
       </Col> 
     </section>
   )
