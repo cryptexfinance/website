@@ -166,5 +166,80 @@ module.exports = {
         queries: CustomMediaQueries,
       },
     },
+    {
+      resolve: "gatsby-plugin-feed",
+      options: {
+        query: `
+          {
+            site {
+              siteMetadata {
+                title
+                description
+                siteUrl
+                site_url: siteUrl
+                image
+              }
+            }
+          }
+        `,
+        feeds: [
+          {
+            title: "Cryptex Finance News Feed",
+            feed_url: "https://cryptex.finance/news-rss.xml",
+            site_url: "https://cryptex.finance",
+            image_url: "https://raw.githubusercontent.com/cryptexglobal/website/main/static/website/home/main.webp",
+            output: "news-rss.xml",
+            query: `
+            {
+              allMarkdownRemark(
+                sort: { order: DESC, fields: [frontmatter___date] }
+                filter: { frontmatter: { templateKey: { eq: "blog-post" } } }
+              ) {
+                nodes {
+                  id
+                  excerpt(pruneLength: 400)
+                  fields {
+                    slug
+                  }
+                  frontmatter {
+                    title
+                    author
+                    description
+                    templateKey
+                    date(formatString: "MMMM DD, YYYY")
+                    tags
+                    featuredimage {
+                      childImageSharp {
+                        fluid(maxWidth: 600) {
+                          src
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+            `,
+            serialize: ({ query: { site, allMarkdownRemark } }) => {
+              return allMarkdownRemark.nodes.map(node => {
+                return Object.assign({}, {
+                  title: node.frontmatter.title,
+                  description: node.frontmatter.description,
+                  author: node.frontmatter.author,
+                  date: node.frontmatter.date,
+                  url: `${site.siteMetadata.siteUrl}${node.fields.slug}`,
+                  guid: `${site.siteMetadata.siteUrl}${node.fields.slug}`,
+                  custom_elements: [
+                    { "tags": node.frontmatter.tags.join(",") },
+                    { "image_url": `${site.siteMetadata.siteUrl}${node.frontmatter.featuredimage.childImageSharp.fluid.src}` },
+                    { "content:encoded": node.html }
+                  ],
+                })
+              })
+            },
+          }
+        ]
+      }
+    }
   ],
 }
