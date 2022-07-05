@@ -222,7 +222,11 @@ module.exports = {
             `,
             serialize: ({ query: { site, allMarkdownRemark } }) => {
               return allMarkdownRemark.nodes.map(node => {
-                return Object.assign({}, node.frontmatter, {
+                return Object.assign({}, {
+                  title: node.frontmatter.title,
+                  description: node.frontmatter.description,
+                  author: node.frontmatter.author,
+                  date: node.frontmatter.date,
                   url: `${site.siteMetadata.siteUrl}${node.fields.slug}`,
                   guid: `${site.siteMetadata.siteUrl}${node.fields.slug}`,
                   custom_elements: [
