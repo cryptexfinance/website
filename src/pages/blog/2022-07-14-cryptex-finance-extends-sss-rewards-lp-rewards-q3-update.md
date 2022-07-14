@@ -12,6 +12,8 @@ tags:
   - TCAP
   - Index
 ---
+![](/img/thumbnail_staking.jpeg)
+
 Since October 7th, 2021, Cryptex has incentivized Single-Sided CTX staking with CTX rewards. We are happy to announce that we are extending CTX SSS today, July 13th, 2022 with 12,655 CTX.
 
 It’s important to remember that these rewards are streamed 100% per block for 3 months and contains no lockup. There’s a 7 days minimum staking period.
@@ -36,8 +38,6 @@ Reminder that:
 **We stay committed to the community, and continue to grow as much as we can during these turbulent times.**
 
 \- Team Cryptex
-
-
 
 ### DISCLAIMER:
 
