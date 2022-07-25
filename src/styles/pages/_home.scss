@@ -113,6 +113,24 @@ body {
   margin-top: 8rem;
   margin-bottom: 2rem;
   padding: 5rem 2rem;
+  #crypto-widget-CoinList {
+    margin-left: -5.5rem;
+    @media only screen and (max-device-width: 1750px) {
+      margin-left: -5rem;
+    }
+    @media only screen and (max-device-width: 1600px) {
+      margin-left: -3rem;
+    }
+    @media only screen and (max-device-width: 1550px) {
+      margin-left: -2.5rem;
+    }
+    @media only screen and (max-device-width: 1500px) {
+      margin-left: -1.5rem;
+    }
+    @media only screen and (max-device-width: 1450px) {
+      margin-left: -1rem;
+    }
+  }
 }
 
 .section-features {

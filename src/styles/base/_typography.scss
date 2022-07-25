@@ -229,16 +229,16 @@ h1 {
 		letter-spacing: 0.3px;
   }
   &-content {
-	padding: 2rem 0rem;
-	width: 26.8125rem;
-	font-family: $font-tertiary;
-	font-style: normal;
-	font-weight: normal;
-	font-size: 1rem;
-	line-height: 1.375rem;
-	text-align: left;
-	letter-spacing: 0.3px;
-	color: $color-grey;
+    padding: 0.4rem 0rem 2rem 0rem;
+    width: 26.8125rem;
+    font-family: $font-tertiary;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 1rem;
+    line-height: 1.375rem;
+    text-align: left;
+    letter-spacing: 0.3px;
+    color: $color-grey;
   }
   &-img-container {
 	display: flex;

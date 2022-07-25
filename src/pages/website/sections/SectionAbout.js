@@ -17,6 +17,13 @@ const SectionAbout = () => {
           that’s both audited and accurately representative of the entire
           cryptocurrency complex by total market capitalization.
         </div>
+        <div
+          id="crypto-widget-CoinList"
+          data-transparent="true"
+          data-theme="dark"
+          data-design="classic"
+          data-coin-ids="4434"
+        />
       </Col>
       <Col xs={12} sm={12} md={12} lg={5} className="about-img-container" >
           <img src={image} alt="About" className="about-image" />
