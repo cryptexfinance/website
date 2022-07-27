@@ -233,7 +233,7 @@ const SectionTeam = (props) => {
             </Col>
             <Col md={12} lg={12} className="team-subheader">
               <Col sm={12} md={8} lg={8} className="team-subtitle content">
-                Building the investments of tomorrow, today.
+                Building the decentralized finance of tomorrow, today.
               </Col>  
               {breakpoints.mdmin && <PaginationLarge />}
             </Col>

@@ -211,7 +211,7 @@ const SectionNews = (props) => {
       <section id="news" className="section-news">
         <div className="newsbox-title heading-secondary">News</div>
         <Col sm={12} md={8} lg={8} className="newsbox-subtitle content">
-          Building the investments of tomorrow, today.
+          Building the decentralized finance of tomorrow, today.
         </Col>  
         <div className="newsbox-inputs">
           <SearchNews
