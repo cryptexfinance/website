@@ -14,6 +14,7 @@ tags:
   - Updates
 ---
 <!--StartFragment-->\
+
 Following recent proposals and on chain votes Cryptex will move forward with a new bounty and grant process for part time contributors. With this new process, the DAO will continue to grow thanks to its most valuable asset, the community.
 
 ## How Will This New Process Work?
@@ -22,7 +23,7 @@ The bounties and grants will be facilitated through dework ([](https://app.dewor
 
 Go to [](https://app.dework.xyz/)<https://app.dework.xyz/>, connect your discord account & fill in your name/alias
 
-![](/img/untitled-2-.png)
+![](/img/untitled-design-18-.png)
 
 Next, you can click Skip, you do not have to connect your wallet for Cryptex purposes.
 
