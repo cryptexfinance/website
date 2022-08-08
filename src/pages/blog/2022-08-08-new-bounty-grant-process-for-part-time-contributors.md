@@ -9,6 +9,9 @@ description: Following recent proposals and on chain votes Cryptex will move
   asset, the community.
 featuredpost: true
 featuredimage: /img/untitled-design-17-.png
+tags:
+  - Cryptex Finance
+  - Updates
 ---
 <!--StartFragment-->
 
