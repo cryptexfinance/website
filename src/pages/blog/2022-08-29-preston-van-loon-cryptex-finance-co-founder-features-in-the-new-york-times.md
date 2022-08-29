@@ -23,7 +23,7 @@ Ethereum, the most popular crypto platform, could become more eco-friendly thank
 
 The Merge is expected to take place around Sept. 15, more than eight years after it was first proposed. Changing Ethereum's infrastructure to make it more energy-efficient would address widespread criticism that crypto's climate impact outweighs its potential benefits. In addition, it would lay the foundation for future upgrades that would reduce fees associated with transactions in Ether, the platform's signature currency and the second-most valuable digital asset after Bitcoin.
 
-Crypto boosters are hopeful that the switch will have a positive effect on Ethereum's energy utilization, as it is expected to result in a reduction of more than 99 percent, which will lead the technology to become more popular.
+Crypto adapters are hopeful that the switch will have a positive effect on Ethereum's energy utilization, as it is expected to result in a reduction of more than 99 percent, which will lead the technology to become more popular.
 
 “The difference in hardware and energy consumption is so significant,” said Preston Van Loon, a developer working on the Merge. “When NFTs were blowing up, people were saying, ‘I’d love to have an NFT, but it feels like I’m burning a forest down.’”
 
