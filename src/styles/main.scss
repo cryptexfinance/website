@@ -29,12 +29,14 @@
 
 
 // Layout
-
 @import "layout/bg";
 
 // Pages
-
 @import "pages/home";
+
+// Academy
+@import "academy/base";
+@import "academy/posts";
 
 // entrance and exit animations
 @import "animations/bounce.scss";

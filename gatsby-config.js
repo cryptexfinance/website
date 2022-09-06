@@ -82,7 +82,6 @@ module.exports = {
         path: `${__dirname}/src/pages/tags`,
       },
     },
-    "gatsby-plugin-preload-link-crossorigin",
     "gatsby-plugin-catch-links",
     {
       resolve: `gatsby-source-filesystem`,
@@ -121,21 +120,8 @@ module.exports = {
         ],
       },
     },
-    "gatsby-transformer-sharp",
     "gatsby-plugin-sharp",
-    {
-      resolve: `gatsby-plugin-manifest`,
-      options: {
-        name: `Cryptex Site`,
-        short_name: `Cryptex`,
-        description: `Crypto | TCAP`,
-        start_url: `/`,
-        background_color: `#000`,
-        theme_color: `#000`,
-        display: `standalone`,
-        icon: `${__dirname}/static/favicon.svg`, // This path is relative to the root of the site.
-      },
-    },
+    "gatsby-transformer-sharp",
     "gatsby-plugin-offline",
     "gatsby-plugin-react-helmet",
     {

@@ -6,7 +6,7 @@ import Home from "./website/home"
 import bg from "../../static/bg.webp"
 import bgvideo from "../../static/bg.mp4"
 
-export default ({ data }) => {
+const App = ({ data }) => {
   return (
     <PageLayout>
       <SEO title="Cryptex" />
@@ -39,3 +39,5 @@ export const query = graphql`
     }
   }
 `
+
+export default App;

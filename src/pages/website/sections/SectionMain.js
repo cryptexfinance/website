@@ -1,16 +1,15 @@
-import React,{ useEffect, useState } from 'react';
+import React,{ useEffect, useState } from "react";
 import { BigNumber, utils } from "ethers";
 import Col from "react-bootstrap/esm/Col";
 import Row from "react-bootstrap/esm/Row";
-import image from '../../../../static/website/home/main.webp';
-import tcap from '../../../../static/website/home/tcap.svg';
-import appEndpoint from '../../../endpoint';
-import { useQuery } from '@apollo/client';
-import gql from 'graphql-tag';
+import image from "../../../../static/website/home/main.webp";
+import tcap from "../../../../static/website/home/tcap.svg";
+import appEndpoint from "../../../endpoint";
+import { useQuery, gql } from "@apollo/client";
 
 const SectionMain = () => {
 
-  const format = (num, decimals) => num.toLocaleString('en-US', {
+  const format = (num, decimals) => num.toLocaleString("en-US", {
     minimumFractionDigits: decimals,      
     maximumFractionDigits: decimals,
   });
@@ -27,7 +26,9 @@ const SectionMain = () => {
 
   useEffect(() => {
     const loadData = async () => {
-      if (typeof(data) !== `undefined`) {
+      console.log("--- data  ---");
+      console.log(data)
+      /* if (typeof(data) !== `undefined`) {
         const currentTotalPrice = BigNumber.from(await data?.oracles[0].answer);
         const TotalTcapPrice = currentTotalPrice.mul(10000000000);
 
@@ -36,7 +37,7 @@ const SectionMain = () => {
         setFirstLoad(false);
       } else {
         console.log(data);
-      }
+      } */
     }
     
     loadData();
@@ -82,8 +83,10 @@ export default SectionMain
 
 const GET_TCAP_PRICE = gql`
   query {
-    oracles(first: 1, orderBy: updatedAt, orderDirection: desc) {
-      answer
+    posts {
+      nodes {
+        title
+      }
     }
   }
 `;
