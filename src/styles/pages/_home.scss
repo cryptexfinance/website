@@ -13,6 +13,12 @@ html {
 
 body {
   width: 100%;
+  .pt-5 {
+    padding-top: 0rem !important;
+  }
+  .mt-5 {
+    padding-top: 0rem !important;
+  }
 }
 
 .btn-primary:focus {
@@ -54,10 +60,10 @@ body {
   &-button {
     display: flex;
 		flex-direction: column;
-		align-items: flex-start;
-		padding: 1.25rem 0rem 0rem 3.25rem;
+		align-items: center;
+    justify-content: center;
     width: 13.4375rem;
-		height: 3.875rem;
+		height: 3.6rem;
     &:hover {
       color: $color-white !important;
       text-decoration: none;
@@ -67,68 +73,129 @@ body {
 
 .section-main {
   display: flex;
+  align-items: flex-end;
   flex-wrap:wrap;
   position: relative;
-  padding: 1rem 2rem;
-  
-  &-divider {
-    width: 0.0625rem;
-    height: 5.125rem;
-    background: $color-grey-dark;
-  }
-  
-  .main-info {
-    padding-top: 4rem;
-    padding-bottom: 4rem;
-  }  
+  padding: 1rem;
+  height: 95vh;
 
-  .market-cap{
-    display: flex;
-    flex-direction: row;
-    .data {
+  .main {
+    &-container {
+      display: flex;
       flex-direction: column;
+      padding: 4rem;
+    }
+    &-info {
+      padding: 2rem 1rem;
+      width: 50%;
+    }
+    &-title {
+      letter-spacing: 0.6px;
+      padding: 1.3rem 0rem;
+    }
+    &-buttons {
+      display: flex;
+      flex-direction: row;
+      &-actions { 
+        display: flex;
+      }
     }
   }
-  .tcap-data {
-    padding-left: 2.7rem
+  .main-buttons-social {
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    .social-item {
+      margin-left: 1.5rem;
+    }
+    .social-item-icon {
+      height: 2.5rem;
+      width: 2.5rem;
+    }
   }
   .button-to-app {
-    padding-top: 4rem;
-    padding-left: 0.5rem;
-  }
-  .image {
-    display: flex;
-    justify-content: center;
-  }
-  .main-image {
-    width: 36.19rem;
-    height: 35.81rem;
+    margin-right: 1rem;
   }
 }
 
-.section-about {
+.section-products {
   display: flex;
-  flex-wrap: wrap;
-  position: relative;
-  margin-top: 8rem;
-  margin-bottom: 2rem;
-  padding: 5rem 2rem;
-  #crypto-widget-CoinList {
-    margin-left: -5rem;
-    @media only screen and (max-device-width: 1800px) {
-      margin-left: -4.5rem;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+  margin: 4rem 1rem;
+  padding: 5rem;
+
+  .header {
+    margin: 1.5rem 0rem;
+  }
+  .subheader {
+    margin:  0.5rem 0rem;
+    text-align: center;
+    width: 60%;
+  }
+  .products {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: 2rem;
+
+    &-item {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      height: 23rem;
+      width: 28rem;
+      @media (max-width: 1300px) {
+        height: 27rem;
+      }
+
+      .terciary-header {
+        margin-top: 0.5rem;
+      }
+      .subtitle {
+        margin-top: 1rem;
+      }
     }
-    @media only screen and (max-device-width: 1600px) {
-      margin-left: -2rem;
-    }
-    @media only screen and (max-device-width: 1500px) {
-      margin-left: -1.5rem;
-    }
-    @media only screen and (max-device-width: 1450px) {
-      margin-left: -1rem;
+    &-link {
+      display: flex;
+      justify-content: flex-end;
     }
   }
 }
+
+.section-governance {
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  height: 100vh;
+  margin: 4rem 1rem;
+  padding: 5rem 2rem;
+
+  .governance {
+    &-main {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      width: 45%;
+      height: 60vh;
+    }
+    &-detail {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      width: 55%;
+      height: 60vh;
+    }
+    &-item {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+    }
+  }
+
+}
+
 
 .section-features {
   display: flex;
@@ -136,66 +203,6 @@ body {
   position: relative;
   margin: 4rem 0rem;
   padding: 5rem 2rem;
-}
-
-.section-governance {
-  display: flex;
-  flex-wrap: wrap;
-  position: relative;
-  padding: 1.5rem 2rem;
-}
-
-.section-team {
-  position: relative;
-  width: 100%;
-  padding: 10rem 2rem 0rem 2rem;
-  margin-bottom: 10rem;
-  @media only screen and (max-device-width : 1300px) and (orientation: landscape) {
-    margin-bottom: 11rem;
-    @media screen and (max-device-height: 850px){
-        margin-bottom: 15rem;
-    }
-    @media only screen and (max-device-width: 1100px){
-      margin-bottom: 8rem;
-      @media screen and (max-device-height: 700px){
-        margin-bottom: 13rem;
-      }
-    }
-  }  
-  .team-container {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;    
-    margin: 5rem 0rem 7rem 0rem;
-
-    @media only screen and (max-device-width : 1300px) and (orientation: landscape) {
-      margin-left: 2.5rem;
-      margin-right: 2.5rem;
-      @media screen and (max-device-width : 1100px){
-        margin-left: 1.5rem;
-        margin-right: 1.5rem;
-      }
-    }
-
-    .members-container {
-      display: flex;
-      flex-wrap: wrap;
-      flex-direction: column;
-      @media only screen and (max-device-width : 720px) {
-        padding-left: 0px;
-      }
-    }    
-  }
-  .team-posts{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;  
-    padding: 1rem 0rem; 
-  }
-
-  @media only screen and (max-device-width: 600px) {
-    margin-bottom: 40rem;
-  }
 }
 
 .section-news {
@@ -216,20 +223,4 @@ body {
   @media only screen and (max-device-width: 600px) {
     margin: 20rem 0rem;
   }
-}
-
-.section-faq {
-  position: relative;
-  width: 100%;
-  margin-top: 8rem;
-  padding: 4rem 4rem 8rem 4rem;
-}
-
-.section-community {
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: column;
-  position: relative;
-  margin: 7rem 0rem;
-  padding: 3rem 4rem;
 }

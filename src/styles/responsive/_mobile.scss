@@ -131,149 +131,128 @@
     }
   }
 
+  .button-pink {
+    position: relative;
+    width: 95%;
+    height: 40px;
+    font-size: 14px;
+    line-height: 16px;
+  }
+
+  .button-dark {
+    font-family: $font-primary;
+    font-weight: normal;
+    width: 95%;
+    height: 40px;
+    font-size: 14px;
+    line-height: 16px;
+  }
+
+
+  h3 {
+    font-size: 24px;
+  }
+
   .header {
     font-size: 22px;
     line-height: 36px;
   }
 
-  .main {
-    &-title {
-      width: 362px;
-      height: 108px;
-    }
-    &-number-pink {
-      position: relative;
-      display: flex;
-      align-items: center;
-      width: 257px;
-      height: 36px;
-      font-size: 18px;
-      line-height: 36px;
-    }
-    &-bold-text {
-      width: 342px;
-      height: 22px;
-      font-size: 14px;
-      line-height: 22px;
-    }
-    &-divider {
-      background: transparent !important;
-    }
-    &-number-blue {
-      width: 312px;
-      height: 22px;
-      font-size: 18px;
-      line-height: 36px;
-    }
-    &-tcap {
-      width: 87px;
-      height: 60px;
-      &-image {
-        width: 30px;
-      }
-      &-text {
-        font-size: 14px;
-        line-height: 37px;
-      }
-    }
-
-    &-button-link {
-      z-index: 20;
-      text-decoration: none;
-      text-align: center;
-      &:hover {
-        color: $color-white !important;
-        text-decoration: none;
-      }
-      &:focus {
-        outline: none !important;
-      }
-    }
-  }
-
   .section-main {
     padding: 8rem 1rem 2rem 1rem; 
     position: relative;
+    height: 100vh;
     width: 100%;
-
+    .col-sm-12, .col-md-8, .col-lg-8  {
+      padding-left: 0px;
+      padding-right: 0px;
+    }
+    .main {
+      &-container {
+        padding: 8rem 4rem;
+        .subheader {
+          padding: 1rem 0rem; 
+          text-align: justify;  
+        }
+      }  
+      &-title {
+        padding: 3rem 0rem;
+        h3 {
+          font-size: 21px;
+        }
+      }
+      &-info {
+        width: 100%;
+      }
+      &-buttons {
+        display: flex;
+        flex-direction: column;
+        padding: 2rem 1rem;
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+        &-actions {
+          display: flex;
+          width: 100%;
+        }
+      }
+    }
     .button-to-app {
-      padding-top: 8rem;
+      width: 100%;
+      margin-right: 1rem;
     }
-    .market-cap {
-      padding-top: 10rem;
-      padding-bottom: 10rem;
+    .button-learn-more {
+      display: flex;
+      justify-content: flex-end;
+      width: 100%;
     }
-    .image {
-      margin-top: 5rem;
-      margin-left: -2rem;
-    }
-    .main-image {
-      position: relative;
-      width: 450px;
-      height: 460.94px;
-    }
-  }
-
-  .button-pink {
-    position: relative;
-    display: block;
-    flex-direction: column;
-    align-items: center;
-    padding: 19px 47px;    
-    width: 95%;
-    height: 54px;
-    font-size: 14px;
-    line-height: 16px;
-  }
-
-  .section-about {
-    margin-top: 2rem; 
-    position: relative;    
-    #crypto-widget-CoinList {
-      margin-top: -5rem;
-      margin-left: -3rem;
-    }
-  }
-  .about {
-    &-title {
-      position: relative;
-      font-size: 24px;
-      line-height: 36px;
-      letter-spacing: 0.3px;
-    }
-    &-content {
-      padding: 10rem 0rem;
-      width: 315px;
-      font-size: 14px;
-      line-height: 20px;
-      letter-spacing: 0.3px;
-    }
-    &-img-container {
-      order: 3;
-      margin: 15rem 0rem;
-    }
-    &-image {
-      width: 380px;
-      height: 391.27px;
-    }
-
-    &-details {
-      width: 315px;
-      height: 353px;
-      order: 2;
-
-      &-divisor {
-        width: 310px;
-        height: 1px;
-        background: #494866;
+    .main-buttons-social {
+      display: flex;
+      justify-content: center;
+      margin: 5rem 0rem;
+      .social-item {
+        margin-left: 2rem;
       }
-      &-icons {
-        margin-right: 24px;
+
+      .social-item-icon {
+        height: 5rem;
+        width: 5rem;
       }
-      &-text {
-        height: 72px;
-        font-size: 18px;
-        line-height: 24px;
+    }
+  }
+
+  .section-products {
+    height: 100%;
+    margin: 10rem 1rem;
+    padding: 15rem 5rem;
+
+    .header {
+      align-self: start;
+      margin: 2rem 0rem;
+    }
+    .subheader {
+      text-align: justify;
+      width: 100%;
+    }
+
+    .products {
+      flex-direction: column;
+      margin-top: 7rem;
+      margin-bottom: 4rem;
+      &-info  {
+        margin-top: 2rem;
+      }
+      &-item {
+        height: 85rem;
+        width: 100%;
+        margin-top: 6rem;
+
+        .terciary-header {
+          margin-top: 1rem;
+        }
+        .subtitle {
+          margin-top: 5rem;
+          text-align: justify;
+        }
       }
     }
   }
@@ -447,114 +426,10 @@
       }
     }
   }
-
-  .section-team {
-    position: relative;
-  }
-  .team {
-    position: relative;
-    &-title {
-      margin: 1rem 0rem 2rem 3rem;
-      font-size: 24px;
-      line-height: 36px;
-      letter-spacing: 0.3px;
-    }
-    &-subtitle {
-      margin: 5rem 0rem;
-      width: 100%;
-      font-size: 16px;
-      line-height: 22px;
-      letter-spacing: 0.3px;
-    }
-    &-divider {
-      display: none;
-    }
-  }
-  .team-row {
-    width: 100%;
-  }
-  .team-box {
-    position: relative;
-    width: 375px;
-    height: auto;
-    margin-bottom: 4rem;
-    &.page2 {
-      margin-bottom: 3rem;
-    }
-    &-name {
-      width: 211px;
-      height: 22px;
-      font-size: 14px;
-      line-height: 22px;
-      letter-spacing: 0.3px;
-    }
-    &-position {
-      width: 220px;
-      height: 16px;
-      font-size: 12px;
-      line-height: 16px;
-      letter-spacing: -0.2px;
-    }
-    &-description {
-      width: 335px;
-      height: 225px;
-      border-radius: 2px;
-      font-size: 12px;
-      line-height: 16px;
-      letter-spacing: -0.2px;
-      margin-top: 20px;
-    }
-    .flippy-back {
-      width: 340px;
-    }
-  }
-  .team-pagination {  
-    padding: 0.5rem 0rem 0.5rem 0rem;
-    justify-content: center;
-    &-container {
-      width: 50rem;
-    }
-  }
   
   .flippy-back {
     background: $color-black !important;
     background-color: $color-black !important;
-  }
-
-  .section-faq {
-    padding-top: 30rem;
-    padding-bottom: 55rem;
-    position: relative;
-  }
-  .faq {
-    &-row {
-      width: 100%;
-      margin: 4rem 0rem 0rem -2.5rem;
-    }
-    &-title {
-      width: 312px;
-      font-size: 24px;
-      line-height: 36px;
-      letter-spacing: 0.3px;
-    }
-    &-subtitle {
-      font-size: 16px;
-      line-height: 22px;
-      letter-spacing: 0.3px;
-      margin-bottom: 5rem;
-    }
-    &-divider {
-      width: 72%;
-      height: 1px;
-      margin-top: 16px;
-      margin-bottom: 32px;
-      background: transparent;
-    }
-    &-tab {
-      h6 {
-        font-size: 16px;
-      }
-    }
   }
 
   .toggle {
@@ -566,40 +441,6 @@
     .toggleta {
       line-height: 28px;
     }
-  }
-
-  .question {
-    width: 290px;
-    height: auto;
-    font-size: 15px;
-    line-height: 23px;
-    letter-spacing: 0.3px;
-    margin-bottom: 12px;
-  }
-
-  .answer {
-    width: 315px;
-    height: auto;
-    font-size: 15px;
-    line-height: 22px;
-    letter-spacing: 0.3px;
-    text-align: left;
-    @media only screen and (min-device-width: 400px) {
-      width: 330px;
-    }
-    @media only screen and (max-device-width: 365px) {
-      width: 290px;
-    }
-  }
-
-  .plus {
-    position: relative;
-    width: 10.83px;
-    height: 14px;
-    font-size: 14px;
-    line-height: 24px;
-    letter-spacing: 0.3px;
-    margin-top: -40px;
   }
 
   .section-community {
