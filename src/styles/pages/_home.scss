@@ -170,7 +170,12 @@ body {
   position: relative;
   height: 100vh;
   margin: 4rem 1rem;
-  padding: 5rem 2rem;
+  padding: 7rem 1.5rem;
+
+  .box {
+    margin: 1rem;
+    padding: 2rem 0rem 1.5rem 0rem;
+  }
 
   .governance {
     &-main {
@@ -178,32 +183,140 @@ body {
       flex-direction: column;
       justify-content: space-between;
       width: 45%;
-      height: 60vh;
+      height: 65vh;
+      .info-top {
+        padding: 0rem 1.5rem;
+      }
+      .info-bottom {
+        display: flex;
+        flex-direction: column;
+      }
+      .subtitle  {
+        margin-top: 1rem;
+      }
+      .icons {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        padding: 0.6rem 0rem;
+        @media (max-width: 1300px) {
+          padding: 1rem 0rem;
+        }
+      }
+      .prices {
+        display: flex;
+        flex-direction: row;
+        margin-top: 1.5rem;    
+        padding: 0rem 1.5rem;
+      }
+    }
+    &-icon {
+      width: 40px;
+      height: 40px;
+      margin-right: 1.3rem;
+
+      &.dfp {
+        width: 37px;
+        height: 37px;
+      }
+      &.gemini {
+        width: 37px;
+        height: 37px;
+      }
+
+      @media (max-width: 1300px) { 
+        width: 35px;
+        height: 35px;
+        &.dfp {
+          width: 33px;
+          height: 33px;
+        }
+        &.gemini {
+          width: 33px;
+          height: 33px;
+        }
+      }
     }
     &-detail {
       display: flex;
       flex-direction: column;
       justify-content: space-between;
+      margin: 1rem 1rem 1rem  0rem;
       width: 55%;
-      height: 60vh;
+      height: 65vh;
+      
+      .box {
+        margin: 0rem 1rem;
+        padding-top: 1.5rem;
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+      }
     }
     &-item {
       display: flex;
       flex-direction: column;
+      height: 30%;
+      max-height: 30%;
       width: 100%;
+
+      &:hover {
+        cursor: pointer;
+      }
     }
   }
 
 }
 
-
-.section-features {
+.section-safety {
   display: flex;
-  flex-wrap: wrap;  
-  position: relative;
-  margin: 4rem 0rem;
-  padding: 5rem 2rem;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+  margin: 4rem 1rem;
+  padding: 5rem;
+
+  .header {
+    margin: 1.5rem 0rem;
+  }
+  .subheader {
+    margin: 0.5rem 0rem;
+    text-align: center;
+    width: 60%;
+  }
+
+  .items {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: 2rem;
+
+    .item {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      height: 22rem;
+      width: 22rem;
+
+      @media (max-width: 1300px) {
+        height: 25rem;
+      }
+
+      .terciary-header {
+        margin-top: 0.5rem;
+      }
+      .subtitle {
+        margin-top: 1rem;
+      }
+    }
+
+    &-link {
+      display: flex;
+      justify-content: flex-end;
+    }
+  }
 }
+
+
 
 .section-news {
   position: relative;

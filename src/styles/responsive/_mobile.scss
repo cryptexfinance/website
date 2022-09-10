@@ -257,175 +257,97 @@
     }
   }
 
-  .section-features {
-    position: relative;
-    padding: 5rem 2rem; 
-  }
-  .features {
-    display: block;
-    position: relative;
-    &-title {
-      padding-left: 2rem;
+  .section-governance {
+    flex-direction: column;
+    padding: 20rem 2rem;
+    margin: 10rem 3rem 10rem 1rem;
+    height: 100%;
+    .box {
+      margin: 1rem;
+      padding: 5rem 4rem;
     }
-    &-row {
-      width: 355px;
-      left: 40px;
+    .subtitle {
+      margin-top: 2rem;
+      text-align: justify;
     }
-    &-icons {
-      width: 82px;
-      height: 74.25px;
-    }
-    &-subtitle {
-      margin: 3rem 0rem;
-      font-size: 22px;
-      line-height: 24px;
-      letter-spacing: 0.3px;
-    }
-    &-content {
-      padding: 2rem 1rem;
-      font-size: 16px;
-      line-height: 22px;
-      letter-spacing: 0.3px;
-      width: 243px;
-    }
-    &-box {
-      &-mint {
-        position: relative;
-        width: 330px;
-        height: 330px;
-        background: #111131;
-        border: 1px solid rgba(255, 255, 255, 0.6);
-        box-sizing: border-box;
-        box-shadow: 0px 0px 4px $shadow-green-neon,
-          0px 0px 34px $shadow-green-neon-second;
-        border-radius: 4px;
-        .features-content {
-          color: $color-grey;
-        }
-        .features-subtitle {
-          text-decoration: none;
-          &:hover {
-            color: $color-dark-clean;
-          }
-        }
-        margin-bottom: 20px;
-        padding: 10rem 7rem;
+    .governance {
+      &-main {
+        width: 100%;
+        height: 50vh;
+
+        .icons {
+          padding: 1.3rem 0rem;
+        }    
       }
-      &-trade {
-        position: relative;
-        width: 330px;
-        height: 330px;
-        background: #111131;
-        border: 1px solid rgba(255, 255, 255, 0.6);
-        box-sizing: border-box;
-        box-shadow: 0px 0px 4px $shadow-orange-neon,
-          0px 0px 34px $shadow-orange-neon-second;
-        border-radius: 4px;
-        .features-content {
-          color: $color-grey;
+      &-icon {
+        width: 32px;
+        height: 32px;
+        margin-right: 3rem;
+
+        &.dfp {
+          width: 30px;
+          height: 30px;
         }
-        .features-subtitle {
-          text-decoration: none;
-          &:hover {
-            color: $color-dark-clean;
-          }
+        &.gemini {
+          width: 30px;
+          height: 30px;
         }
-        margin-bottom: 20px;
-        padding: 10rem 7rem;
       }
-      &-pool {
-        position: relative;
-        width: 330px;
-        height: 330px;
-        background: #111131;
-        border: 1px solid rgba(255, 255, 255, 0.6);
-        box-sizing: border-box;
-        box-shadow: 0px 0px 4px $shadow-blue-neon,
-          0px 0px 34px $shadow-blue-neon-second;
-        border-radius: 4px;
-        .features-content {
-          color: $color-grey;
+      &-detail {
+        width: 100%;
+        margin-top: 10rem;
+        .box {
+          margin: 3rem  2rem;
+          padding: 5rem;
         }
-        .features-subtitle {
-          text-decoration: none;
-          &:hover {
-            color: $color-dark-clean;
-          }
-        }
-        margin-bottom: 20px;
-        padding: 10rem 7rem;
-      }
-      &-farm {
-        position: relative;
-        width: 330px;
-        height: 330px;
-        background: #111131;
-        border: 1px solid rgba(255, 255, 255, 0.6);
-        box-sizing: border-box;
-        box-shadow: 0px 0px 4px $shadow-purple-neon,
-          0px 0px 34px $shadow-purple-neon-secondary;
-        border-radius: 4px;
-        .features-content {
-          color: $color-grey;
-        }
-        .features-subtitle {
-          text-decoration: none;
-          &:hover {
-            color: $color-dark-clean;
-          }
-        }
-        margin-bottom: 20px;
-        padding: 10rem 7rem;
       }
     }
   }
 
-  .section-governance {
-    padding: 25rem 2rem;
-     #crypto-widget-CoinList {
-      margin-top: -6rem;
-      margin-left: -3rem;
-     }
-  }
-  .governance {
-    &-img-container {
-      order: 3;
-	  }
-    &-title {
-      width: 95%;  
+  .section-safety {
+    height: 100%;
+    margin: 10rem 1rem;
+    padding: 15rem 5rem;
+
+    .header {
+      align-self: start;
+      margin: 2rem 0rem;
     }
-    &-content {
-      width: 95%;
-      padding-top: 7rem;
-      padding-bottom: 5rem;
-      font-size: 14px;
-      line-height: 20px;
+
+    .subheader {
+      text-align: justify;
+      width: 100%;
     }
-    &-image {
-      width: 380px;
-      height: 391.27px;
-    }
-    &-details {
-      order: 2;
-      width: 95%;
-      padding: 7rem 2rem;
-      &-item {
-        margin-bottom: 4rem;
+
+    .items {
+      flex-direction: column;
+      margin-top: 7rem;
+      margin-bottom: 4rem;
+
+      &-info {
+        margin-top: 2rem;
       }
-      &-icons {
-        margin-right: 24px;
-      }
-      &-text {
-        font-size: 18px;
-        line-height: 24px;
-      }
-    }
-    &-buttons {
-      a {
-        margin-right: 4rem;
+
+      .item {
+        height: 85rem;
+        width: 100%;
+        margin-top: 6rem;
+
+        .terciary-header {
+          margin-top: 1rem;
+        }
+
+        .subtitle {
+          margin-top: 5rem;
+          text-align: justify;
+        }
       }
     }
   }
+
+
+
+
   
   .flippy-back {
     background: $color-black !important;
@@ -443,91 +365,4 @@
     }
   }
 
-  .section-community {
-    position: relative;
-    padding-bottom: 0rem;
-  }  
-  .community {
-    &-title {
-      padding: 0rem 2.5rem;
-      width: 90%;      
-      font-size: 24px;
-      line-height: 36px;
-      letter-spacing: 0.3px;
-    }
-    &-subtitle {
-      width: 305px;
-      font-size: 16px;
-      line-height: 22px;
-      letter-spacing: 0.3px;
-    }
-    &-content {
-      flex-direction: column;
-      margin: 4rem 0rem;
-    }
-    &-icons{
-      display: flex;
-      padding: 5rem 5rem;
-      &-container {
-        display: flex;
-        margin-left: 25px;
-        margin-bottom: 35px;
-      }
-      &-row {
-        display: flex;
-        flex-direction: column;
-        flex: 1;
-      }
-    }
-    &-item {
-      width: 95%;
-      &-icon {
-        width: 82px;
-        height: 82px;
-        float: left;
-        margin-left: -42.76px;
-      }
-
-      &-text {
-        width: 63px;
-        height: 75px;
-        margin-left: -16px;
-        font-size: 14px;
-        line-height: 22px;
-        letter-spacing: 0.3px;
-      }
-    }
-    &-image {
-      width: 400px;
-      height: auto;
-      margin-left: -10rem;
-    }
-
-    &-subscribe {
-      &-title {
-        width: 309px;
-        font-size: 22px;
-        line-height: 24px;
-        letter-spacing: 0.3px;
-      }
-      &-data {
-       flex-direction: column;
-       padding: 4rem 0rem;
-      }
-      &-input {
-        width: 316px;
-        height: 54px;
-        font-size: 12px;
-        border: 1px solid $color-grey;
-        box-sizing: border-box;
-        border-radius: 1px;
-        line-height: 14px;
-        padding: 24px 24px;
-      }
-      &-button {
-        width: 316px;
-        height: 54px;
-      }
-    }
-  } 
 }

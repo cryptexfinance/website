@@ -1,0 +1,112 @@
+.products {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  margin: 2rem 1rem;
+  padding: 5rem 1.5rem;
+  
+  .box {
+    margin: 1rem;
+    padding: 2rem 0rem 1.5rem 0rem;
+  }
+  .header {
+    margin: 0.2rem 1rem;   
+  }
+  .content {
+    display: flex;
+    flex-direction: row;
+
+    .main {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;;
+      width: 45%;
+      height: 60vh;
+
+      .info-top {
+        padding: 0rem 1.5rem;
+      }
+      .info-bottom {
+        display: flex;
+        flex-direction: column;
+      }
+      .subtitle {
+        margin-top: 1rem;
+      }
+      .icons {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        padding: 0.6rem 0rem;
+
+        @media (max-width: 1300px) {
+          padding: 1rem 0rem;
+        }
+      }
+      .prices {
+        display: flex;
+        flex-direction: row;
+        margin-top: 1.5rem;
+        padding: 0rem 1.5rem;
+      }
+    }
+
+    .features {
+      display: grid;
+      grid-template-columns: auto auto;
+      column-gap: 1rem;
+      row-gap: 1rem;
+      width: 55%;
+      height: 60vh;
+    }
+    .feature {
+      &-item {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        padding: 1rem;
+        margin-bottom: 0rem;
+        height: 100%;
+        width: 100%;
+
+        &:hover {
+          cursor: pointer;
+          .feature-content {
+            display: flex;
+            flex-wrap: wrap;
+            word-wrap: break-word;
+            p {
+              word-wrap: break-word;
+            }
+          }
+          .heading-secondary {
+            display: none;
+          }
+        }
+      }
+      &-info {
+        padding: 1rem;
+      }
+      &-icon{
+        margin-left: -1rem
+      }
+      &-content {
+        display: none;
+        padding: 0rem 1rem;
+      }
+    }
+  }
+
+  @media only screen and (max-device-width: 600px) and (orientation: portrait) {
+    .content {
+      flex-direction: column;
+      .main {
+        width: 100%;
+      }
+      .features { 
+        grid-template-columns: auto;
+        width: 100%;
+      }
+    }
+  }
+}

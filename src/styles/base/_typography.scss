@@ -41,13 +41,17 @@ h1 {
   letter-spacing: 0.3px;
   color: $color-dark-clean;
   text-align: left;
+  @media only screen and (max-device-width: 600px) {
+    font-size: 4.5rem;
+    line-height: 5rem;
+  }
 }
 
 .terciary-header {
   font-family: $font-primary;
   font-style: normal;
   font-weight: normal;
-  font-size: 0.875rem;
+  font-size: 1rem;
   line-height: 1.375rem;
   letter-spacing: 0.3px;
   color: $color-dark-clean;
@@ -121,6 +125,54 @@ h1 {
   }
 }
 
+.label  {
+  color: $color-grey-light;
+  font-family: $font-tertiary;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 1rem;
+  line-height: 1.2rem;
+  letter-spacing: 0.5px;
+  @media (max-width: 600px) {
+    font-size: 14px;
+    line-height: 18px;
+    letter-spacing: 0.7px;
+  }
+}
+
+.number-pink {
+  color: $color-white;
+  font-family: $font-secondary;
+  font-size: 1.1rem;
+  font-weight: 400;
+  letter-spacing: .2px;
+  line-height: 2rem;
+  margin-bottom: 0.4rem;
+  text-shadow: 0 4px 13px $shadow-pink-neon;
+  @media (max-width: 600px) {
+    font-size: 18px;
+    line-height: 22px;
+    letter-spacing: 0.8px;
+  }
+}
+
+.number-blue {
+  color: $color-white;;
+  font-family: $font-secondary;
+  font-size: 1.1rem;
+  font-style: normal;
+  font-weight: 400;
+  letter-spacing: .2px;
+  line-height: 2rem;
+  margin-bottom: .6rem;
+  text-shadow: 0 .25rem .8125rem $shadow-blue-neon;
+  @media (max-width: 600px) {
+    font-size: 18px;
+    line-height: 22px;
+    letter-spacing: 0.8px;
+  }
+}
+
 .box {
   display: flex;
   flex-direction: column;
@@ -136,11 +188,36 @@ h1 {
     margin: 0px;
     padding: 5rem;
   }
+}
+
+.box-button {
   &:hover {
     box-shadow: 0px 0px 12px 3px $shadow-purple-neon;
   }
 }
 
+.market-cap-box {
+  display: flex;
+  flex-direction: column;
+  padding-right: 1.5rem;
+  width: 65%;
+}
+
+.price-box {
+  display: flex;
+  flex-direction: column;
+  padding-left: 2rem;
+  width: 35%;
+}
+
+.vl-divider {
+  border-left: 0.7px solid $color-grey;
+  height: 100%;
+}
+.hl-divider {
+  border-top: 0.7px solid $color-grey;
+  width: 100%;
+}
 
 
 .newsdescription {
@@ -153,237 +230,10 @@ h1 {
   text-align: left;
 }
 
-.content {
-  font-family: $font-tertiary;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 1rem;
-  line-height: 1.375rem;
-  letter-spacing: 0.3px;
-  text-align: left;
-}
-
-.main {
-	&-number-pink {
-		padding: 0.5rem;
-		margin-bottom: 0.7rem;
-		font-family: $font-secondary;
-		font-style: normal;
-		font-weight: normal;
-		font-size: 1.625rem;
-		line-height: 2.25rem;
-		display: flex;
-		align-items: center;
-		letter-spacing: 0.2px;
-		color: $color-white;
-		text-shadow: 0px 4px 13px $shadow-pink-neon;
-	}
-
-  &-bold-text {
-		padding-left: 0.5rem;
-		font-family: $font-tertiary;
-		font-style: normal;
-		font-weight: bold;
-		font-size: 1rem;
-		line-height: 1.375rem;
-		display: flex;
-		align-items: center;
-		letter-spacing: 0.0375rem;
-		color: $color-grey;
-	}
-
-	&-number-blue {
-		padding: 0.5rem;
-		margin-bottom: 0.6rem;
-		font-family: $font-secondary;
-		font-style: normal;
-		font-weight: normal;
-		font-size: 1.625rem;
-		line-height: 2.25rem;
-
-		display: flex;
-		align-items: center;
-		letter-spacing: 0.0125rem;
-
-		color: $color-white;
-		text-shadow: 0rem 0.25rem 0.8125rem $shadow-blue-neon;
-	}
-
-  &-tcap {
-		&-text {
-			font-family: $font-tertiary;
-			font-style: normal;
-			font-weight: bold;
-			font-size: 1rem;
-			line-height: 0.875rem;
-		}
-	}
-
-	&-number-green {
-		width: 3.8125rem;
-		height: 2.3125rem;
-
-		font-family: $font-secondary;
-		font-style: normal;
-		font-weight: normal;
-		font-size: 0.875rem;
-		line-height: 2rem;
-
-		display: flex;
-		align-items: center;
-		text-align: center;
-		letter-spacing: -0.2px;
-
-		color: $color-primary-green;
-		text-shadow: 0rem 0.25rem 0.8125rem $color-primary-green;
-	}
-}
-
-.governance {
-  &-info {
-		display: flex;
-		flex-direction: column;
-		flex-wrap: wrap;
-		justify-content: flex-start;
-		padding-bottom: 1rem;
-		order: 1;
-	}
-
-  &-title {
-    width: 32.375rem;
-    letter-spacing: 0.3px;
-  }
-
-  &-content {
-    margin: 2rem 0rem 1rem 0rem;
-    font-family: $font-tertiary;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 1rem;
-    line-height: 1.375rem;
-    text-align: left;
-    letter-spacing: 0.3px;
-    color: $color-grey;
-  }
-
-  &-img-container {
-		display: flex;
-		justify-content: center;
-		order: 2;
-	}
-
-  &-image {
-    width: 21.8125rem;
-    height: 25.0605rem;
-  }
-
-  &-ctx-price {
-    height: 100%;
-    width: 100%;
-    padding-left: 4rem;
-    margin-top: -1.5rem;
-  }
-
-  &-details {
-    display: flex;
-		flex-direction: column;
-		justify-content: space-between;
-		padding-top: 0.5rem;
-		padding-bottom: 0.5rem;
-		order: 3;
-
-    &-item {
-      &:not(:first-child) {
-        padding-top: 1.5rem;
-      }
-      margin-bottom: 1.1rem;
-    }
-
-    &-icons {
-      margin-right: 1rem;
-      filter: drop-shadow(0 0 0.25rem #6450fb);
-    }
-
-    &-text {
-      font-family: $font-primary;
-      font-style: normal;
-      font-weight: normal;
-      font-size: 1.25rem;
-      line-height: 1.5rem;
-      display: flex;
-      align-items: center;
-      letter-spacing: 0.3px;
-      color: $color-grey;
-      text-shadow: 0rem 0.25rem 0.8125rem #a440f2; //$shadow-purple-neon;
-      &:hover {
-        color: $color-dark-clean;
-        text-decoration: none;
-      }
-    }
-  }
-
-  &-buttons {
-    position: relative;
-    margin: 1rem 0rem;
-  }
-
-  &-icon {
-    width: 40px;
-    height: 40px;
-    margin-right: 1.2rem;
-
-    &.gecko {
-      left: 2px;
-      top: 5px;
-    }
-    &.uni {
-      left: 60px;
-      width: 40.25px;
-      height: 47.5px;
-    }
-    &.dfp {
-      left: 124px;
-      width: 32.5px;
-      height: 38.75px;
-      top: 7px;
-    }
-    &.gemini {
-      left: 182px;
-      width: 36.5px;
-      height: 40.75px;
-      top: 7px;
-    }
-  }
-}
-
 .features {
   display: flex;
 	position: relative;
-	&-title {
-		margin: 2rem 0rem;
-		padding: 1rem;
-		letter-spacing: 0.3px;
-	}
 
-	&-row{
-		display: flex;
-		flex-wrap: wrap;
-		padding: 5rem 0rem;
-		a {
-			text-decoration: none;	
-		}
-	}
-	&-icons {
-		width: 6.25rem;
-		height: 5.75rem;
-	}
-	&-subtitle {
-		padding: 1.1rem 1.2rem;	
-	}
-	&-content {
-		padding: 0rem 1.2rem;
-		color: transparent;
-	}
 	&-box{
 		&-mint {
 			display: flex;

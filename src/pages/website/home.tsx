@@ -2,6 +2,7 @@ import React from "react";
 import SectionMain from "./sections/SectionMain";
 import SectionProducts from "./sections/SectionProducts";
 import SectionGovernance from "./sections/SectionGovernance";
+import SectionSafety from "./sections/SectionSafety";
 
 const Home = (data) => {
 
@@ -12,6 +13,7 @@ const Home = (data) => {
         <SectionMain />   
         <SectionProducts />
         <SectionGovernance />
+        <SectionSafety />
       </main>
     </>
   )

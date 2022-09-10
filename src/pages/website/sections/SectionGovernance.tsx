@@ -1,10 +1,10 @@
 import React from "react";
 import { useBreakpoint } from "gatsby-plugin-breakpoints";
-import coinGecko from '../../../../static/website/governance/coin-gecko.svg'
-import sushiLogo from '../../../../static/website/governance/sushi-logo.svg'
-import dfpLogo from '../../../../static/website/governance/dfp-logo.svg'
-import geminiLogo from '../../../../static/website/governance/gemini-hor-white-full.svg'
-import ctx from '../../../../static/website/governance/ctx.svg'
+import coinGecko from "../../../../static/website/governance/coin-gecko.svg";
+import sushiLogo from "../../../../static/website/governance/sushi-logo.svg";
+import dfpLogo from "../../../../static/website/governance/dfp-logo.svg";
+import geminiLogo from "../../../../static/website/governance/gemini-hor-white-full.svg";
+import ctx from "../../../../static/website/governance/ctx.svg";
 
 
 const SectionGovernance = () => {
@@ -14,8 +14,8 @@ const SectionGovernance = () => {
     <div id="governance" className="section-governance">
       
       <div className="box governance-main">
-        <div className="info">
-          <h1 className="header">
+        <div className="info-top">
+          <h1 className="heading-secondary">
             Decentralized Governance
           </h1>
           <p className="subtitle">
@@ -37,41 +37,60 @@ const SectionGovernance = () => {
             </a>
           </div>
         </div>
-        <div className="prices">
-
+        <div className="info-bottom">
+          <div className="hl-divider" />
+          <div className="prices">
+          <div className="market-cap-box">
+            <span className="number-pink">
+              $171,729.15
+            </span>
+            <span className="label">
+              Total CTX Market Capitalization
+            </span>
+          </div>
+          <div  className="vl-divider" />
+          <div className="price-box">
+            <span className="number-blue">
+              $4.13
+            </span>
+            <span className="label">
+              CTX Price
+            </span>
+          </div>
+          </div>
         </div>
       </div>
       <div className="governance-detail">
-        <div className="box governance-item">
+        <div className="box box-button governance-item">
           <h2 className="terciary-header">
             Proposals
           </h2>
-          <p className="subheader">
+          <p className="subtitle">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.
           </p>
           <div className="link-container">
 
           </div>
         </div>
-        <div className="box governance-item">
+        <div className="box box-button governance-item">
           <h2 className="terciary-header">
             Vote
           </h2>
-          <p className="subheader">
+          <p className="subtitle">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-            incididunt ut labore et dolore magna aliqua.
+            incididunt ut.
           </p>
           <div className="link-container">
 
           </div>
         </div>
-        <div className="box governance-item">
+        <div className="box box-button governance-item">
           <h2 className="terciary-header">
             Delegate
           </h2>
-          <p className="subheader">
+          <p className="subtitle">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-            incididunt ut labore et dolore magna aliqua.
+            incididunt ut labore et dolore.
           </p>
           <div className="link-container">
 
