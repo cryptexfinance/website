@@ -1,4 +1,4 @@
-.products {
+.products-tcap {
   display: flex;
   flex-direction: column;
   position: relative;
@@ -15,6 +15,7 @@
   .content {
     display: flex;
     flex-direction: row;
+    margin-top: 1.2rem;
 
     .main {
       display: flex;
@@ -50,10 +51,10 @@
         padding: 0rem 1.5rem;
       }
     }
-
     .features {
       display: grid;
-      grid-template-columns: auto auto;
+      grid-template-columns: 48% 48%;
+      grid-template-rows: 48.5% 48.5%;
       column-gap: 1rem;
       row-gap: 1rem;
       width: 55%;
@@ -85,7 +86,7 @@
         }
       }
       &-info {
-        padding: 1rem;
+        padding: 0.7rem 1rem;
       }
       &-icon{
         margin-left: -1rem
@@ -98,14 +99,49 @@
   }
 
   @media only screen and (max-device-width: 600px) and (orientation: portrait) {
+    margin: 15rem 1rem 8rem 1rem;
+    padding: 13rem 1rem;
     .content {
       flex-direction: column;
+      margin: 5rem 0rem;
+      width: 95%;
       .main {
+        padding: 5rem 2.5rem;
         width: 100%;
+        height: 55vh;
+        .subtitle {
+          margin-top: 3rem;
+          text-align: justify;
+        }
       }
       .features { 
+        height: auto;
+        margin: 10rem 0rem;
         grid-template-columns: auto;
+        grid-template-rows: auto auto auto auto;
+        row-gap: 3.5rem;
         width: 100%;
+      }
+      .feature {
+        &-item {
+          height: 70rem;
+          margin-bottom: 4rem;
+          &:hover {
+            .heading-secondary {
+              display: flex;
+            }
+          }
+        }
+        &-info {
+          padding: 4rem;
+        }
+        &-icon {
+          margin-left: -3rem
+        }
+        &-content {
+          display: block;
+          padding: 2rem 8rem 2rem 4rem;
+        }
       }
     }
   }

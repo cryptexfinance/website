@@ -64,7 +64,7 @@ const Tcap = () => {
   return (
     <PageLayout>
       <SEO title="Cryptex TCAP index" />
-      <div className="products">
+      <div className="products-tcap">
         <h1 className="header">
           TCAP: The World’s first Crypto Token Index 
         </h1>

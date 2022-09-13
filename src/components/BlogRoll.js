@@ -114,6 +114,12 @@ export const BlogRoll = ({ data }) => {
 
   return (
     <div className="blogroll">
+      <Col md={12} lg={12} className="lastest-news">
+        <Col md={6} lg={6} className="last">
+        </Col>
+        <Col md={6} lg={6} className="last2">
+        </Col>
+      </Col>
       <Col md={12} lg={12} className="page-title">
         <h2>Latest News</h2>
       </Col>

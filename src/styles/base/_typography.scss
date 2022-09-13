@@ -130,7 +130,7 @@ h1 {
   font-family: $font-tertiary;
   font-style: normal;
   font-weight: normal;
-  font-size: 1rem;
+  font-size: 0.9rem;
   line-height: 1.2rem;
   letter-spacing: 0.5px;
   @media (max-width: 600px) {
@@ -196,6 +196,14 @@ h1 {
   }
 }
 
+.carousel {
+  background-color: $color-background-box;
+  &-item {
+    margin: 1rem 1rem;
+    padding: 1rem 2rem;
+  }
+}
+
 .market-cap-box {
   display: flex;
   flex-direction: column;
@@ -228,191 +236,4 @@ h1 {
   line-height: 1rem;
   color: $color-grey;
   text-align: left;
-}
-
-.features {
-  display: flex;
-	position: relative;
-
-	&-box{
-		&-mint {
-			display: flex;
-			flex-direction: column;
-			width: 20rem;
-			height: 25.1875rem;	
-			background-color: transparent;
-			&:hover {
-				background: $color-background-features;
-				border: 1px solid rgba(255, 255, 255, 0.6);
-				box-sizing: border-box;
-				box-shadow: 0px 0px 4px $shadow-green-neon, 0px 0px 34px $shadow-green-neon-second;
-				border-radius: 4px;
-				.features-content {
-					color: $color-grey;
-				}
-				.features-subtitle {
-					text-decoration: none;
-					&:hover {
-						color: $color-dark-clean;
-					}
-				}
-			}
-		}
-		&-trade {
-			display: flex;
-			flex-direction: column;
-			width: 20rem;
-			height: 25.1875rem;	
-			background-color: transparent;
-			&:hover {
-				background: $color-background-features;
-				border: 1px solid rgba(255, 255, 255, 0.6);
-				box-sizing: border-box;
-				box-shadow: 0px 0px 4px $shadow-purple-neon, 0px 0px 34px $shadow-purple-neon-secondary;
-				border-radius: 4px;
-				.features-content {
-					color: $color-grey;
-				}
-				.features-subtitle {
-					text-decoration: none;
-					&:hover {
-						color: $color-dark-clean;
-					}
-				}
-			}
-		}
-		&-pool {
-			display: flex;
-			flex-direction: column;
-			width: 20rem;
-			height: 25.1875rem;	
-			background-color: transparent;
-			&:hover {
-				background: $color-background-features;
-				border: 1px solid rgba(255, 255, 255, 0.6);
-				box-sizing: border-box;
-				box-shadow: 0px 0px 4px $shadow-blue-neon, 0px 0px 34px $shadow-blue-neon-second;
-				border-radius: 4px;
-				.features-content {
-					color: $color-grey;
-				}
-				.features-subtitle {
-					text-decoration: none;
-					&:hover {
-						color: $color-dark-clean;
-					}
-				}
-			}
-		}
-		&-farm {
-			display: flex;
-			flex-direction: column;
-			width: 20rem;
-			height: 25.1875rem;	
-			background-color: transparent;
-			&:hover {
-				background: $color-background-features;
-				border: 1px solid rgba(255, 255, 255, 0.6);
-				box-sizing: border-box;
-				box-shadow: 0px 0px 4px $shadow-orange-neon, 0px 0px 34px $shadow-orange-neon-second;
-				border-radius: 4px;
-				.features-content {
-					color: $color-grey;
-				}
-				.features-subtitle {
-					text-decoration: none;
-					&:hover {
-						color: $color-dark-clean;
-					}
-				}
-			}
-		}
-	}
-}
-
-.community {
-  &-content {
-    display: flex;
-    flex-direction: row;
-    padding-top: 1.5rem;
-  }
-  &-subtitle {
-    position: relative;
-    width: 29.125rem;
-    color: $color-grey;
-    text-align: left;
-    margin: 2rem 0rem;
-  }
-
-  &-icons {
-    margin-bottom: 2rem;
-    margin-left: -3rem;
-    &-container {
-      margin-left: -15px;
-    }
-    &-row {
-      position: relative;
-      display: flex;
-      justify-content: space-between;
-    }
-  }
-
-  &-item {
-    display: flex;
-    text-decoration: none !important;
-    width: 25%;
-
-    &:hover {
-      text-shadow: 0 0 80px $shadow-purple-neon, 0 0 70px $shadow-purple-neon,
-        0 0 60px $shadow-purple-neon, 0 0 50px $shadow-purple-neon,
-        0 0 40px $shadow-purple-neon, 0 0 30px $shadow-purple-neon;
-    }
-
-    &-icon {
-      height: 6.4225rem;      
-    }
-
-    &-text {
-      display: flex;
-      align-items: center;
-      height: 5.8rem;
-      margin-left: -1rem;
-    }
-  }
-
-  &-subscribe {
-    &-data{
-      display: flex;
-    }
-    &-input {
-      position: relative;
-      width: 24.8125rem;
-      height: 3.375rem;
-      background: $color-navbar-button;
-      border: 0.0625rem solid $color-grey;
-      box-sizing: border-box;
-      border-radius: 0.0625rem;
-      font-family: $font-tertiary;
-      font-style: normal;
-      font-weight: normal;
-      font-size: 1rem;
-      line-height: 0.875rem;
-      color: $color-grey;
-      padding: 1.5rem 2rem;
-      margin-top: 2rem;
-      margin-right: 1.2rem;
-    }
-    &-button {
-      position: relative;
-      width: 13.625rem;
-      height: 3.375rem;
-      margin-top: 2rem;
-    }
-  }
-
-  &-image {
-    position: relative;
-    width: 37.5rem;
-    height: 31.07rem;
-  }
 }

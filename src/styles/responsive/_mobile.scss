@@ -345,14 +345,65 @@
     }
   }
 
+  .section-ecosystem {
+    flex-direction: column;
+    margin: 15rem 1rem;
+    padding: 15rem 4rem;
+    height: auto;
 
-
-
-  
-  .flippy-back {
-    background: $color-black !important;
-    background-color: $color-black !important;
+    .box {
+      width: 100%;
+    }
+    .main {
+      height: 100rem;
+      .subscribe {
+        &-data {
+          flex-direction: column;
+          padding: 4rem 0;
+        }
+        &-input {
+          font-size: 16px;
+          height: 54px;
+          line-height: 14px;
+          padding: 24px;
+          width: 316px;
+        }
+        &-button {
+          height: 54px;
+          width: 316px;
+          font-size: 16px;
+        }
+      }
+    }
+    .carousel {
+      margin: 10rem 0rem;
+      padding-top: 2rem;
+      padding-bottom: 2rem;
+      height: 85rem;
+      width: 100%;
+    }
   }
+
+  .footer {
+    display: flex;
+    flex-direction: column;
+    padding: 10rem 8rem;
+    height: auto;
+
+    &-info {
+      width: 100%;
+      .subtitle {
+        margin-top: 5rem;
+        margin-bottom: 5rem;
+      }
+    }
+    &-menu {
+      width: 100%;
+      flex-direction: column;
+      margin-top: 12rem;
+    }
+  }
+
 
   .toggle {
     width: 120vw;

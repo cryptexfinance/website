@@ -316,24 +316,119 @@ body {
   }
 }
 
-
-
-.section-news {
-  position: relative;
+.section-ecosystem {
   display: flex;
-  flex-direction: column;
-  padding: 2rem 2rem 0rem 2rem;
+  flex-direction: row;
+  height: 100vh;
+  margin: 4rem 1rem;
+  padding: 5rem 2rem;
 
-  .news-container {
+  .box {
+    width: 45%;    
+  }
+  .main {
     display: flex;
     flex-direction: column;
-    width: 100%;
+    justify-content: space-between;
+    height: 60vh;
+    .subtitle {
+      margin-top: 1.5rem;
+    }
+    .subscribe {
+      &-data {
+        display: flex;
+      }
+      
+      &-input {
+        position: relative;
+        width: 24.8125rem;
+        height: 3.375rem;
+        background: $color-navbar-button;
+        border: 0.0625rem solid $color-grey;
+        box-sizing: border-box;
+        border-radius: 0.0625rem;
+        font-family: $font-tertiary;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 1rem;
+        line-height: 0.875rem;
+        color: $color-grey;
+        padding: 1.5rem 2rem;
+        margin-top: 2rem;
+        margin-right: 1.2rem;
+      }
+    
+      &-button {
+        position: relative;
+        width: 13.625rem;
+        height: 3.375rem;
+        margin-top: 2rem;
+      }
+    }
+  }
+  .carousel {
+    height: 60vh;
+    width: 55%;
+    margin: 2rem 0rem;
+    .item-content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 0rem 1rem;
+
+    }
+  }
+}
+
+.footer {
+  display: flex;
+  flex-direction: row;
+  padding: 3rem 5rem;
+  background-color: $color-navbar-button;
+  height: 17rem;
+  
+  &-info {
+    display: flex;
+    flex-direction: column;
+    width: 35%;
+    .subtitle {
+      margin-top: 1rem;
+    }
+    .community {
+      display: flex;
+      flex-direction: row;
+    }
+    .social-item {
+      margin-right: 20px;      
+    }
+    .social-item-icon {
+      height: 25px;
+      width: 25px;
+    }
+  }
+  &-menu {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    width: 65%;
+    .links {
+      display: flex;
+      flex-direction: column;
+      padding: 0rem 2rem;
+    }
+    .subtitle {
+      text-decoration: none;
+      margin: 10px 1px;
+
+      &:hover {
+        cursor: pointer;
+        color: $shadow-purple-neon;
+      }
+    }
   }
 
-  @media only screen and (max-device-width: 800px) {
-    margin: 30rem 0rem;
-  }
-  @media only screen and (max-device-width: 600px) {
-    margin: 20rem 0rem;
+  .menu-logo {
+    margin-left: 0px;
+    width: 140px;
   }
 }

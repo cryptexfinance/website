@@ -3,8 +3,8 @@ import React from "react";
 import Layout from "../../components/Layout";
 import BlogRoll from "../../components/BlogRoll";
 import Header from "../../components/Header";
-import bg from "../../../static/bg.webp"
-import bgvideo from "../../../static/bg.mp4"
+import bg from "../../../static/bg.webp";
+import bgvideo from "../../../static/bg.mp4";
 
 export default class BlogIndexPage extends React.Component {
   render() {
@@ -33,4 +33,4 @@ export default class BlogIndexPage extends React.Component {
       </Layout>
     )
   }
-}
+};

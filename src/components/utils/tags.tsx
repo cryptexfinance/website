@@ -2,7 +2,7 @@ import { COLORS } from "./colors";
 
 export const OPTIONAL_COLORS = [
   "#FF9472",
-  COLORS.GREEN,
+  COLORS.AQUA,
   "#EBF875",
   "#7898FB",
   "#E1EF7E",
@@ -28,4 +28,4 @@ export function tagColor(tagsAndColors, postTag) {
     return OPTIONAL_COLORS[index];
   else
     return COLORS.SHADOW_PURPLE_NEON_SECONDARY;
-}
+};

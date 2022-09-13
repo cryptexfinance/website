@@ -1,10 +1,10 @@
-import React from "react"
-import { graphql } from "gatsby"
-import { PageLayout } from "../components"
-import { SEO } from "../utils"
-import Home from "./website/home"
-import bg from "../../static/bg.webp"
-import bgvideo from "../../static/bg.mp4"
+import React from "react";
+import { graphql } from "gatsby";
+import { PageLayout } from "../components";
+import { SEO } from "../utils";
+import Home from "./website/home";
+import bg from "../../static/bg.webp";
+import bgvideo from "../../static/bg.mp4";
 
 const App = ({ data }) => {
   return (

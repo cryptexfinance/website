@@ -23,6 +23,6 @@ const TemplateWrapper = ({ children }) => {
       <div>{children}</div>
     </div>
   )
-}
+};
 
-export default TemplateWrapper
+export default TemplateWrapper;
