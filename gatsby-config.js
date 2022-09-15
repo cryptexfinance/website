@@ -37,7 +37,7 @@ module.exports = {
       "TCAP",
     ],
     siteUrl:
-      process.env.URL || process.env.DEPLOY_URL || "http://localhost:8000",
+      process.env.SITE_URL || process.env.DEPLOY_URL || "http://localhost:8000",
   },
   flags: {
     DEV_SSR: true
