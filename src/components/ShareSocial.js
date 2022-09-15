@@ -1,5 +1,5 @@
-import React, { useEffect, useState } from 'react';
-import { useStaticQuery, graphql } from 'gatsby';
+import React, { useEffect, useState } from "react";
+import { useStaticQuery, graphql } from "gatsby";
 import { RedditShareButton, TwitterShareButton } from "react-share";
 import OverlayTrigger from "react-bootstrap/esm/OverlayTrigger";
 import Tooltip from "react-bootstrap/esm/Tooltip";

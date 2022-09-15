@@ -1,5 +1,5 @@
-import React, { useEffect, useState } from 'react';
-import { useStaticQuery, graphql } from 'gatsby';
+import React, { useEffect, useState } from "react";
+import { useStaticQuery, graphql } from "gatsby";
 import Col from "react-bootstrap/esm/Col";
 import { tagColor } from "./utils/tags";
 

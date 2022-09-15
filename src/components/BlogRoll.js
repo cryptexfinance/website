@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import Col from "react-bootstrap/esm/Col";
-import { useBreakpoint } from "gatsby-plugin-breakpoints";
 import PropTypes from "prop-types";
 import { graphql, StaticQuery } from "gatsby";
 import SearchNews from "./SearchNews";
@@ -12,7 +11,6 @@ export const BlogRoll = ({ data }) => {
   const keysDivider = "+++";
   const [tags, setTags] = useState([]);
   const [posts, setPosts] = useState([]);
-  const breakpoints = useBreakpoint();
   const [activePage, setActivePage] = useState(0);
   const [blogKeys, setBlogKeys] = useState([]);
   const [filteredBlogKeys, setFilteredBlogKeys] = useState([]);
