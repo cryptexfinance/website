@@ -1,7 +1,7 @@
 import React from "react";
 import { graphql } from "gatsby";
 import { PageLayout } from "../components";
-import { SEO } from "../utils";
+import { Seo } from "../utils";
 import Home from "./website/home";
 import bg from "../../static/bg.webp";
 import bgvideo from "../../static/bg.mp4";
@@ -9,7 +9,7 @@ import bgvideo from "../../static/bg.mp4";
 const App = ({ data }) => {
   return (
     <PageLayout>
-      <SEO title="Cryptex" />
+      <Seo title="Cryptex" />
       <video
         playsInline
         autoPlay

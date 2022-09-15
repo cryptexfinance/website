@@ -7,36 +7,6 @@ import telegram from "../../../../static/website/home/telegram.svg";
 
 
 const SectionMain = () => {
-  /* const loadProvider = async () => {
-    const provider = getDefaultProvider();
-    const randomSigner = ethers.Wallet.createRandom().connect(provider);
-    const ethcallProvider = new Provider(randomSigner.provider);
-
-    await ethcallProvider.init();
-
-    const currentTCAPOracleRead = new Contract(
-      tcapOracleContract.address,
-      tcapOracleContract.abi
-    );
-    const tcapOraclePriceCall = await currentTCAPOracleRead?.getLatestAnswer();
-    // @ts-ignore
-    const [currentTcapPrice] = await ethcallProvider?.all([tcapOraclePriceCall]);
-    const totalTcapPrice = currentTcapPrice.mul(10000000000);
-    const tPrice = ethers.utils.formatEther(totalTcapPrice.div(10000000000));
-    console.log("Prices");
-    console.log(tPrice);
-    console.log(totalTcapPrice);
-    //setTotalPrice(ethers.utils.formatEther(TotalTcapPrice));
-
-  };
-
-  useEffect(() => {
-    const loadData = async () => {
-      await loadProvider();
-    }
-    
-    loadData();
-  }, [networkStatus]);  */
 
   return ( 
     <div className="section-main">      
@@ -66,7 +36,7 @@ const SectionMain = () => {
             </div>
             <div className="button-learn-more">
               <a
-                href={"http://".concat(window.location.host).concat("#products")}
+                href="/#products"
                 rel="noopener noreferrer"
                 className="button-dark main-button main-button-link"
               >

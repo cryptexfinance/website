@@ -41,7 +41,7 @@ const Post = () => {
     load();
   }, [networkStatus]); */
 
-  /* if (loading) {
+  /*if (loading) {
     return <h4>Loading...</h4>
   } */
 

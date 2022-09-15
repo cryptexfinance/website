@@ -11,7 +11,7 @@ export const sortAlpha = (a, b) => {
   return 0;
 }
 
-export const sanitizePostData = (data: any): PostItemType => {
+export const sanitizePostData = (data) => {
   const postItem = {
     id: -1,
     title: "",

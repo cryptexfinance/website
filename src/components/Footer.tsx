@@ -4,8 +4,6 @@ import discord from "../../static/website/home/discord.svg";
 import telegram from "../../static/website/home/telegram.svg";
 
 const Footer = () => {
-  const originUrl = location.origin;
-    
   return (
     <section id="footer" className="footer">
       <div className="footer-info">

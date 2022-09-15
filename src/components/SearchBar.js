@@ -5,7 +5,7 @@ import SelectCryptex from "./Select";
 export const SearchBar = () => {
   const [criteria, setCriteria] = useState("");
 
-  const handleOnChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+  const handleOnChange = (event) => {
     console.log(event.target.value);
     setCriteria(event.target.value);
   };

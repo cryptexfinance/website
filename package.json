@@ -61,6 +61,7 @@
     "react-helmet": "^6.1.0",
     "react-html-parser": "^2.0.2",
     "react-media": "^1.10.0",
+    "react-number-format": "^5.0.0-beta.4",
     "react-responsive": "^9.0.0-beta.10",
     "react-select": "^5.4.0",
     "react-share": "^4.4.0",

@@ -30,7 +30,7 @@ const safetyItems = [
 
 const SectionSafety = () => { 
   const item = (product: SafetyType) => (
-    <div id={product.id} className="box item">
+    <div key={product.id} className="box item">
       <div className="items-info">
         <h2 className="terciary-header">
           {product.title}

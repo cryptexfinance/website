@@ -1,18 +1,43 @@
-import React from "react";
-import { useBreakpoint } from "gatsby-plugin-breakpoints";
+import React, { useContext, useEffect, useState } from "react";
+import { ethers } from "ethers";
+import { NumericFormat } from "react-number-format";
+import { contractsContext, signerContext } from "../../../context";
+import { getPriceInUSDFromPair } from "../../../utils";
 import coinGecko from "../../../../static/website/governance/coin-gecko.svg";
 import sushiLogo from "../../../../static/website/governance/sushi-logo.svg";
 import dfpLogo from "../../../../static/website/governance/dfp-logo.svg";
 import geminiLogo from "../../../../static/website/governance/gemini-hor-white-full.svg";
-import ctx from "../../../../static/website/governance/ctx.svg";
 
 
 const SectionGovernance = () => {
-  const breakpoints = useBreakpoint();
-    
+  const contracts = useContext(contractsContext);
+  const signer = useContext(signerContext);
+  const [ctxPrice, setCtxPrice] = useState("0");
+
+  useEffect(() => {
+    const load = async () => {
+      if (signer.ethcallProvider && contracts) {
+        const wethOraclePriceCall = await contracts.wethOracleRead?.getLatestAnswer();
+        const reservesCtxPoolCall = await contracts.ctxUniPairRead?.getReserves();  
+        // @ts-ignore
+        const [wethOraclePrice, reservesCtxPool] = await signer.ethcallProvider?.all([
+          wethOraclePriceCall,
+          reservesCtxPoolCall,
+        ]);
+        const currentPriceETH = ethers.utils.formatEther(wethOraclePrice.mul(10000000000));
+        const currentPriceCTX = await getPriceInUSDFromPair(
+          reservesCtxPool[0],
+          reservesCtxPool[1],
+          parseFloat(currentPriceETH)
+        );
+        setCtxPrice(currentPriceCTX.toString());
+      }
+    }; 
+    load();
+  }, [signer.ethcallProvider, contracts]);  
+
   return (
-    <div id="governance" className="section-governance">
-      
+    <div id="governance" className="section-governance">      
       <div className="box governance-main">
         <div className="info-top">
           <h1 className="heading-secondary">
@@ -40,23 +65,28 @@ const SectionGovernance = () => {
         <div className="info-bottom">
           <div className="hl-divider" />
           <div className="prices">
-          <div className="market-cap-box">
-            <span className="number-pink">
-              $171,729.15
-            </span>
-            <span className="label">
-              Total CTX Market Capitalization
-            </span>
-          </div>
-          <div  className="vl-divider" />
-          <div className="price-box">
-            <span className="number-blue">
-              $4.13
-            </span>
-            <span className="label">
-              CTX Price
-            </span>
-          </div>
+            <div className="market-cap-box">
+              <span className="number-pink">
+                $171,729.15
+              </span>
+              <span className="label">
+                Total CTX Market Capitalization
+              </span>
+            </div>
+            <div  className="vl-divider" />
+            <div className="price-box">              
+              <NumericFormat
+                className="number-blue"
+                value={ctxPrice}
+                displayType="text"
+                thousandSeparator
+                prefix="$"
+                decimalScale={2}
+              />
+              <span className="label">
+                CTX Price
+              </span>
+            </div>
           </div>
         </div>
       </div>
@@ -68,9 +98,6 @@ const SectionGovernance = () => {
           <p className="subtitle">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.
           </p>
-          <div className="link-container">
-
-          </div>
         </div>
         <div className="box box-button governance-item">
           <h2 className="terciary-header">
@@ -80,9 +107,6 @@ const SectionGovernance = () => {
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
             incididunt ut.
           </p>
-          <div className="link-container">
-
-          </div>
         </div>
         <div className="box box-button governance-item">
           <h2 className="terciary-header">
@@ -92,13 +116,10 @@ const SectionGovernance = () => {
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
             incididunt ut labore et dolore.
           </p>
-          <div className="link-container">
-
-          </div>
         </div>
       </div>
     </div>
   )
 }
 
-export default SectionGovernance
+export default SectionGovernance;

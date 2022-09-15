@@ -1,18 +1,18 @@
 import React from "react";
 import { PageLayout } from "../../components";
-import { SEO } from "../../utils";
+import { Seo } from "../../utils";
 import SectionMain from "./SectionMain";
 import SectionPosts from "./SectionPosts";
 import { SearchBar } from "../../components/SearchBar";
 import bg from "../../../static/bg.webp";
-import bgvideo from "../../../static/bg.mp4"
+import bgvideo from "../../../static/bg.mp4";
 
 
 const Education = () => {
 
   return (
     <PageLayout>
-      <SEO title="Cryptex Academy" />
+      <Seo title="Cryptex Academy" />
       <div className="academy">   
         <SectionMain />
         <div className="content">
