@@ -1,9 +1,7 @@
-/** https://www.gatsbyjs.org/docs/add-seo-component/ */
-
-import React from "react"
-import PropTypes from "prop-types"
-import { Helmet } from "react-helmet"
-import { useStaticQuery, graphql } from "gatsby"
+import React from "react";
+import PropTypes from "prop-types";
+import { Helmet } from "react-helmet";
+import { useStaticQuery, graphql } from "gatsby";
 
 const Seo = ({ description, lang, meta, image: img, title, pathname }) => {
   const { site } = useStaticQuery(query)
