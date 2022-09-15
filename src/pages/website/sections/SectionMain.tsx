@@ -4,12 +4,24 @@ import appEndpoint from "../../../endpoint";
 import twitter from "../../../../static/website/home/twitter.svg";
 import discord from "../../../../static/website/home/discord.svg";
 import telegram from "../../../../static/website/home/telegram.svg";
-
+import bg from "../../../../static/bg.webp";
+import bgvideo from "../../../../static/bg_main.mp4";
 
 const SectionMain = () => {
 
   return ( 
-    <div className="section-main">      
+    <div className="section-main">
+      <video
+        playsInline
+        autoPlay
+        loop
+        muted
+        poster={bg}
+        className="video"
+        id="bgvid"
+      >
+        <source src={bgvideo} type="video/mp4" />
+      </video>
       <div className="main-container">
         <div className="main-info">
           <div className="main-title">

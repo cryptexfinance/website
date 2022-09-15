@@ -1,17 +1,13 @@
 video {
-  // object-fit: inherit;
-  // width: 100vw;
-  // height: 100vh;
-  // position: fixed;
-  // top: 0;
-  // left: 0;
   object-fit: inherit;
   width: 100vw;
   height: 100vh;
-  position: fixed;
+  position: absolute;
+  margin-left: 10rem;
+  margin-bottom: 5rem;
   top: 0;
   left: 0;
-  opacity: 0.3;
+  opacity: 0.9;
   display: block;
   z-index: -2;
   // background-color: black;
