@@ -8,7 +8,6 @@ import cristian from '../../../../static/website/team/cristian.png';
 import tom from '../../../../static/website/team/tom.png';
 import voith from '../../../../static/website/team/voith.png';
 import jorge from '../../../../static/website/team/jorge.png';
-import shahar from '../../../../static/website/team/shahar.png';
 import cullen from '../../../../static/website/team/cullen.png';
 import james from '../../../../static/website/team/james.png';
 import oliver from '../../../../static/website/team/oliver.png';
@@ -23,7 +22,6 @@ import jorgem from '../../../../static/website/team/jorgem.png';
 import cullenm from '../../../../static/website/team/cullenm.png';
 import jamesm from '../../../../static/website/team/jamesm.png';
 import oliverm from '../../../../static/website/team/oliverm.png';
-import shaharm from '../../../../static/website/team/shaharm.png';
 import zakm from '../../../../static/website/team/zakm.png';
 import donm from '../../../../static/website/team/donm.png';
 import arrowInactive from '../../../../static/website/news/arrow-down.svg';
@@ -72,13 +70,6 @@ const teamData  =  [
       description: "Full Stack developer with more than seven years of experience using technologies like react, react native, python, postgreSQL, among others. Jorge holds a M.S. in Computer Science degree, also he published a paper on the 2015 IEEE International Conference on Big Data.",
       image: jorge,
       mobile_image: jorgem
-    },
-    {
-      name: "Shahar",
-      position: "Social & Community Lead",
-      description: "Shahar has led acquisition, creative planning, and marketing initiatives for the past 7 years. Head of marketing and a team leader with extensive expertise in the FinTech space. Father to a needy schnauzer and misses his BlackBerry every single day.",
-      image: shahar,
-      mobile_image: shaharm
     },
     {
       name: "Cullen",
