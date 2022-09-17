@@ -74,13 +74,6 @@ const teamData  =  [
       mobile_image: jorgem
     },
     {
-      name: "Shahar",
-      position: "Social & Community Lead",
-      description: "Shahar has led acquisition, creative planning, and marketing initiatives for the past 7 years. Head of marketing and a team leader with extensive expertise in the FinTech space. Father to a needy schnauzer and misses his BlackBerry every single day.",
-      image: shahar,
-      mobile_image: shaharm
-    },
-    {
       name: "Cullen",
       position: "Video Director",
       description: "Writer, Director, and VFX Artist, who's done VFX for shows like Man in the High Castle, Room 104, and Silicon Valley. Born and raised in the Midwest, Cullen always had a passion for movies and storytelling. After years of studying to be a doctor, he abandoned that dream for another and moved to Hollywood. SCUBA diver, adventure seeker, and salsa dancer.",
