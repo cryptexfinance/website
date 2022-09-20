@@ -60,6 +60,7 @@
     "react-flippy": "^1.1.0",
     "react-helmet": "^6.1.0",
     "react-html-parser": "^2.0.2",
+    "react-icons": "^4.4.0",
     "react-media": "^1.10.0",
     "react-number-format": "^5.0.0-beta.4",
     "react-responsive": "^9.0.0-beta.10",

@@ -83,7 +83,7 @@ body {
     &-container {
       display: flex;
       flex-direction: column;
-      padding: 4rem;
+      padding: 7rem 4rem;
     }
     &-info {
       padding: 2rem 1rem;
@@ -255,6 +255,7 @@ body {
     &-item {
       display: flex;
       flex-direction: column;
+      justify-content: space-between;
       height: 30%;
       max-height: 30%;
       width: 100%;
@@ -262,6 +263,18 @@ body {
       &:hover {
         cursor: pointer;
       }
+
+      .item-icon {
+        color: white;
+      }
+    }
+    &-item-content {
+      display: flex;
+      flex-direction: column;
+    }
+    &-item-footer {
+      display: flex;
+      justify-content: flex-end;
     }
   }
 
@@ -308,11 +321,29 @@ body {
         margin-top: 1rem;
       }
     }
-
+    &-info {
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+    }
     &-link {
       display: flex;
       justify-content: flex-end;
     }
+    &-logo-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100%;      
+    }
+    .safety-logo {
+      height: 140px;
+      margin-top: 1rem;
+      @media only screen and (max-device-width: 1400px) {
+        height: 120px;
+      }
+    }
+
   }
 }
 
@@ -353,7 +384,7 @@ body {
         font-size: 1rem;
         line-height: 0.875rem;
         color: $color-grey;
-        padding: 1.5rem 2rem;
+        padding: 1.5rem 1.1rem;
         margin-top: 2rem;
         margin-right: 1.2rem;
       }
@@ -404,6 +435,9 @@ body {
     .social-item-icon {
       height: 25px;
       width: 25px;
+    }
+    .medium {
+      height: 20px;
     }
   }
   &-menu {

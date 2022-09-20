@@ -22,6 +22,7 @@ const SearchInput = ({
     <div className="search-box">
       <FaSearch className="search-icon" />
       <Form.Control
+        id="search-input"
         placeholder={placeholder}
         className="search-input"
         value={value}

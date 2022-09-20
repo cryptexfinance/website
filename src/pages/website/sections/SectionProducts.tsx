@@ -12,13 +12,13 @@ const products = [
   {
     id: "tcap",
     title: "TCAP",
-    subtitle: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor",
+    subtitle: "Real time exposure to the whole crypto market. ",
     link: "/tcap"
   },
   {
-    id: "nft",
-    title: "THING",
-    subtitle: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor",
+    id: "jpegz",
+    title: "JPEGZ",
+    subtitle: "Real time exposure to the top 10 most popular NFT collections",
     link: "/nft"
   }
 ]
@@ -67,12 +67,8 @@ const SectionProducts = () => {
   return (
     <div id="products" className="section-products">
       <h1 className="header">
-        Cryptex Products
+        Index Tokens
       </h1>
-      <p className="subheader">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-        incididunt ut labore et dolore magna aliqua.
-      </p>
       <div className="products">
         {products.map((product) => {
           return item(product);

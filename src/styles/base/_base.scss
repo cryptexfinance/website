@@ -45,7 +45,7 @@ body {
   font-weight: normal;
   font-size: 1rem;
   line-height: 0.875rem;
-  color: $color-grey;
+  color: $color-grey-light;
   padding: 1.5rem 2rem;
 }
 
@@ -69,13 +69,15 @@ body {
   .search-icon {
     position: absolute;
     align-self: center;
-    color: $color-grey;
+    color: $color-grey-light;
     font-size: 1.2rem;
-    margin-left: 0.9rem;
+    margin-left: 1rem;
     z-index: 1;
   }
   .search-input {
-    padding-left: 2.5rem;
+    padding-left: 2.7rem;
+    font-size: 1.2rem;
+    color: $color-grey-light;
   }
 }
 

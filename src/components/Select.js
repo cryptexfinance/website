@@ -10,7 +10,7 @@ const customStyles = {
   }),
   control: (provided, state) => ({
     ...provided,
-    color: COLORS.GREY,
+    color: COLORS.GREY_LIGHT,
     backgroundColor: COLORS.BACKGROUND_BOXES,
     borderWidth: 0.8,
     borderRadius: 1,
@@ -18,11 +18,11 @@ const customStyles = {
   }),
   dropdownIndicator: (provided, state) => ({
     ...provided,
-    color: COLORS.GREY,
+    color: COLORS.GREY_LIGHT,
   }),
   indicatorSeparator: (provided, state) => ({
     ...provided,
-    color: COLORS.GREY,
+    color: COLORS.GREY_LIGHT,
   }),
   menu: (provided, state) => ({
     ...provided,
@@ -31,24 +31,24 @@ const customStyles = {
   }),
   option: (provided, state) => ({
     ...provided,
-    color: state.isSelected ? COLORS.DARK_CLEAN : COLORS.GREY,
+    color: state.isSelected ? COLORS.DARK_CLEAN : COLORS.GREY_LIGHT,
     backgroundColor: state.isSelected ? COLORS.SHADOW_PURPLE_NEON : COLORS.BACKGROUND_BOXES,
     padding: 10,
-    fontFamily: "Space Mono"
+    fontFamily: "Space Mono",
   }),
   input: (provided, state) => ({
     ...provided,
-    color: COLORS.GREY,
+    color: COLORS.GREY_LIGHT,
     fontFamily: "Space Mono"
   }),
   placeholder: (provided, state) => ({
     ...provided,
-    color: COLORS.GREY,
+    color: COLORS.GREY_LIGHT,
     fontFamily: "Space Mono"
   }),
   singleValue: (provided, state) => ({
     ...provided,
-    color: COLORS.GREY,
+    color: COLORS.GREY_LIGHT,
     fontFamily: "Space Mono"
   }),
 }

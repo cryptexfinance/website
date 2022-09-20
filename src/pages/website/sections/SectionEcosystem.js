@@ -82,15 +82,20 @@ const SectionCommunity = ({ data }) => {
             Ecosystem
           </h1>
           <h3 className="subtitle">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-            sed do eiusmod tempor incididunt ut labore et
-            dolore magna aliqua.
+            Join our community and participate in a one of a kind Sewage Fruit
+            journey to take action, claim prizes and make frens.
           </h3>
         </div>
         <div className="subscribe">
           <form onSubmit={handleSubmit}>
             <div className="subscribe-data">
-              <input id="email" value={email} onChange={handleEmailChange} className="subscribe-input" placeholder="Email" /> 
+              <input
+                id="email"
+                value={email}
+                onChange={handleEmailChange}
+                className="subscribe-input"
+                placeholder="Subscribe to Newsletter"
+              /> 
               <button className="subscribe-button button-pink">Subscribe</button>
             </div>  
           </form>
@@ -104,18 +109,8 @@ const SectionCommunity = ({ data }) => {
       >
         <Carousel.Item>
           <div className="item-content">
-            <h1 className="header">Wallets</h1>
+            <h1 className="header">Sewage Fruits</h1>
           </div>  
-        </Carousel.Item>
-        <Carousel.Item>
-          <div className="item-content">
-            <h1 className="header">Community</h1>
-          </div>
-        </Carousel.Item>
-        <Carousel.Item>
-          <div className="item-content">
-            <h1 className="header">Collateralls</h1>
-          </div>
         </Carousel.Item>
       </Carousel>
     </div>

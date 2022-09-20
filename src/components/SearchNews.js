@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import SelectCryptex from "./Select";
+import SearchInput from "./SearchInput";
 import { FaSearch } from "@react-icons/all-files/fa/FaSearch";
 
 
@@ -50,13 +51,6 @@ const SearchNews = ({
     
   return (
     <div className="filter-box">
-      <FaSearch className="search-icon" />
-      <input
-        id="news-search"
-        value={searchCriteria} onChange={(e) => onChange(e.target.value)}
-        className="newsbox-search"
-        placeholder="Search"
-      />
       <SelectCryptex
         isClearable={true}
         isMulti={false}
@@ -65,6 +59,11 @@ const SearchNews = ({
         placeholder="Filter"
         onSelectChange={onSelectChange}
       />
+      <SearchInput
+        placeholder="Search"
+        value={searchCriteria}
+        onChange={(e) => onChange(e.target.value)}
+      />   
     </div>    
   );
 }

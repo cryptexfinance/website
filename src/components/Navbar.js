@@ -107,11 +107,8 @@ export default (props) => {
               <Nav.Link as={Link} to={ecosystemUrl} title="Ecosystem">
                 Ecosystem
               </Nav.Link>
-              <Nav.Link as={Link} to={academyUrl} title="Academy">
-                Academy
-              </Nav.Link>
               <Nav.Link as={Link} to={newsUrl} title="News">
-                News
+                Blog
               </Nav.Link>
               <Nav.Link as={Link} to={faqUrl} title="FAQ">
                 FAQ

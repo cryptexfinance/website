@@ -2,6 +2,7 @@ export const COLORS = {
   AQUA: "#007D9C",
   CYAN: "#00CFCF",
   GREY: "#74728A",
+  GREY_LIGHT: "#d5d4e3",
   PRIMARY_PINK: "#E440F2",
   PRIMARY_PURPLE: "#A440F2",
   PRIMARY_GREEN: "#38D6B2",

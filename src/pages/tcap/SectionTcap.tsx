@@ -85,7 +85,7 @@ const SectionTcap = () => {
   return (
     <div className="products-tcap">
       <h1 className="header">
-          TCAP: The World’s first Crypto Token Index 
+        TCAP: Total Crypto Market Cap Index Token
       </h1>
       <div className="content">
         <div className="box main">
@@ -94,9 +94,10 @@ const SectionTcap = () => {
                 What is TCAP?
               </h2>
               <p className="subtitle">
-                TCAP gives holders real-time price exposure to total cryptocurrency market cap. It's a new,
-                200% fully backed, fully collateralized asset that’s both audited and accurately
-                representative of the entire cryptocurrency complex by total market capitalization.
+                TCAP gives holders real-time price exposure to total cryptocurrency market cap.
+                It's a new, 125% fully backed, fully collateralized asset that’s both audited
+                and accurately representative of the entire cryptocurrency complex by
+                total market capitalization.
               </p>
               <div className="icons">
 

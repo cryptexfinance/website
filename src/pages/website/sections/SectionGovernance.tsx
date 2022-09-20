@@ -1,12 +1,42 @@
 import React, { useContext, useEffect, useState } from "react";
 import { ethers } from "ethers";
 import { NumericFormat } from "react-number-format";
+import { FaArrowRight } from "react-icons/fa";
 import { contractsContext, signerContext } from "../../../context";
 import { getPriceInUSDFromPair } from "../../../utils";
 import coinGecko from "../../../../static/website/governance/coin-gecko.svg";
 import sushiLogo from "../../../../static/website/governance/sushi-logo.svg";
 import dfpLogo from "../../../../static/website/governance/dfp-logo.svg";
 import geminiLogo from "../../../../static/website/governance/gemini-hor-white-full.svg";
+
+
+type GovernanceType = {
+  id: string;
+  title: string;
+  info: string;
+  link: string;
+}
+
+const governanceItems = [
+  {
+    id: "1",
+    title: "Proposals",
+    info: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.",
+    link: "/tcap",
+  },
+  {
+    id: "2",
+    title: "Vote",
+    info: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut.",
+    link: "/nft",
+  },
+    {
+    id: "3",
+    title: "Delegate",
+    info: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.",
+    link: "/nft",
+  }
+]
 
 
 const SectionGovernance = () => {
@@ -35,6 +65,22 @@ const SectionGovernance = () => {
     }; 
     load();
   }, [signer.ethcallProvider, contracts]);  
+
+  const item = (feature: GovernanceType) => (
+    <div key={feature.id} className="box box-button governance-item">
+      <div className="governance-item-content">
+        <h2 className="terciary-header">
+          {feature.title}
+        </h2>              
+        <p className="subtitle">
+          {feature.info}
+        </p>
+       </div> 
+      <div className="governance-item-footer">
+        <FaArrowRight className="item-icon"size={20} />
+      </div>
+    </div>
+  );
 
   return (
     <div id="governance" className="section-governance">      
@@ -91,32 +137,9 @@ const SectionGovernance = () => {
         </div>
       </div>
       <div className="governance-detail">
-        <div className="box box-button governance-item">
-          <h2 className="terciary-header">
-            Proposals
-          </h2>
-          <p className="subtitle">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.
-          </p>
-        </div>
-        <div className="box box-button governance-item">
-          <h2 className="terciary-header">
-            Vote
-          </h2>
-          <p className="subtitle">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-            incididunt ut.
-          </p>
-        </div>
-        <div className="box box-button governance-item">
-          <h2 className="terciary-header">
-            Delegate
-          </h2>
-          <p className="subtitle">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-            incididunt ut labore et dolore.
-          </p>
-        </div>
+        {governanceItems.map((govItem) => {
+          return item(govItem);
+        })}
       </div>
     </div>
   )

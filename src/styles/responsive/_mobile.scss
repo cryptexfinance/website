@@ -1,4 +1,4 @@
-@media only screen and (max-device-width: 600px) and (max-device-height: 1200px) and (orientation: portrait) {
+@media only screen and (max-device-width: 600px) and (orientation: portrait) {
  
   .navbar,
   .navbar div {
@@ -342,6 +342,10 @@
           text-align: justify;
         }
       }
+      .safety-logo {
+        height: 110px;
+        margin-top: 3rem;
+      }
     }
   }
 
@@ -404,7 +408,6 @@
     }
   }
 
-
   .toggle {
     width: 120vw;
   }
@@ -413,6 +416,17 @@
     .togglet,
     .toggleta {
       line-height: 28px;
+    }
+  }
+
+  @media only screen and (max-device-width: 370px) {
+    .section-safety { 
+      .items {
+        .safety-logo {
+          height: 95px;
+          margin-top: 2rem;
+        }
+      }
     }
   }
 

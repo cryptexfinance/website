@@ -1,10 +1,14 @@
 import React from "react";
+import quanstamp from "../../../../static/website/safety/quantstamp.svg";
+import weth from "../../../../static/website/safety/weth.svg";
+import immunefi from "../../../../static/website/safety/immunefi.svg";
 
 type SafetyType = {
   id: string;
   title: string;
   subtitle: string;
   link: string;
+  logo: string;
 }
 
 const safetyItems = [
@@ -12,32 +16,42 @@ const safetyItems = [
     id: "audit",
     title: "Audit",
     subtitle: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor",
-    link: "/tcap"
+    link: "/tcap",
+    logo: quanstamp,
   },
   {
     id: "collateral",
     title: "Collateral",
     subtitle: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor",
-    link: "/nft"
+    link: "/nft",
+    logo: weth,
   },
     {
     id: "bounty",
     title: "Bounties",
     subtitle: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor",
-    link: "/nft"
+    link: "/nft",
+    logo: immunefi,
   }
 ]
 
 const SectionSafety = () => { 
-  const item = (product: SafetyType) => (
-    <div key={product.id} className="box item">
+  const item = (feature: SafetyType) => (
+    <div key={feature.id} className="box item">
       <div className="items-info">
         <h2 className="terciary-header">
-          {product.title}
+          {feature.title}
         </h2>
         <p className="subtitle">
-          {product.subtitle}
+          {feature.subtitle}
         </p>
+        <div className="items-logo-container">
+          <img
+            src={feature.logo}
+            className="safety-logo"
+            alt={feature.title}
+          />
+        </div>
       </div>
     </div>
   );
