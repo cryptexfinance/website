@@ -35,3 +35,37 @@
 .css-1pahdxg-control:hover {
   border-color: $shadow-purple-neon-secondary !important;
 }
+
+@media only screen and (min-device-width : 601px) and (max-device-width : 1090px) and (orientation: portrait) {
+  .select-cryptex {
+    width: 45% !important;
+    &__control {
+      height: 5rem;
+    }
+    &__placeholder {
+      font-size: 2rem;
+    }
+    &__option {
+      font-size: 2rem;
+    }
+  }
+}
+
+@media only screen and (max-device-width: 600px) {
+  .select-cryptex {
+    width: 100% !important;
+
+    &__control {
+      height: 10rem;
+    }
+    &__input {
+      font-size: 4rem !important;
+    }
+    &__placeholder {
+      font-size: 4rem;
+    }
+    &__option {
+      font-size: 4rem;
+    }
+  }
+}

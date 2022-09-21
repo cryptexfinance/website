@@ -24,11 +24,11 @@
       width: 45%;
     }
   
-    .heading {
+    .heading-secondary {
       margin: 1rem 0rem;
     }
   
-    .text {
+    .subheader {
       text-align: justify;
       color: $color-dark-clean;
     }
@@ -76,16 +76,16 @@
     background-color: $color-background-box;
     border-radius: 5px;
     
-    &-image {
-      height: 15rem;
-      width: 100%;
-    }
     .info-container {
       display: flex;
       flex-direction: column;
       justify-content: space-between;
       height: 100%;
     }
+    &-image {
+      height: 15rem;
+      width: 100%;
+    }    
     &-content {
       padding: 1rem 0.5rem;
       .title {
@@ -104,7 +104,6 @@
           margin-bottom: 0rem;
         }
       }
-
       .tag-items {
         display: flex;
         padding-bottom: 0.6rem;

@@ -22,9 +22,9 @@ const SectionMain = () => {
       <div className="main-container">
         <div className="main-info">
           <div className="main-title">
-            <h3>
+            <h1>
               Cryptex Finance
-            </h3>
+            </h1>
           </div>
           <p className="subheader">
             Innovative, Secure, Collateralized, Trustless and Decentralized Index Tokens

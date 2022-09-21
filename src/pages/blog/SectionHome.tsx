@@ -5,11 +5,10 @@ const SectionHome = () => {
   return (
     <div className="home">
       <div className="description">
-        <h5 className="heading">Cyptex Blog</h5>
-        <p className="text">
+        <h2 className="heading-secondary">Cyptex Blog</h2>
+        <p className="subheader">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-          incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-          exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+          incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
         </p>
       </div>      
     </div>

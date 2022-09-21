@@ -1,19 +1,24 @@
 video {
   object-fit: inherit;
-  width: 100vw;
-  height: 100vh;
+  width: 100%;
   position: absolute;
-  margin-left: 10rem;
-  margin-bottom: 5rem;
+  margin-left: 5rem;
   top: 0;
   left: 0;
-  opacity: 0.9;
   display: block;
   z-index: -2;
-  // background-color: black;
+  @media only screen and (max-device-width: 1300px) {
+    padding-top: 6rem;
+  }
+  @media only screen and (max-device-width: 1180px) {
+    height: auto;
+    margin-left: 5rem;
+    padding-top: 12rem;
+  }
 }
 
 .bg-black {
   background-color: black;
   background: black;
 }
+

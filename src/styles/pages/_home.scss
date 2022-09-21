@@ -36,41 +36,6 @@ body {
     width: 120px;
 }
 
-.main {
-  &-divider {
-    margin-top: 0.5rem;
-    margin-bottom: 0.5rem;
-    width: 0.0625rem;
-    height: 5.125rem;
-    background: $color-grey-dark;
-  }
-
-  &-tcap {
-    display: flex;
-    align-items: center;
-    padding-left: 0.5rem;
-    letter-spacing: 0.01875rem;
-    color: $color-grey;
-    
-    &-image{
-      width: 1.75rem;
-    }
-  }
-
-  &-button {
-    display: flex;
-		flex-direction: column;
-		align-items: center;
-    justify-content: center;
-    width: 13.4375rem;
-		height: 3.6rem;
-    &:hover {
-      color: $color-white !important;
-      text-decoration: none;
-    }
-  }
-}
-
 .section-main {
   display: flex;
   align-items: flex-end;
@@ -98,6 +63,19 @@ body {
       flex-direction: row;
       &-actions { 
         display: flex;
+      }
+    }
+    &-button {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      width: 13rem;
+      height: 3.5rem;
+
+      &:hover {
+        color: $color-white  !important;
+        text-decoration: none;
       }
     }
   }
@@ -176,7 +154,6 @@ body {
     margin: 1rem;
     padding: 2rem 0rem 1.5rem 0rem;
   }
-
   .governance {
     &-main {
       display: flex;
@@ -277,7 +254,6 @@ body {
       justify-content: flex-end;
     }
   }
-
 }
 
 .section-safety {
@@ -296,7 +272,6 @@ body {
     text-align: center;
     width: 60%;
   }
-
   .items {
     display: flex;
     flex-direction: row;
@@ -342,6 +317,9 @@ body {
       @media only screen and (max-device-width: 1400px) {
         height: 120px;
       }
+      @media only screen and (max-device-width: 1024px) {
+        height: 75px;
+      }
     }
 
   }
@@ -369,7 +347,6 @@ body {
       &-data {
         display: flex;
       }
-      
       &-input {
         position: relative;
         width: 24.8125rem;
@@ -388,7 +365,6 @@ body {
         margin-top: 2rem;
         margin-right: 1.2rem;
       }
-    
       &-button {
         position: relative;
         width: 13.625rem;
@@ -464,5 +440,42 @@ body {
   .menu-logo {
     margin-left: 0px;
     width: 140px;
+  }
+}
+
+@media only screen and (max-device-width: 1180px) { 
+  .section-products {
+    margin: 2rem 1rem;
+    height: 90vh;
+  }
+  .section-governance {
+    height: 90vh;
+    .governance {
+      &-main {
+        height: 55vh;
+      }
+      &-detail {
+        height: 55vh;
+      }
+    }
+  }
+  .section-safety {
+    .items {
+      .safety-logo {
+        height: 75px;
+      }
+    }
+  }
+  .section-ecosystem {
+    height: 90vh;
+    .main {
+      height: 55vh;
+    }
+    .carousel {
+      height: 55vh;
+    }
+  }
+  .footer {
+    height: 20rem;  
   }
 }

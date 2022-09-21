@@ -99,9 +99,26 @@ body {
   }
 }
 
-@media only screen and (min-device-width: 1001px) and (max-device-width: 1090px) and (orientation : portrait) {
+@media only screen and (min-device-width: 601px) and (max-device-width: 1090px) and (orientation : portrait) {
   .nav-default {
     display: None;
+  }
+  .form-control {
+    height: 5rem;
+  }
+  .search-box {
+    display: flex;
+    width: 100%;
+
+    .search-icon {
+      font-size: 2rem;
+      margin-left: 1.2rem;
+      z-index: 1;
+    }
+    .search-input {
+      padding-left: 4.2rem;
+      font-size: 2rem;
+    }
   }
 }
 

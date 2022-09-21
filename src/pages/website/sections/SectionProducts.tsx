@@ -45,7 +45,7 @@ const SectionProducts = () => {
   const item = (product: ProductType) => (
     <div key={product.id} className="box products-item">
       <div className="products-info">
-        <h2 className="terciary-header">
+        <h2 className="heading-secondary">
           {product.title}
         </h2>
         <p className="subtitle">

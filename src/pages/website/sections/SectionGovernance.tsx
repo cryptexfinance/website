@@ -33,7 +33,7 @@ const governanceItems = [
     {
     id: "3",
     title: "Delegate",
-    info: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.",
+    info: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.",
     link: "/nft",
   }
 ]
@@ -69,9 +69,9 @@ const SectionGovernance = () => {
   const item = (feature: GovernanceType) => (
     <div key={feature.id} className="box box-button governance-item">
       <div className="governance-item-content">
-        <h2 className="terciary-header">
+        <h3 className="terciary-header">
           {feature.title}
-        </h2>              
+        </h3>              
         <p className="subtitle">
           {feature.info}
         </p>
@@ -86,9 +86,9 @@ const SectionGovernance = () => {
     <div id="governance" className="section-governance">      
       <div className="box governance-main">
         <div className="info-top">
-          <h1 className="heading-secondary">
+          <h2 className="heading-secondary">
             Decentralized Governance
-          </h1>
+          </h2>
           <p className="subtitle">
             Cryptex protocol is fully decentralized and governed by
             the community. CTX holders can vote on protocol updgrades.
