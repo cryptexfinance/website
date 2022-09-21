@@ -80,6 +80,21 @@ h3, .terciary-header {
   }
 }
 
+.subheader2 {
+  font-family: $font-tertiary;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 1.7rem;
+  line-height: 1.375rem;
+  letter-spacing: 0.5px;
+  color: $color-grey-light;
+  text-align: left;
+
+  @media (max-width: 1300px) {
+    font-size: 1.5rem;
+  }
+}
+
 .subtitle {
   font-family: $font-tertiary;
   font-style: normal;

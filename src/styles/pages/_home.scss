@@ -52,7 +52,7 @@ body {
     }
     &-info {
       padding: 2rem 1rem;
-      width: 50%;
+      width: 100%;
     }
     &-title {
       letter-spacing: 0.6px;
@@ -93,6 +93,9 @@ body {
   }
   .button-to-app {
     margin-right: 1rem;
+  }
+  .button-learn-more {
+    display: none;
   }
 }
 

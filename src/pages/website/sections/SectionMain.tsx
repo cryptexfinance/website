@@ -1,10 +1,39 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Col from "react-bootstrap/esm/Col";
 import appEndpoint from "../../../endpoint";
 import bg from "../../../../static/bg.webp";
 import bgvideo from "../../../../static/bg_main.mp4";
 
 const SectionMain = () => {
+  const [intervalChanged, setIntervalChanged] = useState(false);
+  const [currentWord, setCurrentWord] = useState(0);
+  const words = [
+    "Innovative",
+    "Secure",
+    "Collateralized",
+    "Trustless",
+    "Decentralized",
+  ]
+
+  const setNewWord = () => {
+    let cw = currentWord + 1;
+    if (cw < words.length) {
+      setCurrentWord(cw);
+    } else {
+      setCurrentWord(0);
+    }
+  };
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setIntervalChanged((prevState) => !prevState);
+    }, 4000);
+    return () => clearInterval(interval);
+  }, []);
+
+  useEffect(() => {
+    setNewWord();
+  }, [intervalChanged]);
 
   return ( 
     <div className="section-main">
@@ -26,8 +55,8 @@ const SectionMain = () => {
               Cryptex Finance
             </h1>
           </div>
-          <p className="subheader">
-            Innovative, Secure, Collateralized, Trustless and Decentralized Index Tokens
+          <p className="subheader2">
+            {words[currentWord]} Index Tokens
           </p>
         </div>
         <div className="main-buttons">

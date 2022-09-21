@@ -4,9 +4,6 @@ import { NumericFormat } from "react-number-format";
 import { FaArrowRight } from "react-icons/fa";
 import { contractsContext, signerContext } from "../../../context";
 import { getPriceInUSDFromPair } from "../../../utils";
-import coinGecko from "../../../../static/website/governance/coin-gecko.svg";
-import sushiLogo from "../../../../static/website/governance/sushi-logo.svg";
-import dfpLogo from "../../../../static/website/governance/dfp-logo.svg";
 import geminiLogo from "../../../../static/website/governance/gemini-hor-white-full.svg";
 
 
@@ -94,15 +91,6 @@ const SectionGovernance = () => {
             the community. CTX holders can vote on protocol updgrades.
           </p>
           <div className="icons">
-            <a href="https://www.coingecko.com/en/coins/cryptex-finance" rel="noreferrer" target="_blank">
-              <img src={coinGecko} className="governance-icon gecko" alt="Coin Gecko" />
-            </a>
-            <a href="https://analytics.sushi.com/pairs/0x2a93167ed63a31f35ca4788e2eb9fbd9fa6089d0" rel="noreferrer" target="_blank">
-              <img src={sushiLogo}  className="governance-icon uni" alt="Uni Logo" />
-            </a>
-            <a href="https://defipulse.com/cryptex" rel="noreferrer" target="_blank">
-              <img src={dfpLogo} className="governance-icon dfp" alt="DFP"  />        
-            </a>
             <a href="https://www.gemini.com/prices/cryptex?utm_source=cryptex&utm_medium=link&utm_campaign=web_referral" rel="noreferrer" target="_blank">
               <img src={geminiLogo} className="governance-icon gemini" alt="gemini logo" /> 
             </a>

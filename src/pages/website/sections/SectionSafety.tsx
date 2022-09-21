@@ -15,21 +15,21 @@ const safetyItems = [
   {
     id: "audit",
     title: "Audit",
-    subtitle: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor",
+    subtitle: "Review our audits here.",
     link: "/tcap",
     logo: quanstamp,
   },
   {
     id: "collateral",
     title: "Collateral",
-    subtitle: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor",
+    subtitle: "Review the vault monitoring here.",
     link: "/nft",
     logo: weth,
   },
     {
     id: "bounty",
     title: "Bounties",
-    subtitle: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor",
+    subtitle: "Review our bounties here",
     link: "/nft",
     logo: immunefi,
   }

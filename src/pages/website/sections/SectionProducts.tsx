@@ -18,7 +18,7 @@ const products = [
   {
     id: "jpegz",
     title: "JPEGZ",
-    subtitle: "Real time exposure to the top 10 most popular NFT collections",
+    subtitle: "Real time exposure to the top 10 most popular NFT collections.",
     link: "/nft"
   }
 ]
@@ -53,13 +53,18 @@ const SectionProducts = () => {
         </p>
       </div>
       <div className="products-link">
-        <a
-          className="link"
-          href={siteUrl.concat(product.link)}
-          rel="noreferrer"
-        >
-          Learn More
-        </a>
+        {product.id === "tcap" ?
+          (
+            <a
+              className="link"
+              href={siteUrl.concat(product.link)}
+              rel="noreferrer"
+            >
+              Learn More
+            </a>
+          ) : (
+            <a className="link">Coming Soon</a>
+          )}
       </div>
     </div>
   );
