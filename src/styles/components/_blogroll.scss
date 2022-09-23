@@ -1,6 +1,7 @@
 .section-blogroll {
   display: flex;
   flex-direction: column;
+  margin-bottom: 15rem;
 
   h3, h5,h6 {
     color: white;
@@ -75,6 +76,8 @@
     padding: 1rem;
     background-color: $color-background-box;
     border-radius: 5px;
+    transition: display 0.2s;
+    transition-timing-function: linear;
     
     .info-container {
       display: flex;
@@ -131,6 +134,15 @@
       font-weight: 400;
       line-height: 1.2rem;
     }
+  }
+  .post-item.hide {
+    display: none;
+  }
+  .pagination {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 1rem;
   }
 
 }

@@ -5,13 +5,15 @@ import { graphql, StaticQuery } from "gatsby";
 import SearchNews from "./SearchNews";
 import { tagColor } from "./utils/tags";
 import { sortAlpha } from "./utils/utils";
+import { Button } from "react-bootstrap";
 
 
 export const BlogRoll = ({ data }) => {
+  const itemsPerPage = 12;
   const keysDivider = "+++";
+  const [postsCount, setPostsCount] = useState(12);
   const [tags, setTags] = useState([]);
   const [posts, setPosts] = useState([]);
-  const [activePage, setActivePage] = useState(0);
   const [blogKeys, setBlogKeys] = useState([]);
   const [filteredBlogKeys, setFilteredBlogKeys] = useState([]);
   const [tagList, setTagList] = useState([]);
@@ -71,9 +73,14 @@ export const BlogRoll = ({ data }) => {
     const postTags = node.frontmatter.tags.join(keysDivider).toLowerCase() + keysDivider;
     const key = [node.frontmatter.title.toLowerCase(), postTags].join(keysDivider);
     const indexOf = filteredBlogKeys.indexOf(key.toLowerCase());
+    let className = "post-item";
+    if (indexOf >= postsCount) {
+      className = "post-item hide";
+    }
+
     if (indexOf >= 0) {
       return (
-        <div key={key} className="post-item">
+        <div key={key} className={className}>
           <div className="post-img-container">
             <img
               src={node.frontmatter.featuredimage.childImageSharp.fluid.src}
@@ -118,6 +125,14 @@ export const BlogRoll = ({ data }) => {
     return <></>;
   };
 
+  const onLoadMoreClick = () => {
+    let pc = postsCount + itemsPerPage;
+    if (pc > filteredBlogKeys.length) { 
+      pc = filteredBlogKeys.length;
+    }
+    setPostsCount(pc);
+  };
+ 
   return (
     <div className="blogroll">
       <Col md={12} lg={12} className="search-content">
@@ -125,7 +140,7 @@ export const BlogRoll = ({ data }) => {
           blogKeys={blogKeys}
           setFilteredBlogKeys={setFilteredBlogKeys}
           tagList={tagList}
-          setActivePage={setActivePage}
+          setPostsCount={setPostsCount}
         />
       </Col>
       <Col md={12} lg={12} className="posts">
@@ -133,7 +148,18 @@ export const BlogRoll = ({ data }) => {
            <PostItem node={node} />
           )
         )}
-      </Col>  
+      </Col>
+      <Col md={12} lg={12} className="pagination">
+        {postsCount < filteredBlogKeys.length && (
+          <Button
+            className="button-dark"
+            variant="secondary"
+            onClick={onLoadMoreClick}
+          >
+            Load More
+          </Button>
+        )}  
+      </Col>
     </div>
   )
 }

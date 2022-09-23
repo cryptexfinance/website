@@ -8,7 +8,7 @@ const SearchNews = ({
   blogKeys,
   setFilteredBlogKeys,
   tagList,
-  setActivePage
+  setPostsCount
 }) => {
   const keysDivider = "+++";
   const dbDefaultTitle = "Filter";
@@ -17,7 +17,7 @@ const SearchNews = ({
 
 
   const filterPosts = (criteria, filterTag) => {
-    setActivePage(0);
+    setPostsCount(12);
     let filterKeys = [];
     if (filterTag === dbDefaultTitle && criteria !== "")
       filterKeys = blogKeys.filter(key => key.includes(criteria.toLowerCase()));

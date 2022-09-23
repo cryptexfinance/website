@@ -7,8 +7,7 @@ const SectionHome = () => {
       <div className="description">
         <h2 className="heading-secondary">Cyptex Blog</h2>
         <p className="subheader">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-          incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
+          Keep up with the latest announcements.
         </p>
       </div>      
     </div>

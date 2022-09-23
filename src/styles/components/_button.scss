@@ -16,7 +16,7 @@
   }
 }
 
-.button-dark {
+.button-dark, .btn-secondary {
   font-family: $font-primary;
   font-weight: normal;
   font-size: 1rem;
@@ -30,6 +30,13 @@
   
   &:focus {
 	  outline: none !important;
+  }
+  &:hover {
+    background: $color-background-features !important;
+    border: 2px solid $shadow-green-neon;
+    filter: brightness(116%);
+    -webkit-filter: brightness(116%);
+    -moz-filter: brightness(116%);
   }
 }
 

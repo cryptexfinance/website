@@ -1,16 +1,15 @@
 import React from "react";
-
-import Layout from "../../components/Layout";
+import PageLayout from "../../components/PageLayout";
 import BlogRoll from "../../components/BlogRoll";
 import Header from "../../components/Header";
-import SectionHome from "./SectionHome.tsx";
+import SectionHome from "./SectionHome";
 import bg from "../../../static/bg.webp";
 import bgvideo from "../../../static/bg.mp4";
 
 export default class BlogIndexPage extends React.Component {
   render() {
     return (
-      <Layout>
+      <PageLayout>
         <header id="home">
           <Header blogPost={true} />
         </header>
@@ -31,7 +30,7 @@ export default class BlogIndexPage extends React.Component {
             <BlogRoll />
           </div>
         </section>
-      </Layout>
+      </PageLayout>
     )
   }
 };
