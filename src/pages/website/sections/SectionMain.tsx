@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import Col from "react-bootstrap/esm/Col";
 import appEndpoint from "../../../endpoint";
-import bg from "../../../../static/bg.webp";
 import bgvideo from "../../../../static/bg_main.mp4";
 
 const SectionMain = () => {
@@ -42,7 +41,7 @@ const SectionMain = () => {
         autoPlay
         loop
         muted
-        poster={bg}
+        poster={bgvideo}
         className="video"
         id="bgvid"
       >
