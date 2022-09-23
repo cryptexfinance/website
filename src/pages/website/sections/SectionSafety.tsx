@@ -1,7 +1,7 @@
 import React from "react";
 import quanstamp from "../../../../static/website/safety/quantstamp.svg";
 import weth from "../../../../static/website/safety/weth.svg";
-import immunefi from "../../../../static/website/safety/immunefi.svg";
+import dework from "../../../../static/website/safety/dework.svg";
 
 type SafetyType = {
   id: string;
@@ -16,28 +16,34 @@ const safetyItems = [
     id: "audit",
     title: "Audit",
     subtitle: "Review our audits here.",
-    link: "/tcap",
+    link: "https://cryptex.finance/Cryptex_-_Final_Report.pdf",
     logo: quanstamp,
   },
   {
     id: "collateral",
     title: "Collateral",
     subtitle: "Review the vault monitoring here.",
-    link: "/nft",
+    link: "https://app.cryptex.finance/vault-monitoring",
     logo: weth,
   },
     {
     id: "bounty",
     title: "Bounties",
-    subtitle: "Review our bounties here",
-    link: "/nft",
-    logo: immunefi,
+    subtitle: "Review our bounties here.",
+    link: "https://app.dework.xyz/cryptex-finance",
+    logo: dework,
   }
 ]
 
 const SectionSafety = () => { 
   const item = (feature: SafetyType) => (
-    <div key={feature.id} className="box item">
+    <a
+      key={feature.id}
+      href={feature.link}
+      rel="noreferrer"
+      target="_blank"
+      className="box box-button item"
+    >
       <div className="items-info">
         <h2 className="terciary-header">
           {feature.title}
@@ -53,18 +59,14 @@ const SectionSafety = () => {
           />
         </div>
       </div>
-    </div>
+    </a>
   );
 
   return (
     <div id="safety" className="section-safety">
       <h1 className="header">
-        Security and Safety
+        Protocol Responsibility
       </h1>
-      <p className="subheader">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-        incididunt ut labore et dolore magna aliqua.
-      </p>
       <div className="items">
         {safetyItems.map((sItem) => {
           return item(sItem);

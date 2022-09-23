@@ -137,6 +137,7 @@ and (orientation: portrait)
 
   h1, .header { 
     font-size: 3.5rem;
+    line-height: 3.8rem;
   }
   h2, .heading-secondary {
     font-size: 3rem;
@@ -151,13 +152,13 @@ and (orientation: portrait)
     font-size: 2.5rem;
     line-height: 2.8rem;
   }
-  .subheader2 {
+  .home-subheader {
     font-size: 3rem;
     line-height: 3.3rem;
   }
   .subtitle {
     font-size: 2.3rem;
-    line-height: 2.6rem;
+    line-height: 2.8rem;
   }
   .link {
     font-size: 2rem;
@@ -218,12 +219,25 @@ and (orientation: portrait)
     .box {
       padding: 5rem 3rem 2rem 3rem;
     }
+    .governance-header {
+      .ctx-icon {
+        height: 50px;
+        width: 50px;
+        margin-top: 0px;
+      }
+    }
     .governance {
+      &-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 3rem;
+      }
       &-main {
         width: 90%;
         height: 65rem;
         .subtitle {
-          margin-top: 3rem;
+          margin-top: 0rem;
         }
         .icons {
           padding: 2rem 0rem;
@@ -232,6 +246,9 @@ and (orientation: portrait)
           margin-top: 2rem;
           padding: 1rem 1.5rem;
         }
+      }
+      &-icon {
+        margin-right: 25px;
       }
       &-detail {
         width: 90%;
@@ -246,7 +263,6 @@ and (orientation: portrait)
           margin-top: 2rem;
         }
       }
-
     }
   }
 

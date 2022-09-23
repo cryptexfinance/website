@@ -80,7 +80,7 @@ h3, .terciary-header {
   }
 }
 
-.subheader2 {
+.home-subheader {
   font-family: $font-tertiary;
   font-style: normal;
   font-weight: normal;
@@ -100,7 +100,7 @@ h3, .terciary-header {
   font-style: normal;
   font-weight: normal;
   font-size: 1rem;
-  line-height: 1.37rem;
+  line-height: 1.7rem;
   letter-spacing: 0.5px;
   color: $color-grey-light;
   text-align: left;
@@ -126,13 +126,35 @@ h3, .terciary-header {
   align-items: center;
   letter-spacing: 0.6px;
   color: $color-primary-purple;
+  transition: transform 0.3s;
+  transition-timing-function: linear;
+
   @media (max-width: 600px) {
     font-size: 2.8rem;
   }
 
   &:hover {
-    color: $color-primary-purple;
     cursor: pointer;
+    color: $color-primary-purple;
+    text-shadow: -1px -1px 2px rgba(223, 33, 254, 0.2);
+  }
+}
+.link.inactive {
+  text-decoration: none;
+  &:hover {
+    color: $color-primary-purple;
+    cursor: default;
+  }
+}
+
+.icon-link {
+  transition: transform 0.2s;
+  transition-timing-function: linear;
+  &:hover {
+    transform: scale(1.05);
+    filter: brightness(120%);
+    -webkit-filter: brightness(120%);
+    -moz-filter: brightness(120%);
   }
 }
 
@@ -145,9 +167,9 @@ h3, .terciary-header {
   line-height: 1.2rem;
   letter-spacing: 0.5px;
   @media (max-width: 1090px) {
-    font-size: 2rem;
-    line-height: 2.2rem;
-    letter-spacing: 0.7px;
+    font-size: 18px;
+    line-height: 20px;
+    letter-spacing: 1.7px;
   }
   @media (max-width: 600px) {
     font-size: 14px;
@@ -166,8 +188,8 @@ h3, .terciary-header {
   margin-bottom: 0.4rem;
   text-shadow: 0 4px 13px $shadow-pink-neon;
   @media (max-width: 1090px) {
-    font-size: 2.5rem;
-    line-height: 2.7rem;
+    font-size: 22px;
+    line-height: 25px;
   }
   @media (max-width: 600px) {
     font-size: 18px;
@@ -187,8 +209,8 @@ h3, .terciary-header {
   margin-bottom: .6rem;
   text-shadow: 0 .25rem .8125rem $shadow-blue-neon;
   @media (max-width: 1090px) {
-    font-size: 2.5rem;
-    line-height: 2.7rem;
+    font-size: 22px;
+    line-height: 25px
   }
   @media (max-width: 600px) {
     font-size: 18px;
@@ -215,8 +237,16 @@ h3, .terciary-header {
 }
 
 .box-button {
+  transition: transform 0.5s;
+  transition-timing-function: ease-in;
+  text-decoration: none;
   &:hover {
     box-shadow: 0px 0px 12px 3px $shadow-purple-neon;
+    transform: scale(1.01);
+
+    .link {
+      transform: scale(1.05);
+    }
   }
 }
 

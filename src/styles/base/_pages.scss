@@ -58,6 +58,10 @@ body {
       letter-spacing: 0.6px;
       padding: 1.3rem 0rem;
     }
+    &-subtitle {
+      display: flex;
+      flex-direction: column;
+    }
     &-buttons {
       display: flex;
       flex-direction: row;
@@ -104,31 +108,26 @@ body {
   flex-direction: column;
   align-items: center;
   height: 100vh;
-  margin: 4rem 1rem;
+  margin: 6.5rem 1rem;
   padding: 5rem;
 
   .header {
     margin: 1.5rem 0rem;
   }
-  .subheader {
-    margin:  0.5rem 0rem;
-    text-align: center;
-    width: 60%;
-  }
   .products {
     display: flex;
     flex-direction: row;
     justify-content: center;
-    margin: 2rem;
+    margin: 1rem;
 
     &-item {
       display: flex;
       flex-direction: column;
       justify-content: space-between;
-      height: 23rem;
-      width: 28rem;
+      height: 25rem;
+      width: 32rem;
       @media (max-width: 1300px) {
-        height: 27rem;
+        height: 30rem;
       }
 
       .terciary-header {
@@ -147,7 +146,7 @@ body {
 
 .section-governance {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   position: relative;
   height: 100vh;
   margin: 4rem 1rem;
@@ -155,14 +154,31 @@ body {
 
   .box {
     margin: 1rem;
-    padding: 2rem 0rem 1.5rem 0rem;
+    padding: 1rem 0rem 1.5rem 0rem;
+  }
+  .governance-header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 0.2rem 1rem;
+
+    .ctx-icon {
+      height: 3rem;
+      width: 3rem;
+      margin-top: -7px;
+      margin-right: 20px;
+    }
   }
   .governance {
+    &-content {
+      display: flex;
+      flex-direction: row;      
+    }
     &-main {
       display: flex;
       flex-direction: column;
       justify-content: space-between;
-      width: 45%;
+      width: 52%;
       height: 65vh;
       .info-top {
         padding: 0rem 1.5rem;
@@ -172,7 +188,7 @@ body {
         flex-direction: column;
       }
       .subtitle  {
-        margin-top: 1rem;
+        margin-top: 0rem;
       }
       .icons {
         display: flex;
@@ -193,27 +209,35 @@ body {
     &-icon {
       width: 40px;
       height: 40px;
-      margin-right: 1.3rem;
+      margin-right: 1.4rem;
 
-      &.dfp {
-        width: 37px;
-        height: 37px;
-      }
       &.gemini {
         width: 37px;
         height: 37px;
       }
+      &.uniswap {
+        height: 50px;
+        margin-bottom: 5px; 
+      }
+      &.huobi {
+        width: 37px;
+        height: 41px;
+      }      
 
       @media (max-width: 1300px) { 
         width: 35px;
         height: 35px;
-        &.dfp {
-          width: 33px;
-          height: 33px;
+        &.uniswap {
+          width: 35px;
+          height: 40px;
         }
         &.gemini {
           width: 33px;
           height: 33px;
+        }
+        &.huobi {
+          width: 31px;
+          height: 37px;
         }
       }
     }
@@ -222,7 +246,7 @@ body {
       flex-direction: column;
       justify-content: space-between;
       margin: 1rem 1rem 1rem  0rem;
-      width: 55%;
+      width: 48%;
       height: 65vh;
       
       .box {
@@ -230,6 +254,9 @@ body {
         padding-top: 1.5rem;
         padding-left: 1.5rem;
         padding-right: 1.5rem;
+      }
+      .subtitle {
+        width: 95%;
       }
     }
     &-item {
@@ -243,7 +270,6 @@ body {
       &:hover {
         cursor: pointer;
       }
-
       .item-icon {
         color: white;
       }
@@ -432,10 +458,14 @@ body {
     .subtitle {
       text-decoration: none;
       margin: 10px 1px;
+      transition: transform 0.2s;
+      transition-timing-function: linear;
 
       &:hover {
         cursor: pointer;
-        color: $shadow-purple-neon;
+        color: $color-grey-light;
+        text-shadow: 1px -2px 6px $shadow-pink-neon;
+        transform: scale(1.05);
       }
     }
   }

@@ -55,7 +55,7 @@ export default (props) => {
                 Governance
               </Nav.Link>
               <Nav.Link as={Link} to={safetyUrl} title="Safety">
-                Safety
+                Responsability
               </Nav.Link>
               <div className="nav-links-divisor"></div>
               <Nav.Link as={Link} to={ecosystemUrl} title="Ecosystem">
@@ -67,7 +67,7 @@ export default (props) => {
               </Nav.Link>
               <div className="nav-links-divisor"></div>
               <Nav.Link as={Link} to={newsUrl} title="News">
-                News
+                Blog
               </Nav.Link>
               <div className="nav-links-divisor"></div>
               <Nav.Link as={Link} to={faqUrl} title="FAQ">
@@ -102,7 +102,7 @@ export default (props) => {
                 Governance
               </Nav.Link>
               <Nav.Link as={Link} to={safetyUrl} title="Safety">
-                Safety
+                Responsability
               </Nav.Link>
               <Nav.Link as={Link} to={ecosystemUrl} title="Ecosystem">
                 Ecosystem

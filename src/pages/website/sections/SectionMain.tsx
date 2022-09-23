@@ -55,7 +55,7 @@ const SectionMain = () => {
               Cryptex Finance
             </h1>
           </div>
-          <p className="subheader2">
+          <p className="home-subheader">
             {words[currentWord]} Index Tokens
           </p>
         </div>

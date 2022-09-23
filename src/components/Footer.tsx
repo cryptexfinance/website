@@ -1,11 +1,68 @@
 import React from "react";
-import twitter from "../../static/website/home/twitter.svg";
-import discord from "../../static/website/home/discord.svg";
-import telegram from "../../static/website/home/telegram.svg";
-import youtube from "../../static/website/home/youtube.svg";
-import medium from "../../static/website/home/medium.svg";
+import twitter from "../../static/website/community/twitter.svg";
+import discord from "../../static/website/community/discord.svg";
+import telegram from "../../static/website/community/telegram.svg";
+import youtube from "../../static/website/community/youtube.svg";
+import medium from "../../static/website/community/medium.svg";
+
+type IconType = {
+  href: string;
+  icon: string;
+  alt: string;
+  class: string;
+}
+
+const socialIcons = [
+  {
+    href: "https://twitter.com/cryptexfinance",
+    icon: twitter,
+    alt: "Twitter",
+    class: "",
+  },
+  {
+    href: "https://discord.gg/cryptex",
+    icon: discord,
+    alt: "Discord Logo",
+    class: "",
+  },
+  {
+    href: "https://t.me/cryptexfinance",
+    icon: telegram,
+    alt: "Telegram Logo",
+    class: "",
+  },
+  {
+    href: "https://www.youtube.com/channel/UCdN17zdr5MCDph75srdhutQ",
+    icon: youtube,
+    alt: "Youtube logo",
+    class: "",
+  },
+  {
+    href: "https://medium.com/cryptexfinance",
+    icon: medium,
+    alt: "Medium Logo",
+    class: "medium",
+  }
+]
 
 const Footer = () => {
+
+  const iconItem = (item: IconType, index: number) => (
+    <a
+      key={index}
+      href={item.href}
+      rel="noreferrer"
+      target="_blank"
+      className="social-item icon-link"
+    >
+      <img
+        src={item.icon}
+        className={"social-item-icon ".concat(item.class)}
+        alt={item.alt}
+      />
+    </a>
+  );
+
   return (
     <section id="footer" className="footer">
       <div className="footer-info">
@@ -14,53 +71,16 @@ const Footer = () => {
           Innovative, Secure, Collateralized, Trustless and Decentralized Index Tokens
         </p>
         <div className="community">
-          <a
-            href="https://twitter.com/cryptexfinance"
-            rel="noreferrer"
-            target="_blank"
-            className="social-item"
-          >
-            <img src={twitter} className="social-item-icon" alt="Twitter" />
-          </a>
-          <a
-            href="https://discord.gg/cryptex"
-            rel="noreferrer"
-            target="_blank"
-            className="social-item"
-          >
-            <img src={discord} className="social-item-icon" alt="Discord" />
-          </a>
-          <a
-            href="https://t.me/cryptexfinance"
-            rel="noreferrer"
-            target="_blank"
-            className="social-item"
-          >
-            <img src={telegram} className="social-item-icon" alt="Telegram" />
-          </a>
-          <a
-            href="https://www.youtube.com/channel/UCdN17zdr5MCDph75srdhutQ"
-            rel="noreferrer"
-            target="_blank"
-            className="social-item"
-          >
-            <img src={youtube} className="social-item-icon" alt="Youtube" />
-          </a>
-          <a
-            href="https://medium.com/cryptexfinance"
-            rel="noreferrer"
-            target="_blank"
-            className="social-item"
-          >
-            <img src={medium} className="social-item-icon medium" alt="Medium" />
-          </a>
+          {socialIcons.map((socialIcon, index) => {
+            return iconItem(socialIcon, index);
+          })}
         </div>
       </div>
       <div className="footer-menu">
         <div className="links">
           <a className="subtitle" href="/#products">Products</a>
           <a className="subtitle" href="/#governance">Governance</a>
-          <a className="subtitle" href="/#safety">Safety</a>
+          <a className="subtitle" href="/#safety">Responsability</a>
           <a className="subtitle" href="/#ecosystem">Ecosystem</a>
         </div>
         <div className="links">

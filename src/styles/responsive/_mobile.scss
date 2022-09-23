@@ -164,7 +164,7 @@
     line-height: 20px;
     letter-spacing: 0.7px;
   }
-  .subheader2 {
+  .home-subheader {
     font-size: 18px;
     line-height: 22px;
   }
@@ -276,23 +276,41 @@
       margin: 1rem;
       padding: 5rem 4rem;
     }
+    .header {
+      font-size: 19px;
+    }
     .subtitle {
       margin-top: 2rem;
       text-align: justify;
     }
+    .governance-header {
+      .ctx-icon {
+        height: 50px;
+        width: 50px;
+        margin-top: 0px;
+      }
+    }
     .governance {
+      &-content {
+        display: flex;
+        flex-direction: column;
+        margin-top: 2rem;
+      }
       &-main {
         width: 100%;
-        height: 50vh;
+        height: 75vh;
 
         .icons {
           padding: 1.3rem 0rem;
-        }    
+        }
+        .prices {
+          padding-top: 3rem; 
+        }
       }
       &-icon {
         width: 32px;
         height: 32px;
-        margin-right: 3rem;
+        margin-right: 20px;
 
         &.dfp {
           width: 30px;
@@ -304,11 +322,15 @@
         }
       }
       &-detail {
+        height: 150rem;
         width: 100%;
         margin-top: 10rem;
         .box {
           margin: 3rem  2rem;
           padding: 5rem;
+        }
+        .price-box {
+          margin-left: 2rem;
         }
       }
     }

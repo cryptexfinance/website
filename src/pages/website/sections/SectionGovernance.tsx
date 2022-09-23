@@ -3,8 +3,20 @@ import { ethers } from "ethers";
 import { NumericFormat } from "react-number-format";
 import { FaArrowRight } from "react-icons/fa";
 import { contractsContext, signerContext } from "../../../context";
-import { getPriceInUSDFromPair } from "../../../utils";
-import geminiLogo from "../../../../static/website/governance/gemini-hor-white-full.svg";
+import {
+  getPriceInUSDFromPair,
+  FOUNDERS_ADDRESS,
+  LIQUIDITY_REWARD_ADDRESS,
+  LIQUIDITY_REWARD2_ADDRESS,
+  MULTISIG_ADDRESS,
+  TREASURY_ADDRESS
+} from "../../../utils";
+import ctxIcon from "../../../../static/website/ctx.svg";
+import geminiLogo from "../../../../static/website/governance/gemini.svg";
+import sushiLogo from "../../../../static/website/governance/sushi-logo.svg";
+import uniLogo from "../../../../static/website/governance/uni-logo.svg";
+import coinbaseLogo from "../../../../static/website/governance/coinbase.svg";
+import huobiLogo from "../../../../static/website/governance/huobi.svg";
 
 
 type GovernanceType = {
@@ -13,25 +25,64 @@ type GovernanceType = {
   info: string;
   link: string;
 }
+type IconType = {
+  href: string;
+  icon: string;
+  alt: string;
+  class: string;
+}
 
 const governanceItems = [
   {
     id: "1",
     title: "Proposals",
-    info: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.",
-    link: "/tcap",
+    info: "Find the latest and past proposals here.",
+    link: "https://forum.cryptex.finance/c/proposals/5",
   },
   {
     id: "2",
     title: "Vote",
-    info: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut.",
-    link: "/nft",
+    info: "Vote on active proposals here.",
+    link: "https://www.tally.xyz/governance/eip155:1:0x874C5D592AfC6803c3DD60d6442357879F196d5b",
   },
     {
     id: "3",
-    title: "Delegate",
-    info: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.",
-    link: "/nft",
+    title: "Single Siding Staking",
+    info: "Stake and delegate your CTX to a Crypt Keeper to earn {apr_value} APR in CTX governance tokens.",
+    link: "https://app.cryptex.finance/governance",
+  }
+]
+
+const governanceIcons = [
+  {
+    href: "https://www.gemini.com/prices/cryptex?utm_source=cryptex&utm_medium=link&utm_campaign=web_referral",
+    icon: geminiLogo,
+    alt: "Gemini Logo",
+    class: "gemini",
+  },
+  {
+    href: "https://www.gemini.com/prices/cryptex?utm_source=cryptex&utm_medium=link&utm_campaign=web_referral",
+    icon: sushiLogo,
+    alt: "Sushiswap Logo",
+    class: "",
+  },
+  {
+    href: "https://analytics.sushi.com/pairs/0x2a93167ed63a31f35ca4788e2eb9fbd9fa6089d0",
+    icon: uniLogo,
+    alt: "Uniswap Logo",
+    class: "uniswap",
+  },
+  {
+    href: "https://analytics.sushi.com/pairs/0x2a93167ed63a31f35ca4788e2eb9fbd9fa6089d0",
+    icon: coinbaseLogo,
+    alt: "Coinbase logo",
+    class: "",
+  },
+  {
+    href: "https://analytics.sushi.com/pairs/0x2a93167ed63a31f35ca4788e2eb9fbd9fa6089d0",
+    icon: huobiLogo,
+    alt: "Huobi Logo",
+    class: "huobi",
   }
 ]
 
@@ -40,16 +91,46 @@ const SectionGovernance = () => {
   const contracts = useContext(contractsContext);
   const signer = useContext(signerContext);
   const [ctxPrice, setCtxPrice] = useState("0");
+  const [marketCap, setMarketCap] = useState("0.0");
+  const [totalStaked, setTotalStaked] = useState("0.0");
+  const sixMonthCtxRewardAmount = 12654;
+  const apyShowDate = new Date(1633654800 * 1000);
 
   useEffect(() => {
     const load = async () => {
       if (signer.ethcallProvider && contracts) {
         const wethOraclePriceCall = await contracts.wethOracleRead?.getLatestAnswer();
-        const reservesCtxPoolCall = await contracts.ctxUniPairRead?.getReserves();  
+        const reservesCtxPoolCall = await contracts.ctxUniPairRead?.getReserves();
+        const totalSupplyCall = await contracts.delegatorFactoryRead?.totalSupply();
+
+        const ctxTotalSupplyCall = await contracts.ctxTokenRead?.totalSupply();
+        const foundersTotalCall = await contracts.ctxTokenRead?.balanceOf(FOUNDERS_ADDRESS);
+        const initialIncentiveCall = await contracts.ctxTokenRead?.balanceOf(LIQUIDITY_REWARD_ADDRESS);
+        const initialIncentiveCall2 = await contracts.ctxTokenRead?.balanceOf(LIQUIDITY_REWARD2_ADDRESS);
+        const multisigCall = await contracts.ctxTokenRead?.balanceOf(MULTISIG_ADDRESS);
+        const treasuryTotalCall = await contracts.ctxTokenRead?.balanceOf(TREASURY_ADDRESS);
+
         // @ts-ignore
-        const [wethOraclePrice, reservesCtxPool] = await signer.ethcallProvider?.all([
+        const [
+          wethOraclePrice,
+          reservesCtxPool,
+          totalSupply,
+          ctxTotalSupply,
+          foundersTotal,
+          initialIncentive,
+          initialIncentive2,
+          multisig,
+          treasuryTotal,
+        ] = await signer.ethcallProvider?.all([
           wethOraclePriceCall,
           reservesCtxPoolCall,
+          totalSupplyCall,
+          ctxTotalSupplyCall,
+          foundersTotalCall,
+          initialIncentiveCall,
+          initialIncentiveCall2,
+          multisigCall,
+          treasuryTotalCall,
         ]);
         const currentPriceETH = ethers.utils.formatEther(wethOraclePrice.mul(10000000000));
         const currentPriceCTX = await getPriceInUSDFromPair(
@@ -58,77 +139,135 @@ const SectionGovernance = () => {
           parseFloat(currentPriceETH)
         );
         setCtxPrice(currentPriceCTX.toString());
+        setTotalStaked(ethers.utils.formatEther(totalSupply));
+
+        const circulatingSupply =
+          ctxTotalSupply
+            .sub(foundersTotal)
+            .sub(initialIncentive)
+            .sub(initialIncentive2)
+            .sub(multisig)
+            .sub(treasuryTotal);
+        const marketCap = parseFloat(ethers.utils.formatEther(circulatingSupply)) * currentPriceCTX;
+        setMarketCap(marketCap.toFixed(4));
       }
     }; 
     load();
   }, [signer.ethcallProvider, contracts]);  
 
+  const apy = (): string => {
+    const currentDate = new Date();
+    if (parseFloat(totalStaked) > 0 && currentDate > apyShowDate) {
+      const a = Math.round(((4 * sixMonthCtxRewardAmount) / parseFloat(totalStaked)) * 100);
+      return a
+        .toString()
+        .replace(/\B(?=(\d{3})+(?!\d))/g, ",")
+        .concat("%");
+    }
+    return "-";
+  };
+
+  const iconItem = (item: IconType, index: number) => (
+    <a
+      key={index}
+      href={item.href}
+      rel="noreferrer"
+      target="_blank"
+      className="icon-link"
+    >
+      <img
+        src={item.icon}
+        className={"governance-icon ".concat(item.class)}
+        alt={item.alt}
+      /> 
+    </a>
+  )
+
   const item = (feature: GovernanceType) => (
-    <div key={feature.id} className="box box-button governance-item">
+    <a
+      key={feature.id}
+      href={feature.link}
+      rel="noreferrer"
+      target="_blank"
+      className="box box-button governance-item"
+    >
       <div className="governance-item-content">
         <h3 className="terciary-header">
           {feature.title}
         </h3>              
         <p className="subtitle">
-          {feature.info}
+          {feature.info.replace("{apr_value}", apy())}
         </p>
        </div> 
       <div className="governance-item-footer">
         <FaArrowRight className="item-icon"size={20} />
       </div>
-    </div>
+    </a>
   );
-
+  
   return (
-    <div id="governance" className="section-governance">      
-      <div className="box governance-main">
-        <div className="info-top">
-          <h2 className="heading-secondary">
-            Decentralized Governance
-          </h2>
-          <p className="subtitle">
-            Cryptex protocol is fully decentralized and governed by
-            the community. CTX holders can vote on protocol updgrades.
-          </p>
-          <div className="icons">
-            <a href="https://www.gemini.com/prices/cryptex?utm_source=cryptex&utm_medium=link&utm_campaign=web_referral" rel="noreferrer" target="_blank">
-              <img src={geminiLogo} className="governance-icon gemini" alt="gemini logo" /> 
-            </a>
-          </div>
-        </div>
-        <div className="info-bottom">
-          <div className="hl-divider" />
-          <div className="prices">
-            <div className="market-cap-box">
-              <span className="number-pink">
-                $171,729.15
-              </span>
-              <span className="label">
-                Total CTX Market Capitalization
-              </span>
-            </div>
-            <div  className="vl-divider" />
-            <div className="price-box">              
-              <NumericFormat
-                className="number-blue"
-                value={ctxPrice}
-                displayType="text"
-                thousandSeparator
-                prefix="$"
-                decimalScale={2}
-              />
-              <span className="label">
-                CTX Price
-              </span>
+    <div id="governance" className="section-governance">
+      <div className="governance-header">
+        <img src={ctxIcon} className="ctx-icon" alt="CTX" />
+        <h1 className="header">
+          Decentralized Governance
+        </h1>
+      </div>  
+      <div className="governance-content">
+        <div className="box governance-main">
+          <div className="info-top">
+            <p className="subtitle">
+              CTX is an ERC-20 utility and governance token with various use cases within
+              the Cryptex Finance ecosystem. CTX token holders can vote on upgrades and management
+              of the Cryptex treasury, create proposals and vote on said proposals, such as
+              continued incentives for product development and other solutions to advance the
+              Cryptex decentralized autonomous organization (DAO).
+            </p>
+            <div className="icons">
+              {governanceIcons.map((govIcon, index) => {
+                return iconItem(govIcon, index);
+              })}              
             </div>
           </div>
+          <div className="info-bottom">
+            <div className="hl-divider" />
+            <div className="prices">
+              <div className="market-cap-box">
+                <NumericFormat
+                  className="number-pink"
+                  value={marketCap}
+                  displayType="text"
+                  thousandSeparator
+                  prefix="$"
+                  decimalScale={2}
+                />
+                <span className="label">
+                  Total CTX Market Capitalization
+                </span>
+              </div>
+              <div  className="vl-divider" />
+              <div className="price-box">              
+                <NumericFormat
+                  className="number-blue"
+                  value={ctxPrice}
+                  displayType="text"
+                  thousandSeparator
+                  prefix="$"
+                  decimalScale={2}
+                />
+                <span className="label">
+                  CTX Price
+                </span>
+              </div>
+            </div>
+          </div>
         </div>
-      </div>
-      <div className="governance-detail">
-        {governanceItems.map((govItem) => {
-          return item(govItem);
-        })}
-      </div>
+        <div className="governance-detail">
+          {governanceItems.map((govItem) => {
+            return item(govItem);
+          })}
+        </div>
+      </div>  
     </div>
   )
 }

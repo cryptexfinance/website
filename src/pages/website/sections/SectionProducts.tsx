@@ -18,7 +18,7 @@ const products = [
   {
     id: "jpegz",
     title: "JPEGZ",
-    subtitle: "Real time exposure to the top 10 most popular NFT collections.",
+    subtitle: "Real time exposure to the NFT market.",
     link: "/nft"
   }
 ]
@@ -43,7 +43,7 @@ const SectionProducts = () => {
   }, [dataq]);
   
   const item = (product: ProductType) => (
-    <div key={product.id} className="box products-item">
+    <div key={product.id} className="box box-button products-item">
       <div className="products-info">
         <h2 className="heading-secondary">
           {product.title}
@@ -63,7 +63,7 @@ const SectionProducts = () => {
               Learn More
             </a>
           ) : (
-            <a className="link">Coming Soon</a>
+            <a className="link inactive">Coming Soon</a>
           )}
       </div>
     </div>

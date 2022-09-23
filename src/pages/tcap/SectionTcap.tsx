@@ -2,6 +2,8 @@ import React, { useContext, useEffect, useState } from "react";
 import { ethers } from "ethers";
 import { NumericFormat } from "react-number-format";
 import { contractsContext, signerContext } from "../../context";
+import { TCAP_WETH_POOL_URL } from "../../utils";
+import tcapIcon from "../../../static/website/tcap.svg";
 import mintIcon from "../../../static/website/features/mint.svg";
 import tradeIcon from "../../../static/website/features/trade.svg";
 import poolIcon from "../../../static/website/features/pool.svg";
@@ -12,6 +14,7 @@ type FeatureType = {
   title: string;
   subtitle: string;
   icon: string;
+  link: string;
 }
 
 const features = [
@@ -19,25 +22,29 @@ const features = [
     id: "mint",
     title: "Mint",
     subtitle: "Create and approve a vault, add collateral and begin minting TCAP.",
-    icon: mintIcon
+    icon: mintIcon,
+    link: "https://app.cryptex.finance/vault"
   },
   {
     id: "trade",
     title: "Trade",
     subtitle: "Buy and sell TCAP on Uniswap.",
-    icon: tradeIcon
+    icon: tradeIcon,
+    link: "https://analytics.sushi.com/pairs/0xa87e2c5d5964955242989b954474ff2eb08dd2f5"
   },
   {
     id: "pool",
     title: "Pool",
     subtitle: "Provide liquidity to TCAP pairs on Uniswap and earn a portion of the trading fees.",
-    icon: poolIcon
+    icon: poolIcon,
+    link: TCAP_WETH_POOL_URL
   },
   {
     id: "farm",
     title: "Farm",
     subtitle: "Earn CTX Rewards for minting TCAP tokens and Staking TCAP LP tokens.",
-    icon: farmIcon
+    icon: farmIcon,
+    link: "https://app.cryptex.finance/farm"
   }
 ];
 
@@ -65,7 +72,13 @@ const SectionTcap = () => {
   }, [signer.ethcallProvider, contracts.tcapOracleRead]);
 
   const item = (feature: FeatureType) => (
-    <div key={feature.id} className="box feature-item">
+    <a
+      key={feature.id}
+      href={feature.link}
+      rel="noreferrer"
+      target="_blank"
+      className="box box-button feature-item"
+    >  
       <div className="feature-info">
         <div className="icon-container">
           <img src={feature.icon} className="feature-icon" alt="Mint" />
@@ -79,14 +92,17 @@ const SectionTcap = () => {
           {feature.subtitle}
         </p>
       </div>
-    </div>
+    </a>
   );
 
   return (
     <div className="products-tcap">
-      <h1 className="header">
-        TCAP: Total Crypto Market Cap Index Token
-      </h1>
+      <div className="tcap-header">
+        <img src={tcapIcon} className="tcap-icon" alt="TCAP" />
+        <h1 className="header">
+          TCAP: Total Crypto Market Cap Index Token
+        </h1>        
+      </div>  
       <div className="content">
         <div className="box main">
           <div className="info-top">

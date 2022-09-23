@@ -4,8 +4,10 @@ import { Contract, Provider } from "ethers-multicall";
 import Header from "./Header";
 import Footer from "./Footer";
 import tcapOracle from "../contracts/tcapOracle.json";
+import ctxToken from "../contracts/ctx.json";
 import wethOracle from "../contracts/wethOracle.json";
 import ctxUniPair from "../contracts/ctxUniPair.json";
+import delegatorFactory from "../contracts/delegatorFactory.json";
 import { contractsContext, signerContext } from "../context";
 import { useContracts, useSigner } from "../hooks";
 import { getDefaultProvider } from "../utils";
@@ -26,10 +28,14 @@ export default ({ children }) => {
       // Set Contracts
       const currentTcapOracleRead = new Contract(tcapOracle.address, tcapOracle.abi);
       contracts.setCurrentTcapOracleRead(currentTcapOracleRead);
+      const currentCtxTokenRead = new Contract(ctxToken.address, ctxToken.abi);
+      contracts.setCurrentCtxTokenRead(currentCtxTokenRead);
       const currentWethracleRead = new Contract(wethOracle.address, wethOracle.abi);
       contracts.setCurrentWethOracleRead(currentWethracleRead);
       const currentCtxUniPairRead = new Contract(ctxUniPair.address, ctxUniPair.abi);
       contracts.setCurrentCtxUniPairRead(currentCtxUniPairRead);
+      const currentDelegatorRead = new Contract(delegatorFactory.address, delegatorFactory.abi);
+      contracts.setCurrentDelegatorFactoryRead(currentDelegatorRead);
     };
     loadContracts();
   }, []);
