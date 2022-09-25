@@ -1,7 +1,9 @@
 import React, { useContext, useEffect, useState } from "react";
 import { ethers } from "ethers";
 import { NumericFormat } from "react-number-format";
+import { useBreakpoint } from "gatsby-plugin-breakpoints";
 import { FaArrowRight } from "react-icons/fa";
+import parse from "html-react-parser";
 import { contractsContext, signerContext } from "../../../context";
 import {
   getPriceInUSDFromPair,
@@ -48,7 +50,7 @@ const governanceItems = [
     {
     id: "3",
     title: "Single Siding Staking",
-    info: "Stake and delegate your CTX to a Crypt Keeper to earn {apr_value} APR in CTX governance tokens.",
+    info: `Stake and delegate your CTX to a Crypt Keeper to earn <span class="number-span">{apr_value}</span> APR in CTX governance tokens.`,
     link: "https://app.cryptex.finance/governance",
   }
 ]
@@ -90,6 +92,7 @@ const governanceIcons = [
 const SectionGovernance = () => {
   const contracts = useContext(contractsContext);
   const signer = useContext(signerContext);
+  const breakpoints = useBreakpoint();
   const [ctxPrice, setCtxPrice] = useState("0");
   const [marketCap, setMarketCap] = useState("0.0");
   const [totalStaked, setTotalStaked] = useState("0.0");
@@ -155,7 +158,7 @@ const SectionGovernance = () => {
     load();
   }, [signer.ethcallProvider, contracts]);  
 
-  const apy = (): string => {
+  const apr = (): string => {
     const currentDate = new Date();
     if (parseFloat(totalStaked) > 0 && currentDate > apyShowDate) {
       const a = Math.round(((4 * sixMonthCtxRewardAmount) / parseFloat(totalStaked)) * 100);
@@ -196,7 +199,7 @@ const SectionGovernance = () => {
           {feature.title}
         </h3>              
         <p className="subtitle">
-          {feature.info.replace("{apr_value}", apy())}
+          {parse(feature.info.replace("{apr_value}", apr()))}
         </p>
        </div> 
       <div className="governance-item-footer">
@@ -239,7 +242,7 @@ const SectionGovernance = () => {
                   decimalScale={2}
                 />
                 <span className="label">
-                  Total CTX Market Capitalization
+                  {breakpoints.md ? "Total CTX Market Cap." : "Total CTX Market Capitalization" }
                 </span>
               </div>
               <div  className="vl-divider" />

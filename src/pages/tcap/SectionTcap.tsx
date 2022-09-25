@@ -1,6 +1,7 @@
 import React, { useContext, useEffect, useState } from "react";
 import { ethers } from "ethers";
 import { NumericFormat } from "react-number-format";
+import { useBreakpoint } from "gatsby-plugin-breakpoints";
 import { contractsContext, signerContext } from "../../context";
 import { TCAP_WETH_POOL_URL } from "../../utils";
 import tcapIcon from "../../../static/website/tcap.svg";
@@ -52,6 +53,7 @@ const features = [
 const SectionTcap = () => {
   const contracts = useContext(contractsContext);
   const signer = useContext(signerContext);
+  const breakpoints = useBreakpoint();
   const [tcapPrice, setTcapPrice] = useState("0.00");
   const [tcapTotalCap, setTcapTotalCap] = useState("0.00");
 
@@ -129,7 +131,7 @@ const SectionTcap = () => {
                     decimalScale={0}
                   />
                   <span className="label">
-                      Total Crypto Market Capitalization
+                    {breakpoints.md ? "Total Crypto Market Cap." : "Total Crypto Market Capitalization"}
                   </span>
                 </div>
                 <div  className="vl-divider" />
