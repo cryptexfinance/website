@@ -48,7 +48,7 @@ body {
     &-container {
       display: flex;
       flex-direction: column;
-      padding: 7rem 4rem;
+      padding: 4rem 4rem;
     }
     &-info {
       padding: 2rem 1rem;
@@ -56,7 +56,7 @@ body {
     }
     &-title {
       letter-spacing: 0.6px;
-      padding: 1.3rem 0rem;
+      padding: 1.1rem 0rem;
     }
     &-subtitle {
       display: flex;
@@ -156,18 +156,8 @@ body {
     margin: 1rem;
     padding: 1rem 0rem 1.5rem 0rem;
   }
-  .governance-header {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    margin: 0.2rem 1rem;
-
-    .ctx-icon {
-      height: 3rem;
-      width: 3rem;
-      margin-top: -7px;
-      margin-right: 20px;
-    }
+  .header {
+    margin: 0.2rem 1rem;    
   }
   .governance {
     &-content {
@@ -181,7 +171,11 @@ body {
       width: 52%;
       height: 65vh;
       .info-top {
-        padding: 0rem 1.5rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 0rem 1.5rem 0.7rem 1.5rem;
+        height: 100%;
       }
       .info-bottom {
         display: flex;
@@ -207,37 +201,37 @@ body {
       }
     }
     &-icon {
-      width: 40px;
-      height: 40px;
-      margin-right: 1.4rem;
+      width: 50px;
+      height: 50px;
+      margin-right: 1.8rem;
 
       &.gemini {
-        width: 37px;
-        height: 37px;
+        width: 47px;
+        height: 47px;
       }
       &.uniswap {
-        height: 50px;
+        height: 55px;
         margin-bottom: 5px; 
       }
       &.huobi {
-        width: 37px;
-        height: 41px;
+        width: 48px;
+        height: 50px;
       }      
 
       @media (max-width: 1300px) { 
-        width: 35px;
-        height: 35px;
+        width: 42px;
+        height: 42px;
         &.uniswap {
-          width: 35px;
-          height: 40px;
+          width: 42px;
+          height: 48px;
         }
         &.gemini {
-          width: 33px;
-          height: 33px;
+          width: 40px;
+          height: 40px;
         }
         &.huobi {
-          width: 31px;
-          height: 37px;
+          width: 34px;
+          height: 43px;
         }
       }
     }
@@ -285,12 +279,12 @@ body {
   }
 }
 
-.section-safety {
+.section-protocol {
   display: flex;
   flex-direction: column;
   align-items: center;
   height: 100vh;
-  margin: 4rem 1rem;
+  margin: 7rem 1rem;
   padding: 5rem;
 
   .header {
@@ -358,7 +352,7 @@ body {
   display: flex;
   flex-direction: row;
   height: 100vh;
-  margin: 4rem 1rem;
+  margin: 5rem 1rem;
   padding: 5rem 2rem;
 
   .box {

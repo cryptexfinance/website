@@ -84,11 +84,12 @@ h3, .terciary-header {
   font-family: $font-tertiary;
   font-style: normal;
   font-weight: normal;
-  font-size: 1.7rem;
-  line-height: 1.375rem;
+  font-size: 1.3rem;
+  line-height: 1.6rem;
   letter-spacing: 0.5px;
   color: $color-grey-light;
   text-align: left;
+  width: 55%;
 
   @media (max-width: 1300px) {
     font-size: 1.5rem;
@@ -267,9 +268,21 @@ h3, .terciary-header {
 
 .price-box {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
   padding-left: 2rem;
   width: 35%;
+  .price-value {
+    display: flex;
+    flex-direction: column;
+  }
+  .coin-icon {
+    height: 3.2rem;
+    width: 3.2rem;
+    margin-top: 5px;
+    margin-right: 20px;
+  }
 }
 
 .vl-divider {
@@ -281,6 +294,9 @@ h3, .terciary-header {
   width: 100%;
 }
 
+#animated-text-container {
+  filter: url(#threshold) blur(0.6px);
+}
 
 .newsdescription {
   font-family: $font-tertiary;

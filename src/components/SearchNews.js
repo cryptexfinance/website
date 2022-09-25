@@ -17,7 +17,7 @@ const SearchNews = ({
 
 
   const filterPosts = (criteria, filterTag) => {
-    setPostsCount(12);
+    setPostsCount(9);
     let filterKeys = [];
     if (filterTag === dbDefaultTitle && criteria !== "")
       filterKeys = blogKeys.filter(key => key.includes(criteria.toLowerCase()));

@@ -97,12 +97,9 @@ const SectionTcap = () => {
 
   return (
     <div className="products-tcap">
-      <div className="tcap-header">
-        <img src={tcapIcon} className="tcap-icon" alt="TCAP" />
-        <h1 className="header">
-          TCAP: Total Crypto Market Cap Index Token
-        </h1>        
-      </div>  
+      <h1 className="header">
+        TCAP: Total Crypto Market Cap Index Token
+      </h1>
       <div className="content">
         <div className="box main">
           <div className="info-top">
@@ -137,17 +134,20 @@ const SectionTcap = () => {
                 </div>
                 <div  className="vl-divider" />
                 <div className="price-box">
-                  <NumericFormat
-                    className="number-blue"
-                    value={tcapPrice}
-                    displayType="text"
-                    thousandSeparator
-                    prefix="$"
-                    decimalScale={2}
-                  />
-                  <span className="label">
+                  <div className="price-value">
+                    <NumericFormat
+                      className="number-blue"
+                      value={tcapPrice}
+                      displayType="text"
+                      thousandSeparator
+                      prefix="$"
+                      decimalScale={2}
+                    />
+                    <span className="label">
                       TCAP Price
-                  </span>
+                    </span>
+                  </div>
+                  <img src={tcapIcon} className="coin-icon" alt="TCAP" />
                 </div>
               </div>
           </div>

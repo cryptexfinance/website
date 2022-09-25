@@ -82,8 +82,8 @@ const SectionCommunity = ({ data }) => {
             Ecosystem
           </h1>
           <h3 className="subtitle">
-            Join our community and participate in a one of a kind Sewage Fruit
-            journey to take action, claim prizes and make frens.
+            Join our community and participate in a one of a kind journey to take action, claim rewards and make frens.
+            To start your journey, mint your free Sewage Fruit NFT.
           </h3>
         </div>
         <div className="subscribe">

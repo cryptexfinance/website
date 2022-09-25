@@ -68,7 +68,7 @@ const Footer = () => {
       <div className="footer-info">
         <img className="menu-logo" src="/logo.svg" alt="Logo" />
         <p className="subtitle">
-          Innovative, Secure, Collateralized, Trustless and Decentralized Index Tokens
+          Innovative, open-source DeFi solutions for the global crypto community.
         </p>
         <div className="community">
           {socialIcons.map((socialIcon, index) => {
@@ -78,9 +78,9 @@ const Footer = () => {
       </div>
       <div className="footer-menu">
         <div className="links">
-          <a className="subtitle" href="/#products">Products</a>
+          <a className="subtitle" href="/#solutions">Solutions</a>
           <a className="subtitle" href="/#governance">Governance</a>
-          <a className="subtitle" href="/#safety">Responsability</a>
+          <a className="subtitle" href="/#protocol">Protocol</a>
           <a className="subtitle" href="/#ecosystem">Ecosystem</a>
         </div>
         <div className="links">
@@ -100,6 +100,14 @@ const Footer = () => {
             className="subtitle"
           >
             FAQ
+          </a>
+          <a
+            href="https://forum.cryptex.finance/"
+            rel="noreferrer"
+            target="_blank"
+            className="subtitle"
+          >
+            Forum
           </a>
         </div>
       </div>

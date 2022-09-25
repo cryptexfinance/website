@@ -9,9 +9,9 @@ import { Button } from "react-bootstrap";
 
 
 export const BlogRoll = ({ data }) => {
-  const itemsPerPage = 12;
+  const itemsPerPage = 9;
   const keysDivider = "+++";
-  const [postsCount, setPostsCount] = useState(12);
+  const [postsCount, setPostsCount] = useState(itemsPerPage);
   const [tags, setTags] = useState([]);
   const [posts, setPosts] = useState([]);
   const [blogKeys, setBlogKeys] = useState([]);

@@ -153,12 +153,13 @@ and (orientation: portrait)
     line-height: 2.8rem;
   }
   .home-subheader {
+    width: 80%;
     font-size: 3rem;
     line-height: 3.3rem;
   }
   .subtitle {
     font-size: 2.3rem;
-    line-height: 2.8rem;
+    line-height: 2.9rem;
   }
   .link {
     font-size: 2rem;
@@ -166,6 +167,15 @@ and (orientation: portrait)
 
   .box {
     padding: 5rem;
+  }
+
+  .price-box {
+    .coin-icon {
+      height: 7rem;
+      width: 7rem;
+      margin-top: 5px;
+      margin-right: 5px;
+    }
   }
 
   .section-main {
@@ -219,13 +229,6 @@ and (orientation: portrait)
     .box {
       padding: 5rem 3rem 2rem 3rem;
     }
-    .governance-header {
-      .ctx-icon {
-        height: 50px;
-        width: 50px;
-        margin-top: 0px;
-      }
-    }
     .governance {
       &-content {
         display: flex;
@@ -235,7 +238,7 @@ and (orientation: portrait)
       }
       &-main {
         width: 90%;
-        height: 65rem;
+        height: 75rem;
         .subtitle {
           margin-top: 0rem;
         }
@@ -266,7 +269,7 @@ and (orientation: portrait)
     }
   }
 
-  .section-safety {
+  .section-protocol {
     height: auto;
     margin: 10rem 1rem;
     padding: 15rem 5rem;

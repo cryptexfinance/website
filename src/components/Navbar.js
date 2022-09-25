@@ -25,10 +25,10 @@ export default (props) => {
   }, [dataq]);
 
   const blogView = (typeof props.blogPost !== "undefined" ? props.blogPost : false);
-  const productsUrl = blogView ? `${siteUrl}/#products` : "#products";
+  const productsUrl = blogView ? `${siteUrl}/#solutions` : "#solutions";
   const academyUrl = `${siteUrl}/education`;
   const governanceUrl = blogView ? `${siteUrl}/#governance` : "#governance";
-  const safetyUrl = blogView ? `${siteUrl}/#safety` : "#safety";
+  const safetyUrl = blogView ? `${siteUrl}/#protocol` : "#protocol";
   const newsUrl = `${siteUrl}/blog`;
   const faqUrl = "https://docs.cryptex.finance/faq";
   const ecosystemUrl = blogView ? `${siteUrl}/#ecosystem` : "#ecosystem";
@@ -48,14 +48,14 @@ export default (props) => {
           <Navbar.Collapse id="responsive-navbar-nav" className="justify-content-end">
           <Nav className="nav-links">
               <Nav.Link as={Link} to={productsUrl} className="nav-links" title="Products">
-                Products
+                Solutions
               </Nav.Link>
               <div className="nav-links-divisor"></div>
               <Nav.Link as={Link} to={governanceUrl} title="Governance">
                 Governance
               </Nav.Link>
               <Nav.Link as={Link} to={safetyUrl} title="Safety">
-                Responsability
+                Protocol
               </Nav.Link>
               <div className="nav-links-divisor"></div>
               <Nav.Link as={Link} to={ecosystemUrl} title="Ecosystem">
@@ -96,13 +96,13 @@ export default (props) => {
           <Navbar.Collapse id="responsive-navbar-nav" className="justify-content-end">
             <Nav className="nav-links">
               <Nav.Link as={Link} to={productsUrl} className="nav-links" title="Products">
-                Products
+                Solutions
               </Nav.Link>
               <Nav.Link as={Link} to={governanceUrl} title="CTX Governance">
                 Governance
               </Nav.Link>
               <Nav.Link as={Link} to={safetyUrl} title="Safety">
-                Responsability
+                Protocol
               </Nav.Link>
               <Nav.Link as={Link} to={ecosystemUrl} title="Ecosystem">
                 Ecosystem

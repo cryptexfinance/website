@@ -12,13 +12,13 @@
   .tcap-header {
     display: flex;
     flex-direction: row;
-    align-items: center;
     margin: 0.2rem 1rem;
-    .tcap-icon {
-      height: 3rem;
-      width: 3rem;
-      margin-top: -7px;
-      margin-right: 20px;
+  }
+  .price-box {
+    padding-left: 1rem;
+    justify-content: space-between;
+    .coin-icon {
+      margin-right: 5px;
     }
   }
   .content {

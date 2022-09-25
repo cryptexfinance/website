@@ -36,13 +36,13 @@ const governanceItems = [
   {
     id: "1",
     title: "Proposals",
-    info: "Find the latest and past proposals here.",
+    info: "Browse the latest proposals.",
     link: "https://forum.cryptex.finance/c/proposals/5",
   },
   {
     id: "2",
     title: "Vote",
-    info: "Vote on active proposals here.",
+    info: "Vote on active proposals.",
     link: "https://www.tally.xyz/governance/eip155:1:0x874C5D592AfC6803c3DD60d6442357879F196d5b",
   },
     {
@@ -207,12 +207,9 @@ const SectionGovernance = () => {
   
   return (
     <div id="governance" className="section-governance">
-      <div className="governance-header">
-        <img src={ctxIcon} className="ctx-icon" alt="CTX" />
-        <h1 className="header">
-          Decentralized Governance
-        </h1>
-      </div>  
+      <h1 className="header">
+        Decentralized Governance
+      </h1>
       <div className="governance-content">
         <div className="box governance-main">
           <div className="info-top">
@@ -246,18 +243,21 @@ const SectionGovernance = () => {
                 </span>
               </div>
               <div  className="vl-divider" />
-              <div className="price-box">              
-                <NumericFormat
-                  className="number-blue"
-                  value={ctxPrice}
-                  displayType="text"
-                  thousandSeparator
-                  prefix="$"
-                  decimalScale={2}
-                />
-                <span className="label">
-                  CTX Price
-                </span>
+              <div className="price-box">
+                <div className="price-value">
+                  <NumericFormat
+                    className="number-blue"
+                    value={ctxPrice}
+                    displayType="text"
+                    thousandSeparator
+                    prefix="$"
+                    decimalScale={2}
+                  />
+                  <span className="label">
+                    CTX Price
+                  </span>
+                </div>
+                <img src={ctxIcon} className="coin-icon" alt="CTX" />
               </div>
             </div>
           </div>

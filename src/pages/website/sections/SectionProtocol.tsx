@@ -15,21 +15,21 @@ const safetyItems = [
   {
     id: "audit",
     title: "Audit",
-    subtitle: "Review our audits here.",
-    link: "https://cryptex.finance/Cryptex_-_Final_Report.pdf",
+    subtitle: "Review our audits.",
+    link: "https://docs.cryptex.finance/",
     logo: quanstamp,
   },
   {
     id: "collateral",
     title: "Collateral",
-    subtitle: "Review the vault monitoring here.",
+    subtitle: "Review the vault monitoring tool.",
     link: "https://app.cryptex.finance/vault-monitoring",
     logo: weth,
   },
     {
     id: "bounty",
     title: "Bounties",
-    subtitle: "Review our bounties here.",
+    subtitle: "Explore all opportunities.",
     link: "https://app.dework.xyz/cryptex-finance",
     logo: dework,
   }
@@ -63,9 +63,9 @@ const SectionSafety = () => {
   );
 
   return (
-    <div id="safety" className="section-safety">
+    <div id="protocol" className="section-protocol">
       <h1 className="header">
-        Protocol Responsibility
+        Protocol
       </h1>
       <div className="items">
         {safetyItems.map((sItem) => {

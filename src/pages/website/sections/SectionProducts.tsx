@@ -8,11 +8,11 @@ type ProductType = {
   link: string;
 }
 
-const products = [
+/* const products = [
   {
     id: "tcap",
     title: "TCAP",
-    subtitle: "Real time exposure to the whole crypto market. ",
+    subtitle: "Real time exposure to the crypto market.",
     link: "/tcap"
   },
   {
@@ -21,7 +21,7 @@ const products = [
     subtitle: "Real time exposure to the NFT market.",
     link: "/nft"
   }
-]
+] */
 
 const SectionProducts = () => {
   const [siteUrl, setSiteUrl] = useState("");
@@ -42,8 +42,13 @@ const SectionProducts = () => {
     }
   }, [dataq]);
   
-  const item = (product: ProductType) => (
-    <div key={product.id} className="box box-button products-item">
+  /* const item = (product: ProductType) => (
+    <a
+      key={product.id}
+      href={siteUrl.concat(product.link)}
+      rel="noreferrer"
+      className="box box-button products-item"
+    >
       <div className="products-info">
         <h2 className="heading-secondary">
           {product.title}
@@ -66,18 +71,51 @@ const SectionProducts = () => {
             <a className="link inactive">Coming Soon</a>
           )}
       </div>
-    </div>
-  );
+    </a>
+  ); */
 
   return (
-    <div id="products" className="section-products">
+    <div id="solutions" className="section-products">
       <h1 className="header">
         Index Tokens
       </h1>
       <div className="products">
-        {products.map((product) => {
-          return item(product);
-        })}
+        <a
+          href={siteUrl.concat("/tcap")}
+          rel="noreferrer"
+          className="box box-button products-item"
+        >
+          <div className="products-info">
+            <h2 className="heading-secondary">
+              TCAP
+            </h2>
+            <p className="subtitle">
+              Real time exposure to the crypto market.
+            </p>
+          </div>
+          <div className="products-link">
+            <a
+              className="link"
+              href={siteUrl.concat("/tcap")}
+              rel="noreferrer"
+            >
+              Learn More
+            </a>
+          </div>
+        </a>
+        <div className="box box-button products-item">
+          <div className="products-info">
+            <h2 className="heading-secondary">
+              JPEGZ
+            </h2>
+            <p className="subtitle">
+              Real time exposure to the NFT market.
+            </p>
+          </div>
+          <div className="products-link">
+            <a className="link inactive">Coming Soon</a>
+          </div>
+        </div>
       </div>
     </div>    
   );
