@@ -12,15 +12,15 @@ video {
   }
   @media only screen and (max-device-width: 1180px) {
     height: auto;
-    margin-left: 5rem;
-    padding-top: 12rem;
+    margin-left: 0rem;
+    padding-top: 10rem;
   }
   
   @media only screen and (min-device-width : 601px) and (max-device-width : 1090px) and (orientation: portrait) {
-    height: 80%;
-    margin-left: -63rem;
-    padding-top: 1rem;
-    width: 170%;
+    height: 77%;
+    margin-left: -87%;
+    padding-top: 0rem;
+    width: auto;
   }
   @media only screen and (max-device-width: 600px) and (orientation: portrait) {
     height: 80%;
@@ -28,10 +28,11 @@ video {
     margin-left: -100%;
   }
   @media only screen and (max-device-width: 450px) {
-    height: 80%;
-    width: 200%;
-    margin-left: -100%;
-    padding-top: 6rem;
+    height: 60%;
+    width: auto;
+    margin-left: -120%;
+    padding-top: 0rem;
+    margin-top: 30rem;
   }
 }
 

@@ -54,16 +54,13 @@ export default (props) => {
               <Nav.Link as={Link} to={governanceUrl} title="Governance">
                 Governance
               </Nav.Link>
+              <div className="nav-links-divisor"></div>
               <Nav.Link as={Link} to={safetyUrl} title="Safety">
                 Protocol
               </Nav.Link>
               <div className="nav-links-divisor"></div>
               <Nav.Link as={Link} to={ecosystemUrl} title="Ecosystem">
                 Ecosystem
-              </Nav.Link>
-              <div className="nav-links-divisor"></div>
-              <Nav.Link as={Link} to={academyUrl} title="Academy">
-                Academy
               </Nav.Link>
               <div className="nav-links-divisor"></div>
               <Nav.Link as={Link} to={newsUrl} title="News">

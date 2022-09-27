@@ -183,6 +183,11 @@
     letter-spacing: 0.8px;
   }
 
+  .solution-img {
+    width: 100%;
+    height: auto;  
+  }
+
   .prices {
     flex-direction: column;
   }
@@ -259,9 +264,9 @@
     }
   }
 
-  .section-products {
-    height: 100%;
-    margin: 15rem 1rem;
+  .section-solutions {
+    height: auto;
+    margin: 17rem 1rem;
     padding: 15rem 5rem;
 
     .header {
@@ -272,8 +277,10 @@
       text-align: justify;
       width: 100%;
     }
-
-    .products {
+    .solution-img-container {
+      margin-top: 6rem;
+    }
+    .solutions {
       flex-direction: column;
       margin-top: 2rem;
       margin-bottom: 4rem;
@@ -281,7 +288,7 @@
         margin-top: 2rem;
       }
       &-item {
-        height: 85rem;
+        height: 90rem;
         width: 100%;
         margin-top: 6rem;
 

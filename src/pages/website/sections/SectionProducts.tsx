@@ -1,27 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { useStaticQuery, graphql } from "gatsby";
+import tcapImg from "../../../../static/website/solutions/tcap.png";
+import jpegzImg from "../../../../static/website/solutions/jpegz.png";
 
-type ProductType = {
-  id: string;
-  title: string;
-  subtitle: string;
-  link: string;
-}
-
-/* const products = [
-  {
-    id: "tcap",
-    title: "TCAP",
-    subtitle: "Real time exposure to the crypto market.",
-    link: "/tcap"
-  },
-  {
-    id: "jpegz",
-    title: "JPEGZ",
-    subtitle: "Real time exposure to the NFT market.",
-    link: "/nft"
-  }
-] */
 
 const SectionProducts = () => {
   const [siteUrl, setSiteUrl] = useState("");
@@ -75,25 +56,32 @@ const SectionProducts = () => {
   ); */
 
   return (
-    <div id="solutions" className="section-products">
+    <div id="solutions" className="section-solutions">
       <h1 className="header">
         Index Tokens
       </h1>
-      <div className="products">
+      <div className="solutions">
         <a
           href={siteUrl.concat("/tcap")}
           rel="noreferrer"
-          className="box box-button products-item"
+          className="box box-button solutions-item"
         >
-          <div className="products-info">
+          <div className="solutions-info">
             <h2 className="heading-secondary">
               TCAP
             </h2>
             <p className="subtitle">
               Real time exposure to total crypto market capitalization.
             </p>
+            <div className="solution-img-container">
+              <img
+                src={tcapImg}
+                className="solution-img"
+                alt="TCAP"
+              />
+            </div>  
           </div>
-          <div className="products-link">
+          <div className="solutions-link">
             <a
               className="link"
               href={siteUrl.concat("/tcap")}
@@ -103,16 +91,23 @@ const SectionProducts = () => {
             </a>
           </div>
         </a>
-        <div className="box box-button products-item">
-          <div className="products-info">
+        <div className="box box-button solutions-item">
+          <div className="solutions-info">
             <h2 className="heading-secondary">
               JPEGz
             </h2>
             <p className="subtitle">
               Real time exposure to NFT market capitalization.
             </p>
+            <div className="solution-img-container">
+              <img
+                src={jpegzImg}
+                className="solution-img"
+                alt="JPEGz"
+              />
+            </div>
           </div>
-          <div className="products-link">
+          <div className="solutions-link">
             <a className="link inactive">Coming Soon</a>
           </div>
         </div>

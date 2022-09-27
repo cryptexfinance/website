@@ -236,6 +236,14 @@ h3, .terciary-header {
   }
 }
 
+.solution-img {
+  width: 100%;
+  height: auto;
+  align-self: center;
+  border-radius: 5px;
+  filter: opacity(0.85);
+}
+
 .box {
   display: flex;
   flex-direction: column;
@@ -264,8 +272,12 @@ h3, .terciary-header {
     .link {
       transform: scale(1.05);
     }
+    .solution-img {
+      filter: opacity(1);
+    }
   }
 }
+
 
 .carousel {
   background-color: $color-background-box;

@@ -179,6 +179,11 @@ and (orientation: portrait)
     font-size: 18px;
   }
 
+  /* .solution-img {
+    width: 52rem;
+    height: 31rem;
+  } */
+
   .box {
     padding: 5rem;
   }
@@ -213,23 +218,29 @@ and (orientation: portrait)
     }
   }
 
-  .section-products {
+  .section-solutions {
     margin-top: 10rem;
     padding-top: 15rem;
 
-    .products {
+    .header {
+      margin-bottom: 3rem;
+    }
+    .solution-img-container {
+      margin-top: 2rem;
+    }
+
+    .solutions {
       display: flex;
       flex-direction: column;
       align-items: center;  
       
       &-item {
-        height: 47rem;
+        height: 60rem;
         width: 85%;
         .subtitle {
           margin-top: 3rem;
         }
       }
-
     }
   }
 
@@ -402,6 +413,23 @@ and (orientation: portrait)
       &-link {
         font-size: 2rem;
       }
+    }
+  }
+
+  @media only screen  and (max-device-width : 850px) {
+    .section-main {
+      .main {
+        &-button {
+          width: 30rem;
+          height: 10rem;
+          font-size: 2.5rem;
+        }
+      }
+    }
+    .section-solutions {
+      margin-top: 20rem;
+      padding-top: 10rem;
+      height: auto;
     }
   }
 

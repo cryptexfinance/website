@@ -22,9 +22,9 @@ const CustomMediaQueries = {
 module.exports = {
   /* Your site config here */
   siteMetadata: {
-    title: "TCAP - By Cryptex Finance",
+    title: "Cryptex Finance",
     author: "Cryptex Finance",
-    description: "TCAP is the World's First Total Cryptocurrency Market Capitalization Token created by Cryptex Finance.",
+    description: "Innovative, open-source DeFi solutions for the global crypto community.",
     image: "https://raw.githubusercontent.com/cryptexglobal/website/main/static/website/home/main.webp",
     keywords: [
       "Cryptex",
