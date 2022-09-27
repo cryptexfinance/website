@@ -28,14 +28,15 @@ video {
     margin-left: -100%;
   }
   @media only screen and (max-device-width: 450px) {
-    height: 60%;
+    height: 95rem;
     width: auto;
-    margin-left: -110%;
+    margin-left: -68rem;
     padding-top: 0rem;
-    margin-top: 30rem;
+    margin-top: 20rem;
   }
   @media only screen and (max-device-width: 375px) {
-    margin-left: -120%;
+    margin-left: -75rem;
+    margin-top: 25rem;
   }
 }
 
