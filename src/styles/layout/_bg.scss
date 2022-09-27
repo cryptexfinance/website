@@ -30,9 +30,12 @@ video {
   @media only screen and (max-device-width: 450px) {
     height: 60%;
     width: auto;
-    margin-left: -120%;
+    margin-left: -110%;
     padding-top: 0rem;
     margin-top: 30rem;
+  }
+  @media only screen and (max-device-width: 375px) {
+    margin-left: -120%;
   }
 }
 
