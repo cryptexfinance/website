@@ -20,8 +20,8 @@ const Seo = ({ description, lang, meta, image: img, title, pathname }) => {
       meta={[
         { name: `description`, content: metaDescription },
         { name: `keywords`, content: site.siteMetadata.keywords.join(`,`) },
-        { property: `og:site_name`, content: "TCAP by Cryptex Finance." },
-        { property: `og:title`, content: `TCAP - By Cryptex Finance` },
+        { property: `og:site_name`, content: "Cryptex Finance." },
+        { property: `og:title`, content: `Cryptex Finance` },
         { property: `og:description`, content: metaDescription },
         { property: `og:type`, content: `website` },
         { property: `og:url`, content: `https://cryptex.finance` },
@@ -30,7 +30,7 @@ const Seo = ({ description, lang, meta, image: img, title, pathname }) => {
           content: "https://ctx-rinkeby.s3.amazonaws.com/TCAP_meta.png",
         },
         { name: `twitter:creator`, content: site.siteMetadata.author },
-        { name: `twitter:title`, content: `TCAP - By Cryptex Finance` },
+        { name: `twitter:title`, content: `Cryptex Finance` },
         { name: `twitter:description`, content: metaDescription },
         {
           name: "twitter:image",

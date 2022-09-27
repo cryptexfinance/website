@@ -36,7 +36,7 @@ const features = [
   {
     id: "pool",
     title: "Pool",
-    subtitle: "Provide liquidity to TCAP pairs on Uniswap and earn a portion of the trading fees.",
+    subtitle: "Provide liquidity to TCAP pairs on Uniswap and earn a portion of the swapping fee.",
     icon: poolIcon,
     link: TCAP_WETH_POOL_URL
   },
