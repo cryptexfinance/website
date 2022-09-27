@@ -16,7 +16,7 @@ const safetyItems = [
     id: "audit",
     title: "Audit",
     subtitle: "Review our audits.",
-    link: "https://docs.cryptex.finance/",
+    link: "https://docs.cryptex.finance/audits",
     logo: quanstamp,
   },
   {
