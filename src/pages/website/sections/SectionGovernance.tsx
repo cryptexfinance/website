@@ -57,35 +57,35 @@ const governanceItems = [
 
 const governanceIcons = [
   {
-    href: "https://www.gemini.com/prices/cryptex?utm_source=cryptex&utm_medium=link&utm_campaign=web_referral",
-    icon: geminiLogo,
-    alt: "Gemini Logo",
-    class: "gemini",
-  },
-  {
-    href: "https://www.gemini.com/prices/cryptex?utm_source=cryptex&utm_medium=link&utm_campaign=web_referral",
-    icon: sushiLogo,
-    alt: "Sushiswap Logo",
-    class: "",
-  },
-  {
-    href: "https://analytics.sushi.com/pairs/0x2a93167ed63a31f35ca4788e2eb9fbd9fa6089d0",
-    icon: uniLogo,
-    alt: "Uniswap Logo",
-    class: "uniswap",
-  },
-  {
-    href: "https://analytics.sushi.com/pairs/0x2a93167ed63a31f35ca4788e2eb9fbd9fa6089d0",
+    href: "https://www.coinbase.com/price/cryptex-finance",
     icon: coinbaseLogo,
     alt: "Coinbase logo",
     class: "",
   },
   {
-    href: "https://analytics.sushi.com/pairs/0x2a93167ed63a31f35ca4788e2eb9fbd9fa6089d0",
+    href: " https://www.gemini.com/prices/cryptex",
+    icon: geminiLogo,
+    alt: "Gemini Logo",
+    class: "gemini",
+  },
+  {
+    href: "https://www.huobi.com/en-us/asset-introduction/details?currency=ctx",
     icon: huobiLogo,
     alt: "Huobi Logo",
     class: "huobi",
-  }
+  },
+  {
+    href: "https://app.uniswap.org/#/add/0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2/0x16c52CeeCE2ed57dAd87319D91B5e3637d50aFa4/3000?chain=mainnet&maxPrice=25.713616",
+    icon: uniLogo,
+    alt: "Uniswap Logo",
+    class: "uniswap",
+  },
+  {
+    href: "https://analytics.sushi.com/pairs/0xa87e2c5d5964955242989b954474ff2eb08dd2f5",
+    icon: sushiLogo,
+    alt: "Sushiswap Logo",
+    class: "",
+  },
 ]
 
 

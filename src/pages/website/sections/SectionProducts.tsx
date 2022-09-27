@@ -90,7 +90,7 @@ const SectionProducts = () => {
               TCAP
             </h2>
             <p className="subtitle">
-              Real time exposure to the crypto market.
+              Real time exposure to total crypto market capitalization.
             </p>
           </div>
           <div className="products-link">
@@ -106,10 +106,10 @@ const SectionProducts = () => {
         <div className="box box-button products-item">
           <div className="products-info">
             <h2 className="heading-secondary">
-              JPEGZ
+              JPEGz
             </h2>
             <p className="subtitle">
-              Real time exposure to the NFT market.
+              Real time exposure to NFT market capitalization.
             </p>
           </div>
           <div className="products-link">

@@ -17,16 +17,21 @@ video {
   }
   
   @media only screen and (min-device-width : 601px) and (max-device-width : 1090px) and (orientation: portrait) {
-    height: 100rem;
-    margin-left: -55rem;
-    padding-top: 12rem;
-    width: 160%;
+    height: 80%;
+    margin-left: -63rem;
+    padding-top: 1rem;
+    width: 170%;
+  }
+  @media only screen and (max-device-width: 600px) and (orientation: portrait) {
+    height: 80%;
+    width: 200%;
+    margin-left: -100%;
   }
   @media only screen and (max-device-width: 450px) {
-    height: 150rem;
-    width: 180%;
-    margin-left: -75rem;
-    padding-top: 12rem;
+    height: 80%;
+    width: 200%;
+    margin-left: -100%;
+    padding-top: 6rem;
   }
 }
 

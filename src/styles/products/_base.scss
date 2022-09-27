@@ -29,6 +29,7 @@
       display: flex;
       flex-direction: column;
       justify-content: space-between;;
+      margin-left: 0rem;
       width: 45%;
       height: 60vh;
 
@@ -105,18 +106,18 @@
     }
   }
 
-  @media only screen and (max-device-width: 1090px) {
+  @media only screen and (max-device-width: 1090px) and (orientation: landscape) {
     .number-blue {
-      font-size: 16px;
+      font-size: 14px;
       line-height: 18px;
     }
     .number-pink {
-      font-size: 16px;
+      font-size: 14px;
       line-height: 18px;
     }
     .label {
-      font-size: 15px;
-      line-height: 17px;
+      font-size: 12px;
+      line-height: 16px;
     }
   }
 
@@ -127,19 +128,6 @@
     .box {
       padding: 3rem 2rem;
     }
-    .number-blue {
-      font-size: 20px;
-      line-height: 23px;
-    }
-    .number-pink {
-      font-size: 20px;
-      line-height: 23px;
-    }
-    .label {
-      font-size: 17px;
-      line-height: 20px;
-    }
-
     .tcap-header {
       .tcap-icon {
         height: 7rem;
@@ -175,27 +163,45 @@
     }
   }
 
-
   @media only screen and (max-device-width: 600px) and (orientation: portrait) {
-    margin: 15rem 1rem 8rem 1rem;
+    align-items: center;
+    margin: 10rem 1rem 8rem 1rem;
     padding: 13rem 1rem;
     
+    .header {
+      margin-left: 1rem;
+    }
+
     .tcap-header {
       .tcap-icon {
         display: none;
       }
     }
+    .price-box {
+      
+      .coin-icon {
+        margin-top: 0px;
+      }
+    }
+    .label {
+      font-size: 17px;
+      line-height: 20px;
+    }
     .content {
       flex-direction: column;
       margin: 5rem 0rem;
-      width: 95%;
+      width: 98%;
       .main {
         padding: 5rem 2.5rem;
         width: 100%;
-        height: 60vh;
+        height: 70vh;
         .subtitle {
           margin-top: 3rem;
           text-align: justify;
+        }
+        .prices {
+          flex-direction: column;
+          margin-top: 5rem;
         }
       }
       .features { 

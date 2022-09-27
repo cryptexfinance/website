@@ -173,8 +173,8 @@ h3, .terciary-header {
     letter-spacing: 1.7px;
   }
   @media (max-width: 600px) {
-    font-size: 14px;
-    line-height: 18px;
+    font-size: 16px;
+    line-height: 19px;
     letter-spacing: 0.7px;
   }
 }
@@ -191,11 +191,6 @@ h3, .terciary-header {
   @media (max-width: 1090px) {
     font-size: 1.5rem;
     line-height: 2rem;
-  }
-  @media (max-width: 600px) {
-    font-size: 18px;
-    line-height: 22px;
-    letter-spacing: 0.8px;
   }
 }
 
@@ -292,12 +287,13 @@ h3, .terciary-header {
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: space-around;
+  justify-content: center;
   padding-left: 2rem;
   width: 40%;
   .price-value {
     display: flex;
     flex-direction: column;
+    margin-right: 0.5rem;
   }
   .coin-icon {
     height: 3.2rem;

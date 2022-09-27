@@ -22,7 +22,7 @@ const safetyItems = [
   {
     id: "collateral",
     title: "Collateral",
-    subtitle: "Review the vault monitoring tool.",
+    subtitle: "Check out the vault monitoring tool.",
     link: "https://app.cryptex.finance/vault-monitoring",
     logo: weth,
   },

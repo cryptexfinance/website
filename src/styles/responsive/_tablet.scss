@@ -168,11 +168,11 @@ and (orientation: portrait)
   .label {
     font-size: 18px;
     line-height: 22px;
-  }
+  }    
 
   .number-pink, .number-blue {
     font-size: 20px;
-    line-height: 26px;
+    line-height: 23px;
   }
 
   .number-span {
@@ -185,10 +185,10 @@ and (orientation: portrait)
 
   .price-box {
     .coin-icon {
-      height: 7rem;
-      width: 7rem;
-      margin-top: 5px;
-      margin-right: 5px;
+      height: 6rem;
+      width: 6rem;
+      margin-top: 0px;
+      margin-left: 7px;
     }
   }
 
@@ -196,7 +196,7 @@ and (orientation: portrait)
     position: relative;
     .main {
       &-container {
-        padding: 9rem 4rem;        
+        padding: 3rem 4rem;        
       }
       &-info {
         width: 100%;
@@ -223,8 +223,8 @@ and (orientation: portrait)
       align-items: center;  
       
       &-item {
-        height: 45rem;
-        width: 80%;
+        height: 47rem;
+        width: 85%;
         .subtitle {
           margin-top: 3rem;
         }
@@ -364,7 +364,7 @@ and (orientation: portrait)
 
   .section-blogroll {
     .home {
-      height: 40rem;
+      height: 35rem;
       .description {
         width: 80%;
       }

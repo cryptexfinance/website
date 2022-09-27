@@ -83,7 +83,7 @@ const SectionCommunity = ({ data }) => {
           </h1>
           <h3 className="subtitle">
             Join our community and participate in a one of a kind journey to take action, claim rewards and make frens.
-            To start your journey, mint your free Sewage Fruit NFT.
+            To start your journey, mint your free Sewage Fruit NFT. A PFP collection with mushroom to grow.
           </h3>
         </div>
         <div className="subscribe">

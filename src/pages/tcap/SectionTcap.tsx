@@ -27,11 +27,11 @@ const features = [
     link: "https://app.cryptex.finance/vault"
   },
   {
-    id: "trade",
-    title: "Trade",
-    subtitle: "Buy and sell TCAP on Uniswap.",
+    id: "swap",
+    title: "Swap",
+    subtitle: "Swap TCAP on Uniswap.",
     icon: tradeIcon,
-    link: "https://analytics.sushi.com/pairs/0xa87e2c5d5964955242989b954474ff2eb08dd2f5"
+    link: "https://app.uniswap.org/#/swap"
   },
   {
     id: "pool",
@@ -43,7 +43,7 @@ const features = [
   {
     id: "farm",
     title: "Farm",
-    subtitle: "Earn CTX Rewards for minting TCAP tokens and Staking TCAP LP tokens.",
+    subtitle: "Earn CTX Rewards for staking LP tokens.",
     icon: farmIcon,
     link: "https://app.cryptex.finance/farm"
   }
