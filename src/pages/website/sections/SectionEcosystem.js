@@ -109,7 +109,7 @@ const SectionCommunity = ({ data }) => {
       >
         <Carousel.Item>
           <div className="item-content">
-            <h1 className="header">Sewage Fruits</h1>
+            <h1 className="header">Sewage Fruits</h1>            
           </div>  
         </Carousel.Item>
       </Carousel>

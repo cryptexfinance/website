@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import Col from "react-bootstrap/esm/Col";
 import appEndpoint from "../../../endpoint";
 import bgvideo from "../../../../static/bg_main.mp4";

@@ -1,7 +1,8 @@
 import React from "react";
-import quanstamp from "../../../../static/website/safety/quantstamp.svg";
-import weth from "../../../../static/website/safety/weth.svg";
-import dework from "../../../../static/website/safety/dework.svg";
+import quanstamp from "../../../../static/website/protocol/quantstamp.svg";
+import weth from "../../../../static/website/protocol/weth.svg";
+import dework from "../../../../static/website/protocol/dework.svg";
+import chainlink from "../../../../static/website/protocol/chainlink.svg";
 
 type SafetyType = {
   id: string;
@@ -26,12 +27,19 @@ const safetyItems = [
     link: "https://app.cryptex.finance/vault-monitoring",
     logo: weth,
   },
-    {
+  {
     id: "bounty",
     title: "Bounties",
     subtitle: "Explore all opportunities.",
     link: "https://app.dework.xyz/cryptex-finance",
     logo: dework,
+  },
+  {
+    id: "oracles",
+    title: "Oracles",
+    subtitle: "Review Chainlink oracles.",
+    link: "https://docs.cryptex.finance/tcap#oracles",
+    logo: chainlink,
   }
 ]
 

@@ -1,9 +1,9 @@
 import React from "react";
-import twitter from "../../static/website/community/twitter.svg";
-import discord from "../../static/website/community/discord.svg";
-import telegram from "../../static/website/community/telegram.svg";
-import youtube from "../../static/website/community/youtube.svg";
-import medium from "../../static/website/community/medium.svg";
+import twitter from "../../static/website/ecosystem/twitter.svg";
+import discord from "../../static/website/ecosystem/discord.svg";
+import telegram from "../../static/website/ecosystem/telegram.svg";
+import youtube from "../../static/website/ecosystem/youtube.svg";
+import medium from "../../static/website/ecosystem/medium.svg";
 
 type IconType = {
   href: string;

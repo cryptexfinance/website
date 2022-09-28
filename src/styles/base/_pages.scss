@@ -317,6 +317,9 @@ body {
   .header {
     margin: 1.5rem 0rem;
   }
+  .box {
+    margin: 1.5rem;
+  }
   .subheader {
     margin: 0.5rem 0rem;
     text-align: center;
@@ -332,8 +335,8 @@ body {
       display: flex;
       flex-direction: column;
       justify-content: space-between;
-      height: 22rem;
-      width: 22rem;
+      height: 21rem;
+      width: 18rem;
 
       @media (max-width: 1300px) {
         height: 25rem;
@@ -343,7 +346,7 @@ body {
         margin-top: 0.5rem;
       }
       .subtitle {
-        margin-top: 1rem;
+        margin-top: 0.5rem;
       }
     }
     &-info {
@@ -434,12 +437,18 @@ body {
       padding: 0rem 1rem;
 
     }
+    .sewage-img-container {
+      display: flex;
+      justify-items: center;
+      justify-content: center;
+    }
   }
 }
 
 .footer {
   display: flex;
   flex-direction: row;
+  margin-top: 5rem;
   padding: 3rem 5rem;
   background-color: $color-navbar-button;
   height: 17rem;

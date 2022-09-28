@@ -1,8 +1,8 @@
 import React from "react";
-import Navbar from "./Navbar";
+import NavbarMenu from "./Navbar";
 
 export default (props) => (
   <div className="px-0">
-    <Navbar blogPost={props.blogPost} />
+    <NavbarMenu blogPost={props.blogPost} />
   </div>
 );

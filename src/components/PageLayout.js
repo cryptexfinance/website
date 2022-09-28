@@ -12,7 +12,7 @@ import { contractsContext, signerContext } from "../context";
 import { useContracts, useSigner } from "../hooks";
 import { getDefaultProvider } from "../utils";
 
-export default ({ children }) => {
+const PageLayout = ({ children }) => {
   const contracts = useContracts();
   const signer = useSigner();
 
@@ -52,3 +52,5 @@ export default ({ children }) => {
     </div>
   );
 };
+
+export default PageLayout;

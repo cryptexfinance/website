@@ -33,6 +33,8 @@ export const BlogRoll = ({ data }) => {
         }
         const bkey = [node.frontmatter.title.toLowerCase(), postTags].join(keysDivider) + keysDivider;
         bKeys.push(bkey);
+
+        return 0;
       });
       setBlogKeys(bKeys);
       setFilteredBlogKeys(bKeys);
@@ -48,6 +50,7 @@ export const BlogRoll = ({ data }) => {
           name: node.frontmatter.tag,
           color: node.frontmatter.color
         })
+        return 0;
       });
       setTags(t);
     }
@@ -85,7 +88,7 @@ export const BlogRoll = ({ data }) => {
             <img
               src={node.frontmatter.featuredimage.childImageSharp.fluid.src}
               className="post-item-image"
-              alt=" Post image"
+              alt="Cryptex Post "
             />
           </div>
           <div className="info-container">
@@ -94,13 +97,14 @@ export const BlogRoll = ({ data }) => {
                 {Array.isArray(node.frontmatter.tags) &&
                   node.frontmatter.tags.slice(0, 5).map(tag => {
                     const tColor = tagColor(tags, tag);
-                    return <a
-                      rel="noreferrer"
-                      className="post-tagbox taglink"
-                      style={{ color: tColor, borderColor: tColor }}
-                    >
-                      {tag}
-                    </a>
+                    return (
+                      <span
+                        className="post-tagbox taglink"
+                        style={{ color: tColor, borderColor: tColor }}
+                      >
+                        {tag}
+                      </span>
+                    )
                   })
                 }
               </div>

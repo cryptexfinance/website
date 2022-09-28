@@ -166,9 +166,14 @@ and (orientation: portrait)
   }
 
   .label {
+    display: none;
+  }
+
+  .label-mobile {
+    display: block;
     font-size: 18px;
     line-height: 22px;
-  }    
+  }
 
   .number-pink, .number-blue {
     font-size: 20px;
@@ -312,6 +317,9 @@ and (orientation: portrait)
         height: 50rem;
         width: 100%;
         margin: 4rem 2rem;
+        .subtitle {
+          margin-top: 1.5rem;
+        }
       }
       .safety-logo {
         margin-top: 5rem;
@@ -356,6 +364,7 @@ and (orientation: portrait)
   }
 
   .footer {
+    margin-top: 20rem;
     padding-top: 5rem;
     height: 50rem;
     &-info {

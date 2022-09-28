@@ -1,7 +1,7 @@
 import React, { useContext, useEffect, useState } from "react";
 import { ethers } from "ethers";
 import { NumericFormat } from "react-number-format";
-import { useBreakpoint } from "gatsby-plugin-breakpoints";
+// import { useBreakpoint } from "gatsby-plugin-breakpoints";
 import { FaArrowRight } from "react-icons/fa";
 import parse from "html-react-parser";
 import { contractsContext, signerContext } from "../../../context";
@@ -88,11 +88,10 @@ const governanceIcons = [
   },
 ]
 
-
 const SectionGovernance = () => {
   const contracts = useContext(contractsContext);
   const signer = useContext(signerContext);
-  const breakpoints = useBreakpoint();
+  // const breakpoints = useBreakpoint();
   const [ctxPrice, setCtxPrice] = useState("0");
   const [marketCap, setMarketCap] = useState("0.0");
   const [totalStaked, setTotalStaked] = useState("0.0");
@@ -242,7 +241,10 @@ const SectionGovernance = () => {
                   decimalScale={2}
                 />
                 <span className="label">
-                  {breakpoints.md ? "Total CTX Market Cap." : "Total CTX Market Capitalization" }
+                  Total Crypto Market Capitalization.
+                </span>
+                <span className="label label-mobile">
+                  Total Crypto Market Cap.
                 </span>
               </div>
               <div  className="vl-divider" />
@@ -257,6 +259,9 @@ const SectionGovernance = () => {
                     decimalScale={2}
                   />
                   <span className="label">
+                    CTX Price
+                  </span>
+                  <span className="label label-mobile">
                     CTX Price
                   </span>
                 </div>

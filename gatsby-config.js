@@ -6,7 +6,7 @@
 
 //  const metaImage = require('./static/website/home/main.webp');
 
-const CustomMediaQueries = {
+/* const CustomMediaQueries = {
   xs: "(max-width: 320px)",
   smm: "(max-width: 600px)",
   sm: "(max-width: 720px)",
@@ -17,7 +17,7 @@ const CustomMediaQueries = {
   l: "(max-width: 1536px)",
   xl: "(max-width: 2000px)",
   portrait: "(orientation: portrait)",
-};
+};  */
 
 module.exports = {
   /* Your site config here */
@@ -149,12 +149,12 @@ module.exports = {
         timeout: 3500, // number; the amount of time, in milliseconds, that you want to allow mailchimp to respond to your request before timing out. defaults to 3500
       },
     },
-    {
+    /* {
       resolve: "gatsby-plugin-breakpoints",
       options: {
         queries: CustomMediaQueries,
       },
-    },
+    }, */
     {
       resolve: "gatsby-plugin-feed",
       options: {

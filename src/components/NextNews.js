@@ -77,12 +77,14 @@ const NextNews = (props) => {
               {Array.isArray(node.frontmatter.tags) &&
                 node.frontmatter.tags.slice(0, 2).map(tag => {
                   const tColor = tagColor(props.tagsColor, tag);  
-                  return <a
-                            className="newsitem-tagbox taglink"
-                            style={{ color: tColor, borderColor: tColor }}
-                          >
-                            {tag}
-                          </a>
+                  return (
+                    <span
+                      className="newsitem-tagbox taglink"
+                      style={{ color: tColor, borderColor: tColor }}
+                    >
+                      {tag}
+                    </span>
+                  )
                 })
               }
             </div>

@@ -5,7 +5,7 @@ import { Link } from "gatsby";
 import appEndpoint from '../endpoint';
 
 
-export default (props) => {
+const NavbarMenu = (props) => {
   const [siteUrl, setSiteUrl] = useState("");
   const dataq = useStaticQuery(graphql`
     query {
@@ -26,12 +26,11 @@ export default (props) => {
 
   const blogView = (typeof props.blogPost !== "undefined" ? props.blogPost : false);
   const productsUrl = blogView ? `${siteUrl}/#solutions` : "#solutions";
-  const academyUrl = `${siteUrl}/education`;
   const governanceUrl = blogView ? `${siteUrl}/#governance` : "#governance";
   const safetyUrl = blogView ? `${siteUrl}/#protocol` : "#protocol";
   const newsUrl = `${siteUrl}/blog`;
   const faqUrl = "https://docs.cryptex.finance/faq";
-  const ecosystemUrl = blogView ? `${siteUrl}/#ecosystem` : "#ecosystem";
+  //const ecosystemUrl = blogView ? `${siteUrl}/#ecosystem` : "#ecosystem";
 
 
   const NavMobile = () => {
@@ -59,15 +58,17 @@ export default (props) => {
                 Protocol
               </Nav.Link>
               <div className="nav-links-divisor"></div>
-              <Nav.Link as={Link} to={ecosystemUrl} title="Ecosystem">
-                Ecosystem
-              </Nav.Link>
               <div className="nav-links-divisor"></div>
               <Nav.Link as={Link} to={newsUrl} title="News">
                 Blog
               </Nav.Link>
               <div className="nav-links-divisor"></div>
-              <Nav.Link as={Link} to={faqUrl} title="FAQ">
+              <Nav.Link
+                href={faqUrl}
+                rel="noreferrer"
+                target="_blank"
+                title="FAQ"
+              >
                 FAQ
               </Nav.Link>
             </Nav>
@@ -101,13 +102,15 @@ export default (props) => {
               <Nav.Link as={Link} to={safetyUrl} title="Safety">
                 Protocol
               </Nav.Link>
-              <Nav.Link as={Link} to={ecosystemUrl} title="Ecosystem">
-                Ecosystem
-              </Nav.Link>
               <Nav.Link as={Link} to={newsUrl} title="News">
                 Blog
               </Nav.Link>
-              <Nav.Link as={Link} to={faqUrl} title="FAQ">
+              <Nav.Link
+                href={faqUrl}
+                rel="noreferrer"
+                target="_blank"
+                title="FAQ"
+              >
                 FAQ
               </Nav.Link>
               
@@ -122,9 +125,11 @@ export default (props) => {
   }
 
   return (
-      <>      
-        <NavMobile/>       
-        <NavDesktop/>                
-      </>
+    <>      
+      <NavMobile/>       
+      <NavDesktop/>                
+    </>
   )
 }
+
+export default NavbarMenu;

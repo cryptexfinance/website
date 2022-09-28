@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import SelectCryptex from "./Select";
 import SearchInput from "./SearchInput";
-import { FaSearch } from "@react-icons/all-files/fa/FaSearch";
 
 
 const SearchNews = ({

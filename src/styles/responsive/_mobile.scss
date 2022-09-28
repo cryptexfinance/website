@@ -177,6 +177,13 @@
     font-size: 3.2rem;
   }
 
+  .label {
+    display: none;
+  }
+  .label-mobile {
+    display: block;
+  }
+  
   .number-pink, .number-blue {
     font-size: 17px;
     line-height: 22px;
@@ -456,6 +463,7 @@
   .footer {
     display: flex;
     flex-direction: column;
+    margin-top: 40rem;
     padding: 10rem 8rem;
     height: auto;
 

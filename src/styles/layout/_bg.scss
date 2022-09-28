@@ -17,10 +17,12 @@ video {
   }
   
   @media only screen and (min-device-width : 601px) and (max-device-width : 1090px) and (orientation: portrait) {
-    height: 77%;
-    margin-left: -87%;
+    height: 75%;
+    margin-left: -55%;
     padding-top: 0rem;
     width: auto;
+
+    
   }
   @media only screen and (max-device-width: 600px) and (orientation: portrait) {
     height: 80%;

@@ -29,10 +29,11 @@ export const BlogPostTemplate = ({
       const tags = [];
       tagsColorAll.edges.map(({ node }) => {
         tags.push({ name: node.frontmatter.tag, color:  node.frontmatter.color });
+        return 0;
       });
       setTagsColor(tags);
     }
-  }, []);
+  }, [tagsColorAll.edges]);
 
   return (
     <section id="news" className="section-blogpost">
@@ -41,13 +42,14 @@ export const BlogPostTemplate = ({
           <div className="tags">
           {tags.map((tag) => {
             const tColor = tagColor(tagsColor, tag);
-            return  <a
-                      target="_blank"
-                      className="tagbox"
-                      style={{ color: tColor, borderColor: tColor }}
-                    >
-                      {tag}
-                    </a>
+            return ( 
+              <span
+                className="tagbox"
+                style={{ color: tColor, borderColor: tColor }}
+              >
+                {tag}
+              </span>
+            );        
           })}
           </div>
         ) : null}

@@ -1,9 +1,8 @@
 import React from "react";
 import SectionMain from "./sections/SectionMain";
-import SectionProducts from "./sections/SectionProducts";
+import SectionSolutions from "./sections/SectionSolutions";
 import SectionGovernance from "./sections/SectionGovernance";
 import SectionProtocol from "./sections/SectionProtocol";
-import SectionEcosystem from "./sections/SectionEcosystem";
 
 const Home = (data) => {
 
@@ -12,10 +11,9 @@ const Home = (data) => {
       <header id="home" />
       <main>
         <SectionMain />   
-        <SectionProducts />
+        <SectionSolutions />
         <SectionGovernance />
         <SectionProtocol />
-        <SectionEcosystem />
       </main>
     </>
   )

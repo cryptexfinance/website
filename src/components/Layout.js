@@ -1,8 +1,8 @@
 import React from "react";
-import useSiteMetadata from "./SiteMetadata";
+// import useSiteMetadata from "./SiteMetadata";
 
 const TemplateWrapper = ({ children }) => {
-  const { title, description } = useSiteMetadata()
+  // const { title, description } = useSiteMetadata()
   return (
     <div>
       <div>{children}</div>
