@@ -1,6 +1,6 @@
 @media only screen 
 and (min-device-width : 601px) 
-and (max-device-width : 1090px) 
+and (max-device-width : 1090px)
 and (orientation: portrait)
  {
   
@@ -44,18 +44,18 @@ and (orientation: portrait)
 
   .nav-links-divisor {
     top: -3px;
-			position: relative;
-			width: 680px;
-      height: 10px;
-      line-height: 28px;
-      background: $color-grey-dark !important;
-      background-color: $color-grey-dark !important;
-      z-index: 10;
-      border: 1px solid #494866;
-      box-sizing: border-box;
-      margin-left: 35px;
-      margin-bottom: -2px;
-      padding-top: -2px;
+    position: relative;
+    width: 680px;
+    height: 10px;
+    line-height: 28px;
+    background: $color-grey-dark !important;
+    background-color: $color-grey-dark !important;
+    z-index: 10;
+    border: 1px solid #494866;
+    box-sizing: border-box;
+    margin-left: 35px;
+    margin-bottom: -2px;
+    padding-top: -2px;
   }
 
   .responsive-app-button {
@@ -134,6 +134,23 @@ and (orientation: portrait)
       text-decoration: none;
     }
 	}
+
+  @media (min-width: 992px) {
+    .navbar-expand-lg .navbar-toggler {
+      display: block;
+    }
+    .navbar, .navbar div {
+      height: 70px;
+    }
+    .navbar-expand-lg .navbar-nav {
+      display: none;
+      flex-direction: column;
+      margin-top: 150px;
+      width: 100%;
+      max-width: 110%;
+    }    
+  }
+
 
   h1, .header { 
     font-size: 3.5rem;
@@ -435,6 +452,13 @@ and (orientation: portrait)
         }
       }
     }
+    .section-solutions {
+      margin-top: 20rem;
+      padding-top: 10rem;
+      height: auto;
+    }
+  }
+  @media only screen and (max-device-width : 1024px) { 
     .section-solutions {
       margin-top: 20rem;
       padding-top: 10rem;

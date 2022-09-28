@@ -18,11 +18,16 @@ video {
   
   @media only screen and (min-device-width : 601px) and (max-device-width : 1090px) and (orientation: portrait) {
     height: 75%;
-    margin-left: -55%;
+    margin-left: -65%;
     padding-top: 0rem;
     width: auto;
 
-    
+    @media only screen and (min-device-height: 1200px) {
+      margin-left: -97%;
+    }
+    @media only screen and (min-device-height: 1150px) {
+      margin-left: -75%;
+    }
   }
   @media only screen and (max-device-width: 600px) and (orientation: portrait) {
     height: 80%;
@@ -30,15 +35,25 @@ video {
     margin-left: -100%;
   }
   @media only screen and (max-device-width: 450px) {
-    height: 95rem;
+    height: 70%;
     width: auto;
-    margin-left: -68rem;
+    margin-left: -115%;
     padding-top: 0rem;
-    margin-top: 20rem;
+    margin-top: 5rem;
+  }
+  @media only screen and (max-device-width: 400px) {
+    height: 67%;
+    margin-left: -105%;
   }
   @media only screen and (max-device-width: 375px) {
-    margin-left: -75rem;
-    margin-top: 25rem;
+    height: 63%;
+    margin-left: -88%;
+    margin-top: 7rem;
+  }
+  @media only screen and (max-device-width: 365px) {
+    height: 60%;
+    margin-left: -98%;
+    margin-top: 10rem;
   }
 }
 

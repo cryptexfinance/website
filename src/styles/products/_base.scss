@@ -121,6 +121,26 @@
     }
   }
 
+  @media only screen and (max-device-width: 1024px) {
+    .content {
+      .feature {
+        &-item {
+          &:hover {
+            .heading-secondary {
+              display: flex;
+            }
+          }
+        }
+        &-icon {
+          width: 88px;
+        }
+        &-content {
+          display: block;
+        }
+      }
+    }
+  }
+
   @media only screen and (min-device-width : 601px) and (max-device-width : 1090px) and (orientation: portrait) {
     margin: 10rem 1rem 20rem 1rem;
     padding: 5rem 1.5rem;
@@ -225,7 +245,8 @@
           padding: 4rem;
         }
         &-icon {
-          margin-left: -3rem
+          margin-left: -3rem;
+          width: 95px;
         }
         &-content {
           display: block;
