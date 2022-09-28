@@ -32,6 +32,54 @@ body {
   padding-left: 15px;
 }
 
+.form-control {
+  position: relative;
+  width: 100%;
+  height: 2.8rem;
+  background: $color-navbar-button;
+  border: 0.0625rem solid $color-grey;
+  box-sizing: border-box;
+  border-radius: 0.0625rem;
+  font-family: $font-tertiary;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 1rem;
+  line-height: 0.875rem;
+  color: $color-grey-light;
+  padding: 1.5rem 2rem;
+}
+
+.form-control:focus {
+  background-color: $color-navbar-button;
+  color: $color-grey;
+  box-shadow: 1px 1px 3px rgba(164, 64, 242, 0.8);
+}
+
+.searchbar {
+  display: flex;
+  .select-cryptex {
+    margin-left: 0rem;
+    margin-right: 1rem;
+  }
+}
+
+.search-box {
+  display: flex;
+  width: 100%;
+  .search-icon {
+    position: absolute;
+    align-self: center;
+    color: $color-grey-light;
+    font-size: 1.2rem;
+    margin-left: 1rem;
+    z-index: 1;
+  }
+  .search-input {
+    padding-left: 2.7rem;
+    font-size: 1.2rem;
+    color: $color-grey-light;
+  }
+}
 
 @media only screen and (min-device-width: 1000px) and (max-device-width: 1300px) {
   .pl-5, .ml-5 {
@@ -45,16 +93,32 @@ body {
   } 
 }
 
-
 @media only screen and (max-device-width: 1000px) {
   .nav-default {
     display: None;
   }
 }
 
-@media only screen and (min-device-width: 1001px) and (max-device-width: 1090px) and (orientation : portrait) {
+@media only screen and (min-device-width: 601px) and (max-device-width: 1090px) and (orientation : portrait) {
   .nav-default {
     display: None;
+  }
+  .form-control {
+    height: 5rem;
+  }
+  .search-box {
+    display: flex;
+    width: 100%;
+
+    .search-icon {
+      font-size: 2rem;
+      margin-left: 1rem;
+      z-index: 1;
+    }
+    .search-input {
+      padding-left: 3rem;
+      font-size: 2rem;
+    }
   }
 }
 

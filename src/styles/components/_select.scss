@@ -1,5 +1,30 @@
 .select-cryptex {
-    width: 100%;
+  width: 100%;
+  &__value-container {
+    padding: 2px 10px;
+  }
+  &__input {
+    color: $color-grey-light !important;
+  }
+  &__input-container {
+    color: $color-grey-light;
+  }
+  &__indicators {
+    width: 45px;
+  }
+  &__indicator {
+    color: $color-grey-light;
+    padding: 10px;
+  }
+  &__indicator-separator {
+    color: $color-grey-light;
+  }
+  &__placeholder {
+    color: $color-grey-light;
+  }
+  &__option {
+    font-size: 1.2rem;
+  }
 }
 .select-cryptex__control--is-focused {
   background-color: $color-navbar-button !important;
@@ -9,4 +34,38 @@
 }
 .css-1pahdxg-control:hover {
   border-color: $shadow-purple-neon-secondary !important;
+}
+
+@media only screen and (min-device-width : 601px) and (max-device-width : 1090px) and (orientation: portrait) {
+  .select-cryptex {
+    width: 45% !important;
+    &__control {
+      height: 5rem;
+    }
+    &__placeholder {
+      font-size: 2rem;
+    }
+    &__option {
+      font-size: 2rem;
+    }
+  }
+}
+
+@media only screen and (max-device-width: 600px) {
+  .select-cryptex {
+    width: 100% !important;
+
+    &__control {
+      height: 10rem;
+    }
+    &__input {
+      font-size: 4rem !important;
+    }
+    &__placeholder {
+      font-size: 4rem;
+    }
+    &__option {
+      font-size: 4rem;
+    }
+  }
 }

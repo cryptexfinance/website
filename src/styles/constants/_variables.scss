@@ -1,0 +1,96 @@
+// Colors
+$color-primary-pink: #E440F2;
+$color-primary-purple: #A440F2;
+$color-primary-green: #38D6B2;
+$color-primary-orange: #F28040;
+$color-white: #FFFFFF;
+$color-grey-dark: #494866;
+$color-grey: #A9A7BE;
+$color-grey-light: #d5d4e3;
+$color-dark-clean: #F6F6F7;
+$color-black: #212138;
+$color-black-light: #31314f;
+$color-navbar-button: #1D1D3C;
+$color-background-features: #111131;
+$color-background-box: rgba(33, 33, 56, 0.82);
+
+// Shadows Colors
+$shadow-pink-neon: rgba(223, 33, 254, 0.9);
+$shadow-blue-neon: #A2D2FE;//rgba(39, 225, 250, 0.1);//rgba(55, 231, 255, 0.45);//#0688FF;
+$shadow-blue-neon-second: rgba(39, 225, 250, 0.3);
+$shadow-green-neon: rgba(63, 217, 180, 0.8);//#38D6B2;
+$shadow-green-neon-second: rgba(112, 235, 183, 0.3);
+$shadow-purple-neon: rgba(164,64,242, 0.8);
+$shadow-purple-neon-secondary: rgba(164,64,242, 0.3);
+$shadow-orange-neon: rgba(242,128,64, 0.8);
+$shadow-orange-neon-second: rgba(242,128,64, 0.3);
+$shadow-navbar-button: rgba(254, 33, 245, 0.43);
+// $shadow-text-about: 0px 4px 13px #A440F2;
+
+$font-primary: 'Nineteen Ninety Seven';
+$font-secondary: 'Erbos Draco 1st Open NBP';
+$font-tertiary: 'Space Mono';
+
+$main-image-width: 28.9375rem;
+$main-image-height: 28.625rem;
+
+
+//GRID
+$grid-width: 114rem;
+$gutter-vertical: 8rem;
+$gutter-horizontal: 6rem;
+
+
+// Toast
+
+$rt-namespace: 'Toastify';
+$rt-toast-width: 320px !default;
+$rt-toast-background: #fff !default;
+$rt-toast-min-height: 64px !default;
+$rt-toast-max-height: 800px !default;
+$rt-color-progress-default: linear-gradient(to right, #4cd964, #5ac8fa, #007aff, #34aadc, #5856d6, #ff2d55) !default;
+$rt-color-progress-dark: #bb86fc !default;
+$rt-mobile: "only screen and (max-width : 480px)" !default;
+$rt-z-index: 9999 !default;
+
+
+@font-face {
+  font-family: 'Space Mono Bold';
+  src: url('../fonts/SpaceMono-Bold.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Space Mono';
+  src: url('../fonts/SpaceMono-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Nineteen Ninety Seven';
+  src: url('../fonts/Nineteen-Ninety-Seven.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Erbos Draco 1st Open NBP';
+  src: url('../fonts/Erbos-Draco-1st-Open-NBP.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+$font: (
+  family:						('Space Mono', 'Nineteen Ninety Seven', 'Erbos Draco 1st Open NBP'),
+  family-fixed:				('Space Mono', 'Nineteen Ninety Seven', 'Erbos Draco 1st Open NBP'),
+  weight:						300,
+  weight-bold:				600,
+  letter-spacing:				0.2rem,
+  letter-spacing-heading:		0.5rem
+);

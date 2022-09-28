@@ -1,0 +1,79 @@
+.academy {
+  .posts {
+    display: grid;
+    padding: 3rem 0rem;
+    grid-template-columns: auto auto  auto;
+    gap: 3rem;
+  }
+  .post {
+    &-item {
+      padding: 1rem;
+      background-color: #212138;
+      border-radius: 5px;
+    }  
+    &-item-content {
+      padding: 1rem 0.5rem;
+      .title {
+        a {
+          color: white;
+          font-size: 0.9rem;
+          font-family: "Nineteen Ninety Seven";
+        }
+      }  
+      .excerpt {
+        padding: 0.6rem 0rem;
+        p {
+          color: #c2c5c9;
+          font-size: 0.9rem;
+          margin-bottom: 0rem;
+        }
+      }
+      .tags {
+        display: flex;
+        padding-bottom: 0.6rem;
+        .post-tagbox {
+          font-size: 0.8rem;
+          padding: 1px 4px;
+          margin-right: 7px;
+          background-color: #212138;
+          border: 1px solid;
+          text-decoration: none;
+        }
+        .one {
+          color: rgb(164, 64, 242);
+          border-color: rgb(164, 64, 242);
+        }
+        .two {
+          color: rgb(204, 255, 2);
+          border-color: rgb(204, 255, 2);
+        }
+        .three {
+          color: rgb(242, 128, 64);
+          border-color: rgb(242, 128, 64);
+        }
+      }
+    }
+    &-img-container {
+      display: flex;
+      justify-content: center;
+    }
+    &-item-footer {
+      display: flex;
+      justify-content: flex-end;
+    }
+    &-image {
+      height: 10rem;
+      width: 100%;
+    }
+    &-link {
+      align-items: center;
+      color: #a440f2;
+      display: flex;
+      font-family: Nineteen Ninety Seven;
+      font-size: .625rem;
+      font-style: normal;
+      font-weight: 400;
+      line-height: .75rem;
+    }
+  }
+}

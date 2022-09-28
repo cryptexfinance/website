@@ -1,7 +1,5 @@
-import React from 'react'
-import { Helmet } from 'react-helmet'
-import { Link, graphql } from 'gatsby'
-import Layout from '../components/Layout'
+import React from "react";
+import Layout from "../components/Layout";
 
 const BlogTag = ({ data, pageContext }) => {
   return (

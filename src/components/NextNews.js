@@ -1,5 +1,5 @@
-import React, { useEffect, useState } from 'react';
-import { useStaticQuery, graphql } from 'gatsby';
+import React, { useEffect, useState } from "react";
+import { useStaticQuery, graphql } from "gatsby";
 import Col from "react-bootstrap/esm/Col";
 import { tagColor } from "./utils/tags";
 
@@ -77,12 +77,14 @@ const NextNews = (props) => {
               {Array.isArray(node.frontmatter.tags) &&
                 node.frontmatter.tags.slice(0, 2).map(tag => {
                   const tColor = tagColor(props.tagsColor, tag);  
-                  return <a
-                            className="newsitem-tagbox taglink"
-                            style={{ color: tColor, borderColor: tColor }}
-                          >
-                            {tag}
-                          </a>
+                  return (
+                    <span
+                      className="newsitem-tagbox taglink"
+                      style={{ color: tColor, borderColor: tColor }}
+                    >
+                      {tag}
+                    </span>
+                  )
                 })
               }
             </div>

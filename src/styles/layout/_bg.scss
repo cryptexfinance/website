@@ -1,23 +1,49 @@
 video {
-  // object-fit: inherit;
-  // width: 100vw;
-  // height: 100vh;
-  // position: fixed;
-  // top: 0;
-  // left: 0;
   object-fit: inherit;
-  width: 100vw;
-  height: 100vh;
-  position: fixed;
+  width: 100%;
+  position: absolute;
+  margin-left: 0rem;
   top: 0;
   left: 0;
-  opacity: 0.3;
   display: block;
   z-index: -2;
-  // background-color: black;
+  @media only screen and (max-device-width: 1300px) {
+    padding-top: 6rem;
+  }
+  @media only screen and (max-device-width: 1180px) {
+    height: auto;
+    margin-left: 0rem;
+    padding-top: 10rem;
+  }
+  
+  @media only screen and (min-device-width : 601px) and (max-device-width : 1090px) and (orientation: portrait) {
+    height: 75%;
+    margin-left: -55%;
+    padding-top: 0rem;
+    width: auto;
+
+    
+  }
+  @media only screen and (max-device-width: 600px) and (orientation: portrait) {
+    height: 80%;
+    width: 200%;
+    margin-left: -100%;
+  }
+  @media only screen and (max-device-width: 450px) {
+    height: 95rem;
+    width: auto;
+    margin-left: -68rem;
+    padding-top: 0rem;
+    margin-top: 20rem;
+  }
+  @media only screen and (max-device-width: 375px) {
+    margin-left: -75rem;
+    margin-top: 25rem;
+  }
 }
 
 .bg-black {
   background-color: black;
   background: black;
 }
+

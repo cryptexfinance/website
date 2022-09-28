@@ -1,19 +1,19 @@
 import React, { useEffect, useState } from "react";
 import Col from "react-bootstrap/esm/Col";
-import { useBreakpoint } from "gatsby-plugin-breakpoints";
 import PropTypes from "prop-types";
 import { graphql, StaticQuery } from "gatsby";
 import SearchNews from "./SearchNews";
 import { tagColor } from "./utils/tags";
 import { sortAlpha } from "./utils/utils";
+import { Button } from "react-bootstrap";
 
 
 export const BlogRoll = ({ data }) => {
+  const itemsPerPage = 9;
   const keysDivider = "+++";
+  const [postsCount, setPostsCount] = useState(itemsPerPage);
   const [tags, setTags] = useState([]);
   const [posts, setPosts] = useState([]);
-  const breakpoints = useBreakpoint();
-  const [activePage, setActivePage] = useState(0);
   const [blogKeys, setBlogKeys] = useState([]);
   const [filteredBlogKeys, setFilteredBlogKeys] = useState([]);
   const [tagList, setTagList] = useState([]);
@@ -33,6 +33,8 @@ export const BlogRoll = ({ data }) => {
         }
         const bkey = [node.frontmatter.title.toLowerCase(), postTags].join(keysDivider) + keysDivider;
         bKeys.push(bkey);
+
+        return 0;
       });
       setBlogKeys(bKeys);
       setFilteredBlogKeys(bKeys);
@@ -48,6 +50,7 @@ export const BlogRoll = ({ data }) => {
           name: node.frontmatter.tag,
           color: node.frontmatter.color
         })
+        return 0;
       });
       setTags(t);
     }
@@ -63,74 +66,104 @@ export const BlogRoll = ({ data }) => {
   }
 
   const sliceDescription = (description) => {
-    if (description.length < 300)
+    if (description.length < 200)
       return description;
     else
-      return description.slice(0, 300) + "...";
+      return description.slice(0, 120) + "...";
   }
 
-  const NewsItem = ({ node }) => {
+  const PostItem = ({ node }) => {
     const postTags = node.frontmatter.tags.join(keysDivider).toLowerCase() + keysDivider;
     const key = [node.frontmatter.title.toLowerCase(), postTags].join(keysDivider);
     const indexOf = filteredBlogKeys.indexOf(key.toLowerCase());
+    let className = "post-item";
+    if (indexOf >= postsCount) {
+      className = "post-item hide";
+    }
+
     if (indexOf >= 0) {
       return (
-        <Col xs={12} md={6} lg={6} className={"newsitem"}>
-          <a href={postUrl(node)} target="_top" rel="noreferrer">
-            <img src={node.frontmatter.featuredimage.childImageSharp.fluid.src} className="newsitem-photo" alt="News" />
-          </a>
-          <div className="newsitem-info">
-            <div className="newsitem-tag-items">
-              {Array.isArray(node.frontmatter.tags) &&
-                node.frontmatter.tags.slice(0, 5).map(tag => {
-                  const tColor = tagColor(tags, tag);;
-                  return <a
-                    rel="noreferrer"
-                    className="newsitem-tagbox taglink"
-                    style={{ color: tColor, borderColor: tColor }}
-                  >
-                    {tag}
-                  </a>
-                })
-              }
-            </div>
-            <a href={postUrl(node)} className="newsitem-title-link" >
-              <div className="newsitem-title terciary-header">
-                {node.frontmatter.title}
-              </div>
-            </a>
-            <a href={postUrl(node)} className="newsitem-title-link" >
-              <p className="newsitem-brief">
-                {sliceDescription(node.frontmatter.description)}
-              </p>
-            </a>
-            <a href={postUrl(node)} className="newsitem-link link">Check it out</a>
+        <div key={key} className={className}>
+          <div className="post-img-container">
+            <img
+              src={node.frontmatter.featuredimage.childImageSharp.fluid.src}
+              className="post-item-image"
+              alt="Cryptex Post "
+            />
           </div>
-        </Col>
+          <div className="info-container">
+            <div className="post-item-content">
+              <div className="tag-items">
+                {Array.isArray(node.frontmatter.tags) &&
+                  node.frontmatter.tags.slice(0, 5).map(tag => {
+                    const tColor = tagColor(tags, tag);
+                    return (
+                      <span
+                        className="post-tagbox taglink"
+                        style={{ color: tColor, borderColor: tColor }}
+                      >
+                        {tag}
+                      </span>
+                    )
+                  })
+                }
+              </div>
+              <div className="title">
+                <a href={postUrl(node)}>{node.frontmatter.title}</a>
+              </div>
+              <div className="excerpt">
+                <p>
+                  {sliceDescription(node.frontmatter.description)}
+                </p>  
+              </div>
+            </div>
+            <div className="post-item-footer">
+              <a href={postUrl(node)} className="post-item-link">
+                Check it out
+              </a>
+            </div>
+          </div>  
+        </div>
       );
     }
     return <></>;
   };
 
+  const onLoadMoreClick = () => {
+    let pc = postsCount + itemsPerPage;
+    if (pc > filteredBlogKeys.length) { 
+      pc = filteredBlogKeys.length;
+    }
+    setPostsCount(pc);
+  };
+ 
   return (
     <div className="blogroll">
-      <Col md={12} lg={12} className="page-title">
-        <h2>Latest News</h2>
-      </Col>
       <Col md={12} lg={12} className="search-content">
         <SearchNews
           blogKeys={blogKeys}
           setFilteredBlogKeys={setFilteredBlogKeys}
           tagList={tagList}
-          setActivePage={setActivePage}
+          setPostsCount={setPostsCount}
         />
       </Col>
-      <Col md={12} lg={12} className="news">
+      <Col md={12} lg={12} className="posts">
         {posts.map(({ node }) => (
-           <NewsItem node={node} />
+           <PostItem node={node} />
           )
         )}
-      </Col>  
+      </Col>
+      <Col md={12} lg={12} className="pagination">
+        {postsCount < filteredBlogKeys.length && (
+          <Button
+            className="button-dark"
+            variant="secondary"
+            onClick={onLoadMoreClick}
+          >
+            Load More
+          </Button>
+        )}  
+      </Col>
     </div>
   )
 }

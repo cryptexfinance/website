@@ -1,13 +1,13 @@
 import React, { useState } from "react";
 import SelectCryptex from "./Select";
-import { FaSearch } from "@react-icons/all-files/fa/FaSearch";
+import SearchInput from "./SearchInput";
 
 
 const SearchNews = ({
   blogKeys,
   setFilteredBlogKeys,
   tagList,
-  setActivePage
+  setPostsCount
 }) => {
   const keysDivider = "+++";
   const dbDefaultTitle = "Filter";
@@ -16,7 +16,7 @@ const SearchNews = ({
 
 
   const filterPosts = (criteria, filterTag) => {
-    setActivePage(0);
+    setPostsCount(9);
     let filterKeys = [];
     if (filterTag === dbDefaultTitle && criteria !== "")
       filterKeys = blogKeys.filter(key => key.includes(criteria.toLowerCase()));
@@ -50,13 +50,6 @@ const SearchNews = ({
     
   return (
     <div className="filter-box">
-      <FaSearch className="search-icon" />
-      <input
-        id="news-search"
-        value={searchCriteria} onChange={(e) => onChange(e.target.value)}
-        className="newsbox-search"
-        placeholder="Search"
-      />
       <SelectCryptex
         isClearable={true}
         isMulti={false}
@@ -65,6 +58,11 @@ const SearchNews = ({
         placeholder="Filter"
         onSelectChange={onSelectChange}
       />
+      <SearchInput
+        placeholder="Search"
+        value={searchCriteria}
+        onChange={(e) => onChange(e.target.value)}
+      />   
     </div>    
   );
 }
