@@ -6,7 +6,7 @@
 
 //  const metaImage = require('./static/website/home/main.webp');
 
-const CustomMediaQueries = {
+/* const CustomMediaQueries = {
   xs: "(max-width: 320px)",
   smm: "(max-width: 600px)",
   sm: "(max-width: 720px)",
@@ -17,14 +17,14 @@ const CustomMediaQueries = {
   l: "(max-width: 1536px)",
   xl: "(max-width: 2000px)",
   portrait: "(orientation: portrait)",
-};
+};  */
 
 module.exports = {
   /* Your site config here */
   siteMetadata: {
-    title: "TCAP - By Cryptex Finance",
+    title: "Cryptex Finance",
     author: "Cryptex Finance",
-    description: "TCAP is the World's First Total Cryptocurrency Market Capitalization Token created by Cryptex Finance.",
+    description: "Innovative, open-source DeFi solutions for the global crypto community.",
     image: "https://raw.githubusercontent.com/cryptexglobal/website/main/static/website/home/main.webp",
     keywords: [
       "Cryptex",
@@ -37,7 +37,10 @@ module.exports = {
       "TCAP",
     ],
     siteUrl:
-      process.env.URL || process.env.DEPLOY_URL || "http://localhost:8000",
+      process.env.SITE_URL || process.env.DEPLOY_URL || "http://localhost:8000",
+  },
+  flags: {
+    DEV_SSR: true
   },
   plugins: [
     {
@@ -82,7 +85,6 @@ module.exports = {
         path: `${__dirname}/src/pages/tags`,
       },
     },
-    "gatsby-plugin-preload-link-crossorigin",
     "gatsby-plugin-catch-links",
     {
       resolve: `gatsby-source-filesystem`,
@@ -121,21 +123,8 @@ module.exports = {
         ],
       },
     },
-    "gatsby-transformer-sharp",
     "gatsby-plugin-sharp",
-    {
-      resolve: `gatsby-plugin-manifest`,
-      options: {
-        name: `Cryptex Site`,
-        short_name: `Cryptex`,
-        description: `Crypto | TCAP`,
-        start_url: `/`,
-        background_color: `#000`,
-        theme_color: `#000`,
-        display: `standalone`,
-        icon: `${__dirname}/static/favicon.svg`, // This path is relative to the root of the site.
-      },
-    },
+    "gatsby-transformer-sharp",
     "gatsby-plugin-offline",
     "gatsby-plugin-react-helmet",
     {
@@ -160,12 +149,12 @@ module.exports = {
         timeout: 3500, // number; the amount of time, in milliseconds, that you want to allow mailchimp to respond to your request before timing out. defaults to 3500
       },
     },
-    {
+    /* {
       resolve: "gatsby-plugin-breakpoints",
       options: {
         queries: CustomMediaQueries,
       },
-    },
+    }, */
     {
       resolve: "gatsby-plugin-feed",
       options: {

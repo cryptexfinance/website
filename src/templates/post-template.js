@@ -6,7 +6,7 @@ import SEO from "../utils/seo"
 
 export default ({ title, excerpt, html, subTitle }) => (
   <PageLayout>
-    <SEO title={title} description={excerpt} />
+    <Seo title={title} description={excerpt} />
     <>
       <PageTitle title={title} />
       {subTitle}

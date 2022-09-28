@@ -1,5 +1,6 @@
-import React, { Component } from 'react'  
-export class Toggle extends Component {  
+import React, { Component } from "react";
+
+class Toggle extends Component {  
     constructor(props) {  
         super(props);  
         this.state = {  
@@ -42,4 +43,5 @@ export class Toggle extends Component {
         );  
     }  
 }  
-export default Toggle
+
+export default Toggle;

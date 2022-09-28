@@ -1,4 +1,4 @@
-@media only screen and (max-device-width: 600px) and (max-device-height: 1200px) and (orientation: portrait) {
+@media only screen and (max-device-width: 600px) and (orientation: portrait) {
  
   .navbar,
   .navbar div {
@@ -131,429 +131,353 @@
     }
   }
 
+  .button-pink {
+    position: relative;
+    width: 95%;
+    height: 40px;
+    font-size: 14px;
+    line-height: 16px;
+  }
+
+  .button-dark {
+    font-family: $font-primary;
+    font-weight: normal;
+    width: 95%;
+    height: 40px;
+    font-size: 14px;
+    line-height: 16px;
+  }
+
+  h1, .header {
+    font-size: 26px;
+  }
+  h3 {
+    font-size: 24px;
+  }
+
   .header {
     font-size: 22px;
     line-height: 36px;
   }
+  .subheader {
+    font-size: 16px;
+    line-height: 20px;
+    letter-spacing: 0.7px;
+  }
+  .home-subheader {
+    font-size: 18px;
+    line-height: 22px;
+    width: 100%;
+  }
+  .subtitle {
+    font-size: 17px;
+    line-height: 22px;
+  }
+  .link {
+    font-size: 3.2rem;
+  }
 
-  .main {
-    &-title {
-      width: 362px;
-      height: 108px;
-    }
-    &-number-pink {
-      position: relative;
-      display: flex;
-      align-items: center;
-      width: 257px;
-      height: 36px;
-      font-size: 18px;
-      line-height: 36px;
-    }
-    &-bold-text {
-      width: 342px;
-      height: 22px;
-      font-size: 14px;
-      line-height: 22px;
-    }
-    &-divider {
-      background: transparent !important;
-    }
-    &-number-blue {
-      width: 312px;
-      height: 22px;
-      font-size: 18px;
-      line-height: 36px;
-    }
-    &-tcap {
-      width: 87px;
-      height: 60px;
-      &-image {
-        width: 30px;
-      }
-      &-text {
-        font-size: 14px;
-        line-height: 37px;
-      }
-    }
+  .label {
+    display: none;
+  }
+  .label-mobile {
+    display: block;
+  }
+  
+  .number-pink, .number-blue {
+    font-size: 17px;
+    line-height: 22px;
+    letter-spacing: 0.8px;
+  }
 
-    &-button-link {
-      z-index: 20;
-      text-decoration: none;
-      text-align: center;
-      &:hover {
-        color: $color-white !important;
-        text-decoration: none;
-      }
-      &:focus {
-        outline: none !important;
-      }
+  .solution-img {
+    width: 100%;
+    height: auto;  
+  }
+
+  .prices {
+    flex-direction: column;
+  }
+  .market-cap-box {
+    width: 100%;
+  }
+  .price-box {
+    width: 100%;
+    justify-content: left;
+    margin-top: 4.5rem;
+    padding-left: 0rem;
+    .coin-icon {
+      height: 9.3rem;
+      width: 9.3rem;
+      margin-left: 15px;
+      margin-top: 0px;
     }
+  }
+  .vl-divider {
+    display: none;
   }
 
   .section-main {
     padding: 8rem 1rem 2rem 1rem; 
     position: relative;
+    height: 100vh;
     width: 100%;
-
+    .col-sm-12, .col-md-8, .col-lg-8  {
+      padding-left: 0px;
+      padding-right: 0px;
+    }
+    .main {
+      &-container {
+        padding: 4rem 3rem;
+        .subheader {
+          padding: 1rem 0rem; 
+          text-align: justify;  
+        }
+      }  
+      &-title {
+        padding: 5rem 0rem;
+        h3 {
+          font-size: 21px;
+        }
+      }
+      &-info {
+        width: 100%;
+      }
+      &-buttons {
+        display: flex;
+        flex-direction: column;
+        padding: 2rem 1rem;
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+        &-actions {
+          display: flex;
+          width: 100%;
+        }
+      }
+      &-button {
+        width: 100%;
+        height: 12rem;
+        font-size: 16px;
+      }
+    }
     .button-to-app {
-      padding-top: 8rem;
+      width: 100%;
+      margin-right: 1rem;
     }
-    .market-cap {
-      padding-top: 10rem;
-      padding-bottom: 10rem;
-    }
-    .image {
-      margin-top: 5rem;
-      margin-left: -2rem;
-    }
-    .main-image {
-      position: relative;
-      width: 450px;
-      height: 460.94px;
+    .button-learn-more {
+      display: none;
+      // justify-content: flex-end;
+      // width: 100%;
     }
   }
 
-  .button-pink {
-    position: relative;
-    display: block;
-    flex-direction: column;
-    align-items: center;
-    padding: 19px 47px;    
-    width: 95%;
-    height: 54px;
-    font-size: 14px;
-    line-height: 16px;
-  }
+  .section-solutions {
+    height: auto;
+    margin: 17rem 1rem;
+    padding: 15rem 5rem;
 
-  .section-about {
-    margin-top: 2rem; 
-    position: relative;    
-    #crypto-widget-CoinList {
-      margin-top: -5rem;
-      margin-left: -3rem;
+    .header {
+      align-self: start;
+      margin: 2rem;
     }
-  }
-  .about {
-    &-title {
-      position: relative;
-      font-size: 24px;
-      line-height: 36px;
-      letter-spacing: 0.3px;
+    .subheader {
+      text-align: justify;
+      width: 100%;
     }
-    &-content {
-      padding: 10rem 0rem;
-      width: 315px;
-      font-size: 14px;
-      line-height: 20px;
-      letter-spacing: 0.3px;
+    .solution-img-container {
+      margin-top: 6rem;
     }
-    &-img-container {
-      order: 3;
-      margin: 15rem 0rem;
-    }
-    &-image {
-      width: 380px;
-      height: 391.27px;
-    }
+    .solutions {
+      flex-direction: column;
+      margin-top: 2rem;
+      margin-bottom: 4rem;
+      &-info  {
+        margin-top: 2rem;
+      }
+      &-item {
+        height: 90rem;
+        width: 100%;
+        margin-top: 6rem;
 
-    &-details {
-      width: 315px;
-      height: 353px;
-      order: 2;
-
-      &-divisor {
-        width: 310px;
-        height: 1px;
-        background: #494866;
-      }
-      &-icons {
-        margin-right: 24px;
-      }
-      &-text {
-        height: 72px;
-        font-size: 18px;
-        line-height: 24px;
-      }
-    }
-  }
-
-  .section-features {
-    position: relative;
-    padding: 5rem 2rem; 
-  }
-  .features {
-    display: block;
-    position: relative;
-    &-title {
-      padding-left: 2rem;
-    }
-    &-row {
-      width: 355px;
-      left: 40px;
-    }
-    &-icons {
-      width: 82px;
-      height: 74.25px;
-    }
-    &-subtitle {
-      margin: 3rem 0rem;
-      font-size: 22px;
-      line-height: 24px;
-      letter-spacing: 0.3px;
-    }
-    &-content {
-      padding: 2rem 1rem;
-      font-size: 16px;
-      line-height: 22px;
-      letter-spacing: 0.3px;
-      width: 243px;
-    }
-    &-box {
-      &-mint {
-        position: relative;
-        width: 330px;
-        height: 330px;
-        background: #111131;
-        border: 1px solid rgba(255, 255, 255, 0.6);
-        box-sizing: border-box;
-        box-shadow: 0px 0px 4px $shadow-green-neon,
-          0px 0px 34px $shadow-green-neon-second;
-        border-radius: 4px;
-        .features-content {
-          color: $color-grey;
+        .terciary-header {
+          margin-top: 1rem;
         }
-        .features-subtitle {
-          text-decoration: none;
-          &:hover {
-            color: $color-dark-clean;
-          }
+        .subtitle {
+          margin-top: 5rem;
         }
-        margin-bottom: 20px;
-        padding: 10rem 7rem;
-      }
-      &-trade {
-        position: relative;
-        width: 330px;
-        height: 330px;
-        background: #111131;
-        border: 1px solid rgba(255, 255, 255, 0.6);
-        box-sizing: border-box;
-        box-shadow: 0px 0px 4px $shadow-orange-neon,
-          0px 0px 34px $shadow-orange-neon-second;
-        border-radius: 4px;
-        .features-content {
-          color: $color-grey;
-        }
-        .features-subtitle {
-          text-decoration: none;
-          &:hover {
-            color: $color-dark-clean;
-          }
-        }
-        margin-bottom: 20px;
-        padding: 10rem 7rem;
-      }
-      &-pool {
-        position: relative;
-        width: 330px;
-        height: 330px;
-        background: #111131;
-        border: 1px solid rgba(255, 255, 255, 0.6);
-        box-sizing: border-box;
-        box-shadow: 0px 0px 4px $shadow-blue-neon,
-          0px 0px 34px $shadow-blue-neon-second;
-        border-radius: 4px;
-        .features-content {
-          color: $color-grey;
-        }
-        .features-subtitle {
-          text-decoration: none;
-          &:hover {
-            color: $color-dark-clean;
-          }
-        }
-        margin-bottom: 20px;
-        padding: 10rem 7rem;
-      }
-      &-farm {
-        position: relative;
-        width: 330px;
-        height: 330px;
-        background: #111131;
-        border: 1px solid rgba(255, 255, 255, 0.6);
-        box-sizing: border-box;
-        box-shadow: 0px 0px 4px $shadow-purple-neon,
-          0px 0px 34px $shadow-purple-neon-secondary;
-        border-radius: 4px;
-        .features-content {
-          color: $color-grey;
-        }
-        .features-subtitle {
-          text-decoration: none;
-          &:hover {
-            color: $color-dark-clean;
-          }
-        }
-        margin-bottom: 20px;
-        padding: 10rem 7rem;
       }
     }
   }
 
   .section-governance {
-    padding: 25rem 2rem;
-     #crypto-widget-CoinList {
-      margin-top: -6rem;
-      margin-left: -3rem;
-     }
-  }
-  .governance {
-    &-img-container {
-      order: 3;
-	  }
-    &-title {
-      width: 95%;  
+    flex-direction: column;
+    padding: 20rem 2rem;
+    margin: 20rem 3rem 20rem 1rem;
+    height: 100%;
+    .box {
+      margin: 1rem;
+      padding: 5rem 3rem;
     }
-    &-content {
-      width: 95%;
-      padding-top: 7rem;
-      padding-bottom: 5rem;
-      font-size: 14px;
-      line-height: 20px;
+    .header {
+      font-size: 18px;
     }
-    &-image {
-      width: 380px;
-      height: 391.27px;
+    .subtitle {
+      margin-top: 2rem;
+      
     }
-    &-details {
-      order: 2;
-      width: 95%;
-      padding: 7rem 2rem;
-      &-item {
-        margin-bottom: 4rem;
-      }
-      &-icons {
-        margin-right: 24px;
-      }
-      &-text {
-        font-size: 18px;
-        line-height: 24px;
+    .governance-header {
+      .ctx-icon {
+        height: 50px;
+        width: 50px;
+        margin-top: 0px;
       }
     }
-    &-buttons {
-      a {
-        margin-right: 4rem;
+    .governance {
+      &-content {
+        display: flex;
+        flex-direction: column;
+        margin-top: 2rem;
+      }
+      &-main {
+        width: 100%;
+        height: 80vh;
+
+        .icons {
+          padding: 1.3rem 0rem;
+        }
+        .prices {
+          padding-top: 3rem;
+          flex-direction: column;
+        }
+      }
+      &-icon {
+        width: 32px;
+        height: 32px;
+        margin-right: 20px;
+
+        &.dfp {
+          width: 30px;
+          height: 30px;
+        }
+        &.gemini {
+          width: 30px;
+          height: 30px;
+        }
+      }
+      &-detail {
+        height: 150rem;
+        width: 100%;
+        margin-top: 10rem;
+        .box {
+          margin: 3rem  2rem;
+          padding: 5rem;
+        }
+        .price-box {
+          margin-left: 2rem;
+        }        
       }
     }
   }
 
-  .section-team {
-    position: relative;
-  }
-  .team {
-    position: relative;
-    &-title {
-      margin: 1rem 0rem 2rem 3rem;
-      font-size: 24px;
-      line-height: 36px;
-      letter-spacing: 0.3px;
+  .section-protocol {
+    height: 100%;
+    margin: 13rem 0rem;
+    padding: 15rem 5rem;
+    align-items: center;
+
+    .header {
+      align-self: start;
+      margin: 2rem;
     }
-    &-subtitle {
-      margin: 5rem 0rem;
-      width: 100%;
-      font-size: 16px;
-      line-height: 22px;
-      letter-spacing: 0.3px;
-    }
-    &-divider {
-      display: none;
+
+    .items {
+      flex-direction: column;
+      margin-top: 0rem;
+      margin-bottom: 4rem;
+
+      &-info {
+        margin-top: 2rem;
+      }
+
+      .item {
+        height: 85rem;
+        width: 100%;
+        margin-top: 6rem;
+
+        .terciary-header {
+          margin-top: 1rem;
+        }
+
+        .subtitle {
+          margin-top: 5rem;
+          text-align: left;
+          font-size: 16px;
+        }
+      }
+      .safety-logo {
+        height: 110px;
+        margin-top: 3rem;
+      }
     }
   }
-  .team-row {
-    width: 100%;
-  }
-  .team-box {
-    position: relative;
-    width: 375px;
+
+  .section-ecosystem {
+    flex-direction: column;
+    margin: 15rem 1rem;
+    padding: 15rem 4rem;
     height: auto;
-    margin-bottom: 4rem;
-    &.page2 {
-      margin-bottom: 3rem;
+
+    .box {
+      width: 100%;
     }
-    &-name {
-      width: 211px;
-      height: 22px;
-      font-size: 14px;
-      line-height: 22px;
-      letter-spacing: 0.3px;
+    .main {
+      height: 130rem;
+      .subscribe {
+        &-data {
+          flex-direction: column;
+          padding: 4rem 0;
+        }
+        &-input {
+          font-size: 16px;
+          height: 54px;
+          line-height: 14px;
+          padding: 24px;
+          width: 100%;
+        }
+        &-button {
+          height: 54px;
+          width: 100%;
+          font-size: 16px;
+        }
+      }
     }
-    &-position {
-      width: 220px;
-      height: 16px;
-      font-size: 12px;
-      line-height: 16px;
-      letter-spacing: -0.2px;
+    .carousel {
+      margin: 10rem 0rem;
+      padding-top: 2rem;
+      padding-bottom: 2rem;
+      height: 85rem;
+      width: 100%;
     }
-    &-description {
-      width: 335px;
-      height: 225px;
-      border-radius: 2px;
-      font-size: 12px;
-      line-height: 16px;
-      letter-spacing: -0.2px;
-      margin-top: 20px;
-    }
-    .flippy-back {
-      width: 340px;
-    }
-  }
-  .team-pagination {  
-    padding: 0.5rem 0rem 0.5rem 0rem;
-    justify-content: center;
-    &-container {
-      width: 50rem;
-    }
-  }
-  
-  .flippy-back {
-    background: $color-black !important;
-    background-color: $color-black !important;
   }
 
-  .section-faq {
-    padding-top: 30rem;
-    padding-bottom: 55rem;
-    position: relative;
-  }
-  .faq {
-    &-row {
+  .footer {
+    display: flex;
+    flex-direction: column;
+    margin-top: 40rem;
+    padding: 10rem 8rem;
+    height: auto;
+
+    &-info {
       width: 100%;
-      margin: 4rem 0rem 0rem -2.5rem;
-    }
-    &-title {
-      width: 312px;
-      font-size: 24px;
-      line-height: 36px;
-      letter-spacing: 0.3px;
-    }
-    &-subtitle {
-      font-size: 16px;
-      line-height: 22px;
-      letter-spacing: 0.3px;
-      margin-bottom: 5rem;
-    }
-    &-divider {
-      width: 72%;
-      height: 1px;
-      margin-top: 16px;
-      margin-bottom: 32px;
-      background: transparent;
-    }
-    &-tab {
-      h6 {
-        font-size: 16px;
+      .subtitle {
+        margin-top: 5rem;
+        margin-bottom: 5rem;
       }
+    }
+    &-menu {
+      width: 100%;
+      flex-direction: column;
+      margin-top: 12rem;
     }
   }
 
@@ -568,125 +492,97 @@
     }
   }
 
-  .question {
-    width: 290px;
-    height: auto;
-    font-size: 15px;
-    line-height: 23px;
-    letter-spacing: 0.3px;
-    margin-bottom: 12px;
+  .form-control {
+    height: 10rem;
   }
 
-  .answer {
-    width: 315px;
-    height: auto;
-    font-size: 15px;
-    line-height: 22px;
-    letter-spacing: 0.3px;
-    text-align: left;
-    @media only screen and (min-device-width: 400px) {
-      width: 330px;
+  .search-box {
+    display: flex;
+    width: 100%;
+    margin-top: 3rem;
+    margin-left: 0rem;
+    .search-icon {
+      font-size: 4rem;
+      margin-left: 2.5rem;
+      z-index: 1;
     }
-    @media only screen and (max-device-width: 365px) {
-      width: 290px;
+    .search-input {
+      padding-left: 8rem;
+      font-size: 4rem;
     }
   }
 
-  .plus {
-    position: relative;
-    width: 10.83px;
-    height: 14px;
-    font-size: 14px;
-    line-height: 24px;
-    letter-spacing: 0.3px;
-    margin-top: -40px;
+  .filter-box {
+    display: flex;
+    flex-direction: column;
   }
 
-  .section-community {
-    position: relative;
-    padding-bottom: 0rem;
-  }  
-  .community {
-    &-title {
-      padding: 0rem 2.5rem;
-      width: 90%;      
-      font-size: 24px;
-      line-height: 36px;
-      letter-spacing: 0.3px;
-    }
-    &-subtitle {
-      width: 305px;
-      font-size: 16px;
-      line-height: 22px;
-      letter-spacing: 0.3px;
-    }
-    &-content {
-      flex-direction: column;
-      margin: 4rem 0rem;
-    }
-    &-icons{
-      display: flex;
-      padding: 5rem 5rem;
-      &-container {
-        display: flex;
-        margin-left: 25px;
-        margin-bottom: 35px;
-      }
-      &-row {
-        display: flex;
-        flex-direction: column;
-        flex: 1;
-      }
-    }
-    &-item {
-      width: 95%;
-      &-icon {
-        width: 82px;
-        height: 82px;
-        float: left;
-        margin-left: -42.76px;
-      }
+  .section-blogroll {
+    .home {
+      height: 55rem;
 
-      &-text {
-        width: 63px;
-        height: 75px;
-        margin-left: -16px;
-        font-size: 14px;
-        line-height: 22px;
-        letter-spacing: 0.3px;
+      .description {
+        width: 95%;
+      }
+      .heading-secondary {
+        margin: 3rem 0rem;
       }
     }
-    &-image {
-      width: 400px;
-      height: auto;
-      margin-left: -10rem;
-    }
+  }
+  
+  .blogroll {
+    margin-top: 15rem;
 
-    &-subscribe {
-      &-title {
-        width: 309px;
-        font-size: 22px;
-        line-height: 24px;
-        letter-spacing: 0.3px;
+    .posts {
+      padding: 5rem 3rem;
+      grid-template-columns: 100%;
+      gap: 5rem;
+    }
+    .post-item {
+      padding: 5rem 2rem;
+      height: 110rem;
+
+      &-image {
+        height: 40rem;
       }
-      &-data {
-       flex-direction: column;
-       padding: 4rem 0rem;
+      &-content {
+        padding: 4rem 1rem;
+
+        .title {
+          a {
+            font-size: 4rem;
+          }
+        }
+        .excerpt {
+          p {
+            font-size: 3.5rem;
+          }
+        }
+        .tag-items {
+          padding-bottom: 1rem;
+
+          .post-tagbox {
+            font-size: 2.7rem;
+            padding: 2px 5px;
+            margin-right: 9px;
+          }
+        }
       }
-      &-input {
-        width: 316px;
-        height: 54px;
-        font-size: 12px;
-        border: 1px solid $color-grey;
-        box-sizing: border-box;
-        border-radius: 1px;
-        line-height: 14px;
-        padding: 24px 24px;
-      }
-      &-button {
-        width: 316px;
-        height: 54px;
+      &-link {
+        font-size: 3.7rem;
       }
     }
-  } 
+  }
+
+  @media only screen and (max-device-width: 370px) {
+    .section-safety { 
+      .items {
+        .safety-logo {
+          height: 95px;
+          margin-top: 2rem;
+        }
+      }
+    }
+  }
+
 }

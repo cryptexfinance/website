@@ -18,13 +18,14 @@ const BlogPostPreview = ({ entry, widgetFor }) => {
           <div className="tags">
             {tags.map((tag) => {
               const tColor = tagColor([], tag);
-              return  <a
-                        target="_blank"
-                        className="tagbox"
-                        style={{ color: tColor, borderColor: tColor }}
-                      >
-                        {tag}
-                      </a>
+              return (
+                <span
+                  className="tagbox"
+                  style={{ color: tColor, borderColor: tColor }}
+                >
+                  {tag}
+                </span>
+              )
             })}
           </div>
         ) : null}

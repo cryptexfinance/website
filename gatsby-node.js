@@ -80,7 +80,7 @@ exports.createSchemaCustomization = ({ actions }) => {
   const { createFieldExtension, createTypes } = actions
 
   createFieldExtension({
-    name: 'fileByDataPath',
+    name: "fileByDataPath",
     extend: () => ({
       resolve: function (src, args, context, info) {
         const partialPath = src.featureImage
@@ -88,10 +88,10 @@ exports.createSchemaCustomization = ({ actions }) => {
             return null
           }
 
-        const filePath = path.join(__dirname, 'src/data', partialPath)
+        const filePath = path.join(__dirname, "src/data", partialPath)
         const fileNode = context.nodeModel.runQuery({
           firstOnly: true,
-          type: 'File',
+          type: "File",
           query: {
             filter: {
               absolutePath: {
@@ -132,6 +132,21 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
       name: "slug",
       node,
       value,
+    })
+  }
+}
+
+exports.onCreateWebpackConfig = ({ stage, loaders, actions }) => {
+  if (stage === "build-html" || stage === "develop-html") {
+    actions.setWebpackConfig({
+      module: {
+        rules: [
+          {
+            test: /@ethersproject/,
+            use: loaders.null(),
+          },
+        ],
+      },
     })
   }
 }
