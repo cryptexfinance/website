@@ -18,11 +18,16 @@ video {
   
   @media only screen and (min-device-width : 601px) and (max-device-width : 1090px) and (orientation: portrait) {
     height: 75%;
-    margin-left: -55%;
+    margin-left: -65%;
     padding-top: 0rem;
     width: auto;
 
-    
+    @media only screen and (min-device-height: 1200px) {
+      margin-left: -97%;
+    }
+    @media only screen and (min-device-height: 1150px) {
+      margin-left: -75%;
+    }
   }
   @media only screen and (max-device-width: 600px) and (orientation: portrait) {
     height: 80%;
