@@ -1,7 +1,7 @@
 import React from "react";
 import Col from "react-bootstrap/esm/Col";
 import appEndpoint from "../../../endpoint";
-import bgvideo from "../../../../static/bg_main.webm";
+import bgvideo from "../../../../static/bg_main.mp4";
 
 const SectionMain = () => (
   <div className="section-main">
