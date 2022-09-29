@@ -9,7 +9,7 @@ import Home from "./website/home";
 const App = ({ data }) => {
   return (
     <PageLayout>
-      <Seo title="Cryptex" />
+      <Seo title="Cryptex Finance" />
       <Home />
     </PageLayout>
   )
