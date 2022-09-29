@@ -240,11 +240,8 @@ const SectionGovernance = () => {
                   prefix="$"
                   decimalScale={2}
                 />
-                <span className="label">
-                  Total Crypto Market Capitalization.
-                </span>
-                <span className="label label-mobile">
-                  Total Crypto Market Cap.
+                <span className="label-all">
+                  CTX Market Cap.
                 </span>
               </div>
               <div  className="vl-divider" />
