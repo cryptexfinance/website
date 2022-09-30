@@ -18,24 +18,25 @@ const Seo = ({ description, lang, meta, image: img, title, pathname }) => {
       titleTemplate={`%s | ${site.siteMetadata.title}`}
       link={canonical ? [{ rel: `canonical`, href: canonical }] : []}
       meta={[
-        { name: `description`, content: metaDescription },
-        { name: `keywords`, content: site.siteMetadata.keywords.join(`,`) },
-        { property: `og:site_name`, content: "Cryptex Finance." },
-        { property: `og:title`, content: "Cryptex Finance" },
-        { property: `og:description`, content: metaDescription },
-        { property: `og:type`, content: "website" },
-        { property: `og:url`, content: "https://cryptex.finance" },
+        { name: "description", content: metaDescription },
+        { name: "keywords", content: site.siteMetadata.keywords.join(`,`) },
+        { property: "og:site_name", content: "Cryptex Finance." },
+        { property: "og:title", content: "Cryptex Finance" },
+        { property: "og:description", content: metaDescription },
+        { property: "og:type", content: "website" },
+        { property: "og:url", content: canonical },
         {
           property: "og:image",
           content: "https://ctx-rinkeby.s3.amazonaws.com/TCAP_meta.png",
         },
-        { name: `twitter:title`, content: "Cryptex Finance" },
-        { name: `twitter:description`, content: metaDescription },
+        { name: "twitter:card", content: "summary_large_image" },
+        { name: "twitter:site", content: "@CryptexFinance" },
+        { name: "twitter:title", content: "Cryptex Finance" },
+        { name: "twitter:description", content: metaDescription },
         {
           name: "twitter:image",
           content: "https://ctx-rinkeby.s3.amazonaws.com/TCAP_meta.png",
-        },
-        { name: "twitter:card", content: "summary_large_image" },
+        },        
       ].concat(meta)}
     />
   )
