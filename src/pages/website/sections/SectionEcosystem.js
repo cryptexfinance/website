@@ -1,11 +1,12 @@
 import React, { useState } from "react";
 import { toast, ToastContainer } from "react-toastify";
-import Carousel from "react-bootstrap/Carousel";
 import addToMailchimp from "gatsby-plugin-mailchimp";
+import { FaArrowRight } from "react-icons/fa";
 import toasty from "../../../../static/toasty.png";
+import sewagFruit from "../../../../static/website/ecosystem/sewage-fruit.png";
 
 
-const SectionCommunity = ({ data }) => {
+const SectionEcosystem = ({ data }) => {
   const [email, setEmail] = useState("");
   const [index, setIndex] = useState(0);
 
@@ -76,45 +77,42 @@ const SectionCommunity = ({ data }) => {
   return (
     <div id="ecosystem" className="section-ecosystem">
       <ToastContainer />
-      <div className="box main">
-        <div className="info">
-          <h1 className="header">
-            Ecosystem
-          </h1>
-          <h3 className="subtitle">
-            Join our community and participate in a one of a kind journey to take action, claim rewards and make frens.
-            To start your journey, mint your free Sewage Fruit NFT. A PFP collection with mushroom to grow.
-          </h3>
+      <h1>Ecosystem</h1>
+      <div className="ecosystem-content">
+        <div className="box main">
+          <div className="info">          
+            <h3 className="subtitle">
+              Join our community and participate in a one of a kind journey to take action, claim rewards and make frens.
+              To start your journey, mint your free Sewage Fruit NFT. A PFP collection with mushroom to grow.
+            </h3>
+          </div>
+          <div className="subscribe">
+            <form onSubmit={handleSubmit}>
+              <div className="subscribe-data">
+                <input
+                  id="email"
+                  value={email}
+                  onChange={handleEmailChange}
+                  className="subscribe-input"
+                  placeholder="Subscribe to Newsletter"
+                /> 
+                <button className="subscribe-button button-pink">Subscribe</button>
+              </div>  
+            </form>
+          </div>
         </div>
-        <div className="subscribe">
-          <form onSubmit={handleSubmit}>
-            <div className="subscribe-data">
-              <input
-                id="email"
-                value={email}
-                onChange={handleEmailChange}
-                className="subscribe-input"
-                placeholder="Subscribe to Newsletter"
-              /> 
-              <button className="subscribe-button button-pink">Subscribe</button>
-            </div>  
-          </form>
+        <div className="box box-button sewagefruit">
+          <h2 className="heading-secondary">
+            Sewage Fruit
+          </h2>
+          <img src={sewagFruit} alt="Sewage Fruit" />
+          <div className="sewagefruit-footer">
+            <FaArrowRight className="sewagefruit-icon"size={20} />
+          </div>
         </div>
-      </div>
-      <Carousel
-        fade
-        interval={null}
-        activeIndex={index}
-        onSelect={handleSelect}
-      >
-        <Carousel.Item>
-          <div className="item-content">
-            <h1 className="header">Sewage Fruits</h1>            
-          </div>  
-        </Carousel.Item>
-      </Carousel>
+      </div>  
     </div>
   )
 }
 
-export default SectionCommunity;
+export default SectionEcosystem;

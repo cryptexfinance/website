@@ -30,7 +30,7 @@ const NavbarMenu = (props) => {
   const safetyUrl = blogView ? `${siteUrl}/#protocol` : "#protocol";
   const newsUrl = `${siteUrl}/blog`;
   const faqUrl = "https://docs.cryptex.finance/faq";
-  //const ecosystemUrl = blogView ? `${siteUrl}/#ecosystem` : "#ecosystem";
+  const ecosystemUrl = blogView ? `${siteUrl}/#ecosystem` : "#ecosystem";
 
 
   const NavMobile = () => {
@@ -58,6 +58,9 @@ const NavbarMenu = (props) => {
                 Protocol
               </Nav.Link>
               <div className="nav-links-divisor"></div>
+              <Nav.Link as={Link} to={ecosystemUrl} title="Ecosystem">
+                Ecosystem
+              </Nav.Link>
               <div className="nav-links-divisor"></div>
               <Nav.Link as={Link} to={newsUrl} title="News">
                 Blog
@@ -101,6 +104,9 @@ const NavbarMenu = (props) => {
               </Nav.Link>
               <Nav.Link as={Link} to={safetyUrl} title="Safety">
                 Protocol
+              </Nav.Link>
+              <Nav.Link as={Link} to={ecosystemUrl} title="Ecosystem">
+                Ecosystem
               </Nav.Link>
               <Nav.Link as={Link} to={newsUrl} title="News">
                 Blog

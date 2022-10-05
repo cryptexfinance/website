@@ -1,7 +1,6 @@
 import React, { useContext, useEffect, useState } from "react";
 import { ethers } from "ethers";
 import { NumericFormat } from "react-number-format";
-// import { useBreakpoint } from "gatsby-plugin-breakpoints";
 import { FaArrowRight } from "react-icons/fa";
 import parse from "html-react-parser";
 import { contractsContext, signerContext } from "../../../context";

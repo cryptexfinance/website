@@ -353,12 +353,18 @@ and (orientation: portrait)
     padding: 10rem 2rem;
 
     .box {
-      width: 90%;
+      width: 100%;
+    }
+    .ecosystem-content {
+      display: grid;
+      grid-template-columns: 100%;
+      row-gap: 8rem;
+      margin-top: 5rem;
     }
     .main {
       height: 65rem; 
       .subtitle {
-        margin-top: 3rem;
+        margin-top: 0rem;
       }
       .subscribe {
         &-input {
@@ -373,6 +379,9 @@ and (orientation: portrait)
         }
       }
     }
+    .sewagefruit {
+      height: 70rem;
+    }
     .carousel {
       margin: 5rem 0rem;
       width: 90%;
@@ -381,7 +390,7 @@ and (orientation: portrait)
   }
 
   .footer {
-    margin-top: 20rem;
+    margin-top: 30rem;
     padding-top: 5rem;
     height: 50rem;
     &-info {
