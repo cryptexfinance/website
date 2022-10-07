@@ -6,6 +6,10 @@ date: 2022-10-07T19:59:25.838Z
 description: Cryptex featured Defi Dave as our guest for the 19th episode of Space Invaders.
 featuredpost: false
 featuredimage: /img/1286_9.png
+tags:
+  - CTX
+  - CryptexFinance
+  - SpaceInvader
 ---
 Cryptex Finance builds innovative, open-source DeFi solutions for the Web3 community and provides real-time exposure with index tokens for the crypto and NFT market. Cryptex created Space Invaders to help people get an inside look into the minds of the most important web3 creators and builders of our time.
 
