@@ -26,20 +26,6 @@ O﻿n October 5th, we hosted our October Community Call. Read below for the most
 
 From a long-term perspective, it's a matter of building really cool things and making sure the usage matches that. And then pushing them out into the world, which is the mission of the DAO. Unlike a lot of other projects, Cryptex never held a public ICO, never did a presale, and has no VCs. To this day, everything we are doing we are doing on our own, as decentralized as possible.“ - Joe
 
-**Do current regulations or lack of regulatory clarity prevent etf tokens like TCAP and Jpegz from being listed / traded on centralized exchanges (Coinbase / Gemini)?**  
-
-43:25  
-
-“In terms of regulations, I think Cryptex is a little bit more unique than some of the others in a way that Cryptex doesn’t sell tokens. Cryptex has never sold a single TCAP, never ICO’ed, never sold a CTX and Cryptex will never sell a single JPEGz. Cryptex does not employ any leverage, it does not advocate for the ability to have leverage, and we have never heard from any regulatory party in regard to what we are doing. In terms of the exchanges, there a lot of headway and risks that they are currently facing and the regulatory powers that be have chosen a route of regulation by enforcement
-
-I think in terms of the exchanges, there's a lot of headways or risks that they are currently facing, and the regulatory authorities or powers that be, have chosen a route of regulation by enforcement. What they're basically doing is they're getting case precedent on the books by going after some of these more blatant bullshit type of projects that didn't really follow a decentralized structure or certain rules of conduct. They're gonna go after them and they're gonna make an example of them, and then they're gonna go for the layups because those are easy ones to win. And then they're gonna use that and go after everybody else and say, "Oh, because such and such did this, we got precedent on this, and now because we got precedent on that, now we can go after you for this."
-
-And that, that doesn't solve anything, that's not gonna help propel an industry. All that's gonna do is take all of the brilliant minds that are currently in whatever jurisdiction that they're in that's doing this, and it's gonna move them to other places and take away that innovation from whatever jurisdiction we're currently talking about. And by doing that it does nothing but stifle. And then the question you have to ask yourself is why are they doing that? Why are they stifling as opposed to actively working together with this emerging technology, which we know is not going anywhere. And using that reach to kind of come up with, okay, these are rules and this is what's going on. So from an exchange perspective, I think that a lot of them are taking a very cautious look now at what gets listed.
-
-And most importantly, not only what gets listed, but what stays listed, and they're taking a conservative stance on this. And as more information comes online, it will become clearer what's going on. The good news is that, here in the states at least, there are quite a few, people who are advocating for more rules and clearer regulations. Obviously, the goal with TCAP and JPEGZ is to get institutional usage out of this. Somebody had made a great point, we've done a lot of things for the institutional fronts, what's the status on it? We're doing what we can do to reach these markets.
-
-If these people are cautious or conservative or whatever the case may be, that's not always gonna be the case. Their sentiment might change over time. And the goal is for us to be here and operating as transparent as we possibly can. So when they do make the decisions to say, Okay, we're going to list this, or we're going to do this, we're there for that. I don't want anybody to think that we are not actively trying to accomplish these things. It's just sometimes we face headwinds with regard to listings and we have to just work through 'em. It's a marathon, it's not a race.” - Joe
-
 **Are there any plans to increase the decentralization of the DAO and core team instead of centralizing it?**  
 
 ([01:07:14](https://www.rev.com/tc-editor/edit?token=HYqH6__J7fmVJM3aCsXx9rOSgQawtIXTyokoF3BtmePe6WRcNzbxDHCJ5tLzlEng7TnwqpQ3kpaZecndrc9MX8NVXMo&loadFrom=9&ts=4034.53)):
@@ -49,18 +35,6 @@ If these people are cautious or conservative or whatever the case may be, that's
 ([01:09:06](https://www.rev.com/tc-editor/edit?token=HYqH6__J7fmVJM3aCsXx9rOSgQawtIXTyokoF3BtmePe6WRcNzbxDHCJ5tLzlEng7TnwqpQ3kpaZecndrc9MX8NVXMo&loadFrom=9&ts=4146.29)):
 
 “When the app is updated and we release that, there will be some enhancements to that delegation page where it's much more flexible for you to change some of your own info, or even, add yourself as a CryptKeeper on there. There's much more flexibility that is coming to that delegation page for sure.” - Matz
-
-**We've had two community leads leave Cryptex with little to no reasoning. Are you prepared to share any information about why Brendan and Shahar left?  (01:09:43)**
-
-([01:09:43](https://www.rev.com/tc-editor/edit?token=HYqH6__J7fmVJM3aCsXx9rOSgQawtIXTyokoF3BtmePe6WRcNzbxDHCJ5tLzlEng7TnwqpQ3kpaZecndrc9MX8NVXMo&loadFrom=9&ts=4183.65)):
-
-“Cryptex is an organization, people come and go, for a variety of, of different reasons. With Brendan, he was here for quite some time with Cryptex, he moved on to a new opportunity. Shahar was someone who we brought in, as a next person to help with community and social, and it just wasn't the right fit, um, you know, for us at this time.” - Matz
-
-([01:10:49](https://www.rev.com/tc-editor/edit?token=HYqH6__J7fmVJM3aCsXx9rOSgQawtIXTyokoF3BtmePe6WRcNzbxDHCJ5tLzlEng7TnwqpQ3kpaZecndrc9MX8NVXMo&loadFrom=9&ts=4249.43)):
-
-“As somebody who has the pleasure and opportunity of working with the community leads, every single day. Brendan was with us from day, one and a half. He found us in the very beginning. I'm talking like before Mainnet was even a thought. And to this day, still a wonderful friend to the community and to the team. None of these things don't always have to be on like bad terms or anything.
-
-Through his work with Cryptex, he got presented with a wonderful opportunity that we encouraged him to do,. You can't limit people's lives or their abilities to achieve things and all you can do is end things with respect and dignity. And Brendan is a wonderful example of that. Any of you can reach out to him at any time within the community, and he'll be more than happy to answer or speak with you. Shahar, same thing, got to know him on a personal level. Absolutely wonderful human being had zero issues with him on a personal level, but after a little bit of time in terms of the DAO's vision and what he was kind of going for, there was just a little bit of a misunderstanding or miscommunication.” - Joe
 
 **Is the TCAP peg officially fixed and will JPEGz bring up similar concerns?**  
 
@@ -101,8 +75,6 @@ And that may be a reason why they, they are doing that. I know for a fact it is 
 So meaning that it's just them going back and forth to, to one another at a zero, net PnL. And, uh, you know, it's, it's unfortunate. CTX is not the only governance asset or any asset that trades on Huboi, no one's immune from that. It's not like I can call Hobi and say, Hey, you know, stop doing this because it's not them doing it. You know what I mean? Like, it's, it's not really something that I could say. But what I can recommend you all is to check out [nomics.com](http://nomics.com), and if you look up certain exchanges, you will see that the data in how they convey their transactions, there's a rating for it. There's an A through F system.
 
 Nothing against Huobi. We love Huobi, and we think that they're a wonderful exchange, but at the end of the day, in terms of the wash trading that's going on there, it's not us. It's not affecting the price has not affected the price up until this point. “ - Joe
-
-
 
 Learn more about Cryptex & TCAP:
 
