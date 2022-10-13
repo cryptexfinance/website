@@ -22,7 +22,7 @@ This renewal marks 1 year of single sided staking, with a total of 97,965 CTX re
 \
 Delegated CTX to this pool remains at record highs with 878,924 CTX. \
 \
-I want to add [any core contributor CTX delegated in this pool are for voting only and are NOT staked to earn additional CTX rewards](https://dune.com/queries/405373/774460) alongside members of the DAO community.\
+[Any core contributor CTX delegated to this pool are for voting only and are NOT staked to earn additional CTX rewards alongside members of the DAO community.](https://dune.com/queries/405373/774460)\
 \
 The Cryptex DAO plans for single sided staking to be with us for the duration of the protocol and thanks its Crypt Keepers (protocol delegates) for their feedback in this recent rewards extension. \
 \
