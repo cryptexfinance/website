@@ -28,7 +28,7 @@ tags:
 ---
 Cryptex Finance builds innovative, open-source DeFi solutions for the Web3 community and provides real-time exposure with index tokens for the crypto and NFT market. Cryptex created Space Invaders to help people get an inside look into the minds of the most important web3 creators and builders of our time.
 
-On August 16th Cryptex welcomed Aspeneth.eth and BlockchainBoy, as our hosts. Cryptex featured BlockchainBoy as our guest for the 17th episode of Space Invaders. BlockchainBoy is a Crypto Content creator and self-made entrepreneur with over half a million on TikTok. Typically these episodes are recorded live on Twitter Spaces and then published on YouTube and TikTok.
+On August 16th Cryptex featured BlockchainBoy as our guest for the 17th episode of Space Invaders. BlockchainBoy is a Crypto Content creator and self-made entrepreneur with over half a million on TikTok. Typically these episodes are recorded live on Twitter Spaces and then published on YouTube and TikTok.
 
 In this post, we are sharing the most thought-provoking and alpha-infused pieces of the conversation. These are things most people would not get a chance to find out unless they were listening to the conversation at air time.
 
