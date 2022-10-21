@@ -5,7 +5,7 @@ author: Aspen
 date: 2022-10-07T19:59:25.838Z
 description: Cryptex featured Defi Dave as our guest for the 19th episode of Space Invaders.
 featuredpost: false
-featuredimage: /img/1286_9.png
+featuredimage: /img/defidaveblog.png
 tags:
   - CTX
   - CryptexFinance
