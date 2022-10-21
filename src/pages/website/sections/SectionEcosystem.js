@@ -82,8 +82,11 @@ const SectionEcosystem = ({ data }) => {
         <div className="box main">
           <div className="info">          
             <h3 className="subtitle">
-              Join our community and participate in a one of a kind journey to take action, claim rewards and make frens.
-              To start your journey, mint your free Sewage Fruit NFT. A PFP collection with mushroom to grow.
+              Sewage Fruitz are a collection of 2,500 upgradable NFTs created from the depths
+              of the Ethereum Blockchain and are a reward to all members of the Cryptex Finance 
+              community. Holding a Sewage Fruitz PFP unlocks user ability to go on quests 
+              within the Cryptex Finance ecosystem, completing tasks that will be unlocked 
+              inside the DAO. 
             </h3>
           </div>
           <div className="subscribe">
@@ -101,7 +104,12 @@ const SectionEcosystem = ({ data }) => {
             </form>
           </div>
         </div>
-        <div className="box box-button sewagefruit">
+        <a
+          className="box box-button sewagefruit"
+          href="https://rinkeby.cryptex.finance/sewagefruit"
+          target="_blank"
+          rel="noreferrer"
+        >
           <h2 className="heading-secondary">
             Sewage Fruit
           </h2>
@@ -109,7 +117,7 @@ const SectionEcosystem = ({ data }) => {
           <div className="sewagefruit-footer">
             <FaArrowRight className="sewagefruit-icon"size={20} />
           </div>
-        </div>
+        </a>
       </div>  
     </div>
   )
