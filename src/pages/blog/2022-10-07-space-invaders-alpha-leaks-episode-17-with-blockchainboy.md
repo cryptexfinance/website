@@ -8,7 +8,7 @@ description: >+
   Invaders.
 
 featuredpost: false
-featuredimage: /img/2022-10-07-15.56.25.jpg
+featuredimage: /img/blockchainboyblog.png
 tags:
   - jpegz
   - tcap
