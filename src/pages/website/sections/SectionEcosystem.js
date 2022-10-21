@@ -114,9 +114,9 @@ const SectionEcosystem = ({ data }) => {
             Sewage Fruit
           </h2>
           <img src={sewagFruit} alt="Sewage Fruit" />
-          <div className="sewagefruit-footer">
+          {/* <div className="sewagefruit-footer">
             <FaArrowRight className="sewagefruit-icon"size={20} />
-          </div>
+          </div> */}
         </a>
       </div>  
     </div>

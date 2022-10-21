@@ -441,16 +441,16 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-
+    padding-bottom: 1.5rem;
     img {
-      margin: 1rem 0rem;
+      margin: 2rem 0rem;
     }
 
     &-footer {
       display: flex;
       justify-content: flex-end;
       padding-top: 0.5rem;
-      padding-bottom: 1.5rem;
+      padding-bottom: 0rem;
     }
     &-icon {
       color: white;
