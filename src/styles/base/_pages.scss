@@ -440,12 +440,14 @@ body {
   .sewagefruit {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    // justify-content: space-between;
     padding-bottom: 1.5rem;
     img {
       margin: 2rem 0rem;
     }
-
+    .heading-secondary {
+      justify-content: space-between;
+    }
     &-footer {
       display: flex;
       justify-content: flex-end;
@@ -454,6 +456,9 @@ body {
     }
     &-icon {
       color: white;
+      transform: rotateZ(320deg);
+      margin-top: 0.3rem;
+      margin-left: 1rem;
     }
   }
 
@@ -549,6 +554,9 @@ body {
       &-footer {
         padding-top: 0rem;
         padding-bottom: 0em;
+      }
+      img {
+        height: 100%;
       }
     }
   }

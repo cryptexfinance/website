@@ -437,7 +437,7 @@
       margin-top: 8rem;
     }
     .main {
-      height: 110rem;
+      height: 145rem;
       .subscribe {
         &-data {
           flex-direction: column;
@@ -458,7 +458,10 @@
       }
     }
     .sewagefruit {
-      height: 80rem;
+      height: 95rem;
+      img {
+        margin: 10rem 0rem;
+      }
     }
     .carousel {
       margin: 10rem 0rem;

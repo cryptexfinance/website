@@ -111,12 +111,10 @@ const SectionEcosystem = ({ data }) => {
           rel="noreferrer"
         >
           <h2 className="heading-secondary">
-            Sewage Fruit
+            Sewage Fruitz
+            <FaArrowRight className="sewagefruit-icon"size={24} />
           </h2>
           <img src={sewagFruit} alt="Sewage Fruit" />
-          {/* <div className="sewagefruit-footer">
-            <FaArrowRight className="sewagefruit-icon"size={20} />
-          </div> */}
         </a>
       </div>  
     </div>

@@ -381,6 +381,15 @@ and (orientation: portrait)
     }
     .sewagefruit {
       height: 70rem;
+      img {
+        margin: 6rem 0rem;
+        height: 100%;
+        width: 100%;
+      }
+      &-icon {
+        height: 33px;
+        width: 35px;
+      }
     }
     .carousel {
       margin: 5rem 0rem;
