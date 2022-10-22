@@ -81,9 +81,10 @@ const Footer = () => {
           <a className="subtitle" href="/#solutions">Solutions</a>
           <a className="subtitle" href="/#governance">Governance</a>
           <a className="subtitle" href="/#protocol">Protocol</a>
-          <a className="subtitle" href="/blog">Blog</a>
+          <a className="subtitle" href="/#ecosystem">Ecosystem</a>          
         </div>
-        <div className="links">          
+        <div className="links">
+          <a className="subtitle" href="/blog">Blog</a>
           <a 
             href="https://docs.cryptex.finance"
             rel="noreferrer"
