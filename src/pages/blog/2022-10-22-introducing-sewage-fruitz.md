@@ -11,6 +11,7 @@ tags:
   - sewagefruitz
   - nft
   - dao
+  - jpegz
 ---
 Sewage Fruitz is a collection of 2,500 upgradable NFTs created from the depths of the Ethereum Blockchain and is a reward to all members of the Cryptex Finance community. A fungus, grown out of dark substances in the yard of Mushroom Man as he spreads his spores worldwide.
 
