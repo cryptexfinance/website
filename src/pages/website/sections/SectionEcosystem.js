@@ -106,7 +106,7 @@ const SectionEcosystem = ({ data }) => {
         </div>
         <a
           className="box box-button sewagefruit"
-          href="https://rinkeby.cryptex.finance/sewagefruit"
+          href="https://app.cryptex.finance/sewagefruitz"
           target="_blank"
           rel="noreferrer"
         >
@@ -114,7 +114,7 @@ const SectionEcosystem = ({ data }) => {
             Sewage Fruitz
             <FaArrowRight className="sewagefruit-icon"size={24} />
           </h2>
-          <img src={sewagFruit} alt="Sewage Fruit" />
+          <img src={sewagFruit} alt="Sewage Fruitz" />
         </a>
       </div>  
     </div>
