@@ -34,12 +34,11 @@ We had an incredible event, co-hosted with Coinbase Cloud and also Chainlink. We
 
 “I would definitely expect to see over the next couple of weeks and months here is looking to expand on the partnership with Arbitrum and making some really cool things happen over there. With regards to Arbitrum, we can kind of push for more functionality within the Cryptex ecosystem and more options. That's one of the things that we are going to be, gonna be looking to achieve. We'll have more information on just how we're going to do it as some of these situations we've been discussing getting a little bit more formalized and available to present to the community. I can say right now that the things that we're working on are very different and have never really been tried before. We want to build on these partnerships a little bit more and make some really cool things happen. Getting CTX, JPEGz, TCAP, and everything else that we create into the hands of the world, focusing on this opportunity for over-collateralization and true decentralized finance to really have the upper hand. Those are gonna be the things that we push strongly for always, but even more so around project launches and different things that we're doing.” - Joe
 
-**Learn more about Cryptex & TCAP:**
+**Learn more about Cryptex, TCAP, JPEGz :**
 
-**Website:** [](https://cryptex.finance/)**<https://cryptex.finance/>**
-
-**Twitter:** [](https://twitter.com/cryptexfinance)**<https://twitter.com/cryptexfinance>**
-
-**Discord:** [](https://discord.gg/cryptex)**<https://discord.gg/cryptex> Telegram:** [](https://t.me/cryptexfinance)**<https://t.me/cryptexfinance>**
+**Website:** [](https://cryptex.finance/)**<https://cryptex.finance/>**\
+**Twitter:** [](https://twitter.com/cryptexfinance)**<https://twitter.com/cryptexfinance>**\
+**Discord:** [](https://discord.gg/cryptex)**<https://discord.gg/cryptex>** \
+**Telegram:** [](https://t.me/cryptexfinance)**<https://t.me/cryptexfinance>**
 
 **DISCLAIMER: Any views expressed in this post represent the sole analysis of Cryptex, (“Cryptex”) whose opinions are based solely on publicly available information. No representation or warranty, express or implied, is made as to the accuracy or completeness of any information contained herein. Cryptex expressly disclaims any and all liability based, in whole or in part, on such information, any errors therein or omissions therefrom. Cryptex also reserves the right to modify or change its views or conclusions at any time in the future without notice. Cryptex is an open-source, fully decentralized protocol. Cryptex is NOT an ICO. No sale has been solicited. The information contained in this post DOES NOT recommend the use of any Cryptex token, nor is it an offer to sell, a solicitation, or an offer to buy any Cryptex tokenized asset. Furthermore, CTX token rewards governing the protocol are granted by Cryptex to system providers with a value of ZERO. Always do your own research. The information contained in this post is not intended to be, nor should it be construed or used as, investment advice. No representation, recommendation, or warranty, express or implied, is made as to the future performance or functionality of any Cryptex token. Any unaffiliated use of this document, or the contents herein, is strictly prohibited without the prior written consent of Cryptex.**
