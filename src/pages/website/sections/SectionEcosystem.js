@@ -112,7 +112,7 @@ const SectionEcosystem = ({ data }) => {
         >
           <h2 className="heading-secondary">
             Sewage Fruitz
-            <FaArrowRight className="sewagefruit-icon"size={24} />
+            <FaArrowRight className="sewagefruit-icon" size={24} />
           </h2>
           <img src={sewagFruit} alt="Sewage Fruitz" />
         </a>
