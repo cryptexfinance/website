@@ -12,6 +12,8 @@ tags:
   - TCAP
   - JPEGz
 ---
+![](/img/chainlinkpriceoracles.png)
+
 ### About Chainlink
 
 Chainlink is a decentralized oracle network that allows anyone to securely provide data inputs into smart contracts. Chainlink price oracles are an important part of the DeFi ecosystem, as they allow for secure and accurate pricing information within smart contracts. In this blog post, we will discuss what Chainlink price oracles are, how they work and how Cryptex uses them.
