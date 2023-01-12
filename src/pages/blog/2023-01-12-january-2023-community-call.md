@@ -6,7 +6,7 @@ date: 2023-01-12T19:43:01.581Z
 description: Check here for transcribed moments from the January 2023 Cryptex
   Finance Community Call.
 featuredpost: false
-featuredimage: /img/jancommunitycall.gif
+featuredimage: /img/screenshot-2023-01-12-at-2.48.01-pm.png
 tags:
   - CommunityCall
   - JPEGz
