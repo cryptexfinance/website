@@ -6,7 +6,7 @@ date: 2023-02-01T17:22:56.878Z
 description: "Check here to read about the the tokenomics of $TCAP, the Total
   Crypto Market Cap Token. "
 featuredpost: false
-featuredimage: /img/tcap-logo.png
+featuredimage: /img/tcap_placeholder.png
 tags:
   - TCAP
 ---
