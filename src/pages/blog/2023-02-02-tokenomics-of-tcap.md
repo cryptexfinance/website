@@ -22,7 +22,7 @@ Tcap protocol mechanism
 
 The flowchart above best describes the workings of the TCAP protocol. Below is a description of the protocol mechanism. I have tried to explain the mechanism by introducing some fundamental concepts of the protocol.
 
-1. **Collateralization:** SinceTCAP is a synthetic asset, it has no inherent value if all it does is track the market cap’s price and thus no inherent guarantee that it will trade at the quoted price. Hence, TCAP is backed by collateral to maintain its price. TCAP can use any collateral that has value and conforms to an [ERC20](https://ethereum.org/en/developers/docs/standards/tokens/erc-20/) interface
+1. **Collateralization:** Since TCAP is a synthetic asset, it has no inherent value if all it does is track the market cap’s price and thus no inherent guarantee that it will trade at the quoted price. Hence, TCAP is backed by collateral to maintain its price. TCAP can use any collateral that has value and conforms to an [ERC20](https://ethereum.org/en/developers/docs/standards/tokens/erc-20/) interface
 2. **Vaults:** A vault is a [smart contract](https://ethereum.org/en/developers/docs/smart-contracts/) that allows users to deposit their collateral.
 3. **Vault Ratio:** TCAP needs to be backed by at least 100% collateral value. However, the price of most ERC20 tokens is volatile. Therefore, TCAP needs to be over collateralized for the protocol to be resilient to such price movements. The ratio between the value of the collateral deposited and the value of TCAP borrowed is called the vault ratio. It is also known as the collateralization ratio.
 4. **Debt:** The protocol can be considered a collateral loan whereby the borrower borrows TCAP against the deposited collateral. The system, therefore, treats the borrowed amount of TCAP as debt.
@@ -41,7 +41,7 @@ The flowchart above best describes the workings of the TCAP protocol. Below is a
 
 Let's try to understand how the system works with an example.
 
-The ETH Vault has a minimum vault ratio of 150%, a liquidation penalty of 20% and a burn fee of 1%. Assume that the price of ETH is $2000 USD and the price of TCAP is $130 USD. If we want to mint 20 TCAP then the amount of ETH required would be:
+The ETH Vault has a minimum vault ratio of 150%, a liquidation penalty of 20%, and a burn fee of 1%. Assume that the price of ETH is $2000 USD and the price of TCAP is $130 USD. If we want to mint 20 TCAP then the amount of ETH required would be:
 
 ![](https://miro.medium.com/max/700/1*bD0fZ8aGZOqbxZnXvjVI-A.png)
 
