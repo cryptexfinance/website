@@ -1,5 +1,17 @@
 @media only screen and (max-device-width: 600px) and (orientation: portrait) {
- 
+
+  .section-solutions .inline-helper {
+    flex-direction: column;
+  }
+
+  .same-size-button{
+    width: 100% !important;
+    margin-bottom: 2rem !important;
+    font-size: 3vw !important;
+    height: 7rem !important;
+    padding: 1.5rem 1rem !important;
+  }
+
   .navbar,
   .navbar div {
     height: 49px;
@@ -76,7 +88,7 @@
       height: 49px;
       left: 60px;
       top: 0px;
-      background-color: $color-grey-dark !important; 
+      background-color: $color-grey-dark !important;
       z-index: 0;
     }
   }
@@ -183,7 +195,7 @@
   .label-mobile {
     display: block;
   }
-  
+
   .number-pink, .number-blue {
     font-size: 17px;
     line-height: 22px;
@@ -192,7 +204,7 @@
 
   .solution-img {
     width: 100%;
-    height: auto;  
+    height: auto;
   }
 
   .prices {
@@ -218,7 +230,7 @@
   }
 
   .section-main {
-    padding: 8rem 1rem 2rem 1rem; 
+    padding: 8rem 1rem 2rem 1rem;
     position: relative;
     height: 100vh;
     width: 100%;
@@ -230,10 +242,10 @@
       &-container {
         padding: 4rem 3rem;
         .subheader {
-          padding: 1rem 0rem; 
-          text-align: justify;  
+          padding: 1rem 0rem;
+          text-align: justify;
         }
-      }  
+      }
       &-title {
         padding: 5rem 0rem;
         h3 {
@@ -323,7 +335,6 @@
     }
     .subtitle {
       margin-top: 2rem;
-      
     }
     .governance-header {
       .ctx-icon {
@@ -374,9 +385,22 @@
         }
         .price-box {
           margin-left: 2rem;
-        }        
+        }
       }
     }
+  }
+
+  .main-buttons{
+    display: flex;
+    flex-direction: column;
+  }
+
+  .main-button{
+    margin-bottom: 2rem;
+  }
+
+  .main-buttons-actions{
+    flex-direction: column;
   }
 
   .section-protocol {
