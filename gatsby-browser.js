@@ -1,4 +1,4 @@
-export { wrapRootElement } from "./src/apollo/wrap-root-element";
+export { wrapRootElement } from "./src/apollo/wrap-root-element"
 
 const addScript = url => {
   const script = document.createElement("script")

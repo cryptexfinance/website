@@ -224,7 +224,7 @@ const SectionGovernance = () => {
             <div className="icons">
               {governanceIcons.map((govIcon, index) => {
                 return iconItem(govIcon, index);
-              })}              
+              })}
             </div>
           </div>
           <div className="info-bottom">
