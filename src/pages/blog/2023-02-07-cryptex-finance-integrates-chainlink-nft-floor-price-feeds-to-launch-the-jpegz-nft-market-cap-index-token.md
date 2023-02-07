@@ -7,6 +7,8 @@ date: 2023-02-07T15:26:02.345Z
 description: "Check here to read about JPEGz, the Total NFT Market Cap Index Token. "
 featuredpost: false
 featuredimage: /img/jpegz_chainlink-1-.png
+tags:
+  - JPEGz
 ---
 ![](/img/jpegz_chainlink-1-.png)
 
