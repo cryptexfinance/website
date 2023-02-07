@@ -109,7 +109,8 @@ const SectionProducts = () => {
 
             <div className="clearfix"></div>
             <p className="subtitle">
-              Real time exposure to total crypto market capitalization. <a className="https://cryptexfinance.notion.site/TCAP-e6a4ab3556254b52ad9b88319daa581e" href="#">Learn More.</a>
+              Real time exposure to total crypto market capitalization.
+              <a className="learn-more-link" href="https://cryptexfinance.notion.site/TCAP-e6a4ab3556254b52ad9b88319daa581e">Learn More.</a>
             </p>
             <p className="subtitle">
               <span className="number-blue">
@@ -162,7 +163,8 @@ const SectionProducts = () => {
               JPEGz
             </h2>
             <p className="subtitle">
-              Real time exposure to NFT market capitalization. <a className="https://cryptexfinance.notion.site/JPEGz-d69c8df153ee4795b1fd728ef6daba5d" href="#">Learn More.</a>
+              Real time exposure to NFT market capitalization.
+              <a className="learn-more-link" href="https://cryptexfinance.notion.site/JPEGz-d69c8df153ee4795b1fd728ef6daba5d">Learn More.</a>
             </p>
             <p className="subtitle">
               <span className="number-blue">
