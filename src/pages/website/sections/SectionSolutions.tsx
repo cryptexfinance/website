@@ -17,9 +17,9 @@ const SectionProducts = () => {
     }`);
 
 
-  const [tcapPrice, setTcapPrice] = useState("0.00");
+  const [tcapPrice, setTcapPrice] = useState("111.30");
   const [tcapTotalCap, setTcapTotalCap] = useState("0.00");
-  const [jpegzPrice, setJpegzPrice] = useState("0.00");
+  const [jpegzPrice, setJpegzPrice] = useState("3.10");
   const [jpegzTotalCap, setJpegzTotalCap] = useState("0.00");
   const contracts = useContext(contractsContext);
   const arbContracts = useContext(arbContractsContext);
@@ -34,7 +34,7 @@ const SectionProducts = () => {
         const [currentTcapPrice] = await signer.ethcallProvider?.all([tcapOraclePriceCall]);
         const totalTcapPrice = currentTcapPrice.mul(10000000000);
         const tPrice = ethers.utils.formatEther(totalTcapPrice.div(10000000000));
-        setTcapPrice(tPrice);
+        setTcapPrice(parseFloat(tPrice).toFixed(2));
         setTcapTotalCap(ethers.utils.formatEther(totalTcapPrice));
       }
     };
@@ -45,9 +45,9 @@ const SectionProducts = () => {
         const jpegzOraclePriceCall = await arbContracts.jpegzOracleRead?.getLatestAnswer();
         // @ts-ignore
         const [currentJpegzPrice] = await arbSigner.ethcallProvider?.all([jpegzOraclePriceCall]);
-        const totalJpegzPrice = currentJpegzPrice.mul(100000000000);
+        const totalJpegzPrice = currentJpegzPrice.mul(10000000000);
         const jPrice = ethers.utils.formatEther(currentJpegzPrice.mul(10));
-        setJpegzPrice(jPrice);
+        setJpegzPrice(parseFloat(jPrice).toFixed(2));
         setJpegzTotalCap(ethers.utils.formatEther(totalJpegzPrice));
       }
     }
@@ -109,7 +109,8 @@ const SectionProducts = () => {
 
             <div className="clearfix"></div>
             <p className="subtitle">
-              Real time exposure to total crypto market capitalization. <a className="learn-more-link" href="#">Learn More.</a>
+              Real time exposure to total crypto market capitalization.
+              <a className="learn-more-link" href="https://cryptexfinance.notion.site/TCAP-e6a4ab3556254b52ad9b88319daa581e">Learn More.</a>
             </p>
             <p className="subtitle">
               <span className="number-blue">
@@ -162,7 +163,8 @@ const SectionProducts = () => {
               JPEGz
             </h2>
             <p className="subtitle">
-              Real time exposure to NFT market capitalization. <a className="learn-more-link" href="#">Learn More.</a>
+              Real time exposure to NFT market capitalization.
+              <a className="learn-more-link" href="https://cryptexfinance.notion.site/JPEGz-d69c8df153ee4795b1fd728ef6daba5d">Learn More.</a>
             </p>
             <p className="subtitle">
               <span className="number-blue">
