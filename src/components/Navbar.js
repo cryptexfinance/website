@@ -30,7 +30,7 @@ const NavbarMenu = props => {
   const governanceUrl = blogView ? `${siteUrl}/#governance` : "#governance"
   const safetyUrl = blogView ? `${siteUrl}/#protocol` : "#protocol"
   const newsUrl = `${siteUrl}/blog`
-  const faqUrl = "https://docs.cryptex.finance/faq"
+  const faqUrl = "https://cryptexfinance.notion.site/Cryptex-Finance-Wiki-9f29021042df4da6b6887553a879d691"
   const ecosystemUrl = blogView ? `${siteUrl}/#ecosystem` : "#ecosystem"
 
   const NavMobile = () => {

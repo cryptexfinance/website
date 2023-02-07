@@ -25,28 +25,28 @@ const safetyItems = [
     id: "twitter",
     title: "Twitter",
     subtitle: "Follow us on Twitter.",
-    link: "https://docs.cryptex.finance/audits",
+    link: "https://twitter.com/cryptexfinance",
     logo: twitterLogo,
   },
   {
     id: "discord",
     title: "Discord",
     subtitle: "Join the Discord Server.",
-    link: "https://app.cryptex.finance/vault-monitoring",
+    link: "https://discord.gg/cryptex",
     logo: discordLogo,
   },
   {
     id: "telegram",
     title: "Telegram",
     subtitle: "Get announcements on Telegram.",
-    link: "https://app.dework.xyz/cryptex-finance",
+    link: "https://t.me/cryptexfinance",
     logo: telegramLogo,
   },
   {
     id: "newsletter",
     title: "Newsletter",
     subtitle: "Subscribe to our newsletter.",
-    link: "https://docs.cryptex.finance/tcap#oracles",
+    link: "https://cryptex.substack.com/",
     logo: mailLogo,
   }
 ]
