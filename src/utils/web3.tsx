@@ -1,21 +1,14 @@
 import { ethers } from "ethers";
 
 export const getDefaultProvider = () => {
-  const provider = ethers.getDefaultProvider("mainnet", {
+  const provider = new ethers.providers.InfuraProvider("mainnet", {
     infura: process.env.REACT_APP_INFURA_ID,
-    alchemy: process.env.REACT_APP_ALCHEMY_KEY,
   });
 
   return provider;
 };
 
 export const getArbitrumProvider = () => {
-  /*const provider = new ethers.providers.JsonRpcProvider(
-    "https://arb1.arbitrum.io/rpc",
-    "arbitrum"
-  );*/
-  // const provider = new ethers.providers.InfuraProvider("arbitrum", process.env.REACT_APP_INFURA_ID);
-  
   const provider = new ethers.providers.InfuraProvider("arbitrum", {
     infura: process.env.REACT_APP_INFURA_ID,
   });
