@@ -43,7 +43,7 @@ const SectionMain = () => (
           </div>
           <div className="">
             <a
-              href="/#products"
+              href="https://cryptexfinance.notion.site/Cryptex-Finance-Wiki-9f29021042df4da6b6887553a879d691"
               rel="noopener noreferrer"
               className="button-outlined-purple main-button"
             >

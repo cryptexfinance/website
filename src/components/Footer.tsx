@@ -94,7 +94,7 @@ const Footer = () => {
             Documentation
           </a>
           <a
-            href="https://docs.cryptex.finance/faq"
+            href="https://cryptexfinance.notion.site/Cryptex-Finance-Wiki-9f29021042df4da6b6887553a879d691"
             rel="noreferrer"
             target="_blank"
             className="subtitle"
