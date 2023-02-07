@@ -34,7 +34,7 @@ const SectionProducts = () => {
         const [currentTcapPrice] = await signer.ethcallProvider?.all([tcapOraclePriceCall]);
         const totalTcapPrice = currentTcapPrice.mul(10000000000);
         const tPrice = ethers.utils.formatEther(totalTcapPrice.div(10000000000));
-        setTcapPrice(tPrice);
+        setTcapPrice(parseFloat(tPrice).toFixed(2));
         setTcapTotalCap(ethers.utils.formatEther(totalTcapPrice));
       }
     };
@@ -47,7 +47,7 @@ const SectionProducts = () => {
         const [currentJpegzPrice] = await arbSigner.ethcallProvider?.all([jpegzOraclePriceCall]);
         const totalJpegzPrice = currentJpegzPrice.mul(10000000000);
         const jPrice = ethers.utils.formatEther(currentJpegzPrice.mul(10));
-        setJpegzPrice(jPrice);
+        setJpegzPrice(parseFloat(jPrice).toFixed(2));
         setJpegzTotalCap(ethers.utils.formatEther(totalJpegzPrice));
       }
     }
