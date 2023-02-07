@@ -15,3 +15,4 @@ export const SIGNER_DEFAULT_VALUE = {
 };
 
 export const signerContext = React.createContext<ISignerContext>(SIGNER_DEFAULT_VALUE);
+export const arbSignerContext = React.createContext<ISignerContext>(SIGNER_DEFAULT_VALUE);
