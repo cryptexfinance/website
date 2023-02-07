@@ -24,8 +24,9 @@ module.exports = {
   siteMetadata: {
     title: "Cryptex Finance",
     author: "Cryptex Finance",
-    description: "Innovative, open-source DeFi solutions for the global crypto community.",
-    image: "https://raw.githubusercontent.com/cryptexglobal/website/main/static/website/home/main.webp",
+    description: "Index Tokens For The Crypto and NFT Community",
+    image:
+      "https://raw.githubusercontent.com/cryptexglobal/website/main/static/website/home/main.webp",
     keywords: [
       "Cryptex",
       "Blockchain",
@@ -40,7 +41,7 @@ module.exports = {
       process.env.SITE_URL || process.env.DEPLOY_URL || "http://localhost:8000",
   },
   flags: {
-    DEV_SSR: true
+    DEV_SSR: true,
   },
   plugins: [
     {
@@ -170,7 +171,8 @@ module.exports = {
             title: "Cryptex Finance News Feed",
             feed_url: "https://cryptex.finance/news-rss.xml",
             site_url: "https://cryptex.finance",
-            image_url: "https://raw.githubusercontent.com/cryptexglobal/website/main/static/website/home/main.webp",
+            image_url:
+              "https://raw.githubusercontent.com/cryptexglobal/website/main/static/website/home/main.webp",
             output: "news-rss.xml",
             query: `
             {
@@ -205,24 +207,29 @@ module.exports = {
             `,
             serialize: ({ query: { site, allMarkdownRemark } }) => {
               return allMarkdownRemark.nodes.map(node => {
-                return Object.assign({}, {
-                  title: node.frontmatter.title,
-                  description: node.frontmatter.description,
-                  author: node.frontmatter.author,
-                  date: node.frontmatter.date,
-                  url: `${site.siteMetadata.siteUrl}${node.fields.slug}`,
-                  guid: `${site.siteMetadata.siteUrl}${node.fields.slug}`,
-                  custom_elements: [
-                    { "tags": node.frontmatter.tags.join(",") },
-                    { "image_url": `${site.siteMetadata.siteUrl}${node.frontmatter.featuredimage.childImageSharp.fluid.src}` },
-                    { "content:encoded": node.html }
-                  ],
-                })
+                return Object.assign(
+                  {},
+                  {
+                    title: node.frontmatter.title,
+                    description: node.frontmatter.description,
+                    author: node.frontmatter.author,
+                    date: node.frontmatter.date,
+                    url: `${site.siteMetadata.siteUrl}${node.fields.slug}`,
+                    guid: `${site.siteMetadata.siteUrl}${node.fields.slug}`,
+                    custom_elements: [
+                      { tags: node.frontmatter.tags.join(",") },
+                      {
+                        image_url: `${site.siteMetadata.siteUrl}${node.frontmatter.featuredimage.childImageSharp.fluid.src}`,
+                      },
+                      { "content:encoded": node.html },
+                    ],
+                  }
+                )
               })
             },
-          }
-        ]
-      }
-    }
+          },
+        ],
+      },
+    },
   ],
 }

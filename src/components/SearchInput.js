@@ -1,6 +1,6 @@
-import React from "react";
-import Form from "react-bootstrap/esm/Form";
-import { FaSearch } from "@react-icons/all-files/fa/FaSearch";
+import React from "react"
+import Form from "react-bootstrap/esm/Form"
+import { FaSearch } from "@react-icons/all-files/fa/FaSearch"
 
 /* type props = {
   placeholder: string;
@@ -17,7 +17,6 @@ const SearchInput = ({
   onFocus = () => {},
   onBlur = () => {},
 }) => {
-  
   return (
     <div className="search-box">
       <FaSearch className="search-icon" />
@@ -30,8 +29,8 @@ const SearchInput = ({
         onFocus={onFocus}
         onBlur={onBlur}
       />
-    </div>  
-  ); 
-};
+    </div>
+  )
+}
 
-export default SearchInput;
+export default SearchInput
