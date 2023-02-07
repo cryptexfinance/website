@@ -45,7 +45,7 @@ const SectionProducts = () => {
         const jpegzOraclePriceCall = await arbContracts.jpegzOracleRead?.getLatestAnswer();
         // @ts-ignore
         const [currentJpegzPrice] = await arbSigner.ethcallProvider?.all([jpegzOraclePriceCall]);
-        const totalJpegzPrice = currentJpegzPrice.mul(100000000000);
+        const totalJpegzPrice = currentJpegzPrice.mul(10000000000);
         const jPrice = ethers.utils.formatEther(currentJpegzPrice.mul(10));
         setJpegzPrice(jPrice);
         setJpegzTotalCap(ethers.utils.formatEther(totalJpegzPrice));
