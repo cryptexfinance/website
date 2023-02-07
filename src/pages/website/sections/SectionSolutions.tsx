@@ -115,13 +115,13 @@ const SectionProducts = () => {
             <p className="subtitle">
               <span className="number-blue">
               <NumericFormat
-                    className="number-blue"
-                    value={tcapTotalCap}
-                    displayType="text"
-                    thousandSeparator
-                    prefix="$"
-                    decimalScale={0}
-                  />
+                className="number-blue"
+                value={tcapTotalCap}
+                displayType="text"
+                thousandSeparator
+                prefix="$"
+                decimalScale={0}
+              />
               </span>
               <br></br>
               Total Crypto Market Cap.
@@ -129,12 +129,12 @@ const SectionProducts = () => {
             <p className="subtitle">
               <span className="number-blue">
               <NumericFormat
-                      className="number-blue"
-                      value={tcapPrice}
-                      displayType="text"
-                      thousandSeparator
-                      prefix="$"
-                      decimalScale={2}
+                className="number-blue"
+                value={tcapPrice}
+                displayType="text"
+                thousandSeparator
+                prefix="$"
+                decimalScale={2}
               />
               </span>
               <br></br>
@@ -145,7 +145,7 @@ const SectionProducts = () => {
           <a
                 className="swap-button same-size-button"
                 target={"_blank"}
-                href="https://app.cryptex.finance/vault"
+                href="https://app.cryptex.finance/vaults"
                 >Mint TCAP</a>
             <a
               className="swap-button-outline pull-right same-size-button"
@@ -169,13 +169,13 @@ const SectionProducts = () => {
             <p className="subtitle">
               <span className="number-blue">
               <NumericFormat
-                    className="number-blue"
-                    value={jpegzTotalCap}
-                    displayType="text"
-                    thousandSeparator
-                    prefix="$"
-                    decimalScale={0}
-                  />
+                className="number-blue"
+                value={jpegzTotalCap}
+                displayType="text"
+                thousandSeparator
+                prefix="$"
+                decimalScale={0}
+              />
               </span>
               <br></br>
               Total NFT Market Cap.
@@ -183,12 +183,12 @@ const SectionProducts = () => {
             <p className="subtitle">
               <span className="number-blue">
               <NumericFormat
-                      className="number-blue"
-                      value={jpegzPrice}
-                      displayType="text"
-                      thousandSeparator
-                      prefix="$"
-                      decimalScale={2}
+                className="number-blue"
+                value={jpegzPrice}
+                displayType="text"
+                thousandSeparator
+                prefix="$"
+                decimalScale={2}
               />
               </span>
               <br></br>
@@ -199,7 +199,7 @@ const SectionProducts = () => {
           <a
                 className="swap-button same-size-button"
                 target={"_blank"}
-                href="https://app.cryptex.finance/vault"
+                href="https://app.cryptex.finance/vaults"
                 >Mint JPEGz</a>
             <a
               className="swap-button-outline pull-right same-size-button"
