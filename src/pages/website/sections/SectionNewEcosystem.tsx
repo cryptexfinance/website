@@ -79,7 +79,7 @@ const SectionSafety = () => {
   );
 
   return (
-    <div id="protocol" className="section-protocol">
+    <div id="community" className="section-protocol">
       <h1 className="header">
         Community
       </h1>
