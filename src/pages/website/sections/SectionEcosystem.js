@@ -77,7 +77,7 @@ const SectionEcosystem = ({ data }) => {
   }
 
   return (
-    <div id="ecosystem" className="section-ecosystem">
+    <div id="community" className="section-ecosystem">
       <ToastContainer />
       <h1>Community</h1>
     </div>
