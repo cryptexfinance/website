@@ -2,6 +2,7 @@ import React from "react";
 import Col from "react-bootstrap/esm/Col";
 import appEndpoint from "../../../endpoint";
 import bgvideo from "../../../../static/bg_main.mp4";
+import bgvideowebm from "../../../../static/bg_main.webm";
 
 const SectionMain = () => (
   <div className="section-main">
@@ -14,6 +15,7 @@ const SectionMain = () => (
       className="video"
       id="bgvid"
     >
+      <source src={bgvideowebm} type="video/webm" />
       <source src={bgvideo} type="video/mp4" />
     </video>
     <div className="main-container">
@@ -24,7 +26,7 @@ const SectionMain = () => (
           </h1>
         </div>
         <p className="home-subheader">
-          Innovative, open-source DeFi solutions for the global crypto community.
+          Index Tokens For The Crypto and NFT Community
         </p>
       </div>
       <div className="main-buttons">
@@ -33,19 +35,19 @@ const SectionMain = () => (
             <a
               href={appEndpoint}
               rel="noopener noreferrer"
-              className="button-pink main-button main-button-link"
+              className="button-green main-button main-button-link"
               target="_blank"
             >
               Go to App
             </a>
           </div>
-          <div className="button-learn-more">
+          <div className="">
             <a
               href="/#products"
               rel="noopener noreferrer"
-              className="button-dark main-button main-button-link"
+              className="button-outlined-purple main-button"
             >
-              Learn More
+              Go to Wiki
             </a>
           </div>
         </Col>

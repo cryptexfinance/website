@@ -2,11 +2,9 @@
 [![Documentation Status](https://readthedocs.org/projects/ansicolortags/badge/?version=latest)](http://ansicolortags.readthedocs.io/?badge=latest)
 [![Github all releases](https://img.shields.io/github/downloads/Naereen/StrapDown.js/total.svg)](https://GitHub.com/Naereen/StrapDown.js/releases/)
 
-
 # 💡 CRYPTEX WEBSITE
 
-### SOURCE CODE BASED ON GATSBY FOR CRYPTEX WEBSITE AND WEBAPP 
-
+### SOURCE CODE BASED ON GATSBY FOR CRYPTEX WEBSITE AND WEBAPP
 
 🎛 <b>build and run develop environment</b>
 
@@ -38,10 +36,8 @@ gatsby serve
 
 **Note**: You'll need to run these commands in a new terminal window
 
-
 # Technologies Used
 
 ## Solidity
+
 ## The Graph API
-
-

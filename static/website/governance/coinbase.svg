@@ -1,3 +1,46 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="205" height="205" stroke="#000" stroke-linecap="round" stroke-linejoin="round" fill="#fff" fill-rule="evenodd">
-<path fill="#f124ff" d="M.5 102.5C.5 45.992 45.992.5 102.5.5s102 45.492 102 102-45.492 102-102 102-102-45.492-102-102zm102.857-29.917c12.0087 0 21.5347 7.4067 25.1532 18.4227h24.1925C148.3208 67.4558 128.8898 51.5 103.5501 51.5c-28.7776 0-51.2532 21.8444-51.2532 51.0968S74.2115 153.5 103.5501 153.5c24.7724 0 44.589-15.9558 48.975-39.6998h-24.0168c-3.4314 11.0163-12.9499 18.6168-24.9657 18.6168-16.5809 0-28.2028-12.7289-28.2028-29.8202.008-17.2849 11.4422-30.0138 28.0172-30.0138z" stroke-linejoin="miter" stroke="#f124ff"/>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   width="205"
+   height="205"
+   stroke="#000"
+   stroke-linecap="round"
+   stroke-linejoin="round"
+   fill="#fff"
+   fill-rule="evenodd"
+   version="1.1"
+   id="svg4"
+   sodipodi:docname="coinbase.svg"
+   inkscape:version="1.2.2 (732a01da63, 2022-12-09)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs8" />
+  <sodipodi:namedview
+     id="namedview6"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     showgrid="false"
+     inkscape:zoom="3.9707317"
+     inkscape:cx="102.62592"
+     inkscape:cy="122.77334"
+     inkscape:window-width="2560"
+     inkscape:window-height="1001"
+     inkscape:window-x="-9"
+     inkscape:window-y="-9"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg4" />
+  <path
+     fill="#f124ff"
+     d="M.5 102.5C.5 45.992 45.992.5 102.5.5s102 45.492 102 102-45.492 102-102 102-102-45.492-102-102zm102.857-29.917c12.0087 0 21.5347 7.4067 25.1532 18.4227h24.1925C148.3208 67.4558 128.8898 51.5 103.5501 51.5c-28.7776 0-51.2532 21.8444-51.2532 51.0968S74.2115 153.5 103.5501 153.5c24.7724 0 44.589-15.9558 48.975-39.6998h-24.0168c-3.4314 11.0163-12.9499 18.6168-24.9657 18.6168-16.5809 0-28.2028-12.7289-28.2028-29.8202.008-17.2849 11.4422-30.0138 28.0172-30.0138z"
+     stroke-linejoin="miter"
+     stroke="#f124ff"
+     id="path2"
+     style="fill:#50d313;fill-opacity:1;stroke:#50d313;stroke-opacity:1" />
 </svg>

@@ -1,53 +1,55 @@
-import React, { useState } from "react";
-import SelectCryptex from "./Select";
-import SearchInput from "./SearchInput";
-
+import React, { useState } from "react"
+import SelectCryptex from "./Select"
+import SearchInput from "./SearchInput"
 
 const SearchNews = ({
   blogKeys,
   setFilteredBlogKeys,
   tagList,
-  setPostsCount
+  setPostsCount,
 }) => {
-  const keysDivider = "+++";
-  const dbDefaultTitle = "Filter";
-  const [searchCriteria, setSearchCriteria] = useState("");
-  const [selectedTag, setSelectedTag] = useState(dbDefaultTitle);
-
+  const keysDivider = "+++"
+  const dbDefaultTitle = "Filter"
+  const [searchCriteria, setSearchCriteria] = useState("")
+  const [selectedTag, setSelectedTag] = useState(dbDefaultTitle)
 
   const filterPosts = (criteria, filterTag) => {
-    setPostsCount(9);
-    let filterKeys = [];
+    setPostsCount(9)
+    let filterKeys = []
     if (filterTag === dbDefaultTitle && criteria !== "")
-      filterKeys = blogKeys.filter(key => key.includes(criteria.toLowerCase()));
+      filterKeys = blogKeys.filter(key => key.includes(criteria.toLowerCase()))
     else if (criteria === "" && filterTag !== dbDefaultTitle)
-      filterKeys = blogKeys.filter(key => key.includes([keysDivider, filterTag.toLowerCase(), keysDivider].join("")));
+      filterKeys = blogKeys.filter(key =>
+        key.includes(
+          [keysDivider, filterTag.toLowerCase(), keysDivider].join("")
+        )
+      )
     else if (criteria !== "" && filterTag !== dbDefaultTitle) {
-      const tagF = [keysDivider, filterTag.toLowerCase(), keysDivider].join("");
-      filterKeys = blogKeys.filter(key => key.includes(tagF) && key.includes(criteria.toLowerCase()));
+      const tagF = [keysDivider, filterTag.toLowerCase(), keysDivider].join("")
+      filterKeys = blogKeys.filter(
+        key => key.includes(tagF) && key.includes(criteria.toLowerCase())
+      )
+    } else {
+      filterKeys = blogKeys
     }
-    else {
-      filterKeys = blogKeys;
-    }
-    setFilteredBlogKeys(filterKeys);
-  }  
+    setFilteredBlogKeys(filterKeys)
+  }
 
-  const onChange = (criteria) => {
-    setSearchCriteria(criteria);
-    filterPosts(criteria, selectedTag);
+  const onChange = criteria => {
+    setSearchCriteria(criteria)
+    filterPosts(criteria, selectedTag)
   }
 
   const onSelectChange = (inputValue, { action }) => {
     if (action === "clear") {
-      setSelectedTag(dbDefaultTitle);
-      filterPosts(searchCriteria, dbDefaultTitle);
+      setSelectedTag(dbDefaultTitle)
+      filterPosts(searchCriteria, dbDefaultTitle)
+    } else {
+      setSelectedTag(inputValue.value)
+      filterPosts(searchCriteria, inputValue.value)
     }
-    else {
-      setSelectedTag(inputValue.value);
-      filterPosts(searchCriteria, inputValue.value);
-    }
-  }  
-    
+  }
+
   return (
     <div className="filter-box">
       <SelectCryptex
@@ -61,10 +63,10 @@ const SearchNews = ({
       <SearchInput
         placeholder="Search"
         value={searchCriteria}
-        onChange={(e) => onChange(e.target.value)}
-      />   
-    </div>    
-  );
+        onChange={e => onChange(e.target.value)}
+      />
+    </div>
+  )
 }
 
-export default SearchNews;
+export default SearchNews

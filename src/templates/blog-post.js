@@ -1,13 +1,13 @@
-import React, { useEffect, useState } from "react";
-import { graphql } from "gatsby";
-import PropTypes from "prop-types";
-import Col from "react-bootstrap/esm/Col";
-import Layout from "../components/Layout";
-import Content, { HTMLContent } from "../components/Content";
-import Header from "../components/Header";
-import NextNews from "../components/NextNews";
-import ShareSocial from "../components/ShareSocial";
-import { tagColor } from "../components/utils/tags";
+import React, { useEffect, useState } from "react"
+import { graphql } from "gatsby"
+import PropTypes from "prop-types"
+import Col from "react-bootstrap/esm/Col"
+import Layout from "../components/Layout"
+import Content, { HTMLContent } from "../components/Content"
+import Header from "../components/Header"
+import NextNews from "../components/NextNews"
+import ShareSocial from "../components/ShareSocial"
+import { tagColor } from "../components/utils/tags"
 
 export const BlogPostTemplate = ({
   postIndex,
@@ -19,48 +19,50 @@ export const BlogPostTemplate = ({
   date,
   helmet,
   slug,
-  tagsColorAll
+  tagsColorAll,
 }) => {
-  const PostContent = contentComponent || Content;
-  const [tagsColor, setTagsColor] = useState([]);
+  const PostContent = contentComponent || Content
+  const [tagsColor, setTagsColor] = useState([])
 
   useEffect(() => {
-    if (typeof (tagsColorAll.edges) !== "undefined") {
-      const tags = [];
+    if (typeof tagsColorAll.edges !== "undefined") {
+      const tags = []
       tagsColorAll.edges.map(({ node }) => {
-        tags.push({ name: node.frontmatter.tag, color:  node.frontmatter.color });
-        return 0;
-      });
-      setTagsColor(tags);
+        tags.push({ name: node.frontmatter.tag, color: node.frontmatter.color })
+        return 0
+      })
+      setTagsColor(tags)
     }
-  }, [tagsColorAll.edges]);
+  }, [tagsColorAll.edges])
 
   return (
     <section id="news" className="section-blogpost">
-      <Col sm={12} md={12} lg={8} className="post" >
+      <Col sm={12} md={12} lg={8} className="post">
         {tags && tags.length ? (
           <div className="tags">
-          {tags.map((tag) => {
-            const tColor = tagColor(tagsColor, tag);
-            return ( 
-              <span
-                className="tagbox"
-                style={{ color: tColor, borderColor: tColor }}
-              >
-                {tag}
-              </span>
-            );        
-          })}
+            {tags.map(tag => {
+              const tColor = tagColor(tagsColor, tag)
+              return (
+                <span
+                  className="tagbox"
+                  style={{ color: tColor, borderColor: tColor }}
+                >
+                  {tag}
+                </span>
+              )
+            })}
           </div>
         ) : null}
         <h1 className="title is-size-2 has-text-weight-bold is-bold-light">
           {title}
         </h1>
-        <h6 className="post-date">{date} | {author}</h6>
+        <h6 className="post-date">
+          {date} | {author}
+        </h6>
         <PostContent content={content} />
-        <ShareSocial title={title}  shareSlug={slug} tags={tags} />
+        <ShareSocial title={title} shareSlug={slug} tags={tags} />
       </Col>
-      <NextNews postIndex={postIndex} tagsColor={tagsColor} />         
+      <NextNews postIndex={postIndex} tagsColor={tagsColor} />
     </section>
   )
 }
@@ -72,12 +74,12 @@ BlogPostTemplate.propTypes = {
   description: PropTypes.string,
   title: PropTypes.string,
   helmet: PropTypes.object,
-  slug: PropTypes.string
+  slug: PropTypes.string,
 }
 
 const BlogPost = ({ data, pageContext }) => {
-  const { markdownRemark: post } = data;
-  const { allMarkdownRemark: tagsColor } = data;
+  const { markdownRemark: post } = data
+  const { allMarkdownRemark: tagsColor } = data
 
   return (
     <Layout>
@@ -109,7 +111,10 @@ export default BlogPost
 
 export const pageQuery = graphql`
   query BlogPostByID($id: String!) {
-    markdownRemark(id: { eq: $id }, frontmatter: {templateKey: {eq: "blog-post"}}) {
+    markdownRemark(
+      id: { eq: $id }
+      frontmatter: { templateKey: { eq: "blog-post" } }
+    ) {
       id
       html
       fields {
@@ -133,7 +138,7 @@ export const pageQuery = graphql`
           id
           frontmatter {
             tag
-            color  
+            color
           }
         }
       }

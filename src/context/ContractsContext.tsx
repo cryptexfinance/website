@@ -1,7 +1,7 @@
 import React from "react";
 import { Contract } from "ethers-multicall";
 
-export interface IContractsContext {  
+export interface IContractsContext {
   tcapOracleRead?: Contract;
   setCurrentTcapOracleRead: (currentOracle: Contract) => void;
   ctxTokenRead?: Contract;

@@ -1,4 +1,4 @@
-import React from "react";
+import React from "react"
 // import useSiteMetadata from "./SiteMetadata";
 
 const TemplateWrapper = ({ children }) => {
@@ -8,6 +8,6 @@ const TemplateWrapper = ({ children }) => {
       <div>{children}</div>
     </div>
   )
-};
+}
 
-export default TemplateWrapper;
+export default TemplateWrapper

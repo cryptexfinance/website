@@ -1,16 +1,13 @@
-const _ = require("lodash");
-const path = require("path");
-const { createFilePath } = require("gatsby-source-filesystem");
+const _ = require("lodash")
+const path = require("path")
+const { createFilePath } = require("gatsby-source-filesystem")
 
 exports.createPages = ({ actions, graphql }) => {
   const { createPage } = actions
 
   return graphql(`
     {
-      allMarkdownRemark(
-        sort: { fields: [frontmatter___date] }
-        limit: 1000
-      ) {
+      allMarkdownRemark(sort: { fields: [frontmatter___date] }, limit: 1000) {
         edges {
           node {
             id
@@ -25,15 +22,15 @@ exports.createPages = ({ actions, graphql }) => {
         }
       }
     }
-  `).then((result) => {
+  `).then(result => {
     if (result.errors) {
-      result.errors.forEach((e) => console.error(e.toString()))
+      result.errors.forEach(e => console.error(e.toString()))
       return Promise.reject(result.errors)
     }
 
     const posts = result.data.allMarkdownRemark.edges
-    let index = 0;
-    posts.forEach((edge) => {
+    let index = 0
+    posts.forEach(edge => {
       const id = edge.node.id
       createPage({
         path: edge.node.fields.slug,
@@ -44,16 +41,16 @@ exports.createPages = ({ actions, graphql }) => {
         // additional data can be passed via context
         context: {
           id,
-          index
+          index,
         },
       })
-      index++;
+      index++
     })
 
     // Tag pages:
     let tags = []
     // Iterate through each post, putting all found tags into `tags`
-    posts.forEach((edge) => {
+    posts.forEach(edge => {
       if (_.get(edge, `node.frontmatter.tags`)) {
         tags = tags.concat(edge.node.frontmatter.tags)
       }
@@ -62,7 +59,7 @@ exports.createPages = ({ actions, graphql }) => {
     tags = _.uniq(tags)
 
     // Make tag pages
-    tags.forEach((tag) => {
+    tags.forEach(tag => {
       const tagPath = `/tags/${_.kebabCase(tag)}/`
 
       createPage({
@@ -84,9 +81,9 @@ exports.createSchemaCustomization = ({ actions }) => {
     extend: () => ({
       resolve: function (src, args, context, info) {
         const partialPath = src.featureImage
-          if (!partialPath) {
-            return null
-          }
+        if (!partialPath) {
+          return null
+        }
 
         const filePath = path.join(__dirname, "src/data", partialPath)
         const fileNode = context.nodeModel.runQuery({
@@ -95,10 +92,10 @@ exports.createSchemaCustomization = ({ actions }) => {
           query: {
             filter: {
               absolutePath: {
-                eq: filePath
-              }
-            }
-          }
+                eq: filePath,
+              },
+            },
+          },
         })
 
         if (!fileNode) {
@@ -106,8 +103,8 @@ exports.createSchemaCustomization = ({ actions }) => {
         }
 
         return fileNode
-      }
-    })
+      },
+    }),
   })
 
   const typeDefs = `

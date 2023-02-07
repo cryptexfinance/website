@@ -1,7 +1,6 @@
-import React from "react";
-import Select from "react-select";
-import { COLORS } from "./utils/colors";
-
+import React from "react"
+import Select from "react-select"
+import { COLORS } from "./utils/colors"
 
 const customStyles = {
   container: (provided, state) => ({
@@ -32,29 +31,30 @@ const customStyles = {
   option: (provided, state) => ({
     ...provided,
     color: state.isSelected ? COLORS.DARK_CLEAN : COLORS.GREY_LIGHT,
-    backgroundColor: state.isSelected ? COLORS.SHADOW_PURPLE_NEON : COLORS.BACKGROUND_BOXES,
+    backgroundColor: state.isSelected
+      ? COLORS.SHADOW_PURPLE_NEON
+      : COLORS.BACKGROUND_BOXES,
     padding: 10,
     fontFamily: "Space Mono",
   }),
   input: (provided, state) => ({
     ...provided,
     color: COLORS.GREY_LIGHT,
-    fontFamily: "Space Mono"
+    fontFamily: "Space Mono",
   }),
   placeholder: (provided, state) => ({
     ...provided,
     color: COLORS.GREY_LIGHT,
-    fontFamily: "Space Mono"
+    fontFamily: "Space Mono",
   }),
   singleValue: (provided, state) => ({
     ...provided,
     color: COLORS.GREY_LIGHT,
-    fontFamily: "Space Mono"
+    fontFamily: "Space Mono",
   }),
 }
 
-
-const SelectCryptex = (props) => {
+const SelectCryptex = props => {
   return (
     <Select
       className="select-cryptex"
@@ -66,8 +66,8 @@ const SelectCryptex = (props) => {
       options={props.options}
       onChange={props.onSelectChange}
       styles={customStyles}
-    />)
+    />
+  )
 }
 
-
-export default SelectCryptex;
+export default SelectCryptex
