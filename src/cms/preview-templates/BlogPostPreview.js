@@ -1,23 +1,23 @@
-import React from "react";
-import PropTypes from "prop-types";
-import Col from "react-bootstrap/esm/Col";
-import { tagColor } from "../../components/utils/tags";
-import "../../styles/main.scss";
+import React from "react"
+import PropTypes from "prop-types"
+import Col from "react-bootstrap/esm/Col"
+import { tagColor } from "../../components/utils/tags"
+import "../../styles/main.scss"
 
 const BlogPostPreview = ({ entry, widgetFor }) => {
-  const dateOptions = { year: 'numeric', month: 'long', day: 'numeric' };
-  const title = entry.getIn(['data', 'title']);
-  const author = entry.getIn(['data', 'author']);
-  const date = entry.getIn(['data', 'date']);
-  const tags = entry.getIn(['data', 'tags']);
+  const dateOptions = { year: "numeric", month: "long", day: "numeric" }
+  const title = entry.getIn(["data", "title"])
+  const author = entry.getIn(["data", "author"])
+  const date = entry.getIn(["data", "date"])
+  const tags = entry.getIn(["data", "tags"])
 
   return (
     <section id="news" className="section-blogpost">
       <Col sm={12} md={12} lg={12} className="post">
         {tags && tags.size > 0 ? (
           <div className="tags">
-            {tags.map((tag) => {
-              const tColor = tagColor([], tag);
+            {tags.map(tag => {
+              const tColor = tagColor([], tag)
               return (
                 <span
                   className="tagbox"
@@ -35,8 +35,8 @@ const BlogPostPreview = ({ entry, widgetFor }) => {
         <h6 className="post-date">
           {date.toLocaleDateString(undefined, dateOptions)} | {author}
         </h6>
-        {widgetFor('body')}
-      </Col>  
+        {widgetFor("body")}
+      </Col>
     </section>
   )
 }

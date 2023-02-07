@@ -9,14 +9,9 @@ const defaultState = {
 const ThemeContext = React.createContext(defaultState)
 
 class ThemeProvider extends Component {
-
   render() {
     const { children } = this.props
-    return (
-      <>
-        {children}
-      </>
-    )
+    return <>{children}</>
   }
 }
 

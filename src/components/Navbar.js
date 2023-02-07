@@ -1,12 +1,11 @@
-import React, { useEffect, useState } from "react";
-import { Navbar, Nav } from "react-bootstrap";
-import { useStaticQuery, graphql } from "gatsby";
-import { Link } from "gatsby";
-import appEndpoint from '../endpoint';
+import React, { useEffect, useState } from "react"
+import { Navbar, Nav } from "react-bootstrap"
+import { useStaticQuery, graphql } from "gatsby"
+import { Link } from "gatsby"
+import appEndpoint from "../endpoint"
 
-
-const NavbarMenu = (props) => {
-  const [siteUrl, setSiteUrl] = useState("");
+const NavbarMenu = props => {
+  const [siteUrl, setSiteUrl] = useState("")
   const dataq = useStaticQuery(graphql`
     query {
       site {
@@ -14,40 +13,53 @@ const NavbarMenu = (props) => {
           siteUrl
         }
       }
-    }`);
-  
+    }
+  `)
+
   useEffect(() => {
-    if (typeof (dataq.site) !== "undefined") {
+    if (typeof dataq.site !== "undefined") {
       setSiteUrl(dataq.site.siteMetadata.siteUrl)
     } else {
-      console.log("Error with props in team");
+      console.log("Error with props in team")
     }
-  }, [dataq]);
+  }, [dataq])
 
-  const blogView = (typeof props.blogPost !== "undefined" ? props.blogPost : false);
-  const productsUrl = blogView ? `${siteUrl}/#solutions` : "#solutions";
-  const governanceUrl = blogView ? `${siteUrl}/#governance` : "#governance";
-  const safetyUrl = blogView ? `${siteUrl}/#protocol` : "#protocol";
-  const newsUrl = `${siteUrl}/blog`;
-  const faqUrl = "https://docs.cryptex.finance/faq";
-  const ecosystemUrl = blogView ? `${siteUrl}/#ecosystem` : "#ecosystem";
-
+  const blogView =
+    typeof props.blogPost !== "undefined" ? props.blogPost : false
+  const productsUrl = blogView ? `${siteUrl}/#solutions` : "#solutions"
+  const governanceUrl = blogView ? `${siteUrl}/#governance` : "#governance"
+  const safetyUrl = blogView ? `${siteUrl}/#protocol` : "#protocol"
+  const newsUrl = `${siteUrl}/blog`
+  const faqUrl = "https://docs.cryptex.finance/faq"
+  const ecosystemUrl = blogView ? `${siteUrl}/#ecosystem` : "#ecosystem"
 
   const NavMobile = () => {
     return (
-      <div className="nav-mobile">  
+      <div className="nav-mobile">
         <Navbar fixed="top" expand="lg md sm xl">
           <Navbar.Brand className="pl-5 ml-5" as={Link} to="/#home">
-             <img className="menu-logo mobile" src="/logom.svg" alt="Logo" /> 
-             <img className="menu-logo tablet" src="/logo.svg" alt="Logo" /> 
-            
+            <img className="menu-logo mobile" src="/logom.svg" alt="Logo" />
+            <img className="menu-logo tablet" src="/logo.svg" alt="Logo" />
+
             <div className="menu-logo-divider"></div>
           </Navbar.Brand>
-          <Navbar.Toggle aria-controls="responsive-navbar-nav" className="mobile_menu_bar" aria-hidden="true"/>
-          <Navbar.Collapse id="responsive-navbar-nav" className="justify-content-end">
-          <Nav className="nav-links">
-              <Nav.Link as={Link} to={productsUrl} className="nav-links" title="Products">
-                Solutions
+          <Navbar.Toggle
+            aria-controls="responsive-navbar-nav"
+            className="mobile_menu_bar"
+            aria-hidden="true"
+          />
+          <Navbar.Collapse
+            id="responsive-navbar-nav"
+            className="justify-content-end"
+          >
+            <Nav className="nav-links">
+              <Nav.Link
+                as={Link}
+                to={productsUrl}
+                className="nav-links"
+                title="Products"
+              >
+                Indexes
               </Nav.Link>
               <div className="nav-links-divisor"></div>
               <Nav.Link as={Link} to={governanceUrl} title="Governance">
@@ -59,7 +71,7 @@ const NavbarMenu = (props) => {
               </Nav.Link>
               <div className="nav-links-divisor"></div>
               <Nav.Link as={Link} to={ecosystemUrl} title="Ecosystem">
-                Ecosystem
+                Community
               </Nav.Link>
               <div className="nav-links-divisor"></div>
               <Nav.Link as={Link} to={newsUrl} title="News">
@@ -72,13 +84,23 @@ const NavbarMenu = (props) => {
                 target="_blank"
                 title="FAQ"
               >
-                FAQ
+                Wiki
               </Nav.Link>
             </Nav>
           </Navbar.Collapse>
         </Navbar>
-        <Navbar fixed="top" collapseOnSelect expand="sm" className="responsive-app-button">
-          <a href={appEndpoint} target="_blank" rel="noreferrer" className="button-navbar">
+        <Navbar
+          fixed="top"
+          collapseOnSelect
+          expand="sm"
+          className="responsive-app-button"
+        >
+          <a
+            href={appEndpoint}
+            target="_blank"
+            rel="noreferrer"
+            className="button-navbar"
+          >
             Go to App
           </a>
         </Navbar>
@@ -88,16 +110,28 @@ const NavbarMenu = (props) => {
 
   const NavDesktop = () => {
     return (
-      <div className="nav-default">  
+      <div className="nav-default">
         <Navbar fixed="top" collapseOnSelect expand="lg">
           <Navbar.Brand className="pl-5 ml-5" as={Link} to="/#home">
             <img className="menu-logo" src="/logo.svg" alt="Logo" />
           </Navbar.Brand>
-          <Navbar.Toggle aria-controls="responsive-navbar-nav" className="mobile_menu_bar" aria-hidden="true"/>
-          <Navbar.Collapse id="responsive-navbar-nav" className="justify-content-end">
+          <Navbar.Toggle
+            aria-controls="responsive-navbar-nav"
+            className="mobile_menu_bar"
+            aria-hidden="true"
+          />
+          <Navbar.Collapse
+            id="responsive-navbar-nav"
+            className="justify-content-end"
+          >
             <Nav className="nav-links">
-              <Nav.Link as={Link} to={productsUrl} className="nav-links" title="Products">
-                Solutions
+              <Nav.Link
+                as={Link}
+                to={productsUrl}
+                className="nav-links"
+                title="Products"
+              >
+                Indexes
               </Nav.Link>
               <Nav.Link as={Link} to={governanceUrl} title="CTX Governance">
                 Governance
@@ -106,7 +140,7 @@ const NavbarMenu = (props) => {
                 Protocol
               </Nav.Link>
               <Nav.Link as={Link} to={ecosystemUrl} title="Ecosystem">
-                Ecosystem
+                Community
               </Nav.Link>
               <Nav.Link as={Link} to={newsUrl} title="News">
                 Blog
@@ -117,10 +151,15 @@ const NavbarMenu = (props) => {
                 target="_blank"
                 title="FAQ"
               >
-                FAQ
+                Wiki
               </Nav.Link>
-              
-              <a href={appEndpoint} target="_blank" rel="noreferrer" className="button-navbar">
+
+              <a
+                href={appEndpoint}
+                target="_blank"
+                rel="noreferrer"
+                className="button-navbar"
+              >
                 Go to App
               </a>
             </Nav>
@@ -131,11 +170,11 @@ const NavbarMenu = (props) => {
   }
 
   return (
-    <>      
-      <NavMobile/>       
-      <NavDesktop/>                
+    <>
+      <NavMobile />
+      <NavDesktop />
     </>
   )
 }
 
-export default NavbarMenu;
+export default NavbarMenu

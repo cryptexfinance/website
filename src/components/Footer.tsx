@@ -68,7 +68,7 @@ const Footer = () => {
       <div className="footer-info">
         <img className="menu-logo" src="/logo.svg" alt="Logo" />
         <p className="subtitle">
-          Innovative, open-source DeFi solutions for the global crypto community.
+          Index Tokens For The Crypto and NFT Community
         </p>
         <div className="community">
           {socialIcons.map((socialIcon, index) => {
@@ -78,10 +78,10 @@ const Footer = () => {
       </div>
       <div className="footer-menu">
         <div className="links">
-          <a className="subtitle" href="/#solutions">Solutions</a>
+          <a className="subtitle" href="/#solutions">Indexes</a>
           <a className="subtitle" href="/#governance">Governance</a>
           <a className="subtitle" href="/#protocol">Protocol</a>
-          <a className="subtitle" href="/#ecosystem">Ecosystem</a>          
+          <a className="subtitle" href="/#ecosystem">Community</a>
         </div>
         <div className="links">
           <a className="subtitle" href="/blog">Blog</a>
@@ -99,7 +99,7 @@ const Footer = () => {
             target="_blank"
             className="subtitle"
           >
-            FAQ
+            Wiki
           </a>
           <a
             href="https://forum.cryptex.finance/"

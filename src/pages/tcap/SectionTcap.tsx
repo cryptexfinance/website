@@ -135,7 +135,7 @@ const SectionTcap = () => {
                   </span>
                   <span className="label label-mobile">
                     Total Crypto Market Cap.
-                  </span> 
+                  </span>
                 </div>
                 <div  className="vl-divider" />
                 <div className="price-box">

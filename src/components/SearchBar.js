@@ -1,18 +1,18 @@
-import React, { useState } from "react";
-import SearchInput from "./SearchInput";
-import SelectCryptex from "./Select";
+import React, { useState } from "react"
+import SearchInput from "./SearchInput"
+import SelectCryptex from "./Select"
 
 export const SearchBar = () => {
-  const [criteria, setCriteria] = useState("");
+  const [criteria, setCriteria] = useState("")
 
-  const handleOnChange = (event) => {
-    console.log(event.target.value);
-    setCriteria(event.target.value);
-  };
+  const handleOnChange = event => {
+    console.log(event.target.value)
+    setCriteria(event.target.value)
+  }
 
   const onSelectChange = (inputValue, { action }) => {
-    console.log(inputValue.value);
-  };
+    console.log(inputValue.value)
+  }
 
   const catergoryList = [
     { value: "crypto", label: "Crypto" },
@@ -35,6 +35,6 @@ export const SearchBar = () => {
         value={criteria}
         onChange={handleOnChange}
       />
-    </div>    
+    </div>
   )
-};
+}
