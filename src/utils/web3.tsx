@@ -14,7 +14,11 @@ export const getArbitrumProvider = () => {
     "https://arb1.arbitrum.io/rpc",
     "arbitrum"
   );*/
-  const provider = new ethers.providers.InfuraProvider('arbitrum', process.env.REACT_APP_INFURA_ID);
+  // const provider = new ethers.providers.InfuraProvider("arbitrum", process.env.REACT_APP_INFURA_ID);
+  
+  const provider = new ethers.providers.InfuraProvider("arbitrum", {
+    infura: process.env.REACT_APP_INFURA_ID,
+  });
 
   return provider;
 };

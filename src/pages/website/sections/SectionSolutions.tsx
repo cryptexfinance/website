@@ -39,11 +39,10 @@ const SectionProducts = () => {
       }
     };
     load();
+
     const loadArbitrum = async() => {
       if (arbSigner.ethcallProvider && arbContracts.jpegzOracleRead) {
-        console.log(arbContracts.jpegzOracleRead);
         const jpegzOraclePriceCall = await arbContracts.jpegzOracleRead?.getLatestAnswer();
-        console.log(jpegzOraclePriceCall);
         // @ts-ignore
         const [currentJpegzPrice] = await arbSigner.ethcallProvider?.all([jpegzOraclePriceCall]);
         const totalJpegzPrice = currentJpegzPrice.mul(100000000000);
@@ -53,12 +52,13 @@ const SectionProducts = () => {
       }
     }
     loadArbitrum();
+
     if (typeof (dataq.site) !== "undefined") {
       setSiteUrl(dataq.site.siteMetadata.siteUrl)
     } else {
       console.log("Error with props in team");
     }
-  }, [dataq]);
+  }, [signer.ethcallProvider, arbSigner.ethcallProvider]);
 
   /* const item = (product: ProductType) => (
     <a

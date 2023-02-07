@@ -76,11 +76,11 @@ const PageLayout = ({ children }) => {
       <Header />
       <arbContractsContext.Provider value={arbContracts}>
         <arbSignerContext.Provider value={arbSigner}>
-        <signerContext.Provider value={signer}>
-          <contractsContext.Provider value={contracts}>
-            {children}
-          </contractsContext.Provider>
-        </signerContext.Provider>
+          <signerContext.Provider value={signer}>
+            <contractsContext.Provider value={contracts}>
+              {children}
+            </contractsContext.Provider>
+          </signerContext.Provider>
         </arbSignerContext.Provider>
       </arbContractsContext.Provider>
       <Footer />
