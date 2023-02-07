@@ -1,10 +1,6 @@
 import React, { useContext, useEffect, useState } from "react";
 import { useStaticQuery, graphql } from "gatsby";
-import tcapImg from "../../../../static/website/solutions/tcap.png";
-import jpegzImg from "../../../../static/website/solutions/jpegz.png";
-import tcapIcon from "../../../../static/website/tcap.svg";
-import { contractsContext, signerContext } from "../../../context";
-import { FaCaretUp } from "react-icons/fa";
+import { contractsContext, signerContext, arbContractsContext, arbSignerContext  } from "../../../context";
 import { ethers } from "ethers";
 import { NumericFormat } from "react-number-format";
 
@@ -23,13 +19,17 @@ const SectionProducts = () => {
 
   const [tcapPrice, setTcapPrice] = useState("0.00");
   const [tcapTotalCap, setTcapTotalCap] = useState("0.00");
+  const [jpegzPrice, setJpegzPrice] = useState("0.00");
+  const [jpegzTotalCap, setJpegzTotalCap] = useState("0.00");
   const contracts = useContext(contractsContext);
+  const arbContracts = useContext(arbContractsContext);
+  const arbSigner = useContext(arbSignerContext);
   const signer = useContext(signerContext);
 
   useEffect(() => {
     const load = async () => {
       if (signer.ethcallProvider && contracts.tcapOracleRead) {
-        const tcapOraclePriceCall = await contracts.tcapOracleRead?.getLatestAnswer();;
+        const tcapOraclePriceCall = await contracts.tcapOracleRead?.getLatestAnswer();
         // @ts-ignore
         const [currentTcapPrice] = await signer.ethcallProvider?.all([tcapOraclePriceCall]);
         const totalTcapPrice = currentTcapPrice.mul(10000000000);
@@ -39,6 +39,20 @@ const SectionProducts = () => {
       }
     };
     load();
+    const loadArbitrum = async() => {
+      if (arbSigner.ethcallProvider && arbContracts.jpegzOracleRead) {
+        console.log(arbContracts.jpegzOracleRead);
+        const jpegzOraclePriceCall = await arbContracts.jpegzOracleRead?.getLatestAnswer();
+        console.log(jpegzOraclePriceCall);
+        // @ts-ignore
+        const [currentJpegzPrice] = await arbSigner.ethcallProvider?.all([jpegzOraclePriceCall]);
+        const totalJpegzPrice = currentJpegzPrice.mul(100000000000);
+        const jPrice = ethers.utils.formatEther(currentJpegzPrice.mul(10));
+        setJpegzPrice(jPrice);
+        setJpegzTotalCap(ethers.utils.formatEther(totalJpegzPrice));
+      }
+    }
+    loadArbitrum();
     if (typeof (dataq.site) !== "undefined") {
       setSiteUrl(dataq.site.siteMetadata.siteUrl)
     } else {
@@ -84,8 +98,7 @@ const SectionProducts = () => {
         Index Tokens
       </h1>
       <div className="solutions">
-        <a
-          href="#"
+        <div
           className="box box-button-unclickable solutions-item section-bg-tcap"
         >
           <div className="solutions-info">
@@ -142,7 +155,7 @@ const SectionProducts = () => {
               Swap on Uniswap
             </a>
           </div>
-        </a>
+        </div>
         <div className="box box-button-unclickable solutions-item section-bg-jpegz">
           <div className="solutions-info">
             <h2 className="heading-secondary">
@@ -155,7 +168,7 @@ const SectionProducts = () => {
               <span className="number-blue">
               <NumericFormat
                     className="number-blue"
-                    value='0.00'
+                    value={jpegzTotalCap}
                     displayType="text"
                     thousandSeparator
                     prefix="$"
@@ -169,7 +182,7 @@ const SectionProducts = () => {
               <span className="number-blue">
               <NumericFormat
                       className="number-blue"
-                      value='0.00'
+                      value={jpegzPrice}
                       displayType="text"
                       thousandSeparator
                       prefix="$"
