@@ -109,37 +109,39 @@ const SectionProducts = () => {
 
             <div className="clearfix"></div>
             <p className="subtitle">
-              Real time exposure to total crypto market capitalization.
+              Real time exposure to total crypto market capitalization.{" "}
               <a className="learn-more-link" href="https://cryptexfinance.notion.site/TCAP-e6a4ab3556254b52ad9b88319daa581e">Learn More.</a>
             </p>
-            <p className="subtitle">
-              <span className="number-blue">
-              <NumericFormat
-                className="number-blue"
-                value={tcapTotalCap}
-                displayType="text"
-                thousandSeparator
-                prefix="$"
-                decimalScale={0}
-              />
-              </span>
-              <br></br>
-              Total Crypto Market Cap.
-            </p>
-            <p className="subtitle">
-              <span className="number-blue">
-              <NumericFormat
-                className="number-blue"
-                value={tcapPrice}
-                displayType="text"
-                thousandSeparator
-                prefix="$"
-                decimalScale={2}
-              />
-              </span>
-              <br></br>
-              TCAP Price
-            </p>
+            <div className="index-prices">
+              <p className="subtitle">
+                <span className="number-blue">
+                <NumericFormat
+                  className="number-blue"
+                  value={tcapTotalCap}
+                  displayType="text"
+                  thousandSeparator
+                  prefix="$"
+                  decimalScale={0}
+                />
+                </span>
+                <br></br>
+                Total Crypto Market Cap.
+              </p>
+              <p className="subtitle">
+                <span className="number-blue">
+                <NumericFormat
+                  className="number-blue"
+                  value={tcapPrice}
+                  displayType="text"
+                  thousandSeparator
+                  prefix="$"
+                  decimalScale={2}
+                />
+                </span>
+                <br></br>
+                TCAP Price
+              </p>
+            </div>  
           </div>
           <div className="solutions-link inline-helper">
           <a
@@ -163,37 +165,39 @@ const SectionProducts = () => {
               JPEGz
             </h2>
             <p className="subtitle">
-              Real time exposure to NFT market capitalization.
+              Real time exposure to NFT market capitalization.{" "}
               <a className="learn-more-link" href="https://cryptexfinance.notion.site/JPEGz-d69c8df153ee4795b1fd728ef6daba5d">Learn More.</a>
             </p>
-            <p className="subtitle">
+            <div className="index-prices">
+              <p className="subtitle">
+                <span className="number-blue">
+                <NumericFormat
+                  className="number-blue"
+                  value={jpegzTotalCap}
+                  displayType="text"
+                  thousandSeparator
+                  prefix="$"
+                  decimalScale={0}
+                />
+                </span>
+                <br></br>
+                Total NFT Market Cap.
+              </p>
+              <p className="subtitle">
               <span className="number-blue">
-              <NumericFormat
-                className="number-blue"
-                value={jpegzTotalCap}
-                displayType="text"
-                thousandSeparator
-                prefix="$"
-                decimalScale={0}
-              />
-              </span>
-              <br></br>
-              Total NFT Market Cap.
-            </p>
-            <p className="subtitle">
-              <span className="number-blue">
-              <NumericFormat
-                className="number-blue"
-                value={jpegzPrice}
-                displayType="text"
-                thousandSeparator
-                prefix="$"
-                decimalScale={2}
-              />
-              </span>
-              <br></br>
-              JPEGz Price
-            </p>
+                <NumericFormat
+                  className="number-blue"
+                  value={jpegzPrice}
+                  displayType="text"
+                  thousandSeparator
+                  prefix="$"
+                  decimalScale={2}
+                />
+                </span>
+                <br></br>
+                JPEGz Price
+              </p>
+            </div>  
           </div>
           <div className="solutions-link inline-helper">
           <a
