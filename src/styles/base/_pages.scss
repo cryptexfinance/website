@@ -143,11 +143,6 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    /* .solution-img {
-      width: 25rem;
-      height: 14.06rem;
-      border-radius: 5px;
-    } */
   }
   .inline-helper{
     display: flex;
@@ -219,6 +214,9 @@ body {
       .subtitle {
         margin-top: 1rem;
       }
+    }
+    .index-prices {
+      margin-top: 2rem;
     }
     &-link {
       display: flex;
