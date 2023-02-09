@@ -151,7 +151,7 @@ const SectionProducts = () => {
                 >Mint TCAP</a>
             <a
               className="swap-button-outline pull-right same-size-button"
-              href="https://app.uniswap.org/#/swap?exactField=input&outputCurrency=0x16c52CeeCE2ed57dAd87319D91B5e3637d50aFa4"
+              href="https://app.uniswap.org/#/tokens/ethereum/0x16c52CeeCE2ed57dAd87319D91B5e3637d50aFa4"
               rel="noreferrer"
               target={"_blank"}
             >
