@@ -32,6 +32,7 @@ const NavbarMenu = props => {
   const newsUrl = `${siteUrl}/blog`
   const faqUrl = "https://cryptexfinance.notion.site/Cryptex-Finance-Wiki-9f29021042df4da6b6887553a879d691"
   const ecosystemUrl = blogView ? `${siteUrl}/#community` : "#community"
+  const docsUrl = "https://docs.cryptex.finance/"
 
   const NavMobile = () => {
     return (
@@ -76,6 +77,10 @@ const NavbarMenu = props => {
               <div className="nav-links-divisor"></div>
               <Nav.Link as={Link} to={newsUrl} title="News">
                 Blog
+              </Nav.Link>
+              <div className="nav-links-divisor"></div>
+              <Nav.Link as={Link} to={docsUrl} title="Docs">
+                Docs
               </Nav.Link>
               <div className="nav-links-divisor"></div>
               <Nav.Link
@@ -144,6 +149,9 @@ const NavbarMenu = props => {
               </Nav.Link>
               <Nav.Link as={Link} to={newsUrl} title="News">
                 Blog
+              </Nav.Link>
+              <Nav.Link as={Link} to={docsUrl} title="Docs">
+                Docs
               </Nav.Link>
               <Nav.Link
                 href={faqUrl}
