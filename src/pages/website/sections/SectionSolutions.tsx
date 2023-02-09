@@ -155,7 +155,7 @@ const SectionProducts = () => {
               rel="noreferrer"
               target={"_blank"}
             >
-              Swap on Uniswap
+              Swap TCAP
             </a>
           </div>
         </div>
@@ -197,7 +197,7 @@ const SectionProducts = () => {
                 <br></br>
                 JPEGz Price
               </p>
-            </div>  
+            </div>
           </div>
           <div className="solutions-link inline-helper">
           <a
@@ -207,7 +207,7 @@ const SectionProducts = () => {
                 >Mint JPEGz</a>
             <a
               className="swap-button-outline pull-right same-size-button"
-              href="#"
+              href="https://app.uniswap.org/#/tokens/arbitrum/0xD5536c80191c624F6bFD5590A45b9E93B16DEA97"
               rel="noreferrer"
               target={"_blank"}
             >
