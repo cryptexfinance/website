@@ -10,7 +10,7 @@ tags:
   - TCAP
   - REWARDS
 ---
-Today, 2/21, TCAP rewards have been extended.   
+Today, 2/21, TCAP rewards have been extended. 
 
 10,000 CTX have been added to the TCAP Uniswap v3 pool for the next 3 months. \
 \
