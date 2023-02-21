@@ -16,6 +16,6 @@ Today, 2/21, TCAP rewards have been extended.
 \
 This extension comes from the core contributor multi-sig earmarked since genesis for such rewards and not from the Cryptex DAO treasury, which remains locked and only accessible via the passing of on-chain votes by the community and its protocol delegates. \
 \
-Voting CTX is currently at 940,783 CTX governance delegations for proposals and on-chain voting.\
+940,783 CTX governance tokens are currently delegated for proposals and on-chain voting. \
 \
 Source: [https://dune.com/queries/405373/774460](https://dune.com/queries/405373/774460 "https\://dune.com/queries/405373/774460")
