@@ -49,6 +49,8 @@ Crypto tokens often serve as a means of voting on aspects that will shape the fu
 
 [TCAP:](https://cryptex.finance/) Crypto index token and provides holders with real-time exposure to the cryptocurrency market cap. TCAP is available to be minted on the [Cryptex app](https://app.cryptex.finance/vaults), swappable on [Uniswap](https://app.uniswap.org/#/tokens/ethereum/0x16c52CeeCE2ed57dAd87319D91B5e3637d50aFa4) and [Sushiswap, and a](https://www.sushi.com/swap)vailable for custody on [Gemini](https://www.gemini.com/custody#).
 
+
+
 [JPEGz](https://cryptex.finance/): the first NFT Index Token that gives users broad exposure to the NFT market. JPEGz is available to be minted on the [Cryptex app](https://app.cryptex.finance/vaults) and swappable on [Uniswap](https://app.uniswap.org/#/tokens/arbitrum/0xD5536c80191c624F6bFD5590A45b9E93B16DEA97) on Arbitrum.
 
 ### Are crypto tokens the same as coins?
@@ -92,10 +94,6 @@ Tokens that are designed to be mined, however, will typically use processes like
 Crypto tokens and coins are two distinct types of cryptocurrencies that have different values and functions within the cryptocurrency ecosystem. Tokens, which are typically issued by a platform or network, can represent anything from physical assets to digital services, while coins are decentralized forms of currency with their own blockchains.
 
 Tokens and coins can both be found on exchanges, and some tokens may even become coins in the future. Tokens are also essential for fostering growth within various blockchains, and they incentivize users to participate in the network. Despite their differences, tokens and coins are both integral parts of the cryptocurrency ecosystem.
-
-
-
-
 
 Connect with us on our [website](https://cryptex.finance/), [Telegram](https://t.me/cryptexfinance), [Twitter](https://twitter.com/cryptexfinance) and [Discord](https://discord.gg/cryptex)!
 
