@@ -1,15 +1,8 @@
 import React from "react";
-import quanstamp from "../../../../static/website/protocol/quantstamp.svg";
-import weth from "../../../../static/website/protocol/weth.svg";
-import dework from "../../../../static/website/protocol/dework.svg";
-import chainlink from "../../../../static/website/protocol/chainlink.svg";
 import twitterLogo from "../../../../static/website/protocol/twitter-logo.svg";
 import discordLogo from "../../../../static/website/protocol/discord-logo.svg";
 import telegramLogo from "../../../../static/website/protocol/telegram-logo.svg";
 import mailLogo from "../../../../static/website/protocol/mail.svg";
-import { FaArrowRight } from "react-icons/fa";
-import sewagFruit from "../../../../static/website/ecosystem/sewage-fruit.png";
-
 
 
 type SafetyType = {
