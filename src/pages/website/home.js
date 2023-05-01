@@ -13,9 +13,8 @@ const Home = data => {
       <main>
         <SectionMain />
         <SectionSolutions />
-        <SectionGovernance />
         <SectionProtocol />
-        <SectionNewEcosystem />
+        <SectionGovernance />
       </main>
     </>
   )

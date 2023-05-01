@@ -41,7 +41,6 @@ const NavbarMenu = props => {
           <Navbar.Brand className="pl-5 ml-5" as={Link} to="/#home">
             <img className="menu-logo mobile" src="/logom.svg" alt="Logo" />
             <img className="menu-logo tablet" src="/logo.svg" alt="Logo" />
-
             <div className="menu-logo-divider"></div>
           </Navbar.Brand>
           <Navbar.Toggle
@@ -60,54 +59,27 @@ const NavbarMenu = props => {
                 className="nav-links"
                 title="Products"
               >
-                Indexes
-              </Nav.Link>
-              <div className="nav-links-divisor"></div>
-              <Nav.Link as={Link} to={governanceUrl} title="Governance">
-                Governance
+                Markets
               </Nav.Link>
               <div className="nav-links-divisor"></div>
               <Nav.Link as={Link} to={safetyUrl} title="Safety">
                 Protocol
               </Nav.Link>
               <div className="nav-links-divisor"></div>
-              <Nav.Link as={Link} to={ecosystemUrl} title="Community">
-                Community
-              </Nav.Link>
-              <div className="nav-links-divisor"></div>
-              <Nav.Link as={Link} to={newsUrl} title="News">
-                Blog
-              </Nav.Link>
-              <div className="nav-links-divisor"></div>
-              <Nav.Link as={Link} to={docsUrl} title="Docs">
-                Docs
+              <Nav.Link as={Link} to={governanceUrl} title="Governance">
+                Governance
               </Nav.Link>
               <div className="nav-links-divisor"></div>
               <Nav.Link
-                href={faqUrl}
+                href={appEndpoint}
                 rel="noreferrer"
                 target="_blank"
                 title="FAQ"
               >
-                Wiki
+                Trade
               </Nav.Link>
             </Nav>
           </Navbar.Collapse>
-        </Navbar>
-        <Navbar
-          fixed="top"
-          collapseOnSelect
-          expand="sm"
-          className="responsive-app-button"
-        >
-          <a
-            href={appEndpoint}
-            target="_blank"
-            rel="noreferrer"
-            className="button-navbar"
-          >
-            Go to App
-          </a>
         </Navbar>
       </div>
     )
@@ -136,40 +108,17 @@ const NavbarMenu = props => {
                 className="nav-links"
                 title="Products"
               >
-                Indexes
-              </Nav.Link>
-              <Nav.Link as={Link} to={governanceUrl} title="CTX Governance">
-                Governance
+                Markets
               </Nav.Link>
               <Nav.Link as={Link} to={safetyUrl} title="Safety">
                 Protocol
               </Nav.Link>
-              <Nav.Link as={Link} to={ecosystemUrl} title="Ecosystem">
-                Community
+              <Nav.Link as={Link} to={governanceUrl} title="CTX Governance">
+                Governance
+              </Nav.Link>            
+              <Nav.Link as={Link} to={appEndpoint} title="Trade">
+              Trade
               </Nav.Link>
-              <Nav.Link as={Link} to={newsUrl} title="News">
-                Blog
-              </Nav.Link>
-              <Nav.Link as={Link} to={docsUrl} title="Docs">
-                Docs
-              </Nav.Link>
-              <Nav.Link
-                href={faqUrl}
-                rel="noreferrer"
-                target="_blank"
-                title="FAQ"
-              >
-                Wiki
-              </Nav.Link>
-
-              <a
-                href={appEndpoint}
-                target="_blank"
-                rel="noreferrer"
-                className="button-navbar"
-              >
-                Go to App
-              </a>
             </Nav>
           </Navbar.Collapse>
         </Navbar>

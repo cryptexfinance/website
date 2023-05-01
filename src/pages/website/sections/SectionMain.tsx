@@ -22,11 +22,11 @@ const SectionMain = () => (
       <div className="main-info">
         <div className="main-title">
           <h1>
-            Cryptex Finance
+            This Copy Will Change
           </h1>
         </div>
         <p className="home-subheader">
-          Index Tokens For The Crypto and NFT Community
+          This Copy Will Change
         </p>
       </div>
       <div className="main-buttons">
@@ -35,10 +35,10 @@ const SectionMain = () => (
             <a
               href={appEndpoint}
               rel="noopener noreferrer"
-              className="button-green main-button main-button-link"
+              className="button-outlined-purple main-button main-button-link"
               target="_blank"
             >
-              Go to App
+              Trade
             </a>
           </div>
           <div className="">
@@ -47,7 +47,7 @@ const SectionMain = () => (
               rel="noopener noreferrer"
               className="button-outlined-purple main-button"
             >
-              Go to Wiki
+              Provide
             </a>
           </div>
         </Col>

@@ -29,6 +29,9 @@
   &:focus {
     outline: none !important;
   }
+  &:hover{
+    background-color: $color-primary-purple;
+  }
 }
 
 .button-dark, .btn-secondary {

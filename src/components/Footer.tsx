@@ -4,6 +4,8 @@ import discord from "../../static/website/ecosystem/discord.svg";
 import telegram from "../../static/website/ecosystem/telegram.svg";
 import youtube from "../../static/website/ecosystem/youtube.svg";
 import medium from "../../static/website/ecosystem/medium.svg";
+import mailLogo from "../../static/website/protocol/mail.svg";
+
 
 type IconType = {
   href: string;
@@ -42,6 +44,12 @@ const socialIcons = [
     icon: medium,
     alt: "Medium Logo",
     class: "medium",
+  },
+  {
+    href: "https://cryptex.substack.com/",
+    icon: mailLogo,
+    alt: "Newsletter",
+    class: "",
   }
 ]
 
@@ -68,7 +76,7 @@ const Footer = () => {
       <div className="footer-info">
         <img className="menu-logo" src="/logo.svg" alt="Logo" />
         <p className="subtitle">
-          Index Tokens For The Crypto and NFT Community
+          This copy will change.
         </p>
         <div className="community">
           {socialIcons.map((socialIcon, index) => {
@@ -78,10 +86,9 @@ const Footer = () => {
       </div>
       <div className="footer-menu">
         <div className="links">
-          <a className="subtitle" href="/#solutions">Indexes</a>
-          <a className="subtitle" href="/#governance">Governance</a>
+          <a className="subtitle" href="/#solutions">Markets</a>
           <a className="subtitle" href="/#protocol">Protocol</a>
-          <a className="subtitle" href="/#ecosystem">Community</a>
+          <a className="subtitle" href="/#governance">Governance</a>
         </div>
         <div className="links">
           <a className="subtitle" href="/blog">Blog</a>

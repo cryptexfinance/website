@@ -74,10 +74,7 @@
     position: fixed;
     width: 140px;
     margin-left: auto;
-    background: $color-navbar-button;
-    border: 1px solid $color-primary-pink;
-    box-sizing: border-box;
-    box-shadow: 0px 10px 49px -10px $shadow-navbar-button;
+    background: transparent;
     padding-left: 30px;
   }
 
@@ -102,8 +99,8 @@
 
   .navbar-toggler,
   .navbar-toggler-icon {
-    position: relative;
-    left: -190px;
+    margin-right: auto;
+    margin-left: auto;
   }
 
   .responsive-navbar-nav {

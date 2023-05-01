@@ -95,7 +95,7 @@ const SectionProducts = () => {
   return (
     <div id="solutions" className="section-solutions">
       <h1 className="header">
-        Index Tokens
+        Markets
       </h1>
       <div className="solutions">
         <div
@@ -109,7 +109,7 @@ const SectionProducts = () => {
 
             <div className="clearfix"></div>
             <p className="subtitle">
-              Real time exposure to total crypto market capitalization.{" "}
+              This copy needs to be updated.{" "}
               <a className="learn-more-link" href="https://cryptexfinance.notion.site/TCAP-e6a4ab3556254b52ad9b88319daa581e">Learn More.</a>
             </p>
             <div className="index-prices">
@@ -145,17 +145,17 @@ const SectionProducts = () => {
           </div>
           <div className="solutions-link inline-helper">
           <a
-                className="swap-button same-size-button"
+                className="button-outlined-purple main-button same-size-button"
                 target={"_blank"}
                 href="https://app.cryptex.finance/vaults"
-                >Mint TCAP</a>
+                >Trade</a>
             <a
-              className="swap-button-outline pull-right same-size-button"
+              className="button-outlined-purple main-button pull-right same-size-button"
               href="https://app.uniswap.org/#/tokens/ethereum/0x16c52CeeCE2ed57dAd87319D91B5e3637d50aFa4"
               rel="noreferrer"
               target={"_blank"}
             >
-              Swap TCAP
+              Provide
             </a>
           </div>
         </div>
@@ -165,7 +165,7 @@ const SectionProducts = () => {
               JPEGz
             </h2>
             <p className="subtitle">
-              Real time exposure to NFT market capitalization.{" "}
+              This copy needs to be updated.{" "}
               <a className="learn-more-link" href="https://cryptexfinance.notion.site/JPEGz-d69c8df153ee4795b1fd728ef6daba5d">Learn More.</a>
             </p>
             <div className="index-prices">
@@ -201,17 +201,17 @@ const SectionProducts = () => {
           </div>
           <div className="solutions-link inline-helper">
           <a
-                className="swap-button same-size-button"
+                className="button-outlined-purple main-button same-size-button"
                 target={"_blank"}
                 href="https://app.cryptex.finance/vaults"
-                >Mint JPEGz</a>
+                >Trade</a>
             <a
-              className="swap-button-outline pull-right same-size-button"
+              className="button-outlined-purple main-button pull-right same-size-button"
               href="https://app.uniswap.org/#/tokens/arbitrum/0xD5536c80191c624F6bFD5590A45b9E93B16DEA97"
               rel="noreferrer"
               target={"_blank"}
             >
-              Swap on Uniswap
+              Provide
             </a>
           </div>
           </div>
