@@ -15,29 +15,25 @@ type SafetyType = {
 const safetyItems = [
   {
     id: "audit",
-    title: "Audit",
-    subtitle: "Review our audits.",
+    title: "Unique Perpetual Markets.",
     link: "https://docs.cryptex.finance/audits",
     logo: quanstamp,
   },
   {
     id: "collateral",
-    title: "Collateral",
-    subtitle: "Check out the vault monitoring tool.",
+    title: "Low Latency Price Feeds.",
     link: "https://app.cryptex.finance/vault-monitoring",
-    logo: weth,
+    logo: chainlink,
   },
   {
     id: "bounty",
-    title: "Bounties",
-    subtitle: "Explore all opportunities.",
+    title: "Powerful trading for makers & takers.",
     link: "https://app.dework.xyz/cryptex-finance",
     logo: dework,
   },
   {
     id: "oracles",
-    title: "Oracles",
-    subtitle: "Review Chainlink oracles.",
+    title: "Available on DeFi’s preferred network.",
     link: "https://docs.cryptex.finance/tcap#oracles",
     logo: chainlink,
   }
@@ -50,15 +46,12 @@ const SectionSafety = () => {
       href={feature.link}
       rel="noreferrer"
       target="_blank"
-      className="box box-button item"
+      className="box box-button-permanent-hover item"
     >
       <div className="items-info">
         <h2 className="terciary-header">
           {feature.title}
         </h2>
-        <p className="subtitle">
-          {feature.subtitle}
-        </p>
         <div className="items-logo-container">
           <img
             src={feature.logo}
@@ -73,7 +66,7 @@ const SectionSafety = () => {
   return (
     <div id="protocol" className="section-protocol">
       <h1 className="header">
-        Protocol
+        Why Cryptex
       </h1>
       <div className="items">
         {safetyItems.map((sItem) => {

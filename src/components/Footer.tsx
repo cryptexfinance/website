@@ -76,7 +76,7 @@ const Footer = () => {
       <div className="footer-info">
         <img className="menu-logo" src="/logo.svg" alt="Logo" />
         <p className="subtitle">
-          This copy will change.
+          Decentralized platform providing cutting edge perpetuals.
         </p>
         <div className="community">
           {socialIcons.map((socialIcon, index) => {
@@ -89,6 +89,7 @@ const Footer = () => {
           <a className="subtitle" href="/#solutions">Markets</a>
           <a className="subtitle" href="/#protocol">Protocol</a>
           <a className="subtitle" href="/#governance">Governance</a>
+          <a className="subtitle" href="#">V1</a>
         </div>
         <div className="links">
           <a className="subtitle" href="/blog">Blog</a>

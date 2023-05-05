@@ -2,7 +2,7 @@ import React from "react";
 import Col from "react-bootstrap/esm/Col";
 import appEndpoint from "../../../endpoint";
 import bgvideo from "../../../../static/bg_main.mp4";
-import bgvideowebm from "../../../../static/bg_main.webm";
+import cryptexTitle from '../../../../static/website/home/cryptex_finance_v2.png'
 
 const SectionMain = () => (
   <div className="section-main">
@@ -15,18 +15,17 @@ const SectionMain = () => (
       className="video"
       id="bgvid"
     >
-      <source src={bgvideowebm} type="video/webm" />
       <source src={bgvideo} type="video/mp4" />
     </video>
     <div className="main-container">
       <div className="main-info">
         <div className="main-title">
           <h1>
-            This Copy Will Change
+            <img src={cryptexTitle} alt="Cryptex Finance" className="main-title-image" />
           </h1>
         </div>
         <p className="home-subheader">
-          This Copy Will Change
+          Total crypto market cap with <span className="neon-green">up to 20x leverage</span>
         </p>
       </div>
       <div className="main-buttons">

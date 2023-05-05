@@ -108,14 +108,21 @@ body {
 }
 
 .section-bg-jpegz {
-  background-image: linear-gradient( rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75) ), url('../../static/website/indexes/jpegz.jpg');
+  background-image: linear-gradient( rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75) ), url('../../static/website/indexes/JPEGz_Box.png');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
 }
 
+.ml-auto{
+  margin-left: auto !important;
+} 
+.mr-auto{
+  margin-right: auto !important;
+}
+
 .section-bg-tcap {
-  background-image: linear-gradient( rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75) ), url('../../static/website/indexes/tcap.jpg');
+  background-image: linear-gradient( rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75) ), url('../../static/website/indexes/TCAP_Box.png');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -223,6 +230,16 @@ body {
       justify-content: flex-end;
     }
   }
+}
+
+.button-hover-transparent{
+  height: 3.5rem !important;
+  font-size: 1.2rem !important;
+  padding-top: 1rem !important;
+}
+
+.button-hover-transparent:hover{
+  color: white !important;
 }
 
 .section-governance {

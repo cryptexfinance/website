@@ -209,7 +209,7 @@ const SectionGovernance = () => {
   return (
     <div id="governance" className="section-governance">
       <h1 className="header">
-        Decentralized Governance
+        CTX: Decentralized Protocol Governance
       </h1>
       <div className="governance-content">
         <div className="box governance-main">

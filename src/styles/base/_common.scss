@@ -96,6 +96,10 @@ h3, .terciary-header {
   }
 }
 
+.neon-green{
+  color: #20F433
+}
+
 .subtitle {
   font-family: $font-tertiary;
   font-style: normal;
@@ -301,6 +305,14 @@ h3, .terciary-header {
   @media (max-width: 600px) {
     margin: 0px;
     padding: 5rem;
+  }
+}
+
+.box-button-permanent-hover{
+  text-decoration: none;
+  box-shadow: 0px 0px 12px 3px $shadow-purple-neon;
+  &:hover{
+    cursor: default;
   }
 }
 

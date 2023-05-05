@@ -50,7 +50,7 @@ const NavbarMenu = props => {
           />
           <Navbar.Collapse
             id="responsive-navbar-nav"
-            className="justify-content-end"
+            className="justify-content-start"
           >
             <Nav className="nav-links">
               <Nav.Link
@@ -63,21 +63,13 @@ const NavbarMenu = props => {
               </Nav.Link>
               <div className="nav-links-divisor"></div>
               <Nav.Link as={Link} to={safetyUrl} title="Safety">
-                Protocol
+                Why Cryptex
               </Nav.Link>
               <div className="nav-links-divisor"></div>
               <Nav.Link as={Link} to={governanceUrl} title="Governance">
                 Governance
               </Nav.Link>
               <div className="nav-links-divisor"></div>
-              <Nav.Link
-                href={appEndpoint}
-                rel="noreferrer"
-                target="_blank"
-                title="FAQ"
-              >
-                Trade
-              </Nav.Link>
             </Nav>
           </Navbar.Collapse>
         </Navbar>
@@ -89,7 +81,7 @@ const NavbarMenu = props => {
     return (
       <div className="nav-default">
         <Navbar fixed="top" collapseOnSelect expand="lg">
-          <Navbar.Brand className="pl-5 ml-5" as={Link} to="/#home">
+          <Navbar.Brand className="pl-3 ml-3" as={Link} to="/#home">
             <img className="menu-logo" src="/logo.svg" alt="Logo" />
           </Navbar.Brand>
           <Navbar.Toggle
@@ -99,7 +91,7 @@ const NavbarMenu = props => {
           />
           <Navbar.Collapse
             id="responsive-navbar-nav"
-            className="justify-content-end"
+            className="justify-content-start"
           >
             <Nav className="nav-links">
               <Nav.Link
@@ -110,17 +102,24 @@ const NavbarMenu = props => {
               >
                 Markets
               </Nav.Link>
-              <Nav.Link as={Link} to={safetyUrl} title="Safety">
-                Protocol
-              </Nav.Link>
               <Nav.Link as={Link} to={governanceUrl} title="CTX Governance">
                 Governance
-              </Nav.Link>            
-              <Nav.Link as={Link} to={appEndpoint} title="Trade">
-              Trade
               </Nav.Link>
+              <Nav.Link as={Link} to={safetyUrl} title="Safety">
+                Why Cryptex
+              </Nav.Link>
+              
+                      
             </Nav>
           </Navbar.Collapse>
+          <a
+                href={appEndpoint}
+                target="_blank"
+                rel="noreferrer"
+                className="btn button-navbar"
+              >
+                Launch App
+              </a>    
         </Navbar>
       </div>
     )

@@ -3,8 +3,7 @@ import SectionMain from "./sections/SectionMain"
 import SectionSolutions from "./sections/SectionSolutions"
 import SectionGovernance from "./sections/SectionGovernance"
 import SectionProtocol from "./sections/SectionProtocol"
-import SectionEcosystem from "./sections/SectionEcosystem"
-import SectionNewEcosystem from "./sections/SectionNewEcosystem"
+
 
 const Home = data => {
   return (
@@ -13,8 +12,8 @@ const Home = data => {
       <main>
         <SectionMain />
         <SectionSolutions />
-        <SectionProtocol />
         <SectionGovernance />
+        <SectionProtocol />
       </main>
     </>
   )
