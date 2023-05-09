@@ -35,22 +35,22 @@ const customStyles = {
       ? COLORS.SHADOW_PURPLE_NEON
       : COLORS.BACKGROUND_BOXES,
     padding: 10,
-    fontFamily: "Space Mono",
+    fontFamily: "Helvetica Neue",
   }),
   input: (provided, state) => ({
     ...provided,
     color: COLORS.GREY_LIGHT,
-    fontFamily: "Space Mono",
+    fontFamily: "Helvetica Neue",
   }),
   placeholder: (provided, state) => ({
     ...provided,
     color: COLORS.GREY_LIGHT,
-    fontFamily: "Space Mono",
+    fontFamily: "Helvetica Neue",
   }),
   singleValue: (provided, state) => ({
     ...provided,
     color: COLORS.GREY_LIGHT,
-    fontFamily: "Space Mono",
+    fontFamily: "Helvetica Neue",
   }),
 }
 

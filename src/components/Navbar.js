@@ -116,7 +116,7 @@ const NavbarMenu = props => {
                 href={appEndpoint}
                 target="_blank"
                 rel="noreferrer"
-                className="btn button-navbar"
+                className="btn button-navbar helvetica-neue-font"
               >
                 Launch App
               </a>    

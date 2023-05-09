@@ -232,6 +232,16 @@ body {
   }
 }
 
+.space-mono-font{
+  font-family: 'Helvetica Neue' !important;
+  font-weight: bold !important;
+}
+
+.helvetica-neue-font{
+  font-family: 'Helvetica Neue' !important;
+  font-weight: bold !important;
+}
+
 .button-hover-transparent{
   height: 3.5rem !important;
   font-size: 1.2rem !important;
@@ -618,7 +628,7 @@ body {
     }
     .subtitle {
       text-decoration: none;
-      margin: 10px 1px;
+      margin: 5px 1px;
       transition: transform 0.2s;
       transition-timing-function: linear;
 
@@ -692,4 +702,25 @@ body {
   .footer {
     height: 20rem;  
   }
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #7D0785;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #F00DFF;
+  border-radius: 1rem;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
 }

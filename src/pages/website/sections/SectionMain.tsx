@@ -25,7 +25,7 @@ const SectionMain = () => (
           </h1>
         </div>
         <p className="home-subheader">
-          Total crypto market cap with <span className="neon-green">up to 20x leverage</span>
+          Total Crypto Market Cap with <span className="neon-green">up to 20x Leverage</span>
         </p>
       </div>
       <div className="main-buttons">

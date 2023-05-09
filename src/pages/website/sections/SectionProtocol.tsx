@@ -1,8 +1,8 @@
 import React from "react";
-import quanstamp from "../../../../static/website/protocol/quantstamp.svg";
-import weth from "../../../../static/website/protocol/weth.svg";
-import dework from "../../../../static/website/protocol/dework.svg";
 import chainlink from "../../../../static/website/protocol/chainlink.svg";
+import cryptex from "../../../../static/website/protocol/cryptex.svg";
+import arbitrum from "../../../../static/website/protocol/arbitrum.svg";
+import perennial from "../../../../static/website/protocol/perennial.svg";
 
 type SafetyType = {
   id: string;
@@ -16,26 +16,22 @@ const safetyItems = [
   {
     id: "audit",
     title: "Unique Perpetual Markets.",
-    link: "https://docs.cryptex.finance/audits",
-    logo: quanstamp,
+    logo: cryptex,
   },
   {
     id: "collateral",
-    title: "Low Latency Price Feeds.",
-    link: "https://app.cryptex.finance/vault-monitoring",
+    title: "Low Latency Price Feeds at 0.5%",
     logo: chainlink,
   },
   {
     id: "bounty",
     title: "Powerful trading for makers & takers.",
-    link: "https://app.dework.xyz/cryptex-finance",
-    logo: dework,
+    logo: perennial,
   },
   {
     id: "oracles",
     title: "Available on DeFi’s preferred network.",
-    link: "https://docs.cryptex.finance/tcap#oracles",
-    logo: chainlink,
+    logo: arbitrum,
   }
 ]
 
@@ -43,13 +39,12 @@ const SectionSafety = () => {
   const item = (feature: SafetyType) => (
     <a
       key={feature.id}
-      href={feature.link}
       rel="noreferrer"
       target="_blank"
       className="box box-button-permanent-hover item"
     >
       <div className="items-info">
-        <h2 className="terciary-header">
+        <h2 className="terciary-header text-center">
           {feature.title}
         </h2>
         <div className="items-logo-container">

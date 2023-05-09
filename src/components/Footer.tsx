@@ -92,7 +92,14 @@ const Footer = () => {
           <a className="subtitle" href="#">V1</a>
         </div>
         <div className="links">
-          <a className="subtitle" href="/blog">Blog</a>
+        <a
+            href="https://cryptexfinance.notion.site/Cryptex-Finance-Wiki-9f29021042df4da6b6887553a879d691"
+            rel="noreferrer"
+            target="_blank"
+            className="subtitle"
+          >
+            Wiki
+          </a>
           <a 
             href="https://docs.cryptex.finance"
             rel="noreferrer"
@@ -102,14 +109,6 @@ const Footer = () => {
             Documentation
           </a>
           <a
-            href="https://cryptexfinance.notion.site/Cryptex-Finance-Wiki-9f29021042df4da6b6887553a879d691"
-            rel="noreferrer"
-            target="_blank"
-            className="subtitle"
-          >
-            Wiki
-          </a>
-          <a
             href="https://forum.cryptex.finance/"
             rel="noreferrer"
             target="_blank"
@@ -117,6 +116,7 @@ const Footer = () => {
           >
             Forum
           </a>
+          <a className="subtitle" href="/blog">Blog</a>
         </div>
       </div>
     </section>
