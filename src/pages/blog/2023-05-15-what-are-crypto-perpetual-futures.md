@@ -6,6 +6,8 @@ date: 2023-05-15T18:14:18.960Z
 description: In this blog post, we will discuss what crypto perpetual futures are.
 featuredpost: false
 featuredimage: /img/cryptoperpetualfutures.png
+tags:
+  - DeFi
 ---
 ![What crypto perpetual futures?](/img/cryptoperpetualfutures.png)
 
