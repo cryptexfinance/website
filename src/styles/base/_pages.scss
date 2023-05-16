@@ -108,7 +108,7 @@ body {
 }
 
 .section-bg-jpegz {
-  background-image: linear-gradient( rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75) ), url('../../static/website/indexes/JPEGz_Box.png');
+  background-image: linear-gradient( rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75) ), url('../../static/website/indexes/jpegzbox.png');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -122,7 +122,7 @@ body {
 }
 
 .section-bg-tcap {
-  background-image: linear-gradient( rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75) ), url('../../static/website/indexes/TCAP_Box.png');
+  background-image: linear-gradient( rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75) ), url('../../static/website/indexes/tcapbox.png');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -733,4 +733,10 @@ body {
   color: #ffd7ff;
   -webkit-text-stroke: 2px #fb38fc;
   text-shadow: 0 0 5px #9A24FF, 0 0 10px #9A24FF, 0 0 15px #9A24FF, 0 0 20px #9A24FF, 0 0 30px #9A24FF, 0 0 40px #9A24FF, 0 0 55px #9A24FF, 0 0 75px #9A24FF;
+}
+
+@media only screen and (max-device-width: 1180px) { 
+  .main-brand-text{
+
+  }
 }
