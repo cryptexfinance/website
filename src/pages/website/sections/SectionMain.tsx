@@ -17,12 +17,11 @@ const SectionMain = () => (
     >
       <source src={bgvideo} type="video/mp4" />
     </video>
-    <div className="main-container">
+    <div className="black-overlay"></div>
+    <div className="main-container col-sm-12">
       <div className="main-info">
         <div className="main-title">
-          <h1>
-            <img src={cryptexTitle} alt="Cryptex Finance" className="main-title-image" />
-          </h1>
+          <h1 className="main-brand-text"> CRYPTEX V2 </h1>
         </div>
         <p className="home-subheader">
           Total Crypto Market Cap with <span className="neon-green">up to 20x Leverage</span>

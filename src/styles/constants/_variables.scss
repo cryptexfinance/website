@@ -54,6 +54,14 @@ $rt-mobile: "only screen and (max-width : 480px)" !default;
 $rt-z-index: 9999 !default;
 
 @font-face {
+  font-family: 'Tachyon Regular';
+  src: url("../fonts/tachyon-regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
   font-family: "Helvetica Neue Thin";
   src: url("../fonts/helveticaneue-thin.woff2") format("woff2"),
       url("../fonts/helveticaneue-thin.woff") format("woff");
