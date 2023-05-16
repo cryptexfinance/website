@@ -2,6 +2,7 @@ import React from "react";
 import Col from "react-bootstrap/esm/Col";
 import appEndpoint from "../../../endpoint";
 import bgvideo from "../../../../static/bg_main.mp4";
+import bgvideowebm from "../../../../static/bg_main.webm";
 import cryptexTitle from '../../../../static/website/home/cryptex_finance_v2.png'
 
 const SectionMain = () => (
@@ -15,6 +16,7 @@ const SectionMain = () => (
       className="video"
       id="bgvid"
     >
+      <source src={bgvideowebm} type="video/webm" />
       <source src={bgvideo} type="video/mp4" />
     </video>
     <div className="black-overlay"></div>
