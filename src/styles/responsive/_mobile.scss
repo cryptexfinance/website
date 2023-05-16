@@ -9,8 +9,17 @@
   }
 
   .video{
-    max-width: 100% !important;
-    margin-left: 0px !important;
+    width: 150%;
+    margin-left: -120px;
+  }
+
+  .main-brand-text{
+    font-family: 'Tachyon Regular';
+    letter-spacing: 0.6rem;
+    font-size: 2rem;
+    color: #ffd7ff;
+    -webkit-text-stroke: 2px #fb38fc;
+    text-shadow: none !important;
   }
 
   .black-overlay{
@@ -322,8 +331,8 @@
 
   .section-solutions {
     height: auto;
-    margin: 17rem 1rem;
-    padding: 15rem 5rem;
+    margin: 0rem 1rem 17rem 1rem;
+    padding: 0rem 5rem 15rem 5rem;
 
     .header {
       align-self: start;

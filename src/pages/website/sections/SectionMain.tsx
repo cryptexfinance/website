@@ -7,10 +7,10 @@ import cryptexTitle from '../../../../static/website/home/cryptex_finance_v2.png
 const SectionMain = () => (
   <div className="section-main">
     <video
-      playsInline
       autoPlay
       loop
       muted
+      playsInline
       poster={bgvideo}
       className="video"
       id="bgvid"
