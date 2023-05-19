@@ -14,7 +14,7 @@ tags:
 ---
 ![May Community Call](/img/v2_updatecall_0-00-00-06.png)
 
-**O﻿n May 16th, we hosted our v2 Update Call. Read below for the most important moments. If you are interested in listening to the full community call, click here for a full recording.**
+**O﻿n May 16th, we hosted our v2 Update Call. Read below for the most important moments. If you are interested in listening to the full community call, click [here](https://youtu.be/xvBj4royRnw) for a full recording.**
 
 ### Dev
 
