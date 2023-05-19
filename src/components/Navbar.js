@@ -41,7 +41,6 @@ const NavbarMenu = props => {
           <Navbar.Brand className="pl-5 ml-5" as={Link} to="/#home">
             <img className="menu-logo mobile" src="/logom.svg" alt="Logo" />
             <img className="menu-logo tablet" src="/logo.svg" alt="Logo" />
-            <div className="menu-logo-divider"></div>
           </Navbar.Brand>
           <Navbar.Toggle
             aria-controls="responsive-navbar-nav"

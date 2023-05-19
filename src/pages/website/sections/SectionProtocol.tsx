@@ -44,7 +44,7 @@ const SectionSafety = () => {
       className="box box-button-permanent-hover item"
     >
       <div className="items-info">
-        <h2 className="terciary-header text-center">
+        <h2 className="terciary-header text-center card-text-why">
           {feature.title}
         </h2>
         <div className="items-logo-container">

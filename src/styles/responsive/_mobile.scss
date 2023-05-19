@@ -8,6 +8,16 @@
     padding: 15rem 5rem !important;
   }
 
+  .card-text-why{
+    font-size: 5rem;
+    margin-top: 20% !important;
+    line-height: 6rem; 
+  }
+
+  .navbar-brand {
+    position: absolute;
+  }
+
   .video{
     width: 180%;
     margin-left: -230px;
@@ -148,6 +158,10 @@
   .navbar-toggler-icon {
     margin-right: auto;
     margin-left: auto;
+  }
+
+  .navbar-toggler-icon {
+    display: none;
   }
 
   .responsive-navbar-nav {
