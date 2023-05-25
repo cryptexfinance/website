@@ -20,17 +20,17 @@ const safetyItems = [
   },
   {
     id: "collateral",
-    title: "Low Latency Price Feeds at 0.5%",
+    title: "0.5% Oracle Latency.",
     logo: chainlink,
   },
   {
     id: "bounty",
-    title: "Powerful trading for makers & takers.",
+    title: "Proven Infrastructure for Makers & Takers.",
     logo: perennial,
   },
   {
     id: "oracles",
-    title: "Available on DeFi’s preferred network.",
+    title: "Available on DeFi’s Preferred Network.",
     logo: arbitrum,
   }
 ]

@@ -25,8 +25,9 @@ const SectionMain = () => (
         <div className="main-title">
           <h1 className="main-brand-text"> CRYPTEX V2 </h1>
         </div>
+        <br></br>
         <p className="home-subheader">
-          Total Crypto Market Cap with <span className="neon-green">up to 20x Leverage</span>
+        TRADE TOTAL CRYPTO MARKET CAP <br></br> <span className="neon-green">WITH UP TO 20X LEVERAGE</span>
         </p>
       </div>
       <div className="main-buttons">
@@ -38,7 +39,7 @@ const SectionMain = () => (
               className="button-outlined-purple main-button main-button-link"
               target="_blank"
             >
-              Trade
+              TRADE
             </a>
           </div>
           <div className="">
@@ -47,7 +48,7 @@ const SectionMain = () => (
               rel="noopener noreferrer"
               className="button-outlined-purple main-button"
             >
-              Provide
+              PROVIDE
             </a>
           </div>
         </Col>

@@ -156,12 +156,14 @@
 
   .navbar-toggler,
   .navbar-toggler-icon {
-    margin-right: auto;
     margin-left: auto;
   }
 
-  .navbar-toggler-icon {
-    display: none;
+  .navbar-toggler-icon{
+    color: white;
+    border-color: rgb(255,102,203);
+    width: 42px;
+    height: 42px;
   }
 
   .responsive-navbar-nav {
@@ -171,16 +173,19 @@
   .navbar-toggler:hover,
   .navbar-toggler:focus {
     position: relative;
-    padding: 10px 20px 10px 20px;
   }
 
   .mobile_menu_bar:before {
     display: none;
   }
+  .hamburger-icon-custom{
+    height: 32px;
+    width: 32px;
+  }
   .mobile_menu_bar::after {
     font-size: 12px;
     font-family: $font-primary;
-    content: "MENU";
+    content: "";
     position: relative;
     padding: 10px 20px 10px 20px;
     color: $color-dark-clean !important;

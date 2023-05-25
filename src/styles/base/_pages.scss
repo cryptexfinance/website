@@ -79,8 +79,8 @@ body {
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      width: 13rem;
-      height: 3.5rem;
+      width: 17.4rem;
+      height: 4.5rem;
 
       &:hover {
         color: $color-white  !important;
@@ -712,7 +712,11 @@ body {
 
 /* Track */
 ::-webkit-scrollbar-track {
-  background: #7D0785;
+  background: #7d078520;
+}
+
+::-webkit-scrollbar-track:hover{
+  background: #7d078520;
 }
 
 /* Handle */
@@ -730,7 +734,7 @@ body {
 .main-brand-text{
   font-family: 'Tachyon Regular';
   letter-spacing: 0.6rem;
-  font-size: 2rem;
+  font-size: 3rem;
   color: #ffd7ff;
   -webkit-text-stroke: 2px #fb38fc;
   text-shadow: 0 0 5px #9A24FF, 0 0 10px #9A24FF, 0 0 15px #9A24FF, 0 0 20px #9A24FF, 0 0 30px #9A24FF, 0 0 40px #9A24FF, 0 0 55px #9A24FF, 0 0 75px #9A24FF;

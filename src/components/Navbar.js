@@ -3,6 +3,7 @@ import { Navbar, Nav } from "react-bootstrap"
 import { useStaticQuery, graphql } from "gatsby"
 import { Link } from "gatsby"
 import appEndpoint from "../endpoint"
+import hamburgerIcon from "../../static/burger-icon.svg"
 
 const NavbarMenu = props => {
   const [siteUrl, setSiteUrl] = useState("")
@@ -46,7 +47,9 @@ const NavbarMenu = props => {
             aria-controls="responsive-navbar-nav"
             className="mobile_menu_bar"
             aria-hidden="true"
-          />
+          >
+            <img className="hamburger-icon-custom" src={hamburgerIcon}></img>
+          </Navbar.Toggle>
           <Navbar.Collapse
             id="responsive-navbar-nav"
             className="justify-content-start"
@@ -79,7 +82,7 @@ const NavbarMenu = props => {
   const NavDesktop = () => {
     return (
       <div className="nav-default">
-        <Navbar fixed="top" collapseOnSelect expand="lg">
+        <Navbar fixed="top" collapseOnSelect expand="lg" variant="dark">
           <Navbar.Brand className="pl-3 ml-3" as={Link} to="/#home">
             <img className="menu-logo" src="/logo.svg" alt="Logo" />
           </Navbar.Brand>
@@ -87,7 +90,8 @@ const NavbarMenu = props => {
             aria-controls="responsive-navbar-nav"
             className="mobile_menu_bar"
             aria-hidden="true"
-          />
+          >
+          </Navbar.Toggle>
           <Navbar.Collapse
             id="responsive-navbar-nav"
             className="justify-content-start"
