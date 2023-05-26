@@ -18,6 +18,7 @@ import sushiLogo from "../../../../static/website/governance/sushi-logo.svg";
 import uniLogo from "../../../../static/website/governance/uni-logo.svg";
 import coinbaseLogo from "../../../../static/website/governance/coinbase.svg";
 import huobiLogo from "../../../../static/website/governance/huobi.svg";
+import arbitrum from "../../../../static/website/protocol/arbitrum.svg";
 
 
 type GovernanceType = {
@@ -55,6 +56,12 @@ const governanceItems = [
 ]
 
 const governanceIcons = [
+  {
+    href: "https://arbitrum.io/",
+    icon: arbitrum,
+    alt: "Arbitrum Logo",
+    class: "",
+  },
   {
     href: "https://www.coinbase.com/price/cryptex-finance",
     icon: coinbaseLogo,
