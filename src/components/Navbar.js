@@ -64,13 +64,13 @@ const NavbarMenu = props => {
                 Markets
               </Nav.Link>
               <div className="nav-links-divisor"></div>
-              <Nav.Link as={Link} to={safetyUrl} title="Safety">
-                Why Cryptex
-              </Nav.Link>
-              <div className="nav-links-divisor"></div>
               <Nav.Link as={Link} to={governanceUrl} title="Governance">
                 Governance
               </Nav.Link>
+              <div className="nav-links-divisor"></div>
+              <Nav.Link as={Link} to={safetyUrl} title="Safety">
+                Why Cryptex
+              </Nav.Link>             
               <div className="nav-links-divisor"></div>
             </Nav>
           </Navbar.Collapse>
