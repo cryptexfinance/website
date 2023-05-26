@@ -13,7 +13,7 @@ const SectionMain = () => (
       muted
       playsInline
       poster={bgvideo}
-      className="video"
+      className="video bgvid"
       id="bgvid"
     >
       <source src={bgvideowebm} type="video/webm" />

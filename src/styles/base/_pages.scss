@@ -10,7 +10,7 @@ html {
     height: auto;
   }
 }
-
+ 
 body {
   width: 100%;
   .pt-5 {
@@ -38,6 +38,12 @@ body {
 
 .coin-icon{
   width: 80px;
+}
+
+.bgvid{
+  max-height: 100vh;
+  height: 100vh;
+  object-fit: cover;
 }
 
 .section-main {
