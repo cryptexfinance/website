@@ -6,6 +6,8 @@ date: 2023-05-30T16:57:19.668Z
 description: In this blog post, we will discuss the evolution of cryptocurrency.
 featuredpost: false
 featuredimage: /img/02132022-dc.png
+tags:
+  - DeFi
 ---
 ![]()
 
