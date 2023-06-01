@@ -1,6 +1,6 @@
 ---
 templateKey: blog-post
-title: What is providing liquidity?
+title: What is Providing Liquidity?
 author: Cryptex Contributors
 date: 2023-05-30T17:09:37.524Z
 description: In this blog post, we will discuss providing liquidity.
