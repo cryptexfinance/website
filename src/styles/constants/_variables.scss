@@ -27,9 +27,9 @@ $shadow-orange-neon-second: rgba(242,128,64, 0.3);
 $shadow-navbar-button: rgba(254, 33, 245, 0.43);
 // $shadow-text-about: 0px 4px 13px #A440F2;
 
-$font-primary: 'Nineteen Ninety Seven';
+$font-primary: 'Helvetica Neue';
 $font-secondary: 'Erbos Draco 1st Open NBP';
-$font-tertiary: 'Space Mono';
+$font-tertiary: 'Helvetica Neue';
 
 $main-image-width: 28.9375rem;
 $main-image-height: 28.625rem;
@@ -53,9 +53,34 @@ $rt-color-progress-dark: #bb86fc !default;
 $rt-mobile: "only screen and (max-width : 480px)" !default;
 $rt-z-index: 9999 !default;
 
+@font-face {
+  font-family: 'Tachyon Regular';
+  src: url("../fonts/tachyonregular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
 
 @font-face {
-  font-family: 'Space Mono Bold';
+  font-family: "Helvetica Neue Thin";
+  src: url("../fonts/helveticaneue-thin.woff2") format("woff2"),
+      url("../fonts/helveticaneue-thin.woff") format("woff");
+  font-weight: normal;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Helvetica Neue";
+  src: url("../fonts/helveticaneue.woff2") format("woff2"),
+      url("../fonts/helveticaneue.woff") format("woff");
+  font-weight: normal;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Helvetica Neue Bold';
   src: url('../fonts/SpaceMono-Bold.woff') format('woff');
   font-weight: bold;
   font-style: normal;
@@ -71,7 +96,7 @@ $rt-z-index: 9999 !default;
 }
 
 @font-face {
-  font-family: 'Nineteen Ninety Seven';
+  font-family: 'NineTeen Ninety Seven';
   src: url('../fonts/Nineteen-Ninety-Seven.woff') format('woff');
   font-weight: normal;
   font-style: normal;
@@ -87,8 +112,8 @@ $rt-z-index: 9999 !default;
 }
 
 $font: (
-  family:						('Space Mono', 'Nineteen Ninety Seven', 'Erbos Draco 1st Open NBP'),
-  family-fixed:				('Space Mono', 'Nineteen Ninety Seven', 'Erbos Draco 1st Open NBP'),
+  family:						('Helvetica Neue', 'Helvetica Neue', 'Erbos Draco 1st Open NBP'),
+  family-fixed:				('Helvetica Neue', 'Helvetica Neue', 'Erbos Draco 1st Open NBP'),
   weight:						300,
   weight-bold:				600,
   letter-spacing:				0.2rem,

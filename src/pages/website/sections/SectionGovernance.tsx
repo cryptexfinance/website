@@ -18,6 +18,7 @@ import sushiLogo from "../../../../static/website/governance/sushi-logo.svg";
 import uniLogo from "../../../../static/website/governance/uni-logo.svg";
 import coinbaseLogo from "../../../../static/website/governance/coinbase.svg";
 import huobiLogo from "../../../../static/website/governance/huobi.svg";
+import arbitrum from "../../../../static/website/protocol/arbitrum.svg";
 
 
 type GovernanceType = {
@@ -50,7 +51,7 @@ const governanceItems = [
     id: "3",
     title: "Single Siding Staking",
     info: `Stake and delegate your CTX to a Crypt Keeper to earn <span class="number-span">{apr_value}</span> APR in CTX governance tokens.`,
-    link: "https://app.cryptex.finance/governance",
+    link: "https://v1.cryptex.finance/governance",
   }
 ]
 
@@ -74,13 +75,13 @@ const governanceIcons = [
     class: "huobi",
   },
   {
-    href: "https://app.uniswap.org/#/add/0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2/0x16c52CeeCE2ed57dAd87319D91B5e3637d50aFa4/3000?chain=mainnet&maxPrice=25.713616",
+    href: "https://app.uniswap.org/#/tokens/ethereum/0x321c2fe4446c7c963dc41dd58879af648838f98d",
     icon: uniLogo,
     alt: "Uniswap Logo",
     class: "uniswap",
   },
   {
-    href: "https://analytics.sushi.com/pairs/0xa87e2c5d5964955242989b954474ff2eb08dd2f5",
+    href: "https://www.sushi.com/pools/1:0x2a93167ed63a31f35ca4788e2eb9fbd9fa6089d0",
     icon: sushiLogo,
     alt: "Sushiswap Logo",
     class: "",
@@ -209,7 +210,7 @@ const SectionGovernance = () => {
   return (
     <div id="governance" className="section-governance">
       <h1 className="header">
-        Decentralized Governance
+        CTX: Decentralized Protocol Governance
       </h1>
       <div className="governance-content">
         <div className="box governance-main">
