@@ -24,7 +24,7 @@ const features = [
     title: "Mint",
     subtitle: "Create and approve a vault, add collateral and begin minting TCAP.",
     icon: mintIcon,
-    link: "https://app.cryptex.finance/vault"
+    link: "https://v1.cryptex.finance/vault"
   },
   {
     id: "swap",
@@ -45,7 +45,7 @@ const features = [
     title: "Farm",
     subtitle: "Earn CTX Rewards for staking LP tokens.",
     icon: farmIcon,
-    link: "https://app.cryptex.finance/farm"
+    link: "https://v1.cryptex.finance/farm"
   }
 ];
 
