@@ -110,7 +110,7 @@ const SectionProducts = () => {
             <div className="clearfix"></div>
             <p className="subtitle">
               Total Crypto Market Cap with up to 20x leverage.{" "}
-              <a className="learn-more-link" href="https://cryptexfinance.notion.site/TCAP-e6a4ab3556254b52ad9b88319daa581e">Learn More.</a>
+              <a className="learn-more-link" href="https://cryptexfinance.notion.site/TCAP-Total-Crypto-Market-Cap-b87f0d5331a24b0ba6796f579fe531af">Learn More.</a>
             </p>
             <div className="index-prices">
               <p className="subtitle">
@@ -166,7 +166,7 @@ const SectionProducts = () => {
             </h2>
             <p className="subtitle">
               Blue Chip NFT Market Cap with up to 20x leverage.{" "}
-              <a className="learn-more-link" href="https://cryptexfinance.notion.site/JPEGz-d69c8df153ee4795b1fd728ef6daba5d">Learn More.</a>
+              <a className="learn-more-link" href="https://cryptexfinance.notion.site/TCAP-Total-Crypto-Market-Cap-b87f0d5331a24b0ba6796f579fe531af">Learn More.</a>
             </p>
             <div className="index-prices">
               <p className="subtitle">
