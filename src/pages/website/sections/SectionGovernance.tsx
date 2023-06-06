@@ -57,12 +57,6 @@ const governanceItems = [
 
 const governanceIcons = [
   {
-    href: "https://arbitrum.io/",
-    icon: arbitrum,
-    alt: "Arbitrum Logo",
-    class: "",
-  },
-  {
     href: "https://www.coinbase.com/price/cryptex-finance",
     icon: coinbaseLogo,
     alt: "Coinbase logo",
@@ -81,13 +75,13 @@ const governanceIcons = [
     class: "huobi",
   },
   {
-    href: "https://app.uniswap.org/#/add/0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2/0x16c52CeeCE2ed57dAd87319D91B5e3637d50aFa4/3000?chain=mainnet&maxPrice=25.713616",
+    href: "https://app.uniswap.org/#/tokens/ethereum/0x321c2fe4446c7c963dc41dd58879af648838f98d",
     icon: uniLogo,
     alt: "Uniswap Logo",
     class: "uniswap",
   },
   {
-    href: "https://analytics.sushi.com/pairs/0xa87e2c5d5964955242989b954474ff2eb08dd2f5",
+    href: "https://www.sushi.com/pools/1:0x2a93167ed63a31f35ca4788e2eb9fbd9fa6089d0",
     icon: sushiLogo,
     alt: "Sushiswap Logo",
     class: "",

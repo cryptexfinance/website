@@ -93,7 +93,7 @@ const Footer = () => {
         </div>
         <div className="links">
         <a
-            href="https://cryptexfinance.notion.site/Cryptex-Finance-Wiki-9f29021042df4da6b6887553a879d691"
+            href="https://cryptexfinance.notion.site/Cryptex-Finance-v2-Wiki-b7d2592b8f6e48538612b52c35ecddd9"
             rel="noreferrer"
             target="_blank"
             className="subtitle"
