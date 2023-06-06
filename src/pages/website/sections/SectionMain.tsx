@@ -37,14 +37,14 @@ const SectionMain = () => (
               href={appEndpoint}
               rel="noopener noreferrer"
               className="button-outlined-purple main-button main-button-link"
-              target="_blank"
+              target="https://v2.cryptex.finance/"
             >
               TRADE
             </a>
           </div>
           <div className="">
             <a
-              href="https://cryptexfinance.notion.site/Cryptex-Finance-Wiki-9f29021042df4da6b6887553a879d691"
+              href="https://v2.cryptex.finance/liquidity"
               rel="noopener noreferrer"
               className="button-outlined-purple main-button"
             >

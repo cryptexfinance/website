@@ -89,7 +89,7 @@ const Footer = () => {
           <a className="subtitle" href="/#solutions">Markets</a>
           <a className="subtitle" href="/#protocol">Protocol</a>
           <a className="subtitle" href="/#governance">Governance</a>
-          <a className="subtitle" href="#">V1</a>
+          <a className="subtitle" href="https://v1.cryptex.finance">V1</a>
         </div>
         <div className="links">
         <a
