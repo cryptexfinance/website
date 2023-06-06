@@ -165,8 +165,7 @@ const SectionProducts = () => {
               JPEGz
             </h2>
             <p className="subtitle">
-              Blue Chip NFT Market Cap with up to 20x leverage.{" "}
-              <a className="learn-more-link" href="https://cryptexfinance.notion.site/JPEGz-d69c8df153ee4795b1fd728ef6daba5d">Learn More.</a>
+              Blue Chip NFT Market Cap with up to 20x leverage.
             </p>
             <div className="index-prices">
               <p className="subtitle">

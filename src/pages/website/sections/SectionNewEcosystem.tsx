@@ -5,7 +5,6 @@ import telegramLogo from "../../../../static/website/protocol/telegram-logo.svg"
 import mailLogo from "../../../../static/website/protocol/mail.svg";
 
 
-
 type SafetyType = {
   id: string;
   title: string;
