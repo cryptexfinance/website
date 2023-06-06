@@ -3,30 +3,31 @@ import Col from "react-bootstrap/esm/Col";
 import appEndpoint from "../../../endpoint";
 import bgvideo from "../../../../static/bg_main.mp4";
 import bgvideowebm from "../../../../static/bg_main.webm";
+import cryptexTitle from '../../../../static/website/home/cryptex_finance_v2.png'
 
 const SectionMain = () => (
   <div className="section-main">
     <video
-      playsInline
       autoPlay
       loop
       muted
+      playsInline
       poster={bgvideo}
-      className="video"
+      className="video bgvid"
       id="bgvid"
     >
       <source src={bgvideowebm} type="video/webm" />
       <source src={bgvideo} type="video/mp4" />
     </video>
-    <div className="main-container">
+    <div className="black-overlay"></div>
+    <div className="main-container col-sm-12">
       <div className="main-info">
         <div className="main-title">
-          <h1>
-            Cryptex Finance
-          </h1>
+          <h1 className="main-brand-text"> CRYPTEX V2 </h1>
         </div>
+        <br></br>
         <p className="home-subheader">
-          Index Tokens For The Crypto and NFT Community
+        TRADE TOTAL CRYPTO MARKET CAP <br></br> <span className="neon-green">WITH UP TO 20X LEVERAGE</span>
         </p>
       </div>
       <div className="main-buttons">
@@ -35,10 +36,10 @@ const SectionMain = () => (
             <a
               href={appEndpoint}
               rel="noopener noreferrer"
-              className="button-green main-button main-button-link"
+              className="button-outlined-purple main-button main-button-link"
               target="_blank"
             >
-              Go to App
+              TRADE
             </a>
           </div>
           <div className="">
@@ -47,7 +48,7 @@ const SectionMain = () => (
               rel="noopener noreferrer"
               className="button-outlined-purple main-button"
             >
-              Go to Wiki
+              PROVIDE
             </a>
           </div>
         </Col>

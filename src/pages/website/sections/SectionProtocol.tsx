@@ -1,8 +1,8 @@
 import React from "react";
-import quanstamp from "../../../../static/website/protocol/quantstamp.svg";
-import weth from "../../../../static/website/protocol/weth.svg";
-import dework from "../../../../static/website/protocol/dework.svg";
 import chainlink from "../../../../static/website/protocol/chainlink.svg";
+import cryptex from "../../../../static/website/protocol/cryptex.svg";
+import arbitrum from "../../../../static/website/protocol/arbitrum.svg";
+import perennial from "../../../../static/website/protocol/perennial.svg";
 
 type SafetyType = {
   id: string;
@@ -15,31 +15,23 @@ type SafetyType = {
 const safetyItems = [
   {
     id: "audit",
-    title: "Audit",
-    subtitle: "Review our audits.",
-    link: "https://docs.cryptex.finance/audits",
-    logo: quanstamp,
+    title: "Unique Perpetual Markets.",
+    logo: cryptex,
   },
   {
     id: "collateral",
-    title: "Collateral",
-    subtitle: "Check out the vault monitoring tool.",
-    link: "https://app.cryptex.finance/vault-monitoring",
-    logo: weth,
+    title: "0.5% Oracle Latency.",
+    logo: chainlink,
   },
   {
     id: "bounty",
-    title: "Bounties",
-    subtitle: "Explore all opportunities.",
-    link: "https://app.dework.xyz/cryptex-finance",
-    logo: dework,
+    title: "Proven Infrastructure for Makers & Takers.",
+    logo: perennial,
   },
   {
     id: "oracles",
-    title: "Oracles",
-    subtitle: "Review Chainlink oracles.",
-    link: "https://docs.cryptex.finance/tcap#oracles",
-    logo: chainlink,
+    title: "Available on DeFi’s Preferred Network.",
+    logo: arbitrum,
   }
 ]
 
@@ -47,18 +39,14 @@ const SectionSafety = () => {
   const item = (feature: SafetyType) => (
     <a
       key={feature.id}
-      href={feature.link}
       rel="noreferrer"
       target="_blank"
-      className="box box-button item"
+      className="box box-button-permanent-hover item"
     >
       <div className="items-info">
-        <h2 className="terciary-header">
+        <h2 className="terciary-header text-center card-text-why">
           {feature.title}
         </h2>
-        <p className="subtitle">
-          {feature.subtitle}
-        </p>
         <div className="items-logo-container">
           <img
             src={feature.logo}
@@ -73,7 +61,7 @@ const SectionSafety = () => {
   return (
     <div id="protocol" className="section-protocol">
       <h1 className="header">
-        Protocol
+        Why Cryptex
       </h1>
       <div className="items">
         {safetyItems.map((sItem) => {
