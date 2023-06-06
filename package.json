@@ -9,6 +9,7 @@
     "develop": "gatsby develop",
     "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
     "start": "npm run develop",
+    "dev-m": "gatsby develop -H 0.0.0.0 -p 8000",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
     "clean-serve": "gatsby clean && gatsby build && gatsby serve",

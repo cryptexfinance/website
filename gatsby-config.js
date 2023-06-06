@@ -24,7 +24,7 @@ module.exports = {
   siteMetadata: {
     title: "Cryptex Finance",
     author: "Cryptex Finance",
-    description: "Index Tokens For The Crypto and NFT Community",
+    description: "Decentralized platform providing cutting edge perpetuals.",
     image:
       "https://raw.githubusercontent.com/cryptexglobal/website/main/static/website/home/main.webp",
     keywords: [
