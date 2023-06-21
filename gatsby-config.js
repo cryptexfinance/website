@@ -4,7 +4,7 @@
  * See: https://www.gatsbyjs.org/docs/gatsby-config/
  */
 
-//  const metaImage = require('./static/website/home/main.webp');
+// const metaImage = require("./static/website/home/cryptexv2.png");
 
 /* const CustomMediaQueries = {
   xs: "(max-width: 320px)",
@@ -25,8 +25,7 @@ module.exports = {
     title: "Cryptex Finance",
     author: "Cryptex Finance",
     description: "Decentralized platform providing cutting edge perpetuals.",
-    image:
-      "https://raw.githubusercontent.com/cryptexglobal/website/main/static/website/home/main.webp",
+    image: "./static/website/home/cryptexv2.png",
     keywords: [
       "Cryptex",
       "Blockchain",
