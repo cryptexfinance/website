@@ -4,7 +4,7 @@
  * See: https://www.gatsbyjs.org/docs/gatsby-config/
  */
 
-const metaImage = require("./static/website/home/cryptexv2.png");
+// const metaImage = require("./static/website/home/cryptexv2.png");
 
 /* const CustomMediaQueries = {
   xs: "(max-width: 320px)",
