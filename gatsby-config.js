@@ -25,7 +25,7 @@ module.exports = {
     title: "Cryptex Finance",
     author: "Cryptex Finance",
     description: "Decentralized platform providing cutting edge perpetuals.",
-    image: "https://drive.google.com/file/d/1oeLpuQEzQqwbES239Ul0mOti7eczOJFv/view",
+    image: "https://cryptex-public-images.s3.us-east-2.amazonaws.com/cryptexv2-min.png",
     keywords: [
       "Cryptex",
       "Blockchain",
