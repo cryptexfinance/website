@@ -27,7 +27,7 @@ const Seo = ({ description, lang, meta, image: img, title, pathname }) => {
         { property: "og:url", content: canonical },
         {
           property: "og:image",
-          content: "/static/website/home/cryptexv2.png",
+          content: "static/website/home/cryptexv2.png",
         },
         { name: "twitter:card", content: "summary_large_image" },
         { name: "twitter:site", content: "@CryptexFinance" },
@@ -35,7 +35,7 @@ const Seo = ({ description, lang, meta, image: img, title, pathname }) => {
         { name: "twitter:description", content: metaDescription },
         {
           name: "twitter:image",
-          content: "/static/website/home/cryptexv2.png",
+          content: "static/website/home/cryptexv2.png",
         },        
       ].concat(meta)}
     />
