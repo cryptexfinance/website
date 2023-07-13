@@ -1,6 +1,6 @@
 ---
 templateKey: blog-post
-title: Meet the Team - Joe
+title: Meet the Contributors - Joe
 author: Joe Sticco
 date: 2021-11-03T16:34:40.357Z
 description: Co-founder and CEO Joe Sticco, a lifelong trader and investment
