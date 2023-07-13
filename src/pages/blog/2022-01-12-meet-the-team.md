@@ -1,6 +1,6 @@
 ---
 templateKey: blog-post
-title: Meet the team - Cullen
+title: Meet the Contributors - Cullen
 author: Cullen
 date: 2022-01-12T22:12:22.890Z
 description: Writer, Director, and VFX Artist, who's done VFX for shows like Man
@@ -15,7 +15,7 @@ tags:
   - TCAP
   - Blog
 ---
-**Weekly, Cryptex Finance will interview one of the core team members involved in building the world's first Total Crypto Market Cap Token (TCAP). This week, Cullen shares his background and his design role with Cryptex.**
+**Weekly, Cryptex Finance will interview one of the core contributors involved in building the world's first Total Crypto Market Cap Token (TCAP). This week, Cullen shares his background and his design role with Cryptex.**
 
 **"What did you do before Cryptex?"**
 
