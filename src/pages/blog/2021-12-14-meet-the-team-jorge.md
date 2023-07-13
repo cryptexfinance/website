@@ -1,6 +1,6 @@
 ---
 templateKey: blog-post
-title: Meet The Team - Jorge
+title: Meet The Contributors - Jorge
 author: Jorge
 date: 2021-12-14T23:33:33.250Z
 description: Full Stack developer with more than seven years of experience using
