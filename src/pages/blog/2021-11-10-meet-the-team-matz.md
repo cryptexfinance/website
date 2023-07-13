@@ -1,6 +1,6 @@
 ---
 templateKey: blog-post
-title: Meet the Team - Matz
+title: Meet the Contributors - Matz
 author: Thomas Matzner
 date: 2021-11-10T20:16:11.852Z
 description: Co-founder Thomas Matzner, a leader in planning, branding, and
