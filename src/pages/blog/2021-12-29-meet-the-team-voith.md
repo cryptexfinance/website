@@ -1,9 +1,9 @@
 ---
 templateKey: blog-post
-title: Meet The Team - Voith
+title: Meet The Contributors - Voith
 author: Voith
 date: 2021-12-29T21:51:36.499Z
-description: Weekly, Cryptex Finance will interview one of the core team members
+description: Weekly, Cryptex Finance will interview one of the core contributors
   involved in building the world's first Total Crypto Market Cap Token (TCAP).
   This week, Voith shares his background and his role in development at Cryptex.
 featuredpost: true
