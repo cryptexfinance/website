@@ -14,7 +14,7 @@ tags:
   - tcap
   - blog
 ---
-Weekly, Cryptex will interview one of the core team members involved in building the world's first Total Crypto Market Cap Token (TCAP). This week, co-founder Thomas Matzner, a leader in planning, branding, and marketing initiatives at world-class companies shares his vision of building the Cryptex brand. Read on to learn about how the Cryptex team came together, Matz's favorite community meme, and more.
+Weekly, Cryptex will interview one of the core contributors involved in building the world's first Total Crypto Market Cap Token (TCAP). This week, co-founder Thomas Matzner, a leader in planning, branding, and marketing initiatives at world-class companies shares his vision of building the Cryptex brand. Read on to learn about how the Cryptex team came together, Matz's favorite community meme, and more.
 
 **"What did you do before Cryptex?"**
 
