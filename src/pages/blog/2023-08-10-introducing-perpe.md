@@ -2,7 +2,7 @@
 templateKey: blog-post
 title: Introducing PERPE.
 author: Joe
-date: 2023-08-11T03:37:51.497Z
+date: 2023-08-10T15:48:58.874Z
 description: "Cryptex V2: 20x PEPE Perpetual Market, now Live on Arbitrum."
 featuredpost: true
 featuredimage: /img/perpe_cu.png
