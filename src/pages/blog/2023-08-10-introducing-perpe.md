@@ -10,13 +10,13 @@ tags:
   - Cryptex V2
   - PERPE
 ---
+![Perpe - Cryptex V2](/img/perpe_cu.png)
+
 ## 20x PEPE Perpetual Market.
 
 ## Cryptex V2.
 
 ## Now Live on Arbitrum.
-
-![Perpe - Cryptex V2](/img/perpe_cu.png)
 
 ***PERPE*** is a PEPE Perpetual Market with up to 20x leverage.
 
@@ -41,7 +41,6 @@ Taker via Cryptex V2 Pro Interface.
 
 #### **Additional Parameters**:
 
-
 ##### **1. PERPE Maintenance: 5%**
 
 ###### This is the minimum amount of collateral that needs to be maintained with respect to the notional value.
@@ -57,6 +56,7 @@ Taker via Cryptex V2 Pro Interface.
 ##### **3. PERPE Maker Fee: 0%**
 
 ##### This is the fee charged as a percentage of the Maker notional amount.
+
 ##### **This is currently set to 0 to incentivize Makers while bootstrapping this market.**
 
 ##### **4. PERPE Taker Fee: 0.15%**
