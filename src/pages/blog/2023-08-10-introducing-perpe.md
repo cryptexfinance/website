@@ -57,7 +57,7 @@ This is the percentage of the Funding Fee that can be claimed by the protocol.
 
 This is the fee charged as a percentage of the Maker notional amount.
 
-##### **This is currently set to 0 to incentivize Makers while bootstrapping this market.**
+**This is currently set to 0 to incentivize Makers while bootstrapping this market.**
 
 ##### **4. PERPE Taker Fee: 0.15%**
 
@@ -65,7 +65,9 @@ This is the fee charged as a percentage of the Taker notional amount and is curr
 
 ##### **5. PERPE Position Fee: 0%**
 
-This is the percentage of the Maker/Taker fees that can be kept by the protocol. A value of 1 indicates that all the fees will be distributed to the protocol and 0 if all the fees are to be distributed to Makers/Takers. **==It is currently set to 0, distributing all Taker fees to Makers during the bootstrapping period.**
+This is the percentage of the Maker/Taker fees that can be kept by the protocol. A value of 1 indicates that all the fees will be distributed to the protocol and 0 if all the fees are to be distributed to Makers/Takers. 
+
+**It is currently set to 0, distributing all Taker fees to Makers during the bootstrapping period.**
 
 ##### **6. PERPE Maker Limit: 60 Trillion PEPE**
 
