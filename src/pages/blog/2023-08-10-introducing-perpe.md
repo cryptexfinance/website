@@ -41,6 +41,7 @@ Taker via Cryptex V2 Pro Interface.
 
 **Additional Parameters**:
 
+
 ##### **1. PERPE Maintenance: 5%**
 
 This is the minimum amount of collateral that needs to be maintained with respect to the notional value.
