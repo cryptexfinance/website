@@ -6,6 +6,9 @@ date: 2023-08-11T03:37:51.497Z
 description: "Cryptex V2: 20x PEPE Perpetual Market, now Live on Arbitrum."
 featuredpost: true
 featuredimage: /img/perpe_cu.png
+tags:
+  - Cryptex V2
+  - PERPE
 ---
 ## 20x PEPE Perpetual Market.
 
