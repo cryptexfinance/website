@@ -39,7 +39,7 @@ Taker via Cryptex V2 Pro Interface.
 
 ***PERPE Slippage:*** ZERO
 
-### **Additional Parameters**:
+## **Additional Parameters**:
 
 ##### **1. PERPE Maintenance: 5%**
 
