@@ -21,6 +21,7 @@ const SectionProducts = () => {
   const [tcapTotalCap, setTcapTotalCap] = useState("0.00");
   const [jpegzPrice, setJpegzPrice] = useState("3.10");
   const [jpegzTotalCap, setJpegzTotalCap] = useState("0.00");
+  const [pepePrice, setPepePrice] = useState("0.000001262");
   const contracts = useContext(contractsContext);
   const arbContracts = useContext(arbContractsContext);
   const arbSigner = useContext(arbSignerContext);
@@ -43,12 +44,20 @@ const SectionProducts = () => {
     const loadArbitrum = async() => {
       if (arbSigner.ethcallProvider && arbContracts.jpegzOracleRead) {
         const jpegzOraclePriceCall = await arbContracts.jpegzOracleRead?.getLatestAnswer();
+        const pepeOraclePriceCall = await arbContracts.pepeOracleRead?.latestAnswer();
+
         // @ts-ignore
-        const [currentJpegzPrice] = await arbSigner.ethcallProvider?.all([jpegzOraclePriceCall]);
+        const [currentJpegzPrice, currentPepePrice] = await arbSigner.ethcallProvider?.all([
+          jpegzOraclePriceCall,
+          pepeOraclePriceCall
+        ]);
         const totalJpegzPrice = currentJpegzPrice.mul(10000000000);
         const jPrice = ethers.utils.formatEther(currentJpegzPrice.mul(10));
         setJpegzPrice(parseFloat(jPrice).toFixed(2));
         setJpegzTotalCap(ethers.utils.formatEther(totalJpegzPrice));
+
+        const pPrice = ethers.utils.formatEther(currentPepePrice);
+        setPepePrice(parseFloat(pPrice).toFixed(9));
       }
     }
     loadArbitrum();
@@ -60,38 +69,6 @@ const SectionProducts = () => {
     }
   }, [signer.ethcallProvider, arbSigner.ethcallProvider]);
 
-  /* const item = (product: ProductType) => (
-    <a
-      key={product.id}
-      href={siteUrl.concat(product.link)}
-      rel="noreferrer"
-      className="box box-button products-item"
-    >
-      <div className="products-info">
-        <h2 className="heading-secondary">
-          {product.title}
-        </h2>
-        <p className="subtitle">
-          {product.subtitle}
-        </p>
-      </div>
-      <div className="products-link">
-        {product.id === "tcap" ?
-          (
-            <a
-              className="link"
-              href={siteUrl.concat(product.link)}
-              rel="noreferrer"
-            >
-              Learn More
-            </a>
-          ) : (
-            <a className="link inactive">Coming Soon</a>
-          )}
-      </div>
-    </a>
-  ); */
-
   return (
     <div id="solutions" className="section-solutions">
       <h1 className="header">
@@ -102,12 +79,10 @@ const SectionProducts = () => {
           className="box box-button-unclickable solutions-item section-bg-tcap"
         >
           <div className="solutions-info">
-
-          <h2 className="heading-secondary">
-            TCAP
-          </h2>
-
-            <div className="clearfix"></div>
+            <h2 className="heading-secondary">
+              TCAP
+            </h2>
+            <div className="clearfix" />
             <p className="subtitle">
               Total Crypto Market Cap with up to 20x leverage.{" "}
               <a className="learn-more-link" href="https://cryptexfinance.notion.site/TCAP-Total-Crypto-Market-Cap-b87f0d5331a24b0ba6796f579fe531af">Learn More.</a>
@@ -144,11 +119,13 @@ const SectionProducts = () => {
             </div>  
           </div>
           <div className="solutions-link inline-helper">
-          <a
-                className="button-outlined-purple button-hover-transparent main-button same-size-button"
-                target={"_blank"}
-                href="https://v2.cryptex.finance/"
-                >TRADE</a>
+            <a
+              className="button-outlined-purple button-hover-transparent main-button same-size-button"
+              target={"_blank"}
+              href="https://v2.cryptex.finance/"
+            >
+              TRADE
+            </a>
             <a
               className="button-outlined-purple button-hover-transparent main-button pull-right same-size-button"
               href="https://v2.cryptex.finance/liquidity"
@@ -159,7 +136,50 @@ const SectionProducts = () => {
             </a>
           </div>
         </div>
-        <div className="box box-button-unclickable solutions-item section-bg-jpegz">
+        <div className="box box-button-unclickable solutions-item section-bg-perpe">
+          <div className="solutions-info">
+            <h2 className="heading-secondary">
+              PERPE
+            </h2>
+            <p className="subtitle">
+              PERPE / PEPE Perpetual Market with up to 20x leverage.
+            </p>
+            <div className="index-prices">
+              <p className="subtitle">
+              <span className="number-blue">
+                <NumericFormat
+                  className="number-blue"
+                  value={pepePrice}
+                  displayType="text"
+                  thousandSeparator
+                  prefix="$"
+                  decimalScale={9}
+                />
+                </span>
+                <br></br>
+                PEPE Price
+              </p>
+            </div>
+          </div>
+          <div className="solutions-link inline-helper">
+            <a
+              className="button-outlined-purple button-hover-transparent main-button same-size-button"
+              target={"_blank"}
+              href="https://v2.cryptex.finance/"
+            >
+              TRADE
+            </a>
+            <a
+              className="button-outlined-purple button-hover-transparent main-button pull-right same-size-button"
+              href="https://v2.cryptex.finance/liquidity"
+              rel="noreferrer"
+              target={"_blank"}
+            >
+              PROVIDE
+            </a>
+          </div>
+        </div>
+        {/* <div className="box box-button-unclickable solutions-item section-bg-jpegz">
           <div className="solutions-info">
             <h2 className="heading-secondary">
               JPEGz
@@ -201,9 +221,9 @@ const SectionProducts = () => {
           <div className="solutions-link inline-helper">
             <h3 className="ml-auto mr-auto">Coming soon...</h3>
           </div>
-          </div>
-        </div>
+        </div> */}
       </div>
+    </div>
   );
 };
 

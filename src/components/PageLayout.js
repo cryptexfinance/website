@@ -3,6 +3,7 @@ import { ethers } from "ethers"
 import { Contract, Provider } from "ethers-multicall"
 import Header from "./Header"
 import Footer from "./Footer"
+import agregatorAbi from "../contracts/agregatorAbi.json"
 import tcapOracle from "../contracts/tcapOracle.json"
 import jpegzOracle from "../contracts/jpegzOracle.json"
 import ctxToken from "../contracts/ctx.json"
@@ -19,6 +20,8 @@ const PageLayout = ({ children }) => {
 
   const arbContracts = useArbContracts()
   const arbSigner = useArbSigner()
+
+  const pepeAggregatorAddress = "0x02DEd5a7EDDA750E3Eb240b54437a54d57b74dBE";
 
   useEffect(() => {
     const loadContracts = async () => {
@@ -44,12 +47,6 @@ const PageLayout = ({ children }) => {
       )
       contracts.setCurrentTcapOracleRead(currentTcapOracleRead)
 
-      const currentJpegzOracleRead = new Contract(
-        jpegzOracle.address,
-        jpegzOracle.abi
-      )
-      arbContracts.setCurrentJpegzOracleRead(currentJpegzOracleRead)
-
       const currentCtxTokenRead = new Contract(ctxToken.address, ctxToken.abi)
       contracts.setCurrentCtxTokenRead(currentCtxTokenRead)
       const currentWethracleRead = new Contract(
@@ -67,6 +64,19 @@ const PageLayout = ({ children }) => {
         delegatorFactory.abi
       )
       contracts.setCurrentDelegatorFactoryRead(currentDelegatorRead)
+
+      // Arb contracts
+      const currentJpegzOracleRead = new Contract(
+        jpegzOracle.address,
+        jpegzOracle.abi
+      );
+      arbContracts.setCurrentJpegzOracleRead(currentJpegzOracleRead);
+
+      const currentPepeOracleRead = new Contract(
+        pepeAggregatorAddress,
+        agregatorAbi
+      )
+      arbContracts.setCurrentPepeOracleRead(currentPepeOracleRead);
     }
     loadContracts()
   }, [])
