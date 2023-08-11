@@ -165,13 +165,13 @@ const SectionProducts = () => {
             <a
               className="button-outlined-purple button-hover-transparent main-button same-size-button"
               target={"_blank"}
-              href="https://v2.cryptex.finance/pepe"
+              href="https://v2.cryptex.finance"
             >
               TRADE
             </a>
             <a
               className="button-outlined-purple button-hover-transparent main-button pull-right same-size-button"
-              href="https://v2.cryptex.finance/liquidity/pepe"
+              href="https://v2.cryptex.finance/liquidity"
               rel="noreferrer"
               target={"_blank"}
             >
