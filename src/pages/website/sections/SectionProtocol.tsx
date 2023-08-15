@@ -20,7 +20,7 @@ const safetyItems = [
   },
   {
     id: "collateral",
-    title: "0.5% Oracle Latency.",
+    title: "Secure Price Feeds.",
     logo: chainlink,
   },
   {
