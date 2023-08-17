@@ -27,7 +27,7 @@ const SectionMain = () => (
         </div>
         <br></br>
         <p className="home-subheader">
-        TRADE TOTAL CRYPTO MARKET CAP <br></br> <span className="neon-green">WITH UP TO 20X LEVERAGE</span>
+        TRADE CUTTING EDGE PERPETUAL MARKETS <br></br> <span className="neon-green">WITH UP TO 20X LEVERAGE</span>
         </p>
       </div>
       <div className="main-buttons">
