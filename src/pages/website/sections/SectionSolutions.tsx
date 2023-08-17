@@ -132,7 +132,7 @@ const SectionProducts = () => {
               rel="noreferrer"
               target={"_blank"}
             >
-              PROVIDE
+              PROVIDE LIQUIDITY
             </a>
           </div>
         </div>
@@ -176,7 +176,7 @@ const SectionProducts = () => {
               rel="noreferrer"
               target={"_blank"}
             >
-              PROVIDE
+              PROVIDE LIQUIDITY
             </a>
           </div>
         </div>
