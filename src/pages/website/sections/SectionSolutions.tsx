@@ -132,7 +132,7 @@ const SectionProducts = () => {
               rel="noreferrer"
               target={"_blank"}
             >
-              PROVIDE
+              PROVIDE LIQUIDITY
             </a>
           </div>
         </div>
@@ -142,7 +142,8 @@ const SectionProducts = () => {
               PERPE
             </h2>
             <p className="subtitle">
-              PERPE / PEPE Perpetual Market with up to 20x leverage.
+              PERPE / PEPE Perpetual Market with up to 20x leverage.{" "}
+              <a className="learn-more-link" href="https://cryptex.finance/blog/2023-08-10-introducing-perpe/">Learn More.</a>
             </p>
             <div className="index-prices">
               <p className="subtitle">
@@ -175,7 +176,7 @@ const SectionProducts = () => {
               rel="noreferrer"
               target={"_blank"}
             >
-              PROVIDE
+              PROVIDE LIQUIDITY
             </a>
           </div>
         </div>
