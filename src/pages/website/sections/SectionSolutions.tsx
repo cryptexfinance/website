@@ -192,7 +192,7 @@ const SectionProducts = () => {
             </h2>
             <p className="subtitle">
               Ethereum Perpetual Market with up to 20x leverage.
-              {/* <a className="learn-more-link" href="https://cryptex.finance/blog/2023-08-10-introducing-perpe/">Learn More.</a> */}
+              <a className="learn-more-link" href="https://cryptex.finance/blog/2023-08-24-eth-perpetuals/">Learn More.</a>
             </p>
             <div className="index-prices">
               <p className="subtitle">
