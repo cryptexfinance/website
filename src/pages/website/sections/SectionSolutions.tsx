@@ -22,6 +22,7 @@ const SectionProducts = () => {
   const [jpegzPrice, setJpegzPrice] = useState("3.10");
   const [jpegzTotalCap, setJpegzTotalCap] = useState("0.00");
   const [pepePrice, setPepePrice] = useState("0.000001262");
+  const [ethPrice, setEthPrice] = useState("0.00000");
   const contracts = useContext(contractsContext);
   const arbContracts = useContext(arbContractsContext);
   const arbSigner = useContext(arbSignerContext);
@@ -31,6 +32,7 @@ const SectionProducts = () => {
     const load = async () => {
       if (signer.ethcallProvider && contracts.tcapOracleRead) {
         const tcapOraclePriceCall = await contracts.tcapOracleRead?.getLatestAnswer();
+
         // @ts-ignore
         const [currentTcapPrice] = await signer.ethcallProvider?.all([tcapOraclePriceCall]);
         const totalTcapPrice = currentTcapPrice.mul(10000000000);
@@ -45,11 +47,13 @@ const SectionProducts = () => {
       if (arbSigner.ethcallProvider && arbContracts.jpegzOracleRead) {
         const jpegzOraclePriceCall = await arbContracts.jpegzOracleRead?.getLatestAnswer();
         const pepeOraclePriceCall = await arbContracts.pepeOracleRead?.latestAnswer();
+        const ethOraclePriceCall = await arbContracts.ethOracleRead?.latestAnswer();
 
         // @ts-ignore
-        const [currentJpegzPrice, currentPepePrice] = await arbSigner.ethcallProvider?.all([
+        const [currentJpegzPrice, currentPepePrice, currentEthPrice] = await arbSigner.ethcallProvider?.all([
           jpegzOraclePriceCall,
-          pepeOraclePriceCall
+          pepeOraclePriceCall,
+          ethOraclePriceCall,
         ]);
         const totalJpegzPrice = currentJpegzPrice.mul(10000000000);
         const jPrice = ethers.utils.formatEther(currentJpegzPrice.mul(10));
@@ -58,6 +62,7 @@ const SectionProducts = () => {
 
         const pPrice = ethers.utils.formatEther(currentPepePrice);
         setPepePrice(parseFloat(pPrice).toFixed(9));
+        setEthPrice(ethers.utils.formatEther(currentEthPrice.mul(10000000000)));
       }
     }
     loadArbitrum();
@@ -142,7 +147,7 @@ const SectionProducts = () => {
               PERPE
             </h2>
             <p className="subtitle">
-              PERPE / PEPE Perpetual Market with up to 20x leverage.{" "}
+              PEPE Perpetual Market with up to 20x leverage.{" "}
               <a className="learn-more-link" href="https://cryptex.finance/blog/2023-08-10-introducing-perpe/">Learn More.</a>
             </p>
             <div className="index-prices">
@@ -180,34 +185,21 @@ const SectionProducts = () => {
             </a>
           </div>
         </div>
-        {/* <div className="box box-button-unclickable solutions-item section-bg-jpegz">
+        <div className="box box-button-unclickable solutions-item section-bg-eth">
           <div className="solutions-info">
             <h2 className="heading-secondary">
-              JPEGz
+              ETHER
             </h2>
             <p className="subtitle">
-              Blue Chip NFT Market Cap with up to 20x leverage.
+              Ethereum Perpetual Market with up to 20x leverage.
+              <a className="learn-more-link" href="https://cryptex.finance/blog/2023-08-24-eth-perpetuals/">Learn More.</a>
             </p>
             <div className="index-prices">
-              <p className="subtitle">
-                <span className="number-blue">
-                <NumericFormat
-                  className="number-blue"
-                  value={jpegzTotalCap}
-                  displayType="text"
-                  thousandSeparator
-                  prefix="$"
-                  decimalScale={0}
-                />
-                </span>
-                <br></br>
-                Total NFT Market Cap.
-              </p>
               <p className="subtitle">
               <span className="number-blue">
                 <NumericFormat
                   className="number-blue"
-                  value={jpegzPrice}
+                  value={ethPrice}
                   displayType="text"
                   thousandSeparator
                   prefix="$"
@@ -215,14 +207,28 @@ const SectionProducts = () => {
                 />
                 </span>
                 <br></br>
-                JPEGz Price
+                ETH Price
               </p>
             </div>
           </div>
           <div className="solutions-link inline-helper">
-            <h3 className="ml-auto mr-auto">Coming soon...</h3>
+            <a
+              className="button-outlined-purple button-hover-transparent main-button same-size-button"
+              target={"_blank"}
+              href="https://v2.cryptex.finance/eth"
+            >
+              TRADE
+            </a>
+            <a
+              className="button-outlined-purple button-hover-transparent main-button pull-right same-size-button"
+              href="https://v2.cryptex.finance/liquidity/eth"
+              rel="noreferrer"
+              target={"_blank"}
+            >
+              PROVIDE LIQUIDITY
+            </a>
           </div>
-        </div> */}
+        </div>
       </div>
     </div>
   );
