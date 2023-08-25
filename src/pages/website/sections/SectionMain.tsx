@@ -48,7 +48,7 @@ const SectionMain = () => (
               rel="noopener noreferrer"
               className="button-outlined-purple main-button"
             >
-              PROVIDE
+              PROVIDE LIQUIDITY
             </a>
           </div>
         </Col>
