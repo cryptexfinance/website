@@ -154,7 +154,7 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 100vh;
+  // height: 100vh;
   margin: 6.5rem;
   padding: 5rem 2rem;
 
@@ -221,9 +221,11 @@ body {
     }
   }
   .solutions {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
+    // display: flex;
+    // flex-direction: row;
+    // justify-content: center;
+    display: grid;
+    grid-template-columns: auto auto;
     margin: 1rem 0rem;
     // width: 100%;
 
@@ -232,8 +234,8 @@ body {
       flex-direction: column;
       justify-content: space-between;
       height: 27rem;
-      width: 28rem;
-      margin: 2rem 1rem;
+      width: 30rem;
+      // margin: 2rem 1rem;
 
       @media (max-width: 1300px) {
         height: 30rem;
@@ -694,7 +696,7 @@ body {
 @media only screen and (max-device-width: 1180px) { 
   .section-solutions {
     margin: 2rem 1rem;
-    height: 90vh;
+    // height: 90vh;
   }
   .section-governance {
     height: 90vh;

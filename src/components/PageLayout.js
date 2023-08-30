@@ -23,6 +23,7 @@ const PageLayout = ({ children }) => {
 
   const pepeAggregatorAddress = "0x02DEd5a7EDDA750E3Eb240b54437a54d57b74dBE";
   const ethAggregatorAddress = "0x639Fe6ab55C921f74e7fac1ee960C0B6293ba612";
+  const arbAggregatorAddress = "0xb2A824043730FE05F3DA2efaFa1CBbe83fa548D6";
 
   useEffect(() => {
     const loadContracts = async () => {
@@ -82,8 +83,14 @@ const PageLayout = ({ children }) => {
       const currentEthOracleRead = new Contract(
         ethAggregatorAddress,
         agregatorAbi
-      )
+      );
       arbContracts.setCurrentEthOracleRead(currentEthOracleRead);
+
+      const currentArbOracleRead = new Contract(
+        arbAggregatorAddress,
+        agregatorAbi
+      );
+      arbContracts.setCurrentArbOracleRead(currentArbOracleRead);
     }
     loadContracts()
   }, [])

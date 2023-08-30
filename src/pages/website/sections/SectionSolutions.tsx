@@ -19,10 +19,11 @@ const SectionProducts = () => {
 
   const [tcapPrice, setTcapPrice] = useState("111.30");
   const [tcapTotalCap, setTcapTotalCap] = useState("0.00");
-  const [jpegzPrice, setJpegzPrice] = useState("3.10");
-  const [jpegzTotalCap, setJpegzTotalCap] = useState("0.00");
+  // const [jpegzPrice, setJpegzPrice] = useState("3.10");
+  // const [jpegzTotalCap, setJpegzTotalCap] = useState("0.00");
   const [pepePrice, setPepePrice] = useState("0.000001262");
   const [ethPrice, setEthPrice] = useState("0.00000");
+  const [arbPrice, setArbPrice] = useState("0.00000");
   const contracts = useContext(contractsContext);
   const arbContracts = useContext(arbContractsContext);
   const arbSigner = useContext(arbSignerContext);
@@ -44,25 +45,28 @@ const SectionProducts = () => {
     load();
 
     const loadArbitrum = async() => {
-      if (arbSigner.ethcallProvider && arbContracts.jpegzOracleRead) {
-        const jpegzOraclePriceCall = await arbContracts.jpegzOracleRead?.getLatestAnswer();
-        const pepeOraclePriceCall = await arbContracts.pepeOracleRead?.latestAnswer();
+      if (arbSigner.ethcallProvider && arbContracts.arbOracleRead) {
+        // const jpegzOraclePriceCall = await arbContracts.jpegzOracleRead?.getLatestAnswer();
+        const arbOraclePriceCall = await arbContracts.arbOracleRead?.latestAnswer();
         const ethOraclePriceCall = await arbContracts.ethOracleRead?.latestAnswer();
+        const pepeOraclePriceCall = await arbContracts.pepeOracleRead?.latestAnswer();
+        
 
         // @ts-ignore
-        const [currentJpegzPrice, currentPepePrice, currentEthPrice] = await arbSigner.ethcallProvider?.all([
-          jpegzOraclePriceCall,
+        const [currentArbPrice, currentPepePrice, currentEthPrice] = await arbSigner.ethcallProvider?.all([
+          arbOraclePriceCall,
           pepeOraclePriceCall,
           ethOraclePriceCall,
         ]);
-        const totalJpegzPrice = currentJpegzPrice.mul(10000000000);
-        const jPrice = ethers.utils.formatEther(currentJpegzPrice.mul(10));
-        setJpegzPrice(parseFloat(jPrice).toFixed(2));
-        setJpegzTotalCap(ethers.utils.formatEther(totalJpegzPrice));
+        // const totalJpegzPrice = currentJpegzPrice.mul(10000000000);
+        // const jPrice = ethers.utils.formatEther(currentJpegzPrice.mul(10));
+        // setJpegzPrice(parseFloat(jPrice).toFixed(2));
+        // setJpegzTotalCap(ethers.utils.formatEther(totalJpegzPrice));
 
         const pPrice = ethers.utils.formatEther(currentPepePrice);
         setPepePrice(parseFloat(pPrice).toFixed(9));
         setEthPrice(ethers.utils.formatEther(currentEthPrice.mul(10000000000)));
+        setArbPrice(ethers.utils.formatEther(currentArbPrice.mul(10000000000)));
       }
     }
     loadArbitrum();
@@ -80,9 +84,7 @@ const SectionProducts = () => {
         Markets
       </h1>
       <div className="solutions">
-        <div
-          className="box box-button-unclickable solutions-item section-bg-tcap"
-        >
+        <div className="box box-button-unclickable solutions-item section-bg-tcap">
           <div className="solutions-info">
             <h2 className="heading-secondary">
               TCAP
@@ -222,6 +224,50 @@ const SectionProducts = () => {
             <a
               className="button-outlined-purple button-hover-transparent main-button pull-right same-size-button"
               href="https://v2.cryptex.finance/liquidity/eth"
+              rel="noreferrer"
+              target={"_blank"}
+            >
+              PROVIDE LIQUIDITY
+            </a>
+          </div>
+        </div>
+        <div className="box box-button-unclickable solutions-item section-bg-eth">
+          <div className="solutions-info">
+            <h2 className="heading-secondary">
+              ARBITRUM
+            </h2>
+            <p className="subtitle">
+              Arbitrum Perpetual Market with up to 20x leverage.{" "}
+              <a className="learn-more-link" href="https://cryptex.finance/blog/2023-08-24-eth-perpetuals/">Learn More.</a>
+            </p>
+            <div className="index-prices">
+              <p className="subtitle">
+              <span className="number-blue">
+                <NumericFormat
+                  className="number-blue"
+                  value={arbPrice}
+                  displayType="text"
+                  thousandSeparator
+                  prefix="$"
+                  decimalScale={2}
+                />
+                </span>
+                <br></br>
+                ARB Price
+              </p>
+            </div>
+          </div>
+          <div className="solutions-link inline-helper">
+            <a
+              className="button-outlined-purple button-hover-transparent main-button same-size-button"
+              target={"_blank"}
+              href="https://v2.cryptex.finance/arb"
+            >
+              TRADE
+            </a>
+            <a
+              className="button-outlined-purple button-hover-transparent main-button pull-right same-size-button"
+              href="https://v2.cryptex.finance/liquidity/arb"
               rel="noreferrer"
               target={"_blank"}
             >
