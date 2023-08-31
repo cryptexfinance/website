@@ -46,6 +46,7 @@ const SectionProducts = () => {
       }
     }
   );
+  const [loadingVaultsData, setLoadingVaultsData] = useState(true);
   const contracts = useContext(contractsContext);
   const arbContracts = useContext(arbContractsContext);
   const arbSigner = useContext(arbSignerContext);
@@ -132,7 +133,7 @@ const SectionProducts = () => {
           tcapCapacity,
         ] = await arbSigner.ethcallProvider?.all(liquidityCalls);
 
-        
+
         vaultsLiquidity[TOKENS_SYMBOL.arb].currentLiquidity = parseFloat(utils.formatEther(arbCurrentLiquidity));
         vaultsLiquidity[TOKENS_SYMBOL.arb].capacity = parseFloat(utils.formatEther(arbCapacity));
         vaultsLiquidity[TOKENS_SYMBOL.eth].currentLiquidity = parseFloat(utils.formatEther(ethCurrentLiquidity));
@@ -143,8 +144,8 @@ const SectionProducts = () => {
         vaultsLiquidity[TOKENS_SYMBOL.tcap].capacity = parseFloat(utils.formatEther(tcapCapacity));
 
         console.log("vLiquidity: ", vLiquidity);
-
         setVaultsLiquidity(vLiquidity);
+        setLoadingVaultsData(false);
       }
     };
 
@@ -200,7 +201,9 @@ const SectionProducts = () => {
                 <span className="number-blue">
                   <NumericFormat
                     className="number-blue"
-                    value={vaultsLiquidity[TOKENS_SYMBOL.tcap].currentLiquidity}
+                    value={
+                      !loadingVaultsData ? vaultsLiquidity[TOKENS_SYMBOL.tcap].currentLiquidity : 0
+                    }
                     displayType="text"
                     thousandSeparator
                     prefix="$"
@@ -211,7 +214,9 @@ const SectionProducts = () => {
                 <span className="number-blue">
                   <NumericFormat
                     className="number-blue"
-                    value={vaultsLiquidity[TOKENS_SYMBOL.tcap].capacity}
+                    value={
+                      !loadingVaultsData ? vaultsLiquidity[TOKENS_SYMBOL.tcap].capacity : 3000000
+                    }
                     displayType="text"
                     thousandSeparator
                     prefix="$"
@@ -269,7 +274,9 @@ const SectionProducts = () => {
                 <span className="number-blue">
                   <NumericFormat
                     className="number-blue"
-                    value={vaultsLiquidity[TOKENS_SYMBOL.pepe].currentLiquidity}
+                    value={
+                      !loadingVaultsData ? vaultsLiquidity[TOKENS_SYMBOL.pepe].currentLiquidity : 0
+                    }
                     displayType="text"
                     thousandSeparator
                     prefix="$"
@@ -280,7 +287,9 @@ const SectionProducts = () => {
                 <span className="number-blue">
                   <NumericFormat
                     className="number-blue"
-                    value={vaultsLiquidity[TOKENS_SYMBOL.pepe].capacity}
+                    value={
+                      !loadingVaultsData ? vaultsLiquidity[TOKENS_SYMBOL.pepe].capacity : 3000000
+                    }
                     displayType="text"
                     thousandSeparator
                     prefix="$"
@@ -386,7 +395,7 @@ const SectionProducts = () => {
             </h2>
             <p className="subtitle">
               Arbitrum Perpetual Market with up to 20x leverage.{" "}
-              <a className="learn-more-link" href="https://cryptex.finance/blog/2023-08-24-eth-perpetuals/">Learn More.</a>
+              <a className="learn-more-link" href="https://cryptex.finance/blog/2023-08-31-arb-perpetuals/">Learn More.</a>
             </p>
             <div className="index-prices">
               <p className="subtitle">
