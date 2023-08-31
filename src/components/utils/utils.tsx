@@ -1,4 +1,5 @@
-import { PostItemType } from "../types";
+import { Contract } from "ethers-multicall"
+import { VAULTS } from "../../utils";
 
 export const sortAlpha = (a, b) => {
   if (a.value > b.value) {
@@ -34,4 +35,9 @@ export const sanitizePostData = (data) => {
     }
   }
   return postItem;
+};
+
+
+export const getVaultContract = (vaultAddress: string): Contract => {
+  return new Contract(vaultAddress, VAULTS.abi);
 };

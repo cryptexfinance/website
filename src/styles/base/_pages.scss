@@ -221,9 +221,6 @@ body {
     }
   }
   .solutions {
-    // display: flex;
-    // flex-direction: row;
-    // justify-content: center;
     display: grid;
     grid-template-columns: auto auto;
     margin: 1rem 0rem;
@@ -233,12 +230,13 @@ body {
       display: flex;
       flex-direction: column;
       justify-content: space-between;
-      height: 27rem;
-      width: 30rem;
+      height: 31rem;
+      width: 33rem;
       // margin: 2rem 1rem;
 
       @media (max-width: 1300px) {
-        height: 30rem;
+        height: 33rem;
+        width: 34rem;
       }
 
       .terciary-header {

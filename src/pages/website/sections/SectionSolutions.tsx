@@ -1,8 +1,10 @@
 import React, { useContext, useEffect, useState } from "react";
 import { useStaticQuery, graphql } from "gatsby";
 import { contractsContext, signerContext, arbContractsContext, arbSignerContext  } from "../../../context";
-import { ethers } from "ethers";
+import { ethers, utils } from "ethers";
 import { NumericFormat } from "react-number-format";
+import { getVaultContract } from "../../../components/utils/utils";
+import { TOKENS_SYMBOL, VAULTS } from "../../../utils";
 
 
 const SectionProducts = () => {
@@ -24,6 +26,26 @@ const SectionProducts = () => {
   const [pepePrice, setPepePrice] = useState("0.000001262");
   const [ethPrice, setEthPrice] = useState("0.00000");
   const [arbPrice, setArbPrice] = useState("0.00000");
+  const [vaultsLiquidity, setVaultsLiquidity] = useState(
+    {
+      [TOKENS_SYMBOL.arb]: {
+        currentLiquidity: 0,
+        capacity: 500000,
+      },
+      [TOKENS_SYMBOL.eth]: {
+        currentLiquidity: 0,
+        capacity: 6000000,
+      },
+      [TOKENS_SYMBOL.pepe]: {
+        currentLiquidity: 0,
+        capacity: 3000000,
+      },
+      [TOKENS_SYMBOL.tcap]: {
+        currentLiquidity: 0,
+        capacity: 3000000,
+      }
+    }
+  );
   const contracts = useContext(contractsContext);
   const arbContracts = useContext(arbContractsContext);
   const arbSigner = useContext(arbSignerContext);
@@ -44,7 +66,7 @@ const SectionProducts = () => {
     };
     load();
 
-    const loadArbitrum = async() => {
+    const loadArbitrum = async () => {
       if (arbSigner.ethcallProvider && arbContracts.arbOracleRead) {
         // const jpegzOraclePriceCall = await arbContracts.jpegzOracleRead?.getLatestAnswer();
         const arbOraclePriceCall = await arbContracts.arbOracleRead?.latestAnswer();
@@ -77,6 +99,57 @@ const SectionProducts = () => {
       console.log("Error with props in team");
     }
   }, [signer.ethcallProvider, arbSigner.ethcallProvider]);
+
+  useEffect(() => {
+    const loadVaultsLiquidity = async () => {
+      if (arbSigner.ethcallProvider) {
+        const vLiquidity = vaultsLiquidity;
+        const arbVault = getVaultContract(VAULTS.arbAddress);
+        const ethVault = getVaultContract(VAULTS.ethAddress);
+        const pepeVault = getVaultContract(VAULTS.pepeAddress);
+        const tcapVault = getVaultContract(VAULTS.tcapAddress);
+
+        const liquidityCalls = [
+          await arbVault.totalAssets(),
+          await arbVault.maxCollateral(),
+          await ethVault.totalAssets(),
+          await ethVault.maxCollateral(),
+          await pepeVault.totalAssets(),
+          await pepeVault.maxCollateral(),
+          await tcapVault.totalAssets(),
+          await tcapVault.maxCollateral(),
+        ];
+
+        // @ts-ignore
+        const [
+          arbCurrentLiquidity,
+          arbCapacity,
+          ethCurrentLiquidity,
+          ethCapacity,
+          pepeCurrentLiquidity,
+          pepeCapacity,
+          tcapCurrentLiquidity,
+          tcapCapacity,
+        ] = await arbSigner.ethcallProvider?.all(liquidityCalls);
+
+        
+        vaultsLiquidity[TOKENS_SYMBOL.arb].currentLiquidity = parseFloat(utils.formatEther(arbCurrentLiquidity));
+        vaultsLiquidity[TOKENS_SYMBOL.arb].capacity = parseFloat(utils.formatEther(arbCapacity));
+        vaultsLiquidity[TOKENS_SYMBOL.eth].currentLiquidity = parseFloat(utils.formatEther(ethCurrentLiquidity));
+        vaultsLiquidity[TOKENS_SYMBOL.eth].capacity = parseFloat(utils.formatEther(ethCapacity));
+        vaultsLiquidity[TOKENS_SYMBOL.pepe].currentLiquidity = parseFloat(utils.formatEther(pepeCurrentLiquidity));
+        vaultsLiquidity[TOKENS_SYMBOL.pepe].capacity = parseFloat(utils.formatEther(pepeCapacity));
+        vaultsLiquidity[TOKENS_SYMBOL.tcap].currentLiquidity = parseFloat(utils.formatEther(tcapCurrentLiquidity));
+        vaultsLiquidity[TOKENS_SYMBOL.tcap].capacity = parseFloat(utils.formatEther(tcapCapacity));
+
+        console.log("vLiquidity: ", vLiquidity);
+
+        setVaultsLiquidity(vLiquidity);
+      }
+    };
+
+    loadVaultsLiquidity();
+  }, [arbSigner.ethcallProvider]);
 
   return (
     <div id="solutions" className="section-solutions">
@@ -123,6 +196,31 @@ const SectionProducts = () => {
                 <br></br>
                 TCAP Price
               </p>
+              <p className="subtitle">
+                <span className="number-blue">
+                  <NumericFormat
+                    className="number-blue"
+                    value={vaultsLiquidity[TOKENS_SYMBOL.tcap].currentLiquidity}
+                    displayType="text"
+                    thousandSeparator
+                    prefix="$"
+                    suffix=" / "
+                    decimalScale={0}
+                  />
+                </span>
+                <span className="number-blue">
+                  <NumericFormat
+                    className="number-blue"
+                    value={vaultsLiquidity[TOKENS_SYMBOL.tcap].capacity}
+                    displayType="text"
+                    thousandSeparator
+                    prefix="$"
+                    decimalScale={0}
+                  />
+                </span>
+                <br></br>
+                Market Liquidity
+              </p>
             </div>  
           </div>
           <div className="solutions-link inline-helper">
@@ -154,18 +252,43 @@ const SectionProducts = () => {
             </p>
             <div className="index-prices">
               <p className="subtitle">
-              <span className="number-blue">
-                <NumericFormat
-                  className="number-blue"
-                  value={pepePrice}
-                  displayType="text"
-                  thousandSeparator
-                  prefix="$"
-                  decimalScale={9}
-                />
+                <span className="number-blue">
+                  <NumericFormat
+                    className="number-blue"
+                    value={pepePrice}
+                    displayType="text"
+                    thousandSeparator
+                    prefix="$"
+                    decimalScale={9}
+                  />
                 </span>
                 <br></br>
                 PEPE Price
+              </p>
+              <p className="subtitle">
+                <span className="number-blue">
+                  <NumericFormat
+                    className="number-blue"
+                    value={vaultsLiquidity[TOKENS_SYMBOL.pepe].currentLiquidity}
+                    displayType="text"
+                    thousandSeparator
+                    prefix="$"
+                    suffix=" / "
+                    decimalScale={0}
+                  />
+                </span>
+                <span className="number-blue">
+                  <NumericFormat
+                    className="number-blue"
+                    value={vaultsLiquidity[TOKENS_SYMBOL.pepe].capacity}
+                    displayType="text"
+                    thousandSeparator
+                    prefix="$"
+                    decimalScale={0}
+                  />
+                </span>
+                <br></br>
+                Market Liquidity
               </p>
             </div>
           </div>
@@ -198,7 +321,7 @@ const SectionProducts = () => {
             </p>
             <div className="index-prices">
               <p className="subtitle">
-              <span className="number-blue">
+                <span className="number-blue">
                 <NumericFormat
                   className="number-blue"
                   value={ethPrice}
@@ -210,6 +333,31 @@ const SectionProducts = () => {
                 </span>
                 <br></br>
                 ETH Price
+              </p>
+              <p className="subtitle">
+                <span className="number-blue">
+                  <NumericFormat
+                    className="number-blue"
+                    value={vaultsLiquidity[TOKENS_SYMBOL.eth].currentLiquidity}
+                    displayType="text"
+                    thousandSeparator
+                    prefix="$"
+                    suffix=" / "
+                    decimalScale={0}
+                  />
+                </span>
+                <span className="number-blue">
+                  <NumericFormat
+                    className="number-blue"
+                    value={vaultsLiquidity[TOKENS_SYMBOL.eth].capacity}
+                    displayType="text"
+                    thousandSeparator
+                    prefix="$"
+                    decimalScale={0}
+                  />
+                </span>
+                <br></br>
+                Market Liquidity
               </p>
             </div>
           </div>
@@ -254,6 +402,31 @@ const SectionProducts = () => {
                 </span>
                 <br></br>
                 ARB Price
+              </p>
+              <p className="subtitle">
+                <span className="number-blue">
+                  <NumericFormat
+                    className="number-blue"
+                    value={vaultsLiquidity[TOKENS_SYMBOL.arb].currentLiquidity}
+                    displayType="text"
+                    thousandSeparator
+                    prefix="$"
+                    suffix=" / "
+                    decimalScale={0}
+                  />
+                </span>
+                <span className="number-blue">
+                  <NumericFormat
+                    className="number-blue"
+                    value={vaultsLiquidity[TOKENS_SYMBOL.arb].capacity}
+                    displayType="text"
+                    thousandSeparator
+                    prefix="$"
+                    decimalScale={0}
+                  />
+                </span>
+                <br></br>
+                Market Liquidity
               </p>
             </div>
           </div>
