@@ -388,7 +388,7 @@ const SectionProducts = () => {
             </a>
           </div>
         </div>
-        <div className="box box-button-unclickable solutions-item section-bg-eth">
+        <div className="box box-button-unclickable solutions-item section-bg-arb">
           <div className="solutions-info">
             <h2 className="heading-secondary">
               ARBITRUM
