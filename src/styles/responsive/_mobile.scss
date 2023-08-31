@@ -57,8 +57,15 @@
     text-align: center;
   }
 
+  .section-solutions {
+    .solutions {
+      grid-template-columns: auto;
+    }
+  }
+
   .section-solutions .inline-helper {
     flex-direction: column;
+
   }
 
   .same-size-button{
@@ -368,7 +375,7 @@
       margin-top: 6rem;
     }
     .solutions {
-      flex-direction: column;
+      grid-template-columns: auto;
       margin-top: 2rem;
       margin-bottom: 4rem;
       &-info  {
@@ -379,7 +386,7 @@
         margin-top: 7.5rem;
       }
       &-item {
-        height: 110rem;
+        height: 120rem;
         width: 100%;
         margin-top: 6rem;
 

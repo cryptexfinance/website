@@ -21,6 +21,8 @@ export interface IArbContractsContext {
   setCurrentPepeOracleRead: (currentOracle: Contract) => void;
   ethOracleRead?: Contract;
   setCurrentEthOracleRead: (currentOracle: Contract) => void;
+  arbOracleRead?: Contract;
+  setCurrentArbOracleRead: (currentOracle: Contract) => void;
 }
 
 export const CONTRACTS_DEFAULT_VALUE = {
@@ -35,6 +37,7 @@ export const ARB_CONTRACTS_DEFAULT_VALUE = {
   setCurrentJpegzOracleRead: () => {},
   setCurrentPepeOracleRead: () => {},
   setCurrentEthOracleRead: () => {},
+  setCurrentArbOracleRead: () => {},
 };
 
 export const contractsContext = React.createContext<IContractsContext>(CONTRACTS_DEFAULT_VALUE);
