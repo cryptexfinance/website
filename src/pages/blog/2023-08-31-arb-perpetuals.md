@@ -5,7 +5,7 @@ author: Joe
 date: 2023-09-01T03:22:39.196Z
 description: "Cryptex V2: 20x Arbitrum Perpetual Market, now Live on Arbitrum."
 featuredpost: true
-featuredimage: /img/eth-perepetual.png
+featuredimage: /img/arb-perpetual.jpg
 tags:
   - Cryptex V2
   - ARB
