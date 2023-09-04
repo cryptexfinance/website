@@ -2,7 +2,7 @@
 templateKey: blog-post
 title: "ARB Perpetuals. "
 author: Joe
-date: 2023-09-01T03:22:39.196Z
+date: 2023-08-31T16:07:32.034Z
 description: "Cryptex V2: 20x Arbitrum Perpetual Market, now Live on Arbitrum."
 featuredpost: true
 featuredimage: /img/arb-perpetual.jpg
