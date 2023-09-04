@@ -13,7 +13,7 @@ const Seo = ({ description, lang, meta, image: img, title, pathname }) => {
 
   const links = [
     { rel: `canonical`, href: canonical },
-    { rel: `icon`, href: `${site.siteMetadata.siteUrl}/favicon.svg` },
+    { rel: `icon`, href: `${site.siteMetadata.siteUrl}/favicon.ico` },
     { rel: `apple-touch-icon`, href: `${site.siteMetadata.siteUrl}/cryptex512.png` },
     { rel: `apple-touch-icon`, sizes: "256x256", href: `${site.siteMetadata.siteUrl}/cryptex256.png` },
     { rel: `apple-touch-icon`, sizes: "128x128", href: `${site.siteMetadata.siteUrl}/crytpex128.png` },
@@ -25,7 +25,7 @@ const Seo = ({ description, lang, meta, image: img, title, pathname }) => {
     <Helmet
       htmlAttributes={{ lang }}
       title={title}
-      titleTemplate={`%s | ${site.siteMetadata.title}`}
+      titleTemplate={site.siteMetadata.title}
       link={links}
       meta={[
         { name: "description", content: metaDescription },
