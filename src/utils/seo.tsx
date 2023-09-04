@@ -9,14 +9,24 @@ const Seo = ({ description, lang, meta, image: img, title, pathname }) => {
   const metaDescription = description || site.siteMetadata.description
   //  const image = img && img.src ? `${site.siteMetadata.siteUrl}${img.src}` : null
 
-  const canonical = pathname ? `${site.siteMetadata.siteUrl}${pathname}` : null
+  const canonical = pathname ? `${site.siteMetadata.siteUrl}${pathname}` : "https://cryptex.finance/"
+
+  const links = [
+    { rel: `canonical`, href: canonical },
+    { rel: `icon`, href: `${site.siteMetadata.siteUrl}/favicon.svg` },
+    { rel: `apple-touch-icon`, href: `${site.siteMetadata.siteUrl}/cryptex512.png` },
+    { rel: `apple-touch-icon`, sizes: "256x256", href: `${site.siteMetadata.siteUrl}/cryptex256.png` },
+    { rel: `apple-touch-icon`, sizes: "128x128", href: `${site.siteMetadata.siteUrl}/crytpex128.png` },
+    { rel: `apple-touch-icon`, sizes: "64x64", href: `${site.siteMetadata.siteUrl}/crytpex64.png` },
+    { rel: `apple-touch-icon`, sizes: "32x32", href: `${site.siteMetadata.siteUrl}/crytpex32.png` },
+  ];
 
   return (
     <Helmet
       htmlAttributes={{ lang }}
       title={title}
       titleTemplate={`%s | ${site.siteMetadata.title}`}
-      link={canonical ? [{ rel: `canonical`, href: canonical }] : []}
+      link={links}
       meta={[
         { name: "description", content: metaDescription },
         { name: "keywords", content: site.siteMetadata.keywords.join(`,`) },

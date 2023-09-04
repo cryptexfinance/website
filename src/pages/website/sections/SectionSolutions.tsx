@@ -143,7 +143,6 @@ const SectionProducts = () => {
         vaultsLiquidity[TOKENS_SYMBOL.tcap].currentLiquidity = parseFloat(utils.formatEther(tcapCurrentLiquidity));
         vaultsLiquidity[TOKENS_SYMBOL.tcap].capacity = parseFloat(utils.formatEther(tcapCapacity));
 
-        console.log("vLiquidity: ", vLiquidity);
         setVaultsLiquidity(vLiquidity);
         setLoadingVaultsData(false);
       }

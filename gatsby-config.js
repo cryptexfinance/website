@@ -35,6 +35,7 @@ module.exports = {
       "Projects",
       "Work",
       "TCAP",
+      "Perpetuals"
     ],
     siteUrl:
       process.env.SITE_URL || process.env.DEPLOY_URL || "http://localhost:8000",
