@@ -446,7 +446,7 @@
       &-icon {
         width: 32px;
         height: 32px;
-        margin-right: 20px;
+        margin-right: 18px;
 
         &.dfp {
           width: 30px;
@@ -688,6 +688,30 @@
       }
       &-link {
         font-size: 3.7rem;
+      }
+    }
+  }
+
+  @media only screen and (max-device-width: 390px) {
+    .section-governance {
+      .governance {
+        &-icon {
+          width: 31px;
+          height: 31px;
+          margin-right: 17px;
+        }
+      }
+    }
+  }
+
+  @media only screen and (max-device-width: 375px) {
+    .section-governance {
+      .governance {
+        &-icon {
+          width: 30px;
+          height: 30px;
+          margin-right: 15px;
+        }
       }
     }
   }

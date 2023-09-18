@@ -18,7 +18,9 @@ import sushiLogo from "../../../../static/website/governance/sushi-logo.svg";
 import uniLogo from "../../../../static/website/governance/uni-logo.svg";
 import coinbaseLogo from "../../../../static/website/governance/coinbase.svg";
 import huobiLogo from "../../../../static/website/governance/huobi.svg";
-import arbitrum from "../../../../static/website/protocol/arbitrum.svg";
+import camelotLogo from "../../../../static/website/governance/camelot.svg";
+import coingeckoLogo from "../../../../static/website/governance/coingecko.svg";
+
 
 
 type GovernanceType = {
@@ -84,6 +86,18 @@ const governanceIcons = [
     href: "https://www.sushi.com/pools/1:0x2a93167ed63a31f35ca4788e2eb9fbd9fa6089d0",
     icon: sushiLogo,
     alt: "Sushiswap Logo",
+    class: "",
+  },
+  {
+    href: "https://app.camelot.exchange/nitro/0x444D45d5d9612aBB596420fE81DA41a1aA98CeBa",
+    icon: camelotLogo,
+    alt: "Camelot Logo",
+    class: "",
+  },
+  {
+    href: "https://www.coingecko.com/en/coins/cryptex-finance",
+    icon: coingeckoLogo,
+    alt: "Coingecko Logo",
     class: "",
   },
 ]
