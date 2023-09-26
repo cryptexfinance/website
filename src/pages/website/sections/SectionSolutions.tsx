@@ -53,33 +53,20 @@ const SectionProducts = () => {
   const signer = useContext(signerContext);
 
   useEffect(() => {
-    const load = async () => {
-      if (signer.ethcallProvider && contracts.tcapOracleRead) {
-        const tcapOraclePriceCall = await contracts.tcapOracleRead?.getLatestAnswer();
-
-        // @ts-ignore
-        const [currentTcapPrice] = await signer.ethcallProvider?.all([tcapOraclePriceCall]);
-        const totalTcapPrice = currentTcapPrice.mul(10000000000);
-        const tPrice = ethers.utils.formatEther(totalTcapPrice.div(10000000000));
-        setTcapPrice(parseFloat(tPrice).toFixed(2));
-        setTcapTotalCap(ethers.utils.formatEther(totalTcapPrice));
-      }
-    };
-    load();
-
     const loadArbitrum = async () => {
       if (arbSigner.ethcallProvider && arbContracts.arbOracleRead) {
         // const jpegzOraclePriceCall = await arbContracts.jpegzOracleRead?.getLatestAnswer();
         const arbOraclePriceCall = await arbContracts.arbOracleRead?.latestAnswer();
         const ethOraclePriceCall = await arbContracts.ethOracleRead?.latestAnswer();
         const pepeOraclePriceCall = await arbContracts.pepeOracleRead?.latestAnswer();
-        
+        const tcapOraclePriceCall = await arbContracts.tcapOracleRead?.latestAnswer();
 
         // @ts-ignore
-        const [currentArbPrice, currentPepePrice, currentEthPrice] = await arbSigner.ethcallProvider?.all([
+        const [currentArbPrice, currentPepePrice, currentEthPrice, currentTcapPrice] = await arbSigner.ethcallProvider?.all([
           arbOraclePriceCall,
           pepeOraclePriceCall,
           ethOraclePriceCall,
+          tcapOraclePriceCall,
         ]);
         // const totalJpegzPrice = currentJpegzPrice.mul(10000000000);
         // const jPrice = ethers.utils.formatEther(currentJpegzPrice.mul(10));
@@ -90,6 +77,11 @@ const SectionProducts = () => {
         setPepePrice(parseFloat(pPrice).toFixed(9));
         setEthPrice(ethers.utils.formatEther(currentEthPrice.mul(10000000000)));
         setArbPrice(ethers.utils.formatEther(currentArbPrice.mul(10000000000)));
+
+        const totalTcapPrice = currentTcapPrice.mul(10000000000);
+        const tPrice = ethers.utils.formatEther(totalTcapPrice.div(10000000000));
+        setTcapPrice(parseFloat(tPrice).toFixed(2));
+        setTcapTotalCap(ethers.utils.formatEther(totalTcapPrice));
       }
     }
     loadArbitrum();
