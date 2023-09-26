@@ -21,9 +21,10 @@ const PageLayout = ({ children }) => {
   const arbContracts = useArbContracts()
   const arbSigner = useArbSigner()
 
-  const pepeAggregatorAddress = "0x02DEd5a7EDDA750E3Eb240b54437a54d57b74dBE";
-  const ethAggregatorAddress = "0x639Fe6ab55C921f74e7fac1ee960C0B6293ba612";
   const arbAggregatorAddress = "0xb2A824043730FE05F3DA2efaFa1CBbe83fa548D6";
+  const ethAggregatorAddress = "0x639Fe6ab55C921f74e7fac1ee960C0B6293ba612";
+  const pepeAggregatorAddress = "0x02DEd5a7EDDA750E3Eb240b54437a54d57b74dBE";
+  const tcapAggregatorAddress = "0x4763b84cdBc5211B9e0a57D5E39af3B3b2440012";
 
   useEffect(() => {
     const loadContracts = async () => {
@@ -68,6 +69,18 @@ const PageLayout = ({ children }) => {
       contracts.setCurrentDelegatorFactoryRead(currentDelegatorRead)
 
       // Arb contracts
+      const currentArbOracleRead = new Contract(
+        arbAggregatorAddress,
+        agregatorAbi
+      );
+      arbContracts.setCurrentArbOracleRead(currentArbOracleRead);
+
+      const currentEthOracleRead = new Contract(
+        ethAggregatorAddress,
+        agregatorAbi
+      );
+      arbContracts.setCurrentEthOracleRead(currentEthOracleRead);  
+
       const currentJpegzOracleRead = new Contract(
         jpegzOracle.address,
         jpegzOracle.abi
@@ -80,17 +93,11 @@ const PageLayout = ({ children }) => {
       )
       arbContracts.setCurrentPepeOracleRead(currentPepeOracleRead);
 
-      const currentEthOracleRead = new Contract(
-        ethAggregatorAddress,
+      const currentTcapArbOracleRead = new Contract(
+        tcapAggregatorAddress,
         agregatorAbi
-      );
-      arbContracts.setCurrentEthOracleRead(currentEthOracleRead);
-
-      const currentArbOracleRead = new Contract(
-        arbAggregatorAddress,
-        agregatorAbi
-      );
-      arbContracts.setCurrentArbOracleRead(currentArbOracleRead);
+      )
+      arbContracts.setCurrentTcapOracleRead(currentTcapArbOracleRead);
     }
     loadContracts()
   }, [])

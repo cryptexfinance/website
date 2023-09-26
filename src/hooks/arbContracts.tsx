@@ -7,6 +7,7 @@ export const useArbContracts = (): IArbContractsContext => {
   const [pepeOracleRead, setPepeOracleRead] = useState<Contract>();
   const [ethOracleRead, setEthOracleRead] = useState<Contract>();
   const [arbOracleRead, setArbOracleRead] = useState<Contract>();
+  const [tcapOracleRead, setTcapOracleRead] = useState<Contract>();
 
   const setCurrentJpegzOracleRead = React.useCallback((currentJpegzOracleRead: Contract): void => {
     setJpegzOracleRead(currentJpegzOracleRead);
@@ -20,6 +21,10 @@ export const useArbContracts = (): IArbContractsContext => {
   const setCurrentArbOracleRead = React.useCallback((currentArbOracleRead: Contract): void => {
     setArbOracleRead(currentArbOracleRead);
   }, []);
+  const setCurrentTcapOracleRead = React.useCallback((currentTcapOracleRead: Contract): void => {
+    setTcapOracleRead(currentTcapOracleRead);
+  }, []);
+
 
   return {
     jpegzOracleRead,
@@ -30,5 +35,7 @@ export const useArbContracts = (): IArbContractsContext => {
     setCurrentEthOracleRead,
     arbOracleRead,
     setCurrentArbOracleRead,
+    tcapOracleRead,
+    setCurrentTcapOracleRead,
   };
 };
