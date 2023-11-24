@@ -2,8 +2,8 @@ import React from "react";
 import Col from "react-bootstrap/esm/Col";
 import { useBreakpoint } from "gatsby-plugin-breakpoints";
 import appEndpoint from "../../../endpoint";
-import bgVideo from "../../../../static/bg_main_pi.mp4";
-import bgVideoMobile from "../../../../static/bg_mobile_pi.mp4";
+import bgVideo from "../../../../static/bg_main_pi.webm";
+import bgVideoMobile from "../../../../static/bg_mobile_pi.webm";
 import cryptexTitle from '../../../../static/website/home/cryptex_finance_v2.png'
 
 const SectionMain = () => {
@@ -20,7 +20,7 @@ const SectionMain = () => {
         className="video bgvid"
         id="bgvid"
       >
-        {!breakpoints.sm ? <source src={bgVideo} type="video/mp4" /> : <source src={bgVideoMobile} type="video/mp4" />}
+        {!breakpoints.sm ? <source src={bgVideo} type="video/webm" /> : <source src={bgVideoMobile} type="video/webm" />}
       </video>
       <div className="black-overlay"></div>
       <div className="main-container col-sm-12">
