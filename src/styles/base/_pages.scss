@@ -65,7 +65,7 @@ body {
       padding: 4rem 4rem;
     }
     &-info {
-      padding: 2rem 1rem;
+      padding: 0rem 1rem;
       width: 100%;
     }
     &-title {
@@ -90,17 +90,18 @@ body {
       justify-content: center;
       width: 17.4rem;
       height: 4.5rem;
-
+      background-color: #0D082A;
+      // border-color: #0D082A;
       &:hover {
         color: $color-white  !important;
         text-decoration: none;
+        background-color: #A440F2;
       }
     }
   }
 
   .cryptex-logo {
-    width: 480px;
-    margin-left: -10px;
+    width: 370px;
   }
 
   .main-buttons-social {

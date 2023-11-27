@@ -4,7 +4,6 @@ import { useBreakpoint } from "gatsby-plugin-breakpoints";
 import appEndpoint from "../../../endpoint";
 import bgVideo from "../../../../static/bg_main_pi.webm";
 import bgVideoMobile from "../../../../static/bg_mobile_pi.webm";
-import cryptexTitle from '../../../../static/website/home/cryptex_finance_v2.png'
 
 const SectionMain = () => {
   const breakpoints = useBreakpoint();
@@ -26,9 +25,8 @@ const SectionMain = () => {
       <div className="main-container col-sm-12">
         <div className="main-info">
           <div className="main-title">
-            <img className="cryptex-logo" src="/cryptex_pi_logo.png" alt="Logo" />
+            <img className="cryptex-logo" src="/logo.svg" alt="Logo" />
           </div>
-          <br></br>
           <p className="home-subheader">
             CUTTING EDGE PERPETUAL MARKETS <br /><br />
           </p>

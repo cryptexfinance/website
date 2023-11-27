@@ -66,7 +66,7 @@ const NavbarMenu = props => {
       <div className="nav-default">
         <Navbar fixed="top" collapseOnSelect expand="lg" variant="dark">
           <Navbar.Brand className="pl-3 ml-3" as={Link} to="/#home">
-            <img className="menu-logo tablet" src="/cryptex_pi_logo.png" alt="Logo" />
+            <img className="menu-logo tablet" src="/logo.svg" alt="Logo" />
           </Navbar.Brand>
           <Navbar.Toggle
             aria-controls="responsive-navbar-nav"
