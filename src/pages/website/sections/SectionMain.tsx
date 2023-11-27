@@ -26,7 +26,7 @@ const SectionMain = () => {
       <div className="main-container col-sm-12">
         <div className="main-info">
           <div className="main-title">
-            <h1 className="main-brand-text"> CRYPTEX V2 </h1>
+            <img className="cryptex-logo" src="/cryptex_pi_logo.png" alt="Logo" />
           </div>
           <br></br>
           <p className="home-subheader">
@@ -42,7 +42,7 @@ const SectionMain = () => {
                 className="button-outlined-purple main-button main-button-link"
                 target="https://app.cryptex.finance/"
               >
-                Launch APP
+                Launch App
               </a>
             </div>
             <div className="">
