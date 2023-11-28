@@ -5,6 +5,7 @@ import appEndpoint from "../../../endpoint";
 // import bgMobilePoster from "../../../../static/mobile_poster.png";
 import bgVideo from "../../../../static/bg_main_pi.webm";
 import bgVideoMobile from "../../../../static/bg_mobile_pi.mp4";
+import bgVideoMobileB from "../../../../static/bg_mobile_pi2.mp4";
 import bgVideoMobile2 from "../../../../static/bg_mobile_pi.webm";
 
 const SectionMain = () => {
@@ -25,8 +26,7 @@ const SectionMain = () => {
           ? <source src={bgVideo} type="video/webm" />
           : (
             <>
-              <source src={bgVideoMobile} type="video/mp4" />
-              <source src={bgVideoMobile2} type="video/webm" />
+              <source src={bgVideoMobileB} type="video/mp4" />
             </>
         )}
       </video>
