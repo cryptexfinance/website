@@ -20,7 +20,8 @@ const SectionMain = () => {
         className="video bgvid"
         id="bgvid"
       >
-        {!breakpoints.sm ? <source src={bgVideo} type="video/webm" /> : <source src={bgVideoMobile} type="video/mp4" />}
+        {/* !breakpoints.sm ? <source src={bgVideo} type="video/webm" /> : <source src={bgVideoMobile} type="video/mp4" /> */}
+        <source src={bgVideo} type="video/webm" />
       </video>
       <div className="black-overlay"></div>
       <div className="main-container col-sm-12">
