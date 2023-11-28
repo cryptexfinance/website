@@ -1,12 +1,19 @@
 @media only screen and (max-device-width: 600px) and (orientation: portrait) {
 
   .main-container{
-    position: absolute;
-    top: 0;
-    left: 0;
-    margin-top: 50rem;
-    padding: 15rem 5rem !important;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 14rem 2rem !important;
+    height: 100%;
+    width: 100%;
   }
+
+  .section-main {
+    .cryptex-logo {
+     width: 345px !important;
+    }
+  }  
 
   .card-text-why{
     font-size: 5rem;
@@ -20,8 +27,9 @@
 
   .video{
     width: 180%;
-    margin-left: -230px;
-    height: 90% !important;
+    margin-left: -200px;
+    height: 140% !important;
+    margin-top: 0%;
   }
 
   .main-brand-text{

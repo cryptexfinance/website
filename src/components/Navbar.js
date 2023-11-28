@@ -27,12 +27,7 @@ const NavbarMenu = props => {
 
   const blogView =
     typeof props.blogPost !== "undefined" ? props.blogPost : false
-  const productsUrl = blogView ? `${siteUrl}/#solutions` : "#solutions"
   const governanceUrl = blogView ? `${siteUrl}/#governance` : "#governance"
-  const safetyUrl = blogView ? `${siteUrl}/#protocol` : "#protocol"
-  const newsUrl = `${siteUrl}/blog`
-  const faqUrl = "https://cryptexfinance.notion.site/Cryptex-Finance-Wiki-9f29021042df4da6b6887553a879d691"
-  const ecosystemUrl = blogView ? `${siteUrl}/#community` : "#community"
   const docsUrl = "https://docs.cryptex.finance/"
 
   const NavMobile = () => {
@@ -55,22 +50,9 @@ const NavbarMenu = props => {
             className="justify-content-start"
           >
             <Nav className="nav-links">
-              <Nav.Link
-                as={Link}
-                to={productsUrl}
-                className="nav-links"
-                title="Products"
-              >
-                Markets
-              </Nav.Link>
-              <div className="nav-links-divisor"></div>
               <Nav.Link as={Link} to={governanceUrl} title="Governance">
                 Governance
               </Nav.Link>
-              <div className="nav-links-divisor"></div>
-              <Nav.Link as={Link} to={safetyUrl} title="Safety">
-                Why Cryptex
-              </Nav.Link>             
               <div className="nav-links-divisor"></div>
             </Nav>
           </Navbar.Collapse>
@@ -84,7 +66,7 @@ const NavbarMenu = props => {
       <div className="nav-default">
         <Navbar fixed="top" collapseOnSelect expand="lg" variant="dark">
           <Navbar.Brand className="pl-3 ml-3" as={Link} to="/#home">
-            <img className="menu-logo" src="/logo.svg" alt="Logo" />
+            <img className="menu-logo tablet" src="/logo.svg" alt="Logo" />
           </Navbar.Brand>
           <Navbar.Toggle
             aria-controls="responsive-navbar-nav"
@@ -97,22 +79,9 @@ const NavbarMenu = props => {
             className="justify-content-start"
           >
             <Nav className="nav-links">
-              <Nav.Link
-                as={Link}
-                to={productsUrl}
-                className="nav-links"
-                title="Products"
-              >
-                Markets
-              </Nav.Link>
               <Nav.Link as={Link} to={governanceUrl} title="CTX Governance">
                 Governance
               </Nav.Link>
-              <Nav.Link as={Link} to={safetyUrl} title="Safety">
-                Why Cryptex
-              </Nav.Link>
-              
-                      
             </Nav>
           </Navbar.Collapse>
           <a
