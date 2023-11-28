@@ -126,7 +126,12 @@ module.exports = {
     },
     "gatsby-plugin-sharp",
     "gatsby-transformer-sharp",
-    "gatsby-plugin-offline",
+    {
+      resolve: "gatsby-plugin-offline",
+      options: {
+        appendScript: require.resolve("./range-request-handler.js"),
+      },
+    },
     "gatsby-plugin-react-helmet",
     {
       resolve: `gatsby-plugin-nprogress`,
