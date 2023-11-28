@@ -2,9 +2,10 @@ import React from "react";
 import Col from "react-bootstrap/esm/Col";
 import { useBreakpoint } from "gatsby-plugin-breakpoints";
 import appEndpoint from "../../../endpoint";
-import bgMobilePoster from "../../../../static/mobile_poster.png";
+// import bgMobilePoster from "../../../../static/mobile_poster.png";
 import bgVideo from "../../../../static/bg_main_pi.webm";
 import bgVideoMobile from "../../../../static/bg_mobile_pi.mp4";
+import bgVideoMobile2 from "../../../../static/bg_mobile_pi.webm";
 
 const SectionMain = () => {
   const breakpoints = useBreakpoint();
@@ -16,12 +17,18 @@ const SectionMain = () => {
         loop
         muted
         playsInline
-        poster={!breakpoints.sm ? bgVideo : bgMobilePoster}
+        // poster={!breakpoints.sm ? bgVideo : bgMobilePoster}
         className="video bgvid"
         id="bgvid"
       >
-        {/* !breakpoints.sm ? <source src={bgVideo} type="video/webm" /> : <source src={bgVideoMobile} type="video/mp4" /> */}
-        <source src={bgVideo} type="video/webm" />
+        {!breakpoints.sm
+          ? <source src={bgVideo} type="video/webm" />
+          : (
+            <>
+              <source src={bgVideoMobile} type="video/mp4" />
+              <source src={bgVideoMobile2} type="video/webm" />
+            </>
+        )}
       </video>
       <div className="black-overlay"></div>
       <div className="main-container col-sm-12">
@@ -40,7 +47,7 @@ const SectionMain = () => {
                 href={appEndpoint}
                 rel="noopener noreferrer"
                 className="button-outlined-purple main-button main-button-link"
-                target="https://app.cryptex.finance/"
+                target="_blank"
               >
                 Launch App
               </a>
