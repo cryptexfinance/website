@@ -18,7 +18,7 @@ const SectionMain = () => {
         loop
         muted
         playsInline
-        // poster={!breakpoints.sm ? bgVideo : bgMobilePoster}
+        poster={bgVideoMobileB}
         className="video bgvid"
         id="bgvid"
       >
