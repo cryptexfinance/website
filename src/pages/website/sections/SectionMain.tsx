@@ -18,7 +18,7 @@ const SectionMain = () => {
         loop
         muted
         playsInline
-        poster={bgVideoMobileB}
+        poster={bgVideoMobile2}
         className="video bgvid"
         id="bgvid"
       >
@@ -26,7 +26,7 @@ const SectionMain = () => {
           ? <source src={bgVideo} type="video/webm" />
           : (
             <>
-              <source src={bgVideoMobileB} type="video/mp4" />
+              <source src={bgVideoMobile2} type="video/mp4" />
             </>
         )}
       </video>
