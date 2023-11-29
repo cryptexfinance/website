@@ -1,13 +1,14 @@
 ---
 templateKey: blog-post
-title: Introducing Pi
+title: Introducing π
 author: Voith
 date: 2023-11-29T00:03:42.028Z
 description: π is live and it's packed with a lot of features.
 featuredpost: true
 featuredimage: /img/cryptex_pi_post.jpg
 tags:
-  - Cryptex
+  - Cryptex π
+  - ARB
 ---
 ###### Here's a break down of what's new:
 
