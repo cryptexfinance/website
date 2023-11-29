@@ -29,7 +29,6 @@ Here's a break down of what's new:
 
 ###### Please note:
 
-π is entirely owned and operated by the Cryptex DAO.
 Access to π is restricted for users in certain jurisdictions.
 This is not an offer to sell tokens and is not investment advice.
 
