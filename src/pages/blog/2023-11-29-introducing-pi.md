@@ -7,7 +7,8 @@ description: π is live and it's packed with a lot of features.
 featuredpost: true
 featuredimage: /img/cryptex_pi_post.jpg
 tags:
-  - Cryptex
+  - Cryptex π
+  - ARB
 ---
 ###### Here's a break down of what's new:
 
