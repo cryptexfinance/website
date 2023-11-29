@@ -1,6 +1,6 @@
 ---
 templateKey: blog-post
-title: Introducing Pi
+title: Introducing π
 author: Voith
 date: 2023-11-29T00:03:42.028Z
 description: π is live and it's packed with a lot of features.
