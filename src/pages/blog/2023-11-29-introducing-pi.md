@@ -12,7 +12,6 @@ tags:
 ---
 ![Cryptex Pi](/img/cryptex_pi_post.jpg)
 
-###### π is live and it's packed with a lot of features.
 
 Here's a break down of what's new:
 
