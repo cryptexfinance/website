@@ -7,8 +7,6 @@ import bgVideo from "../../../../static/bg_main_pi.webm";
 import bgVideoMobile from "../../../../static/bg_mobile_pi.webm";
 
 const SectionMain = () => {
-  const breakpoints = useBreakpoint();
-
   return (
     <div className="section-main">
       <video
@@ -17,13 +15,21 @@ const SectionMain = () => {
         muted
         playsInline
         poster={bgMobilePoster}
-        className="video bgvid"
+        className="video bgvid desktop"
         id="bgvid"
       >
-        {!breakpoints.sm
-          ? <source src={bgVideo} type="video/webm" />
-          : <source src={bgVideoMobile} type="video/mp4" />
-        }
+        <source src={bgVideo} type="video/webm" />
+      </video>
+      <video
+        autoPlay
+        loop
+        muted
+        playsInline
+        poster={bgMobilePoster}
+        className="video bgvid mobile"
+        id="bgvid"
+      >
+        <source src={bgVideoMobile} type="video/webm" />
       </video>
       <div className="black-overlay"></div>
       <div className="main-container col-sm-12">

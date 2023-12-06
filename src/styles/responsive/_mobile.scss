@@ -26,11 +26,19 @@
   }
 
   .video{
-    object-fit: cover;
+    object-fit: fill;
     width: 100%;
     margin-left: 0px;
-    height: 110% !important;
-    margin-top: 4rem;
+    height: 100% !important;
+    margin-top: 7rem;
+    overflow: hidden;
+
+    &.desktop {
+      display: none;
+    }
+    &.mobile {
+      display: block;
+    }
   }
 
   .main-brand-text{
