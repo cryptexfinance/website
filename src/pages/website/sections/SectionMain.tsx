@@ -14,7 +14,6 @@ const SectionMain = () => {
         loop
         muted
         playsInline
-        poster={bgMobilePoster}
         className="video bgvid desktop"
         id="bgvid"
       >
