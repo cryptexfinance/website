@@ -26,10 +26,11 @@
   }
 
   .video{
-    width: 180%;
-    margin-left: -200px;
-    height: 140% !important;
-    margin-top: 0%;
+    object-fit: cover;
+    width: 100%;
+    margin-left: 0px;
+    height: 110% !important;
+    margin-top: 4rem;
   }
 
   .main-brand-text{
