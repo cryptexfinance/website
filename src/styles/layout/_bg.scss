@@ -5,8 +5,15 @@ video {
   margin-left: 0rem;
   top: 0;
   left: 0;
-  display: block;
   z-index: -2;
+  &.desktop {
+    display: block;
+  }
+  
+  &.mobile {
+    display: none;
+  }
+
   @media only screen and (max-device-width: 1300px) {
     padding-top: 6rem;
   }

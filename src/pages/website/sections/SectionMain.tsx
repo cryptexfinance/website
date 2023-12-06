@@ -2,15 +2,11 @@ import React from "react";
 import Col from "react-bootstrap/esm/Col";
 import { useBreakpoint } from "gatsby-plugin-breakpoints";
 import appEndpoint from "../../../endpoint";
-// import bgMobilePoster from "../../../../static/mobile_poster.png";
+import bgMobilePoster from "../../../../static/mobile_poster.png";
 import bgVideo from "../../../../static/bg_main_pi.webm";
-import bgVideoMobile from "../../../../static/bg_mobile_pi.mp4";
-import bgVideoMobileB from "../../../../static/bg_mobile_pi2.mp4";
-import bgVideoMobile2 from "../../../../static/bg_mobile_pi.webm";
+import bgVideoMobile from "../../../../static/bg_mobile_pi.webm";
 
 const SectionMain = () => {
-  const breakpoints = useBreakpoint();
-
   return (
     <div className="section-main">
       <video
@@ -18,17 +14,21 @@ const SectionMain = () => {
         loop
         muted
         playsInline
-        poster={bgVideoMobile2}
-        className="video bgvid"
+        className="video bgvid desktop"
         id="bgvid"
       >
-        {!breakpoints.sm
-          ? <source src={bgVideo} type="video/webm" />
-          : (
-            <>
-              <source src={bgVideoMobile2} type="video/mp4" />
-            </>
-        )}
+        <source src={bgVideo} type="video/webm" />
+      </video>
+      <video
+        autoPlay
+        loop
+        muted
+        playsInline
+        poster={bgMobilePoster}
+        className="video bgvid mobile"
+        id="bgvid"
+      >
+        <source src={bgVideoMobile} type="video/webm" />
       </video>
       <div className="black-overlay"></div>
       <div className="main-container col-sm-12">
