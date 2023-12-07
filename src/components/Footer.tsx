@@ -1,5 +1,5 @@
 import React from "react";
-import twitter from "../../static/website/ecosystem/twitter.svg";
+import twitter from "../../static/website/ecosystem/x_logo.svg";
 import discord from "../../static/website/ecosystem/discord.svg";
 import telegram from "../../static/website/ecosystem/telegram.svg";
 import youtube from "../../static/website/ecosystem/youtube.svg";
@@ -19,7 +19,7 @@ const socialIcons = [
     href: "https://twitter.com/cryptexfinance",
     icon: twitter,
     alt: "Twitter",
-    class: "",
+    class: "x_logo",
   },
   {
     href: "https://discord.gg/cryptex",
@@ -61,7 +61,7 @@ const Footer = () => {
       href={item.href}
       rel="noreferrer"
       target="_blank"
-      className="social-item icon-link"
+      className={"social-item icon-link ".concat(item.class)}
     >
       <img
         src={item.icon}

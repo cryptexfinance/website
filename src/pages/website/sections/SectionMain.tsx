@@ -1,14 +1,25 @@
 import React from "react";
 import Col from "react-bootstrap/esm/Col";
-import { useBreakpoint } from "gatsby-plugin-breakpoints";
 import appEndpoint from "../../../endpoint";
 import bgMobilePoster from "../../../../static/mobile_poster.png";
 import bgVideo from "../../../../static/bg_main_pi.webm";
-import bgVideoMobile from "../../../../static/bg_mobile_pi.webm";
+import bgVideoMobile from "../../../../static/bg_mobile_pi.mp4";
 
 const SectionMain = () => {
+
   return (
     <div className="section-main">
+      <video
+        autoPlay
+        loop
+        muted
+        playsInline
+        poster={bgMobilePoster}
+        className="video bgvid mobile"
+        id="bgvidm"
+      >
+        <source src={bgVideoMobile} type="video/mp4" />
+      </video>
       <video
         autoPlay
         loop
@@ -18,17 +29,6 @@ const SectionMain = () => {
         id="bgvid"
       >
         <source src={bgVideo} type="video/webm" />
-      </video>
-      <video
-        autoPlay
-        loop
-        muted
-        playsInline
-        poster={bgMobilePoster}
-        className="video bgvid mobile"
-        id="bgvid"
-      >
-        <source src={bgVideoMobile} type="video/webm" />
       </video>
       <div className="black-overlay"></div>
       <div className="main-container col-sm-12">

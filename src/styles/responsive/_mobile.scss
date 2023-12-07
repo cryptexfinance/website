@@ -4,7 +4,7 @@
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
-    padding: 10rem 2rem !important;
+    padding: 10rem 1rem !important;
     height: 100%;
     width: 100%;
   }
@@ -30,7 +30,8 @@
     width: 100%;
     margin-left: 0px;
     height: 100% !important;
-    margin-top: 7rem;
+    margin-top: 0rem;
+    padding-top: 1rem;
     overflow: hidden;
 
     &.desktop {
@@ -351,8 +352,8 @@
         display: flex;
         flex-direction: column;
         padding: 2rem 1rem;
-        margin-top: 1rem;
-        margin-bottom: 1rem;
+        margin-top: 0rem;
+        margin-bottom: 0rem;
         &-actions {
           display: flex;
           width: 100%;
