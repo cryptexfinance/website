@@ -1,9 +1,8 @@
 import React, { useState } from "react"
 import { toast, ToastContainer } from "react-toastify"
 import addToMailchimp from "gatsby-plugin-mailchimp"
-import { FaArrowRight } from "react-icons/fa"
 import toasty from "../../../../static/toasty.png"
-import sewagFruit from "../../../../static/website/ecosystem/sewage-fruit.png"
+
 
 const SectionEcosystem = ({ data }) => {
   const [email, setEmail] = useState("")

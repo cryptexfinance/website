@@ -647,7 +647,11 @@ body {
       flex-direction: row;
     }
     .social-item {
-      margin-right: 20px;      
+      margin-right: 20px;
+
+      &.x_logo {
+        margin-right: 15px;
+      }
     }
     .social-item-icon {
       height: 25px;
@@ -761,7 +765,7 @@ body {
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: #F00DFF;
+  background: #9A24FF;
   border-radius: 1rem;
 }
 
