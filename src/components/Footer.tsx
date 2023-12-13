@@ -34,12 +34,6 @@ const socialIcons = [
     class: "",
   },
   {
-    href: "https://www.youtube.com/channel/UCdN17zdr5MCDph75srdhutQ",
-    icon: youtube,
-    alt: "Youtube logo",
-    class: "",
-  },
-  {
     href: "https://medium.com/cryptexfinance",
     icon: medium,
     alt: "Medium Logo",
@@ -96,7 +90,7 @@ const Footer = () => {
             Documentation
           </a>
           <a
-            href="https://cryptexfinance.notion.site/Cryptex-Finance-v2-Wiki-b7d2592b8f6e48538612b52c35ecddd9"
+            href="https://cryptexfinance.notion.site/Cryptex-Wiki-b7d2592b8f6e48538612b52c35ecddd9"
             rel="noreferrer"
             target="_blank"
             className="subtitle"
