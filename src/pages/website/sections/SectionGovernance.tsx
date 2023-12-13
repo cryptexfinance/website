@@ -52,7 +52,7 @@ const governanceItems = [
     {
     id: "3",
     title: "Single Siding Staking",
-    info: `Stake and delegate your CTX to a Crypt Keeper to earn <span class="number-span">{apr_value}</span> APR in CTX governance tokens.`,
+    info: "Stake and delegate your CTX to a Crypt Keeper and join >300 community members who help keep Cryptex decentralized.",
     link: "https://v1.cryptex.finance/governance",
   }
 ]
