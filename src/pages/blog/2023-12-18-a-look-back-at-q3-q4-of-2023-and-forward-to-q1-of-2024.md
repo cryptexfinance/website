@@ -8,7 +8,7 @@ description: As 2023 draws to a close, contributors want to take a moment to
   plans ahead. The community's unwavering support has been the cornerstone of
   DAO growth, and we're thrilled to share our journey with you.
 featuredpost: true
-featuredimage: /img/cryptex_pi_discord.png
+featuredimage: /img/cryptex_pi_discord-1-.png
 tags:
   - Cryptex
   - Perpetuals
@@ -17,7 +17,7 @@ As 2023 draws to a close, contributors want to take a moment to reflect on the p
 
 #### Q3 2023: A Quarter of Innovative Development
 
-![Cryptex - Q3 2023](/img/q3.png)
+![Cryptex Q3](/img/q3.jpg)
 
 Q3 was marked by significant advancements in platform capabilities:
 
@@ -31,7 +31,7 @@ In efforts to increase transparency and user empowerment, functionality to displ
 
 #### Q4 2023: Reaching new heights
 
-![Crytpex Q4](/img/q4-1-.png)
+![Cryptex Q4](/img/q4-1-.png)
 
 Building on the momentum, Q4 saw the DAO reach new milestones:
 
@@ -49,7 +49,7 @@ Last but not least, a mobile app was deployed, enhancing accessibility and ensur
 
 #### Looking Ahead: Q1 of 2024
 
-![Cryptex Q1 - 2024](/img/24q1-1-.png)
+![Cryptex Q4 - 2024](/img/24q1.jpg)
 
 As we look to the future, the roadmap for Q1 2024 is already charting new territories:
 
