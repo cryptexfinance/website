@@ -20,6 +20,7 @@ import coinbaseLogo from "../../../../static/website/governance/coinbase.svg";
 import huobiLogo from "../../../../static/website/governance/huobi.svg";
 import camelotLogo from "../../../../static/website/governance/camelot.svg";
 import coingeckoLogo from "../../../../static/website/governance/coingecko.svg";
+import traderJoeLogo from "../../../../static/website/governance/traderjoe.png";
 
 
 
@@ -49,7 +50,7 @@ const governanceItems = [
     info: "Vote on active proposals.",
     link: "https://www.tally.xyz/governance/eip155:1:0x874C5D592AfC6803c3DD60d6442357879F196d5b",
   },
-    {
+  {
     id: "3",
     title: "Single Siding Staking",
     info: "Stake and delegate your CTX to a Crypt Keeper and join >300 community members who help keep Cryptex decentralized.",
@@ -99,6 +100,12 @@ const governanceIcons = [
     icon: coingeckoLogo,
     alt: "Coingecko Logo",
     class: "",
+  },
+  {
+    href: "https://traderjoexyz.notion.site/Trader-Joe-Media-Kit-2c3a2e04e4164a7c8743340c6094c9ed",
+    icon: traderJoeLogo,
+    alt: "Trader Joe Logo",
+    class: "trader-joe",
   },
 ]
 

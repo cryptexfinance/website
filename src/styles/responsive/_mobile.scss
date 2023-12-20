@@ -428,7 +428,7 @@
     height: 100%;
     .box {
       margin: 1rem;
-      padding: 5rem 3rem;
+      padding: 5rem 2rem;
     }
     .header {
       font-size: 18px;
@@ -462,17 +462,25 @@
         }
       }
       &-icon {
-        width: 32px;
-        height: 32px;
-        margin-right: 18px;
+        width: 30px;
+        height: 30px;
+        margin-right: 16px;
 
         &.dfp {
           width: 30px;
           height: 30px;
         }
+        &.huobi{
+          width: 28px;
+          height: 32px;
+        }
         &.gemini {
           width: 30px;
           height: 30px;
+        }
+        &.trader-joe {
+          width: 36px;
+          height: 36px;
         }
       }
       &-detail {
@@ -714,9 +722,25 @@
     .section-governance {
       .governance {
         &-icon {
-          width: 31px;
-          height: 31px;
-          margin-right: 17px;
+          width: 26px;
+          height: 26px;
+          margin-right: 14px;
+          &.uniswap {
+            width: 33px;
+            height: 38px;
+          }
+          &.gemini {
+            width: 28px;
+            height: 28px;
+          }
+          &.huobi {
+            width: 28px;
+            height: 32px;
+          }
+          &.trader-joe {
+            width: 34px;
+            height: 34px;
+          }
         }
       }
     }
