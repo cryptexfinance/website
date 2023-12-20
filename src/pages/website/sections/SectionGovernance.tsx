@@ -102,7 +102,7 @@ const governanceIcons = [
     class: "",
   },
   {
-    href: "https://traderjoexyz.notion.site/Trader-Joe-Media-Kit-2c3a2e04e4164a7c8743340c6094c9ed",
+    href: "https://traderjoexyz.com/arbitrum/pool/v21/0x84f5c2cfba754e76dd5ae4fb369cfc920425e12b/ETH/50",
     icon: traderJoeLogo,
     alt: "Trader Joe Logo",
     class: "trader-joe",
