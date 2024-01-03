@@ -721,6 +721,11 @@
   @media only screen and (max-device-width: 390px) {
     .section-governance {
       .governance {
+        &-main {
+          padding-left: 1.8rem;
+          padding-right: 1.8rem;
+        }
+
         &-icon {
           width: 26px;
           height: 26px;
