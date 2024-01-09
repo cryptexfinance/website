@@ -37,7 +37,7 @@ const SectionMain = () => {
             <img className="cryptex-logo" src="/logo.svg" alt="Logo" />
           </div>
           <p className="home-subheader">
-            CUTTING EDGE PERPETUAL MARKETS <br /><br />
+            CUTTING EDGE MARKETS<br /><br />
           </p>
         </div>
         <div className="main-buttons">
