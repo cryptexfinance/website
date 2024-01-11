@@ -70,7 +70,7 @@ const Footer = () => {
       <div className="footer-info">
         <img className="menu-logo" src="/logo.svg" alt="Logo" />
         <p className="subtitle">
-          Decentralized platform providing cutting edge perpetuals.
+          Decentralized platform providing cutting edge markets.
         </p>
         <div className="community">
           {socialIcons.map((socialIcon, index) => {
