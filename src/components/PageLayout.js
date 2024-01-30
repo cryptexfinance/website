@@ -1,18 +1,49 @@
 import React, { useEffect } from "react"
 import { ethers } from "ethers"
 import { Contract, Provider } from "ethers-multicall"
+import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
+import { configureChains, createConfig, WagmiConfig } from "wagmi"
+import { arbitrum, arbitrumSepolia } from "wagmi/chains"
+import { infuraProvider } from "wagmi/providers/infura"
+import { alchemyProvider } from "wagmi/providers/alchemy"
+import { publicProvider } from "wagmi/providers/public"
+
 import Header from "./Header"
 import Footer from "./Footer"
-import agregatorAbi from "../contracts/agregatorAbi.json"
-import tcapOracle from "../contracts/tcapOracle.json"
-import jpegzOracle from "../contracts/jpegzOracle.json"
-import ctxToken from "../contracts/ctx.json"
-import wethOracle from "../contracts/wethOracle.json"
-import ctxUniPair from "../contracts/ctxUniPair.json"
-import delegatorFactory from "../contracts/delegatorFactory.json"
+import agregatorAbi from "../abi/artifacts/agregatorAbi.json"
+import tcapOracle from "../abi/artifacts/tcapOracle.json"
+import jpegzOracle from "../abi/artifacts/jpegzOracle.json"
+import ctxToken from "../abi/artifacts/ctx.json"
+import wethOracle from "../abi/artifacts/wethOracle.json"
+import ctxUniPair from "../abi/artifacts/ctxUniPair.json"
+import delegatorFactory from "../abi/artifacts/delegatorFactory.json"
 import { contractsContext, signerContext, arbContractsContext, arbSignerContext } from "../context"
 import { useContracts, useSigner, useArbContracts, useArbSigner } from "../hooks"
 import { getDefaultProvider, getArbitrumProvider } from "../utils"
+import { Hour } from "../utils/timeUtils"
+
+
+const { publicClient } = configureChains(
+  [arbitrum, arbitrumSepolia],
+  [
+    infuraProvider({ apiKey: process.env.REACT_APP_INFURA_ID || "e37c21b7a4e14c74b9719bea11d9d18f" }),
+    alchemyProvider({ apiKey: process.env.REACT_APP_ALCHEMY_KEY || "gKHAv71vj7O1q__-8yW79Ua-4eIXRPAy" }),
+    publicProvider()
+  ]
+)
+
+const wagmiConfig = createConfig({
+  autoConnect: true,
+  publicClient
+})
+
+const tanstackQueryClient = new QueryClient({
+  defaultOptions: {
+    queries: {
+      staleTime: Number(1n * Hour) * 1000, // 1 hour in ms
+    },
+  },
+})
 
 const PageLayout = ({ children }) => {
   const contracts = useContracts()
@@ -25,6 +56,8 @@ const PageLayout = ({ children }) => {
   const ethAggregatorAddress = "0x639Fe6ab55C921f74e7fac1ee960C0B6293ba612";
   const pepeAggregatorAddress = "0x02DEd5a7EDDA750E3Eb240b54437a54d57b74dBE";
   const tcapAggregatorAddress = "0x4763b84cdBc5211B9e0a57D5E39af3B3b2440012";
+
+  console.log("env: ", process.env.REACT_APP_INFURA_ID)
 
   useEffect(() => {
     const loadContracts = async () => {
@@ -109,7 +142,11 @@ const PageLayout = ({ children }) => {
         <arbSignerContext.Provider value={arbSigner}>
           <signerContext.Provider value={signer}>
             <contractsContext.Provider value={contracts}>
-              {children}
+              <WagmiConfig config={wagmiConfig}>
+                <QueryClientProvider client={tanstackQueryClient}>
+                  {children}
+                </QueryClientProvider>
+              </WagmiConfig>  
             </contractsContext.Provider>
           </signerContext.Provider>
         </arbSignerContext.Provider>

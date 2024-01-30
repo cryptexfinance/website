@@ -1,6 +1,7 @@
 const _ = require("lodash")
 const path = require("path")
 const { createFilePath } = require("gatsby-source-filesystem")
+const webpack = require("webpack")
 
 exports.createPages = ({ actions, graphql }) => {
   const { createPage } = actions
@@ -141,9 +142,20 @@ exports.onCreateWebpackConfig = ({ stage, loaders, actions }) => {
           {
             test: /@ethersproject/,
             use: loaders.null(),
-          },
+          },          
         ],
       },
+      plugins: [
+        new webpack.NormalModuleReplacementPlugin(/^node:/, (resource) => {
+          resource.request = resource.request.replace(/^node:/, '')
+        })
+      ],
+      resolve: {
+        // Handle unsupported node scheme - https://github.com/webpack/webpack/issues/13290#issuecomment-987880453
+        fallback: {
+          crypto: require.resolve('stream-browserify'),
+        }
+      }
     })
   }
 }

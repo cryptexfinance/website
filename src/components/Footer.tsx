@@ -2,7 +2,6 @@ import React from "react";
 import twitter from "../../static/website/ecosystem/x_logo.svg";
 import discord from "../../static/website/ecosystem/discord.svg";
 import telegram from "../../static/website/ecosystem/telegram.svg";
-import youtube from "../../static/website/ecosystem/youtube.svg";
 import medium from "../../static/website/ecosystem/medium.svg";
 import mailLogo from "../../static/website/protocol/mail.svg";
 
