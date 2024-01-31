@@ -16,30 +16,28 @@ import {
   toHex,
   zeroAddress,
 } from 'viem'
-import { usePublicClient } from "wagmi"
 
 import { MarketFactoryAddresses } from '../constants/contracts'
 import { SupportedAsset } from '../constants/markets'
 import { PositionSide2, addressToAsset2, chainAssetsWithAddress } from '../constants/markets'
-import { DefaultChain, PythMainnetUrl, SupportedChainId } from '../constants/network'
+import { DefaultChain, PythMainnetUrl, SupportedChainId, getViemClient } from '../constants/network'
 import { MaxUint256 } from '../constants/units'
 import { notEmpty } from '../utils/arrayUtils'
 import { Big6Math } from '../utils/big6Utils'
-import { getMarketContract, getOracleContract } from '../utils/contractUtils'
+import { getMarketContract, getOracleContract, getPythFactoryContract } from '../utils/contractUtils'
 import { buildCommitmentsForOracles } from '../utils/pythUtils'
 
 import { Lens2Abi } from '../abi/Lens2.abi'
 
 import LensArtifact from '../abi/artifacts/Lens.json'
-import { usePythFactory } from './contracts'
-import { useAddress, usePyth, useRPCProviderUrl } from './network'
+import { usePyth, useRPCProviderUrl } from './network'
 
 
 
 export type MarketOracles = NonNullable<ReturnType<typeof useMarketOracles>['data']>
 export const useMarketOracles = (publicClient: PublicClient) => {
   const chainId = DefaultChain.id as SupportedChainId
-  const pythFactory = usePythFactory()
+  const pythFactory = getPythFactoryContract(publicClient)
 
   return useQuery({
     queryKey: ['marketOracles2', chainId],
@@ -113,14 +111,13 @@ export type MarketSnapshot = ChainMarketSnapshot & {
 
 export type MarketSnapshots = NonNullable<Awaited<ReturnType<typeof useMarketSnapshots>>['data']>
 
-export const useMarketSnapshots = (addressOverride?: Address) => {
+export const useMarketSnapshots = () => {
   const chainId = DefaultChain.id as SupportedChainId
-  const publicClient = usePublicClient({ chainId })
+  const publicClient = getViemClient()
   const { data: marketOracles } = useMarketOracles(publicClient)
-  const { address: address_ } = useAddress()
-  const pyth = new EvmPriceServiceConnection(PythMainnetUrl, { timeout: 10000, priceFeedRequestConfig: { binary: true } })
+  const pyth = usePyth()
   const providerUrl = useRPCProviderUrl()
-  const address = addressOverride ?? address_ ?? zeroAddress
+  const address = zeroAddress
   
   return useQuery({
     queryKey: ['marketSnapshots2', chainId, address],
@@ -159,7 +156,7 @@ export const useMarketSnapshots = (addressOverride?: Address) => {
       }, {} as { [key in SupportedAsset]?: MarketSnapshot })
 
       return {
-        market: marketSnapshots,
+        markets: marketSnapshots,
         commitments: snapshotData.commitments,
         updates: snapshotData.updates,
       }

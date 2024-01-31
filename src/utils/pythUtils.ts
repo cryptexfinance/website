@@ -2,6 +2,7 @@
 import { PriceServiceConnection } from "@pythnetwork/price-service-client"
 import { EvmPriceServiceConnection } from '@pythnetwork/pyth-evm-js'
 import { Address, Hex, PublicClient } from "viem"
+import { Buffer } from "buffer"
 
 import { getKeeperOracleContract } from './contractUtils'
 import { nowSeconds } from './timeUtils'
@@ -37,7 +38,7 @@ export const getRecentVaa = async ({
 
       return {
         feedId: priceFeed.id,
-        vaa: `0x${Buffer.from(vaa, 'base64').toString('hex')}`,
+        vaa: `0x${Buffer(vaa, 'base64').toString('hex')}`,
         publishTime,
         version: BigInt(publishTime) - (minValidTime ?? 4n),
       }
@@ -69,7 +70,7 @@ const getVaaForPublishTime = async ({
 
   return {
     feedId: feed.underlyingId,
-    vaa: `0x${Buffer.from(vaa, 'base64').toString('hex')}`,
+    vaa: `0x${Buffer(vaa, 'base64').toString('hex')}`,
     publishTime,
     version: BigInt(publishTime) - feed.minValidTime,
   }
@@ -114,6 +115,7 @@ export const buildCommitmentsForOracles = async ({
     }))
     // Get current VAAs for each price feed
     const priceFeedUpdateData = await getRecentVaa({ pyth, feeds: feedIds })
+
     console.log("priceFeedUpdateData: ", priceFeedUpdateData)
 
     const commitments = Promise.all(
@@ -160,8 +162,6 @@ export const buildCommitmentsForOracles = async ({
         },
       ),
     )
-    
-    console.log("commitments: ", commitments)
 
     onSuccess?.()
 

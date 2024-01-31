@@ -1,5 +1,5 @@
 import { arbitrum, arbitrumSepolia } from "viem/chains"
-import { Chain } from "viem"
+import { createPublicClient, Chain, http, PublicClient } from "viem"
 import { EvmPriceServiceConnection } from '@pythnetwork/pyth-evm-js'
 // const { EvmPriceServiceConnection } = require('@pythnetwork/pyth-evm-js')
 
@@ -23,6 +23,16 @@ export const isSupportedChain = (chainId?: number) =>
 
 export const DefaultChain = chains[0];
 
+export const getViemClient = (): PublicClient => {
+  const transport = http('https://arb-mainnet.g.alchemy.com/v2/gKHAv71vj7O1q__-8yW79Ua-4eIXRPAy', {
+    batch: true
+  })
+  return createPublicClient({
+    chain: arbitrum,
+    transport,
+  })
+}
+
 export const GraphUrls: { [chainId in SupportedChainId]: string } = {
   [arbitrum.id]: process.env.REACT_APP_GRAPH_URL_ARBITRUM ?? "",
   [arbitrumSepolia.id]: process.env.REACT_APP_GRAPH_URL_ARBITRUM_SEPOLIA ?? "",
@@ -38,11 +48,9 @@ export const ExplorerURLs: { [chainId in SupportedChainId]: string } = {
   [arbitrumSepolia.id]: arbitrumSepolia.blockExplorers.default.url,
 };
 
-
 export const PythMainnetUrl = "https://hermes.pyth.network/"
 export const PythTestnetUrl = "https://hermes.pyth.network/"
-
-console.log("EvmPriceServiceConnection: ", typeof EvmPriceServiceConnection)
+export const PythDataFeedUrl = "https://benchmarks.pyth.network/v1/shims/tradingview"
 
 export const BackupPythClient = new EvmPriceServiceConnection(
   `${typeof window !== 'undefined' ? window.location.origin : 'https://app.perennial.finance'}/api/pyth`,

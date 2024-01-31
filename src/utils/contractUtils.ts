@@ -1,9 +1,12 @@
-import { getContract, Address, WalletClient, PublicClient } from "viem"
+import { getContract, Address, PublicClient } from "viem"
 
 import { MarketAbi } from "../abi/Market.abi"
 import { OracleAbi } from "../abi/Oracle.abi"
 import { KeeperOracleAbi } from "../abi/KeeperOracle.abi"
 import { VaultAbi } from "../abi/Vault.abi"
+import { PythFactoryAbi } from "../abi/PythFactory.abi"
+import { PythFactoryAddresses } from "../constants/contracts"
+import { DefaultChain } from "../constants/network"
 
 
 export function getVaultContract(
@@ -34,9 +37,8 @@ export function getOracleContract(
 export function getKeeperOracleContract(
   keeperOracleAddress: Address,
   publicClient: PublicClient,
-  signer?: WalletClient,
 ) {
-  return getContract({ abi: KeeperOracleAbi, address: keeperOracleAddress, publicClient, walletClient: signer })
+  return getContract({ abi: KeeperOracleAbi, address: keeperOracleAddress, publicClient })
 }
 
 export function getPythProviderContract(
@@ -50,13 +52,21 @@ export function getPythProviderContract(
   });
 }
 
+export function getPythFactoryContract(
+  publicClient: PublicClient
+) {
+  return getContract({
+    abi: PythFactoryAbi,
+    address: PythFactoryAddresses[DefaultChain.id],
+    publicClient,
+  })
+}
+
 export function getPythProviderContractWrite(
-  keeperOracleAddress: Address,
-  walletClient: WalletClient
+  keeperOracleAddress: Address
 ) {
   return getContract({
     abi: KeeperOracleAbi,
     address: keeperOracleAddress,
-    walletClient,
   });
 }
