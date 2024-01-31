@@ -123,6 +123,13 @@ h3, .terciary-header {
   }
 }
 
+.spinner-border {
+  border-color: #a440f2;
+  border-right-color: transparent;
+  --bs-spinner-width: 2.5rem;
+  --bs-spinner-height: 2.5rem;
+}
+
 .link {
   font-family: $font-primary;
   font-style: normal;
@@ -366,14 +373,6 @@ h3, .terciary-header {
   }
 }
 
-
-.carousel {
-  background-color: $color-background-box;
-  &-item {
-    margin: 1rem 1rem;
-    padding: 1rem 2rem;
-  }
-}
 
 .market-cap-box {
   display: flex;

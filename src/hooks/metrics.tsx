@@ -43,8 +43,9 @@ const useChainLivePrices = () => {
 
       const normalizedPrice =
         normalizedExpo >= 0
-          ? BigOrZero(price?.price) * 10n ** BigInt(normalizedExpo)
-          : BigOrZero(price?.price) / 10n ** BigInt(Math.abs(normalizedExpo))
+          ? BigOrZero(price?.price) * BigInt(Math.pow(10, normalizedExpo))
+          : BigOrZero(price?.price) / BigInt(Math.pow(10, Math.abs(normalizedExpo)))
+
       setPrices((prices) => ({
         ...prices,
         ...feedToAsset['0x' + priceFeed.id].reduce((acc, asset) => {
@@ -97,9 +98,9 @@ export const useMarket24HrHighLow = (asset: SupportedAsset) => {
 
 
 export const useFormattedMarketBarValues = (marketSnapshot: MarketSnapshot) => {
-    const livePrices = useChainLivePrices()
+  const livePrices = useChainLivePrices()
 
-  const selectedMarket = SupportedAsset.btc
+  const selectedMarket = marketSnapshot.asset
   const { data: priceData } = useMarket24HrHighLow(selectedMarket)
   const { data: dailyData } = useMarket24hrData(selectedMarket)
   const { data: weeklyData } = useMarket7dData(selectedMarket)

@@ -4,9 +4,6 @@
  * See: https://www.gatsbyjs.org/docs/gatsby-config/
  */
 
-// const metaImage = require("./static/website/home/cryptexv2.png");
-
-
 module.exports = {
   /* Your site config here */
   siteMetadata: {
@@ -217,6 +214,12 @@ module.exports = {
             },
           },
         ],
+      },
+    },
+    {
+      resolve: `gatsby-plugin-env-variables`,
+      options: {
+        allowList: ["GATSBY_ALCHEMY_KEY"]
       },
     },
   ],

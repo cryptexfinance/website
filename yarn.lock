@@ -7247,6 +7247,11 @@ gatsby-plugin-catch-links@^4.21.0:
     "@babel/runtime" "^7.15.4"
     escape-string-regexp "^1.0.5"
 
+gatsby-plugin-env-variables@^2.3.0:
+  version "2.3.0"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-env-variables/-/gatsby-plugin-env-variables-2.3.0.tgz#bc47617bd78f8f68ff72b3c4c7a2ae7ae464fbc1"
+  integrity sha512-HvVzuapa1jZ0fHtvw4hRlu3Zi5boPLYejVkULnzSmzpSz6UrIj88eEk8WaiKrxkp0CDK9VmXweAdx6U3AwgCog==
+
 gatsby-plugin-feed@^4.21.0:
   version "4.23.0"
   resolved "https://registry.npmjs.org/gatsby-plugin-feed/-/gatsby-plugin-feed-4.23.0.tgz"

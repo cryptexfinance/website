@@ -75,17 +75,6 @@
     text-align: center;
   }
 
-  .section-solutions {
-    .solutions {
-      grid-template-columns: auto;
-    }
-  }
-
-  .section-solutions .inline-helper {
-    flex-direction: column;
-
-  }
-
   .same-size-button{
     display: flex;
     align-items: center;
@@ -511,99 +500,6 @@
     flex-direction: column;
   }
 
-  .section-protocol {
-    height: 100%;
-    margin: 0rem 0rem 13rem 0rem;
-    padding: 15rem 5rem;
-    align-items: center;
-
-    .header {
-      align-self: start;
-      margin: 2rem;
-    }
-
-    .items {
-      flex-direction: column;
-      margin-top: 0rem;
-      margin-bottom: 4rem;
-
-      &-info {
-        margin-top: 2rem;
-      }
-
-      .item {
-        height: 85rem;
-        width: 100%;
-        margin-top: 6rem;
-
-        .terciary-header {
-          margin-top: 1rem;
-        }
-
-        .subtitle {
-          margin-top: 5rem;
-          text-align: left;
-          font-size: 16px;
-        }
-      }
-      .safety-logo {
-        height: 110px;
-        margin-top: 3rem;
-      }
-    }
-  }
-
-  .section-ecosystem {
-    flex-direction: column;
-    margin: 15rem 1rem;
-    padding: 15rem 4rem;
-    height: auto;
-
-    .box {
-      width: 100%;
-    }
-    .ecosystem-content {
-      display: grid;
-      grid-template-columns: 100%;
-      row-gap: 8rem;
-      margin-top: 8rem;
-    }
-    .main {
-      height: 145rem;
-      .subscribe {
-        &-data {
-          flex-direction: column;
-          padding: 4rem 0;
-        }
-        &-input {
-          font-size: 16px;
-          height: 54px;
-          line-height: 14px;
-          padding: 24px;
-          width: 100%;
-        }
-        &-button {
-          height: 54px;
-          width: 100%;
-          font-size: 16px;
-        }
-      }
-    }
-    .sewagefruit {
-      height: 95rem;
-      img {
-        margin: 10rem 0rem;
-      }
-    }
-    .carousel {
-      margin: 10rem 0rem;
-      padding-top: 2rem;
-      padding-bottom: 2rem;
-      height: 85rem;
-      width: 100%;
-    }
-  }
-
   .footer {
     display: flex;
     flex-direction: column;
@@ -771,17 +667,6 @@
           width: 30px;
           height: 30px;
           margin-right: 13px;
-        }
-      }
-    }
-  }
-
-  @media only screen and (max-device-width: 370px) {
-    .section-safety { 
-      .items {
-        .safety-logo {
-          height: 95px;
-          margin-top: 2rem;
         }
       }
     }

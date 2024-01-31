@@ -201,11 +201,6 @@ and (orientation: portrait)
     font-size: 18px;
   }
 
-  /* .solution-img {
-    width: 52rem;
-    height: 31rem;
-  } */
-
   .box {
     padding: 5rem;
   }
@@ -236,32 +231,6 @@ and (orientation: portrait)
         width: 20rem;
         height: 5.5rem;
         font-size: 1.7rem;
-      }
-    }
-  }
-
-  .section-solutions {
-    margin-top: 10rem;
-    padding-top: 15rem;
-
-    .header {
-      margin-bottom: 3rem;
-    }
-    .solution-img-container {
-      margin-top: 2rem;
-    }
-
-    .solutions {
-      display: flex;
-      flex-direction: column;
-      align-items: center;  
-      
-      &-item {
-        height: 60rem;
-        width: 85%;
-        .subtitle {
-          margin-top: 3rem;
-        }
       }
     }
   }
@@ -313,88 +282,6 @@ and (orientation: portrait)
           margin-top: 2rem;
         }
       }
-    }
-  }
-
-  .section-protocol {
-    height: auto;
-    margin: 10rem 1rem;
-    padding: 15rem 5rem;
-
-    .subheader {
-      width: 90%;
-      margin-top: 2rem;
-    }
-    .items {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      width: 80%;
-      .item {
-        height: 50rem;
-        width: 100%;
-        margin: 4rem 2rem;
-        .subtitle {
-          margin-top: 1.5rem;
-        }
-      }
-      .safety-logo {
-        margin-top: 5rem;
-        height: 130px;
-      }
-    } 
-  }
-
-  .section-ecosystem {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    height: auto;
-    padding: 10rem 2rem;
-
-    .box {
-      width: 100%;
-    }
-    .ecosystem-content {
-      display: grid;
-      grid-template-columns: 100%;
-      row-gap: 8rem;
-      margin-top: 5rem;
-    }
-    .main {
-      height: 65rem; 
-      .subtitle {
-        margin-top: 0rem;
-      }
-      .subscribe {
-        &-input {
-          width: 70%;
-          height: 6rem;
-          font-size: 2.1rem;
-        }
-        &-button {
-          width: 30%;
-          height: 6rem;
-          font-size: 2.1rem;
-        }
-      }
-    }
-    .sewagefruit {
-      height: 70rem;
-      img {
-        margin: 6rem 0rem;
-        height: 100%;
-        width: 100%;
-      }
-      &-icon {
-        height: 33px;
-        width: 35px;
-      }
-    }
-    .carousel {
-      margin: 5rem 0rem;
-      width: 90%;
-      height: 65rem;
     }
   }
 
@@ -469,18 +356,6 @@ and (orientation: portrait)
           font-size: 2.5rem;
         }
       }
-    }
-    .section-solutions {
-      margin-top: 20rem;
-      padding-top: 10rem;
-      height: auto;
-    }
-  }
-  @media only screen and (max-device-width : 1024px) { 
-    .section-solutions {
-      margin-top: 20rem;
-      padding-top: 10rem;
-      height: auto;
     }
   }
 

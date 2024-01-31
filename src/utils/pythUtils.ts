@@ -116,8 +116,6 @@ export const buildCommitmentsForOracles = async ({
     // Get current VAAs for each price feed
     const priceFeedUpdateData = await getRecentVaa({ pyth, feeds: feedIds })
 
-    console.log("priceFeedUpdateData: ", priceFeedUpdateData)
-
     const commitments = Promise.all(
       Object.values(marketOracles).map(
         async ({ providerFactoryAddress, providerAddress, underlyingId, providerId, minValidTime }) => {

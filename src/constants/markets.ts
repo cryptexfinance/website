@@ -221,10 +221,10 @@ export const ChainMarkets: {
     [SupportedAsset.sol]: getAddress('0x02258bE4ac91982dc1AF7a3D2C4F05bE6079C253'),
     [SupportedAsset.matic]: getAddress('0x7e34B5cBc6427Bd53ECFAeFc9AC2Cad04e982f78'),
     [SupportedAsset.tia]: getAddress('0x2CD8651b0dB6bE605267fdd737C840442A96fAFE'),
-//    [SupportedAsset.link]: getAddress('0xD9c296A7Bee1c201B9f3531c7AC9c9310ef3b738'),
+    [SupportedAsset.link]: getAddress('0xD9c296A7Bee1c201B9f3531c7AC9c9310ef3b738'),
     [SupportedAsset.bnb]: getAddress('0x362c6bC2A4EA2033063bf20409A4c5E8C5754056'),
-//    [SupportedAsset.xrp]: getAddress('0x2402E92f8C58886F716F5554039fA6398d7A1EfB'),
-//    [SupportedAsset.msqETH]: getAddress('0x004E1Abf70e4FF99BC572843B63a63a58FAa08FF'),
+    [SupportedAsset.xrp]: getAddress('0x2402E92f8C58886F716F5554039fA6398d7A1EfB'),
+    [SupportedAsset.msqETH]: getAddress('0x004E1Abf70e4FF99BC572843B63a63a58FAa08FF'),
   },
   [arbitrumSepolia.id]: {
     [SupportedAsset.eth]: getAddress('0x0142a8bfF8D887Fc4f04469fCA6c66F5e0936Ea7'),

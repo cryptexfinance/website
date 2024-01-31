@@ -7,6 +7,10 @@ import { Big6Math, formatBig6Percent } from "./big6Utils"
 export const UpdateNoOp = MaxUint256;
 
 
+export const calcNotional = (position: bigint, price: bigint) => {
+  return Big6Math.abs(Big6Math.mul(position, price));
+}
+
 export function calcTakerLiquidity(marketSnapshot: MarketSnapshot) {
   const {
     nextPosition: { long, short, maker },

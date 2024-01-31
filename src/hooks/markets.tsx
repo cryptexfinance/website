@@ -20,7 +20,7 @@ import {
 import { MarketFactoryAddresses } from '../constants/contracts'
 import { SupportedAsset } from '../constants/markets'
 import { PositionSide2, addressToAsset2, chainAssetsWithAddress } from '../constants/markets'
-import { DefaultChain, PythMainnetUrl, SupportedChainId, getViemClient } from '../constants/network'
+import { DefaultChain, SupportedChainId, getViemClient } from '../constants/network'
 import { MaxUint256 } from '../constants/units'
 import { notEmpty } from '../utils/arrayUtils'
 import { Big6Math } from '../utils/big6Utils'
@@ -120,14 +120,12 @@ export const useMarketSnapshots = () => {
   const address = zeroAddress
   
   return useQuery({
-    queryKey: ['marketSnapshots2', chainId, address],
+    queryKey: ['marketSnapshots2', chainId],
     enabled: !!address && !!marketOracles,
     queryFn: async () => {
       if (!address || !marketOracles) return
 
       const snapshotData = await fetchMarketSnapshotsAfterSettle(chainId, publicClient, address, marketOracles, providerUrl, pyth)
-
-      console.log("snapshotData: ", snapshotData)
 
       const marketSnapshots = snapshotData.market.reduce((acc, snapshot) => {
         const major = Big6Math.max(snapshot.position.long, snapshot.position.short)
