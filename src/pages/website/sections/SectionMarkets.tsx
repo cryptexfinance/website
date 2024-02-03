@@ -18,22 +18,25 @@ const MarketRow = ({ index, asset, market }: { index: number, asset: SupportedAs
       direction="horizontal"
       className={"market-row ".concat(darkRow ? "dark" : "")}
     >
-      <Col lg="3">
+      <Col className="market-row-item mobile-header" lg="3" sm={12}>
         <Stack direction="horizontal" gap={3}>
-          <Image src={assetMetada.icon} width={36} height={36} />
+          <Image className="market-logo" src={assetMetada.icon} width={36} height={36} />
           <Stack direction="vertical" gap={0}>
             <span className="market-value">{assetMetada.name}</span>
             <span className="market-subvalue">{assetMetada.symbol}</span>
           </Stack>
         </Stack>  
       </Col>
-      <Col lg="3" className="text-right">
+      <Col lg="3" sm={12} className="market-row-item text-right">
+        <span className="market-title only-mobile">Price</span>
         <span className="market-value">{formattedValues.price}</span>
       </Col>
-      <Col lg="3" className="text-right">
+      <Col lg="3" sm={12} className="market-row-item text-right">
+        <span className="market-title only-mobile">L/S Liquidity</span>
         <span className="market-value">{formattedValues.totalLiquidity}</span>
       </Col>
-      <Col lg="3" className="text-right">
+      <Col lg="3" sm={12} className="market-row-item text-right">
+        <span className="market-title  only-mobile">L/S Open Interest</span>
         <span className="market-value">{formattedValues.openInterest}</span>
       </Col>
     </Stack>
@@ -41,7 +44,7 @@ const MarketRow = ({ index, asset, market }: { index: number, asset: SupportedAs
 }
 
 
-const SectionMarkets = () => { 
+const SectionMarkets = () => {
   const snapshots = useMarketSnapshots()
 
   const { markets, sortedAssets } = useMemo(() => {
@@ -51,8 +54,8 @@ const SectionMarkets = () => {
         const marketPrice = marketSnapshot?.global?.latestPrice ?? 0n
 
         return {
-            asset: market as SupportedAsset,
-            makerNotional: calcNotional(marketSnapshot?.position?.maker ?? 0n, marketPrice)
+          asset: market as SupportedAsset,
+          makerNotional: calcNotional(marketSnapshot?.position?.maker ?? 0n, marketPrice)
         }
       })
 
@@ -62,10 +65,11 @@ const SectionMarkets = () => {
           return Big6Math.toUnsafeFloat(b.makerNotional) - Big6Math.toUnsafeFloat(a.makerNotional)
         })
       }
-    }    
+    }
 
     return { markets: undefined, sortedAssets: undefined }
   }, [snapshots, snapshots.status])
+
 
   return(
     <div className="section-markets">
@@ -103,4 +107,6 @@ const SectionMarkets = () => {
   )
 }
 
-export default SectionMarkets;
+export default SectionMarkets
+
+// export async function getServerData() {}

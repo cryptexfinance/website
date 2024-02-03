@@ -16,7 +16,7 @@ export function getVaultContract(
   return getContract({
     abi: VaultAbi,
     address: vaultAddress,
-    publicClient: publicClient,
+    client: { public: publicClient }
   });
 }
 
@@ -24,21 +24,21 @@ export function getMarketContract(
   marketAddress: Address,
   publicClient: PublicClient
 ) {
-  return getContract({ abi: MarketAbi, address: marketAddress, publicClient });
+  return getContract({ abi: MarketAbi, address: marketAddress, client: { public: publicClient } });
 }
 
 export function getOracleContract(
   oracleAddress: Address,
   publicClient: PublicClient
 ) {
-  return getContract({ abi: OracleAbi, address: oracleAddress, publicClient });
+  return getContract({ abi: OracleAbi, address: oracleAddress, client: { public: publicClient } });
 }
 
 export function getKeeperOracleContract(
   keeperOracleAddress: Address,
   publicClient: PublicClient,
 ) {
-  return getContract({ abi: KeeperOracleAbi, address: keeperOracleAddress, publicClient })
+  return getContract({ abi: KeeperOracleAbi, address: keeperOracleAddress, client: { public: publicClient } })
 }
 
 export function getPythProviderContract(
@@ -48,7 +48,7 @@ export function getPythProviderContract(
   return getContract({
     abi: KeeperOracleAbi,
     address: keeperOracleAddress,
-    publicClient,
+    client: { public: publicClient }
   });
 }
 
@@ -58,15 +58,15 @@ export function getPythFactoryContract(
   return getContract({
     abi: PythFactoryAbi,
     address: PythFactoryAddresses[DefaultChain.id],
-    publicClient,
+    client: { public: publicClient }
   })
 }
 
-export function getPythProviderContractWrite(
+/* export function getPythProviderContractWrite(
   keeperOracleAddress: Address
 ) {
   return getContract({
     abi: KeeperOracleAbi,
-    address: keeperOracleAddress,
+    address: keeperOracleAddress
   });
-}
+} */

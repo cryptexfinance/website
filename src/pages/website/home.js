@@ -1,14 +1,11 @@
 import React from "react"
-
 import SectionMain from "./sections/SectionMain"
 import SectionGovernance from "./sections/SectionGovernance"
-import { Hour } from "../../utils/timeUtils"
 
 
 const SectionMarketsLazy = React.lazy(() =>
   import("./sections/SectionMarkets")
 )
-
 
 const Home = data => {
   const isSSR = typeof window === "undefined"

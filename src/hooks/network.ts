@@ -2,14 +2,14 @@ import { EvmPriceServiceConnection } from '@pythnetwork/pyth-evm-js'
 import EventEmitter from 'events'
 import { GraphQLClient } from 'graphql-request'
 import { PublicClient, createPublicClient, webSocket } from 'viem'
+import { usePublicClient } from 'wagmi'
 
 import {
   PythMainnetUrl,
   PythTestnetUrl,
   SupportedChainId,
   DefaultChain,
-  GraphUrls,
-  getViemClient
+  GraphUrls
 } from '../constants/network'
 
 
@@ -33,9 +33,16 @@ export const useViemWsClient = () => {
 }
 
 export const useRPCProviderUrl = (): string => {
+  const chainId = useChainId()
+  // const p = usePublicClient({ chainId })
+
+  return "https://arb-mainnet.g.alchemy.com/v2/gKHAv71vj7O1q__-8yW79Ua-4eIXRPAy" 
+}
+
+/* export const useRPCProviderUrl = (): string => {
   const pc = getViemClient()
   return pc.transport.url
-}
+} */
 
 const graphClients = new Map<SupportedChainId, GraphQLClient>()
 export const useGraphClient = () => {

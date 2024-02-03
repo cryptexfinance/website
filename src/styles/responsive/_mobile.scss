@@ -365,48 +365,60 @@
     }
   }
 
-  .section-solutions {
-    height: auto;
-    margin: 0rem 1rem 17rem 1rem;
-    padding: 0rem 5rem 15rem 5rem;
-
-    .header {
-      align-self: start;
-      margin: 2rem;
+  .section-markets {
+    .markets-metrics {
+      margin-top: 3rem;
+      padding: 0.5rem 0rem;
     }
-    .subheader {
-      text-align: justify;
-      width: 100%;
+    .markets-header { 
+      display: none;
     }
-    .solution-img-container {
-      margin-top: 6rem;
+    .markets-detail {
+      height: 110rem;
+      overflow-y: scroll;
     }
-    .solutions {
-      grid-template-columns: auto;
-      margin-top: 2rem;
-      margin-bottom: 4rem;
-      &-info  {
-        margin-top: 2rem;
-        margin-bottom: 5rem;
+    .market {
+      &-row {
+        margin: 1.5rem 0rem;
+        padding: 1.5rem 0rem;
+        border: 0.5px solid #0e0e19;
+        border-radius: 5px;
+        flex-direction: column;
+        background-color: rgba(33, 33, 56, 0.82);
+        
+        &.dark {
+          background-color: #0e0e19;
+          border: 0.5px solid rgba(33, 33, 56, 0.82);
+        }
       }
-      .index-prices {
-        margin-top: 7.5rem;
-      }
-      &-item {
-        height: 120rem;
+      &-row-item {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
         width: 100%;
-        margin-top: 6rem;
-
-        .terciary-header {
-          margin-top: 1rem;
-        }
-        .subtitle {
-          margin-top: 5rem;
+        margin: 0.7rem 0rem;
+        &.mobile-header {
+          margin-bottom: 3.5rem;
         }
       }
-      .learn-more-link {
-        font-size: 15px;
+      &-logo {
+        margin-right: 1rem;
+        width: 38px;
+        height: 38px;
       }
+      &-title {
+        font-size: 16px;
+      }
+      &-value {
+        font-size: 16px;
+      }
+      &-subvalue {
+        font-size: 14px;
+      }
+    }
+    .only-mobile {
+      display: block;
     }
   }
 

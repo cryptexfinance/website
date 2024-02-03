@@ -1,7 +1,6 @@
 import React, { useEffect } from "react"
 import { ethers } from "ethers"
 import { Contract, Provider } from "ethers-multicall"
-import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
 
 import Header from "./Header"
 import Footer from "./Footer"
@@ -15,16 +14,7 @@ import delegatorFactory from "../abi/artifacts/delegatorFactory.json"
 import { contractsContext, signerContext, arbContractsContext, arbSignerContext } from "../context"
 import { useContracts, useSigner, useArbContracts, useArbSigner } from "../hooks"
 import { getDefaultProvider, getArbitrumProvider } from "../utils"
-import { Hour } from "../utils/timeUtils"
 
-
-const tanstackQueryClient = new QueryClient({
-  defaultOptions: {
-    queries: {
-      staleTime: Number(1n * Hour) * 1000, // 1 hour in ms
-    },
-  },
-})
 
 const PageLayout = ({ children }) => {
   const contracts = useContracts()
@@ -124,9 +114,7 @@ const PageLayout = ({ children }) => {
         <arbSignerContext.Provider value={arbSigner}>
           <signerContext.Provider value={signer}>
             <contractsContext.Provider value={contracts}>
-              <QueryClientProvider client={tanstackQueryClient}>
-                {children}
-              </QueryClientProvider>
+              {children}
             </contractsContext.Provider>
           </signerContext.Provider>
         </arbSignerContext.Provider>

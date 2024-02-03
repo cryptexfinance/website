@@ -16,6 +16,7 @@ import {
   toHex,
   zeroAddress,
 } from 'viem'
+import { usePublicClient } from 'wagmi'
 
 import { MarketFactoryAddresses } from '../constants/contracts'
 import { SupportedAsset } from '../constants/markets'
@@ -113,20 +114,19 @@ export type MarketSnapshots = NonNullable<Awaited<ReturnType<typeof useMarketSna
 
 export const useMarketSnapshots = () => {
   const chainId = DefaultChain.id as SupportedChainId
-  const publicClient = getViemClient()
+  const publicClient = usePublicClient({ chainId })
   const { data: marketOracles } = useMarketOracles(publicClient)
   const pyth = usePyth()
   const providerUrl = useRPCProviderUrl()
   const address = zeroAddress
-  
+
   return useQuery({
-    queryKey: ['marketSnapshots2', chainId],
+    queryKey: ['marketSnapshots', chainId],
     enabled: !!address && !!marketOracles,
     queryFn: async () => {
       if (!address || !marketOracles) return
 
       const snapshotData = await fetchMarketSnapshotsAfterSettle(chainId, publicClient, address, marketOracles, providerUrl, pyth)
-
       const marketSnapshots = snapshotData.market.reduce((acc, snapshot) => {
         const major = Big6Math.max(snapshot.position.long, snapshot.position.short)
         const nextMajor = Big6Math.max(snapshot.nextPosition.long, snapshot.nextPosition.short)

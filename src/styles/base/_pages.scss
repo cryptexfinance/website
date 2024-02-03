@@ -152,6 +152,8 @@ body {
   .market {
     &-row {
       padding: 0.5rem 0rem;
+      background-color: rgba(33, 33, 56, 0.82);
+
       &.dark {
         background-color: #0e0e19;
       }
@@ -167,6 +169,10 @@ body {
       color: $color-grey;
       font-size: 0.8rem;
     }
+  }
+
+  .only-mobile {
+    display: none;
   }
 
   .text-right {

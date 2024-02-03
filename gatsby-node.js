@@ -134,7 +134,7 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
   }
 }
 
-exports.onCreateWebpackConfig = ({ stage, loaders, actions }) => {
+exports.onCreateWebpackConfig = ({ getConfig, stage, loaders, actions }) => {
   if (stage === "build-html" || stage === "develop-html") {
     actions.setWebpackConfig({
       module: {
@@ -142,7 +142,7 @@ exports.onCreateWebpackConfig = ({ stage, loaders, actions }) => {
           {
             test: /@ethersproject/,
             use: loaders.null(),
-          },          
+          },
         ],
       },
       plugins: [
@@ -158,4 +158,20 @@ exports.onCreateWebpackConfig = ({ stage, loaders, actions }) => {
       }
     })
   }
+
+  const webpackConfig = getConfig()
+  if (stage === "build-javascript") {
+    const dependencyRulesIndex = webpackConfig.module.rules.findIndex(
+      (rule) => {
+        return (
+          rule.test &&
+          rule.test.toString() === "/\\.(js|mjs)$/" &&
+          typeof rule.exclude === "function"
+        )
+      }
+    )
+
+    webpackConfig.module.rules.splice(dependencyRulesIndex, 1)
+  }
+  actions.replaceWebpackConfig(webpackConfig)
 }
