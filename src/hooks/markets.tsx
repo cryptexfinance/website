@@ -21,7 +21,7 @@ import { usePublicClient } from 'wagmi'
 import { MarketFactoryAddresses } from '../constants/contracts'
 import { SupportedAsset } from '../constants/markets'
 import { PositionSide2, addressToAsset2, chainAssetsWithAddress } from '../constants/markets'
-import { DefaultChain, SupportedChainId, getViemClient } from '../constants/network'
+import { DefaultChain, SupportedChainId } from '../constants/network'
 import { MaxUint256 } from '../constants/units'
 import { notEmpty } from '../utils/arrayUtils'
 import { Big6Math } from '../utils/big6Utils'
@@ -32,7 +32,6 @@ import { Lens2Abi } from '../abi/Lens2.abi'
 
 import LensArtifact from '../abi/artifacts/Lens.json'
 import { usePyth, useRPCProviderUrl } from './network'
-
 
 
 export type MarketOracles = NonNullable<ReturnType<typeof useMarketOracles>['data']>

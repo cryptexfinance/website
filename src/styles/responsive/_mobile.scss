@@ -404,7 +404,7 @@
         justify-content: space-between;
         align-items: center;
         width: 100%;
-        margin: 1rem 0rem;
+        margin: 1.1rem 0rem;
         &.mobile-header {
           margin-bottom: 3.5rem;
         }
@@ -419,6 +419,10 @@
       }
       &-value {
         font-size: 16px;
+
+        &.price {
+          font-size: 24px;
+        }
       }
       &-subvalue {
         font-size: 14px;
@@ -426,6 +430,9 @@
     }
     .only-mobile {
       display: block;
+    }
+    .not-on-mobile {
+      display: none;
     }
   }
 

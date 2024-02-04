@@ -102,6 +102,14 @@ h3, .terciary-header {
   color: #20F433
 }
 
+.text-green {
+  color: $shadow-green-neon !important;
+}
+
+.text-red {
+  color: red !important;
+}
+
 .subtitle {
   font-family: $font-tertiary;
   font-style: normal;

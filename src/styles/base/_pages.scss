@@ -139,7 +139,9 @@ body {
   }
   .markets-header {
     border-bottom: 1px solid #494866;
+    margin: 0.2rem 0rem;
     padding-bottom: 0.5rem;
+    padding-right: 1rem;
 
     div {
       padding-right: 1.5rem;
@@ -151,12 +153,27 @@ body {
   }
   .market {
     &-row {
-      padding: 0.5rem 0rem;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      text-decoration: none;
+      padding: 0.8rem 0rem;
+      margin: 0.5rem 0.5rem;
+      border: 0.5px solid #0e0e19;
+      border-radius: 5px;
       background-color: rgba(33, 33, 56, 0.82);
 
       &.dark {
         background-color: #0e0e19;
+        border: 0.5px solid rgba(33, 33, 56, 0.82);
       }
+    }
+    &-row:hover {
+      box-shadow: 0px 0px 12px 1px rgba(165, 64, 242, 0.3);
+      -webkit-transform: scale(1.002);
+      transform: scale(1.002);
+      transition: transform 0.5s, -webkit-transform 0.5s;
+      transition-timing-function: ease-in;
     }
     &-title {
       color: $color-grey;
