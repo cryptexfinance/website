@@ -2,7 +2,7 @@ import { ethers } from "ethers";
 
 export const getDefaultProvider = () => {
   const provider = new ethers.providers.InfuraProvider("mainnet", {
-    infura: process.env.REACT_APP_INFURA_ID,
+    infura: process.env.INFURA_ID || process.env.GATSBY_INFURA_ID,
   });
 
   return provider;
@@ -10,7 +10,7 @@ export const getDefaultProvider = () => {
 
 export const getArbitrumProvider = () => {
   const provider = new ethers.providers.InfuraProvider("arbitrum", {
-    infura: process.env.REACT_APP_INFURA_ID,
+    infura: process.env.INFURA_ID || process.env.GATSBY_INFURA_ID,
   });
 
   return provider;

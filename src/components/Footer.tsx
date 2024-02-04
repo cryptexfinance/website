@@ -79,6 +79,7 @@ const Footer = () => {
       </div>
       <div className="footer-menu">
         <div className="links">
+          <a className="subtitle" href="/#markets">Markets</a>
           <a className="subtitle" href="/#governance">Governance</a>
           <a
             href="https://docs.cryptex.finance"

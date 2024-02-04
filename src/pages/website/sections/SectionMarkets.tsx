@@ -72,7 +72,7 @@ const SectionMarkets = () => {
 
 
   return(
-    <div className="section-markets">
+    <div id="markets" className="section-markets">
       <h1 className="header">MARKETS</h1>
       {markets ? (
         <Stack direction="vertical" className="markets-metrics">

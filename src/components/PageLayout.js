@@ -104,9 +104,6 @@ const PageLayout = ({ children }) => {
     loadContracts()
   }, [])
 
-  console.log(" ENV: ", process.env)
-  console.log("Process ENV: ", process.env.GATSBY_ALCHEMY_KEY)
-
   return (
     <div className="pt-5 mt-5">
       <Header />

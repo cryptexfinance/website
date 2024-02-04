@@ -4,6 +4,12 @@
  * See: https://www.gatsbyjs.org/docs/gatsby-config/
  */
 
+// if (process.env.NODE_ENV === "development") {
+require("dotenv").config({
+  path: `.env`,
+})   
+//}
+
 module.exports = {
   /* Your site config here */
   siteMetadata: {
@@ -214,12 +220,6 @@ module.exports = {
             },
           },
         ],
-      },
-    },
-    {
-      resolve: `gatsby-plugin-env-variables`,
-      options: {
-        allowList: ["GATSBY_ALCHEMY_KEY"]
       },
     },
   ],

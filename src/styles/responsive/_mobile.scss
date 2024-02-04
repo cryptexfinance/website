@@ -1,5 +1,10 @@
 @media only screen and (max-device-width: 600px) and (orientation: portrait) {
 
+  .spinner-border {
+    --bs-spinner-width: 7rem;
+    --bs-spinner-height: 7rem;
+  }
+
   .main-container{
     display: flex;
     flex-direction: column;
@@ -88,7 +93,7 @@
 
   .navbar,
   .navbar div {
-    height: 49px;
+    height: 60px;
     background: $color-black;
     font-family: $font-primary;
     font-style: normal;
@@ -101,10 +106,9 @@
 
   .nav-links a {
     z-index: 30;
-    height: 100vh;
     background: $color-black;
-    padding-top: 40px;
-    padding-bottom: 37px;
+    padding-top: 35px;
+    padding-bottom: 35px;
     text-align: center;
     font-size: 18px;
     line-height: 28px;
@@ -112,11 +116,11 @@
     color: $color-grey !important;
 
     &::first-child {
-      margin-top: 60px;
+      margin-top: 140px;
     }
 
     &:not(:first-child) {
-      padding-top: 44px;
+      padding-top: 40px;
     }
 
     &:hover {
@@ -366,6 +370,9 @@
   }
 
   .section-markets {
+    .markets-loading {
+      padding: 18rem 0rem;
+    }
     .markets-metrics {
       margin-top: 3rem;
       padding: 0.5rem 0rem;
@@ -374,13 +381,13 @@
       display: none;
     }
     .markets-detail {
-      height: 110rem;
+      height: 120rem;
       overflow-y: scroll;
     }
     .market {
       &-row {
         margin: 1.5rem 0rem;
-        padding: 1.5rem 0rem;
+        padding: 2rem 0rem;
         border: 0.5px solid #0e0e19;
         border-radius: 5px;
         flex-direction: column;
@@ -397,7 +404,7 @@
         justify-content: space-between;
         align-items: center;
         width: 100%;
-        margin: 0.7rem 0rem;
+        margin: 1rem 0rem;
         &.mobile-header {
           margin-bottom: 3.5rem;
         }

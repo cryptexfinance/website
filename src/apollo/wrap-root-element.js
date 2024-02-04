@@ -18,20 +18,11 @@ const tanstackQueryClient = new QueryClient({
   },
 })
 
-
-/* const { publicClient } = configureChains(
-  [arbitrum],
-  [
-    infuraProvider({ apiKey: "e37c21b7a4e14c74b9719bea11d9d18f" }),
-    alchemyProvider({ apiKey: "gKHAv71vj7O1q__-8yW79Ua-4eIXRPAy" }),
-    publicProvider()
-  ]
-) */
-
+const ALCHEMY_KEY = process.env.ALCHEMY_KEY || process.env.GATSBY_ALCHEMY_KEY
 export const wagmiConfig = createConfig({
   chains: [arbitrum],
   transports: {
-    [arbitrum.id]: http("https://arb-mainnet.g.alchemy.com/v2/gKHAv71vj7O1q__-8yW79Ua-4eIXRPAy", {
+    [arbitrum.id]: http(`https://arb-mainnet.g.alchemy.com/v2/${ALCHEMY_KEY}`, {
       batch: true
     }),
   },

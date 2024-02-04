@@ -28,7 +28,7 @@ const NavbarMenu = props => {
   const blogView =
     typeof props.blogPost !== "undefined" ? props.blogPost : false
   const governanceUrl = blogView ? `${siteUrl}/#governance` : "#governance"
-  const docsUrl = "https://docs.cryptex.finance/"
+  const marketsUrl = blogView ? `${siteUrl}/#markets` : "#markets"
 
   const NavMobile = () => {
     return (
@@ -50,12 +50,18 @@ const NavbarMenu = props => {
             className="justify-content-start"
           >
             <Nav className="nav-links">
+              <Nav.Link as={Link} to={marketsUrl} title="Markets">
+                Markets
+              </Nav.Link>
+              <div className="nav-links-divisor" />
+            </Nav>     
+            <Nav className="nav-links">
               <Nav.Link as={Link} to={governanceUrl} title="Governance">
                 Governance
               </Nav.Link>
-              <div className="nav-links-divisor"></div>
+              <div className="nav-links-divisor" />
             </Nav>
-          </Navbar.Collapse>
+          </Navbar.Collapse>          
         </Navbar>
       </div>
     )
@@ -79,6 +85,9 @@ const NavbarMenu = props => {
             className="justify-content-start"
           >
             <Nav className="nav-links">
+              <Nav.Link as={Link} to={marketsUrl} title="Markets">
+                Markets
+              </Nav.Link>
               <Nav.Link as={Link} to={governanceUrl} title="CTX Governance">
                 Governance
               </Nav.Link>
