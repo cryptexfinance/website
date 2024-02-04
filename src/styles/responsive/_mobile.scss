@@ -1,5 +1,10 @@
 @media only screen and (max-device-width: 600px) and (orientation: portrait) {
 
+  .spinner-border {
+    --bs-spinner-width: 7rem;
+    --bs-spinner-height: 7rem;
+  }
+
   .main-container{
     display: flex;
     flex-direction: column;
@@ -75,17 +80,6 @@
     text-align: center;
   }
 
-  .section-solutions {
-    .solutions {
-      grid-template-columns: auto;
-    }
-  }
-
-  .section-solutions .inline-helper {
-    flex-direction: column;
-
-  }
-
   .same-size-button{
     display: flex;
     align-items: center;
@@ -99,7 +93,7 @@
 
   .navbar,
   .navbar div {
-    height: 49px;
+    height: 60px;
     background: $color-black;
     font-family: $font-primary;
     font-style: normal;
@@ -112,10 +106,9 @@
 
   .nav-links a {
     z-index: 30;
-    height: 100vh;
     background: $color-black;
-    padding-top: 40px;
-    padding-bottom: 37px;
+    padding-top: 35px;
+    padding-bottom: 35px;
     text-align: center;
     font-size: 18px;
     line-height: 28px;
@@ -123,11 +116,11 @@
     color: $color-grey !important;
 
     &::first-child {
-      margin-top: 60px;
+      margin-top: 140px;
     }
 
     &:not(:first-child) {
-      padding-top: 44px;
+      padding-top: 40px;
     }
 
     &:hover {
@@ -376,48 +369,63 @@
     }
   }
 
-  .section-solutions {
-    height: auto;
-    margin: 0rem 1rem 17rem 1rem;
-    padding: 0rem 5rem 15rem 5rem;
-
-    .header {
-      align-self: start;
-      margin: 2rem;
+  .section-markets {
+    .markets-loading {
+      padding: 18rem 0rem;
     }
-    .subheader {
-      text-align: justify;
-      width: 100%;
+    .markets-metrics {
+      margin-top: 3rem;
+      padding: 0.5rem 0rem;
     }
-    .solution-img-container {
-      margin-top: 6rem;
+    .markets-header { 
+      display: none;
     }
-    .solutions {
-      grid-template-columns: auto;
-      margin-top: 2rem;
-      margin-bottom: 4rem;
-      &-info  {
-        margin-top: 2rem;
-        margin-bottom: 5rem;
+    .markets-detail {
+      height: 120rem;
+      overflow-y: scroll;
+    }
+    .market {
+      &-row {
+        margin: 1.5rem 0rem;
+        padding: 2rem 0rem;
+        border: 0.5px solid #0e0e19;
+        border-radius: 5px;
+        flex-direction: column;
+        background-color: rgba(33, 33, 56, 0.82);
+        
+        &.dark {
+          background-color: #0e0e19;
+          border: 0.5px solid rgba(33, 33, 56, 0.82);
+        }
       }
-      .index-prices {
-        margin-top: 7.5rem;
-      }
-      &-item {
-        height: 120rem;
+      &-row-item {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
         width: 100%;
-        margin-top: 6rem;
-
-        .terciary-header {
-          margin-top: 1rem;
-        }
-        .subtitle {
-          margin-top: 5rem;
+        margin: 1rem 0rem;
+        &.mobile-header {
+          margin-bottom: 3.5rem;
         }
       }
-      .learn-more-link {
-        font-size: 15px;
+      &-logo {
+        margin-right: 1rem;
+        width: 38px;
+        height: 38px;
       }
+      &-title {
+        font-size: 16px;
+      }
+      &-value {
+        font-size: 16px;
+      }
+      &-subvalue {
+        font-size: 14px;
+      }
+    }
+    .only-mobile {
+      display: block;
     }
   }
 
@@ -509,99 +517,6 @@
 
   .main-buttons-actions{
     flex-direction: column;
-  }
-
-  .section-protocol {
-    height: 100%;
-    margin: 0rem 0rem 13rem 0rem;
-    padding: 15rem 5rem;
-    align-items: center;
-
-    .header {
-      align-self: start;
-      margin: 2rem;
-    }
-
-    .items {
-      flex-direction: column;
-      margin-top: 0rem;
-      margin-bottom: 4rem;
-
-      &-info {
-        margin-top: 2rem;
-      }
-
-      .item {
-        height: 85rem;
-        width: 100%;
-        margin-top: 6rem;
-
-        .terciary-header {
-          margin-top: 1rem;
-        }
-
-        .subtitle {
-          margin-top: 5rem;
-          text-align: left;
-          font-size: 16px;
-        }
-      }
-      .safety-logo {
-        height: 110px;
-        margin-top: 3rem;
-      }
-    }
-  }
-
-  .section-ecosystem {
-    flex-direction: column;
-    margin: 15rem 1rem;
-    padding: 15rem 4rem;
-    height: auto;
-
-    .box {
-      width: 100%;
-    }
-    .ecosystem-content {
-      display: grid;
-      grid-template-columns: 100%;
-      row-gap: 8rem;
-      margin-top: 8rem;
-    }
-    .main {
-      height: 145rem;
-      .subscribe {
-        &-data {
-          flex-direction: column;
-          padding: 4rem 0;
-        }
-        &-input {
-          font-size: 16px;
-          height: 54px;
-          line-height: 14px;
-          padding: 24px;
-          width: 100%;
-        }
-        &-button {
-          height: 54px;
-          width: 100%;
-          font-size: 16px;
-        }
-      }
-    }
-    .sewagefruit {
-      height: 95rem;
-      img {
-        margin: 10rem 0rem;
-      }
-    }
-    .carousel {
-      margin: 10rem 0rem;
-      padding-top: 2rem;
-      padding-bottom: 2rem;
-      height: 85rem;
-      width: 100%;
-    }
   }
 
   .footer {
@@ -771,17 +686,6 @@
           width: 30px;
           height: 30px;
           margin-right: 13px;
-        }
-      }
-    }
-  }
-
-  @media only screen and (max-device-width: 370px) {
-    .section-safety { 
-      .items {
-        .safety-logo {
-          height: 95px;
-          margin-top: 2rem;
         }
       }
     }

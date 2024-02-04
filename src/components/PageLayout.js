@@ -1,18 +1,20 @@
 import React, { useEffect } from "react"
 import { ethers } from "ethers"
 import { Contract, Provider } from "ethers-multicall"
+
 import Header from "./Header"
 import Footer from "./Footer"
-import agregatorAbi from "../contracts/agregatorAbi.json"
-import tcapOracle from "../contracts/tcapOracle.json"
-import jpegzOracle from "../contracts/jpegzOracle.json"
-import ctxToken from "../contracts/ctx.json"
-import wethOracle from "../contracts/wethOracle.json"
-import ctxUniPair from "../contracts/ctxUniPair.json"
-import delegatorFactory from "../contracts/delegatorFactory.json"
+import agregatorAbi from "../abi/artifacts/agregatorAbi.json"
+import tcapOracle from "../abi/artifacts/tcapOracle.json"
+import jpegzOracle from "../abi/artifacts/jpegzOracle.json"
+import ctxToken from "../abi/artifacts/ctx.json"
+import wethOracle from "../abi/artifacts/wethOracle.json"
+import ctxUniPair from "../abi/artifacts/ctxUniPair.json"
+import delegatorFactory from "../abi/artifacts/delegatorFactory.json"
 import { contractsContext, signerContext, arbContractsContext, arbSignerContext } from "../context"
 import { useContracts, useSigner, useArbContracts, useArbSigner } from "../hooks"
 import { getDefaultProvider, getArbitrumProvider } from "../utils"
+
 
 const PageLayout = ({ children }) => {
   const contracts = useContracts()

@@ -1,6 +1,7 @@
 const _ = require("lodash")
 const path = require("path")
 const { createFilePath } = require("gatsby-source-filesystem")
+const webpack = require("webpack")
 
 exports.createPages = ({ actions, graphql }) => {
   const { createPage } = actions
@@ -133,7 +134,7 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
   }
 }
 
-exports.onCreateWebpackConfig = ({ stage, loaders, actions }) => {
+exports.onCreateWebpackConfig = ({ getConfig, stage, loaders, actions }) => {
   if (stage === "build-html" || stage === "develop-html") {
     actions.setWebpackConfig({
       module: {
@@ -144,6 +145,33 @@ exports.onCreateWebpackConfig = ({ stage, loaders, actions }) => {
           },
         ],
       },
+      plugins: [
+        new webpack.NormalModuleReplacementPlugin(/^node:/, (resource) => {
+          resource.request = resource.request.replace(/^node:/, '')
+        })
+      ],
+      resolve: {
+        // Handle unsupported node scheme - https://github.com/webpack/webpack/issues/13290#issuecomment-987880453
+        fallback: {
+          crypto: require.resolve('stream-browserify'),
+        }
+      }
     })
   }
+
+  const webpackConfig = getConfig()
+  if (stage === "build-javascript") {
+    const dependencyRulesIndex = webpackConfig.module.rules.findIndex(
+      (rule) => {
+        return (
+          rule.test &&
+          rule.test.toString() === "/\\.(js|mjs)$/" &&
+          typeof rule.exclude === "function"
+        )
+      }
+    )
+
+    webpackConfig.module.rules.splice(dependencyRulesIndex, 1)
+  }
+  actions.replaceWebpackConfig(webpackConfig)
 }
