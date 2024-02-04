@@ -131,7 +131,18 @@ const SectionMarkets = () => {
               if (!market) return <></>
               return <MarketRow index={index} asset={sorteAsset.asset} market={market} />
             })}
-          </div>   
+          </div>
+          <Stack direction="horizontal" className="markets-totals not-on-mobile">
+            <Col lg={6}>
+              <span className="total-value">TOTALS:</span>
+            </Col>
+            <Col lg={3} className="total-value text-right">
+              <span>{totalLiquidity}+</span>
+            </Col>
+            <Col lg={3} className="total-value text-right">
+              <span>{totalOpenInteres}+</span>
+            </Col>
+          </Stack>
         </Stack>
       ) : (
         <Stack direction="vertical" className="markets-loading">

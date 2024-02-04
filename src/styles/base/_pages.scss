@@ -125,8 +125,8 @@ body {
 }
 
 .section-markets {
-  margin: 3rem 1rem 4rem 1rem;
-  padding: 9rem 2rem;
+  margin: 3rem 1rem 2rem 1rem;
+  padding: 9rem 2rem 3rem 2rem;
 
   .markets-metrics {
     margin-top: 1rem;
@@ -187,7 +187,18 @@ body {
       font-size: 0.8rem;
     }
   }
+  .markets-totals {
+    padding: 1rem 0.5rem;
+    margin: 1rem 0.5rem;
+    background-color: #0e0e19;
+    border: 0.5px solid #494866;
+    border-radius: 5px;
 
+    .total-value {
+      color: rgb(216, 216, 216);
+      font-size: 18px;
+    }
+  }
   .only-mobile {
     display: none;
   }

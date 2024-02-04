@@ -15,6 +15,7 @@ import msqEthLogo from '../../static/website/markets/msqEth.png'
 import polygonLogo from '../../static/website/markets/polygon.png'
 import solanaLogo from '../../static/website/markets/solana.png'
 import xrpLogo from '../../static/website/markets/xrp.png'
+import jupLogo from '../../static/website/markets/jup.png'
 
 
 export enum SupportedAsset {
@@ -29,6 +30,7 @@ export enum SupportedAsset {
   xrp = 'xrp',
   msqBTC = 'btc²',
   msqETH = 'eth²',
+  jup = 'jup',
 }
 
 export enum QuoteCurrency {
@@ -206,6 +208,18 @@ export const AssetMetadata: AssetMetadataType = {
     pythFeedId: '0xff61491a931112ddf1bd8147cd1b641375f79f5825126d665480874634fd0ace',
     transform: centimilliPowerTwoTransform,
   },
+  [SupportedAsset.jup]: {
+    symbol: 'JUP-USD',
+    name: 'Jupiter',
+    displayDecimals: 6,
+    tvTicker: 'Crypto.JUP/USD',
+    tvPythSymbol: 'PYTH:JUPUSD',
+    icon: jupLogo,
+    baseCurrency: SupportedAsset.jup,
+    quoteCurrency: QuoteCurrency.usd,
+    pythFeedId: '0x0a0408d619e9380abad35060f9192039ed5042fa6f82301d0e48bb52be830996',
+    transform: linearTransform
+  },
 }
 
 export const ChainMarkets: {
@@ -225,6 +239,7 @@ export const ChainMarkets: {
     [SupportedAsset.bnb]: getAddress('0x362c6bC2A4EA2033063bf20409A4c5E8C5754056'),
     [SupportedAsset.xrp]: getAddress('0x2402E92f8C58886F716F5554039fA6398d7A1EfB'),
     [SupportedAsset.msqETH]: getAddress('0x004E1Abf70e4FF99BC572843B63a63a58FAa08FF'),
+    [SupportedAsset.jup]: getAddress('0xbfa99F19a376F25968865983c41535fa368B28da'),
   },
   [arbitrumSepolia.id]: {
     [SupportedAsset.eth]: getAddress('0x0142a8bfF8D887Fc4f04469fCA6c66F5e0936Ea7'),
