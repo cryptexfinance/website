@@ -129,12 +129,12 @@ const SectionMarkets = () => {
             {sortedAssets.map((sorteAsset, index) => {
               const market = markets[sorteAsset.asset]
               if (!market) return <></>
-              return <MarketRow index={index} asset={sorteAsset.asset} market={market} />
+              return <MarketRow key={index.toString()} index={index} asset={sorteAsset.asset} market={market} />
             })}
           </div>
           <Stack direction="horizontal" className="markets-totals not-on-mobile">
             <Col lg={6}>
-              <span className="total-value">TOTALS:</span>
+              <span className="total-value">TOTAL</span>
             </Col>
             <Col lg={3} className="total-value text-right">
               <span>{totalLiquidity}+</span>

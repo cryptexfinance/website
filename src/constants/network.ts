@@ -23,19 +23,9 @@ export const isSupportedChain = (chainId?: number) =>
 
 export const DefaultChain = chains[0];
 
-export const getViemClient = (): PublicClient => {
-  const transport = http('https://arb-mainnet.g.alchemy.com/v2/ZI3cEsskU3h2yXFr8XvEW9NNI2ChosQ3', {
-    batch: true
-  })
-  return createPublicClient({
-    chain: arbitrum,
-    transport,
-  })
-}
-
 export const GraphUrls: { [chainId in SupportedChainId]: string } = {
-  [arbitrum.id]: process.env.REACT_APP_GRAPH_URL_ARBITRUM ?? "",
-  [arbitrumSepolia.id]: process.env.REACT_APP_GRAPH_URL_ARBITRUM_SEPOLIA ?? "",
+  [arbitrum.id]: process.env.GATSBY_GRAPH_URL_ARBITRUM || process.env.GRAPH_URL_ARBITRUM || "",
+  [arbitrumSepolia.id]: process.env.GATSBY_GRAPH_URL_ARBITRUM_SEPOLIA ?? "",
 };
 
 export const ExplorerNames: { [chainId in SupportedChainId]: string } = {

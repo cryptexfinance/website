@@ -33,10 +33,9 @@ export const useViemWsClient = () => {
 }
 
 export const useRPCProviderUrl = (): string => {
-  const chainId = useChainId()
-  // const p = usePublicClient({ chainId })
+  const ALCHEMY_KEY = process.env.ALCHEMY_KEY || process.env.GATSBY_ALCHEMY_KEY
 
-  return "https://arb-mainnet.g.alchemy.com/v2/gKHAv71vj7O1q__-8yW79Ua-4eIXRPAy" 
+  return `https://arb-mainnet.g.alchemy.com/v2/${ALCHEMY_KEY}`
 }
 
 /* export const useRPCProviderUrl = (): string => {
