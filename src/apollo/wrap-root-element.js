@@ -18,10 +18,14 @@ const tanstackQueryClient = new QueryClient({
   },
 })
 
-const ALCHEMY_KEY = process.env.ALCHEMY_KEY || process.env.GATSBY_ALCHEMY_KEY
+const ALCHEMY_KEY = process.env.GATSBY_ALCHEMY_KEY || process.env.ALCHEMY_KEY
+const INFURA_ID = process.env.GATSBY_INFURA_ID || process.env.INFURA_ID
 export const wagmiConfig = createConfig({
   chains: [arbitrum],
   transports: {
+    [arbitrum.id]: http(`https://arbitrum-mainnet.infura.io/v3/${INFURA_ID}`, {
+      batch: true
+    }),
     [arbitrum.id]: http(`https://arb-mainnet.g.alchemy.com/v2/${ALCHEMY_KEY}`, {
       batch: true
     }),
