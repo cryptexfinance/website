@@ -32,10 +32,19 @@ export const useViemWsClient = () => {
   return viemWsClients.get(chainId)!
 }
 
-export const useRPCProviderUrl = (): string => {
-  const ALCHEMY_KEY = process.env.ALCHEMY_KEY || process.env.GATSBY_ALCHEMY_KEY
+const randomInteger = (min: number, max: number): number => {
+  return Math.floor(Math.random() * (max - min + 1)) + min;
+}
 
-  return `https://arb-mainnet.g.alchemy.com/v2/${ALCHEMY_KEY}`
+export const useRPCProviderUrl = (): string => {
+  const alchemyKey = process.env.ALCHEMY_KEY || process.env.GATSBY_ALCHEMY_KEY
+  const alchemyKey2 = process.env.ALCHEMY_KEY_2 || process.env.GATSBY_ALCHEMY_KEY_2
+  const alchemyKey3 = process.env.ALCHEMY_KEY_3 || process.env.GATSBY_ALCHEMY_KEY_3
+
+  const n = randomInteger(0, 2)
+  const keys = [alchemyKey, alchemyKey2, alchemyKey3]
+
+  return `https://arb-mainnet.g.alchemy.com/v2/${keys[n]}`
 }
 
 /* export const useRPCProviderUrl = (): string => {
