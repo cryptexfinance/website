@@ -4,7 +4,6 @@ import { PriceFeed } from "@pythnetwork/price-service-client"
 import { MarketSnapshot } from "./markets"
 import { Big6Math, BigOrZero, formatBig6Percent, formatBig6USDPrice } from "../utils/big6Utils"
 import { calcLpExposure, calcLpUtilization, calcSkew, calcTakerLiquidity, efficiency } from "../utils/positionUtils"
-import { useMarket24hrData, useMarket7dData } from './graph'
 import { AssetMetadata, SupportedAsset, chainAssetsWithAddress } from '../constants/markets'
 import { useChainId, usePythSubscription } from './network'
 import { useQuery } from '@tanstack/react-query'
@@ -84,7 +83,7 @@ export const useMarket24HrHighLow = (asset: SupportedAsset) => {
 
       const { tvTicker, transform } = metadata
       const { from, to } = last24hrBounds()
-      const request = await fetch(`${PythDataFeedUrl}/history?symbol=${tvTicker}&resolution=D&from=${from}&to=${to}`)
+      const request = await fetch(`${PythDataFeedUrl}/history?symbol=${tvTicker}&resolution=D&from=${from}&to=${to}`) 
       const prices = (await request.json()) as { h: number[]; l: number[]; o: number[] }
 
       return {
@@ -102,10 +101,10 @@ export const useFormattedMarketBarValues = (marketSnapshot: MarketSnapshot) => {
 
   const selectedMarket = marketSnapshot.asset
   const { data: priceData } = useMarket24HrHighLow(selectedMarket)
-  const { data: dailyData } = useMarket24hrData(selectedMarket)
-  const { data: weeklyData } = useMarket7dData(selectedMarket)
+  // const { data: dailyData } = useMarket24hrData(selectedMarket)
+  // const { data: weeklyData } = useMarket7dData(selectedMarket)
 
-  const totalVolume = useMemo(() => {
+  /* const totalVolume = useMemo(() => {
     // @ts-ignore
     if (!dailyData?.volume) return 0n
     // @ts-ignore
@@ -113,7 +112,7 @@ export const useFormattedMarketBarValues = (marketSnapshot: MarketSnapshot) => {
   },
     // @ts-ignore
     [dailyData?.volume]
-  )
+  ) */
 
   const chainPrice = marketSnapshot.global?.latestPrice ?? 0n
   const currentPrice = livePrices[selectedMarket]?.price ?? chainPrice ?? 0n
@@ -137,11 +136,12 @@ export const useFormattedMarketBarValues = (marketSnapshot: MarketSnapshot) => {
 
   return {
     price: formatBig6USDPrice(currentPrice),
+    priceBI: currentPrice,
     change: formatBig6Percent(Big6Math.abs(Big6Math.div(change, priceData?.open ?? 1n))),
     changeIsNegative: change < 0n,
     low: formatBig6USDPrice(Big6Math.min(currentPrice, priceData?.low ?? 0n)),
     high: formatBig6USDPrice(Big6Math.max(currentPrice, priceData?.high ?? 0n)),
-    volume: formatBig6USDPrice(totalVolume, { compact: true }),
+    // volume: formatBig6USDPrice(totalVolume, { compact: true }),
     openInterest: `${formatBig6USDPrice(longOpenInterest, {
       compact: true,
     })} / ${formatBig6USDPrice(shortOpenInterest, { compact: true })}`,
@@ -157,9 +157,9 @@ export const useFormattedMarketBarValues = (marketSnapshot: MarketSnapshot) => {
     })}`,
     lpExposurePct: lpExposure?.formattedLpExposure ?? '0.00%',
     lpExposure: lpExposure?.exposureSide ?? '--',
-    volume7d: `${formatBig6USDPrice((weeklyData?.takerVolumes.long ?? 0n) + (weeklyData?.takerVolumes.short ?? 0n), {
+    /* volume7d: `${formatBig6USDPrice((weeklyData?.takerVolumes.long ?? 0n) + (weeklyData?.takerVolumes.short ?? 0n), {
       compact: true,
-    })}`,
+    })}`, */
     lpUtilization: lpUtilization?.formattedLpUtilization ?? '0.00%',
     skew: formatBig6Percent(calculatedSkew?.skew ?? 0n),
     longSkew: formatBig6Percent(calculatedSkew?.longSkew ?? 0n),

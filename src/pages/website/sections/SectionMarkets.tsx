@@ -1,4 +1,4 @@
-import React, { useMemo } from "react"
+import React, { useEffect, useMemo, useState } from "react"
 import { MarketSnapshot, useMarketSnapshots } from "../../../hooks/markets";
 import { useFormattedMarketBarValues } from "../../../hooks/metrics";
 import { AssetMetadata, SupportedAsset } from "../../../constants/markets";
@@ -6,6 +6,25 @@ import { Col, Image, Spinner, Stack } from "react-bootstrap";
 import { calcNotional, calcTakerLiquidity } from "../../../utils/positionUtils";
 import { Big6Math, formatBig6USDPrice } from "../../../utils/big6Utils";
 
+
+const PriceBox = ({ currentPrice }: { currentPrice: bigint }) => {
+  const [previousPrice, setPreviousPrice] = useState(0n)
+  const [positiveChange, setPositiveChange] = useState(true)
+
+  useEffect(() => {
+    setPositiveChange(previousPrice < currentPrice)
+    setPreviousPrice(currentPrice)
+  }, [currentPrice])
+
+  return (
+    <Col lg="2" sm={12} className="market-row-item not-on-mobile text-right">
+      <span className="market-title only-mobile">Price</span>
+      <span className={"market-value ".concat(positiveChange ? "text-green" : "text-red")}>
+        {formatBig6USDPrice(currentPrice)}
+      </span>
+    </Col>
+  )
+}
 
 const MarketRow = ({ index, asset, market }: { index: number, asset: SupportedAsset, market: MarketSnapshot }) => {
   const assetMetada = AssetMetadata[asset]
@@ -17,7 +36,7 @@ const MarketRow = ({ index, asset, market }: { index: number, asset: SupportedAs
       key={index.toString()}
       // direction="horizontal"
       className={"market-row ".concat(darkRow ? "dark" : "")}
-      href="https://app.cryptex.finance"
+      href={`https://app.cryptex.finance/?market=${asset}`}
       target="_blank"
     >
       <Col className="market-row-item mobile-header" lg="2" sm={12}>
@@ -30,10 +49,7 @@ const MarketRow = ({ index, asset, market }: { index: number, asset: SupportedAs
         </Stack>
         <span className="market-value price only-mobile">{formattedValues.price}</span>
       </Col>
-      <Col lg="2" sm={12} className="market-row-item not-on-mobile text-right">
-        <span className="market-title only-mobile">Price</span>
-        <span className="market-value">{formattedValues.price}</span>
-      </Col>
+      <PriceBox currentPrice={formattedValues.priceBI} />
       <Col lg="2" sm={12} className="market-row-item text-right">
         <span className="market-title only-mobile">24h Change</span>
         <span className={`market-value ${!formattedValues.changeIsNegative ? "text-green" : "text-red"}`}>
@@ -103,46 +119,42 @@ const SectionMarkets = () => {
       <h1 className="header">MARKETS</h1>
       {markets ? (
         <Stack direction="vertical" className="markets-metrics">
-          {/* <Stack direction="horizontal" className="markets-totals">
-            <Stack direction="horizontal" className="markets-total">
-              
+          <Stack direction="horizontal" gap={3} className="markets-totals">
+            <Col lg={6} sm={12} className="total-box">
+              <span className="total-title">Total Liquidity</span>
+              <span className="total-value">{totalLiquidity}+</span>
+            </Col>
+            <Col lg={6} sm={12} className="total-box">
+              <span className="total-title">Total Open Interest</span>
+              <span className="total-value">{totalOpenInteres}+</span>
+            </Col>
+          </Stack>
+          <div className="markets-detail-container">
+            <Stack direction="horizontal" gap={0} className="markets-header">
+              <Col lg="2">
+                <span className="market-title asset">Asset</span>
+              </Col>
+              <Col lg="2" className="text-right">
+                <span className="market-title">Price</span>
+              </Col>
+              <Col lg="2" className="text-right">
+                <span className="market-title">24h Change</span>
+              </Col>
+              <Col lg="3" className="text-right">
+                <span className="market-title">L/S Liquidity</span>
+              </Col>
+              <Col lg="3" className="text-right">
+                <span className="market-title">L/S Open Interest</span>
+              </Col>
             </Stack>
-          </Stack> */}
-          <Stack direction="horizontal" gap={2} className="markets-header">
-            <Col lg="2">
-              <span className="market-title">Asset</span>
-            </Col>
-            <Col lg="2" className="text-right">
-              <span className="market-title">Price</span>
-            </Col>
-            <Col lg="2" className="text-right">
-              <span className="market-title">24h Change</span>
-            </Col>
-            <Col lg="3" className="text-right">
-              <span className="market-title">L/S Liquidity</span>
-            </Col>
-            <Col lg="3" className="text-right">
-              <span className="market-title">L/S Open Interest</span>
-            </Col>
-          </Stack>
-          <div className="markets-detail">
-            {sortedAssets.map((sorteAsset, index) => {
-              const market = markets[sorteAsset.asset]
-              if (!market) return <></>
-              return <MarketRow key={index.toString()} index={index} asset={sorteAsset.asset} market={market} />
-            })}
-          </div>
-          <Stack direction="horizontal" className="markets-totals not-on-mobile">
-            <Col lg={6}>
-              <span className="total-value">TOTAL</span>
-            </Col>
-            <Col lg={3} className="total-value text-right">
-              <span>{totalLiquidity}+</span>
-            </Col>
-            <Col lg={3} className="total-value text-right">
-              <span>{totalOpenInteres}+</span>
-            </Col>
-          </Stack>
+            <div className="markets-detail">
+              {sortedAssets.map((sorteAsset, index) => {
+                const market = markets[sorteAsset.asset]
+                if (!market) return <></>
+                return <MarketRow key={index.toString()} index={index} asset={sorteAsset.asset} market={market} />
+              })}
+            </div>
+          </div>  
         </Stack>
       ) : (
         <Stack direction="vertical" className="markets-loading">
@@ -154,5 +166,3 @@ const SectionMarkets = () => {
 }
 
 export default SectionMarkets
-
-// export async function getServerData() {}

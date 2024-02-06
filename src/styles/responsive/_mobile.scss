@@ -380,9 +380,20 @@
     .markets-header { 
       display: none;
     }
+    
     .markets-detail {
       height: 120rem;
       overflow-y: scroll;
+    }
+    .markets-totals {
+      flex-direction: column;
+      margin-bottom: 5rem;
+
+      .total-box {
+        width: 100%;
+        padding: 2.5rem 2rem;
+        margin-bottom: 0.7rem;
+      }
     }
     .market {
       &-row {

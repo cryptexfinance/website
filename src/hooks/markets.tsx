@@ -151,7 +151,7 @@ export const useMarketSnapshots = () => {
         }
         return acc
       }, {} as { [key in SupportedAsset]?: MarketSnapshot })
-
+  
       return {
         markets: marketSnapshots,
         commitments: snapshotData.commitments,

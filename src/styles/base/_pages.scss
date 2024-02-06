@@ -125,11 +125,15 @@ body {
 }
 
 .section-markets {
-  margin: 3rem 1rem 2rem 1rem;
+  margin: 3rem 2rem 2rem 1rem;
   padding: 9rem 2rem 3rem 2rem;
 
+  .header {
+    margin-left: 0.5rem;
+  }
+
   .markets-metrics {
-    margin-top: 1rem;
+    margin-top: 0.5rem;
     padding: 0.5rem 0rem;
   }
   .markets-loading {
@@ -138,14 +142,17 @@ body {
     padding: 8rem 0rem;
   }
   .markets-header {
-    border-bottom: 1px solid #494866;
-    margin: 0.2rem 0rem;
-    padding-bottom: 0.5rem;
-    padding-right: 1rem;
-
-    div {
-      padding-right: 1.5rem;
-    }
+    // border-bottom: 0.5px solid #494866;
+    margin: 0.2rem 0.5rem;
+    // padding-bottom: 0.5rem;
+    // padding-right: 1rem;
+    
+  }
+  .markets-detail-container {
+    background-color: #080809;
+    border: 0.5px solid rgba(42, 15, 61, 0.3);
+    border-radius: 5px;
+    padding: 0.5rem 0.2rem;
   }
   .markets-detail {
     height: 25rem;
@@ -177,6 +184,9 @@ body {
     }
     &-title {
       color: $color-grey;
+      &.asset {
+        padding-left: 0.5rem;
+      }
     }
     &-value {
       color: white;
@@ -187,18 +197,34 @@ body {
       font-size: 0.8rem;
     }
   }
-  .markets-totals {
-    padding: 1rem 0.5rem;
-    margin: 1rem 0.5rem;
-    background-color: #0e0e19;
-    border: 0.5px solid #494866;
-    border-radius: 5px;
 
-    .total-value {
-      color: rgb(216, 216, 216);
+  .markets-totals {
+    margin-bottom: 1.5rem;
+    padding-left: 0.5rem;
+    padding-right: 1.5rem;
+
+    .total-box {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      background-color: #080809;
+      box-shadow: inset 0px 0px 8px 1px rgba(164, 64, 242, 0.2);
+      border: 0.7px solid #A440F2;//#441b64;
+      border-radius: 5px;
+      padding: 1rem 2rem;
+    }
+    .total-title {
+      color: $color-grey;
       font-size: 18px;
     }
+    .total-value {
+      color: rgb(216, 216, 216);
+      font-size: 24px;
+      text-shadow: 0px 0px 15px rgba(164, 64, 242, 0.98);;
+    }
   }
+
   .only-mobile {
     display: none;
   }
