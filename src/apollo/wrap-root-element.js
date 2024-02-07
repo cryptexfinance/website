@@ -26,9 +26,9 @@ export const wagmiConfig = createConfig({
     [arbitrum.id]: http(`https://arbitrum-mainnet.infura.io/v3/${INFURA_ID}`, {
       batch: true
     }),
-    [arbitrum.id]: http(`https://arb-mainnet.g.alchemy.com/v2/${ALCHEMY_KEY}`, {
+    /* [arbitrum.id]: http(`https://arb-mainnet.g.alchemy.com/v2/${ALCHEMY_KEY}`, {
       batch: true
-    }),
+    }), */
   },
 })
 

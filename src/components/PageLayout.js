@@ -102,7 +102,10 @@ const PageLayout = ({ children }) => {
       arbContracts.setCurrentTcapOracleRead(currentTcapArbOracleRead);
     }
     loadContracts()
-  }, [])
+  },
+    // eslint-disable-next-line
+    []
+  )
 
   return (
     <div className="pt-5 mt-5">
