@@ -4,8 +4,15 @@
  * See: https://www.gatsbyjs.org/docs/gatsby-config/
  */
 
-// const metaImage = require("./static/website/home/cryptexv2.png");
-
+if (process.env.NODE_ENV === "development") {
+  require("dotenv").config({
+    path: `.env`,
+  }) 
+} else {
+  require("dotenv").config({
+    path: `.env.${process.env.NODE_ENV}`,
+  }) 
+}
 
 module.exports = {
   /* Your site config here */

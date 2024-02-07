@@ -2,7 +2,6 @@ import React from "react";
 import twitter from "../../static/website/ecosystem/x_logo.svg";
 import discord from "../../static/website/ecosystem/discord.svg";
 import telegram from "../../static/website/ecosystem/telegram.svg";
-import youtube from "../../static/website/ecosystem/youtube.svg";
 import medium from "../../static/website/ecosystem/medium.svg";
 import mailLogo from "../../static/website/protocol/mail.svg";
 
@@ -80,6 +79,7 @@ const Footer = () => {
       </div>
       <div className="footer-menu">
         <div className="links">
+          <a className="subtitle" href="/#markets">Markets</a>
           <a className="subtitle" href="/#governance">Governance</a>
           <a
             href="https://docs.cryptex.finance"
