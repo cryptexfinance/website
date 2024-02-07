@@ -12,7 +12,7 @@ tags:
   - Pyth
   - Oracles
 ---
-![Pyth Network](/img/pyth-blog.webp "Pyth Network")
+![Pyth Network](/img/pyth-blog.jpg "Pyth Network")
 
 Cryptex Finance is a DeFi protocol on the Arbitrum network that builds cutting edge markets within a new system called Cryptex Pi.
 
