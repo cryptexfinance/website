@@ -43,7 +43,7 @@ const NavbarMenu = props => {
             className="mobile_menu_bar"
             aria-hidden="true"
           >
-            <img className="hamburger-icon-custom" src={hamburgerIcon}></img>
+            <img className="hamburger-icon-custom" src={hamburgerIcon} alt="C"></img>
           </Navbar.Toggle>
           <Navbar.Collapse
             id="responsive-navbar-nav"
