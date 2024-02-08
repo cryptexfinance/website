@@ -3,7 +3,7 @@ import { ethers } from "ethers";
 import { NumericFormat } from "react-number-format";
 import { FaArrowRight } from "react-icons/fa";
 import parse from "html-react-parser";
-import { contractsContext, signerContext } from "../../../context";
+import { contractsContext } from "../../../context";
 import {
   getPriceInUSDFromPair,
   FOUNDERS_ADDRESS,
@@ -21,7 +21,6 @@ import huobiLogo from "../../../../static/website/governance/huobi.svg";
 import camelotLogo from "../../../../static/website/governance/camelot.svg";
 import coingeckoLogo from "../../../../static/website/governance/coingecko.svg";
 import traderJoeLogo from "../../../../static/website/governance/traderjoe.png";
-
 
 
 type GovernanceType = {
@@ -110,29 +109,16 @@ const governanceIcons = [
 ]
 
 const SectionGovernance = () => {
-  const contracts = useContext(contractsContext);
-  const signer = useContext(signerContext);
-  // const breakpoints = useBreakpoint();
-  const [ctxPrice, setCtxPrice] = useState("0");
-  const [marketCap, setMarketCap] = useState("0.0");
-  const [totalStaked, setTotalStaked] = useState("0.0");
-  const sixMonthCtxRewardAmount = 12654;
-  const apyShowDate = new Date(1633654800 * 1000);
+  const contracts = useContext(contractsContext)
+  const [ctxPrice, setCtxPrice] = useState("0")
+  const [marketCap, setMarketCap] = useState("0.0")
+  const [totalStaked, setTotalStaked] = useState("0.0")
+  const sixMonthCtxRewardAmount = 12654
+  const apyShowDate = new Date(1633654800 * 1000)
 
   useEffect(() => {
     const load = async () => {
-      if (signer.ethcallProvider && contracts) {
-        const wethOraclePriceCall = await contracts.wethOracleRead?.getLatestAnswer();
-        const reservesCtxPoolCall = await contracts.ctxUniPairRead?.getReserves();
-        const totalSupplyCall = await contracts.delegatorFactoryRead?.totalSupply();
-
-        const ctxTotalSupplyCall = await contracts.ctxTokenRead?.totalSupply();
-        const foundersTotalCall = await contracts.ctxTokenRead?.balanceOf(FOUNDERS_ADDRESS);
-        const initialIncentiveCall = await contracts.ctxTokenRead?.balanceOf(LIQUIDITY_REWARD_ADDRESS);
-        const initialIncentiveCall2 = await contracts.ctxTokenRead?.balanceOf(LIQUIDITY_REWARD2_ADDRESS);
-        const multisigCall = await contracts.ctxTokenRead?.balanceOf(MULTISIG_ADDRESS);
-        const treasuryTotalCall = await contracts.ctxTokenRead?.balanceOf(TREASURY_ADDRESS);
-
+      if (contracts) {
         // @ts-ignore
         const [
           wethOraclePrice,
@@ -144,39 +130,34 @@ const SectionGovernance = () => {
           initialIncentive2,
           multisig,
           treasuryTotal,
-        ] = await signer.ethcallProvider?.all([
-          wethOraclePriceCall,
-          reservesCtxPoolCall,
-          totalSupplyCall,
-          ctxTotalSupplyCall,
-          foundersTotalCall,
-          initialIncentiveCall,
-          initialIncentiveCall2,
-          multisigCall,
-          treasuryTotalCall,
-        ]);
-        const currentPriceETH = ethers.utils.formatEther(wethOraclePrice.mul(10000000000));
-        const currentPriceCTX = await getPriceInUSDFromPair(
+        ] = await Promise.all([
+          contracts.wethOracleRead?.getLatestAnswer(),
+          contracts.ctxUniPairRead?.getReserves(),
+          contracts.delegatorFactoryRead?.totalSupply(),
+          contracts.ctxTokenRead?.totalSupply(),
+          contracts.ctxTokenRead?.balanceOf(FOUNDERS_ADDRESS),
+          contracts.ctxTokenRead?.balanceOf(LIQUIDITY_REWARD_ADDRESS),
+          contracts.ctxTokenRead?.balanceOf(LIQUIDITY_REWARD2_ADDRESS),
+          contracts.ctxTokenRead?.balanceOf(MULTISIG_ADDRESS),
+          contracts.ctxTokenRead?.balanceOf(TREASURY_ADDRESS),
+        ])
+        const currentPriceETH = ethers.formatEther(wethOraclePrice * 10000000000n);
+        const currentPriceCTX = getPriceInUSDFromPair(
           reservesCtxPool[0],
           reservesCtxPool[1],
           parseFloat(currentPriceETH)
         );
         setCtxPrice(currentPriceCTX.toString());
-        setTotalStaked(ethers.utils.formatEther(totalSupply));
+        setTotalStaked(ethers.formatEther(totalSupply));
 
         const circulatingSupply =
-          ctxTotalSupply
-            .sub(foundersTotal)
-            .sub(initialIncentive)
-            .sub(initialIncentive2)
-            .sub(multisig)
-            .sub(treasuryTotal);
-        const marketCap = parseFloat(ethers.utils.formatEther(circulatingSupply)) * currentPriceCTX;
+          ctxTotalSupply - foundersTotal - initialIncentive - initialIncentive2 - multisig - treasuryTotal
+        const marketCap = parseFloat(ethers.formatEther(circulatingSupply)) * currentPriceCTX;
         setMarketCap(marketCap.toFixed(4));
       }
     }; 
     load();
-  }, [signer.ethcallProvider, contracts]);  
+  }, [contracts]);  
 
   const apr = (): string => {
     const currentDate = new Date();

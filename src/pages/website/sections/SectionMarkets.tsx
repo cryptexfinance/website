@@ -1,10 +1,11 @@
 import React, { useEffect, useMemo, useState } from "react"
-import { MarketSnapshot, useMarketSnapshots } from "../../../hooks/markets";
-import { useFormattedMarketBarValues } from "../../../hooks/metrics";
-import { AssetMetadata, SupportedAsset } from "../../../constants/markets";
-import { Col, Image, Spinner, Stack } from "react-bootstrap";
-import { calcNotional, calcTakerLiquidity } from "../../../utils/positionUtils";
-import { Big6Math, formatBig6USDPrice } from "../../../utils/big6Utils";
+import { MarketSnapshot, useMarketSnapshots } from "../../../hooks/markets"
+import { useFormattedMarketBarValues } from "../../../hooks/metrics"
+import { AssetMetadata, SupportedAsset } from "../../../constants/markets"
+import { Col, Image, Spinner, Stack } from "react-bootstrap"
+import { addPositions, calcNotional, calcTakerLiquidity, nextPosition } from "../../../utils/positionUtils"
+import { Big6Math, formatBig6USDPrice } from "../../../utils/big6Utils"
+import { useVaultSnapshot } from "../../../hooks/marketsV1"
 
 
 const PriceBox = ({ currentPrice }: { currentPrice: bigint }) => {
@@ -71,6 +72,7 @@ const MarketRow = ({ index, asset, market }: { index: number, asset: SupportedAs
 
 const SectionMarkets = () => {
   const snapshots = useMarketSnapshots()
+  const { isLoading, data: tcapData  } = useVaultSnapshot()
 
   const { markets, sortedAssets, totalLiquidity, totalOpenInteres } = useMemo(() => {
     if (snapshots && snapshots.data) {
@@ -113,6 +115,22 @@ const SectionMarkets = () => {
 
     return { markets: undefined, sortedAssets: undefined, totalLiquidity: "$0" }
   }, [snapshots, snapshots.status])
+
+  const a = useMemo(() => {
+    if (tcapData) {
+      const { longSnapshot, longUserSnapshot, shortSnapshot, shortUserSnapshot, totalAssets } = tcapData
+
+      const price = longSnapshot.latestVersion.price
+      const longGlobalPosition = nextPosition(longSnapshot.pre, longSnapshot.position)
+      const shortGlobalPosition = nextPosition(shortSnapshot.pre, shortSnapshot.position)
+      const globlaTotalPosition = addPositions(longGlobalPosition, shortGlobalPosition)
+      
+      console.log("longSnapshot: ", longSnapshot.openInterest) 
+      console.log("shortSnapshot: ", shortSnapshot.openInterest) 
+
+    }
+  }, [isLoading, tcapData])
+
 
   return(
     <div id="markets" className="section-markets">
