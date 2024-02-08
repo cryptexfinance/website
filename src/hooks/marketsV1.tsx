@@ -59,7 +59,7 @@ export type VaultSnapshot = {
   shortUserSnapshot: UserProductSnapshot
 };
 
-const vaultSnapshotFetcher = async (contracts: IArbContractsContext, vaultAddress: string): Promise<VaultSnapshot | undefined> => {
+export const vaultSnapshotFetcher = async (contracts: IArbContractsContext, vaultAddress: string): Promise<VaultSnapshot | undefined> => {
     
   if (!contracts || !contracts.tcapVault || !contracts.lensV1 || !contracts.tcapLongProduct) return undefined
         
@@ -84,13 +84,6 @@ const vaultSnapshotFetcher = async (contracts: IArbContractsContext, vaultAddres
       vault.totalAssets(),
       vault.queryFilter(redemptionsQuery)
     ])
-      
-  const pendingRedemptions = redemptionsAtVersion.reduce(
-    (acumulator: bigint, currentValue: EventLog | Log) => {
-      const [version, shares] = AbiCoder.defaultAbiCoder().decode(["uint256", "uint256"], currentValue.data);
-      return acumulator + (latestVersion === version ? shares : 0n);
-    },
-    0n)
 
   return {
     long: long.toLowerCase(),
