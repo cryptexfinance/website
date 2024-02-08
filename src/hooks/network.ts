@@ -2,7 +2,7 @@ import { EvmPriceServiceConnection } from '@pythnetwork/pyth-evm-js'
 import EventEmitter from 'events'
 import { GraphQLClient } from 'graphql-request'
 import { PublicClient, createPublicClient, webSocket } from 'viem'
-import { usePublicClient } from 'wagmi'
+
 
 import {
   PythMainnetUrl,
@@ -60,6 +60,20 @@ export const useGraphClient = () => {
 
   // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
   return graphClients.get(chainId)!
+}
+
+const graphClientsV1 = new Map<SupportedChainId, GraphQLClient>()
+export const useGraphClientV1 = () => {
+  const chainId = DefaultChain.id as SupportedChainId
+  if (!graphClients.has(chainId)) {
+    graphClientsV1.set(
+      chainId,
+      new GraphQLClient("https://api.thegraph.com/subgraphs/name/cryptexfinance/cryptex-arbitrum")
+    )
+  }
+
+  // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
+  return graphClientsV1.get(chainId)!
 }
 
 const pythClients = {
