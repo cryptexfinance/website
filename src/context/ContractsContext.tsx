@@ -1,5 +1,5 @@
-import React from "react";
-import { Contract } from "ethers-multicall";
+import React from "react"
+import { Contract } from "ethers"
 
 export interface IContractsContext {
   tcapOracleRead?: Contract;
@@ -15,17 +15,16 @@ export interface IContractsContext {
 }
 
 export interface IArbContractsContext {
-  jpegzOracleRead?: Contract;
-  setCurrentJpegzOracleRead: (currentOracle: Contract) => void;
-  pepeOracleRead?: Contract;
-  setCurrentPepeOracleRead: (currentOracle: Contract) => void;
-  ethOracleRead?: Contract;
-  setCurrentEthOracleRead: (currentOracle: Contract) => void;
-  arbOracleRead?: Contract;
-  setCurrentArbOracleRead: (currentOracle: Contract) => void;
-
-  tcapOracleRead?: Contract;
-  setCurrentTcapOracleRead: (currentOracle: Contract) => void;
+  lensV1?: Contract;
+  setCurrentLensV1: (lens: Contract) => void;
+  tcapOracle?: Contract;
+  setCurrentTcapOracle: (currentOracle: Contract) => void;
+  tcapVault?: Contract;
+  setCurrentTcapVault: (vault: Contract) => void;
+  tcapLongProduct?: Contract;
+  setCurrentTcapLongProduct: (c: Contract) => void;
+  tcapShortProduct?: Contract;
+  setCurrentTcapShortProduct: (c: Contract) => void;
 }
 
 export const CONTRACTS_DEFAULT_VALUE = {
@@ -37,11 +36,11 @@ export const CONTRACTS_DEFAULT_VALUE = {
 };
 
 export const ARB_CONTRACTS_DEFAULT_VALUE = {
-  setCurrentJpegzOracleRead: () => {},
-  setCurrentPepeOracleRead: () => {},
-  setCurrentEthOracleRead: () => {},
-  setCurrentArbOracleRead: () => {},
-  setCurrentTcapOracleRead: () => {},
+  setCurrentLensV1: () => {},
+  setCurrentTcapOracle: () => {},
+  setCurrentTcapVault: () => {},
+  setCurrentTcapLongProduct: () => {},
+  setCurrentTcapShortProduct: () => {},
 };
 
 export const contractsContext = React.createContext<IContractsContext>(CONTRACTS_DEFAULT_VALUE);

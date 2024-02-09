@@ -98,25 +98,11 @@ export const useMarket24HrHighLow = (asset: SupportedAsset) => {
 
 export const useFormattedMarketBarValues = (marketSnapshot: MarketSnapshot) => {
   const livePrices = useChainLivePrices()
-
   const selectedMarket = marketSnapshot.asset
   const { data: priceData } = useMarket24HrHighLow(selectedMarket)
-  // const { data: dailyData } = useMarket24hrData(selectedMarket)
-  // const { data: weeklyData } = useMarket7dData(selectedMarket)
-
-  /* const totalVolume = useMemo(() => {
-    // @ts-ignore
-    if (!dailyData?.volume) return 0n
-    // @ts-ignore
-    return dailyData.volume.reduce((acc, cur) => acc + BigInt(cur.longNotional) + BigInt(cur.shortNotional), 0n)
-  },
-    // @ts-ignore
-    [dailyData?.volume]
-  ) */
 
   const chainPrice = marketSnapshot.global?.latestPrice ?? 0n
   const currentPrice = livePrices[selectedMarket]?.price ?? chainPrice ?? 0n
-  // const untransformedPrice = livePrices[selectedMarket]?.untransformed ?? chainPrice ?? 0n
   const change = currentPrice - BigInt(priceData?.open ?? currentPrice)
 
   const latestPrice = marketSnapshot?.global?.latestPrice ?? 0n
@@ -141,7 +127,6 @@ export const useFormattedMarketBarValues = (marketSnapshot: MarketSnapshot) => {
     changeIsNegative: change < 0n,
     low: formatBig6USDPrice(Big6Math.min(currentPrice, priceData?.low ?? 0n)),
     high: formatBig6USDPrice(Big6Math.max(currentPrice, priceData?.high ?? 0n)),
-    // volume: formatBig6USDPrice(totalVolume, { compact: true }),
     openInterest: `${formatBig6USDPrice(longOpenInterest, {
       compact: true,
     })} / ${formatBig6USDPrice(shortOpenInterest, { compact: true })}`,

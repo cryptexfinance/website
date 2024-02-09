@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Contract } from "ethers-multicall";
+import { Contract } from "ethers"
 import { IContractsContext } from "../context";
 
 export const useContracts = (): IContractsContext => {
