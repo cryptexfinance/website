@@ -126,7 +126,7 @@ body {
 
 .section-markets {
   margin: 3rem 2rem 2rem 1rem;
-  padding: 9rem 2rem 3rem 2rem;
+  padding: 9rem 1.8rem 3rem 1.8rem;
 
   .header {
     margin-left: 0.5rem;
@@ -152,7 +152,7 @@ body {
     background-color: #080809;
     border: 0.5px solid rgba(42, 15, 61, 0.3);
     border-radius: 5px;
-    padding: 0.5rem 0.2rem;
+    padding: 0.5rem 0.1rem;
   }
   .markets-detail {
     height: 25rem;
@@ -195,6 +195,20 @@ body {
     &-subvalue {
       color: $color-grey;
       font-size: 0.8rem;
+    }
+
+
+  }
+
+  .tcap-row {
+    .tcap-item {
+      padding-right: 0rem;
+    }
+    .market-value {    
+      font-size: 0.9rem;
+    }
+    .price {
+      font-size: 1rem;
     }
   }
 

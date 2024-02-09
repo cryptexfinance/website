@@ -51,7 +51,9 @@ const MarketRow = ({ index, asset, market }: { index: number, asset: SupportedAs
             <span className="market-subvalue">{assetMetada.symbol}</span>
           </Stack>
         </Stack>
-        <span className="market-value price only-mobile">{formattedValues.price}</span>
+        <span className={`market-value price only-mobile ${!formattedValues.changeIsNegative ? "text-green" : "text-red"}`}>
+          {formattedValues.price}
+        </span>
       </Col>
       <PriceBox currentPrice={formattedValues.priceBI} />
       <Col lg="2" sm={12} className="market-row-item text-right">
@@ -116,39 +118,41 @@ const MarketTcapRow = ({ index, tcapSnapshot }: { index: number, tcapSnapshot: V
   return (
     <a
       key={index.toString()}
-      className={"market-row ".concat(darkRow ? "dark" : "")}
+      className={"market-row tcap-row ".concat(darkRow ? "dark" : "")}
       href={"https://app.cryptex.finance/v2/"}
       target="_blank"
     >
-      <Col className="market-row-item mobile-header" lg="2" sm={12}>
-        <Stack direction="horizontal" gap={3}>
+      <Col className="market-row-item tcap-item mobile-header" lg={2} sm={12}>
+        <Stack direction="horizontal" gap={2}>
           <Image className="market-logo" src={tcapLogo} width={36} height={36} />
           <Stack direction="vertical" gap={0}>
-            <span className="market-value">TCAP</span>
+            <span className="market-value tcap">Total Crypto Market Cap</span>
             <span className="market-subvalue">TCAP-USD</span>
           </Stack>
         </Stack>
-        <span className="market-value price only-mobile">${currentPrice.toFixed(2)}</span>
-      </Col>
-      <Col lg="2" sm={12} className="market-row-item not-on-mobile text-right">
-        <span className="market-title only-mobile">Price</span>
-        <span className={`market-value ${!changeIsNegative ? "text-green" : "text-red"}`}>
+        <span className={`market-value price only-mobile ${!changeIsNegative ? "text-green" : "text-red"}`}>
           ${currentPrice.toFixed(2)}
         </span>
       </Col>
-      <Col lg="2" sm={12} className="market-row-item text-right">
+      <Col lg={2} sm={12} className="market-row-item not-on-mobile text-right">
+        <span className="market-title only-mobile">Price</span>
+        <span className={`market-value price ${!changeIsNegative ? "text-green" : "text-red"}`}>
+          ${currentPrice.toFixed(2)}
+        </span>
+      </Col>
+      <Col lg={2} sm={12} className="market-row-item text-right">
         <span className="market-title only-mobile">24h Change</span>
         <span className={`market-value ${!changeIsNegative ? "text-green" : "text-red"}`}>
           {changePercent.toFixed(2)}%
         </span>
       </Col>
-      <Col lg="3" sm={12} className="market-row-item text-right">
+      <Col lg={3} sm={12} className="market-row-item text-right">
         <span className="market-title only-mobile">L/S Liquidity</span>
         <span className="market-value">
           {formatBig6USDPrice(tcapLiquidity.long, { compact: true })} / {formatBig6USDPrice(tcapLiquidity.short, { compact: true })}
         </span>
       </Col>
-      <Col lg="3" sm={12} className="market-row-item text-right">
+      <Col lg={3} sm={12} className="market-row-item text-right">
         <span className="market-title only-mobile">L/S Open Interest</span>
         <span className="market-value">
           {formatBig6USDPrice(globalOpenInterest.long, { compact: true })} / {formatBig6USDPrice(globalOpenInterest.short, { compact: true })}
@@ -180,6 +184,10 @@ const SectionMarkets = () => {
         }
       })
 
+      let sortedMarkets = unsorted.sort((a, b) => {
+        return Big6Math.toUnsafeFloat(b.makerNotional) - Big6Math.toUnsafeFloat(a.makerNotional)
+      })
+
       if (snapshots.data.tcapSnapshot) {
         const { longSnapshot, shortSnapshot } = snapshots.data.tcapSnapshot
         const tcapPrice = parseFloat(ethers.formatEther(longSnapshot.latestVersion.price))
@@ -193,19 +201,24 @@ const SectionMarkets = () => {
           maker: ethers.formatEther(longSnapshot.openInterest.maker + shortGlobalPosition.maker)
         }
 
-        unsorted.push({
-          asset: "tcap",
-          makerNotional: Big6Math.fromFloatString(tcapLiquidity.toString()),
-          liquidity: Big6Math.fromFloatString(tcapLiquidity.toString()),
-          openInterest: Big6Math.fromFloatString(globalOpenInterest.taker)
-        })
+        const tcapPosition = 2
+        sortedMarkets = [
+            ...sortedMarkets.slice(0, tcapPosition),
+            {
+              asset: "tcap",
+              makerNotional: Big6Math.fromFloatString(tcapLiquidity.toString()),
+              liquidity: Big6Math.fromFloatString(tcapLiquidity.toString()),
+              openInterest: Big6Math.fromFloatString(globalOpenInterest.taker)
+            },
+            ...sortedMarkets.slice(tcapPosition)
+        ]
       }
 
-      const totalLiquidity = unsorted.reduce(
+      const totalLiquidity = sortedMarkets.reduce(
         (acc, totalLiq) => acc + totalLiq.liquidity,
         0n,
       )
-      const totalOpenInteres = unsorted.reduce(
+      const totalOpenInteres = sortedMarkets.reduce(
         (acc, totalLiq) => acc + totalLiq.openInterest,
         0n,
       )
@@ -213,9 +226,7 @@ const SectionMarkets = () => {
       return {
         markets: snapshots.data?.markets,
         tcapMarket: snapshots.data?.tcapSnapshot,
-        sortedAssets: unsorted.sort((a, b) => {
-          return Big6Math.toUnsafeFloat(b.makerNotional) - Big6Math.toUnsafeFloat(a.makerNotional)
-        }),
+        sortedAssets: sortedMarkets,
         totalLiquidity: formatBig6USDPrice(totalLiquidity, { compact: true }),
         totalOpenInteres: formatBig6USDPrice(totalOpenInteres, { compact: true }),
       }
