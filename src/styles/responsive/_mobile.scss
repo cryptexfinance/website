@@ -439,6 +439,19 @@
         font-size: 14px;
       }
     }
+
+    .tcap-row {
+      .tcap-item {
+        padding-right: 15px;
+      }
+      .market-value {
+        font-size: 15px;
+      }
+      .price {
+        font-size: 24px;
+      }
+    }
+
     .only-mobile {
       display: block;
     }
