@@ -36,12 +36,12 @@ export const TcapVaultContract = {
   [arbitrumSepolia.id]: zeroAddress
 }
 
-export const tcapLongMarketContract = {
+export const TcapLongMarketContract = {
   [arbitrum.id]: getAddress("0x1cD33f4e6EdeeE8263aa07924c2760CF2EC8aAD0"),
   [arbitrumSepolia.id]: zeroAddress
 };
 
-export const tcapShortMarketContract = {
+export const TcapShortMarketContract = {
   [arbitrum.id]: getAddress("0x4243b34374cfB0a12f184b92F52035d03d4f7056"),
   [arbitrumSepolia.id]: zeroAddress
 };

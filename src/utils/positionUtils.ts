@@ -1,6 +1,7 @@
 import { PositionSide2 } from "../constants/markets"
 import { MaxUint256 } from "../constants/units"
 import { MarketSnapshot } from "../hooks/markets"
+import { PositionStruct, PrePositionStruct } from "../hooks/marketsV1";
 
 import { Big6Math, formatBig6Percent } from "./big6Utils"
 
@@ -101,3 +102,18 @@ export const efficiency = (maker: bigint, major: bigint) => {
   return major > 0n ? Big6Math.min(Big6Math.div(maker, major), Big6Math.ONE) : Big6Math.ONE
 }
 
+
+// v1 utils
+export const nextPosition = (pre: PrePositionStruct, pos: PositionStruct): PositionStruct => {
+  return {
+    maker: pos.maker + pre.openPosition.maker - pre.closePosition.maker,
+    taker: pos.taker + pre.openPosition.taker - pre.closePosition.taker,
+  }
+}
+
+export const addPositions = (a: PositionStruct, b: PositionStruct): PositionStruct => {
+  return {
+    maker: a.maker + b.maker,
+    taker: a.taker + b.taker,
+  }
+}

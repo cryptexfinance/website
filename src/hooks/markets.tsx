@@ -18,7 +18,7 @@ import {
 } from 'viem'
 import { usePublicClient } from 'wagmi'
 
-import { MarketFactoryAddresses } from '../constants/contracts'
+import { MarketFactoryAddresses, TcapVaultContract } from '../constants/contracts'
 import { SupportedAsset } from '../constants/markets'
 import { PositionSide2, addressToAsset2, chainAssetsWithAddress } from '../constants/markets'
 import { DefaultChain, SupportedChainId } from '../constants/network'
@@ -32,6 +32,9 @@ import { Lens2Abi } from '../abi/Lens2.abi'
 
 import LensArtifact from '../abi/artifacts/Lens.json'
 import { usePyth, useRPCProviderUrl } from './network'
+import { useContext } from 'react'
+import { arbContractsContext } from '../context'
+import { vaultSnapshotFetcher } from './marketsV1'
 
 
 export type MarketOracles = NonNullable<ReturnType<typeof useMarketOracles>['data']>
@@ -114,6 +117,8 @@ export type MarketSnapshots = NonNullable<Awaited<ReturnType<typeof useMarketSna
 export const useMarketSnapshots = () => {
   const chainId = DefaultChain.id as SupportedChainId
   const publicClient = usePublicClient({ chainId })
+  const vaultAddress = TcapVaultContract[chainId]
+  const contracts = useContext(arbContractsContext)
   const { data: marketOracles } = useMarketOracles(publicClient)
   const pyth = usePyth()
   const providerUrl = useRPCProviderUrl()
@@ -151,11 +156,12 @@ export const useMarketSnapshots = () => {
         }
         return acc
       }, {} as { [key in SupportedAsset]?: MarketSnapshot })
-  
+      
+      const tcapData = await vaultSnapshotFetcher(contracts, vaultAddress)
+
       return {
         markets: marketSnapshots,
-        commitments: snapshotData.commitments,
-        updates: snapshotData.updates,
+        tcapSnapshot: tcapData,
       }
     },
   })
