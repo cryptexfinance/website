@@ -141,19 +141,21 @@ const SectionGovernance = () => {
           contracts.ctxTokenRead?.balanceOf(MULTISIG_ADDRESS),
           contracts.ctxTokenRead?.balanceOf(TREASURY_ADDRESS),
         ])
-        const currentPriceETH = ethers.formatEther(wethOraclePrice * 10000000000n);
-        const currentPriceCTX = getPriceInUSDFromPair(
-          reservesCtxPool[0],
-          reservesCtxPool[1],
-          parseFloat(currentPriceETH)
-        );
-        setCtxPrice(currentPriceCTX.toString());
-        setTotalStaked(ethers.formatEther(totalSupply));
 
-        const circulatingSupply =
-          ctxTotalSupply - foundersTotal - initialIncentive - initialIncentive2 - multisig - treasuryTotal
-        const marketCap = parseFloat(ethers.formatEther(circulatingSupply)) * currentPriceCTX;
-        setMarketCap(marketCap.toFixed(4));
+        if (wethOraclePrice && reservesCtxPool) {
+          const currentPriceETH = ethers.formatEther(BigInt(wethOraclePrice) * 10000000000n)
+          const currentPriceCTX = getPriceInUSDFromPair(
+            reservesCtxPool[0],
+            reservesCtxPool[1],
+            parseFloat(currentPriceETH)
+          )
+          setCtxPrice(currentPriceCTX.toString())
+          setTotalStaked(ethers.formatEther(totalSupply))
+          const circulatingSupply =
+            ctxTotalSupply - foundersTotal - initialIncentive - initialIncentive2 - multisig - treasuryTotal
+          const marketCap = parseFloat(ethers.formatEther(circulatingSupply)) * currentPriceCTX
+          setMarketCap(marketCap.toFixed(4))
+        }
       }
     }; 
     load();
