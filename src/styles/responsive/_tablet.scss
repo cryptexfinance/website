@@ -288,3 +288,26 @@ and (max-device-width : 1090px)
   }
 
 }
+
+
+@media only screen 
+  and (min-device-width : 601px) 
+  and (max-device-width : 1090px)
+  and  (orientation: landscape) 
+{
+
+  .video {
+    padding-top: 0rem;
+  }
+
+  .section-main {
+    .main-info {
+      padding-top: 7rem;
+      padding-bottom: 2rem;
+    }
+  }
+
+  .home-subheader {
+    line-height: 1rem;
+  }
+}
