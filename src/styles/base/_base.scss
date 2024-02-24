@@ -101,16 +101,8 @@ body {
   } 
 }
 
-@media only screen and (max-device-width: 1000px) {
-  .nav-default {
-    display: None;
-  }
-}
 
 @media only screen and (min-device-width: 601px) and (max-device-width: 1090px) and (orientation : portrait) {
-  .nav-default {
-    display: None;
-  }
   .form-control {
     height: 5rem;
   }

@@ -1,5 +1,9 @@
 @media only screen and (max-device-width: 600px) and (orientation: portrait) {
 
+  .nav-default {
+    display: none;
+  }
+
   .spinner-border {
     --bs-spinner-width: 7rem;
     --bs-spinner-height: 7rem;

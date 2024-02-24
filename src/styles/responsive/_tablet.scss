@@ -1,61 +1,38 @@
 @media only screen 
 and (min-device-width : 601px) 
 and (max-device-width : 1090px)
-and (orientation: portrait)
  {
-  
-  .navbar,
-  .navbar div {
-    height: 49px;
-    background: $color-black;
-    font-family: $font-primary;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 12px;
-    line-height: 12px;
-    letter-spacing: 0.6px;
-    padding: 0%;
+  .nav-mobile {
+    display: none;
+  }
+  .mobile_menu_bar {
+    display: none;
   }
 
-  .nav-links a {
-    height: 100vh;
-    background: $color-black;
-    padding-top: 50px !important;
-    padding-bottom: 50px;
-    text-align:center;
-    font-size: 18px;
-    line-height: 28px;
-    letter-spacing: 0.6px;
-    color: $color-grey !important;
+  .navbar {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    height: 5rem;
 
-    &::first-child { 
-      margin-top: 60px;
+    .navbar-collapse {
+      display: flex;
+      flex-direction: row;
     }
-
-    &:not(:first-child) { 
-      padding-top: 74px;
+    .nav-links {
+      display: flex;
+      flex-direction: row;
+      padding-left: 2rem;
     }
-
-    &:hover {
-      color: $color-dark-clean !important;
-      text-decoration: none;
+    .nav-link {
+      font-size: 1.8rem;
+      padding-top: 0.75rem;
     }
-  }
-
-  .nav-links-divisor {
-    top: -3px;
-    position: relative;
-    width: 680px;
-    height: 10px;
-    line-height: 28px;
-    background: $color-grey-dark !important;
-    background-color: $color-grey-dark !important;
-    z-index: 10;
-    border: 1px solid #494866;
-    box-sizing: border-box;
-    margin-left: 35px;
-    margin-bottom: -2px;
-    padding-top: -2px;
+    .button-navbar {
+      width: 18rem;
+      padding: 0.7rem;
+      font-size: 1.5rem;
+    }
   }
 
   .responsive-app-button {
@@ -68,89 +45,6 @@ and (orientation: portrait)
     box-shadow: 0px 10px 49px -10px $shadow-navbar-button;
     padding-left: 80px;
   }
-
-  .menu-logo.tablet {
-    display: block;
-  }
-
-  .menu-logo {
-    width: 160px;
-    margin-left: 5px;
-
-    &-divider {
-      position: absolute;
-      width: 1px;
-      height: 49px;
-      left: 240px;
-      top: 0px;
-      background-color: $color-grey-dark !important;
-      z-index: 0;
-    }
-  }
-
-  .menu-logo.mobile {
-    display: None;
-  }
-
-  .navbar-toggler,
-  .navbar-toggler-icon {
-    position: relative;
-    left: -330px;
-  }
-
-  .responsive-navbar-nav {
-    background: $color-black;
-  }
-  .navbar-toggler:hover, .navbar-toggler:focus {
-    position: relative;
-    padding: 10px 20px 10px 20px;
-  }
-
-  .mobile_menu_bar:before {
-    display:none;
-  }
-  .mobile_menu_bar::after {
-    font-size: 12px;
-    font-family: $font-primary;
-    content: "MENU";
-    position: relative;
-    padding: 10px 20px 10px 20px;
-    color: $color-dark-clean!important;
-    text-decoration: none;
-    &:focus {
-			outline:none !important;
-		}
-  }
-  .mobile_nav.opened .mobile_menu_bar:after {
-    content: "";
-  }
-  .button-navbar {
-    position: fixed;
-    color: $color-grey;
-		border: 0px solid $color-primary-pink;
-    box-sizing: border-box;
-    &:hover {
-      color: $color-dark-clean !important;
-      text-decoration: none;
-    }
-	}
-
-  @media (min-width: 992px) {
-    .navbar-expand-lg .navbar-toggler {
-      display: block;
-    }
-    .navbar, .navbar div {
-      height: 70px;
-    }
-    .navbar-expand-lg .navbar-nav {
-      display: none;
-      flex-direction: column;
-      margin-top: 150px;
-      width: 100%;
-      max-width: 110%;
-    }    
-  }
-
 
   h1, .header { 
     font-size: 3.5rem;
@@ -234,6 +128,40 @@ and (orientation: portrait)
       }
     }
   }
+
+  .section-markets {
+    .markets-totals {
+      flex-direction: row;
+      margin-top: 1rem;
+      margin-bottom: 3rem;
+  
+      .total-box {
+        width: 50%;
+        padding: 2rem 1.8rem;
+        margin-bottom: 0.7rem;
+      }
+    }
+
+    .markets-header { 
+      .market-title {
+        font-size: 14px;
+      }
+    }
+    .markets-detail {
+      height: 50rem;
+      overflow-y: scroll;
+
+      .market-value {
+        font-size: 12px;
+      }
+
+      .market-subvalue {
+        font-size: 11px;
+      }
+    }
+
+  }
+
 
   .section-governance {
     display: flex;
@@ -359,4 +287,27 @@ and (orientation: portrait)
     }
   }
 
+}
+
+
+@media only screen 
+  and (min-device-width : 601px) 
+  and (max-device-width : 1090px)
+  and  (orientation: landscape) 
+{
+
+  .video {
+    padding-top: 0rem;
+  }
+
+  .section-main {
+    .main-info {
+      padding-top: 7rem;
+      padding-bottom: 2rem;
+    }
+  }
+
+  .home-subheader {
+    line-height: 1rem;
+  }
 }
