@@ -109,7 +109,6 @@ export const buildCommitmentsForOracles = async ({
 
   try {
     const now = BigInt(nowSeconds())
-    console.log("Entra buildCommitmentsForOracles ")
     const feedIds = marketOracles.map(({ underlyingId, minValidTime }) => ({
       underlyingId,
       minValidTime,

@@ -42,13 +42,11 @@ export const useMarketOracles = (publicClient: PublicClient) => {
   const chainId = DefaultChain.id as SupportedChainId
   const pythFactory = getPythFactoryContract(publicClient)
 
-  console.log("Entra useMarketOracles")
   return useQuery({
     queryKey: ['marketOracles2', chainId],
     queryFn: async () => {
       const markets = chainAssetsWithAddress(chainId)
 
-      console.log("Entra useMarketOracles 22222")
       const fetchMarketOracles = async (asset: SupportedAsset, marketAddress: Address) => {
         const market = getMarketContract(marketAddress, publicClient)
         const oracleAddress = await market.read.oracle()
@@ -126,8 +124,6 @@ export const useMarketSnapshots = () => {
   const providerUrl = useRPCProviderUrl()
   const address = zeroAddress
 
-  console.log("Entra marketSnapshots")
-
   return useQuery({
     queryKey: ['marketSnapshots', chainId],
     enabled: !!address && !!marketOracles,
@@ -191,8 +187,6 @@ const fetchMarketSnapshotsAfterSettle = async (
     onError: onPythError,
     onSuccess: resetPythError,
   })
-
-  console.log("Entra fetchMarketSnapshotsAfterSettle ")
 
   const marketAddresses = Object.values(marketOracles).map(({ marketAddress }) => marketAddress)
   const ethCallPayload = {
