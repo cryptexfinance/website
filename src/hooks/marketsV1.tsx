@@ -1,4 +1,4 @@
-import { AbiCoder, BigNumberish, EventLog, Log, Typed } from "ethers"
+import { BigNumberish, Typed } from "ethers"
 import { useQuery } from "@tanstack/react-query"
 
 import { TcapVaultContract } from "../constants/contracts"
@@ -51,49 +51,30 @@ export type UserProductSnapshot = {
 export type VaultSnapshot = {
   long: string
   short: string
-  totalSupply: bigint
-  totalAssets: bigint
   longSnapshot: ProductSnapshot
   shortSnapshot: ProductSnapshot
-  longUserSnapshot: UserProductSnapshot
-  shortUserSnapshot: UserProductSnapshot
 };
 
 export const vaultSnapshotFetcher = async (contracts: IArbContractsContext, vaultAddress: string): Promise<VaultSnapshot | undefined> => {
     
   if (!contracts || !contracts.tcapVault || !contracts.lensV1 || !contracts.tcapLongProduct) return undefined
         
-  const vault = contracts.tcapVault
+  // const vault = contracts.tcapVault
   const lens = contracts.lensV1
-  const longProduct = contracts.tcapLongProduct
 
-  const [long, short, latestVersion] = await Promise.all([
-    vault.long(),
-    vault.short(),
-    longProduct.latestVersion(Typed.address(vaultAddress)), 
-  ])
-
-  const redemptionsQuery = vault.filters.Redemption(null, null);
-  const [longSnapshot, shortSnapshot, longUserSnapshot, shortUserSnapshot, totalSupply, totalAssets, redemptionsAtVersion] =
+  const long = "0x1cD33f4e6EdeeE8263aa07924c2760CF2EC8aAD0"
+  const short = "0x4243b34374cfB0a12f184b92F52035d03d4f7056"
+  const [longSnapshot, shortSnapshot] =
     await Promise.all([
       lens.snapshot.staticCall(Typed.address(long)),
-      lens.snapshot.staticCall(Typed.address(short)),
-      lens.snapshot.staticCall(Typed.address(vaultAddress), Typed.address(long)),
-      lens.snapshot.staticCall(Typed.address(vaultAddress), Typed.address(short)),
-      vault.totalSupply(),
-      vault.totalAssets(),
-      vault.queryFilter(redemptionsQuery)
+      lens.snapshot.staticCall(Typed.address(short))
     ])
 
   return {
     long: long.toLowerCase(),
     short: short.toLowerCase(),
-    totalSupply,
-    totalAssets,
     longSnapshot,
-    shortSnapshot,
-    longUserSnapshot,
-    shortUserSnapshot,
+    shortSnapshot
   }
 }
 

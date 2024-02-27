@@ -1,6 +1,7 @@
 @media only screen 
 and (min-device-width : 601px) 
-and (max-device-width : 1090px)
+and (max-device-width : 1090px), 
+only screen and (max-device-width : 935px) and (orientation: landscape)
  {
   .nav-mobile {
     display: none;
@@ -130,6 +131,8 @@ and (max-device-width : 1090px)
   }
 
   .section-markets {
+    margin-top: 10rem;
+
     .markets-totals {
       flex-direction: row;
       margin-top: 1rem;
@@ -162,14 +165,13 @@ and (max-device-width : 1090px)
 
   }
 
-
   .section-governance {
     display: flex;
     flex-direction: column;
     align-items: center;
     height: auto;
-    margin-top: 10rem;
-    padding-top: 25rem;
+    margin-top: 7.5rem;
+    padding-top: 15rem;
     .box {
       padding: 5rem 3rem 2rem 3rem;
     }
@@ -290,10 +292,9 @@ and (max-device-width : 1090px)
 }
 
 
-@media only screen 
-  and (min-device-width : 601px) 
-  and (max-device-width : 1090px)
-  and  (orientation: landscape) 
+@media only screen
+  and (max-device-width : 935px)
+  and (orientation: landscape) 
 {
 
   .video {
@@ -301,10 +302,21 @@ and (max-device-width : 1090px)
   }
 
   .section-main {
+    .cryptex-logo {
+      width: 280px;
+    }
+    .main-button {
+      height: 5.5rem;
+    }
     .main-info {
-      padding-top: 7rem;
+      padding-top: 7.2rem;
       padding-bottom: 2rem;
     }
+  }
+
+  .section-markets {
+    padding-left: 0.8rem;
+    padding-right: 0.8rem;
   }
 
   .home-subheader {
