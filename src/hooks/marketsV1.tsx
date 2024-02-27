@@ -1,4 +1,4 @@
-import { AbiCoder, BigNumberish, EventLog, Log, Typed } from "ethers"
+import { BigNumberish, Typed } from "ethers"
 import { useQuery } from "@tanstack/react-query"
 
 import { TcapVaultContract } from "../constants/contracts"
