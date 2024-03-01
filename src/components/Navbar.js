@@ -1,11 +1,33 @@
 import React, { useEffect, useState } from "react"
-import { Navbar, Nav } from "react-bootstrap"
+import { Dropdown, Navbar, Nav } from "react-bootstrap"
+import Flag from 'react-flagkit'
 import { useStaticQuery, graphql } from "gatsby"
-import { Link } from "gatsby"
+
+import { Link, useI18next, useTranslation } from "gatsby-plugin-react-i18next"
 import appEndpoint from "../endpoint"
 import hamburgerIcon from "../../static/burger-icon.svg"
 
+const languagesInfo = {
+  'en': {
+    country: 'US',
+    name: 'English',
+  },
+  'es': {
+    country: 'ES',
+    name: 'Español'
+  },
+  'pt': {
+    country: 'BR',
+    name: 'Português'
+  },
+  'tr': {
+    country: 'TR',
+    name: 'Türkçe'
+  }
+}
+
 const NavbarMenu = props => {
+  const { languages, originalPath, t, i18n } = useI18next()
   const [siteUrl, setSiteUrl] = useState("")
   const dataq = useStaticQuery(graphql`
     query {
@@ -30,6 +52,24 @@ const NavbarMenu = props => {
   const governanceUrl = blogView ? `${siteUrl}/#governance` : "#governance"
   const marketsUrl = blogView ? `${siteUrl}/#markets` : "#markets"
 
+  const LangDropdown = () => (
+    <Dropdown className="language-dropdown">
+      <Dropdown.Toggle>
+        <Flag country={languagesInfo[i18n.resolvedLanguage].country} size={28} className="flag" />
+      </Dropdown.Toggle>
+      <Dropdown.Menu>
+        {languages.map((lang) => (
+          <Dropdown.Item key={lang}>
+            <Link to={originalPath} language={lang !== 'us' ? lang : undefined} className="lang-link">
+              <Flag country={languagesInfo[lang].country} size={20} className="flag" />
+              <span className="lang-text">{languagesInfo[lang].name}</span>
+            </Link>
+          </Dropdown.Item>
+        ))}
+      </Dropdown.Menu>  
+    </Dropdown>
+  )
+
   const NavMobile = () => {
     return (
       <div className="nav-mobile">
@@ -38,26 +78,29 @@ const NavbarMenu = props => {
             <img className="menu-logo mobile" src="/logom.svg" alt="Logo" />
             <img className="menu-logo tablet" src="/logo.svg" alt="Logo" />
           </Navbar.Brand>
-          <Navbar.Toggle
-            aria-controls="responsive-navbar-nav"
-            className="mobile_menu_bar"
-            aria-hidden="true"
-          >
-            <img className="hamburger-icon-custom" src={hamburgerIcon} alt="C"></img>
-          </Navbar.Toggle>
+          <div className="navbar-right">
+            <LangDropdown />
+            <Navbar.Toggle
+              aria-controls="responsive-navbar-nav"
+              className="mobile_menu_bar"
+              aria-hidden="true"
+            >
+              <img className="hamburger-icon-custom" src={hamburgerIcon} alt="C"></img>
+            </Navbar.Toggle>
+          </div>  
           <Navbar.Collapse
             id="responsive-navbar-nav"
             className="justify-content-start"
           >
             <Nav className="nav-links">
               <Nav.Link as={Link} to={marketsUrl} title="Markets">
-                Markets
+                {t('markets')}
               </Nav.Link>
               <div className="nav-links-divisor" />
             </Nav>     
             <Nav className="nav-links">
               <Nav.Link as={Link} to={governanceUrl} title="Governance">
-                Governance
+                {t('governance')}
               </Nav.Link>
               <div className="nav-links-divisor" />
             </Nav>
@@ -68,6 +111,8 @@ const NavbarMenu = props => {
   }
 
   const NavDesktop = () => {
+    const { t } = useTranslation()
+
     return (
       <div className="nav-default">
         <Navbar fixed="top" collapseOnSelect expand="lg" variant="dark">
@@ -86,21 +131,22 @@ const NavbarMenu = props => {
           >
             <Nav className="nav-links">
               <Nav.Link as={Link} to={marketsUrl} title="Markets">
-                Markets
+                {t('markets')}
               </Nav.Link>
               <Nav.Link as={Link} to={governanceUrl} title="CTX Governance">
-                Governance
-              </Nav.Link>
+                {t('governance')}
+              </Nav.Link>         
             </Nav>
           </Navbar.Collapse>
           <a
-                href={appEndpoint}
-                target="_blank"
-                rel="noreferrer"
-                className="btn button-navbar helvetica-neue-font"
-              >
-                Launch App
-              </a>    
+            href={appEndpoint}
+            target="_blank"
+            rel="noreferrer"
+            className="btn button-navbar helvetica-neue-font"
+          >
+            {t('launch-app')}
+          </a>
+          <LangDropdown /> 
         </Navbar>
       </div>
     )
@@ -115,3 +161,4 @@ const NavbarMenu = props => {
 }
 
 export default NavbarMenu
+

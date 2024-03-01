@@ -2,13 +2,6 @@ import React from "react"
 import Form from "react-bootstrap/esm/Form"
 import { FaSearch } from "@react-icons/all-files/fa/FaSearch"
 
-/* type props = {
-  placeholder: string;
-  value: string;
-  onChange: (event: React.ChangeEvent<HTMLInputElement>) => void;
-  onFocus?: (event: React.FocusEvent<HTMLInputElement>) => void;
-  onBlur?: (event: React.FocusEvent<HTMLInputElement>) => void;
-} */
 
 const SearchInput = ({
   placeholder,

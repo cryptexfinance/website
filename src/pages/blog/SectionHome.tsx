@@ -1,13 +1,15 @@
-import React from "react";
+import React from "react"
+import { useTranslation } from "gatsby-plugin-react-i18next"
 
 const SectionHome = () => { 
+  const { t } = useTranslation()
 
   return (
     <div className="home">
       <div className="description">
-        <h2 className="heading-secondary">Cryptex Finance Blog</h2>
+        <h2 className="heading-secondary">{t('blog-title')}</h2>
         <p className="subheader">
-          Keep up with the latest from Cryptex Finance.
+          {t('blog-subtitle')}
         </p>
       </div>      
     </div>

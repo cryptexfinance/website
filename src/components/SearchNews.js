@@ -1,6 +1,9 @@
 import React, { useState } from "react"
+import { useTranslation } from "gatsby-plugin-react-i18next"
+
 import SelectCryptex from "./Select"
 import SearchInput from "./SearchInput"
+
 
 const SearchNews = ({
   blogKeys,
@@ -10,6 +13,7 @@ const SearchNews = ({
 }) => {
   const keysDivider = "+++"
   const dbDefaultTitle = "Filter"
+  const { t } = useTranslation()
   const [searchCriteria, setSearchCriteria] = useState("")
   const [selectedTag, setSelectedTag] = useState(dbDefaultTitle)
 
@@ -57,11 +61,11 @@ const SearchNews = ({
         isMulti={false}
         isSearchable={true}
         options={tagList}
-        placeholder="Filter"
+        placeholder={t('filter')}
         onSelectChange={onSelectChange}
       />
       <SearchInput
-        placeholder="Search"
+        placeholder={t('search')}
         value={searchCriteria}
         onChange={e => onChange(e.target.value)}
       />

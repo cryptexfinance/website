@@ -1,11 +1,14 @@
-import React from "react";
-import Col from "react-bootstrap/esm/Col";
-import appEndpoint from "../../../endpoint";
-import bgMobilePoster from "../../../../static/mobile_poster.png";
-import bgVideo from "../../../../static/bg_main_pi.webm";
-import bgVideoMobile from "../../../../static/bg_mobile_pi.mp4";
+import React from "react"
+import Col from "react-bootstrap/esm/Col"
+import { useTranslation } from "gatsby-plugin-react-i18next"
+
+import appEndpoint from "../../../endpoint"
+import bgMobilePoster from "../../../../static/mobile_poster.png"
+import bgVideo from "../../../../static/bg_main_pi.webm"
+import bgVideoMobile from "../../../../static/bg_mobile_pi.mp4"
 
 const SectionMain = () => {
+  const { t } = useTranslation()
 
   return (
     <div className="section-main">
@@ -37,7 +40,7 @@ const SectionMain = () => {
             <img className="cryptex-logo" src="/logo.svg" alt="Logo" />
           </div>
           <p className="home-subheader">
-            CUTTING EDGE MARKETS<br /><br />
+            {t('cutting-edge').toUpperCase()}<br /><br />
           </p>
         </div>
         <div className="main-buttons">
@@ -49,7 +52,7 @@ const SectionMain = () => {
                 className="button-outlined-purple main-button main-button-link"
                 target="_blank"
               >
-                Launch App
+                {t('launch-app')}
               </a>
             </div>
             <div className="">
@@ -58,7 +61,7 @@ const SectionMain = () => {
                 rel="noopener noreferrer"
                 className="button-outlined-purple main-button"
               >
-                Documentation
+                {t('documentation')}
               </a>
             </div>
           </Col>

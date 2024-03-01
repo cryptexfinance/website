@@ -1,6 +1,8 @@
 import React, { useEffect, useMemo, useState } from "react"
 import { ethers } from "ethers"
 import { Col, Image, Spinner, Stack } from "react-bootstrap"
+import { graphql } from "gatsby"
+import { useTranslation } from "gatsby-plugin-react-i18next"
 
 import { MarketSnapshot, useMarketSnapshots } from "../../../hooks/markets"
 import { useFormattedMarketBarValues } from "../../../hooks/metrics"
@@ -13,6 +15,7 @@ import { useTcapPriceChanges } from "../../../hooks/graph"
 
 
 const PriceBox = ({ currentPrice }: { currentPrice: bigint }) => {
+  const { t } = useTranslation()
   const [previousPrice, setPreviousPrice] = useState(0n)
   const [positiveChange, setPositiveChange] = useState(true)
 
@@ -23,7 +26,7 @@ const PriceBox = ({ currentPrice }: { currentPrice: bigint }) => {
 
   return (
     <Col lg="2" md={2} sm={12} className="market-row-item not-on-mobile text-right">
-      <span className="market-title only-mobile">Price</span>
+      <span className="market-title only-mobile">{t('price')}</span>
       <span className={"market-value ".concat(positiveChange ? "text-green" : "text-red")}>
         {formatBig6USDPrice(currentPrice)}
       </span>
@@ -32,6 +35,7 @@ const PriceBox = ({ currentPrice }: { currentPrice: bigint }) => {
 }
 
 const MarketRow = ({ index, asset, market }: { index: number, asset: SupportedAsset, market: MarketSnapshot }) => {
+  const { t } = useTranslation()
   const assetMetada = AssetMetadata[asset]
   const formattedValues = useFormattedMarketBarValues(market)
   const darkRow = index % 2 === 0
@@ -57,17 +61,17 @@ const MarketRow = ({ index, asset, market }: { index: number, asset: SupportedAs
       </Col>
       <PriceBox currentPrice={formattedValues.priceBI} />
       <Col lg={2} md={2} sm={12} className="market-row-item text-right">
-        <span className="market-title only-mobile">24h Change</span>
+        <span className="market-title only-mobile">{t('chagen24h')}</span>
         <span className={`market-value ${!formattedValues.changeIsNegative ? "text-green" : "text-red"}`}>
           {formattedValues.change}
         </span>
       </Col>
       <Col lg={3} md={3} sm={12} className="market-row-item text-right">
-        <span className="market-title only-mobile">L/S Liquidity</span>
+        <span className="market-title only-mobile">{t('ls-liquidity')}</span>
         <span className="market-value">{formattedValues.totalLiquidity}</span>
       </Col>
       <Col lg={3} md={3} sm={12} className="market-row-item text-right">
-        <span className="market-title  only-mobile">L/S Open Interest</span>
+        <span className="market-title  only-mobile">{t('ls-interes')}</span>
         <span className="market-value">{formattedValues.openInterest}</span>
       </Col>
     </a>
@@ -163,6 +167,7 @@ const MarketTcapRow = ({ index, tcapSnapshot }: { index: number, tcapSnapshot: V
 }
 
 const SectionMarkets = () => {
+  const { t } = useTranslation()
   const snapshots = useMarketSnapshots()
 
   const { markets, tcapMarket, sortedAssets, totalLiquidity, totalOpenInteres } = useMemo(() => {
@@ -235,38 +240,37 @@ const SectionMarkets = () => {
     return { markets: undefined, tcapMarket: undefined, sortedAssets: undefined, totalLiquidity: "$0" }
   }, [snapshots, snapshots.status])
 
-
   return(
     <div id="markets" className="section-markets">
-      <h1 className="header">MARKETS</h1>
+      <h1 className="header">{t('markets')}</h1>
       {markets && tcapMarket ? (
         <Stack direction="vertical" className="markets-metrics">
           <Stack direction="horizontal" gap={3} className="markets-totals">
             <Col lg={6} sm={12} className="total-box">
-              <span className="total-title">Total Liquidity</span>
+              <span className="total-title">{t('total-liquidity')}</span>
               <span className="total-value">{totalLiquidity}+</span>
             </Col>
             <Col lg={6} sm={12} className="total-box">
-              <span className="total-title">Total Open Interest</span>
+              <span className="total-title">{t('total-interest')}</span>
               <span className="total-value">{totalOpenInteres}+</span>
             </Col>
           </Stack>
           <div className="markets-detail-container">
             <Stack direction="horizontal" gap={0} className="markets-header">
               <Col lg={2} md={2}>
-                <span className="market-title asset">Asset</span>
+                <span className="market-title asset">{t('asset')}</span>
               </Col>
               <Col lg={2} md={2} className="text-right">
-                <span className="market-title">Price</span>
+                <span className="market-title">{t('price')}</span>
               </Col>
               <Col lg={2} md={2} className="text-right">
-                <span className="market-title">24h Change</span>
+                <span className="market-title">{t('chagen24h')}</span>
               </Col>
               <Col lg={3} md={3} className="text-right">
-                <span className="market-title">L/S Liquidity</span>
+                <span className="market-title">{t('ls-liquidity')}</span>
               </Col>
               <Col lg={3} md={3} className="text-right">
-                <span className="market-title">L/S Open Interest</span>
+                <span className="market-title">{t('ls-interes')}</span>
               </Col>
             </Stack>
             <div className="markets-detail">
@@ -291,3 +295,18 @@ const SectionMarkets = () => {
 }
 
 export default SectionMarkets
+
+
+export const query = graphql`
+  query ($language: String!) {
+    locales: allLocale(filter: {language: {eq: $language}}) {
+      edges {
+        node {
+          ns
+          data
+          language
+        }
+      }
+    }
+  }
+`;
