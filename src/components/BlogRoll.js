@@ -1,22 +1,25 @@
 import React, { useEffect, useState } from "react";
+import { Button } from "react-bootstrap"
 import Col from "react-bootstrap/esm/Col";
-import PropTypes from "prop-types";
-import { graphql, StaticQuery } from "gatsby";
-import SearchNews from "./SearchNews";
-import { tagColor } from "./utils/tags";
-import { sortAlpha } from "./utils/utils";
-import { Button } from "react-bootstrap";
+import { graphql, StaticQuery } from "gatsby"
+import { useTranslation } from "gatsby-plugin-react-i18next"
+
+import PropTypes from "prop-types"
+import SearchNews from "./SearchNews"
+import { tagColor } from "./utils/tags"
+import { sortAlpha } from "./utils/utils"
 
 
 export const BlogRoll = ({ data }) => {
-  const itemsPerPage = 9;
-  const keysDivider = "+++";
-  const [postsCount, setPostsCount] = useState(itemsPerPage);
-  const [tags, setTags] = useState([]);
-  const [posts, setPosts] = useState([]);
-  const [blogKeys, setBlogKeys] = useState([]);
-  const [filteredBlogKeys, setFilteredBlogKeys] = useState([]);
-  const [tagList, setTagList] = useState([]);
+  const { t } = useTranslation()
+  const itemsPerPage = 9
+  const keysDivider = "+++"
+  const [postsCount, setPostsCount] = useState(itemsPerPage)
+  const [tags, setTags] = useState([])
+  const [posts, setPosts] = useState([])
+  const [blogKeys, setBlogKeys] = useState([])
+  const [filteredBlogKeys, setFilteredBlogKeys] = useState([])
+  const [tagList, setTagList] = useState([])
 
   useEffect(() => {
     if (Array.isArray(data.news.edges)) {
@@ -160,7 +163,7 @@ export const BlogRoll = ({ data }) => {
             variant="secondary"
             onClick={onLoadMoreClick}
           >
-            Load More
+            {t('load-more')}
           </Button>
         )}  
       </Col>

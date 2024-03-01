@@ -1,10 +1,11 @@
-import React from "react";
-import { graphql } from "gatsby";
-import { PageLayout } from "../components";
-import { Seo } from "../utils";
-import useSiteMetadata from "../components/SiteMetadata";
-import { withPrefix } from "gatsby";
-import Home from "./website/home";
+import React from "react"
+import { graphql } from "gatsby"
+import { PageLayout } from "../components"
+import { Seo } from "../utils"
+import useSiteMetadata from "../components/SiteMetadata"
+import { withPrefix } from "gatsby"
+import Home from "./website/home"
+
 
 const App = ({ data }) => {
   return (
@@ -15,23 +16,9 @@ const App = ({ data }) => {
   )
 }
 
-export const query = graphql`
-  query {
-    site {
-      siteMetadata {
-        title
-        description
-        author
-        image
-        keywords
-      }
-    }
-  }
-`
-
 export const Head = () => {
-  const { title, description } = useSiteMetadata()
-  
+  const { title, description } = useSiteMetadata() 
+
   return (
     <>
       <title>{title}</title>
@@ -49,3 +36,26 @@ export const Head = () => {
 };
 
 export default App;
+
+export const query = graphql`
+  query ($language: String!) {
+    locales: allLocale(filter: {language: {eq: $language}}) {
+      edges {
+        node {
+          ns
+          data
+          language
+        }
+      }
+    },
+    site {
+      siteMetadata {
+        title
+        description
+        author
+        image
+        keywords
+      }
+    }
+  }
+`;
