@@ -55,7 +55,11 @@ const NavbarMenu = props => {
   const LangDropdown = () => (
     <Dropdown className="language-dropdown">
       <Dropdown.Toggle>
-        <Flag country={languagesInfo[i18n.resolvedLanguage].country} size={28} className="flag" />
+        <Flag
+          country={languagesInfo[i18n.resolvedLanguage] ? languagesInfo[i18n.resolvedLanguage].country : 'us'}
+          size={28}
+          className="flag"
+        />
       </Dropdown.Toggle>
       <Dropdown.Menu>
         {languages.map((lang) => (
