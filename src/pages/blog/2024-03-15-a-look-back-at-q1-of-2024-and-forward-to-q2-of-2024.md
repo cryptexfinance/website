@@ -1,7 +1,7 @@
 ---
 templateKey: blog-post
 title: A Look Back at Q1 of 2024 and Forward to Q2 of 2024
-author: Tom
+author: Matz
 date: 2024-03-15T20:39:37.344Z
 description: "As Q1 of 2024 draws to a close, DAO contributors want to take a
   moment to reflect on the progress the DAO community has made and set the stage
