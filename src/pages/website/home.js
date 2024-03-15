@@ -1,4 +1,5 @@
 import React from "react"
+
 import SectionMain from "./sections/SectionMain"
 import SectionMarkets from "./sections/SectionMarkets"
 import SectionGovernance from "./sections/SectionGovernance"
@@ -9,8 +10,6 @@ import SectionGovernance from "./sections/SectionGovernance"
 ) */
 
 const Home = data => {
-  const isSSR = typeof window === "undefined"
-  
   return (
     <>
       <header id="home" />

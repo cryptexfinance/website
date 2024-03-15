@@ -1,11 +1,13 @@
-import React from "react";
-import PageLayout from "../../components/PageLayout";
-import BlogRoll from "../../components/BlogRoll";
-import Header from "../../components/Header";
-import SectionHome from "./SectionHome";
-import { Seo } from "../../utils";
-import bg from "../../../static/bg.webp";
-import bgvideo from "../../../static/bg.mp4";
+import React from "react"
+import { graphql } from "gatsby"
+
+import PageLayout from "../../components/PageLayout"
+import BlogRoll from "../../components/BlogRoll"
+import Header from "../../components/Header"
+import SectionHome from "./SectionHome"
+import { Seo } from "../../utils"
+import bg from "../../../static/bg.webp"
+import bgvideo from "../../../static/bg.mp4"
 
 export default class BlogIndexPage extends React.Component {
   render() {
@@ -35,4 +37,19 @@ export default class BlogIndexPage extends React.Component {
       </PageLayout>
     )
   }
-};
+}
+
+export const query = graphql`
+  query ($language: String!) {
+    locales: allLocale(filter: {language: {eq: $language}}) {
+      edges {
+        node {
+          ns
+          data
+          language
+        }
+      }
+    }
+  }
+`;
+

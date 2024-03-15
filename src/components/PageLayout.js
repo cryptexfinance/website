@@ -1,5 +1,6 @@
 import React, { useEffect } from "react"
 import { Contract } from "ethers"
+import { graphql } from "gatsby"
 
 import Header from "./Header"
 import Footer from "./Footer"

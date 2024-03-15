@@ -1,26 +1,17 @@
-import React, { useContext, useEffect, useState } from "react";
-import { ethers } from "ethers";
-import { NumericFormat } from "react-number-format";
-import { FaArrowRight } from "react-icons/fa";
-import parse from "html-react-parser";
-import { contractsContext } from "../../../context";
-import {
-  getPriceInUSDFromPair,
-  FOUNDERS_ADDRESS,
-  LIQUIDITY_REWARD_ADDRESS,
-  LIQUIDITY_REWARD2_ADDRESS,
-  MULTISIG_ADDRESS,
-  TREASURY_ADDRESS
-} from "../../../utils";
-import ctxIcon from "../../../../static/website/ctx.svg";
-import geminiLogo from "../../../../static/website/governance/gemini.svg";
-import sushiLogo from "../../../../static/website/governance/sushi-logo.svg";
-import uniLogo from "../../../../static/website/governance/uni-logo.svg";
-import coinbaseLogo from "../../../../static/website/governance/coinbase.svg";
-import huobiLogo from "../../../../static/website/governance/huobi.svg";
-import camelotLogo from "../../../../static/website/governance/camelot.svg";
-import coingeckoLogo from "../../../../static/website/governance/coingecko.svg";
-import traderJoeLogo from "../../../../static/website/governance/traderjoe.png";
+import React, { useState } from "react"
+import { NumericFormat } from "react-number-format"
+import { FaArrowRight } from "react-icons/fa"
+import { useTranslation } from "gatsby-plugin-react-i18next"
+
+import ctxIcon from "../../../../static/website/ctx.svg"
+import geminiLogo from "../../../../static/website/governance/gemini.svg"
+import sushiLogo from "../../../../static/website/governance/sushi-logo.svg"
+import uniLogo from "../../../../static/website/governance/uni-logo.svg"
+import coinbaseLogo from "../../../../static/website/governance/coinbase.svg"
+import huobiLogo from "../../../../static/website/governance/huobi.svg"
+import camelotLogo from "../../../../static/website/governance/camelot.svg"
+import coingeckoLogo from "../../../../static/website/governance/coingecko.svg"
+import traderJoeLogo from "../../../../static/website/governance/traderjoe.png"
 
 
 type GovernanceType = {
@@ -39,20 +30,20 @@ type IconType = {
 const governanceItems = [
   {
     id: "1",
-    title: "Proposals",
-    info: "Browse the latest proposals.",
+    title: "ctx-governance.proposals",
+    info: "ctx-governance.proposals-description",
     link: "https://forum.cryptex.finance/c/proposals/5",
   },
   {
     id: "2",
-    title: "Vote",
-    info: "Vote on active proposals.",
+    title: "ctx-governance.vote",
+    info: "ctx-governance.vote-description",
     link: "https://www.tally.xyz/governance/eip155:1:0x874C5D592AfC6803c3DD60d6442357879F196d5b",
   },
   {
     id: "3",
-    title: "Single Siding Staking",
-    info: "Stake and delegate your CTX to a Crypt Keeper and join 300+ community members who help keep Cryptex decentralized.",
+    title: "ctx-governance.staking",
+    info: "ctx-governance.staking-description",
     link: "https://v1.cryptex.finance/governance",
   }
 ]
@@ -109,14 +100,15 @@ const governanceIcons = [
 ]
 
 const SectionGovernance = () => {
-  const contracts = useContext(contractsContext)
+  const { t } = useTranslation()
+  // const contracts = useContext(contractsContext)
   const [ctxPrice, setCtxPrice] = useState("0")
   const [marketCap, setMarketCap] = useState("0.0")
-  const [totalStaked, setTotalStaked] = useState("0.0")
-  const sixMonthCtxRewardAmount = 12654
-  const apyShowDate = new Date(1633654800 * 1000)
+  // const [totalStaked, setTotalStaked] = useState("0.0")
+  // const sixMonthCtxRewardAmount = 12654
+  // const apyShowDate = new Date(1633654800 * 1000)
 
-  useEffect(() => {
+  /* useEffect(() => {
     const load = async () => {
       if (contracts) {
         // @ts-ignore
@@ -159,9 +151,9 @@ const SectionGovernance = () => {
       }
     }; 
     load();
-  }, [contracts]);  
+  }, [contracts]);  */
 
-  const apr = (): string => {
+  /* const apr = (): string => {
     const currentDate = new Date();
     if (parseFloat(totalStaked) > 0 && currentDate > apyShowDate) {
       const a = Math.round(((4 * sixMonthCtxRewardAmount) / parseFloat(totalStaked)) * 100);
@@ -171,7 +163,7 @@ const SectionGovernance = () => {
         .concat("%");
     }
     return "-";
-  };
+  }; */
 
   const iconItem = (item: IconType, index: number) => (
     <a
@@ -199,32 +191,29 @@ const SectionGovernance = () => {
     >
       <div className="governance-item-content">
         <h3 className="terciary-header">
-          {feature.title}
+          {t(feature.title)}
         </h3>              
         <p className="subtitle">
-          {parse(feature.info.replace("{apr_value}", apr()))}
+          {t(feature.info)}
+          {/* parse(feature.info.replace("{apr_value}", apr())) */}
         </p>
        </div> 
       <div className="governance-item-footer">
         <FaArrowRight className="item-icon"size={20} />
       </div>
     </a>
-  );
+  )
   
   return (
     <div id="governance" className="section-governance">
       <h1 className="header">
-        CTX: Decentralized Protocol Governance
+        {t('ctx-governance.title')}
       </h1>
       <div className="governance-content">
         <div className="box governance-main">
           <div className="info-top">
             <p className="subtitle">
-              CTX is an ERC-20 utility and governance token with various use cases within
-              the Cryptex Finance ecosystem. CTX token holders can vote on upgrades and management
-              of the Cryptex treasury, create proposals and vote on said proposals, such as
-              continued incentives for product development and other solutions to advance the
-              Cryptex decentralized autonomous organization (DAO).
+              {t('ctx-governance.description')}
             </p>
             <div className="icons">
               {governanceIcons.map((govIcon, index) => {
@@ -245,7 +234,7 @@ const SectionGovernance = () => {
                   decimalScale={2}
                 />
                 <span className="label-all">
-                  CTX Market Cap.
+                  {t('ctx-market-cap')}
                 </span>
               </div>
               <div  className="vl-divider" />
@@ -260,10 +249,10 @@ const SectionGovernance = () => {
                     decimalScale={2}
                   />
                   <span className="label">
-                    CTX Price
+                    {t('ctx-price')}
                   </span>
                   <span className="label label-mobile">
-                    CTX Price
+                    {t('ctx-price')}
                   </span>
                 </div>
                 <img src={ctxIcon} className="coin-icon" alt="CTX" />
