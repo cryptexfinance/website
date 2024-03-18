@@ -1,4 +1,5 @@
-import React, { useState } from "react"
+import React, { useContext, useEffect, useState } from "react"
+import { ethers } from "ethers"
 import { NumericFormat } from "react-number-format"
 import { FaArrowRight } from "react-icons/fa"
 import { useTranslation } from "gatsby-plugin-react-i18next"
@@ -12,6 +13,8 @@ import huobiLogo from "../../../../static/website/governance/huobi.svg"
 import camelotLogo from "../../../../static/website/governance/camelot.svg"
 import coingeckoLogo from "../../../../static/website/governance/coingecko.svg"
 import traderJoeLogo from "../../../../static/website/governance/traderjoe.png"
+import { FOUNDERS_ADDRESS, LIQUIDITY_REWARD2_ADDRESS, LIQUIDITY_REWARD_ADDRESS, MULTISIG_ADDRESS, TREASURY_ADDRESS, getPriceInUSDFromPair } from "../../../utils"
+import { contractsContext } from "../../../context"
 
 
 type GovernanceType = {
@@ -101,14 +104,14 @@ const governanceIcons = [
 
 const SectionGovernance = () => {
   const { t } = useTranslation()
-  // const contracts = useContext(contractsContext)
+  const contracts = useContext(contractsContext)
   const [ctxPrice, setCtxPrice] = useState("0")
   const [marketCap, setMarketCap] = useState("0.0")
-  // const [totalStaked, setTotalStaked] = useState("0.0")
+  const [totalStaked, setTotalStaked] = useState("0.0")
   // const sixMonthCtxRewardAmount = 12654
   // const apyShowDate = new Date(1633654800 * 1000)
 
-  /* useEffect(() => {
+  useEffect(() => {
     const load = async () => {
       if (contracts) {
         // @ts-ignore
@@ -135,7 +138,7 @@ const SectionGovernance = () => {
         ])
 
         if (wethOraclePrice && reservesCtxPool) {
-          const currentPriceETH = ethers.formatEther(BigInt(wethOraclePrice) * 10000000000n)
+          const currentPriceETH =  ethers.formatEther(BigInt(wethOraclePrice) * 10000000000n)
           const currentPriceCTX = getPriceInUSDFromPair(
             reservesCtxPool[0],
             reservesCtxPool[1],
@@ -151,7 +154,7 @@ const SectionGovernance = () => {
       }
     }; 
     load();
-  }, [contracts]);  */
+  }, [contracts]);
 
   /* const apr = (): string => {
     const currentDate = new Date();
