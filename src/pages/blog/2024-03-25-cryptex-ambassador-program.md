@@ -30,7 +30,7 @@ Ready to join us on this exciting journey? **Apply to become a Cryptex Finance A
 
 **How to Apply…**
 
-To apply for the Cryptex Finance Ambassador Program, please fill out the application form <https://docs.google.com/forms/d/e/1FAIpQLSfuCXLATyOpitWZ5RYrp8QlwHjaQEpdoH5DJBvh2lVyBiZqYw/viewform>
+To apply for the Cryptex Finance Ambassador Program, please fill out the application form [here](https://docs.google.com/forms/d/e/1FAIpQLSfuCXLATyOpitWZ5RYrp8QlwHjaQEpdoH5DJBvh2lVyBiZqYw/viewform).
 
 We’re looking for individuals who are passionate about DeFi, eager to learn and committed to making a positive impact in their region. Ensure you meet the following fundamental criteria before applying;
 
