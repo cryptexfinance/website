@@ -3,8 +3,8 @@ import React from "react"
 import SectionMain from "./sections/SectionMain"
 import SectionMain2 from "./sections/SectionMain2"
 import SectionMain3 from "./sections/SectionMain3"
-import SectionMarkets from "./sections/SectionMarkets"
 import SectionMarkets2 from "./sections/SectionMarkets2"
+import SectionMarkets3 from "./sections/SectionMarkets3"
 import SectionGovernance from "./sections/SectionGovernance"
 import { ProductsInfo } from "./sections/Info"
 
@@ -19,7 +19,7 @@ const Home = data => {
       <header id="home" />
       <main>
         <SectionMain />
-        <ProductsInfo />
+        {/* <ProductsInfo /> */}
         <SectionMarkets2 />
         <SectionGovernance />
       </main>

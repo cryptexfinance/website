@@ -139,5 +139,48 @@ export const ProductsInfo3 = () => (
         </Stack>
       </Stack>
     </Stack>
+  </Stack>
+)
+
+export const ProductsInfo4 = () => (
+  <Stack direction="vertical"
+    gap={3}
+    style={{
+      padding: "1rem 1rem",
+      marginTop: "0rem",
+      width: "40%",
+      borderRadius: "5px",
+      backgroundColor: "#060606",
+      border: "0.5px solid rgba(33, 33, 56, 0.5)"
+    }}
+  >
+    <Stack direction="vertical" gap={3} style={{ padding: "1rem 0rem", width: "100%" }}>
+      <h1 className="text-purple" style={{ textAlign: "left", fontSize: "2.5rem", fontWeight: "600" }}>
+        Lorem ipsum dolor sit amet, consectetur.
+      </h1>
+      <h2 style={{ color: "#d5d4e3", fontSize: "1.75rem" }}>
+        Ut enim ad minim veniam, quis nostrud exercitation.
+      </h2>
+      <Stack direction="vertical" gap={2} style={{ marginTop: "0.8rem", marginLeft: "0.4rem" }}>
+        <Stack direction="horizontal" gap={2}>
+          <BsCheckCircle fill="#A440F2" size={20} />
+          <p className="no-margin" style={{ fontSize: "1.2rem" }}>
+            Lorem <span className="text-purple" style={{ fontSize: "1.2rem" }}>ipsum dolor</span> sit amet, consectetur adipiscing elit.
+          </p>
+        </Stack>
+        <Stack direction="horizontal" gap={2}>
+          <BsCheckCircle fill="#A440F2" size={20} />
+          <p className="no-margin" style={{ fontSize: "1.2rem" }}>
+            Excepteur sint <span className="text-purple" style={{ fontSize: "1.2rem" }}>occaecat cupidatat</span> non proident.
+          </p>
+        </Stack>
+        <Stack direction="horizontal" gap={2}>
+          <BsCheckCircle fill="#A440F2" size={20} />
+          <p className="no-margin" style={{ fontSize: "1.2rem" }}>
+            Sunt in culpa qui officia deserunt mollit anim <span className="text-purple" style={{ fontSize: "1.2rem" }}>id est laborum</span>.
+          </p>
+        </Stack>
+      </Stack>
+    </Stack>
   </Stack>    
 )

@@ -59,12 +59,14 @@ const IndexBox = ({
   )
 }
 
-export const Indexes = () => {
+export const Indexes = ({ showInfo } : { showInfo: boolean} ) => {
   return (
     <Stack direction="horizontal" gap={3} style={{ padding: "1rem 0.5rem" }} >
-      <Stack direction="vertical" style={{ width: "35%" }}>
-        <ProductsInfo2 />
-      </Stack>
+      {showInfo && (
+        <Stack direction="vertical" style={{ width: "35%" }}>
+          <ProductsInfo2 />
+        </Stack>
+      )}
       <Stack direction="vertical">
         <div
           style={{

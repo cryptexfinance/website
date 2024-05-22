@@ -14,6 +14,7 @@ import tcapLogo from '../../../../static/website/markets/tcap.png'
 import { useTcapPriceChanges } from "../../../hooks/graph"
 import { Indexes } from "./Indexes"
 import { ProductsInfo2 } from "./Info"
+import { ProductsInfo4 } from "./Info"
 
 
 const PriceBox = ({ currentPrice }: { currentPrice: bigint }) => {
@@ -171,7 +172,7 @@ const MarketTcapRow = ({ index, tcapSnapshot, showOI }: { index: number, tcapSna
   )  
 }
 
-const SectionMarkets2 = () => {
+const SectionMarkets3 = () => {
   const { t } = useTranslation()
   const snapshots = useMarketSnapshots()
 
@@ -249,89 +250,48 @@ const SectionMarkets2 = () => {
     <div id="markets" className="section-markets" style={{ paddingTop: "2rem" }} >
       {/* <h1 className="header">{t('markets')}</h1> */}
       {markets && tcapMarket ? (
-        <Tabs id="products-tabs" defaultActiveKey={"markets"}>
-          <Tab eventKey="markets" title="Markets">
-            <Stack direction="vertical" className="markets-metrics" style={{ padding: "1rem 1rem" }}>
-              <div className="markets-detail-container">
-                <Stack direction="horizontal" gap={0} className="markets-header">
-                  <Col lg={2} md={2}>
-                    <span className="market-title asset">{t('asset')}</span>
-                  </Col>
-                  <Col lg={2} md={2} className="text-right">
-                    <span className="market-title">{t('price')}</span>
-                  </Col>
-                  <Col lg={2} md={2} className="text-right">
-                    <span className="market-title">{t('chagen24h')}</span>
-                  </Col>
-                  <Col lg={3} md={3} className="text-right">
-                    <span className="market-title">{t('ls-liquidity')}</span>
-                  </Col>
-                  <Col lg={3} md={3} className="text-right">
-                    <span className="market-title">{t('ls-interes')}</span>
-                  </Col>
-                </Stack>
-                <div className="markets-detail">
-                  {sortedAssets.map((sorteAsset, index) => {
-                    if (sorteAsset.asset !== 'tcap') {
-                      const market = markets[sorteAsset.asset as SupportedAsset]
-                      if (!market) return <></>
-                      return <MarketRow key={index.toString()} index={index} asset={sorteAsset.asset as SupportedAsset} market={market} showOI={true} />
-                    }
-                    return <MarketTcapRow key={index.toString()} index={index} tcapSnapshot={tcapMarket} showOI={true} />
-                  })}
-                </div>
-              </div>
-              <Stack direction="horizontal" gap={3} className="markets-totals" style={{ marginTop: "1rem" }}>
-                <Col lg={6} sm={12} className="total-box">
-                  <span className="total-title">{t('total-liquidity')}</span>
-                  <span className="total-value">{totalLiquidity}+</span>
-                </Col>
-                <Col lg={6} sm={12} className="total-box">
-                  <span className="total-title">{t('total-interest')}</span>
-                  <span className="total-value">{totalOpenInteres}+</span>
-                </Col>
-              </Stack>
-            </Stack>
-          </Tab>
-          <Tab eventKey="indexes" title="Indexes">
-            <Indexes showInfo={true} />
-          </Tab>
-          <Tab eventKey="product" title="Product">
-            <Stack direction="horizontal" gap={2} className="markets-metrics" style={{ padding: "0.5rem 1rem" }}>
-              <Stack direction="vertical" style={{ width: "42%" }}>
-                <ProductsInfo2 />    
-              </Stack>
-              <Stack direction="vertical" style={{ width: "58%" }}>
-                <div className="markets-detail-container">
-                  <Stack direction="horizontal" gap={0} className="markets-header">
-                    <Col lg={4} md={4}>
-                      <span className="market-title asset">{t('asset')}</span>
-                    </Col>
-                    <Col lg={2} md={2} className="text-right">
-                      <span className="market-title">{t('price')}</span>
-                    </Col>
-                    <Col lg={2} md={2} className="text-right">
-                      <span className="market-title">{t('chagen24h')}</span>
-                    </Col>
-                    <Col lg={4} md={4} className="text-right">
-                      <span className="market-title">{t('ls-liquidity')}</span>
-                    </Col>
+        <Stack direction="horizontal" gap={3}>
+          <ProductsInfo4 />
+          <Stack style={{ width: "60%", backgroundColor: "#060606"}} >
+            <Tabs id="products-tabs" defaultActiveKey={"markets"} style={{ backgroundColor: "#060606" }} >
+              <Tab eventKey="markets" title="Markets" style={{ backgroundColor: "#060606" }}>
+                <Stack direction="horizontal" gap={2} className="markets-metrics" style={{ padding: "0.5rem 0.3rem" }}>
+                  <Stack direction="vertical" style={{ width: "100%" }}>
+                    <div className="markets-detail-container">
+                      <Stack direction="horizontal" gap={0} className="markets-header">
+                        <Col lg={4} md={4}>
+                          <span className="market-title asset">{t('asset')}</span>
+                        </Col>
+                        <Col lg={2} md={2} className="text-right">
+                          <span className="market-title">{t('price')}</span>
+                        </Col>
+                        <Col lg={2} md={2} className="text-right">
+                          <span className="market-title">{t('chagen24h')}</span>
+                        </Col>
+                        <Col lg={4} md={4} className="text-right">
+                          <span className="market-title">{t('ls-liquidity')}</span>
+                        </Col>
+                      </Stack>
+                      <div className="markets-detail" style={{ height: "22rem" }}>
+                        {sortedAssets.map((sorteAsset, index) => {
+                          if (sorteAsset.asset !== 'tcap') {
+                            const market = markets[sorteAsset.asset as SupportedAsset]
+                            if (!market) return <></>
+                            return <MarketRow key={index.toString()} index={index} asset={sorteAsset.asset as SupportedAsset} market={market} showOI={false} />
+                          }
+                          return <MarketTcapRow key={index.toString()} index={index} tcapSnapshot={tcapMarket} showOI={false} />
+                        })}
+                      </div>
+                    </div>      
                   </Stack>
-                  <div className="markets-detail" style={{ height: "22rem" }}>
-                    {sortedAssets.map((sorteAsset, index) => {
-                      if (sorteAsset.asset !== 'tcap') {
-                        const market = markets[sorteAsset.asset as SupportedAsset]
-                        if (!market) return <></>
-                        return <MarketRow key={index.toString()} index={index} asset={sorteAsset.asset as SupportedAsset} market={market} showOI={false} />
-                      }
-                      return <MarketTcapRow key={index.toString()} index={index} tcapSnapshot={tcapMarket} showOI={false} />
-                    })}
-                  </div>
-                </div>      
-              </Stack>
-            </Stack>      
-          </Tab>
-        </Tabs>
+                </Stack>      
+              </Tab>
+              <Tab eventKey="indexes" title="Indexes" style={{ backgroundColor: "#060606" }}>
+                <Indexes showInfo={false} />
+              </Tab>
+            </Tabs>
+          </Stack>  
+        </Stack>  
       ) : (
         <Stack direction="vertical" className="markets-loading">
           <Spinner animation="border" variant="primary" />
@@ -341,7 +301,7 @@ const SectionMarkets2 = () => {
   )
 }
 
-export default SectionMarkets2
+export default SectionMarkets3
 
 
 export const query = graphql`
