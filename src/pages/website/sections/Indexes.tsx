@@ -1,7 +1,7 @@
 import React from "react"
 import { Image, Stack } from "react-bootstrap"
 import { AssetMetadata, SupportedAsset } from "../../../constants/markets"
-import { ProductsInfo2 } from "./Info"
+import { ProductsInfo } from "./Info"
 
 
 const IndexBox = ({
@@ -51,9 +51,6 @@ const IndexBox = ({
           <span className="number">L/S Open Interest:</span>
           <span className="number">{openInteres}</span>
         </Stack>
-        {/* <Stack direction="vertical">
-          <h4 className={change24 < 0 ? "text-red" : "text-green"}>{change24}%</h4>
-        </Stack> */}
       </Stack>  
     </Stack>
   )
@@ -64,7 +61,7 @@ export const Indexes = ({ showInfo } : { showInfo: boolean} ) => {
     <Stack direction="horizontal" gap={3} style={{ padding: "1rem 0.5rem" }} >
       {showInfo && (
         <Stack direction="vertical" style={{ width: "35%" }}>
-          <ProductsInfo2 />
+          <ProductsInfo />
         </Stack>
       )}
       <Stack direction="vertical">
