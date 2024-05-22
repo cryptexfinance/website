@@ -6,12 +6,14 @@ import appEndpoint from "../../../endpoint"
 import bgMobilePoster from "../../../../static/mobile_poster.png"
 import bgVideo from "../../../../static/bg_main_pi.webm"
 import bgVideoMobile from "../../../../static/bg_mobile_pi.mp4"
+import { Stack } from "react-bootstrap"
+import SectionGlobal from "./SectionGlobal"
 
-const SectionMain = () => {
+const SectionMain2 = () => {
   const { t } = useTranslation()
 
   return (
-    <div className="section-main" style={{ height: "93vh", marginBottom: "8rem" }}>
+    <div className="section-main" style={{ height: "100vh", alignItems: "flex-start" }}>
       <video
         id="bgvidm"
         autoPlay
@@ -20,7 +22,7 @@ const SectionMain = () => {
         playsInline
         poster={bgMobilePoster}
         className="video bgvid mobile"
-        style={{ height: "100vh" }}
+        style={{ height: "75vh" }}
       >
         <source src={bgVideoMobile} type="video/mp4" />
       </video>
@@ -31,16 +33,16 @@ const SectionMain = () => {
         muted
         playsInline
         className="video bgvid desktop"
-        style={{ height: "100%" }}
+        style={{ height: "77vh" }}
       >
         <source src={bgVideo} type="video/webm" />
       </video>
-      <div className="black-overlay"></div>
-      <div className="main-container col-sm-12" style={{ paddingBottom: "2rem !important" }}>
+      
+      <div className="main-container col-sm-12" style={{ height: "68vh", justifyContent: "flex-end" }}>
         <div className="main-info" style={{ marginBottom: "2rem" }}>
-          <div className="main-title">
+          {/* <div className="main-title">
             <img className="cryptex-logo" src="/logo.svg" alt="Logo" style={{ width: "310px" }} />
-          </div>
+          </div> */}
           <p className="home-subheader">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.
           </p>
@@ -53,7 +55,7 @@ const SectionMain = () => {
                 rel="noopener noreferrer"
                 className="button-outlined-purple main-button main-button-link"
                 target="_blank"
-                style={{ width: "16rem", height: "4rem" }}
+                style={{ width: "15rem", height: "3.5rem" }}
               >
                 {t('launch-app')}
               </a>
@@ -63,7 +65,7 @@ const SectionMain = () => {
                 href="https://docs.cryptex.finance/"
                 rel="noopener noreferrer"
                 className="button-outlined-purple main-button"
-                style={{ width: "16rem", height: "4rem" }}
+                style={{ width: "15rem", height: "3.5rem" }}
               >
                 {t('documentation')}
               </a>
@@ -71,8 +73,9 @@ const SectionMain = () => {
           </Col>
         </div>
       </div>
+      <SectionGlobal />
     </div>
   );  
 };
 
-export default SectionMain;
+export default SectionMain2;

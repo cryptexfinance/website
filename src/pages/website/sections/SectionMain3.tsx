@@ -6,8 +6,9 @@ import appEndpoint from "../../../endpoint"
 import bgMobilePoster from "../../../../static/mobile_poster.png"
 import bgVideo from "../../../../static/bg_main_pi.webm"
 import bgVideoMobile from "../../../../static/bg_mobile_pi.mp4"
+import { ProductsInfo3 } from "./Info"
 
-const SectionMain = () => {
+const SectionMain3 = () => {
   const { t } = useTranslation()
 
   return (
@@ -31,19 +32,17 @@ const SectionMain = () => {
         muted
         playsInline
         className="video bgvid desktop"
-        style={{ height: "100%" }}
-      >
+        style={{ height: "100%", opacity: 0.2 }}
+      >, 
         <source src={bgVideo} type="video/webm" />
       </video>
       <div className="black-overlay"></div>
       <div className="main-container col-sm-12" style={{ paddingBottom: "2rem !important" }}>
         <div className="main-info" style={{ marginBottom: "2rem" }}>
-          <div className="main-title">
+          {/* <div className="main-title">
             <img className="cryptex-logo" src="/logo.svg" alt="Logo" style={{ width: "310px" }} />
-          </div>
-          <p className="home-subheader">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.
-          </p>
+          </div> */}
+          <ProductsInfo3 />
         </div>
         <div className="main-buttons">
           <Col sm={12} md={12} lg={12} className="main-buttons-actions">
@@ -75,4 +74,4 @@ const SectionMain = () => {
   );  
 };
 
-export default SectionMain;
+export default SectionMain3;

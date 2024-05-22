@@ -1,8 +1,12 @@
 import React from "react"
 
 import SectionMain from "./sections/SectionMain"
+import SectionMain2 from "./sections/SectionMain2"
+import SectionMain3 from "./sections/SectionMain3"
 import SectionMarkets from "./sections/SectionMarkets"
+import SectionMarkets2 from "./sections/SectionMarkets2"
 import SectionGovernance from "./sections/SectionGovernance"
+import { ProductsInfo } from "./sections/Info"
 
 
 /* const SectionMarketsLazy = React.lazy(() =>
@@ -15,7 +19,8 @@ const Home = data => {
       <header id="home" />
       <main>
         <SectionMain />
-        <SectionMarkets />
+        <ProductsInfo />
+        <SectionMarkets2 />
         <SectionGovernance />
       </main>
     </>
