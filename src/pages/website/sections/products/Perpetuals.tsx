@@ -1,20 +1,30 @@
 import React, { useEffect, useMemo, useState } from "react"
 import { ethers } from "ethers"
-import { Col, Image, Spinner, Stack, Tabs, Tab} from "react-bootstrap"
+import { Col, Image, Spinner, Stack } from "react-bootstrap"
 import { graphql } from "gatsby"
 import { useTranslation } from "gatsby-plugin-react-i18next"
 
-import { MarketSnapshot, useMarketSnapshots } from "../../../hooks/markets"
-import { useFormattedMarketBarValues } from "../../../hooks/metrics"
-import { AssetMetadata, SupportedAsset } from "../../../constants/markets"
-import { addPositions, calcNotional, calcTakerLiquidity, nextPosition } from "../../../utils/positionUtils"
-import { Big6Math, formatBig6USDPrice } from "../../../utils/big6Utils"
-import { VaultSnapshot } from "../../../hooks/marketsV1"
-import tcapLogo from '../../../../static/website/markets/tcap.png'
-import { useTcapPriceChanges } from "../../../hooks/graph"
-import { Indexes } from "./Indexes"
-import { ProductsInfo } from "./Info"
+import { MarketSnapshot, useMarketSnapshots } from "../../../../hooks/markets"
+import { useFormattedMarketBarValues } from "../../../../hooks/metrics"
+import { AssetMetadata, SupportedAsset } from "../../../../constants/markets"
+import { addPositions, calcNotional, calcTakerLiquidity, nextPosition } from "../../../../utils/positionUtils"
+import { Big6Math, formatBig6USDPrice } from "../../../../utils/big6Utils"
+import { VaultSnapshot } from "../../../../hooks/marketsV1"
+import tcapLogo from '../../../../../static/website/markets/tcap.png'
+import { useTcapPriceChanges } from "../../../../hooks/graph"
+import { ProductInfoCard } from "./common"
 
+const highlights = [
+  <p className="no-margin" style={{ fontSize: "1.1rem" }}>
+    Lorem <span className="text-purple" style={{ fontSize: "1.1rem" }}>ipsum dolor</span> sit amet, consectetur.
+  </p>,
+  <p className="no-margin" style={{ fontSize: "1.1rem" }}>
+    Excepteur sint <span className="text-purple" style={{ fontSize: "1.1rem" }}>occaecat cupidatat</span> non proident.
+  </p>,
+  <p className="no-margin" style={{ fontSize: "1.1rem" }}>
+    Sunt in culpa qui officia deserunt <span className="text-purple" style={{ fontSize: "1.1rem" }}> mollit anim</span>.
+  </p>
+]
 
 const PriceBox = ({ currentPrice }: { currentPrice: bigint }) => {
   const { t } = useTranslation()
@@ -171,7 +181,7 @@ const MarketTcapRow = ({ index, tcapSnapshot, showOI }: { index: number, tcapSna
   )  
 }
 
-const SectionMarkets = () => {
+const Perpetuals = () => {
   const { t } = useTranslation()
   const snapshots = useMarketSnapshots()
 
@@ -245,59 +255,63 @@ const SectionMarkets = () => {
     return { markets: undefined, tcapMarket: undefined, sortedAssets: undefined, totalLiquidity: "$0" }
   }, [snapshots, snapshots.status])
 
-  return(
-    <div id="markets" className="section-markets" style={{ paddingTop: "2rem" }} >
-      {markets && tcapMarket ? (
-        <Tabs id="products-tabs" defaultActiveKey={"indexes"}>
-          <Tab eventKey="indexes" title="Indexes">
-            <Indexes showInfo={true} />
-          </Tab>
-          <Tab eventKey="product" title="Product">
-            <Stack direction="horizontal" gap={2} className="markets-metrics" style={{ padding: "0.5rem 1rem" }}>
-              <Stack direction="vertical" style={{ width: "42%" }}>
-                <ProductsInfo />    
-              </Stack>
-              <Stack direction="vertical" style={{ width: "58%" }}>
-                <div className="markets-detail-container">
-                  <Stack direction="horizontal" gap={0} className="markets-header">
-                    <Col lg={4} md={4}>
-                      <span className="market-title asset">{t('asset')}</span>
-                    </Col>
-                    <Col lg={2} md={2} className="text-right">
-                      <span className="market-title">{t('price')}</span>
-                    </Col>
-                    <Col lg={2} md={2} className="text-right">
-                      <span className="market-title">{t('chagen24h')}</span>
-                    </Col>
-                    <Col lg={4} md={4} className="text-right">
-                      <span className="market-title">{t('ls-liquidity')}</span>
-                    </Col>
-                  </Stack>
-                  <div className="markets-detail" style={{ height: "22rem" }}>
-                    {sortedAssets.map((sorteAsset, index) => {
-                      if (sorteAsset.asset !== 'tcap') {
-                        const market = markets[sorteAsset.asset as SupportedAsset]
-                        if (!market) return <></>
-                        return <MarketRow key={index.toString()} index={index} asset={sorteAsset.asset as SupportedAsset} market={market} showOI={false} />
-                      }
-                      return <MarketTcapRow key={index.toString()} index={index} tcapSnapshot={tcapMarket} showOI={false} />
-                    })}
-                  </div>
-                </div>      
-              </Stack>
-            </Stack>      
-          </Tab>
-        </Tabs>
-      ) : (
-        <Stack direction="vertical" className="markets-loading">
-          <Spinner animation="border" variant="primary" />
-        </Stack> 
-      )}
-    </div> 
+  return (
+    <Stack direction="horizontal" gap={2} className="markets-metrics" style={{ padding: "0.5rem 1rem" }}>
+      <Stack direction="vertical" style={{ width: "42%" }}>
+        <ProductInfoCard
+          headline="Ut enim ad minim veniam, quis nostrud exercitation."
+          highlights={highlights}
+          totals={[
+            {
+              title: "Total Liquidity",
+              value: totalLiquidity.concat("+")
+            },
+            {
+              title: "Open Interest",
+              value: totalOpenInteres?.concat("+") || "$0.00"
+            },
+          ]}
+        />
+      </Stack>
+      <Stack direction="vertical" style={{ width: "58%" }}>
+        {markets && tcapMarket ? (
+          <div className="markets-detail-container">
+            <Stack direction="horizontal" gap={0} className="markets-header">
+              <Col lg={4} md={4}>
+                <span className="market-title asset">{t('asset')}</span>
+              </Col>
+              <Col lg={2} md={2} className="text-right">
+                <span className="market-title">{t('price')}</span>
+              </Col>
+              <Col lg={2} md={2} className="text-right">
+                <span className="market-title">{t('chagen24h')}</span>
+              </Col>
+              <Col lg={4} md={4} className="text-right">
+                <span className="market-title">{t('ls-liquidity')}</span>
+              </Col>
+            </Stack>
+            <div className="markets-detail" style={{ height: "22rem" }}>
+              {sortedAssets.map((sorteAsset, index) => {
+                if (sorteAsset.asset !== 'tcap') {
+                  const market = markets[sorteAsset.asset as SupportedAsset]
+                  if (!market) return <></>
+                  return <MarketRow key={index.toString()} index={index} asset={sorteAsset.asset as SupportedAsset} market={market} showOI={false} />
+                }
+                return <MarketTcapRow key={index.toString()} index={index} tcapSnapshot={tcapMarket} showOI={false} />
+              })}
+            </div>
+          </div>
+        ) : (
+          <Stack direction="vertical" className="markets-loading">
+            <Spinner animation="border" variant="primary" />
+          </Stack>
+        )}
+      </Stack>
+    </Stack>
   )
 }
 
-export default SectionMarkets
+export default Perpetuals
 
 
 export const query = graphql`

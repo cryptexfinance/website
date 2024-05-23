@@ -1,7 +1,7 @@
 import React from "react"
 import { Image, Stack } from "react-bootstrap"
-import { AssetMetadata, SupportedAsset } from "../../../constants/markets"
-import { ProductsInfo } from "./Info"
+import { AssetMetadata, SupportedAsset } from "../../../../constants/markets"
+import { ProductInfoCard } from "./common"
 
 
 const IndexBox = ({
@@ -56,14 +56,37 @@ const IndexBox = ({
   )
 }
 
-export const Indexes = ({ showInfo } : { showInfo: boolean} ) => {
+const highlights = [
+  <p className="no-margin" style={{ fontSize: "1.1rem" }}>
+    Lorem <span className="text-purple" style={{ fontSize: "1.1rem" }}>ipsum dolor</span> sit amet, consectetur.
+  </p>,
+  <p className="no-margin" style={{ fontSize: "1.1rem" }}>
+    Excepteur sint <span className="text-purple" style={{ fontSize: "1.1rem" }}>occaecat cupidatat</span> non proident.
+  </p>,
+  <p className="no-margin" style={{ fontSize: "1.1rem" }}>
+    Sunt in culpa qui officia deserunt <span className="text-purple" style={{ fontSize: "1.1rem" }}> mollit anim</span>.
+  </p>
+]
+
+export const Indexes = () => {
   return (
     <Stack direction="horizontal" gap={3} style={{ padding: "1rem 0.5rem" }} >
-      {showInfo && (
-        <Stack direction="vertical" style={{ width: "35%" }}>
-          <ProductsInfo />
-        </Stack>
-      )}
+      <Stack direction="vertical" style={{ width: "35%" }}>
+        <ProductInfoCard
+          headline="Ut enim ad minim veniam, quis nostrud exercitation."
+          highlights={highlights}
+          totals={[
+            {
+              title: "Total Liquidity",
+              value: "9.80M+"
+            },
+            {
+              title: "Open Interest",
+              value: "915.90K+"
+            },
+          ]}
+        />
+      </Stack>
       <Stack direction="vertical">
         <div
           style={{

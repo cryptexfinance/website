@@ -1,7 +1,7 @@
 import React from "react"
 
 import SectionMain from "./sections/SectionMain"
-import SectionMarkets from "./sections/SectionMarkets"
+import SectionProducts from "./sections/products"
 import SectionGovernance from "./sections/SectionGovernance"
 
 
@@ -15,7 +15,7 @@ const Home = data => {
       <header id="home" />
       <main>
         <SectionMain />
-        <SectionMarkets />
+        <SectionProducts />
         <SectionGovernance />
       </main>
     </>
