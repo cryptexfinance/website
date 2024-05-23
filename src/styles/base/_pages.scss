@@ -158,6 +158,27 @@ body {
     height: 25rem;
     overflow-y: scroll;
   }
+
+  .product-info-card {
+    align-items: "space-between";
+    padding: "1.5rem 0rem 0rem 0rem";
+    background-color: #090909;
+    border: 0.5px solid rgba(33, 33, 56, 0.50);
+    border-radius: 5px;
+
+    .total-box {
+      background-color: #090909;
+      align-items: center;
+      justify-content: center;
+      width: 50%;
+    }
+
+    .divider {
+      height: 100%; 
+      border-left: 1px solid rgba(33, 33, 56, 0.70);
+    }
+  }
+
   .market {
     &-row {
       display: flex;
