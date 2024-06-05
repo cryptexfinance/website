@@ -1,14 +1,14 @@
 import React, { useEffect, useMemo, useState } from "react"
 import { ethers } from "ethers"
 import { Col, Image, Spinner, Stack } from "react-bootstrap"
-import { Big6Math, formatBig6USDPrice, MarketSnapshot, SupportedAsset } from "@perennial/sdk"
+import { Big6Math, calcNotional, calcTakerLiquidity, formatBig6USDPrice, MarketSnapshot, SupportedAsset } from "@perennial/sdk"
 import { graphql } from "gatsby"
 import { useTranslation } from "gatsby-plugin-react-i18next"
 
 import { useMarketSnapshots } from "../../../../hooks/markets"
 import { useFormattedMarketBarValues } from "../../../../hooks/metrics"
 import { AssetMetadata } from "../../../../constants/markets"
-import { addPositions, calcNotional, calcTakerLiquidity, nextPosition } from "../../../../utils/positionUtils"
+import { addPositions, nextPosition } from "../../../../utils/positionUtils"
 import { VaultSnapshot } from "../../../../hooks/marketsV1"
 import tcapLogo from '../../../../../static/website/markets/tcap.png'
 import { useTcapPriceChanges } from "../../../../hooks/graph"

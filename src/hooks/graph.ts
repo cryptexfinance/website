@@ -1,39 +1,7 @@
-import { ChainMarkets, SupportedAsset, last24hrBounds } from '@perennial/sdk'
+import { last24hrBounds } from '@perennial/sdk'
 import { useQuery } from '@tanstack/react-query'
 
-import { useChainId, useGraphClientV1 } from './network'
-import { usePerennialSDKContext } from '../context/perennialSdkContext'
-
-
-export const useMarket24hrData = (asset: SupportedAsset) => {
-  const chainId = useChainId()
-  const market = ChainMarkets[chainId][asset]
-  const sdk = usePerennialSDKContext()
-
-  return useQuery({
-    queryKey: ['market24hData', chainId, asset],
-    enabled: !!market,
-    queryFn: async () => {
-      if (!market) return
-      return sdk.markets.read.market24hrData({ market })
-    },
-  })
-}
-
-export const useMarket7dData = (asset: SupportedAsset) => {
-  const chainId = useChainId()
-  const market = ChainMarkets[chainId][asset]
-  const sdk = usePerennialSDKContext()
-
-  return useQuery({
-    queryKey: ['market7dData', chainId, asset],
-    enabled: !!market,
-    queryFn: async () => {
-      if (!market) return
-      return sdk.markets.read.market7dData({ market })
-    },
-  })
-}
+import { useGraphClientV1 } from './network'
 
 
 export const useTcapPriceChanges = () => {
