@@ -250,12 +250,12 @@ const Perpetuals = () => {
         markets: snapshots.data?.markets.market,
         tcapMarket: snapshots.data?.tcapSnapshot,
         sortedAssets: sortedMarkets,
-        totalLiquidity: formatBig6USDPrice(totalLiquidity, { compact: true }),
-        totalOpenInteres: formatBig6USDPrice(totalOpenInteres, { compact: true }),
+        totalLiquidity: `${formatBig6USDPrice(totalLiquidity, { compact: true })}+`,
+        totalOpenInteres: `${formatBig6USDPrice(totalOpenInteres, { compact: true })}+`,
       }
     }
 
-    return { markets: undefined, tcapMarket: undefined, sortedAssets: undefined, totalLiquidity: "$0" }
+    return { markets: undefined, tcapMarket: undefined, sortedAssets: undefined, totalLiquidity: "-", totalOpenInteres: "-" }
   }, [snapshots, snapshots.status])
 
   return (
@@ -280,11 +280,11 @@ const Perpetuals = () => {
         <Stack direction="horizontal" gap={3} className="markets-totals">
           <Col lg={6} sm={12} className="total-box">
             <span className="total-title">{t('total-liquidity')}</span>
-            <span className="total-value">{totalLiquidity}+</span>
+            <span className="total-value">{totalLiquidity}</span>
           </Col>
           <Col lg={6} sm={12} className="total-box">
             <span className="total-title">{t('total-interest')}</span>
-            <span className="total-value">{totalOpenInteres}+</span>
+            <span className="total-value">{totalOpenInteres}</span>
           </Col>
         </Stack>
         {markets && tcapMarket ? (
