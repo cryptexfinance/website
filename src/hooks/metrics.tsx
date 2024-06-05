@@ -5,17 +5,19 @@ import {
   chainAssetsWithAddress,
   formatBig6Percent,
   formatBig6USDPrice,
+  last24hrBounds,
   MarketSnapshot,
   SupportedAsset,
-  calcLpExposure, calcSkew, calcTakerLiquidity, efficiency
+  calcLpExposure,
+  calcSkew,
+  calcTakerLiquidity,
+  efficiency,
+  PriceFeed,
 } from '@perennial/sdk'
-import { PriceFeed } from "@pythnetwork/price-service-client"
 
-// import { calcLpExposure, calcLpUtilization, calcSkew, calcTakerLiquidity, efficiency } from "../utils/positionUtils"
 import { AssetMetadata } from '../constants/markets'
 import { useChainId, usePythSubscription } from './network'
 import { useQuery } from '@tanstack/react-query'
-import { last24hrBounds } from '../utils/timeUtils'
 import { PythDataFeedUrl } from '../constants/network'
 
 
@@ -121,7 +123,6 @@ export const useFormattedMarketBarValues = (marketSnapshot: MarketSnapshot) => {
 
   const availableLiq = marketSnapshot ? calcTakerLiquidity(marketSnapshot) : undefined
   const lpExposure = calcLpExposure(marketSnapshot)
-  // const lpUtilization = calcLpUtilization(marketSnapshot)
   const calculatedSkew = calcSkew(marketSnapshot)
   const makerEfficiency = efficiency(
     marketSnapshot?.nextPosition.maker ?? 0n,
