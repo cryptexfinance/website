@@ -1,0 +1,62 @@
+import { useContext } from 'react'
+import { useQuery } from '@tanstack/react-query'
+import { zeroAddress } from 'viem'
+
+import { usePerennialSDKContext } from '../context/perennialSdkContext'
+import { arbContractsContext } from '../context'
+import { useChainId } from './network'
+import { vaultSnapshotFetcher } from './marketsV1'
+import { TcapVaultContract } from '../constants/contracts'
+
+
+export const useProtocolParameter = () => {
+  const chainId = useChainId()
+  const sdk = usePerennialSDKContext()
+  return useQuery({
+    queryKey: ['protocolParameter2', chainId],
+    enabled: !!chainId,
+    queryFn: async () => {
+      return sdk.contracts.getMarketFactoryContract().read.parameter()
+    },
+  })
+}
+
+export const useMarketOracles = () => {
+  const chainId = useChainId()
+  const sdk = usePerennialSDKContext()
+  return useQuery({
+    queryKey: ['marketOracles', chainId],
+    queryFn: async () => {
+      const marketOracles = await sdk.markets.read.marketOracles()
+      return marketOracles
+    },
+  })
+}
+
+export const useMarketSnapshots = () => {
+  const chainId = useChainId()
+  const { data: marketOracles } = useMarketOracles()
+  const sdk = usePerennialSDKContext()
+  const vaultAddress = TcapVaultContract[chainId]
+  const contracts = useContext(arbContractsContext)
+  
+  const address = zeroAddress
+
+  return useQuery({
+    queryKey: ['marketSnapshots', chainId, address],
+    enabled: !!address && !!marketOracles,
+    queryFn: async () => {
+      const marketSnapshots = await sdk.markets.read.marketSnapshots({
+        marketOracles,
+        address,
+      })
+
+      const tcapData = await vaultSnapshotFetcher(contracts, vaultAddress)
+
+      return {
+        markets: marketSnapshots,
+        tcapSnapshot: tcapData,
+      }
+    },
+  })
+}

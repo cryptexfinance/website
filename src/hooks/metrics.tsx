@@ -1,10 +1,18 @@
 import { useCallback, useEffect, useMemo, useState } from 'react'
+import {
+  BigOrZero,
+  Big6Math,
+  chainAssetsWithAddress,
+  formatBig6Percent,
+  formatBig6USDPrice,
+  MarketSnapshot,
+  SupportedAsset,
+  calcLpExposure, calcSkew, calcTakerLiquidity, efficiency
+} from '@perennial/sdk'
 import { PriceFeed } from "@pythnetwork/price-service-client"
 
-import { MarketSnapshot } from "./markets"
-import { Big6Math, BigOrZero, formatBig6Percent, formatBig6USDPrice } from "../utils/big6Utils"
-import { calcLpExposure, calcLpUtilization, calcSkew, calcTakerLiquidity, efficiency } from "../utils/positionUtils"
-import { AssetMetadata, SupportedAsset, chainAssetsWithAddress } from '../constants/markets'
+// import { calcLpExposure, calcLpUtilization, calcSkew, calcTakerLiquidity, efficiency } from "../utils/positionUtils"
+import { AssetMetadata } from '../constants/markets'
 import { useChainId, usePythSubscription } from './network'
 import { useQuery } from '@tanstack/react-query'
 import { last24hrBounds } from '../utils/timeUtils'
@@ -113,7 +121,7 @@ export const useFormattedMarketBarValues = (marketSnapshot: MarketSnapshot) => {
 
   const availableLiq = marketSnapshot ? calcTakerLiquidity(marketSnapshot) : undefined
   const lpExposure = calcLpExposure(marketSnapshot)
-  const lpUtilization = calcLpUtilization(marketSnapshot)
+  // const lpUtilization = calcLpUtilization(marketSnapshot)
   const calculatedSkew = calcSkew(marketSnapshot)
   const makerEfficiency = efficiency(
     marketSnapshot?.nextPosition.maker ?? 0n,
@@ -145,7 +153,7 @@ export const useFormattedMarketBarValues = (marketSnapshot: MarketSnapshot) => {
     /* volume7d: `${formatBig6USDPrice((weeklyData?.takerVolumes.long ?? 0n) + (weeklyData?.takerVolumes.short ?? 0n), {
       compact: true,
     })}`, */
-    lpUtilization: lpUtilization?.formattedLpUtilization ?? '0.00%',
+    lpUtilization: '0.00%',
     skew: formatBig6Percent(calculatedSkew?.skew ?? 0n),
     longSkew: formatBig6Percent(calculatedSkew?.longSkew ?? 0n),
     shortSkew: formatBig6Percent(calculatedSkew?.shortSkew ?? 0n),

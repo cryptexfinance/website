@@ -1,20 +1,21 @@
 import React, { useEffect, useMemo, useState } from "react"
 import { ethers } from "ethers"
 import { Col, Image, Spinner, Stack } from "react-bootstrap"
+import { Big6Math, formatBig6USDPrice, MarketSnapshot, SupportedAsset } from "@perennial/sdk"
 import { graphql } from "gatsby"
 import { useTranslation } from "gatsby-plugin-react-i18next"
 
-import { MarketSnapshot, useMarketSnapshots } from "../../../../hooks/markets"
+import { useMarketSnapshots } from "../../../../hooks/markets"
 import { useFormattedMarketBarValues } from "../../../../hooks/metrics"
-import { AssetMetadata, SupportedAsset } from "../../../../constants/markets"
+import { AssetMetadata } from "../../../../constants/markets"
 import { addPositions, calcNotional, calcTakerLiquidity, nextPosition } from "../../../../utils/positionUtils"
-import { Big6Math, formatBig6USDPrice } from "../../../../utils/big6Utils"
 import { VaultSnapshot } from "../../../../hooks/marketsV1"
 import tcapLogo from '../../../../../static/website/markets/tcap.png'
 import { useTcapPriceChanges } from "../../../../hooks/graph"
-import { ProductInfoCard } from "./common"
 
-const highlights = [
+// import { ProductInfoCard } from "./common"
+
+/* const highlights = [
   <p className="no-margin" style={{ fontSize: "1.1rem" }}>
     Lorem <span className="text-purple" style={{ fontSize: "1.1rem" }}>ipsum dolor</span> sit amet, consectetur.
   </p>,
@@ -24,7 +25,7 @@ const highlights = [
   <p className="no-margin" style={{ fontSize: "1.1rem" }}>
     Sunt in culpa qui officia deserunt <span className="text-purple" style={{ fontSize: "1.1rem" }}> mollit anim</span>.
   </p>
-]
+] */
 
 const PriceBox = ({ currentPrice }: { currentPrice: bigint }) => {
   const { t } = useTranslation()
@@ -185,10 +186,12 @@ const Perpetuals = () => {
   const { t } = useTranslation()
   const snapshots = useMarketSnapshots()
 
+  console.log("snapshots: ", snapshots)
+
   const { markets, tcapMarket, sortedAssets, totalLiquidity, totalOpenInteres } = useMemo(() => {
     if (snapshots && snapshots.data) {
-      const unsorted = Object.keys(snapshots.data.markets).map((market) => {
-        const marketSnapshot = snapshots.data?.markets[market as SupportedAsset]
+      const unsorted = Object.keys(snapshots.data.markets.market).map((market) => {
+        const marketSnapshot = snapshots.data?.markets.market[market as SupportedAsset]
         const marketPrice = marketSnapshot?.global?.latestPrice ?? 0n
         const latestPrice = marketSnapshot?.global?.latestPrice ?? 0n
         const liquidity = marketSnapshot ? calcTakerLiquidity(marketSnapshot) : undefined
@@ -244,7 +247,7 @@ const Perpetuals = () => {
       )
 
       return {
-        markets: snapshots.data?.markets,
+        markets: snapshots.data?.markets.market,
         tcapMarket: snapshots.data?.tcapSnapshot,
         sortedAssets: sortedMarkets,
         totalLiquidity: formatBig6USDPrice(totalLiquidity, { compact: true }),
@@ -256,8 +259,8 @@ const Perpetuals = () => {
   }, [snapshots, snapshots.status])
 
   return (
-    <Stack direction="horizontal" gap={2} className="markets-metrics" style={{ padding: "0.5rem 1rem" }}>
-      <Stack direction="vertical" style={{ width: "42%" }}>
+    <Stack direction="horizontal" gap={2} className="markets-metrics">
+      {/* <Stack direction="vertical" style={{ width: "42%" }}>
         <ProductInfoCard
           headline="Ut enim ad minim veniam, quis nostrud exercitation."
           highlights={highlights}
@@ -272,12 +275,22 @@ const Perpetuals = () => {
             },
           ]}
         />
-      </Stack>
-      <Stack direction="vertical" style={{ width: "58%" }}>
+      </Stack> */}
+      <Stack direction="vertical" style={{ width: "100%" }}>
+        <Stack direction="horizontal" gap={3} className="markets-totals">
+          <Col lg={6} sm={12} className="total-box">
+            <span className="total-title">{t('total-liquidity')}</span>
+            <span className="total-value">{totalLiquidity}+</span>
+          </Col>
+          <Col lg={6} sm={12} className="total-box">
+            <span className="total-title">{t('total-interest')}</span>
+            <span className="total-value">{totalOpenInteres}+</span>
+          </Col>
+        </Stack>
         {markets && tcapMarket ? (
           <div className="markets-detail-container">
             <Stack direction="horizontal" gap={0} className="markets-header">
-              <Col lg={4} md={4}>
+              <Col lg={2} md={2}>
                 <span className="market-title asset">{t('asset')}</span>
               </Col>
               <Col lg={2} md={2} className="text-right">
@@ -286,18 +299,29 @@ const Perpetuals = () => {
               <Col lg={2} md={2} className="text-right">
                 <span className="market-title">{t('chagen24h')}</span>
               </Col>
-              <Col lg={4} md={4} className="text-right">
+              <Col lg={3} md={3} className="text-right">
                 <span className="market-title">{t('ls-liquidity')}</span>
               </Col>
+              <Col lg={3} md={3} className="text-right">
+                <span className="market-title">{t('ls-interes')}</span>
+              </Col>
             </Stack>
-            <div className="markets-detail" style={{ height: "22rem" }}>
+            <div className="markets-detail">
               {sortedAssets.map((sorteAsset, index) => {
                 if (sorteAsset.asset !== 'tcap') {
                   const market = markets[sorteAsset.asset as SupportedAsset]
-                  if (!market) return <></>
-                  return <MarketRow key={index.toString()} index={index} asset={sorteAsset.asset as SupportedAsset} market={market} showOI={false} />
+                  if (!market || sorteAsset.asset === SupportedAsset.rlb) return <></>
+                  return (
+                    <MarketRow
+                      key={index.toString()}
+                      index={index}
+                      asset={sorteAsset.asset as SupportedAsset}
+                      market={market}
+                      showOI={true}
+                    />
+                  )
                 }
-                return <MarketTcapRow key={index.toString()} index={index} tcapSnapshot={tcapMarket} showOI={false} />
+                return <MarketTcapRow key={index.toString()} index={index} tcapSnapshot={tcapMarket} showOI={true} />
               })}
             </div>
           </div>

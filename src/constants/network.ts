@@ -1,6 +1,6 @@
 import { arbitrum, arbitrumSepolia } from "viem/chains"
-import { createPublicClient, Chain, http, PublicClient } from "viem"
-import { EvmPriceServiceConnection } from '@pythnetwork/pyth-evm-js'
+import { Chain, } from "viem"
+import { EvmPriceServiceConnection } from "@perennial/sdk";
 // const { EvmPriceServiceConnection } = require('@pythnetwork/pyth-evm-js')
 
 export const chains = [arbitrum];

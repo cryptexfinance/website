@@ -3,6 +3,7 @@ import React from "react"
 import SectionMain from "./sections/SectionMain"
 import SectionProducts from "./sections/products"
 import SectionGovernance from "./sections/SectionGovernance"
+import { PerennialSDKProvider } from "../../context/perennialSdkContext"
 
 
 /* const SectionMarketsLazy = React.lazy(() =>
@@ -15,7 +16,9 @@ const Home = data => {
       <header id="home" />
       <main>
         <SectionMain />
-        <SectionProducts />
+        <PerennialSDKProvider>
+          <SectionProducts />
+        </PerennialSDKProvider>  
         <SectionGovernance />
       </main>
     </>

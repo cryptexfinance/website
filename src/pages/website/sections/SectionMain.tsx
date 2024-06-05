@@ -11,38 +11,36 @@ const SectionMain = () => {
   const { t } = useTranslation()
 
   return (
-    <div className="section-main" style={{ height: "93vh", marginBottom: "8rem" }}>
+    <div className="section-main">
       <video
-        id="bgvidm"
         autoPlay
         loop
         muted
         playsInline
         poster={bgMobilePoster}
         className="video bgvid mobile"
-        style={{ height: "100vh" }}
+        id="bgvidm"
       >
         <source src={bgVideoMobile} type="video/mp4" />
       </video>
       <video
-        id="bgvid"
         autoPlay
         loop
         muted
         playsInline
         className="video bgvid desktop"
-        style={{ height: "100%" }}
+        id="bgvid"
       >
         <source src={bgVideo} type="video/webm" />
       </video>
       <div className="black-overlay"></div>
-      <div className="main-container col-sm-12" style={{ paddingBottom: "2rem !important" }}>
-        <div className="main-info" style={{ marginBottom: "2rem" }}>
+      <div className="main-container col-sm-12">
+        <div className="main-info">
           <div className="main-title">
-            <img className="cryptex-logo" src="/logo.svg" alt="Logo" style={{ width: "310px" }} />
+            <img className="cryptex-logo" src="/logo.svg" alt="Logo" />
           </div>
           <p className="home-subheader">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.
+            {t('cutting-edge').toUpperCase()}<br /><br />
           </p>
         </div>
         <div className="main-buttons">
@@ -53,7 +51,6 @@ const SectionMain = () => {
                 rel="noopener noreferrer"
                 className="button-outlined-purple main-button main-button-link"
                 target="_blank"
-                style={{ width: "16rem", height: "4rem" }}
               >
                 {t('launch-app')}
               </a>
@@ -63,7 +60,6 @@ const SectionMain = () => {
                 href="https://docs.cryptex.finance/"
                 rel="noopener noreferrer"
                 className="button-outlined-purple main-button"
-                style={{ width: "16rem", height: "4rem" }}
               >
                 {t('documentation')}
               </a>
