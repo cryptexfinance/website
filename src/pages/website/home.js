@@ -1,14 +1,12 @@
 import React from "react"
+import Loadable from "@loadable/component"
 
 import SectionMain from "./sections/SectionMain"
-import SectionProducts from "./sections/products"
+// import SectionProducts from "./sections/products"
 import SectionGovernance from "./sections/SectionGovernance"
-import { PerennialSDKProvider } from "../../context/perennialSdkContext"
 
+const SectionProducts = Loadable(() => import("./sections/products"))
 
-/* const SectionMarketsLazy = React.lazy(() =>
-  import("./sections/SectionMarkets")
-) */
 
 const Home = data => {
   return (
@@ -16,9 +14,7 @@ const Home = data => {
       <header id="home" />
       <main>
         <SectionMain />
-        <PerennialSDKProvider>
-          <SectionProducts />
-        </PerennialSDKProvider>  
+        <SectionProducts />
         <SectionGovernance />
       </main>
     </>

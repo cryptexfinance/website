@@ -30,8 +30,8 @@ export const PerennialSDKProvider = ({ children }: { children: React.ReactNode }
 
 export const usePerennialSDKContext = () => {
   const context = useContext(SDKContext)
-  if (!context) {
+  /* if (!context) {
     throw new Error('useSDKContext must be used within a SDKContext provider')
-  }
+  } */
   return context
 }

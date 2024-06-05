@@ -13,9 +13,11 @@ export const useProtocolParameter = () => {
   const chainId = useChainId()
   const sdk = usePerennialSDKContext()
   return useQuery({
-    queryKey: ['protocolParameter2', chainId],
-    enabled: !!chainId,
+    queryKey: ['protocolParameter2', chainId, sdk],
+    enabled: !!chainId && !!sdk,
     queryFn: async () => {
+      if (!sdk) return 
+
       return sdk.contracts.getMarketFactoryContract().read.parameter()
     },
   })
@@ -25,8 +27,10 @@ export const useMarketOracles = () => {
   const chainId = useChainId()
   const sdk = usePerennialSDKContext()
   return useQuery({
-    queryKey: ['marketOracles', chainId],
+    queryKey: ['marketOracles', chainId, sdk],
     queryFn: async () => {
+      if (!sdk) return 
+
       const marketOracles = await sdk.markets.read.marketOracles()
       return marketOracles
     },
@@ -46,6 +50,8 @@ export const useMarketSnapshots = () => {
     queryKey: ['marketSnapshots', chainId, address],
     enabled: !!address && !!marketOracles,
     queryFn: async () => {
+      if (!sdk || !marketOracles) return
+
       const marketSnapshots = await sdk.markets.read.marketSnapshots({
         marketOracles,
         address,
