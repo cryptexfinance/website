@@ -125,8 +125,11 @@ body {
 }
 
 .section-markets {
+  // margin: 3rem 2rem 2rem 1rem;
+  // padding: 9rem 1.8rem 3rem 1.8rem;
   margin: 3rem 2rem 2rem 1rem;
-  padding: 9rem 1.8rem 3rem 1.8rem;
+  padding: 7.5rem 1.8rem 3rem 1.8rem;
+
 
   .header {
     margin-left: 0.5rem;
@@ -158,6 +161,27 @@ body {
     height: 25rem;
     overflow-y: scroll;
   }
+
+  .product-info-card {
+    align-items: "space-between";
+    padding: "1.5rem 0rem 0rem 0rem";
+    background-color: #090909;
+    border: 0.5px solid rgba(33, 33, 56, 0.50);
+    border-radius: 5px;
+
+    .total-box {
+      background-color: #090909;
+      align-items: center;
+      justify-content: center;
+      width: 50%;
+    }
+
+    .divider {
+      height: 100%; 
+      border-left: 1px solid rgba(33, 33, 56, 0.70);
+    }
+  }
+
   .market {
     &-row {
       display: flex;
@@ -445,7 +469,7 @@ body {
   flex-direction: row;
   margin-top: 10rem;
   padding: 3rem 5rem;
-  background-color: $color-navbar-button;
+  background-color: #0e0e1a;
   height: 17rem;
   
   &-info {

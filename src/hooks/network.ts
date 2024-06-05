@@ -1,4 +1,4 @@
-import { EvmPriceServiceConnection } from '@pythnetwork/pyth-evm-js'
+import { EvmPriceServiceConnection } from '@perennial/sdk'
 import EventEmitter from 'events'
 import { GraphQLClient } from 'graphql-request'
 import { PublicClient, createPublicClient, webSocket } from 'viem'

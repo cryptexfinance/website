@@ -18,7 +18,7 @@ const tanstackQueryClient = new QueryClient({
   },
 })
 
-const ALCHEMY_KEY = process.env.GATSBY_ALCHEMY_KEY || process.env.ALCHEMY_KEY
+// const ALCHEMY_KEY = process.env.GATSBY_ALCHEMY_KEY || process.env.ALCHEMY_KEY
 const INFURA_ID = process.env.GATSBY_INFURA_ID || process.env.INFURA_ID
 export const wagmiConfig = createConfig({
   chains: [arbitrum],

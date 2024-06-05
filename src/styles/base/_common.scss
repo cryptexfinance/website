@@ -1,7 +1,7 @@
 
 // Main Website
 
-h1, h2, h3, h4, h5, h6  {
+h1, h2, h3, h4, h5, h6, span, p {
   color: $color-dark-clean;
   font-family: $font-primary;
 }
@@ -33,6 +33,43 @@ h3, .terciary-header {
   text-align: left;
 }
 
+.no-margin {
+  margin: 0;
+}
+
+span {
+  font-size: 0.8rem;
+}
+
+.number {
+  color: $color-grey-light;
+}
+
+.nav-tabs {
+  border-bottom: 1px solid $color-black;
+
+  .nav-item, .nav-link {
+    color: $color-grey-light;
+    background-color: $color-blackground;
+    width: 12rem;
+    font-size: 24px;
+  }
+  .nav-link {
+    border-bottom-color: $color-black;
+    padding-top: 0.7rem;
+    padding-bottom: 0.7rem;
+  }
+  .nav-link:hover {
+    border-color: $color-blackground;
+    border-bottom-color: rgba(165, 64, 242, 0.5);
+  }
+  .nav-link.active {
+    color: $color-white;
+    background-color: $color-blackground;
+    border-color: $color-blackground;
+    border-bottom-color: $shadow-purple-neon;
+  }
+}
 
 .menu-logo {
   width: 170px;
@@ -102,12 +139,20 @@ h3, .terciary-header {
   color: #20F433
 }
 
+.text-purple {
+  color: $color-primary-purple;
+}
+
 .text-green {
   color: $shadow-green-neon !important;
 }
 
 .text-red {
   color: red !important;
+}
+
+.text-grey {
+  color: $color-grey !important;
 }
 
 .subtitle {
@@ -214,10 +259,10 @@ h3, .terciary-header {
   .dropdown-toggle {
     border-radius: 3px;
     border-color: $color-primary-purple;
-    background-color: $color-black;
+    background-color: $color-navbar-button;
   }
   .dropdown-toggle:hover {
-    background-color: $color-black;
+    background-color: $color-navbar-button;
     border-color: $color-primary-purple;
   }
   .dropdown-item:hover {
@@ -356,7 +401,8 @@ h3, .terciary-header {
   border: 1px solid $color-grey-dark;
   border-radius: 5px;
   box-shadow: 0px 0px 15px 3px $shadow-purple-neon-secondary;
-  background-color: $color-background-box;
+  background-color: #0e0e19;
+  // background-color: $color-background-box;
   @media (max-width: 600px) {
     margin: 0px;
     padding: 5rem;
@@ -435,7 +481,6 @@ h3, .terciary-header {
     }
   }
 }
-
 
 .market-cap-box {
   display: flex;

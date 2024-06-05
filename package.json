@@ -16,12 +16,12 @@
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
   },
   "dependencies": {
-    "@apollo/client": "^3.3.6",
+    "@apollo/client": "^3.7.13",
     "@apollo/react-hooks": "^4.0.0",
+    "@perennial/sdk": "^0.0.1-beta18",
     "@pythnetwork/price-service-client": "^1.8.1",
-    "@pythnetwork/pyth-evm-js": "1.29.3",
     "@react-icons/all-files": "^4.1.0",
-    "@tanstack/react-query": "^5.18.1",
+    "@tanstack/react-query": "^5.35.1",
     "bootstrap": "^5.1.3",
     "coingecko-api-v3": "^0.0.19",
     "dotenv": "^16.0.1",
@@ -81,8 +81,8 @@
     "react-share": "^4.4.0",
     "react-toastify": "^9.0.8",
     "stream-browserify": "^3.0.0",
-    "viem": "2.x",
-    "wagmi": "^2.5.5"
+    "viem": "2.9.9",
+    "wagmi": "2.9.5"
   },
   "devDependencies": {
     "eslint-config-react-app": "^6.0.0",
