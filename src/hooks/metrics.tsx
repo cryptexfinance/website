@@ -12,7 +12,8 @@ import {
   calcSkew,
   calcTakerLiquidity,
   efficiency,
-  PriceFeed,
+  pythPriceToBig6,
+  PriceUpdate
 } from '@perennial/sdk'
 
 import { AssetMetadata } from '../constants/markets'
@@ -44,26 +45,23 @@ const useChainLivePrices = () => {
   }, [markets])
 
   const feedSubscription = usePythSubscription(feedIds)
-  feedSubscription.setMaxListeners(20)
   const onUpdate = useCallback(
-    (priceFeed: PriceFeed) => {
-      const price = priceFeed.getPriceNoOlderThan(60)
-      const normalizedExpo = price ? 6 + price?.expo : 0
-
-      const normalizedPrice =
-        normalizedExpo >= 0
-          ? BigOrZero(price?.price) * BigInt(Math.pow(10, normalizedExpo))
-          : BigOrZero(price?.price) / BigInt(Math.pow(10, Math.abs(normalizedExpo)))
-
-      setPrices((prices) => ({
-        ...prices,
-        ...feedToAsset['0x' + priceFeed.id].reduce((acc, asset) => {
-          const { transform } = AssetMetadata[asset]
-          // Pyth price is has `expo` (negative number) decimals, normalize to expected 18 decimals by multiplying by 10^(18 + expo)
-          acc[asset] = price ? { price: transform(normalizedPrice), untransformed: normalizedPrice } : undefined
-          return acc
-        }, {} as { [key in SupportedAsset]?: { price: bigint; untransformed: bigint } }),
-      }))
+    (priceFeed: PriceUpdate) => {
+      const parsedData = priceFeed.parsed
+      if (!parsedData) return
+      parsedData.forEach((data: any) => {
+        const price = data.price
+        const normalizedPrice = pythPriceToBig6(BigOrZero(price?.price), price?.expo ?? 0)
+        setPrices((prices) => ({
+          ...prices,
+          ...feedToAsset['0x' + data.id].reduce((acc, asset) => {
+            const { transform } = AssetMetadata[asset]
+            // Pyth price is has `expo` (negative number) decimals, normalize to expected 18 decimals by multiplying by 10^(18 + expo)
+            acc[asset] = price ? { price: transform(normalizedPrice), untransformed: normalizedPrice } : undefined
+            return acc
+          }, {} as { [key in SupportedAsset]?: { price: bigint; untransformed: bigint } }),
+        }))
+      })
     },
     [feedToAsset],
   )

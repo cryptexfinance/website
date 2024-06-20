@@ -18,8 +18,7 @@
   "dependencies": {
     "@apollo/client": "^3.7.13",
     "@apollo/react-hooks": "^4.0.0",
-    "@perennial/sdk": "^0.0.1-beta18",
-    "@pythnetwork/price-service-client": "^1.8.1",
+    "@perennial/sdk": "^0.0.1-beta27",
     "@react-icons/all-files": "^4.1.0",
     "@tanstack/react-query": "^5.35.1",
     "bootstrap": "^5.1.3",
@@ -59,6 +58,7 @@
     "howler": "^2.2.3",
     "html-react-parser": "^3.0.4",
     "https": "^1.0.0",
+    "https-browserify": "^1.0.0",
     "i18next": "^23.10.0",
     "install": "^0.13.0",
     "netlify-cms-app": "^2.15.72",
@@ -81,6 +81,7 @@
     "react-share": "^4.4.0",
     "react-toastify": "^9.0.8",
     "stream-browserify": "^3.0.0",
+    "stream-http": "^3.2.0",
     "viem": "2.9.9",
     "wagmi": "2.9.5"
   },

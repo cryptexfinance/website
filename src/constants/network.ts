@@ -1,6 +1,6 @@
 import { arbitrum, arbitrumSepolia } from "viem/chains"
 import { Chain, } from "viem"
-import { EvmPriceServiceConnection } from "@perennial/sdk";
+import { HermesClient } from "@perennial/sdk";
 // const { EvmPriceServiceConnection } = require('@pythnetwork/pyth-evm-js')
 
 export const chains = [arbitrum];
@@ -38,14 +38,13 @@ export const ExplorerURLs: { [chainId in SupportedChainId]: string } = {
   [arbitrumSepolia.id]: arbitrumSepolia.blockExplorers.default.url,
 };
 
-export const PythMainnetUrl = "https://hermes.pyth.network/"
-export const PythTestnetUrl = "https://hermes.pyth.network/"
+export const PythMainnetUrl = "https://perennial.rpc.p2p.world"
+export const PythTestnetUrl = "https://perennial.rpc.p2p.world"
 export const PythDataFeedUrl = "https://benchmarks.pyth.network/v1/shims/tradingview"
 
-export const BackupPythClient = new EvmPriceServiceConnection(
+export const BackupPythClient = new HermesClient(
   `${typeof window !== 'undefined' ? window.location.origin : 'https://app.perennial.finance'}/api/pyth`,
   {
     timeout: 30000,
-    priceFeedRequestConfig: { binary: true },
   },
 )
