@@ -135,7 +135,7 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
 }
 
 exports.onCreateWebpackConfig = ({ getConfig, stage, loaders, actions }) => {
-  if (stage === "build-html" || stage === "develop-html") {
+  // if (stage === "build-html" || stage === "develop-html") {
     actions.setWebpackConfig({
       module: {
         rules: [
@@ -154,10 +154,12 @@ exports.onCreateWebpackConfig = ({ getConfig, stage, loaders, actions }) => {
         // Handle unsupported node scheme - https://github.com/webpack/webpack/issues/13290#issuecomment-987880453
         fallback: {
           crypto: require.resolve('stream-browserify'),
+          http: require.resolve("stream-http"),
+          https: require.resolve("https-browserify")
         }
       }
     })
-  }
+  // }
 
   const webpackConfig = getConfig()
   if (stage === "build-javascript") {
