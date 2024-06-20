@@ -43,7 +43,6 @@ export const useMarketSnapshots = () => {
   const sdk = usePerennialSDKContext()
   const vaultAddress = TcapVaultContract[chainId]
   const contracts = useContext(arbContractsContext)
-  
   const address = zeroAddress
 
   return useQuery({

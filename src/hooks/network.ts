@@ -1,4 +1,4 @@
-import { EvmPriceServiceConnection } from '@perennial/sdk'
+import { HermesClient, PriceUpdate } from '@perennial/sdk'
 import EventEmitter from 'events'
 import { GraphQLClient } from 'graphql-request'
 import { PublicClient, createPublicClient, webSocket } from 'viem'
@@ -77,8 +77,8 @@ export const useGraphClientV1 = () => {
 }
 
 const pythClients = {
-  mainnet: new EvmPriceServiceConnection(PythMainnetUrl, { timeout: 10000, priceFeedRequestConfig: { binary: true } }),
-  testnet: new EvmPriceServiceConnection(PythTestnetUrl, { timeout: 10000, priceFeedRequestConfig: { binary: true } }),
+  mainnet: new HermesClient(PythMainnetUrl, { timeout: 15000 }),
+  testnet: new HermesClient(PythTestnetUrl, { timeout: 15000 }),
 }
 
 export const usePyth = () => {
@@ -91,10 +91,18 @@ export const usePythSubscription = (feedIds: string[]) => {
   const key = feedIds.sort().join(',')
   if (!pythSubscriptions.has(key)) {
     const emitter = new EventEmitter()
-    pyth.subscribePriceFeedUpdates(feedIds, (updates) => {
-      emitter.emit('updates', updates)
-    })
     pythSubscriptions.set(key, emitter)
+
+    const stream = pyth.getPriceUpdatesStream(feedIds, { parsed: true })
+    stream.then((eventSource) => {
+      eventSource.onmessage = ({ data }: { data: string }) => {
+        emitter.emit('updates', JSON.parse(data) as PriceUpdate)
+      }
+      eventSource.onerror = () => {
+        eventSource.close()
+        pythSubscriptions.delete(key)
+      }
+    })
   }
 
   // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
