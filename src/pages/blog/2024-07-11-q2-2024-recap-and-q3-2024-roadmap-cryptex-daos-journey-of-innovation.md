@@ -6,7 +6,7 @@ date: 2024-07-11T17:43:51.721Z
 description: We're excited to share our achievements from the past quarter and
   outline our plans for the months ahead.
 featuredpost: true
-featuredimage: /img/q3pic.png
+featuredimage: /img/q3_2024.png
 tags:
   - Cryptex
   - DAO
@@ -17,7 +17,7 @@ We're excited to share our achievements from the past quarter and outline our pl
 
 **Q2 2024: A Quarter of Achievements and Strategic Pivots**
 
-![Cryptex Q2 2024](/img/q2pic.png "Cryptex Q2 2024")
+![Cryptex Q2 2024](/img/q2_2024.png "Cryptex Q2 2024")
 
 ### Strategy
 
@@ -49,7 +49,7 @@ We're excited to share our achievements from the past quarter and outline our pl
 
 As we look ahead to Q3, we're excited to announce a series of ambitious initiatives that will seek to further solidify Cryptex's position in the DeFi landscape:
 
-![Q3 2024 Roadmap](/img/q3pic.png "Q3 2024 Roadmap")
+![Q3 2024 Roadmap](/img/q3_2024.png "Q3 2024 Roadmap")
 
 ### Smart Contracts
 
