@@ -12,8 +12,8 @@ import {
   calcSkew,
   calcTakerLiquidity,
   efficiency,
+  PriceUpdate,
   pythPriceToBig6,
-  PriceUpdate
 } from '@perennial/sdk'
 
 import { AssetMetadata } from '../constants/markets'

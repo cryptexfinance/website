@@ -186,12 +186,10 @@ const Perpetuals = () => {
   const { t } = useTranslation()
   const snapshots = useMarketSnapshots()
 
-  console.log("snapshots: ", snapshots)
-
   const { markets, tcapMarket, sortedAssets, totalLiquidity, totalOpenInteres } = useMemo(() => {
-    if (snapshots && snapshots.data) {
+    if (snapshots && snapshots.data && snapshots.data.markets) {
       const unsorted = Object.keys(snapshots.data.markets.market).map((market) => {
-        const marketSnapshot = snapshots.data?.markets.market[market as SupportedAsset]
+        const marketSnapshot = snapshots.data.markets.market[market as SupportedAsset]
         const marketPrice = marketSnapshot?.global?.latestPrice ?? 0n
         const latestPrice = marketSnapshot?.global?.latestPrice ?? 0n
         const liquidity = marketSnapshot ? calcTakerLiquidity(marketSnapshot) : undefined
