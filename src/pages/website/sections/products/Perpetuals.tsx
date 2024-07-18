@@ -12,10 +12,11 @@ import { addPositions, nextPosition } from "../../../../utils/positionUtils"
 import { VaultSnapshot } from "../../../../hooks/marketsV1"
 import tcapLogo from '../../../../../static/website/markets/tcap.png'
 import { useTcapPriceChanges } from "../../../../hooks/graph"
+import { ProductInfoCard } from "./common"
 
 // import { ProductInfoCard } from "./common"
 
-/* const highlights = [
+const highlights = [
   <p className="no-margin" style={{ fontSize: "1.1rem" }}>
     Lorem <span className="text-purple" style={{ fontSize: "1.1rem" }}>ipsum dolor</span> sit amet, consectetur.
   </p>,
@@ -25,7 +26,7 @@ import { useTcapPriceChanges } from "../../../../hooks/graph"
   <p className="no-margin" style={{ fontSize: "1.1rem" }}>
     Sunt in culpa qui officia deserunt <span className="text-purple" style={{ fontSize: "1.1rem" }}> mollit anim</span>.
   </p>
-] */
+]
 
 const PriceBox = ({ currentPrice }: { currentPrice: bigint }) => {
   const { t } = useTranslation()
@@ -258,7 +259,7 @@ const Perpetuals = () => {
 
   return (
     <Stack direction="horizontal" gap={2} className="markets-metrics">
-      {/* <Stack direction="vertical" style={{ width: "42%" }}>
+      <Stack direction="vertical" style={{ width: "42%" }}>
         <ProductInfoCard
           headline="Ut enim ad minim veniam, quis nostrud exercitation."
           highlights={highlights}
@@ -273,9 +274,9 @@ const Perpetuals = () => {
             },
           ]}
         />
-      </Stack> */}
-      <Stack direction="vertical" style={{ width: "100%" }}>
-        <Stack direction="horizontal" gap={3} className="markets-totals">
+      </Stack>
+      <Stack direction="vertical" style={{ width: "58%" }}>
+        {/* <Stack direction="horizontal" gap={3} className="markets-totals">
           <Col lg={6} sm={12} className="total-box">
             <span className="total-title">{t('total-liquidity')}</span>
             <span className="total-value">{totalLiquidity}</span>
@@ -284,11 +285,11 @@ const Perpetuals = () => {
             <span className="total-title">{t('total-interest')}</span>
             <span className="total-value">{totalOpenInteres}</span>
           </Col>
-        </Stack>
+        </Stack> */}
         {markets && tcapMarket ? (
           <div className="markets-detail-container">
             <Stack direction="horizontal" gap={0} className="markets-header">
-              <Col lg={2} md={2}>
+              <Col lg={4} md={4}>
                 <span className="market-title asset">{t('asset')}</span>
               </Col>
               <Col lg={2} md={2} className="text-right">
@@ -297,12 +298,12 @@ const Perpetuals = () => {
               <Col lg={2} md={2} className="text-right">
                 <span className="market-title">{t('chagen24h')}</span>
               </Col>
-              <Col lg={3} md={3} className="text-right">
+              <Col lg={4} md={4} className="text-right">
                 <span className="market-title">{t('ls-liquidity')}</span>
               </Col>
-              <Col lg={3} md={3} className="text-right">
+              {/* <Col lg={3} md={3} className="text-right">
                 <span className="market-title">{t('ls-interes')}</span>
-              </Col>
+              </Col> */}
             </Stack>
             <div className="markets-detail">
               {sortedAssets.map((sorteAsset, index) => {
@@ -315,11 +316,11 @@ const Perpetuals = () => {
                       index={index}
                       asset={sorteAsset.asset as SupportedAsset}
                       market={market}
-                      showOI={true}
+                      showOI={false}
                     />
                   )
                 }
-                return <MarketTcapRow key={index.toString()} index={index} tcapSnapshot={tcapMarket} showOI={true} />
+                return <MarketTcapRow key={index.toString()} index={index} tcapSnapshot={tcapMarket} showOI={false} />
               })}
             </div>
           </div>

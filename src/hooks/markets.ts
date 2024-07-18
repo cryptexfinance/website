@@ -4,13 +4,13 @@ import { zeroAddress } from 'viem'
 
 import { usePerennialSDKContext } from '../context/perennialSdkContext'
 import { arbContractsContext } from '../context'
-import { useChainId } from './network'
+import { usePerpetualsChainId } from './network'
 import { vaultSnapshotFetcher } from './marketsV1'
 import { TcapVaultContract } from '../constants/contracts'
 
 
 export const useProtocolParameter = () => {
-  const chainId = useChainId()
+  const chainId = usePerpetualsChainId()
   const sdk = usePerennialSDKContext()
   return useQuery({
     queryKey: ['protocolParameter2', chainId, sdk],
@@ -24,7 +24,7 @@ export const useProtocolParameter = () => {
 }
 
 export const useMarketOracles = () => {
-  const chainId = useChainId()
+  const chainId = usePerpetualsChainId()
   const sdk = usePerennialSDKContext()
   return useQuery({
     queryKey: ['marketOracles', chainId, sdk],
@@ -38,7 +38,7 @@ export const useMarketOracles = () => {
 }
 
 export const useMarketSnapshots = () => {
-  const chainId = useChainId()
+  const chainId = usePerpetualsChainId()
   const { data: marketOracles } = useMarketOracles()
   const sdk = usePerennialSDKContext()
   const vaultAddress = TcapVaultContract[chainId]

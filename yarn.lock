@@ -2738,6 +2738,11 @@
     read-package-json-fast "^2.0.3"
     which "^2.0.2"
 
+"@paraswap/core@^2.4.0":
+  version "2.4.0"
+  resolved "https://registry.yarnpkg.com/@paraswap/core/-/core-2.4.0.tgz#82dac1f2eb5622b90eec352031f0711037bd8eff"
+  integrity sha512-msv0Etc5f7H2UDnDd23wKzNnx64fj1iwt8IlBORTFIpxJ1+fa+TqNO7lhtohfRiVmU3dnnAMcjEi4D+WHSWpvw==
+
 "@parcel/bundler-default@2.6.2":
   version "2.6.2"
   resolved "https://registry.npmjs.org/@parcel/bundler-default/-/bundler-default-2.6.2.tgz"
