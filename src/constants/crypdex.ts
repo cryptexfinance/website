@@ -1,4 +1,4 @@
-import { Address, WalletClient, getAddress, getContract, zeroAddress } from "viem";
+import { Address, getAddress, getContract, zeroAddress } from "viem";
 import { arbitrum, arbitrumSepolia, mainnet } from "viem/chains";
 
 
@@ -44,14 +44,11 @@ export const SetTokenMetadata: SetTokenMetadataType = {
 };
 
 export const ChainSetTokens: { [chainId in SupportedChainIdType]: {
-    [asset in SupportedSetTokens]?: { token: Address, oracle: Address };
+    [asset in SupportedSetTokens]?: Address;
   };
 } = {
   [mainnet.id]: {
-    [SupportedSetTokens.meem]: {
-      token: getAddress('0xA544b3F0c46c15F0B2b00ba3D67b56C250287905'),
-      oracle: getAddress('0x7d328adff97228542d7F69e09855A020A243C0cF'),
-    }
+    [SupportedSetTokens.meem]: getAddress('0xA544b3F0c46c15F0B2b00ba3D67b56C250287905')
   },
   [arbitrum.id]: {},
   [arbitrumSepolia.id]: {},
@@ -59,7 +56,7 @@ export const ChainSetTokens: { [chainId in SupportedChainIdType]: {
 
 export const chainSetTokensWithAddress = (
   chainId: SupportedChainIdType
-): Array<{ asset: SupportedSetTokens; setTokenAddress: { token: `0x${string}`, oracle: `0x${string}` } }> => {
+): Array<{ asset: SupportedSetTokens; setTokenAddress: Address }> => {
   return Object.entries(ChainSetTokens[chainId])
     .map(([asset, setTokenAddress]) =>
       !!setTokenAddress
@@ -80,7 +77,7 @@ export const addressToSetToken = (address: Address) => {
       if (
         ChainSetTokens[Number(chainId) as SupportedChainIdType][
           asset as SupportedSetTokens
-        ]?.token === address
+        ] === address
       ) {
         return asset as SupportedSetTokens;
       }
@@ -208,23 +205,23 @@ export const BasicIssuanceModuleAddresses: AddressMappingType = {
 }
 
 
-export const getSetTokenContract = (chainId: SupportedChainIdType, address: Address, signer?: WalletClient) => { 
+export const getSetTokenContract = (chainId: SupportedChainIdType, address: Address) => { 
   const publicClient = getPublicClient(chainId)
 
   return getContract({
     address,
     abi: SetTokenAbi,
-    client: signer ? { public: publicClient, wallet: signer } : publicClient,
+    client: publicClient,
   })
 }
 
-export const getBasicIssuanceModuleContract = (chainId: SupportedChainIdType, signer?: WalletClient) => { 
+export const getBasicIssuanceModuleContract = (chainId: SupportedChainIdType) => { 
   const publicClient = getPublicClient(chainId);
 
   return getContract({
     address: BasicIssuanceModuleAddresses[chainId],
     abi: BasicIssuanceModuleAbi,
-    client: signer ? { public: publicClient, wallet: signer } : publicClient,
+    client: publicClient,
   })
 }
 

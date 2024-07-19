@@ -29,7 +29,7 @@ const TotalBox = ({ title, value, divider }: { title: string, value: string, div
 type InfoCardProps = {
   headline: string,
   highlights: Array<React.ReactElement>,
-  totals: Array<{ title: string, value: string }>,
+  totals: Array<{ title: string, value: string }> | undefined,
 }
 
 export const ProductInfoCard = ({ headline, highlights, totals }: InfoCardProps) => {
@@ -61,24 +61,26 @@ export const ProductInfoCard = ({ headline, highlights, totals }: InfoCardProps)
           ))}
         </Stack>
       </Stack>
-      <Stack
-        direction="horizontal"
-        gap={1}
-        style={{
-          padding: "0.7rem 0rem",
-          backgroundColor: "#090909",
-          borderTop: "0.5px solid rgba(33, 33, 56, 0.70)",
-        }}
-      >
-        {totals.map((total, index) => (
-          <TotalBox
-            key={index}
-            title={total.title}
-            value={total.value}
-            divider={index < totals.length - 1}
-          />
-        ))}
-      </Stack>
+      {totals && (
+        <Stack
+          direction="horizontal"
+          gap={1}
+          style={{
+            padding: "0.7rem 0rem",
+            backgroundColor: "#090909",
+            borderTop: "0.5px solid rgba(33, 33, 56, 0.70)",
+          }}
+        >
+          {totals.map((total, index) => (
+            <TotalBox
+              key={index}
+              title={total.title}
+              value={total.value}
+              divider={index < totals.length - 1}
+            />
+          ))}
+        </Stack>
+      )}  
     </Stack>
   );
 }

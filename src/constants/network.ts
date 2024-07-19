@@ -7,7 +7,7 @@ const AlchemyKey = process.env.GATSBY_ALCHEMY_KEY || process.env.ALCHEMY_KEY || 
 const AlchemyArbitrumKey = process.env.GATSBY_ALCHEMY_KEY_ARBITRUM || process.env.ALCHEMY_KEY_ARBITRUM || "";
 const AlchemyArbitrumSepoliaKey = process.env.GATSBY_ALCHEMY_KEY_ARBITRUM_SEPOLIA || process.env.ALCHEMY_KEY_ARBITRUM_SEPOLIA || "";
 
-export const chains = [arbitrum];
+export const chains = [arbitrum, arbitrumSepolia, mainnet];
 
 export const SupportedChainIds = [
   arbitrum.id,

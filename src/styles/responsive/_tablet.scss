@@ -160,6 +160,10 @@ only screen and (max-device-width : 935px) and (orientation: landscape)
   .section-markets {
     margin-top: 10rem;
 
+    .products-tabs {
+      margin-top: 2rem;
+    }
+
     .markets-totals {
       flex-direction: row;
       margin-top: 1rem;
@@ -311,6 +315,39 @@ only screen and (max-device-width : 935px) and (orientation: landscape)
           width: 30rem;
           height: 10rem;
           font-size: 2.5rem;
+        }
+      }
+    }
+
+    .section-markets {
+      .nav-tabs {
+        margin-top: 2rem;
+      }
+
+      .indexes {
+        display: flex;
+        flex-direction: column;
+
+        &-info {
+          width: 100% !important;
+          margin-bottom: 1rem;
+        }
+        &-metrics {
+          width: 100% !important;
+        }
+      }
+
+      .markets-metrics {
+        display: flex;
+        flex-direction: column;
+
+        .perpetuals-info {
+          width: 100% !important;
+          margin-bottom: 1rem;
+        }
+
+        .perpetuals-metrics {
+          width: 100% !important;
         }
       }
     }

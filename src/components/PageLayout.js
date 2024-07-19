@@ -1,6 +1,5 @@
 import React, { useEffect } from "react"
 import { Contract } from "ethers"
-import { graphql } from "gatsby"
 
 import Header from "./Header"
 import Footer from "./Footer"
@@ -17,7 +16,7 @@ import { contractsContext, arbContractsContext } from "../context"
 import { useContracts, useArbContracts } from "../hooks"
 import { getDefaultProvider, getArbitrumProvider } from "../utils"
 import { LensV1Contract, TcapVaultContract, TcapLongMarketContract, TcapShortMarketContract } from "../constants/contracts"
-import { DefaultChain } from "../constants/network"
+import { PerpetualsDefaultChain } from "../constants/network"
 
 
 const PageLayout = ({ children }) => {
@@ -62,7 +61,7 @@ const PageLayout = ({ children }) => {
 
       // Arb contracts
       arbContracts.setCurrentLensV1(new Contract(
-        LensV1Contract[DefaultChain.id],
+        LensV1Contract[PerpetualsDefaultChain.id],
         LensV1Abi,
         arbitrumProvider
       ))
@@ -72,17 +71,17 @@ const PageLayout = ({ children }) => {
         arbitrumProvider
       ))
       arbContracts.setCurrentTcapVault(new Contract(
-        TcapVaultContract[DefaultChain.id],
+        TcapVaultContract[PerpetualsDefaultChain.id],
         vaultV1Abi,
         arbitrumProvider
       ))
       arbContracts.setCurrentTcapLongProduct(new Contract(
-        TcapLongMarketContract[DefaultChain.id],
+        TcapLongMarketContract[PerpetualsDefaultChain.id],
         productV1Abi,
         arbitrumProvider
       ))
       arbContracts.setCurrentTcapShortProduct(new Contract(
-        TcapShortMarketContract[DefaultChain.id],
+        TcapShortMarketContract[PerpetualsDefaultChain.id],
         productV1Abi,
         arbitrumProvider
       ))

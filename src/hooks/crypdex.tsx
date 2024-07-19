@@ -46,7 +46,7 @@ export const fetchSetTokensSnapshots = async (chainId: SupportedChainIdType) => 
   const setTokens = chainSetTokensWithAddress(chainId)
 
   const componentCalls = setTokens.map((setToken: any) => {
-    const contract = getSetTokenContract(chainId, setToken.setTokenAddress.token);
+    const contract = getSetTokenContract(chainId, setToken.setTokenAddress);
     return contract.read.getComponents();
   })
 
@@ -83,7 +83,7 @@ export const fetchComponentUnitsForIssue = async (chainId: SupportedChainIdType,
   if (!setTokenAddress) return {} as Record<SupportedComponents, { address: Address, unit: bigint }>;
 
   const [ unitsForIssue ] = await Promise.all([
-    basicIssuanceModule.read.getRequiredComponentUnitsForIssue([setTokenAddress.token, amount])
+    basicIssuanceModule.read.getRequiredComponentUnitsForIssue([setTokenAddress, amount])
   ])
 
   const addresses = unitsForIssue[0]

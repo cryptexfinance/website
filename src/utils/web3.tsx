@@ -1,6 +1,6 @@
 import { ethers } from "ethers";
 import { MulticallWrapper } from "ethers-multicall-provider";
-import { DefaultChain } from "../constants/network";
+import { PerpetualsDefaultChain } from "../constants/network";
 
 export const getDefaultProvider = () => {
   const provider = new ethers.InfuraProvider(
@@ -12,7 +12,7 @@ export const getDefaultProvider = () => {
 }
 
 export const getArbitrumProvider = () => {
-  const provider = new ethers.InfuraProvider(DefaultChain.id,
+  const provider = new ethers.InfuraProvider(PerpetualsDefaultChain.id,
     process.env.INFURA_ID || process.env.GATSBY_INFURA_ID,
   )
 

@@ -5,13 +5,14 @@ import { Big6Math, calcNotional, calcTakerLiquidity, formatBig6USDPrice, MarketS
 import { graphql } from "gatsby"
 import { useTranslation } from "gatsby-plugin-react-i18next"
 
+import tcapLogo from '../../../../../static/website/icons/tcap.png'
 import { useMarketSnapshots } from "../../../../hooks/markets"
 import { useFormattedMarketBarValues } from "../../../../hooks/metrics"
 import { AssetMetadata } from "../../../../constants/markets"
 import { addPositions, nextPosition } from "../../../../utils/positionUtils"
 import { VaultSnapshot } from "../../../../hooks/marketsV1"
-import tcapLogo from '../../../../../static/website/markets/tcap.png'
 import { useTcapPriceChanges } from "../../../../hooks/graph"
+
 import { ProductInfoCard } from "./common"
 
 // import { ProductInfoCard } from "./common"
@@ -259,33 +260,23 @@ const Perpetuals = () => {
 
   return (
     <Stack direction="horizontal" gap={2} className="markets-metrics">
-      <Stack direction="vertical" style={{ width: "42%" }}>
+      <Stack direction="vertical" className="perpetuals-info" style={{ width: "42%" }}>
         <ProductInfoCard
           headline="Ut enim ad minim veniam, quis nostrud exercitation."
           highlights={highlights}
           totals={[
             {
               title: "Total Liquidity",
-              value: totalLiquidity.concat("+")
+              value: totalLiquidity
             },
             {
               title: "Open Interest",
-              value: totalOpenInteres?.concat("+") || "$0.00"
+              value: totalOpenInteres || "$0.00"
             },
           ]}
         />
       </Stack>
-      <Stack direction="vertical" style={{ width: "58%" }}>
-        {/* <Stack direction="horizontal" gap={3} className="markets-totals">
-          <Col lg={6} sm={12} className="total-box">
-            <span className="total-title">{t('total-liquidity')}</span>
-            <span className="total-value">{totalLiquidity}</span>
-          </Col>
-          <Col lg={6} sm={12} className="total-box">
-            <span className="total-title">{t('total-interest')}</span>
-            <span className="total-value">{totalOpenInteres}</span>
-          </Col>
-        </Stack> */}
+      <Stack direction="vertical" className="perpetuals-metrics" style={{ width: "58%" }}>
         {markets && tcapMarket ? (
           <div className="markets-detail-container">
             <Stack direction="horizontal" gap={0} className="markets-header">
