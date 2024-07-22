@@ -73,6 +73,7 @@ export type PriceQueryParams = {
   network: string;
   partner: string;
   version: ParaSwapVersion;
+  maxImpact: string;
 };
 
 export type TokensType = {

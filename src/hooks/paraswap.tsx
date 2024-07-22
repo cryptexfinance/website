@@ -39,6 +39,7 @@ export const fetchTokensUsdcPrices = async (componets: Array<SupportedComponents
         network: mainnet.id.toString(),
         partner: ParaswapPartner,
         version: ParaSwapVersion.V6,
+        maxImpact: "40",
       };
       const searchString = new URLSearchParams(queryParams);
       const pricesURL = `${ParaswapApiUrl}${ParaswapPricesEndpoint}/?${searchString}`;
@@ -52,7 +53,7 @@ export const fetchTokensUsdcPrices = async (componets: Array<SupportedComponents
   const responses = await Promise.all(priceCalls)
 
   const priceRoutes = new Array<OptimalRate>();
-  responses.forEach((response) => { 
+  responses.forEach((response) => {
     if (response && response.status === 200) { 
       priceRoutes.push(response.data.priceRoute);
     }

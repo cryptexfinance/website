@@ -13,15 +13,15 @@ const SectionProducts = () => {
 
   return (
     <PerennialSDKProvider>
-      <div id="markets" className="section-markets">
-        <h1 className="header">{t('markets')}</h1>
+      <div id="products" className="section-products">
+        {/* <h1 className="header">{t('markets')}</h1> */}
         <Tabs id="products-tabs" defaultActiveKey={"indexes"}>
           <Tab eventKey="indexes" title="Indexes">
             <Indexes />
           </Tab>
           <Tab eventKey="perpetuals" title="Perpetuals">
             <Perpetuals />
-            </Tab> 
+          </Tab> 
         </Tabs>
       </div>
     </PerennialSDKProvider>  

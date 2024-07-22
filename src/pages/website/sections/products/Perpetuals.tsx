@@ -40,9 +40,9 @@ const PriceBox = ({ currentPrice }: { currentPrice: bigint }) => {
   }, [currentPrice])
 
   return (
-    <Col lg={2} md={2} sm={12} className="market-row-item not-on-mobile text-right">
-      <span className="market-title only-mobile">{t('price')}</span>
-      <span className={"market-value ".concat(positiveChange ? "text-green" : "text-red")}>
+    <Col lg={2} md={2} sm={12} className="product-row-item not-on-mobile text-right">
+      <span className="product-title only-mobile">{t('price')}</span>
+      <span className={"product-value ".concat(positiveChange ? "text-green" : "text-red")}>
         {formatBig6USDPrice(currentPrice)}
       </span>
     </Col>
@@ -58,46 +58,44 @@ const MarketRow = ({ index, asset, market, showOI }: { index: number, asset: Sup
   return (
     <a
       key={index.toString()}
-      className={"market-row ".concat(darkRow ? "dark" : "")}
+      className={"product-row ".concat(darkRow ? "dark" : "")}
       href={`https://app.cryptex.finance/?market=${asset}`}
       target="_blank"
     >
-      <Col className="market-row-item mobile-header" lg={showOI ? 2 : 4} md={showOI ? 2 : 4} sm={12}>
+      <Col className="product-row-item mobile-header" lg={showOI ? 2 : 4} md={showOI ? 2 : 4} sm={12}>
         <Stack direction="horizontal" gap={3}>
-          <Image className="market-logo" src={assetMetada.icon} width={36} height={36} />
+          <Image className="product-logo" src={assetMetada.icon} width={36} height={36} />
           <Stack direction="vertical" gap={0}>
-            <span className="market-value">{assetMetada.name}</span>
-            <span className="market-subvalue">{assetMetada.symbol}</span>
+            <span className="product-value">{assetMetada.name}</span>
+            <span className="product-subvalue">{assetMetada.symbol}</span>
           </Stack>
         </Stack>
-        <span className={`market-value price only-mobile ${!formattedValues.changeIsNegative ? "text-green" : "text-red"}`}>
+        <span className={`product-value price only-mobile ${!formattedValues.changeIsNegative ? "text-green" : "text-red"}`}>
           {formattedValues.price}
         </span>
       </Col>
       <PriceBox currentPrice={formattedValues.priceBI} />
-      <Col lg={2} md={2} sm={12} className="market-row-item text-right">
-        <span className="market-title only-mobile">{t('chagen24h')}</span>
-        <span className={`market-value ${!formattedValues.changeIsNegative ? "text-green" : "text-red"}`}>
+      <Col lg={2} md={2} sm={12} className="product-row-item text-right">
+        <span className="product-title only-mobile">{t('chagen24h')}</span>
+        <span className={`product-value ${!formattedValues.changeIsNegative ? "text-green" : "text-red"}`}>
           {formattedValues.change}
         </span>
       </Col>
-      <Col lg={showOI ? 3 : 4} md={showOI ? 3 : 4} sm={12} className="market-row-item text-right">
-        <span className="market-title only-mobile">{t('ls-liquidity')}</span>
-        <span className="market-value">{formattedValues.totalLiquidity}</span>
+      <Col lg={showOI ? 3 : 4} md={showOI ? 3 : 4} sm={12} className="product-row-item text-right">
+        <span className="product-title only-mobile">{t('ls-liquidity')}</span>
+        <span className="product-value">{formattedValues.totalLiquidity}</span>
       </Col>
-      {showOI && (
-        <Col lg={3} md={3} sm={12} className="market-row-item text-right">
-          <span className="market-title  only-mobile">{t('ls-interes')}</span>
-          <span className="market-value">{formattedValues.openInterest}</span>
-        </Col>
-      )}
+      <Col lg={3} md={3} sm={12} className="product-row-item text-right only-mobile flex-sm-row">
+        <span className="product-title  only-mobile">{t('ls-interes')}</span>
+        <span className="product-value">{formattedValues.openInterest}</span>
+      </Col>
     </a>
   )
 }
 
 const MarketTcapRow = ({ index, tcapSnapshot, showOI }: { index: number, tcapSnapshot: VaultSnapshot, showOI: boolean }) => {
   const darkRow = index % 2 === 0
-  const { data: pricesData } = useTcapPriceChanges()
+  const { data: pricesData, error } = useTcapPriceChanges()
   const { longSnapshot, shortSnapshot } = tcapSnapshot
   const tcapPrice = parseFloat(ethers.formatEther(longSnapshot.latestVersion.price))
   const longGlobalPosition = nextPosition(longSnapshot.pre, longSnapshot.position)
@@ -114,6 +112,7 @@ const MarketTcapRow = ({ index, tcapSnapshot, showOI }: { index: number, tcapSna
   const { currentPrice, changeIsNegative, changePercent } = useMemo(() => {
     if (pricesData && pricesData.answerUpdateds) {
       const prices = pricesData.answerUpdateds
+
       if (prices.length > 0) {
         const currentPrice = parseFloat(ethers.formatEther(BigInt(prices[0].answer)))
         const price24H = prices.length > 1
@@ -133,49 +132,49 @@ const MarketTcapRow = ({ index, tcapSnapshot, showOI }: { index: number, tcapSna
       changeIsNegative: false,
       changePercent: 0
     }
-  }, [pricesData])
+  }, [pricesData, error])
 
   return (
     <a
       key={index.toString()}
-      className={"market-row tcap-row ".concat(darkRow ? "dark" : "")}
+      className={"product-row tcap-row ".concat(darkRow ? "dark" : "")}
       href={"https://app.cryptex.finance/v2/"}
       target="_blank"
     >
-      <Col className="market-row-item tcap-item mobile-header" lg={showOI ? 2 : 4} md={showOI ? 2 : 4} sm={12}>
+      <Col className="product-row-item tcap-item mobile-header" lg={showOI ? 2 : 4} md={showOI ? 2 : 4} sm={12}>
         <Stack direction="horizontal" gap={2}>
-          <Image className="market-logo" src={tcapLogo} width={36} height={36} />
+          <Image className="product-logo" src={tcapLogo} width={36} height={36} />
           <Stack direction="vertical" gap={0}>
-            <span className="market-value tcap">Total Crypto Market Cap</span>
-            <span className="market-subvalue">TCAP-USD</span>
+            <span className="product-value tcap">Total Crypto Market Cap</span>
+            <span className="product-subvalue">TCAP-USD</span>
           </Stack>
         </Stack>
-        <span className={`market-value price only-mobile ${!changeIsNegative ? "text-green" : "text-red"}`}>
+        <span className={`product-value price only-mobile ${!changeIsNegative ? "text-green" : "text-red"}`}>
           ${currentPrice.toFixed(2)}
         </span>
       </Col>
-      <Col lg={2} md={2} sm={12} className="market-row-item not-on-mobile text-right">
-        <span className="market-title only-mobile">Price</span>
-        <span className={`market-value price ${!changeIsNegative ? "text-green" : "text-red"}`}>
+      <Col lg={2} md={2} sm={12} className="product-row-item not-on-mobile text-right">
+        <span className="product-title only-mobile">Price</span>
+        <span className={`product-value price ${!changeIsNegative ? "text-green" : "text-red"}`}>
           ${currentPrice.toFixed(2)}
         </span>
       </Col>
-      <Col lg={2} md={2} sm={12} className="market-row-item text-right">
-        <span className="market-title only-mobile">24h Change</span>
-        <span className={`market-value ${!changeIsNegative ? "text-green" : "text-red"}`}>
+      <Col lg={2} md={2} sm={12} className="product-row-item text-right">
+        <span className="product-title only-mobile">24h Change</span>
+        <span className={`product-value ${!changeIsNegative ? "text-green" : "text-red"}`}>
           {changePercent.toFixed(2)}%
         </span>
       </Col>
-      <Col lg={showOI ? 3 : 4} md={showOI ? 3 : 4} sm={12} className="market-row-item text-right">
-        <span className="market-title only-mobile">L/S Liquidity</span>
-        <span className="market-value">
+      <Col lg={showOI ? 3 : 4} md={showOI ? 3 : 4} sm={12} className="product-row-item text-right">
+        <span className="product-title only-mobile">L/S Liquidity</span>
+        <span className="product-value">
           {formatBig6USDPrice(tcapLiquidity.long, { compact: true })} / {formatBig6USDPrice(tcapLiquidity.short, { compact: true })}
         </span>
       </Col>
       {showOI && (
-        <Col lg={3} md={3} sm={12} className="market-row-item text-right">
-          <span className="market-title only-mobile">L/S Open Interest</span>
-          <span className="market-value">
+        <Col lg={3} md={3} sm={12} className="product-row-item text-right">
+          <span className="product-title only-mobile">L/S Open Interest</span>
+          <span className="product-value">
             {formatBig6USDPrice(globalOpenInterest.long, { compact: true })} / {formatBig6USDPrice(globalOpenInterest.short, { compact: true })}
           </span>
         </Col>
@@ -191,7 +190,7 @@ const Perpetuals = () => {
   const { markets, tcapMarket, sortedAssets, totalLiquidity, totalOpenInteres } = useMemo(() => {
     if (snapshots && snapshots.data && snapshots.data.markets) {
       const unsorted = Object.keys(snapshots.data.markets.market).map((market) => {
-        const marketSnapshot = snapshots.data.markets.market[market as SupportedAsset]
+        const marketSnapshot = snapshots?.data?.markets?.market[market as SupportedAsset]
         const marketPrice = marketSnapshot?.global?.latestPrice ?? 0n
         const latestPrice = marketSnapshot?.global?.latestPrice ?? 0n
         const liquidity = marketSnapshot ? calcTakerLiquidity(marketSnapshot) : undefined
@@ -259,8 +258,8 @@ const Perpetuals = () => {
   }, [snapshots, snapshots.status])
 
   return (
-    <Stack direction="horizontal" gap={2} className="markets-metrics">
-      <Stack direction="vertical" className="perpetuals-info" style={{ width: "42%" }}>
+    <Stack direction="horizontal" gap={2} className="products">
+      <Stack direction="vertical" className="products-info" style={{ width: "42%" }}>
         <ProductInfoCard
           headline="Ut enim ad minim veniam, quis nostrud exercitation."
           highlights={highlights}
@@ -276,27 +275,27 @@ const Perpetuals = () => {
           ]}
         />
       </Stack>
-      <Stack direction="vertical" className="perpetuals-metrics" style={{ width: "58%" }}>
+      <Stack direction="vertical" className="products-metrics" style={{ width: "58%" }}>
         {markets && tcapMarket ? (
-          <div className="markets-detail-container">
-            <Stack direction="horizontal" gap={0} className="markets-header">
+          <div className="products-detail-container">
+            <Stack direction="horizontal" gap={0} className="products-header">
               <Col lg={4} md={4}>
                 <span className="market-title asset">{t('asset')}</span>
               </Col>
               <Col lg={2} md={2} className="text-right">
-                <span className="market-title">{t('price')}</span>
+                <span className="product-title">{t('price')}</span>
               </Col>
               <Col lg={2} md={2} className="text-right">
-                <span className="market-title">{t('chagen24h')}</span>
+                <span className="product-title">{t('chagen24h')}</span>
               </Col>
               <Col lg={4} md={4} className="text-right">
-                <span className="market-title">{t('ls-liquidity')}</span>
+                <span className="product-title">{t('ls-liquidity')}</span>
               </Col>
               {/* <Col lg={3} md={3} className="text-right">
                 <span className="market-title">{t('ls-interes')}</span>
               </Col> */}
             </Stack>
-            <div className="markets-detail">
+            <div className="products-detail">
               {sortedAssets.map((sorteAsset, index) => {
                 if (sorteAsset.asset !== 'tcap') {
                   const market = markets[sorteAsset.asset as SupportedAsset]
@@ -316,10 +315,20 @@ const Perpetuals = () => {
             </div>
           </div>
         ) : (
-          <Stack direction="vertical" className="markets-loading">
+          <Stack direction="vertical" className="products-loading">
             <Spinner animation="border" variant="primary" />
           </Stack>
         )}
+        <Stack direction="horizontal" gap={3} className="products-totals only-mobile">
+          <Col lg={6} sm={12} className="total-box">
+            <span className="total-title">{t('total-liquidity')}</span>
+            <span className="total-value">{totalLiquidity}</span>
+          </Col>
+          <Col lg={6} sm={12} className="total-box">
+            <span className="total-title">{t('total-interest')}</span>
+            <span className="total-value">{totalOpenInteres}</span>
+          </Col>
+        </Stack>
       </Stack>
     </Stack>
   )

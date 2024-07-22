@@ -2,7 +2,7 @@ import { BigNumberish, Typed } from "ethers"
 import { useQuery } from "@tanstack/react-query"
 
 import { TcapVaultContract } from "../constants/contracts"
-import { DefaultChain } from "../constants/network"
+import { PerpetualsDefaultChain } from "../constants/network"
 import { IArbContractsContext, arbContractsContext } from "../context"
 import { useContext } from "react"
 
@@ -79,8 +79,8 @@ export const vaultSnapshotFetcher = async (contracts: IArbContractsContext, vaul
 }
 
 export const useVaultSnapshot = () => {
-  const chainId = DefaultChain.id
-  const vaultAddress = TcapVaultContract[DefaultChain.id]
+  const chainId = PerpetualsDefaultChain.id
+  const vaultAddress = TcapVaultContract[chainId]
   const contracts = useContext(arbContractsContext)
 
   return useQuery<VaultSnapshot | undefined>({

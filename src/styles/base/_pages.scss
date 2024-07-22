@@ -124,9 +124,7 @@ body {
   }
 }
 
-.section-markets {
-  // margin: 3rem 2rem 2rem 1rem;
-  // padding: 9rem 1.8rem 3rem 1.8rem;
+.section-products {
   margin: 3rem 2rem 2rem 1rem;
   padding: 7.5rem 1.8rem 3rem 1.8rem;
 
@@ -135,29 +133,29 @@ body {
     margin-left: 0.5rem;
   }
 
-  .markets-metrics {
+  .products {
     margin-top: 0.5rem;
     padding: 0.5rem 0rem;
   }
-  .markets-loading {
+  .products-loading {
     align-items: center;
     justify-content: center;
     padding: 8rem 0rem;
   }
-  .markets-header {
+  .products-header {
     // border-bottom: 0.5px solid #494866;
     margin: 0.2rem 0.5rem;
     // padding-bottom: 0.5rem;
     // padding-right: 1rem;
     
   }
-  .markets-detail-container {
+  .products-detail-container {
     background-color: #080809;
     border: 0.5px solid rgba(42, 15, 61, 0.3);
     border-radius: 5px;
     padding: 0.5rem 0.1rem;
   }
-  .markets-detail {
+  .products-detail {
     height: 25rem;
     overflow-y: scroll;
   }
@@ -182,7 +180,7 @@ body {
     }
   }
 
-  .market {
+  .product {
     &-row {
       display: flex;
       flex-direction: row;
@@ -220,8 +218,6 @@ body {
       color: $color-grey;
       font-size: 0.8rem;
     }
-
-
   }
 
   .tcap-row {
@@ -236,7 +232,7 @@ body {
     }
   }
 
-  .markets-totals {
+  .products-totals {
     margin-bottom: 1.5rem;
     padding-left: 0.5rem;
     padding-right: 1.5rem;

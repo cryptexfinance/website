@@ -25,28 +25,28 @@ export const Indexes = () => {
   const { data: setTokens } = useSetTokensSnapshots()
 
   return (
-    <Stack direction="horizontal" className="indexes" gap={3} style={{ padding: "1rem 0.5rem" }} >
-      <Stack direction="vertical" className="indexes-info" style={{ width: "45%" }}>
+    <Stack direction="horizontal" className="products" gap={3} style={{ padding: "1rem 0.5rem" }} >
+      <Stack direction="vertical" className="products-info" style={{ width: "45%" }}>
         <ProductInfoCard
           headline="Ut enim ad minim veniam, quis nostrud exercitation."
           highlights={highlights}
         />
       </Stack>
-      <Stack direction="vertical" className="indexes-metrics" style={{ width: "55%" }}>
+      <Stack direction="vertical" className="products-metrics" style={{ width: "55%" }}>
         {setTokens ? (
-          <div className="markets-detail-container">
-            <Stack direction="horizontal" gap={0} className="markets-header">
+          <div className="products-detail-container">
+            <Stack direction="horizontal" gap={0} className="products-header">
               <Col lg={5} md={5}>
-                <span className="market-title asset">SetToken</span>
+                <span className="product-title asset">SetToken</span>
               </Col>
               <Col lg={2} md={2} className="text-right">
-                <span className="market-title">{t('price')}</span>
+                <span className="product-title">{t('price')}</span>
               </Col>
               <Col lg={5} md={5} className="text-right">
-                <span className="market-title">Underlying Tokens</span>
+                <span className="product-title">Underlying Tokens</span>
               </Col>
             </Stack>
-            <div className="markets-detail">
+            <div className="products-detail">
               {Object.keys(setTokens.setTokens).map((setToken, index) => {
                 const components = setTokens.setTokens[setToken as SupportedSetTokens].components;
                 return <IndexRow key={index} index={index} setToken={setToken as SupportedSetTokens} components={components} />
@@ -54,7 +54,7 @@ export const Indexes = () => {
             </div>
           </div>
         ) : (
-          <Stack direction="vertical" className="markets-loading">
+          <Stack direction="vertical" className="products-loading">
             <Spinner animation="border" variant="primary" />
           </Stack>  
         )}
@@ -68,34 +68,39 @@ const IndexRow = ({ index, setToken, components }: { index: number, setToken: Su
   const assetMetada = SetTokenMetadata[setToken]
   const darkRow = index % 2 === 0
   const { data } = useSetTokenPrice(setToken)
+  const price = data ? `$${data.priceOneSetToken.toFixed(4)}` : <span>-</span>
 
   return (
     <a
-      key={index.toString()}
-      className={"market-row ".concat(darkRow ? "dark" : "")}
+      key={`ir-${index.toString()}`}
+      className={"product-row ".concat(darkRow ? "dark" : "")}
       href={`https://app.cryptex.finance/?index=${setToken}`}
       target="_blank"
     >
-      <Col className="market-row-item mobile-header" lg={5} md={5} sm={12}>
+      <Col className="product-row-item indexes-header mobile-header" lg={5} md={5} sm={12}>
         <Stack direction="horizontal" gap={2}>
-          <Image className="market-logo" src={assetMetada.icon} width={36} height={36} />
+          <Image className="product-logo" src={assetMetada.icon} width={36} height={36} />
           <Stack direction="vertical" gap={0}>
-            <span className="market-value">{assetMetada.symbol}</span>
-            <span className="market-subvalue">{assetMetada.name}</span>
+            <span className="product-value">{assetMetada.symbol}</span>
+            <span className="product-subvalue">{assetMetada.name}</span>
           </Stack>
         </Stack>
-        <span className={`market-value price only-mobile text-green`}>
-          $10
+        <span className={`product-value price only-mobile text-green`}>
+          {price}
         </span>
       </Col>
-      <Col lg={2} md={2} sm={12} className="market-row-item not-on-mobile text-right">
-        <span className="market-title only-mobile">{t('price')}</span>
-        <span className={"market-value text-green"}>
-          {data ? `$${data.priceOneSetToken.toFixed(4)}` : <span>-</span>}
+      <Col lg={2} md={2} sm={12} className="product-row-item not-on-mobile text-right">
+        <span className="product-title only-mobile">{t('price')}</span>
+        <span className={"product-value text-green"}>
+          {price}
         </span>
       </Col>
-      <Col lg={5} md={5} sm={12} className="market-row-item text-right">
-        <Stack direction="horizontal" gap={2} className="justify-content-end">
+      <div className="h-separator" />
+      <Col lg={5} md={5} sm={12} className="product-row-item text-right">
+        <Stack direction="horizontal" className="only-mobile" >
+          <span className="product-value">Underlying Tokens</span>
+        </Stack>
+        <Stack direction="horizontal" gap={3} className="justify-content-end">
           {components.map((component, index) => (
             <CustomTooltip
               id={`ct-${index}`}

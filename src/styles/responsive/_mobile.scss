@@ -9,6 +9,16 @@
     --bs-spinner-height: 7rem;
   }
 
+  .nav-tabs {
+    .nav-item {
+      width: fit-content;
+      min-width: 30rem;
+    }
+    .nav-link {
+      width: 100%;
+    }
+  }
+
   .main-container{
     display: flex;
     flex-direction: column;
@@ -262,6 +272,7 @@
     height: 98% !important;
     .dropdown-toggle {
       border: none;
+      background-color: transparent;
     }
     .dropdown-menu {
       padding-top: 0.9rem;
@@ -400,33 +411,50 @@
     }
   }
 
-  .section-markets {
-    .markets-loading {
+  .section-products {
+    .nav-item {
+      width: 50%;
+    }
+
+    .products-loading {
       padding: 18rem 0rem;
     }
-    .markets-metrics {
+    .products {
       margin-top: 3rem;
       padding: 0.5rem 0rem;
+
+      .products-info {
+        display: none;
+      }
     }
-    .markets-header { 
+    .products-header { 
       display: none;
     }
     
-    .markets-detail {
+    .products-detail {
       height: 120rem;
       overflow-y: scroll;
+
+      .h-separator {
+        width: 95%;
+        border-bottom: 0.5px solid #282834;
+        margin-top: 0.5rem;
+        margin-bottom: 2rem;
+      }
     }
-    .markets-totals {
+    .products-totals {
       flex-direction: column;
-      margin-bottom: 5rem;
+      margin-top: 2rem;
+      padding-left: 0rem;
+      padding-right: 0rem;
 
       .total-box {
         width: 100%;
         padding: 2.5rem 2rem;
-        margin-bottom: 0.7rem;
+        margin-bottom: 1.5rem;
       }
     }
-    .market {
+    .product {
       &-row {
         margin: 1.5rem 0rem;
         padding: 2rem 0rem;
@@ -449,6 +477,13 @@
         margin: 1.1rem 0rem;
         &.mobile-header {
           margin-bottom: 3.5rem;
+        }
+
+        &.indexes-header {
+          padding-bottom: 1rem;
+          margin-bottom: 2rem;
+          padding-left: 1.5rem;
+          // border-bottom: 0.5px solid #282834;
         }
       }
       &-logo {
@@ -485,6 +520,9 @@
 
     .only-mobile {
       display: block;
+      &.col-sm-12 {
+        display: flex;
+      }
     }
     .not-on-mobile {
       display: none;
