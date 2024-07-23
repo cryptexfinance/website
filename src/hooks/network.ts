@@ -68,7 +68,7 @@ export const useGraphClientV1 = () => {
   if (!graphClients.has(chainId)) {
     graphClientsV1.set(
       chainId,
-      new GraphQLClient("https://api.thegraph.com/subgraphs/name/cryptexfinance/cryptex-arbitrum")
+      new GraphQLClient("https://subgraph.satsuma-prod.com/f8dfbcd260e8/cryptex--personal--24138/cryptex-arbitrum/api")
     )
   }
 
