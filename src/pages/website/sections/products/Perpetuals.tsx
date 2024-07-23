@@ -76,7 +76,7 @@ const MarketRow = ({ index, asset, market, showOI }: { index: number, asset: Sup
       <Col lg={2} md={2} sm={12} className="market-row-item text-right">
         <span className="market-title only-mobile">{t('chagen24h')}</span>
         <span className={`market-value ${!formattedValues.changeIsNegative ? "text-green" : "text-red"}`}>
-          {formattedValues.change}
+          {`${formattedValues.changeIsNegative ? "-" : "+"}${formattedValues.change}`}
         </span>
       </Col>
       <Col lg={showOI ? 3 : 4} md={showOI ? 3 : 4} sm={12} className="market-row-item text-right">
@@ -149,7 +149,7 @@ const MarketTcapRow = ({ index, tcapSnapshot, showOI }: { index: number, tcapSna
           </Stack>
         </Stack>
         <span className={`market-value price only-mobile ${!changeIsNegative ? "text-green" : "text-red"}`}>
-          ${currentPrice.toFixed(2)}
+            ${currentPrice.toFixed(2)}
         </span>
       </Col>
       <Col lg={2} md={2} sm={12} className="market-row-item not-on-mobile text-right">
@@ -161,7 +161,7 @@ const MarketTcapRow = ({ index, tcapSnapshot, showOI }: { index: number, tcapSna
       <Col lg={2} md={2} sm={12} className="market-row-item text-right">
         <span className="market-title only-mobile">24h Change</span>
         <span className={`market-value ${!changeIsNegative ? "text-green" : "text-red"}`}>
-          {changePercent.toFixed(2)}%
+          {`${changeIsNegative ? "" : "+"}${changePercent.toFixed(2)}`}%
         </span>
       </Col>
       <Col lg={showOI ? 3 : 4} md={showOI ? 3 : 4} sm={12} className="market-row-item text-right">
