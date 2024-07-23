@@ -1,6 +1,6 @@
 import React, { useEffect, useMemo, useState } from "react"
 import { ethers } from "ethers"
-import { Col, Image, Spinner, Stack } from "react-bootstrap"
+import { Accordion, Col, Image, Spinner, Stack } from "react-bootstrap"
 import { Big6Math, calcNotional, calcTakerLiquidity, formatBig6USDPrice, MarketSnapshot, SupportedAsset } from "@perennial/sdk"
 import { graphql } from "gatsby"
 import { useTranslation } from "gatsby-plugin-react-i18next"
@@ -276,6 +276,20 @@ const Perpetuals = () => {
         />
       </Stack>
       <Stack direction="vertical" className="products-metrics" style={{ width: "58%" }}>
+        <Accordion defaultActiveKey="0" className="only-mobile">
+          <Accordion.Item eventKey="0">
+            <Accordion.Header>
+              <h6>Product Info</h6>
+            </Accordion.Header>
+            <Accordion.Body>
+              <ProductInfoCard
+                headline="Ut enim ad minim veniam, quis nostrud exercitation."
+                highlights={highlights}
+                totals={undefined}
+              />
+            </Accordion.Body>
+          </Accordion.Item>
+        </Accordion>
         {markets && tcapMarket ? (
           <div className="products-detail-container">
             <Stack direction="horizontal" gap={0} className="products-header">

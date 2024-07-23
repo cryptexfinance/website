@@ -1,5 +1,5 @@
 import { useQuery } from "@tanstack/react-query"
-import { Address, parseUnits } from "viem"
+import { parseUnits } from "viem"
 import { mainnet } from "viem/chains"
 import { OptimalRate, ParaSwapVersion, SwapSide } from "@paraswap/core"
 import axios from "axios"
@@ -17,6 +17,7 @@ export const useTokensUsdcPrices = (componets: Array<SupportedComponents>) => {
   return useQuery({
     queryKey: ['TokensUsdcPrices', chainId],
     enabled: !!componets,
+    refetchOnWindowFocus: false,
     queryFn: async () => {
       return fetchTokensUsdcPrices(componets, chainId)
     },
@@ -49,6 +50,8 @@ export const fetchTokensUsdcPrices = async (componets: Array<SupportedComponents
       return axios.get<{ priceRoute: OptimalRate }>(pricesURL);
     }
   })
+
+  console.log(`Fetching prices for ${componets.length} components`);
 
   const responses = await Promise.all(priceCalls)
 

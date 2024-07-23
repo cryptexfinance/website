@@ -19,6 +19,34 @@
     }
   }
 
+  .accordion-item {
+   margin-bottom: 2rem;  
+  }
+
+  .accordion-button,
+  .accordion-button:not(.collapsed) {
+    height: 8rem;
+    padding: 5.5rem 2rem;
+    border-radius: 5px;
+    h6 {
+      font-size: 4rem;
+      margin-bottom: 0rem;
+    }
+  }
+
+  .accordion-button::after,
+  .accordion-button:not(.collapsed)::after {
+    background-size: 3rem;
+    height: 3rem;
+    width: 3rem;
+  }
+
+  .accordion-body {
+    margin-top: 0.5rem;
+    margin-bottom: 1.5rem;
+    padding: 0rem;
+  }
+
   .main-container{
     display: flex;
     flex-direction: column;
@@ -291,6 +319,11 @@
   }
   h3 {
     font-size: 24px;
+    font-size: 30px;
+  }
+
+  li {
+    font-size: 3.5rem;
   }
 
   .header {
@@ -419,6 +452,7 @@
     .products-loading {
       padding: 18rem 0rem;
     }
+
     .products {
       margin-top: 3rem;
       padding: 0.5rem 0rem;
@@ -431,6 +465,32 @@
       display: none;
     }
     
+    .product-info-card {
+      padding: 2rem 1rem !important;
+      border-color: rgba(164, 64, 242, 0.3);
+
+      h2 {
+        font-size: 4rem !important;
+        line-height: 4.5rem;
+        margin-bottom: 2.2rem;
+      }
+      p, h6 {
+        font-size: 3.5rem !important;
+        line-height: 3.8rem;
+        margin-left: 1.3rem;
+        margin-bottom: 1rem;
+      }
+      span {
+        font-size: 3.5rem !important;
+        line-height: 3.8rem;
+      }
+      svg {
+        width: 18px;
+        height: 18px;
+        margin-bottom: 1.2rem;
+      }
+    }
+
     .products-detail {
       height: 120rem;
       overflow-y: scroll;
@@ -442,6 +502,7 @@
         margin-bottom: 2rem;
       }
     }
+
     .products-totals {
       flex-direction: column;
       margin-top: 2rem;
@@ -454,6 +515,7 @@
         margin-bottom: 1.5rem;
       }
     }
+
     .product {
       &-row {
         margin: 1.5rem 0rem;
