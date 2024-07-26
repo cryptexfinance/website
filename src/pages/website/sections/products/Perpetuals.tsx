@@ -13,9 +13,8 @@ import { addPositions, nextPosition } from "../../../../utils/positionUtils"
 import { VaultSnapshot } from "../../../../hooks/marketsV1"
 import { useTcapPriceChanges } from "../../../../hooks/graph"
 
-import { ProductInfoCard } from "./common"
+import ProductInfoCard from "./common"
 
-// import { ProductInfoCard } from "./common"
 
 const highlights = [
   <p className="no-margin" style={{ fontSize: "1.1rem" }}>
@@ -57,7 +56,7 @@ const MarketRow = ({ index, asset, market, showOI }: { index: number, asset: Sup
 
   return (
     <a
-      key={index.toString()}
+      key={`mr-${asset}`}
       className={"product-row ".concat(darkRow ? "dark" : "")}
       href={`https://app.cryptex.finance/?market=${asset}`}
       target="_blank"
@@ -316,7 +315,7 @@ const Perpetuals = () => {
                   if (!market || sorteAsset.asset === SupportedAsset.rlb) return <></>
                   return (
                     <MarketRow
-                      key={index.toString()}
+                      key={sorteAsset.asset}
                       index={index}
                       asset={sorteAsset.asset as SupportedAsset}
                       market={market}
@@ -324,7 +323,7 @@ const Perpetuals = () => {
                     />
                   )
                 }
-                return <MarketTcapRow key={index.toString()} index={index} tcapSnapshot={tcapMarket} showOI={false} />
+                return <MarketTcapRow key={sorteAsset.asset} index={index} tcapSnapshot={tcapMarket} showOI={false} />
               })}
             </div>
           </div>

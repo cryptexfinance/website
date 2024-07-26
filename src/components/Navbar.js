@@ -135,7 +135,7 @@ const NavbarMenu = props => {
           >
             <Nav className="nav-links">
               <Nav.Link as={Link} to={productsUrl} title="Products">
-                Products
+                Indexes
               </Nav.Link>
               <Nav.Link as={Link} to={governanceUrl} title="CTX Governance">
                 {t('governance')}

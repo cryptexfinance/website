@@ -1,14 +1,15 @@
 import React from "react"
-import { Accordion, Col, Image, Spinner, Stack } from "react-bootstrap"
-import { useTranslation } from "react-i18next"
+import { Button, Col, Image, Spinner, Stack } from "react-bootstrap"
+import { useTranslation } from "gatsby-plugin-react-i18next"
+import { graphql } from "gatsby"
 
-import { ProductInfoCard } from "./common"
+import ProductInfoCard from "./common"
 import { useSetTokenPrice, useSetTokensSnapshots } from "../../../../hooks/crypdex"
-import { ComponentMetadata, SetTokenMetadata, SupportedComponents, SupportedSetTokens } from "../../../../constants/crypdex"
-import { CustomTooltip } from "../../../../components/Tooltip"
+import { SetTokenMetadata, SupportedComponents, SupportedSetTokens } from "../../../../constants/crypdex"
+import tcapLogo from '../../../../../static/website/icons/tcap.png'
 
-
-/* const highlights = [
+ 
+const highlights = [
   <p className="no-margin" style={{ fontSize: "1.1rem" }}>
     Lorem <span className="text-purple" style={{ fontSize: "1.1rem" }}>ipsum dolor</span> sit amet, consectetur.
   </p>,
@@ -18,45 +19,39 @@ import { CustomTooltip } from "../../../../components/Tooltip"
   <p className="no-margin" style={{ fontSize: "1.1rem" }}>
     Sunt in culpa qui officia deserunt <span className="text-purple" style={{ fontSize: "1.1rem" }}> mollit anim</span>.
   </p>
-] */
+];
 
-export const Indexes = () => {
+
+const Indexes = () => {
   const { t } = useTranslation()
   const { data: setTokens } = useSetTokensSnapshots()
+  const [currentIndex, setCurrentIndex] = React.useState("TCAP")
+
+  const onRowClick = (asset: string) => { 
+    setCurrentIndex(asset)
+  }
 
   return (
     <Stack direction="horizontal" className="products" gap={3} style={{ padding: "1rem 0.5rem" }} >
-      <Stack direction="vertical" className="products-info indexes" style={{ width: "45%" }}>
-        <IndexesInfo />
-      </Stack>
-      <Stack direction="vertical" className="products-metrics" style={{ width: "55%" }}>
-        {/* <Accordion defaultActiveKey="0" className="not-mobile">
-          <Accordion.Item eventKey="0">
-            <Accordion.Header>
-              <h6>Product Info</h6>
-            </Accordion.Header>
-            <Accordion.Body>
-              <IndexesInfo />
-            </Accordion.Body>
-          </Accordion.Item>
-        </Accordion> */}
+      <Stack direction="vertical" className="products-metrics" style={{ width: "50%" }}>
         {setTokens ? (
           <div className="products-detail-container">
             <Stack direction="horizontal" gap={0} className="products-header">
-              <Col lg={5} md={5}>
-                <span className="product-title asset">SetToken</span>
+              <Col lg={6} md={5}>
+                <span className="product-title asset">Asset</span>
               </Col>
-              <Col lg={2} md={2} className="text-right">
+              <Col lg={3} md={2} className="text-right">
                 <span className="product-title">{t('price')}</span>
               </Col>
-              <Col lg={5} md={5} className="text-right">
-                <span className="product-title">Underlying Tokens</span>
+              <Col lg={3} md={2} className="text-right">
+                <span className="product-title">24h Change</span>
               </Col>
             </Stack>
-            <div className="products-detail">
+            <div className="products-detail" style={{ paddingRight: "1rem" }}>
+              <TcapRow onRowClick={onRowClick} />
               {Object.keys(setTokens.setTokens).map((setToken, index) => {
                 const components = setTokens.setTokens[setToken as SupportedSetTokens].components;
-                return <IndexRow key={index} index={index} setToken={setToken as SupportedSetTokens} components={components} />
+                return <IndexRow key={index} index={index} setToken={setToken as SupportedSetTokens} onRowClick={onRowClick} components={components} />
               })}
             </div>
           </div>
@@ -65,12 +60,29 @@ export const Indexes = () => {
             <Spinner animation="border" variant="primary" />
           </Stack>  
         )}
-      </Stack>  
-    </Stack>    
-  )   
+      </Stack>
+      <Stack direction="vertical" className="products-info indexes" style={{ width: "50%" }}>
+        {currentIndex === "TCAP" ? (
+          <ProductInfoCard headline="Ut enim ad minim veniam, quis nostrud exercitation." highlights={highlights} totals={undefined} />
+        ) : (
+          <IndexesInfo />
+        )}
+      </Stack>
+    </Stack>
+  )
 }
 
-const IndexRow = ({ index, setToken, components }: { index: number, setToken: SupportedSetTokens, components: Array<SupportedComponents> }) => {
+const IndexRow = ({
+  index,
+  setToken,
+  components,
+  onRowClick,
+} : {
+  index: number,
+  setToken: SupportedSetTokens,
+  components: Array<SupportedComponents>
+  onRowClick: (asset: string) => void
+}) => {
   const { t } = useTranslation()
   const assetMetada = SetTokenMetadata[setToken]
   const darkRow = index % 2 === 0
@@ -78,49 +90,85 @@ const IndexRow = ({ index, setToken, components }: { index: number, setToken: Su
   const price = data ? `$${data.priceOneSetToken.toFixed(4)}` : <span>-</span>
 
   return (
-    <a
+    <Button
       key={`ir-${index.toString()}`}
-      className={"product-row ".concat(darkRow ? "dark" : "")}
-      href={`https://app.cryptex.finance/?index=${setToken}`}
-      target="_blank"
+      className={"product-row ".concat(darkRow ? "" : "")}
+      style={{ width: "100%" }}
+      onClick={() => onRowClick(assetMetada.symbol)}
     >
-      <Col className="product-row-item indexes-header mobile-header" lg={5} md={5} sm={12}>
+      <Col className="product-row-item indexes-header mobile-header" lg={6} md={5} sm={12}>
         <Stack direction="horizontal" gap={2}>
-          <Image className="product-logo" src={assetMetada.icon} width={36} height={36} />
-          <Stack direction="vertical" gap={0}>
-            <span className="product-value">{assetMetada.symbol}</span>
-            <span className="product-subvalue">{assetMetada.name}</span>
+          <Image className="product-logo" src={assetMetada.icon} width={42} height={42} />
+          <Stack direction="vertical" gap={0} className="align-items-start">
+            <span className="product-value" style={{ fontSize: "1.3rem" }}>{assetMetada.symbol}</span>
+            <span className="product-subvalue" style={{ fontSize: "0.9rem" }}>{assetMetada.name}</span>
           </Stack>
         </Stack>
         <span className={`product-value price only-mobile text-green`}>
           {price}
         </span>
       </Col>
-      <Col lg={2} md={2} sm={12} className="product-row-item not-on-mobile text-right">
+      <Col lg={3} md={2} sm={12} className="product-row-item not-on-mobile text-right">
         <span className="product-title only-mobile">{t('price')}</span>
-        <span className={"product-value text-green"}>
+        <span className={"product-value text-green"} style={{ fontSize: "1.2rem" }}>
           {price}
         </span>
       </Col>
-      <div className="h-separator" />
-      <Col lg={5} md={5} sm={12} className="product-row-item text-right">
-        <Stack direction="horizontal" className="only-mobile" >
-          <span className="product-value">Underlying Tokens</span>
-        </Stack>
-        <Stack direction="horizontal" gap={2} className="justify-content-end">
-          {components.map((component, index) => (
-            <CustomTooltip
-              id={`ct-${index}`}
-              msg={ComponentMetadata[component].name}
-            >
-              <Image key={`cimg-${index}`} className="market-logo" src={ComponentMetadata[component].icon} width={28} height={28} />
-            </CustomTooltip>  
-          ))}
-        </Stack>  
+      {/* <div className="h-separator" /> */}
+      <Col lg={3} md={2} sm={12} className="product-row-item text-right">
+        <span className="product-value text-green" style={{ fontSize: "1.2rem" }}>
+          1.13%
+        </span>
       </Col>
-    </a>
+      {/* <Col lg={3} md={3} sm={12} className="product-row-item text-right">
+        <Stack direction="horizontal" gap={2} className="justify-content-end">
+          <Image key={`cimg-${index}`} className="market-logo" src={ethLogo} width={30} height={30} />
+          <Image key={`cimg-${index}`} className="market-logo" src={baseLogo} width={30} height={30} />
+        </Stack>
+      </Col> */}
+      {/* <Col lg={3} md={3} sm={12} className="product-row-item text-right">
+        <RowButton title="Issue" />
+        <RowButton title="Trade" />
+      </Col> */}
+    </Button>
   )
 }
+
+const TcapRow = ({ onRowClick } : { onRowClick: (asset: string) => void }) => (
+  <Button className={"product-row dark"} style={{ width: "100%" }} onClick={() => onRowClick("TCAP")}>
+    <Col className="product-row-item indexes-header mobile-header" lg={6} md={5} sm={12}>
+      <Stack direction="horizontal" gap={2}>
+        <Image className="product-logo" src={tcapLogo} width={42} height={42} />
+        <Stack direction="vertical" gap={0} className="align-items-start">
+          <span className="product-value" style={{ fontSize: "1.2rem" }}>TCAP</span>
+          <span className="product-subvalue" style={{ fontSize: "0.9rem" }}>Total Crypto Market Cap</span>
+        </Stack>
+      </Stack>
+      <span className={`product-value price only-mobile text-green`} style={{ fontSize: "1.3rem" }}>
+        $247.59
+      </span>
+    </Col>
+    <Col lg={3} md={2} sm={12} className="product-row-item not-on-mobile text-right">
+      <span className={"product-value text-red"} style={{ fontSize: "1.2rem" }}>
+        $247.59
+      </span>
+    </Col>
+    <Col lg={3} md={2} sm={12} className="product-row-item text-right">
+      <span className="product-value text-red" style={{ fontSize: "1.2rem" }}>
+        -0.54%
+      </span>
+    </Col>
+    {/* <Col lg={3} md={3} sm={12} className="product-row-item text-right">
+      <Stack direction="horizontal" gap={2} className="justify-content-end">
+        <Image className="market-logo" src={ethLogo} width={30} height={30} />
+        <Image className="market-logo" src={arbLogo} width={30} height={30} />
+      </Stack>
+    </Col> */}
+    {/* <Col lg={3} md={3} sm={12} className="product-row-item text-right">
+      <RowButton title="Trade" />
+    </Col> */}
+  </Button>
+)
 
 const IndexesInfo = () => (
   <Stack
@@ -191,3 +239,19 @@ const IndexesInfo = () => (
     </Stack>
   </Stack>
 )
+
+export default Indexes
+
+export const query = graphql`
+  query ($language: String!) {
+    locales: allLocale(filter: {language: {eq: $language}}) {
+      edges {
+        node {
+          ns
+          data
+          language
+        }
+      }
+    }
+  }
+`;

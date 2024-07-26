@@ -3,9 +3,11 @@ import { Tab, Tabs } from "react-bootstrap"
 import { graphql } from "gatsby"
 import { useTranslation } from "gatsby-plugin-react-i18next"
 
-import { Indexes } from "./Indexes"
+import Indexes from "./indexes"
 import Perpetuals from "./Perpetuals"
+import Spot from "./Spot"
 import { PerennialSDKProvider } from "../../../../context/perennialSdkContext"
+
 
 
 const SectionProducts = () => {
@@ -14,17 +16,19 @@ const SectionProducts = () => {
   return (
     <PerennialSDKProvider>
       <div id="products" className="section-products">
-        {/* <h1 className="header">{t('markets')}</h1> */}
         <Tabs id="products-tabs" defaultActiveKey={"indexes"}>
           <Tab eventKey="indexes" title="Indexes">
             <Indexes />
           </Tab>
+          <Tab eventKey="spot" title="Spot">
+            <Spot />
+          </Tab>
           <Tab eventKey="perpetuals" title="Perpetuals">
             <Perpetuals />
-          </Tab> 
+          </Tab>
         </Tabs>
       </div>
-    </PerennialSDKProvider>  
+    </PerennialSDKProvider>
   )
 }
 
