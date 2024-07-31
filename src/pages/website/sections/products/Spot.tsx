@@ -1,10 +1,9 @@
 import React from "react"
 import { Stack } from "react-bootstrap"
-import { useTranslation } from "react-i18next"
+// import { useTranslation } from "react-i18next"
 import { graphql } from "gatsby"
 
-import ProductInfoCard from "./common"
-import { useSetTokensSnapshots } from "../../../../hooks/crypdex"
+import { ProductInfoCard } from "../../../../components/ProductInfoCard"
 import { Lifi } from "../../../../components/Lifi"
 
 
@@ -21,19 +20,18 @@ const highlights = [
 ]
 
 const Spot = () => {
-  const { t } = useTranslation()
-  const { data: setTokens } = useSetTokensSnapshots()
+  // const { t } = useTranslation()
 
   return (
     <Stack direction="horizontal" className="products" gap={3} style={{ padding: "1rem 0.5rem" }} >
-      <Stack direction="vertical" className="products-metrics" style={{ width: "35%" }}>
+      <Stack direction="vertical" className="products-info" style={{ width: "35%", maxWidth: "50%", height: "30.5rem" }}>
         <ProductInfoCard headline="Ut enim ad minim veniam, quis nostrud exercitation." highlights={highlights} totals={undefined} />
       </Stack>
-      <Stack direction="vertical" className="products-info indexes" style={{ width: "65%" }}>
-        <Stack className="products-detail-container align-items-center">
+      <Stack direction="vertical" className="products-metrics indexes" style={{ width: "fit-content" }}>
+        <Stack className="products-detail-container">
           <Lifi />
         </Stack>
-      </Stack>      
+      </Stack>
     </Stack>    
   )   
 }

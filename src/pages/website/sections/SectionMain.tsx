@@ -37,10 +37,14 @@ const SectionMain = () => {
       <div className="main-container col-sm-12">
         <div className="main-info">
           <div className="main-title">
-            <img className="cryptex-logo" src="/logo.svg" alt="Logo" />
+            {/* <h1
+              style={{ fontSize: "3rem", color: "#A440F2" }}
+            >
+              Lorem ipsum dolor.
+            </h1> */}
           </div>
           <p className="home-subheader">
-            {t('cutting-edge').toUpperCase()}<br /><br />
+            {/* Sed ut perspiciatis unde omnis iste natus error sit voluptatem */}
           </p>
         </div>
         <div className="main-buttons">

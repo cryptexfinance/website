@@ -1,12 +1,15 @@
-import React from "react"
+import React, { useMemo } from "react"
 import { Button, Col, Image, Spinner, Stack } from "react-bootstrap"
 import { useTranslation } from "gatsby-plugin-react-i18next"
 import { graphql } from "gatsby"
+import { ethers } from "ethers"
 
-import ProductInfoCard from "./common"
 import { useSetTokenPrice, useSetTokensSnapshots } from "../../../../hooks/crypdex"
 import { SetTokenMetadata, SupportedComponents, SupportedSetTokens } from "../../../../constants/crypdex"
+import { ProductInfoCard } from "../../../../components/ProductInfoCard"
 import tcapLogo from '../../../../../static/website/icons/tcap.png'
+import { useTcapPriceChanges } from "../../../../hooks/graph"
+import { useMarketSnapshots } from "../../../../hooks/markets"
 
  
 const highlights = [
@@ -33,6 +36,13 @@ const Indexes = () => {
 
   return (
     <Stack direction="horizontal" className="products" gap={3} style={{ padding: "1rem 0.5rem" }} >
+      <Stack direction="vertical" className="products-info" style={{ width: "42%" }}>
+        <ProductInfoCard
+          headline="Ut enim ad minim veniam, quis nostrud exercitation."
+          highlights={highlights}
+          totals={undefined}
+        />
+      </Stack>
       <Stack direction="vertical" className="products-metrics" style={{ width: "50%" }}>
         {setTokens ? (
           <div className="products-detail-container">
@@ -59,13 +69,6 @@ const Indexes = () => {
           <Stack direction="vertical" className="products-loading">
             <Spinner animation="border" variant="primary" />
           </Stack>  
-        )}
-      </Stack>
-      <Stack direction="vertical" className="products-info indexes" style={{ width: "50%" }}>
-        {currentIndex === "TCAP" ? (
-          <ProductInfoCard headline="Ut enim ad minim veniam, quis nostrud exercitation." highlights={highlights} totals={undefined} />
-        ) : (
-          <IndexesInfo />
         )}
       </Stack>
     </Stack>
@@ -100,8 +103,8 @@ const IndexRow = ({
         <Stack direction="horizontal" gap={2}>
           <Image className="product-logo" src={assetMetada.icon} width={42} height={42} />
           <Stack direction="vertical" gap={0} className="align-items-start">
-            <span className="product-value" style={{ fontSize: "1.3rem" }}>{assetMetada.symbol}</span>
-            <span className="product-subvalue" style={{ fontSize: "0.9rem" }}>{assetMetada.name}</span>
+            <span className="product-value lg">{assetMetada.symbol}</span>
+            <span className="product-subvalue lg">{assetMetada.name}</span>
           </Stack>
         </Stack>
         <span className={`product-value price only-mobile text-green`}>
@@ -110,65 +113,82 @@ const IndexRow = ({
       </Col>
       <Col lg={3} md={2} sm={12} className="product-row-item not-on-mobile text-right">
         <span className="product-title only-mobile">{t('price')}</span>
-        <span className={"product-value text-green"} style={{ fontSize: "1.2rem" }}>
+        <span className={"product-value text-green lg"}>
           {price}
         </span>
       </Col>
       {/* <div className="h-separator" /> */}
       <Col lg={3} md={2} sm={12} className="product-row-item text-right">
-        <span className="product-value text-green" style={{ fontSize: "1.2rem" }}>
+        <span className="product-title only-mobile">24h Change</span>
+        <span className="product-value text-green lg">
           1.13%
         </span>
       </Col>
-      {/* <Col lg={3} md={3} sm={12} className="product-row-item text-right">
-        <Stack direction="horizontal" gap={2} className="justify-content-end">
-          <Image key={`cimg-${index}`} className="market-logo" src={ethLogo} width={30} height={30} />
-          <Image key={`cimg-${index}`} className="market-logo" src={baseLogo} width={30} height={30} />
-        </Stack>
-      </Col> */}
-      {/* <Col lg={3} md={3} sm={12} className="product-row-item text-right">
-        <RowButton title="Issue" />
-        <RowButton title="Trade" />
-      </Col> */}
     </Button>
   )
 }
 
-const TcapRow = ({ onRowClick } : { onRowClick: (asset: string) => void }) => (
-  <Button className={"product-row dark"} style={{ width: "100%" }} onClick={() => onRowClick("TCAP")}>
-    <Col className="product-row-item indexes-header mobile-header" lg={6} md={5} sm={12}>
-      <Stack direction="horizontal" gap={2}>
-        <Image className="product-logo" src={tcapLogo} width={42} height={42} />
-        <Stack direction="vertical" gap={0} className="align-items-start">
-          <span className="product-value" style={{ fontSize: "1.2rem" }}>TCAP</span>
-          <span className="product-subvalue" style={{ fontSize: "0.9rem" }}>Total Crypto Market Cap</span>
+const TcapRow = ({ onRowClick }: { onRowClick: (asset: string) => void }) => {
+  const { data: pricesData, error } = useTcapPriceChanges()
+  const { data: snapshots } = useMarketSnapshots()
+
+  const { currentPrice, changeIsNegative, changePercent } = useMemo(() => {
+    const tcapSnapshot = snapshots?.tcapSnapshot;
+    let tcapPrice = 0;
+    if (pricesData && pricesData.answerUpdateds && tcapSnapshot) {
+      const { longSnapshot } = tcapSnapshot
+      tcapPrice = parseFloat(ethers.formatEther(longSnapshot.latestVersion.price))
+      const prices = pricesData.answerUpdateds
+
+      if (prices.length > 0) {
+        const currentPrice = parseFloat(ethers.formatEther(BigInt(prices[0].answer)))
+        const price24H = prices.length > 1
+          ? parseFloat(ethers.formatEther(BigInt(prices[prices.length - 1].answer)))
+          : currentPrice
+        
+        return {
+          currentPrice,
+          changeIsNegative: currentPrice - price24H < 0,
+          changePercent: ((currentPrice - price24H) / currentPrice) * 100
+        }
+      }      
+    }
+
+    return {
+      currentPrice: tcapPrice,
+      changeIsNegative: false,
+      changePercent: 0
+    }
+  }, [pricesData, snapshots, error])
+
+  return (
+    <Button className={"product-row dark"} style={{ width: "100%" }} onClick={() => onRowClick("TCAP")}>
+      <Col className="product-row-item indexes-header mobile-header" lg={6} md={5} sm={12}>
+        <Stack direction="horizontal" gap={2}>
+          <Image className="product-logo" src={tcapLogo} width={42} height={42} />
+          <Stack direction="vertical" gap={0} className="align-items-start">
+            <span className="product-value lg">TCAP</span>
+            <span className="product-subvalue lg">Total Crypto Market Cap</span>
+          </Stack>
         </Stack>
-      </Stack>
-      <span className={`product-value price only-mobile text-green`} style={{ fontSize: "1.3rem" }}>
-        $247.59
-      </span>
-    </Col>
-    <Col lg={3} md={2} sm={12} className="product-row-item not-on-mobile text-right">
-      <span className={"product-value text-red"} style={{ fontSize: "1.2rem" }}>
-        $247.59
-      </span>
-    </Col>
-    <Col lg={3} md={2} sm={12} className="product-row-item text-right">
-      <span className="product-value text-red" style={{ fontSize: "1.2rem" }}>
-        -0.54%
-      </span>
-    </Col>
-    {/* <Col lg={3} md={3} sm={12} className="product-row-item text-right">
-      <Stack direction="horizontal" gap={2} className="justify-content-end">
-        <Image className="market-logo" src={ethLogo} width={30} height={30} />
-        <Image className="market-logo" src={arbLogo} width={30} height={30} />
-      </Stack>
-    </Col> */}
-    {/* <Col lg={3} md={3} sm={12} className="product-row-item text-right">
-      <RowButton title="Trade" />
-    </Col> */}
-  </Button>
-)
+        <span className={`product-value price only-mobile text-green`}>
+          ${currentPrice.toFixed(2)}
+        </span>
+      </Col>
+      <Col lg={3} md={2} sm={12} className="product-row-item not-on-mobile text-right">
+        <span className={"product-value text-red lg"}>
+          ${currentPrice.toFixed(2)}
+        </span>
+      </Col>
+      <Col lg={3} md={2} sm={12} className="product-row-item text-right">
+        <span className="product-title only-mobile">24h Change</span>
+        <span className={`product-value lg ${changeIsNegative ? "text-red" : "text-green"}`}>
+          {changePercent.toFixed(2)}%
+        </span>
+      </Col>
+    </Button>
+  )
+}
 
 const IndexesInfo = () => (
   <Stack

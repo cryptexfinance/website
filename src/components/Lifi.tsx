@@ -23,7 +23,7 @@ export const Lifi = ({
       appearance: 'dark',
       fromChain,
       toChain,
-      hiddenUI: ['appearance'],
+      hiddenUI: ['appearance', 'history', 'poweredBy', 'walletMenu'],
       integrator: "cryptex-finance",
       languages: {
         default: currentLanguage as "bn" | "de" | "en" | "es" | "fr" | "id" | "it" | "ko" | "pt" | "th" | "tr" | "uk" | "vi" | "zh" | undefined,

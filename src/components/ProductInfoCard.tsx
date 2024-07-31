@@ -1,7 +1,6 @@
 import React from "react"
 import { Stack } from "react-bootstrap"
 import { BsCheckCircle } from "react-icons/bs";
-import { graphql } from "gatsby"
 
 
 const TotalBox = ({ title, value, divider }: { title: string, value: string, divider?: boolean }) => {
@@ -33,7 +32,7 @@ type InfoCardProps = {
   totals: Array<{ title: string, value: string }> | undefined,
 }
 
-const ProductInfoCard = ({ headline, highlights, totals }: InfoCardProps) => {
+export const ProductInfoCard = ({ headline, highlights, totals }: InfoCardProps) => {
   return (
     <Stack direction="vertical" gap={2} className="product-info-card">
       <Stack
@@ -85,19 +84,3 @@ const ProductInfoCard = ({ headline, highlights, totals }: InfoCardProps) => {
     </Stack>
   );
 }
-
-export default ProductInfoCard;
-
-export const query = graphql`
-  query ($language: String!) {
-    locales: allLocale(filter: {language: {eq: $language}}) {
-      edges {
-        node {
-          ns
-          data
-          language
-        }
-      }
-    }
-  }
-`;

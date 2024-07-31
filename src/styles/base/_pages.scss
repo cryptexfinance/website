@@ -62,7 +62,7 @@ body {
     &-container {
       display: flex;
       flex-direction: column;
-      padding: 4rem 4rem;
+      padding: 8rem 4rem;
     }
     &-info {
       padding: 0rem 1rem;
@@ -225,10 +225,18 @@ body {
     &-value {
       color: white;
       font-size: 1rem;
+
+      &.lg {
+        font-size: 1.3rem;
+      }
     }
     &-subvalue {
       color: $color-grey;
       font-size: 0.8rem;
+
+      &.lg {
+        font-size: 0.9rem;
+      }
     }
   }
 

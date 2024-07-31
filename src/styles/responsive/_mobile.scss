@@ -446,7 +446,12 @@
 
   .section-products {
     .nav-item {
-      width: 50%;
+      width: 33%;
+      min-width: 33%;
+    }
+
+    .nav-link {
+      font-size: 5rem;
     }
 
     .products-loading {
@@ -557,14 +562,14 @@
         font-size: 16px;
       }
       &-value {
-        font-size: 16px;
+        font-size: 16px !important;
 
         &.price {
           font-size: 24px;
         }
       }
       &-subvalue {
-        font-size: 14px;
+        font-size: 14px !important;
       }
     }
 

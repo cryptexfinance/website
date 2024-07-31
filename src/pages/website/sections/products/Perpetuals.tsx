@@ -13,7 +13,7 @@ import { addPositions, nextPosition } from "../../../../utils/positionUtils"
 import { VaultSnapshot } from "../../../../hooks/marketsV1"
 import { useTcapPriceChanges } from "../../../../hooks/graph"
 
-import ProductInfoCard from "./common"
+import { ProductInfoCard } from "../../../../components/ProductInfoCard"
 
 
 const highlights = [
