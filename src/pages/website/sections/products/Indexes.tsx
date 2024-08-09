@@ -42,7 +42,7 @@ const Indexes = () => {
 
   return (
     <Stack direction="horizontal" className="products" gap={3} style={{ padding: "1rem 0.5rem" }} >
-      <Stack direction="vertical" className="products-info" style={{ width: "42%" }}>
+      <Stack direction="vertical" className="products-info" style={{ width: "50%" }}>
         <ProductInfoCard
           headline="Access diversified crypto exposure through curated indexes"
           highlights={highlights}
