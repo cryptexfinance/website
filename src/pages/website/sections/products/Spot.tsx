@@ -9,13 +9,22 @@ import { Lifi } from "../../../../components/Lifi"
 
 const highlights = [
   <p className="no-margin" style={{ fontSize: "1.1rem" }}>
-    Lorem <span className="text-purple" style={{ fontSize: "1.1rem" }}>ipsum dolor</span> sit amet, consectetur.
+    Swap and bridge assets from <span className="text-purple" style={{ fontSize: "1.1rem" }}>dozens of blockchains</span>.
   </p>,
   <p className="no-margin" style={{ fontSize: "1.1rem" }}>
-    Excepteur sint <span className="text-purple" style={{ fontSize: "1.1rem" }}>occaecat cupidatat</span> non proident.
+    Trade a wide variety of tokens with <span className="text-purple" style={{ fontSize: "1.1rem" }}>real-time market prices</span>.
   </p>,
   <p className="no-margin" style={{ fontSize: "1.1rem" }}>
-    Sunt in culpa qui officia deserunt <span className="text-purple" style={{ fontSize: "1.1rem" }}> mollit anim</span>.
+    Benefit from a <span className="text-purple" style={{ fontSize: "1.1rem" }}>user-friendly interface</span> for quick exchanges.
+  </p>,
+  <p className="no-margin" style={{ fontSize: "1.1rem" }}>
+    Access <span className="text-purple" style={{ fontSize: "1.1rem" }}>cross-chain liquidity</span> without leaving the platform.
+  </p>,
+  <p className="no-margin" style={{ fontSize: "1.1rem" }}>
+    Enjoy <span className="text-purple" style={{ fontSize: "1.1rem" }}>competitive rates</span> and minimal slippage across trades.
+  </p>,
+  <p className="no-margin" style={{ fontSize: "1.1rem" }}>
+    Execute trades with just a <span className="text-purple" style={{ fontSize: "1.1rem" }}>few clicks</span>.
   </p>
 ]
 
@@ -25,7 +34,7 @@ const Spot = () => {
   return (
     <Stack direction="horizontal" className="products" gap={3} style={{ padding: "1rem 0.5rem" }} >
       <Stack direction="vertical" className="products-info" style={{ width: "35%", maxWidth: "50%", height: "30.5rem" }}>
-        <ProductInfoCard headline="Ut enim ad minim veniam, quis nostrud exercitation." highlights={highlights} totals={undefined} />
+        <ProductInfoCard headline="Seamless Spot Trading Across Chains" highlights={highlights} totals={undefined} />
       </Stack>
       <Stack direction="vertical" className="products-metrics indexes" style={{ width: "fit-content" }}>
         <Stack className="products-detail-container">

@@ -18,13 +18,22 @@ import { ProductInfoCard } from "../../../../components/ProductInfoCard"
 
 const highlights = [
   <p className="no-margin" style={{ fontSize: "1.1rem" }}>
-    Lorem <span className="text-purple" style={{ fontSize: "1.1rem" }}>ipsum dolor</span> sit amet, consectetur.
+    Trade popular and unique crypto assets.
   </p>,
   <p className="no-margin" style={{ fontSize: "1.1rem" }}>
-    Excepteur sint <span className="text-purple" style={{ fontSize: "1.1rem" }}>occaecat cupidatat</span> non proident.
+    Benefit from deep liquidity pools for smooth trade execution.
   </p>,
   <p className="no-margin" style={{ fontSize: "1.1rem" }}>
-    Sunt in culpa qui officia deserunt <span className="text-purple" style={{ fontSize: "1.1rem" }}> mollit anim</span>.
+    Enjoy competitive fees and minimal slippage across all pairs.
+  </p>,
+  <p className="no-margin" style={{ fontSize: "1.1rem" }}>
+    Execute precise trades with oracle-driven price feeds.
+  </p>,
+  <p className="no-margin" style={{ fontSize: "1.1rem" }}>
+    Utilize advanced order types for sophisticated trading strategies.
+  </p>,
+  <p className="no-margin" style={{ fontSize: "1.1rem" }}>
+    Monitor real-time prices, 24h changes, and liquidity data.
   </p>
 ]
 
@@ -260,7 +269,7 @@ const Perpetuals = () => {
     <Stack direction="horizontal" gap={2} className="products">
       <Stack direction="vertical" className="products-info" style={{ width: "42%" }}>
         <ProductInfoCard
-          headline="Ut enim ad minim veniam, quis nostrud exercitation."
+          headline="Precise and Powerful Perpetual Trading"
           highlights={highlights}
           totals={[
             {

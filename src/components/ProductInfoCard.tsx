@@ -42,7 +42,7 @@ export const ProductInfoCard = ({ headline, highlights, totals }: InfoCardProps)
           width: "100%",
         }}
       >
-        <h2 style={{ fontSize: "1.75rem" }}>
+        <h2 style={{ fontSize: "1.5rem", lineHeight: "1.8rem" }}>
           {headline}
         </h2>
         <Stack

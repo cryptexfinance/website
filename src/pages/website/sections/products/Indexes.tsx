@@ -14,13 +14,19 @@ import { useMarketSnapshots } from "../../../../hooks/markets"
  
 const highlights = [
   <p className="no-margin" style={{ fontSize: "1.1rem" }}>
-    Lorem <span className="text-purple" style={{ fontSize: "1.1rem" }}>ipsum dolor</span> sit amet, consectetur.
+    Simplify your crypto strategy with <span className="text-purple" style={{ fontSize: "1.1rem" }}>one-click</span> index products.
   </p>,
   <p className="no-margin" style={{ fontSize: "1.1rem" }}>
-    Excepteur sint <span className="text-purple" style={{ fontSize: "1.1rem" }}>occaecat cupidatat</span> non proident.
+    Benefit from <span className="text-purple" style={{ fontSize: "1.1rem" }}>actively managed</span> and rebalanced crypto indexes.
   </p>,
   <p className="no-margin" style={{ fontSize: "1.1rem" }}>
-    Sunt in culpa qui officia deserunt <span className="text-purple" style={{ fontSize: "1.1rem" }}> mollit anim</span>.
+    Stay updated with <span className="text-purple" style={{ fontSize: "1.1rem" }}>real-time pricing</span> and 24-hour change data.
+  </p>,
+  <p className="no-margin" style={{ fontSize: "1.1rem" }}>
+    Trade broad market indexes like <span className="text-purple" style={{ fontSize: "1.1rem" }}>TCAP (Total Crypto Market Cap)</span>.
+  </p>,
+  <p className="no-margin" style={{ fontSize: "1.1rem" }}>
+    Gain exposure to niche markets with indexes like <span className="text-purple" style={{ fontSize: "1.1rem" }}>MEEM</span> (Cryptex Memecoin Index).
   </p>
 ];
 
@@ -38,7 +44,7 @@ const Indexes = () => {
     <Stack direction="horizontal" className="products" gap={3} style={{ padding: "1rem 0.5rem" }} >
       <Stack direction="vertical" className="products-info" style={{ width: "42%" }}>
         <ProductInfoCard
-          headline="Ut enim ad minim veniam, quis nostrud exercitation."
+          headline="Access diversified crypto exposure through curated indexes"
           highlights={highlights}
           totals={undefined}
         />
