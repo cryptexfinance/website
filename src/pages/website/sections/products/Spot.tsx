@@ -4,8 +4,12 @@ import { Stack } from "react-bootstrap"
 import { graphql } from "gatsby"
 
 import { ProductInfoCard } from "../../../../components/ProductInfoCard"
-import { Lifi } from "../../../../components/Lifi"
+// import { Lifi } from "../../../../components/Lifi"
+// import LoadableLifi from "../../../../components/Lifi"
 
+const LifiClientSideOnlyLazy = React.lazy(() =>
+  import("../../../../components/Lifi")
+)
 
 const highlights = [
   <p className="no-margin" style={{ fontSize: "1.1rem" }}>
@@ -30,6 +34,7 @@ const highlights = [
 
 const Spot = () => {
   // const { t } = useTranslation()
+  const isSSR = typeof window === "undefined"
 
   return (
     <Stack direction="horizontal" className="products" gap={3} style={{ padding: "1rem 0.5rem" }} >
@@ -38,7 +43,11 @@ const Spot = () => {
       </Stack>
       <Stack direction="vertical" className="products-metrics indexes" style={{ width: "fit-content" }}>
         <Stack className="products-detail-container">
-          <Lifi />
+          {!isSSR && (
+            <React.Suspense fallback={<div />}>
+              <LifiClientSideOnlyLazy />
+            </React.Suspense>
+          )}
         </Stack>
       </Stack>
     </Stack>    

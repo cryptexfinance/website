@@ -49,6 +49,32 @@ body {
   }
 }
 
+/* width */
+::-webkit-scrollbar {
+  width: 7px;
+  height: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #7d078520;
+}
+
+::-webkit-scrollbar-track:hover {
+  background: #7d078520;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #9A24FF;
+  border-radius: 1rem;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
 .section-main {
   display: flex;
   align-items: flex-end;
@@ -285,6 +311,17 @@ body {
 
   .text-right {
     text-align: right;
+  }
+
+  /* width */
+  ::-webkit-scrollbar {
+    width: 3px;
+    height: 4px;
+  }
+
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: transparent;
   }
 }
 
@@ -561,32 +598,6 @@ body {
     height: 20rem;  
   }
 }
-
-/* width */
-::-webkit-scrollbar {
-  width: 10px;
-}
-
-/* Track */
-::-webkit-scrollbar-track {
-  background: #7d078520;
-}
-
-::-webkit-scrollbar-track:hover{
-  background: #7d078520;
-}
-
-/* Handle */
-::-webkit-scrollbar-thumb {
-  background: #9A24FF;
-  border-radius: 1rem;
-}
-
-/* Handle on hover */
-::-webkit-scrollbar-thumb:hover {
-  background: #555;
-}
-
 
 .main-brand-text{
   font-family: 'Tachyon Regular';

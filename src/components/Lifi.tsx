@@ -4,7 +4,7 @@ import { useTranslation } from "react-i18next"
 import { Stack } from "react-bootstrap"
 
 
-export const Lifi = ({
+const Lifi = ({
   fromChain,
   toChain,
   fromToken,
@@ -25,9 +25,12 @@ export const Lifi = ({
       toChain,
       hiddenUI: ['appearance', 'history', 'poweredBy', 'walletMenu'],
       integrator: "cryptex-finance",
-      languages: {
-        default: currentLanguage as "bn" | "de" | "en" | "es" | "fr" | "id" | "it" | "ko" | "pt" | "th" | "tr" | "uk" | "vi" | "zh" | undefined,
+      chains: {
+        deny: [9001],
       },
+      /* languages: {
+        default: currentLanguage as "bn" | "de" | "en" | "es" | "fr" | "id" | "it" | "ko" | "pt" | "th" | "tr" | "uk" | "vi" | "zh" | undefined,
+      }, */
       theme: {
         palette: {
           primary: { main: '#A440F2' },
@@ -72,3 +75,5 @@ export const Lifi = ({
     </Stack>
   );
 };
+
+export default Lifi;
