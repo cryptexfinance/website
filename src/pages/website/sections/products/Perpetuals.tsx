@@ -14,27 +14,28 @@ import { VaultSnapshot } from "../../../../hooks/marketsV1"
 import { useTcapPriceChanges } from "../../../../hooks/graph"
 
 import { ProductInfoCard } from "../../../../components/ProductInfoCard"
+import { Highlight, PurpleText } from "../../components/highlights"
 
 
 const highlights = [
-  <p className="no-margin" style={{ fontSize: "1.1rem" }}>
-    Trade popular and unique crypto assets.
-  </p>,
-  <p className="no-margin" style={{ fontSize: "1.1rem" }}>
-    Benefit from deep liquidity pools for smooth trade execution.
-  </p>,
-  <p className="no-margin" style={{ fontSize: "1.1rem" }}>
-    Enjoy competitive fees and minimal slippage across all pairs.
-  </p>,
-  <p className="no-margin" style={{ fontSize: "1.1rem" }}>
-    Execute precise trades with oracle-driven price feeds.
-  </p>,
-  <p className="no-margin" style={{ fontSize: "1.1rem" }}>
-    Utilize advanced order types for sophisticated trading strategies.
-  </p>,
-  <p className="no-margin" style={{ fontSize: "1.1rem" }}>
-    Monitor real-time prices, 24h changes, and liquidity data.
-  </p>
+  <Highlight>
+    Trade popular and <PurpleText>unique crypto assets</PurpleText>.
+  </Highlight>,
+  <Highlight>
+    Benefit from <PurpleText>deep liquidity pools</PurpleText> for smooth trade execution.
+  </Highlight>,
+  <Highlight>
+    Enjoy <PurpleText>competitive fees</PurpleText> and minimal slippage across all pairs.
+  </Highlight>,
+  <Highlight>
+    Execute precise trades with <PurpleText>oracle-driven price feeds.</PurpleText>
+  </Highlight>,
+  <Highlight>
+    Utilize <PurpleText>advanced order types</PurpleText> for sophisticated trading.
+  </Highlight>,
+  <Highlight>
+    Monitor <PurpleText>real-time prices</PurpleText>, 24h changes, and liquidity data.
+  </Highlight>
 ]
 
 const PriceBox = ({ currentPrice }: { currentPrice: bigint }) => {
@@ -267,7 +268,7 @@ const Perpetuals = () => {
 
   return (
     <Stack direction="horizontal" gap={2} className="products">
-      <Stack direction="vertical" className="products-info" style={{ width: "42%" }}>
+      <Stack direction="vertical" className="products-info" style={{ width: "48%" }}>
         <ProductInfoCard
           headline="Precise and Powerful Perpetual Trading"
           highlights={highlights}
@@ -283,7 +284,7 @@ const Perpetuals = () => {
           ]}
         />
       </Stack>
-      <Stack direction="vertical" className="products-metrics" style={{ width: "58%" }}>
+      <Stack direction="vertical" className="products-metrics" style={{ width: "52%" }}>
         <Accordion defaultActiveKey="0" className="only-mobile">
           <Accordion.Item eventKey="0">
             <Accordion.Header>

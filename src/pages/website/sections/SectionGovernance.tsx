@@ -13,7 +13,14 @@ import huobiLogo from "../../../../static/website/governance/huobi.svg"
 import camelotLogo from "../../../../static/website/governance/camelot.svg"
 import coingeckoLogo from "../../../../static/website/governance/coingecko.svg"
 import traderJoeLogo from "../../../../static/website/governance/traderjoe.png"
-import { FOUNDERS_ADDRESS, LIQUIDITY_REWARD2_ADDRESS, LIQUIDITY_REWARD_ADDRESS, MULTISIG_ADDRESS, TREASURY_ADDRESS, getPriceInUSDFromPair } from "../../../utils"
+import {
+  FOUNDERS_ADDRESS,
+  LIQUIDITY_REWARD2_ADDRESS,
+  LIQUIDITY_REWARD_ADDRESS,
+  MULTISIG_ADDRESS,
+  TREASURY_ADDRESS,
+  getPriceInUSDFromPair,
+} from "../../../utils"
 import { contractsContext } from "../../../context"
 
 
@@ -86,12 +93,6 @@ const governanceIcons = [
     href: "https://app.camelot.exchange/nitro/0x444D45d5d9612aBB596420fE81DA41a1aA98CeBa",
     icon: camelotLogo,
     alt: "Camelot Logo",
-    class: "",
-  },
-  {
-    href: "https://www.coingecko.com/en/coins/cryptex-finance",
-    icon: coingeckoLogo,
-    alt: "Coingecko Logo",
     class: "",
   },
   {

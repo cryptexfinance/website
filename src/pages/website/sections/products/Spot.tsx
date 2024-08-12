@@ -4,32 +4,31 @@ import { Stack } from "react-bootstrap"
 import { graphql } from "gatsby"
 
 import { ProductInfoCard } from "../../../../components/ProductInfoCard"
-// import { Lifi } from "../../../../components/Lifi"
-// import LoadableLifi from "../../../../components/Lifi"
+import { Highlight, PurpleText } from "../../components/highlights"
 
 const LifiClientSideOnlyLazy = React.lazy(() =>
   import("../../../../components/Lifi")
 )
 
 const highlights = [
-  <p className="no-margin" style={{ fontSize: "1.1rem" }}>
-    Swap and bridge assets from <span className="text-purple" style={{ fontSize: "1.1rem" }}>dozens of blockchains</span>.
-  </p>,
-  <p className="no-margin" style={{ fontSize: "1.1rem" }}>
-    Trade a wide variety of tokens with <span className="text-purple" style={{ fontSize: "1.1rem" }}>real-time market prices</span>.
-  </p>,
-  <p className="no-margin" style={{ fontSize: "1.1rem" }}>
-    Benefit from a <span className="text-purple" style={{ fontSize: "1.1rem" }}>user-friendly interface</span> for quick exchanges.
-  </p>,
-  <p className="no-margin" style={{ fontSize: "1.1rem" }}>
-    Access <span className="text-purple" style={{ fontSize: "1.1rem" }}>cross-chain liquidity</span> without leaving the platform.
-  </p>,
-  <p className="no-margin" style={{ fontSize: "1.1rem" }}>
-    Enjoy <span className="text-purple" style={{ fontSize: "1.1rem" }}>competitive rates</span> and minimal slippage across trades.
-  </p>,
-  <p className="no-margin" style={{ fontSize: "1.1rem" }}>
-    Execute trades with just a <span className="text-purple" style={{ fontSize: "1.1rem" }}>few clicks</span>.
-  </p>
+  <Highlight>
+    Swap and bridge assets from <PurpleText>dozens of blockchains.</PurpleText>
+  </Highlight>,
+  <Highlight>
+    Trade a wide variety of tokens with <PurpleText>real-time market prices.</PurpleText>
+  </Highlight>,
+  <Highlight>
+    Benefit from a <PurpleText>user-friendly interface</PurpleText> for quick exchanges.
+  </Highlight>,
+  <Highlight>
+    Access <PurpleText>cross-chain liquidity</PurpleText> without leaving the platform.
+  </Highlight>,
+  <Highlight>
+    Enjoy <PurpleText>competitive rates</PurpleText> and minimal slippage across trades.
+  </Highlight>,
+  <Highlight>
+    Execute trades with just a <PurpleText>few clicks.</PurpleText>
+  </Highlight>
 ]
 
 const Spot = () => {

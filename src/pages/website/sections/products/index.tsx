@@ -17,14 +17,14 @@ const SectionProducts = () => {
     <PerennialSDKProvider>
       <div id="markets" className="section-products">
         <Tabs id="products-tabs" defaultActiveKey={"indexes"}>
-          <Tab eventKey="indexes" title="Indexes">
-            <Indexes />
-          </Tab>
           <Tab eventKey="spot" title="Spot">
             <Spot />
           </Tab>
           <Tab eventKey="perpetuals" title="Perpetuals">
             <Perpetuals />
+          </Tab>
+          <Tab eventKey="indexes" title="Indexes">
+            <Indexes />
           </Tab>
         </Tabs>
       </div>

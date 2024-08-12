@@ -33,18 +33,6 @@ const socialIcons = [
     icon: telegram,
     alt: "Telegram Logo",
     class: "",
-  },
-  {
-    href: "https://medium.com/cryptexfinance",
-    icon: medium,
-    alt: "Medium Logo",
-    class: "medium",
-  },
-  {
-    href: "https://cryptex.substack.com/",
-    icon: mailLogo,
-    alt: "Newsletter",
-    class: "",
   }
 ]
 

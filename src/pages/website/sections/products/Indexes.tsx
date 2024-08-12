@@ -1,33 +1,35 @@
-import React, { useMemo } from "react"
+import React from "react"
 import { Button, Col, Image, Spinner, Stack } from "react-bootstrap"
 import { useTranslation } from "gatsby-plugin-react-i18next"
 import { graphql } from "gatsby"
-import { ethers } from "ethers"
+// import { ethers } from "ethers"
 
-import { useSetTokenPrice, useSetTokensSnapshots } from "../../../../hooks/crypdex"
+import { useSetTokensSnapshots } from "../../../../hooks/crypdex"
 import { SetTokenMetadata, SupportedComponents, SupportedSetTokens } from "../../../../constants/crypdex"
+// import { useTcapPriceChanges } from "../../../../hooks/graph"
+// import { useMarketSnapshots } from "../../../../hooks/markets"
+
 import { ProductInfoCard } from "../../../../components/ProductInfoCard"
+import { Highlight, PurpleText } from "../../components/highlights"
 import tcapLogo from '../../../../../static/website/icons/tcap.png'
-import { useTcapPriceChanges } from "../../../../hooks/graph"
-import { useMarketSnapshots } from "../../../../hooks/markets"
 
  
 const highlights = [
-  <p className="no-margin" style={{ fontSize: "1.1rem" }}>
-    Simplify your crypto strategy with <span className="text-purple" style={{ fontSize: "1.1rem" }}>one-click</span> index products.
-  </p>,
-  <p className="no-margin" style={{ fontSize: "1.1rem" }}>
-    Benefit from <span className="text-purple" style={{ fontSize: "1.1rem" }}>actively managed</span> and rebalanced crypto indexes.
-  </p>,
-  <p className="no-margin" style={{ fontSize: "1.1rem" }}>
-    Stay updated with <span className="text-purple" style={{ fontSize: "1.1rem" }}>real-time pricing</span> and 24-hour change data.
-  </p>,
-  <p className="no-margin" style={{ fontSize: "1.1rem" }}>
-    Trade broad market indexes like <span className="text-purple" style={{ fontSize: "1.1rem" }}>TCAP (Total Crypto Market Cap)</span>.
-  </p>,
-  <p className="no-margin" style={{ fontSize: "1.1rem" }}>
-    Gain exposure to niche markets with indexes like <span className="text-purple" style={{ fontSize: "1.1rem" }}>MEEM</span> (Cryptex Memecoin Index).
-  </p>
+  <Highlight>
+    Simplify your crypto strategy with <PurpleText>one-click</PurpleText> index products.
+  </Highlight>,
+  <Highlight>
+    Benefit from <PurpleText>actively managed</PurpleText> and rebalanced crypto indexes.
+  </Highlight>,
+  <Highlight>
+    Stay updated with <PurpleText>real-time pricing</PurpleText> and 24-hour change data.
+  </Highlight>,
+  <Highlight>
+    Trade broad market indexes like <PurpleText>TCAP (Total Crypto Market Cap).</PurpleText>.
+  </Highlight>,
+  <Highlight>
+    Trade niche markets indexes like <PurpleText>MEEM</PurpleText> (Memecoin Index).
+  </Highlight>
 ];
 
 
@@ -56,12 +58,13 @@ const Indexes = () => {
               <Col lg={6} md={5}>
                 <span className="product-title asset">Asset</span>
               </Col>
-              <Col lg={3} md={2} className="text-right">
+              <Col lg={6} md={5} className="text-right" />
+              {/* <Col lg={3} md={2} className="text-right">
                 <span className="product-title">{t('price')}</span>
               </Col>
               <Col lg={3} md={2} className="text-right">
                 <span className="product-title">24h Change</span>
-              </Col>
+              </Col> */}
             </Stack>
             <div className="products-detail" style={{ paddingRight: "1rem" }}>
               <TcapRow onRowClick={onRowClick} />
@@ -95,8 +98,8 @@ const IndexRow = ({
   const { t } = useTranslation()
   const assetMetada = SetTokenMetadata[setToken]
   const darkRow = index % 2 === 0
-  const { data } = useSetTokenPrice(setToken)
-  const price = data ? `$${data.priceOneSetToken.toFixed(4)}` : <span>-</span>
+  // const { data } = useSetTokenPrice(setToken)
+  // const price = data ? `$${data.priceOneSetToken.toFixed(4)}` : <span>-</span>
 
   return (
     <Button
@@ -113,32 +116,34 @@ const IndexRow = ({
             <span className="product-subvalue lg">{assetMetada.name}</span>
           </Stack>
         </Stack>
-        <span className={`product-value price only-mobile text-green`}>
+        {/* <span className={`product-value price only-mobile text-green`}>
           {price}
-        </span>
+        </span> */}
       </Col>
-      <Col lg={3} md={2} sm={12} className="product-row-item not-on-mobile text-right">
+      <Col lg={6} md={6} className="text-right">
+        <PurpleText>Coming Soon</PurpleText>
+      </Col>
+      {/* <Col lg={3} md={2} sm={12} className="product-row-item not-on-mobile text-right">
         <span className="product-title only-mobile">{t('price')}</span>
         <span className={"product-value text-green lg"}>
           {price}
         </span>
       </Col>
-      {/* <div className="h-separator" /> */}
       <Col lg={3} md={2} sm={12} className="product-row-item text-right">
         <span className="product-title only-mobile">24h Change</span>
         <span className="product-value text-green lg">
           1.13%
         </span>
-      </Col>
+      </Col> */}
     </Button>
   )
 }
 
 const TcapRow = ({ onRowClick }: { onRowClick: (asset: string) => void }) => {
-  const { data: pricesData, error } = useTcapPriceChanges()
-  const { data: snapshots } = useMarketSnapshots()
+  // const { data: pricesData, error } = useTcapPriceChanges()
+  // const { data: snapshots } = useMarketSnapshots()
 
-  const { currentPrice, changeIsNegative, changePercent } = useMemo(() => {
+  /*const { currentPrice, changeIsNegative, changePercent } = useMemo(() => {
     const tcapSnapshot = snapshots?.tcapSnapshot;
     let tcapPrice = 0;
     if (pricesData && pricesData.answerUpdateds && tcapSnapshot) {
@@ -165,7 +170,7 @@ const TcapRow = ({ onRowClick }: { onRowClick: (asset: string) => void }) => {
       changeIsNegative: false,
       changePercent: 0
     }
-  }, [pricesData, snapshots, error])
+  }, [pricesData, snapshots, error]) */
 
   return (
     <Button className={"product-row dark"} style={{ width: "100%" }} onClick={() => onRowClick("TCAP")}>
@@ -177,11 +182,14 @@ const TcapRow = ({ onRowClick }: { onRowClick: (asset: string) => void }) => {
             <span className="product-subvalue lg">Total Crypto Market Cap</span>
           </Stack>
         </Stack>
-        <span className={`product-value price only-mobile text-green`}>
+        {/* <span className={`product-value price only-mobile text-green`}>
           ${currentPrice.toFixed(2)}
-        </span>
+        </span> */}
       </Col>
-      <Col lg={3} md={2} sm={12} className="product-row-item not-on-mobile text-right">
+      <Col lg={6} md={6} className="text-right">
+        <PurpleText>Coming Soon</PurpleText>
+      </Col>
+      {/* <Col lg={3} md={2} sm={12} className="product-row-item not-on-mobile text-right">
         <span className={"product-value text-red lg"}>
           ${currentPrice.toFixed(2)}
         </span>
@@ -191,80 +199,10 @@ const TcapRow = ({ onRowClick }: { onRowClick: (asset: string) => void }) => {
         <span className={`product-value lg ${changeIsNegative ? "text-red" : "text-green"}`}>
           {changePercent.toFixed(2)}%
         </span>
-      </Col>
+      </Col> */}
     </Button>
   )
 }
-
-const IndexesInfo = () => (
-  <Stack
-    direction="vertical"
-    gap={4}
-    className="product-info-card p-3 w-100"
-  >
-    <h3 className="text-purple">MEEM Index</h3>
-    <p>
-      MEEM is an equally-weighted basket index comprising the most popular memecoins on the Ethereum blockchain, plus ETH.
-      It offers diversified exposure to the top assets in this dynamic sector.
-    </p>
-    <Stack direction="vertical" gap={2}>
-      <h6 className="text-purple">Criteria:</h6>
-      <p>To be included in MEEM, a component must:</p>
-      <ol>
-        <li>Be classified as a memecoin (except ETH)</li>
-        <li>Rank in the top 100 by market cap on CoinGecko or CoinMarketCap</li>
-        <li>Have sufficient liquidity on the Ethereum blockchain</li>
-      </ol>
-    </Stack>
-    <Stack direction="vertical" gap={2}>
-      <h6 className="text-purple">Components</h6>
-      <ul>
-        <li>
-          20% Dogecoin (DOGE)
-        </li>
-        <li>20% Shiba Inu (SHIB)</li>
-        <li>20% Pepe (PEPE)</li>
-        <li>20% Floki Inu (FLOKI)</li>
-        <li>20% Ethereum (ETH)</li>
-      </ul>
-    </Stack>
-    <Stack direction="vertical" gap={2}>
-      <p>
-        The quantities of each token required to create the MEEM index were chosen based on the following prices from the 12th of July:
-      </p>
-      <ul>
-        <li>Doge: $0.1069</li>
-        <li>Shib: $0.00001628</li>
-        <li>Pepe: $0.000009016</li>
-        <li>Floki: $0.0001446</li>
-        <li>Eth: $3107.44</li>
-      </ul>
-      <p>
-        Subsequently, the weights were calculated to achieve a total index price of $10.
-      </p>
-    </Stack>
-    <Stack direction="vertical" gap={2}>
-      <h6 className="text-purple">Rebalancing:</h6>
-      <p>
-        The index is rebalanced monthly at the end of each calendar month.
-      </p>
-    </Stack>
-    <Stack direction="vertical" gap={2}>
-      <h6 className="text-purple">Management:</h6>
-      <p>
-        The Cryptex DAO oversees MEEM, maintaining component weightings and managing inclusions or exclusions to ensure the
-        index remains representative of the ethereum memecoin market.
-      </p>
-    </Stack>
-    <Stack direction="vertical" gap={2}>
-      <h6 className="text-purple">Fees:</h6>
-      <p>
-        The protocol will apply a streaming fee equivalent to 0.75% APR of the Total Value Locked (TVL) as rebalancing charges.
-        The fee charged for managing the MEEM index will be sent to the cryptex treasury.
-      </p>
-    </Stack>
-  </Stack>
-)
 
 export default Indexes
 
