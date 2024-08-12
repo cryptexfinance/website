@@ -10,7 +10,7 @@ import { SetTokenMetadata, SupportedComponents, SupportedSetTokens } from "../..
 // import { useMarketSnapshots } from "../../../../hooks/markets"
 
 import { ProductInfoCard } from "../../../../components/ProductInfoCard"
-import { Highlight, PurpleText } from "../../components/highlights"
+import { Highlight, PurpleText } from "../../../../components/highlights"
 import tcapLogo from '../../../../../static/website/icons/tcap.png'
 
  

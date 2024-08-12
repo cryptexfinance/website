@@ -4,7 +4,7 @@ import { Stack } from "react-bootstrap"
 import { graphql } from "gatsby"
 
 import { ProductInfoCard } from "../../../../components/ProductInfoCard"
-import { Highlight, PurpleText } from "../../components/highlights"
+import { Highlight, PurpleText } from "../../../../components/highlights"
 
 const LifiClientSideOnlyLazy = React.lazy(() =>
   import("../../../../components/Lifi")

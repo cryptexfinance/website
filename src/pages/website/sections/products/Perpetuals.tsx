@@ -14,7 +14,7 @@ import { VaultSnapshot } from "../../../../hooks/marketsV1"
 import { useTcapPriceChanges } from "../../../../hooks/graph"
 
 import { ProductInfoCard } from "../../../../components/ProductInfoCard"
-import { Highlight, PurpleText } from "../../components/highlights"
+import { Highlight, PurpleText } from "../../../../components/highlights"
 
 
 const highlights = [
