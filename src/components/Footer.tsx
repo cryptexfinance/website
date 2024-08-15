@@ -4,8 +4,7 @@ import { useTranslation } from "gatsby-plugin-react-i18next"
 import twitter from "../../static/website/ecosystem/x_logo.svg"
 import discord from "../../static/website/ecosystem/discord.svg"
 import telegram from "../../static/website/ecosystem/telegram.svg"
-import medium from "../../static/website/ecosystem/medium.svg"
-import mailLogo from "../../static/website/protocol/mail.svg"
+import coingeckoLogo from "../../static/website/ecosystem/coingecko.svg"
 
 
 type IconType = {
@@ -33,7 +32,13 @@ const socialIcons = [
     icon: telegram,
     alt: "Telegram Logo",
     class: "",
-  }
+  },
+  {
+    href: "https://www.coingecko.com/en/coins/cryptex-finance",
+    icon: coingeckoLogo,
+    alt: "Coingecko Logo",
+    class: "",
+  },
 ]
 
 const Footer = () => {

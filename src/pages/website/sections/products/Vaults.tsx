@@ -1,9 +1,20 @@
 import React, { useEffect, useMemo, useState } from "react"
 import { Col, Image, Spinner, Stack } from "react-bootstrap"
 import { useTranslation } from "gatsby-plugin-react-i18next"
+import { graphql } from "gatsby"
 import { formatEther } from "viem"
 import { NumericFormat } from "react-number-format"
-import { PerennialVaultType, SupportedAsset, VaultMetadata, VaultSnapshot, formatBig18, formatBig18USDPrice, formatBig6, formatBig6Percent, formatBig6USDPrice } from "@perennial/sdk"
+import {
+  PerennialVaultType,
+  SupportedAsset,
+  VaultMetadata,
+  VaultSnapshot,
+  formatBig18,
+  formatBig18USDPrice,
+  formatBig6,
+  formatBig6Percent,
+  formatBig6USDPrice,
+} from "@perennial/sdk"
 
 import { useExposureAndFunding, useVaultSnapshots, useVaults7dAccumulations } from "../../../../hooks/markets"
 import { usePerpetualsChainId } from "../../../../hooks/network"
@@ -25,7 +36,7 @@ const highlights = [
   </p>
 ]
 
-export const Vaults = () => {
+const Vaults = () => {
   const { t } = useTranslation()
   const snapshots = useVaultSnapshots()
 
@@ -213,3 +224,19 @@ const TcapVaultItem = ({ index } : { index: number }) => {
     </a>
   )
 }
+
+export default Vaults;
+
+export const query = graphql`
+  query ($language: String!) {
+    locales: allLocale(filter: {language: {eq: $language}}) {
+      edges {
+        node {
+          ns
+          data
+          language
+        }
+      }
+    }
+  }
+`;

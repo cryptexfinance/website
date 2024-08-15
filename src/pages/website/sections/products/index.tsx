@@ -7,7 +7,7 @@ import Indexes from "./Indexes"
 import Perpetuals from "./Perpetuals"
 import Spot from "./Spot"
 import { PerennialSDKProvider } from "../../../../context/perennialSdkContext"
-import { Vaults } from "./Vaults"
+import Vaults from "./Vaults"
 
 
 const SectionProducts = () => {
