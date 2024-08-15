@@ -2,7 +2,6 @@ import React from "react"
 import { Button, Col, Image, Spinner, Stack } from "react-bootstrap"
 import { useTranslation } from "gatsby-plugin-react-i18next"
 import { graphql } from "gatsby"
-// import { ethers } from "ethers"
 
 import { useSetTokensSnapshots } from "../../../../hooks/crypdex"
 import { SetTokenMetadata, SupportedComponents, SupportedSetTokens } from "../../../../constants/crypdex"
@@ -25,7 +24,7 @@ const highlights = [
     Stay updated with <PurpleText>real-time pricing</PurpleText> and 24-hour change data.
   </Highlight>,
   <Highlight>
-    Trade broad market indexes like <PurpleText>TCAP (Total Crypto Market Cap).</PurpleText>.
+    Trade broad market indexes like <PurpleText>TCAP (Total Crypto Market Cap Index).</PurpleText>
   </Highlight>,
   <Highlight>
     Trade niche markets indexes like <PurpleText>MEEM</PurpleText> (Memecoin Index).
@@ -174,19 +173,19 @@ const TcapRow = ({ onRowClick }: { onRowClick: (asset: string) => void }) => {
 
   return (
     <Button className={"product-row dark"} style={{ width: "100%" }} onClick={() => onRowClick("TCAP")}>
-      <Col className="product-row-item indexes-header mobile-header" lg={6} md={5} sm={12}>
+      <Col className="product-row-item indexes-header mobile-header" lg={8} md={8} sm={12}>
         <Stack direction="horizontal" gap={2}>
           <Image className="product-logo" src={tcapLogo} width={42} height={42} />
           <Stack direction="vertical" gap={0} className="align-items-start">
             <span className="product-value lg">TCAP</span>
-            <span className="product-subvalue lg">Total Crypto Market Cap</span>
+            <span className="product-subvalue lg">Cryptex Total Crypto Market Cap Index</span>
           </Stack>
         </Stack>
         {/* <span className={`product-value price only-mobile text-green`}>
           ${currentPrice.toFixed(2)}
         </span> */}
       </Col>
-      <Col lg={6} md={6} className="text-right">
+      <Col lg={4} md={4} className="text-right">
         <PurpleText>Coming Soon</PurpleText>
       </Col>
       {/* <Col lg={3} md={2} sm={12} className="product-row-item not-on-mobile text-right">

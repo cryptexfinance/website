@@ -7,7 +7,7 @@ import Indexes from "./Indexes"
 import Perpetuals from "./Perpetuals"
 import Spot from "./Spot"
 import { PerennialSDKProvider } from "../../../../context/perennialSdkContext"
-
+import { Vaults } from "./Vaults"
 
 
 const SectionProducts = () => {
@@ -22,6 +22,9 @@ const SectionProducts = () => {
           </Tab>
           <Tab eventKey="perpetuals" title="Perpetuals">
             <Perpetuals />
+          </Tab>
+          <Tab eventKey="vaults" title="Vaults">
+            <Vaults />
           </Tab>
           <Tab eventKey="indexes" title="Indexes">
             <Indexes />

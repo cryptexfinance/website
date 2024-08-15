@@ -13,6 +13,7 @@ import huobiLogo from "../../../../static/website/governance/huobi.svg"
 import camelotLogo from "../../../../static/website/governance/camelot.svg"
 import coingeckoLogo from "../../../../static/website/governance/coingecko.svg"
 import traderJoeLogo from "../../../../static/website/governance/traderjoe.png"
+import aeroDromeLogo from "../../../../static/website/governance/aerodrome.png"
 import {
   FOUNDERS_ADDRESS,
   LIQUIDITY_REWARD2_ADDRESS,
@@ -100,6 +101,12 @@ const governanceIcons = [
     icon: traderJoeLogo,
     alt: "Trader Joe Logo",
     class: "trader-joe",
+  },
+  {
+    href: "https://aerodrome.finance/deposit?token0=0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913&token1=0xBB22Ff867F8Ca3D5F2251B4084F6Ec86D4666E14&type=-1",
+    icon: aeroDromeLogo,
+    alt: "Aerodrome Logo",
+    class: "aerodrome",
   },
 ]
 
