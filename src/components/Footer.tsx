@@ -5,6 +5,8 @@ import twitter from "../../static/website/ecosystem/x_logo.svg"
 import discord from "../../static/website/ecosystem/discord.svg"
 import telegram from "../../static/website/ecosystem/telegram.svg"
 import coingeckoLogo from "../../static/website/ecosystem/coingecko.svg"
+import coinmarketcapLogo from "../../static/website/ecosystem/coinmarketcap.png"
+import { Stack } from "react-bootstrap"
 
 
 type IconType = {
@@ -39,6 +41,12 @@ const socialIcons = [
     alt: "Coingecko Logo",
     class: "",
   },
+  {
+    href: "https://coinmarketcap.com/es/currencies/cryptex-finance/",
+    icon: coinmarketcapLogo,
+    alt: "Conmarketcap Logo",
+    class: "",
+  },
 ]
 
 const Footer = () => {
@@ -63,7 +71,12 @@ const Footer = () => {
   return (
     <section id="footer" className="footer">
       <div className="footer-info">
-        <img className="menu-logo" src="/logo.svg" alt="Logo" />
+        <Stack direction="horizontal" gap={3}>
+          <img className="menu-logo" src="/logo.svg" alt="Logo" />
+          <span style={{ fontSize: "1.4rem", textShadow: "0 1px 8px rgba(164,64,242, 0.8)" }}>
+            2024
+          </span>
+        </Stack>
         <p className="subtitle">
           {t('site-description')}
         </p>
