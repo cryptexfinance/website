@@ -23,11 +23,11 @@ const SectionProducts = () => {
           <Tab eventKey="perpetuals" title="Perpetuals">
             <Perpetuals />
           </Tab>
-          <Tab eventKey="vaults" title="Vaults">
-            <Vaults />
-          </Tab>
           <Tab eventKey="indexes" title="Indexes">
             <Indexes />
+          </Tab>
+          <Tab eventKey="vaults" title="Vaults">
+            <Vaults />
           </Tab>
         </Tabs>
       </div>
