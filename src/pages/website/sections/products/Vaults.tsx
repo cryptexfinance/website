@@ -23,17 +23,28 @@ import { addPositions, calculateFunding, calculateLeverageBN, nextPosition } fro
 import { useVaultSnapshot } from "../../../../hooks/marketsV1"
 import tcapLogo from '../../../../../static/website/icons/tcap.png'
 import { ProductInfoCard } from "../../../../components/ProductInfoCard"
+import { Highlight, PurpleText } from "../../../../components/highlights"
+
 
 const highlights = [
-  <p className="no-margin" style={{ fontSize: "1.1rem" }}>
-    Lorem <span className="text-purple" style={{ fontSize: "1.1rem" }}>ipsum dolor</span> sit amet, consectetur.
-  </p>,
-  <p className="no-margin" style={{ fontSize: "1.1rem" }}>
-    Excepteur sint <span className="text-purple" style={{ fontSize: "1.1rem" }}>occaecat cupidatat</span> non proident.
-  </p>,
-  <p className="no-margin" style={{ fontSize: "1.1rem" }}>
-    Sunt in culpa qui officia deserunt <span className="text-purple" style={{ fontSize: "1.1rem" }}> mollit anim</span>.
-  </p>
+  <Highlight>
+    <PurpleText>Earn yield</PurpleText> from various market activities without requiring active management.
+  </Highlight>,
+  <Highlight>
+    Enjoy the flexibility to deposit and withdraw capital at <PurpleText>any time.</PurpleText>
+  </Highlight>,
+  <Highlight>
+    Leverage <PurpleText>capital-efficient</PurpleText> strategies optimized for different market conditions.
+  </Highlight>,
+  <Highlight>
+    Easily diversify your portfolio <PurpleText>across multiple automated</PurpleText> yield-generating vaults.
+  </Highlight>,
+  <Highlight>
+    Benefit from professionally designed and <PurpleText>actively monitored</PurpleText> algorithms.
+  </Highlight>,
+  <Highlight>
+    Access <PurpleText>sophisticated trading</PurpleText> strategies previously available only to experts
+  </Highlight>
 ]
 
 const Vaults = () => {
@@ -52,7 +63,7 @@ const Vaults = () => {
     <Stack direction="horizontal" className="products" gap={3} style={{ padding: "1rem 0.5rem" }}>
       <Stack direction="vertical" className="products-info" style={{ width: "50%" }}>
         <ProductInfoCard
-          headline="Ut enim ad minim veniam, quis nostrud exercitation."
+          headline="Automated Yield Through Smart Vaults"
           highlights={highlights}
           totals={undefined}
         />

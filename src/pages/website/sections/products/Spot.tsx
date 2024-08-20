@@ -38,7 +38,24 @@ const Spot = () => {
   return (
     <Stack direction="horizontal" className="products" gap={3} style={{ padding: "1rem 0.5rem" }} >
       <Stack direction="vertical" className="products-info" style={{ width: "35%", maxWidth: "50%", height: "30.5rem" }}>
-        <ProductInfoCard headline="Seamless Spot Trading Across Chains" highlights={highlights} totals={undefined} />
+        <ProductInfoCard
+          headline="Seamless Spot Trading Across Chains"
+          highlights={highlights}
+          totals={[
+            {
+              title: "Chains",
+              value: "28"
+            },
+            {
+              title: "Bridges",
+              value: "20"
+            },
+            {
+              title: "Dexes",
+              value: "38"
+            },
+          ]}
+        />
       </Stack>
       <Stack direction="vertical" className="products-metrics indexes" style={{ width: "fit-content" }}>
         <Stack className="products-detail-container">
