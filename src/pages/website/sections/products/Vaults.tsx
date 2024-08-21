@@ -1,5 +1,5 @@
-import React, { useEffect, useMemo, useState } from "react"
-import { Col, Image, Spinner, Stack } from "react-bootstrap"
+import React, { useMemo } from "react"
+import { Accordion, Col, Image, Spinner, Stack } from "react-bootstrap"
 import { useTranslation } from "gatsby-plugin-react-i18next"
 import { graphql } from "gatsby"
 import { formatEther } from "viem"
@@ -28,22 +28,22 @@ import { Highlight, PurpleText } from "../../../../components/highlights"
 
 const highlights = [
   <Highlight>
-    <PurpleText>Earn yield</PurpleText> from various market activities without requiring active management.
+    <PurpleText>Earn yield</PurpleText> from various market activities
   </Highlight>,
   <Highlight>
-    Enjoy the flexibility to deposit and withdraw capital at <PurpleText>any time.</PurpleText>
+    Enjoy the <PurpleText>flexibility to deposit and withdraw</PurpleText> capital at any time
   </Highlight>,
   <Highlight>
-    Leverage <PurpleText>capital-efficient</PurpleText> strategies optimized for different market conditions.
+    Leverage optimized, <PurpleText>capital-efficient strategies</PurpleText>
   </Highlight>,
   <Highlight>
-    Easily diversify your portfolio <PurpleText>across multiple automated</PurpleText> yield-generating vaults.
+    Easily diversify <PurpleText>across multiple</PurpleText> automated vaults
   </Highlight>,
   <Highlight>
-    Benefit from professionally designed and <PurpleText>actively monitored</PurpleText> algorithms.
+    Benefit from professionally <PurpleText>crafted algorithms</PurpleText>
   </Highlight>,
   <Highlight>
-    Access <PurpleText>sophisticated trading</PurpleText> strategies previously available only to experts
+    Access <PurpleText>sophisticated trading</PurpleText> strategies
   </Highlight>
 ]
 
@@ -69,6 +69,20 @@ const Vaults = () => {
         />
       </Stack>
       <Stack direction="vertical" className="products-metrics vaults" style={{ width: "50%" }}>
+        <Accordion className="only-mobile">
+          <Accordion.Item eventKey="3">
+            <Accordion.Header>
+              <h6>Details</h6>
+            </Accordion.Header>
+            <Accordion.Body>
+              <ProductInfoCard
+                headline="Automated Yield Through Smart Vaults"
+                highlights={highlights}
+                totals={undefined}
+              />
+            </Accordion.Body>
+          </Accordion.Item>
+        </Accordion>
         {vaults ? (
           <div className="products-detail-container">
             <Stack direction="horizontal" gap={0} className="products-header">

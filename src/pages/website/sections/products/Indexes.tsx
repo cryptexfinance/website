@@ -1,5 +1,5 @@
 import React from "react"
-import { Button, Col, Image, Spinner, Stack } from "react-bootstrap"
+import { Accordion, Button, Col, Image, Spinner, Stack } from "react-bootstrap"
 import { useTranslation } from "gatsby-plugin-react-i18next"
 import { graphql } from "gatsby"
 
@@ -51,6 +51,20 @@ const Indexes = () => {
         />
       </Stack>
       <Stack direction="vertical" className="products-metrics indexes" style={{ width: "50%" }}>
+        <Accordion className="only-mobile">
+          <Accordion.Item eventKey="2">
+            <Accordion.Header>
+              <h6>Details</h6>
+            </Accordion.Header>
+            <Accordion.Body>
+              <ProductInfoCard
+                headline="Access diversified crypto exposure through curated indexes"
+                highlights={highlights}
+                totals={undefined}
+              />
+            </Accordion.Body>
+          </Accordion.Item>
+        </Accordion>
         {setTokens ? (
           <div className="products-detail-container">
             <Stack direction="horizontal" gap={0} className="products-header">

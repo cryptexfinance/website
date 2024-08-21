@@ -294,7 +294,16 @@ const Perpetuals = () => {
               <ProductInfoCard
                 headline="Precise and Powerful Perpetual Trading"
                 highlights={highlights}
-                totals={undefined}
+                totals={[
+                  {
+                    title: "Total Liquidity",
+                    value: totalLiquidity
+                  },
+                  {
+                    title: "Open Interest",
+                    value: totalOpenInteres || "$0.00"
+                  },
+                ]}
               />
             </Accordion.Body>
           </Accordion.Item>
@@ -342,7 +351,7 @@ const Perpetuals = () => {
             <Spinner animation="border" variant="primary" />
           </Stack>
         )}
-        <Stack direction="horizontal" gap={3} className="products-totals only-mobile">
+        {/* <Stack direction="horizontal" gap={3} className="products-totals only-mobile">
           <Col lg={6} sm={12} className="total-box">
             <span className="total-title">{t('total-liquidity')}</span>
             <span className="total-value">{totalLiquidity}</span>
@@ -351,7 +360,7 @@ const Perpetuals = () => {
             <span className="total-title">{t('total-interest')}</span>
             <span className="total-value">{totalOpenInteres}</span>
           </Col>
-        </Stack>
+        </Stack> */}
       </Stack>
     </Stack>
   )

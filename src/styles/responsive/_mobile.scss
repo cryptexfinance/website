@@ -68,24 +68,18 @@
     line-height: 6rem; 
   }
 
-  .video{
+  .video, .bgvid{
+    display: block;
     object-fit: fill;
     width: 240%;
     margin-left: -122%;
-    height: 96% !important;
+    height: 99% !important;
     //width: 100%;
     //margin-left: 0px;
     //height: 100% !important;
     margin-top: 0rem;
-    padding-top: 1rem;
+    padding-top: 0rem;
     overflow: hidden;
-
-    &.desktop {
-      display: none;
-    }
-    &.mobile {
-      display: block;
-    }
   }
 
   .main-brand-text{
@@ -135,7 +129,7 @@
   .navbar,
   .navbar div {
     height: 60px;
-    background: $color-black;
+    background: $color-navbar-button;
     font-family: $font-primary;
     font-style: normal;
     font-weight: normal;
@@ -158,7 +152,7 @@
   }
   .nav-links a {
     z-index: 30;
-    background: $color-black;
+    background: $color-navbar-button;
     padding-top: 35px;
     padding-bottom: 35px;
     text-align: center;
@@ -448,12 +442,23 @@
   }
 
   .section-products {
+    padding-top: 10rem;
+
+    .nav-tabs {
+      overflow-x: scroll;
+      flex-wrap: nowrap;
+    }
+
     .nav-item {
-      width: 50%;
-      min-width: 50%;
+      width: fit-content;
+      min-width: 27rem;
       height: 12rem;
       .nav-link {
-        height: 11.3rem;
+        height: 11.5rem;
+      }
+      .nav-link.active {
+        border-bottom: 2px solid $shadow-purple-neon;
+        // border-bottom-color: $shadow-purple-neon;
       }
     }
 
@@ -493,13 +498,13 @@
       }
 
       .product-info-totals { 
-        margin-top: 4rem;
+        margin-top: 5rem;
         padding-top: 4rem;
         padding-bottom: 3rem;
 
         .total-box-value {
           font-size: 5rem !important;
-          margin-bottom: 2rem;
+          margin-bottom: 2.5rem;
         }
         .total-box-title {
           font-size: 4rem !important;

@@ -92,8 +92,8 @@ const NavbarMenu = props => {
             className="justify-content-start"
           >
             <Nav className="nav-links">
-              <Nav.Link as={Link} to={productsUrl} title="Products">
-                Products
+              <Nav.Link as={Link} to={productsUrl} title="Markets">
+                Markets
               </Nav.Link>
               <div className="nav-links-divisor" />
             </Nav>     
@@ -137,6 +137,7 @@ const NavbarMenu = props => {
               </Nav.Link>         
             </Nav>
           </Navbar.Collapse>
+          <LangDropdown />
           <a
             href={appEndpoint}
             target="_blank"
@@ -145,7 +146,6 @@ const NavbarMenu = props => {
           >
             {t('launch-app')}
           </a>
-          <LangDropdown /> 
         </Navbar>
       </div>
     )

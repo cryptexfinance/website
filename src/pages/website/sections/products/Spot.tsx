@@ -52,7 +52,7 @@ const Spot = () => {
 
   return (
     <Stack direction="horizontal" className="products" gap={3} style={{ padding: "1rem 0.5rem" }} >
-      <Stack direction="vertical" className="products-info" style={{ width: "35%", maxWidth: "50%", height: "30.5rem" }}>
+      <Stack direction="vertical" className="products-info" style={{ width: "35%", maxWidth: "50%", height: "27.5rem" }}>
         <ProductInfoCard
           headline="Seamless Spot Trading Across Chains"
           highlights={highlights}
