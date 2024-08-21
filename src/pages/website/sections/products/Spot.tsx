@@ -60,7 +60,7 @@ const Spot = () => {
         />
       </Stack>
       <Stack direction="vertical" className="products-metrics indexes" style={{ width: "fit-content" }}>
-        <Accordion defaultActiveKey="0" className="only-mobile">
+        <Accordion className="only-mobile">
           <Accordion.Item eventKey="0">
             <Accordion.Header>
               <h6>Details</h6>

@@ -285,8 +285,8 @@ const Perpetuals = () => {
         />
       </Stack>
       <Stack direction="vertical" className="products-metrics" style={{ width: "52%" }}>
-        <Accordion defaultActiveKey="0" className="only-mobile">
-          <Accordion.Item eventKey="0">
+        <Accordion className="only-mobile">
+          <Accordion.Item eventKey="1">
             <Accordion.Header>
               <h6>Details</h6>
             </Accordion.Header>

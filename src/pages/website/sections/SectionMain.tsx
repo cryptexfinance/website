@@ -5,7 +5,7 @@ import { useTranslation } from "gatsby-plugin-react-i18next"
 import appEndpoint from "../../../endpoint"
 import bgMobilePoster from "../../../../static/mobile_poster.png"
 import bgVideo from "../../../../static/bg_main_pi.webm"
-// import bgVideoMobile from "../../../../static/bg_mobile_pi.mp4"
+import bgVideoMobile from "../../../../static/bg_mobile_pi.mp4"
 
 const SectionMain = () => {
   const { t } = useTranslation()
@@ -21,7 +21,7 @@ const SectionMain = () => {
         className="video bgvid mobile"
         id="bgvidm"
       >
-        <source src={bgVideo} type="video/mp4" />
+        <source src={bgVideo} type="video/webm" />
       </video>
       <video
         autoPlay
