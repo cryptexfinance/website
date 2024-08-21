@@ -6,17 +6,11 @@ import { BsCheckCircle } from "react-icons/bs";
 const TotalBox = ({ title, value, divider }: { title: string, value: string, divider?: boolean }) => {
   return (
     <>
-      <Stack direction="vertical" className="total-box" >
-        <span
-          style={{
-            fontSize: "1.7rem",
-            color: "#ffffff",
-            textShadow: "0 4px 13px rgba(223, 33, 254, 0.7)",
-          }}
-        >
+      <Stack direction="vertical" className="total-box">
+        <span className="total-box-value">
           {value}
         </span>
-        <h3 style={{ color: "#A9A7BE" }} >{title}</h3>
+        <h3 className="total-box-title">{title}</h3>
       </Stack>
       {divider && (
         <div className="divider" />
@@ -42,16 +36,13 @@ export const ProductInfoCard = ({ headline, highlights, totals }: InfoCardProps)
           width: "100%",
         }}
       >
-        <h2 style={{ fontSize: "1.5rem", lineHeight: "1.8rem" }}>
+        <h2 className="product-info-title">
           {headline}
         </h2>
         <Stack
+          className="product-info-highlights"
           direction="vertical"
           gap={2}
-          style={{
-            marginTop: "1.5rem",
-            paddingLeft: "0.5rem",
-          }}
         >
           {highlights && highlights.map((highlight, index) => (
             <Stack key={`h-${index}`} direction="horizontal" gap={2}>
@@ -62,15 +53,7 @@ export const ProductInfoCard = ({ headline, highlights, totals }: InfoCardProps)
         </Stack>
       </Stack>
       {totals && (
-        <Stack
-          direction="horizontal"
-          gap={1}
-          style={{
-            padding: "0.7rem 0rem",
-            backgroundColor: "#090909",
-            borderTop: "0.5px solid rgba(33, 33, 56, 0.70)",
-          }}
-        >
+        <Stack className="product-info-totals" direction="horizontal" gap={1}>
           {totals.map((total, index) => (
             <TotalBox
               key={index}

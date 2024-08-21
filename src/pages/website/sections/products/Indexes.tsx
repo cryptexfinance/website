@@ -50,7 +50,7 @@ const Indexes = () => {
           totals={undefined}
         />
       </Stack>
-      <Stack direction="vertical" className="products-metrics" style={{ width: "50%" }}>
+      <Stack direction="vertical" className="products-metrics indexes" style={{ width: "50%" }}>
         {setTokens ? (
           <div className="products-detail-container">
             <Stack direction="horizontal" gap={0} className="products-header">

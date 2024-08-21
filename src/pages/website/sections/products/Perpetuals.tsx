@@ -288,11 +288,11 @@ const Perpetuals = () => {
         <Accordion defaultActiveKey="0" className="only-mobile">
           <Accordion.Item eventKey="0">
             <Accordion.Header>
-              <h6>Product Info</h6>
+              <h6>Details</h6>
             </Accordion.Header>
             <Accordion.Body>
               <ProductInfoCard
-                headline="Ut enim ad minim veniam, quis nostrud exercitation."
+                headline="Precise and Powerful Perpetual Trading"
                 highlights={highlights}
                 totals={undefined}
               />
@@ -303,7 +303,7 @@ const Perpetuals = () => {
           <div className="products-detail-container">
             <Stack direction="horizontal" gap={0} className="products-header">
               <Col lg={4} md={4}>
-                <span className="market-title asset">{t('asset')}</span>
+                <span className="product-title asset">{t('asset')}</span>
               </Col>
               <Col lg={2} md={2} className="text-right">
                 <span className="product-title">{t('price')}</span>

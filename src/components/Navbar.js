@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react"
 import { Dropdown, Navbar, Nav } from "react-bootstrap"
-import Flag from 'react-flagkit'
+import { MdOutlineLanguage } from "react-icons/md";
 import { useStaticQuery, graphql } from "gatsby"
 
 import { Link, useI18next, useTranslation } from "gatsby-plugin-react-i18next"
@@ -27,7 +27,7 @@ const languagesInfo = {
 }
 
 const NavbarMenu = props => {
-  const { languages, originalPath, t, i18n } = useI18next()
+  const { languages, originalPath, t } = useI18next()
   const [siteUrl, setSiteUrl] = useState("")
   const dataq = useStaticQuery(graphql`
     query {
@@ -55,17 +55,12 @@ const NavbarMenu = props => {
   const LangDropdown = () => (
     <Dropdown className="language-dropdown">
       <Dropdown.Toggle>
-        <Flag
-          country={languagesInfo[i18n.resolvedLanguage] ? languagesInfo[i18n.resolvedLanguage].country : 'us'}
-          size={28}
-          className="flag"
-        />
+        <MdOutlineLanguage size={28} />
       </Dropdown.Toggle>
       <Dropdown.Menu>
         {languages.map((lang) => (
           <Dropdown.Item key={lang}>
             <Link to={originalPath} language={lang !== 'us' ? lang : undefined} className="lang-link">
-              <Flag country={languagesInfo[lang].country} size={20} className="flag" />
               <span className="lang-text">{languagesInfo[lang].name}</span>
             </Link>
           </Dropdown.Item>

@@ -446,12 +446,21 @@
 
   .section-products {
     .nav-item {
-      width: 33%;
-      min-width: 33%;
+      width: 50%;
+      min-width: 50%;
+      height: 12rem;
+      .nav-link {
+        height: 11.3rem;
+      }
     }
 
     .nav-link {
       font-size: 5rem;
+    }
+
+    span {
+      font-size: 3.5rem !important;
+      line-height: 3.8rem;
     }
 
     .products-loading {
@@ -474,21 +483,34 @@
       padding: 2rem 1rem !important;
       border-color: rgba(164, 64, 242, 0.3);
 
-      h2 {
+      .product-info-title {
         font-size: 4rem !important;
         line-height: 4.5rem;
         margin-bottom: 2.2rem;
       }
-      p, h6 {
+
+      .product-info-totals { 
+        margin-top: 4rem;
+        padding-top: 4rem;
+        padding-bottom: 3rem;
+
+        .total-box-value {
+          font-size: 5rem !important;
+          margin-bottom: 2rem;
+        }
+        .total-box-title {
+          font-size: 4rem !important;
+        }
+      }
+
+      .highlight {
         font-size: 3.5rem !important;
-        line-height: 3.8rem;
+        line-height: 4rem;
         margin-left: 1.3rem;
-        margin-bottom: 1rem;
+        margin-bottom: 1.3rem;
+        width: 95%;
       }
-      span {
-        font-size: 3.5rem !important;
-        line-height: 3.8rem;
-      }
+
       svg {
         width: 18px;
         height: 18px;
@@ -585,6 +607,21 @@
       }
     }
 
+    .indexes {
+      .text-purple {
+        font-size: 4.5rem;
+        margin-top: 1rem;
+      }
+    }
+
+    .vaults {
+      .product-row-item {
+        .margin-right {
+          margin-right: 1rem;
+        }
+      }
+    }
+
     .only-mobile {
       display: block;
       &.col-sm-12 {
@@ -639,7 +676,7 @@
       &-icon {
         width: 30px;
         height: 30px;
-        margin-right: 16px;
+        margin-right: 14px;
 
         &.dfp {
           width: 30px;

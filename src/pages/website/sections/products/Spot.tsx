@@ -1,5 +1,5 @@
 import React from "react"
-import { Stack } from "react-bootstrap"
+import { Accordion, Stack } from "react-bootstrap"
 // import { useTranslation } from "react-i18next"
 import { graphql } from "gatsby"
 
@@ -31,6 +31,21 @@ const highlights = [
   </Highlight>
 ]
 
+const totals = [
+  {
+    title: "Chains",
+    value: "28"
+  },
+  {
+    title: "Bridges",
+    value: "20"
+  },
+  {
+    title: "Dexes",
+    value: "38"
+  },
+]
+
 const Spot = () => {
   // const { t } = useTranslation()
   const isSSR = typeof window === "undefined"
@@ -41,23 +56,24 @@ const Spot = () => {
         <ProductInfoCard
           headline="Seamless Spot Trading Across Chains"
           highlights={highlights}
-          totals={[
-            {
-              title: "Chains",
-              value: "28"
-            },
-            {
-              title: "Bridges",
-              value: "20"
-            },
-            {
-              title: "Dexes",
-              value: "38"
-            },
-          ]}
+          totals={totals}
         />
       </Stack>
       <Stack direction="vertical" className="products-metrics indexes" style={{ width: "fit-content" }}>
+        <Accordion defaultActiveKey="0" className="only-mobile">
+          <Accordion.Item eventKey="0">
+            <Accordion.Header>
+              <h6>Details</h6>
+            </Accordion.Header>
+            <Accordion.Body>
+              <ProductInfoCard
+                headline="Seamless Spot Trading Across Chains"
+                highlights={highlights}
+                totals={totals}
+              />
+            </Accordion.Body>
+          </Accordion.Item>
+        </Accordion>
         <Stack className="products-detail-container">
           {!isSSR && (
             <React.Suspense fallback={<div />}>

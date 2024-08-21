@@ -199,6 +199,36 @@ body {
     border-radius: 5px;
     overflow-y: scroll;
 
+    .product-info-title {
+      font-size: 1.5rem;
+      line-height: 1.8rem;
+    }
+
+    .product-info-highlights {
+      margin-top: 1.5rem;
+      padding-left: 0.5rem;
+    }
+
+    .product-info-totals {
+      padding: 0.7rem 0rem;
+      background-color: #090909;
+      border-top: 0.5px solid rgba(33, 33, 56, 0.70);
+
+      .total-box-value {
+        font-size: 1.7rem;
+        color: #ffffff;
+        text-shadow: 0 4px 13px rgba(223, 33, 254, 0.7);
+      }
+
+      .total-box-title {
+        color: #A9A7BE;
+      }
+    }
+
+    .highlight {
+      font-size: 1.1rem;
+    }
+
     .total-box {
       background-color: #090909;
       align-items: center;

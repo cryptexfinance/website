@@ -68,16 +68,17 @@ const Vaults = () => {
           totals={undefined}
         />
       </Stack>
-      <Stack direction="vertical" className="products-metrics" style={{ width: "50%" }}>
+      <Stack direction="vertical" className="products-metrics vaults" style={{ width: "50%" }}>
         {vaults ? (
           <div className="products-detail-container">
             <Stack direction="horizontal" gap={0} className="products-header">
               <Col lg={5} md={5}>
-                <span className="market-title asset">Vault</span>
+                <span className="product-title asset">Vault</span>
               </Col>
               <Col lg={4} md={4} className="text-right">
-                <span className="market-title asset">Liquidity</span>
+                <span className="product-title asset">Liquidity</span>
               </Col>
+
               <Col lg={3} md={3} className="text-right">
                 <span className="product-title">APR</span>
               </Col>
@@ -99,9 +100,10 @@ const Vaults = () => {
   )
 }
 
-const VaultItem = ({ index, vaultSnapshot } : { index: number, vaultSnapshot: VaultSnapshot }) => { 
-  const chainId = usePerpetualsChainId()
+const VaultItem = ({ index, vaultSnapshot }: { index: number, vaultSnapshot: VaultSnapshot }) => {
   const darkRow = index % 2 === 0
+  const { t } = useTranslation()
+  const chainId = usePerpetualsChainId()
   const { vaultType, totalAssets, parameter: { cap: maxCollateral } } = vaultSnapshot
   const metadata = VaultMetadata[chainId]?.[vaultType as PerennialVaultType]
   const vaultAccumulations = useVaults7dAccumulations()
@@ -127,7 +129,7 @@ const VaultItem = ({ index, vaultSnapshot } : { index: number, vaultSnapshot: Va
       href={`https://app.cryptex.finance/vaults/?market=${metadata.name}`}
       target="_blank"
     >
-      <Col lg={5} md={5} className="product-row-item">
+      <Col lg={5} md={5} className="product-row-item mobile-header">
         <Stack direction="horizontal" gap={1}>
           {vaultSnapshot.assets.map((asset) => {
             if (vaultType === PerennialVaultType.alpha && asset.asset === SupportedAsset.btc) {
@@ -144,22 +146,26 @@ const VaultItem = ({ index, vaultSnapshot } : { index: number, vaultSnapshot: Va
               />
             )
           })}
-          <span className="product-value ms-1">{metadata.name}</span>
+          <span className="product-value ms-2">{metadata.name}</span>
         </Stack>
       </Col>
       <Col lg={4} md={4} className="product-row-item text-right">
-        <NumericFormat
-          className="product-value"
-          value={formatBig6(totalAssets)}
-          displayType="text"
-          prefix="$"
-          thousandSeparator=","
-          decimalScale={0}
-        />
-        <span className="product-alue ms-2 me-2">/</span>
-        <span className="product-value">{formatBig6USDPrice(maxCollateral,  { compact: true })}</span>
+        <span className="product-title only-mobile">Liquidity</span>
+        <Stack direction="horizontal" gap={1} className="justify-content-end">
+          <NumericFormat
+            className="product-value"
+            value={formatBig6(totalAssets)}
+            displayType="text"
+            prefix="$"
+            thousandSeparator=","
+            decimalScale={0}
+          />
+          <span className="product-value ms-2 me-2">/</span>
+          <span className="product-value">{formatBig6USDPrice(maxCollateral, { compact: true })}</span>
+        </Stack>  
       </Col>
       <Col lg={3} md={3} className="product-row-item text-right flex-sm-row">
+        <span className="product-title only-mobile">APR</span>
         <span className="product-value text-green">{formatBig6Percent(vaultApr)}</span>
       </Col>
     </a>
@@ -218,18 +224,22 @@ const TcapVaultItem = ({ index } : { index: number }) => {
         </Stack>
       </Col>
       <Col lg={4} md={4} className="product-row-item text-right">
-        <NumericFormat
-          className="product-value"
-          value={formatBig18(totalAssets)}
-          displayType="text"
-          prefix="$"
-          thousandSeparator=","
-          decimalScale={0}
-        />
-        <span className="product-alue ms-2 me-2">/</span>
-        <span className="product-value">{formatBig18USDPrice(maxCollateral,  { compact: true })}</span>
+        <span className="product-title only-mobile">Liquidity</span>
+        <Stack direction="horizontal" gap={1} className="justify-content-end">
+          <NumericFormat
+            className="product-value"
+            value={formatBig18(totalAssets)}
+            displayType="text"
+            prefix="$"
+            thousandSeparator=","
+            decimalScale={0}
+          />
+          <span className="product-value ms-2 me-2">/</span>
+          <span className="product-value">{formatBig18USDPrice(maxCollateral, { compact: true })}</span>
+        </Stack>  
       </Col>
       <Col lg={3} md={3} className="product-row-item text-right flex-sm-row">
+        <span className="product-title only-mobile">APR</span>
         <span className="product-value text-green">{vaultApr}%</span>
       </Col>
     </a>
