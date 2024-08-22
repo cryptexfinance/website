@@ -3,7 +3,7 @@ import Col from "react-bootstrap/esm/Col"
 import { useTranslation } from "gatsby-plugin-react-i18next"
 
 import appEndpoint from "../../../endpoint"
-import bgMobilePoster from "../../../../static/mobile_poster.png"
+// import bgMobilePoster from "../../../../static/mobile_poster.png"
 import bgVideo from "../../../../static/bg_main_pi.webm"
 
 const SectionMain = () => {
@@ -16,7 +16,6 @@ const SectionMain = () => {
         loop
         muted
         playsInline
-        poster={bgMobilePoster}
         className="video bgvid"
         id="bgvidm"
       >

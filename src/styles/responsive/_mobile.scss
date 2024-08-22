@@ -73,7 +73,7 @@
     object-fit: fill;
     width: 240%;
     margin-left: -122%;
-    height: 99% !important;
+    height: 100% !important;
     //width: 100%;
     //margin-left: 0px;
     //height: 100% !important;
@@ -386,7 +386,7 @@
   }
 
   .section-main {
-    padding: 8rem 1rem 2rem 1rem;
+    padding: 0rem 1rem 2rem 1rem;
     position: relative;
     height: 100vh;
     width: 100%;
@@ -451,7 +451,7 @@
 
     .nav-item {
       width: fit-content;
-      min-width: 27rem;
+      min-width: 25rem;
       height: 12rem;
       .nav-link {
         height: 11.5rem;
