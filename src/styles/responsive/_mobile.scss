@@ -51,7 +51,7 @@
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
-    padding: 10rem 1rem !important;
+    padding: 14rem 1rem 6rem 1rem !important;
     height: 100%;
     width: 100%;
   }
@@ -73,7 +73,8 @@
     object-fit: fill;
     width: 240%;
     margin-left: -122%;
-    height: 100% !important;
+    max-height: 100vh;
+    height: 100vh !important;
     //width: 100%;
     //margin-left: 0px;
     //height: 100% !important;
@@ -442,7 +443,7 @@
   }
 
   .section-products {
-    padding-top: 10rem;
+    padding-top: 15rem;
 
     .nav-tabs {
       overflow-x: scroll;
@@ -450,9 +451,11 @@
     }
 
     .nav-item {
-      width: fit-content;
-      min-width: 25rem;
       height: 12rem;
+      width: fit-content;
+      min-width: fit-content;
+      padding: 0rem 2.5rem;
+      
       .nav-link {
         height: 11.5rem;
       }
