@@ -78,9 +78,9 @@
     width: 240%;
     top: 0px;
     margin-left: -122%;
-    max-height: 100vh;
-    height: 100vh !important;
-    margin-top: 0rem;
+    max-height: 110vh;
+    height: 110vh !important;
+    margin-top: -62px;
     //width: 100%;
     //margin-left: 0px;
     //height: 100% !important;
@@ -400,6 +400,7 @@
     width: 100%;
     margin-top: 0rem;
     overflow-x: hidden;
+    overflow-y: hidden;
     .col-sm-12, .col-md-8, .col-lg-8  {
       padding-left: 0px;
       padding-right: 0px;
