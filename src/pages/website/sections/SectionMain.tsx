@@ -36,7 +36,7 @@ const SectionMain = () => {
                 className="button-outlined-purple main-button main-button-link"
                 target="_blank"
               >
-                Launch
+                {t('launch-app')}
               </a>
             </div>
             <div className="">
