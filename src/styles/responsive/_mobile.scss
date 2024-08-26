@@ -48,6 +48,7 @@
   }
 
   .main-container{
+    position: absolute;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
@@ -69,20 +70,23 @@
   }
 
   .video, .bgvid{
+    position: relative;
     display: block;
     object-fit: fill;
-    width: 240%;
+    width: 950px;
+    margin-left: -470px;
+    // width: 240%;
     top: 0px;
-    margin-left: -122%;
+    // margin-left: -122%;
     max-height: 100vh;
-    height: 110vh !important;
+    height: 100vh !important;
     margin-top: -4rem;
     //width: 100%;
     //margin-left: 0px;
     //height: 100% !important;
     margin-top: 0rem;
     padding-top: 0rem;
-    overflow: hidden;
+    // overflow: hidden;
   }
 
   .main-brand-text{
