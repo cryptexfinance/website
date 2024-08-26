@@ -1,5 +1,9 @@
 @media only screen and (max-device-width: 600px) and (orientation: portrait) {
 
+  .mt-5 {
+    margin-top: 0rem !important;
+  }
+
   .nav-default {
     display: none;
   }
@@ -48,7 +52,6 @@
   }
 
   .main-container{
-    position: absolute;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
@@ -70,14 +73,11 @@
   }
 
   .video, .bgvid{
-    position: relative;
     display: block;
     object-fit: fill;
-    width: 950px;
-    margin-left: -470px;
-    // width: 240%;
+    width: 240%;
     top: 0px;
-    // margin-left: -122%;
+    margin-left: -122%;
     max-height: 100vh;
     height: 100vh !important;
     margin-top: -4rem;
@@ -86,7 +86,7 @@
     //height: 100% !important;
     margin-top: 0rem;
     padding-top: 0rem;
-    // overflow: hidden;
+    overflow: hidden;
   }
 
   .main-brand-text{
