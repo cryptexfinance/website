@@ -73,7 +73,7 @@ const Footer = () => {
       <div className="footer-info">
         <Stack direction="horizontal" gap={3}>
           <img className="menu-logo" src="/logo.svg" alt="Logo" />
-          <span style={{ fontSize: "1.4rem", textShadow: "0 1px 8px rgba(164,64,242, 0.8)" }}>
+          <span className="year-label">
             2024
           </span>
         </Stack>
