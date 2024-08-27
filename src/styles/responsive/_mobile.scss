@@ -456,6 +456,7 @@
 
     .nav-tabs {
       overflow-x: scroll;
+      overflow-y: hidden;
       flex-wrap: nowrap;
     }
 
@@ -467,6 +468,7 @@
       
       .nav-link {
         height: 11.5rem;
+        border-bottom: 2px solid transparent;
       }
       .nav-link.active {
         border-bottom: 2px solid $shadow-purple-neon;
