@@ -458,6 +458,10 @@
       overflow-x: scroll;
       overflow-y: hidden;
       flex-wrap: nowrap;
+      height: 13.5rem;
+      border: none;
+      scrollbar-color: #212024 #7d078520;
+      scrollbar-gutter: 1px;
     }
 
     .nav-item {
@@ -465,13 +469,14 @@
       width: fit-content;
       min-width: fit-content;
       padding: 0rem 2.5rem;
+      border-bottom: 1px solid $color-black;
       
       .nav-link {
-        height: 11.5rem;
-        border-bottom: 2px solid transparent;
+        height: 11.4rem;
+        border-bottom: 1px solid $color-black;
       }
       .nav-link.active {
-        border-bottom: 2px solid $shadow-purple-neon;
+        border-bottom: 1.7px solid $shadow-purple-neon;
         // border-bottom-color: $shadow-purple-neon;
       }
     }
