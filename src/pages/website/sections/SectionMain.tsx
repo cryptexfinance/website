@@ -12,12 +12,12 @@ const SectionMain = () => {
   return (
     <div className="section-main">
       <video
+        id="bgvidm"
         autoPlay
         loop
         muted
         playsInline
         className="video bgvid"
-        id="bgvidm"
       >
         <source src={bgVideo} type="video/webm" />
       </video>
