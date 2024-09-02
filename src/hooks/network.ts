@@ -1,28 +1,32 @@
-import { HermesClient, PriceUpdate } from '@perennial/sdk'
+import { HermesClient, PriceUpdate, SupportedChainId as PerennialSupportedChainId } from '@perennial/sdk'
 import EventEmitter from 'events'
 import { GraphQLClient } from 'graphql-request'
 import { PublicClient, createPublicClient, webSocket } from 'viem'
 
-
 import {
   PythMainnetUrl,
   PythTestnetUrl,
-  SupportedChainId,
-  DefaultChain,
+  SupportedChainIdType,
+  PerpetualsDefaultChain,
+  CrypdexDefaultChain,
   GraphUrls
 } from '../constants/network'
 
 
-export const useChainId = () => {
-  return DefaultChain.id as SupportedChainId
+export const useCrypdexChainId = () => {
+  return CrypdexDefaultChain.id as SupportedChainIdType
 }
 
 
-const viemWsClients = new Map<SupportedChainId, PublicClient>()
+export const usePerpetualsChainId = () => {
+  return PerpetualsDefaultChain.id as PerennialSupportedChainId
+}
+
+const viemWsClients = new Map<PerennialSupportedChainId, PublicClient>()
 // We need to create a WS public client directly instead of using Wagmi's hooks because the wagmi hook
 // returns a Fallback provider which does not support eth_subscribe
 export const useViemWsClient = () => {
-  const chainId = useChainId()
+  const chainId = usePerpetualsChainId()
   const providerUrl = useRPCProviderUrl()
 
   if (!viemWsClients.has(chainId)) {
@@ -37,7 +41,7 @@ const randomInteger = (min: number, max: number): number => {
 }
 
 export const useRPCProviderUrl = (): string => {
-  const alchemyKey = process.env.ALCHEMY_KEY || process.env.GATSBY_ALCHEMY_KEY
+  const alchemyKey = process.env.ALCHEMY_KEY_ARBITRUM || process.env.GATSBY_ALCHEMY_KEY_ARBITRUM
   const alchemyKey2 = process.env.ALCHEMY_KEY_2 || process.env.GATSBY_ALCHEMY_KEY_2
   const alchemyKey3 = process.env.ALCHEMY_KEY_3 || process.env.GATSBY_ALCHEMY_KEY_3
 
@@ -52,9 +56,9 @@ export const useRPCProviderUrl = (): string => {
   return pc.transport.url
 } */
 
-const graphClients = new Map<SupportedChainId, GraphQLClient>()
+const graphClients = new Map<PerennialSupportedChainId, GraphQLClient>()
 export const useGraphClient = () => {
-  const chainId = DefaultChain.id as SupportedChainId
+  const chainId = PerpetualsDefaultChain.id as PerennialSupportedChainId
 
   if (!graphClients.has(chainId)) graphClients.set(chainId, new GraphQLClient(GraphUrls[chainId]))
 
@@ -62,9 +66,9 @@ export const useGraphClient = () => {
   return graphClients.get(chainId)!
 }
 
-const graphClientsV1 = new Map<SupportedChainId, GraphQLClient>()
+const graphClientsV1 = new Map<PerennialSupportedChainId, GraphQLClient>()
 export const useGraphClientV1 = () => {
-  const chainId = DefaultChain.id as SupportedChainId
+  const chainId = PerpetualsDefaultChain.id as PerennialSupportedChainId
   if (!graphClients.has(chainId)) {
     graphClientsV1.set(
       chainId,
@@ -77,8 +81,8 @@ export const useGraphClientV1 = () => {
 }
 
 const pythClients = {
-  mainnet: new HermesClient(PythMainnetUrl, { timeout: 15000 }),
-  testnet: new HermesClient(PythTestnetUrl, { timeout: 15000 }),
+  mainnet: new HermesClient(PythMainnetUrl, { timeout: 30000 }),
+  testnet: new HermesClient(PythTestnetUrl, { timeout: 30000}),
 }
 
 export const usePyth = () => {

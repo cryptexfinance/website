@@ -4,8 +4,9 @@ import { useTranslation } from "gatsby-plugin-react-i18next"
 import twitter from "../../static/website/ecosystem/x_logo.svg"
 import discord from "../../static/website/ecosystem/discord.svg"
 import telegram from "../../static/website/ecosystem/telegram.svg"
-import medium from "../../static/website/ecosystem/medium.svg"
-import mailLogo from "../../static/website/protocol/mail.svg"
+import coingeckoLogo from "../../static/website/ecosystem/coingecko.svg"
+import coinmarketcapLogo from "../../static/website/ecosystem/coinmarketcap.png"
+import { Stack } from "react-bootstrap"
 
 
 type IconType = {
@@ -35,17 +36,17 @@ const socialIcons = [
     class: "",
   },
   {
-    href: "https://medium.com/cryptexfinance",
-    icon: medium,
-    alt: "Medium Logo",
-    class: "medium",
+    href: "https://www.coingecko.com/en/coins/cryptex-finance",
+    icon: coingeckoLogo,
+    alt: "Coingecko Logo",
+    class: "",
   },
   {
-    href: "https://cryptex.substack.com/",
-    icon: mailLogo,
-    alt: "Newsletter",
+    href: "https://coinmarketcap.com/es/currencies/cryptex-finance/",
+    icon: coinmarketcapLogo,
+    alt: "Conmarketcap Logo",
     class: "",
-  }
+  },
 ]
 
 const Footer = () => {
@@ -70,7 +71,12 @@ const Footer = () => {
   return (
     <section id="footer" className="footer">
       <div className="footer-info">
-        <img className="menu-logo" src="/logo.svg" alt="Logo" />
+        <Stack direction="horizontal" gap={3}>
+          <img className="menu-logo" src="/logo.svg" alt="Logo" />
+          <span className="year-label">
+            2024
+          </span>
+        </Stack>
         <p className="subtitle">
           {t('site-description')}
         </p>

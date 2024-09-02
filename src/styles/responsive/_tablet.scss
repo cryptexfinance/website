@@ -160,6 +160,10 @@ only screen and (max-device-width : 935px) and (orientation: landscape)
   .section-markets {
     margin-top: 10rem;
 
+    .products-tabs {
+      margin-top: 2rem;
+    }
+
     .markets-totals {
       flex-direction: row;
       margin-top: 1rem;
@@ -314,6 +318,39 @@ only screen and (max-device-width : 935px) and (orientation: landscape)
         }
       }
     }
+
+    .section-products {
+      .nav-tabs {
+        margin-top: 2rem;
+      }
+
+      .indexes {
+        display: flex;
+        flex-direction: column;
+
+        &-info {
+          width: 100% !important;
+          margin-bottom: 1rem;
+        }
+        &-metrics {
+          width: 100% !important;
+        }
+      }
+
+      .products-metrics {
+        display: flex;
+        flex-direction: column;
+
+        .perpetuals-info {
+          width: 100% !important;
+          margin-bottom: 1rem;
+        }
+
+        .perpetuals-metrics {
+          width: 100% !important;
+        }
+      }
+    }
   }
 
 }
@@ -341,7 +378,7 @@ only screen and (max-device-width : 935px) and (orientation: landscape)
     }
   }
 
-  .section-markets {
+  .section-products {
     padding-left: 0.8rem;
     padding-right: 0.8rem;
   }

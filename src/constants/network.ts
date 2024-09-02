@@ -1,41 +1,76 @@
-import { arbitrum, arbitrumSepolia } from "viem/chains"
-import { Chain, } from "viem"
-import { HermesClient } from "@perennial/sdk";
-// const { EvmPriceServiceConnection } = require('@pythnetwork/pyth-evm-js')
+import { arbitrum, arbitrumSepolia, base, mainnet } from "viem/chains"
+import { Chain, createPublicClient, http } from "viem"
+import { HermesClient, SupportedChainId as PerennialSupportedChainId } from "@perennial/sdk";
 
-export const chains = [arbitrum];
+
+const AlchemyKey = process.env.GATSBY_ALCHEMY_KEY || process.env.ALCHEMY_KEY || "";
+const AlchemyArbitrumKey = process.env.GATSBY_ALCHEMY_KEY_ARBITRUM || process.env.ALCHEMY_KEY_ARBITRUM || "";
+const AlchemyArbitrumSepoliaKey = process.env.GATSBY_ALCHEMY_KEY_ARBITRUM_SEPOLIA || process.env.ALCHEMY_KEY_ARBITRUM_SEPOLIA || "";
+
+export const chains = [arbitrum, arbitrumSepolia, mainnet];
 
 export const SupportedChainIds = [
   arbitrum.id,
   arbitrumSepolia.id,
+  mainnet.id,
 ] as const;
 
-export type SupportedChainId = (typeof SupportedChainIds)[number];
-
-export const Chains: { [chainId in SupportedChainId]: Chain } = {
+export const chainIdToChainMap = {
+  [mainnet.id]: mainnet,
   [arbitrum.id]: arbitrum,
   [arbitrumSepolia.id]: arbitrumSepolia,
+  [base.id]: base,
+}
+
+export type SupportedChainIdType = (typeof SupportedChainIds)[number];
+
+export const Chains: { [chainId in SupportedChainIdType]: Chain } = {
+  [arbitrum.id]: arbitrum,
+  [arbitrumSepolia.id]: arbitrumSepolia,
+  [mainnet.id]: mainnet,
 };
 
 export const isSupportedChain = (chainId?: number) =>
   chainId !== undefined &&
-  SupportedChainIds.includes(chainId as SupportedChainId);
+  SupportedChainIds.includes(chainId as SupportedChainIdType);
 
-export const DefaultChain = chains[0];
 
-export const GraphUrls: { [chainId in SupportedChainId]: string } = {
-  [arbitrum.id]: process.env.GATSBY_GRAPH_URL_ARBITRUM || process.env.GRAPH_URL_ARBITRUM || "",
-  [arbitrumSepolia.id]: process.env.GATSBY_GRAPH_URL_ARBITRUM_SEPOLIA ?? "",
-};
-
-export const ExplorerNames: { [chainId in SupportedChainId]: string } = {
-  [arbitrum.id]: arbitrum.blockExplorers.default.name,
-  [arbitrumSepolia.id]: arbitrumSepolia.blockExplorers.default.name,
+export const rpcUrls: { [chainId in SupportedChainIdType]: string } = {
+  [arbitrum.id]: `https://arb-mainnet.g.alchemy.com/v2/${AlchemyArbitrumKey}`,
+  [arbitrumSepolia.id]: `https://arb-sepolia.g.alchemy.com/v2/${AlchemyArbitrumSepoliaKey}`,
+  [mainnet.id]: `https://eth-mainnet.g.alchemy.com/v2/${AlchemyKey}`,
 }
 
-export const ExplorerURLs: { [chainId in SupportedChainId]: string } = {
+export const getPublicClient = (chainId: SupportedChainIdType) => { 
+  return createPublicClient({
+    batch: {
+      multicall: true,
+    },
+    chain: chainIdToChainMap[chainId],
+    transport: http(rpcUrls[chainId])
+  })
+}
+
+export const PerpetualsDefaultChain = chains[0];
+
+export const CrypdexDefaultChain = chains[2];
+
+export const GraphUrls: { [chainId in PerennialSupportedChainId]: string } = {
+  [arbitrum.id]: process.env.GATSBY_GRAPH_URL_ARBITRUM || process.env.GRAPH_URL_ARBITRUM || "",
+  [arbitrumSepolia.id]: process.env.GATSBY_GRAPH_URL_ARBITRUM_SEPOLIA ?? "",
+  [base.id]: "",
+};
+
+export const ExplorerNames: { [chainId in SupportedChainIdType]: string } = {
+  [arbitrum.id]: arbitrum.blockExplorers.default.name,
+  [arbitrumSepolia.id]: arbitrumSepolia.blockExplorers.default.name,
+  [mainnet.id]: mainnet.blockExplorers.default.name,
+}
+
+export const ExplorerURLs: { [chainId in SupportedChainIdType]: string } = {
   [arbitrum.id]: arbitrum.blockExplorers.default.url,
   [arbitrumSepolia.id]: arbitrumSepolia.blockExplorers.default.url,
+  [mainnet.id]: mainnet.blockExplorers.default.url,
 };
 
 export const PythMainnetUrl = "https://perennial.rpc.p2p.world"

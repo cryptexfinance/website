@@ -1,7 +1,7 @@
 
 // Main Website
 
-h1, h2, h3, h4, h5, h6, span, p {
+h1, h2, h3, h4, h5, h6, span, p, li {
   color: $color-dark-clean;
   font-family: $font-primary;
 }
@@ -32,6 +32,35 @@ h3, .terciary-header {
   letter-spacing: 0.3px;
   text-align: left;
 }
+
+.accordion-button, .accordion-button:not(.collapsed) {
+  background-color: $color-blackground;
+  border: none;
+  border: 0.5px solid $color-primary-purple;
+  border-color: #a540f263;
+  border-radius: 5px;
+  box-shadow: none;
+}
+
+.accordion-button:focus {
+  box-shadow: none;
+  border-color: #a540f27a;
+}
+
+.accordion-button::after {
+  background-image: url("../../static/website/chevron-down.svg");
+}
+.accordion-button:not(.collapsed)::after {
+  background-image: url("../../static/website/chevron-down.svg");
+}
+
+.accordion-item {
+  background-color: $color-blackground;
+  border: none;
+  border-radius: 5px;
+  margin-bottom: 1rem;
+}
+
 
 .no-margin {
   margin: 0;
@@ -123,11 +152,11 @@ span {
   font-style: normal;
   font-weight: bold;
   font-size: 2rem;
-  line-height: 2rem;
+  line-height: 2.3rem;
   letter-spacing: 0.8px;
   color: #e2e1ee;
   text-align: left;
-  width: 55%;
+  width: 47%;
   margin-top: 0.65rem;
 
   @media (max-width: 1300px) {
@@ -140,6 +169,7 @@ span {
 }
 
 .text-purple {
+  font-size: 1.1rem;
   color: $color-primary-purple;
 }
 
@@ -354,11 +384,15 @@ span {
 }
 
 .language-dropdown {
-  margin-right: 0.45rem;
+  margin-right: 0rem;
   .dropdown-toggle {
-    border: 1.3px solid #5c5b79;
-    padding-top: 4px;
-    padding-bottom: 4px;
+    border: none;
+    padding-top: 4px 5px;
+  }
+  .dropdown-toggle:active, .dropdown-toggle:focus, .dropdown-toggle:focus-visible {
+    background-color: $color-navbar-button;
+    box-shadow: none;
+    border: none;
   }
   .dropdown-toggle::after {
     display: none;

@@ -1,31 +1,42 @@
 import React, { useEffect, useMemo, useState } from "react"
 import { ethers } from "ethers"
-import { Col, Image, Spinner, Stack } from "react-bootstrap"
+import { Accordion, Col, Image, Spinner, Stack } from "react-bootstrap"
 import { Big6Math, calcNotional, calcTakerLiquidity, formatBig6USDPrice, MarketSnapshot, SupportedAsset } from "@perennial/sdk"
 import { graphql } from "gatsby"
 import { useTranslation } from "gatsby-plugin-react-i18next"
 
+import tcapLogo from '../../../../../static/website/icons/tcap.png'
 import { useMarketSnapshots } from "../../../../hooks/markets"
 import { useFormattedMarketBarValues } from "../../../../hooks/metrics"
 import { AssetMetadata } from "../../../../constants/markets"
 import { addPositions, nextPosition } from "../../../../utils/positionUtils"
 import { VaultSnapshot } from "../../../../hooks/marketsV1"
-import tcapLogo from '../../../../../static/website/markets/tcap.png'
 import { useTcapPriceChanges } from "../../../../hooks/graph"
 
-// import { ProductInfoCard } from "./common"
+import { ProductInfoCard } from "../../../../components/ProductInfoCard"
+import { Highlight, PurpleText } from "../../../../components/highlights"
 
-/* const highlights = [
-  <p className="no-margin" style={{ fontSize: "1.1rem" }}>
-    Lorem <span className="text-purple" style={{ fontSize: "1.1rem" }}>ipsum dolor</span> sit amet, consectetur.
-  </p>,
-  <p className="no-margin" style={{ fontSize: "1.1rem" }}>
-    Excepteur sint <span className="text-purple" style={{ fontSize: "1.1rem" }}>occaecat cupidatat</span> non proident.
-  </p>,
-  <p className="no-margin" style={{ fontSize: "1.1rem" }}>
-    Sunt in culpa qui officia deserunt <span className="text-purple" style={{ fontSize: "1.1rem" }}> mollit anim</span>.
-  </p>
-] */
+
+const highlights = [
+  <Highlight>
+    Trade popular and <PurpleText>unique crypto assets</PurpleText>.
+  </Highlight>,
+  <Highlight>
+    Benefit from <PurpleText>deep liquidity pools</PurpleText> for smooth trade execution.
+  </Highlight>,
+  <Highlight>
+    Enjoy <PurpleText>competitive fees</PurpleText> and minimal slippage across all pairs.
+  </Highlight>,
+  <Highlight>
+    Execute precise trades with <PurpleText>oracle-driven price feeds.</PurpleText>
+  </Highlight>,
+  <Highlight>
+    Utilize <PurpleText>advanced order types</PurpleText> for sophisticated trading.
+  </Highlight>,
+  <Highlight>
+    Monitor <PurpleText>real-time prices</PurpleText>, 24h changes, and liquidity data.
+  </Highlight>
+]
 
 const PriceBox = ({ currentPrice }: { currentPrice: bigint }) => {
   const { t } = useTranslation()
@@ -38,9 +49,9 @@ const PriceBox = ({ currentPrice }: { currentPrice: bigint }) => {
   }, [currentPrice])
 
   return (
-    <Col lg={2} md={2} sm={12} className="market-row-item not-on-mobile text-right">
-      <span className="market-title only-mobile">{t('price')}</span>
-      <span className={"market-value ".concat(positiveChange ? "text-green" : "text-red")}>
+    <Col lg={2} md={2} sm={12} className="product-row-item not-on-mobile text-right">
+      <span className="product-title only-mobile">{t('price')}</span>
+      <span className={"product-value ".concat(positiveChange ? "text-green" : "text-red")}>
         {formatBig6USDPrice(currentPrice)}
       </span>
     </Col>
@@ -55,47 +66,45 @@ const MarketRow = ({ index, asset, market, showOI }: { index: number, asset: Sup
 
   return (
     <a
-      key={index.toString()}
-      className={"market-row ".concat(darkRow ? "dark" : "")}
+      key={`mr-${asset}`}
+      className={"product-row ".concat(darkRow ? "dark" : "")}
       href={`https://app.cryptex.finance/?market=${asset}`}
       target="_blank"
     >
-      <Col className="market-row-item mobile-header" lg={showOI ? 2 : 4} md={showOI ? 2 : 4} sm={12}>
+      <Col className="product-row-item mobile-header" lg={showOI ? 2 : 4} md={showOI ? 2 : 4} sm={12}>
         <Stack direction="horizontal" gap={3}>
-          <Image className="market-logo" src={assetMetada.icon} width={36} height={36} />
+          <Image className="product-logo" src={assetMetada.icon} width={36} height={36} />
           <Stack direction="vertical" gap={0}>
-            <span className="market-value">{assetMetada.name}</span>
-            <span className="market-subvalue">{assetMetada.symbol}</span>
+            <span className="product-value">{assetMetada.name}</span>
+            <span className="product-subvalue">{assetMetada.symbol}</span>
           </Stack>
         </Stack>
-        <span className={`market-value price only-mobile ${!formattedValues.changeIsNegative ? "text-green" : "text-red"}`}>
+        <span className={`product-value price only-mobile ${!formattedValues.changeIsNegative ? "text-green" : "text-red"}`}>
           {formattedValues.price}
         </span>
       </Col>
       <PriceBox currentPrice={formattedValues.priceBI} />
-      <Col lg={2} md={2} sm={12} className="market-row-item text-right">
-        <span className="market-title only-mobile">{t('chagen24h')}</span>
-        <span className={`market-value ${!formattedValues.changeIsNegative ? "text-green" : "text-red"}`}>
-          {`${formattedValues.changeIsNegative ? "-" : "+"}${formattedValues.change}`}
+      <Col lg={2} md={2} sm={12} className="product-row-item text-right">
+        <span className="product-title only-mobile">{t('chagen24h')}</span>
+        <span className={`product-value ${!formattedValues.changeIsNegative ? "text-green" : "text-red"}`}>
+          {formattedValues.change}
         </span>
       </Col>
-      <Col lg={showOI ? 3 : 4} md={showOI ? 3 : 4} sm={12} className="market-row-item text-right">
-        <span className="market-title only-mobile">{t('ls-liquidity')}</span>
-        <span className="market-value">{formattedValues.totalLiquidity}</span>
+      <Col lg={showOI ? 3 : 4} md={showOI ? 3 : 4} sm={12} className="product-row-item text-right">
+        <span className="product-title only-mobile">{t('ls-liquidity')}</span>
+        <span className="product-value">{formattedValues.totalLiquidity}</span>
       </Col>
-      {showOI && (
-        <Col lg={3} md={3} sm={12} className="market-row-item text-right">
-          <span className="market-title  only-mobile">{t('ls-interes')}</span>
-          <span className="market-value">{formattedValues.openInterest}</span>
-        </Col>
-      )}
+      <Col lg={3} md={3} sm={12} className="product-row-item text-right only-mobile flex-sm-row">
+        <span className="product-title  only-mobile">{t('ls-interes')}</span>
+        <span className="product-value">{formattedValues.openInterest}</span>
+      </Col>
     </a>
   )
 }
 
 const MarketTcapRow = ({ index, tcapSnapshot, showOI }: { index: number, tcapSnapshot: VaultSnapshot, showOI: boolean }) => {
   const darkRow = index % 2 === 0
-  const { data: pricesData } = useTcapPriceChanges()
+  const { data: pricesData, error } = useTcapPriceChanges()
   const { longSnapshot, shortSnapshot } = tcapSnapshot
   const tcapPrice = parseFloat(ethers.formatEther(longSnapshot.latestVersion.price))
   const longGlobalPosition = nextPosition(longSnapshot.pre, longSnapshot.position)
@@ -112,6 +121,7 @@ const MarketTcapRow = ({ index, tcapSnapshot, showOI }: { index: number, tcapSna
   const { currentPrice, changeIsNegative, changePercent } = useMemo(() => {
     if (pricesData && pricesData.answerUpdateds) {
       const prices = pricesData.answerUpdateds
+
       if (prices.length > 0) {
         const currentPrice = parseFloat(ethers.formatEther(BigInt(prices[0].answer)))
         const price24H = prices.length > 1
@@ -131,49 +141,49 @@ const MarketTcapRow = ({ index, tcapSnapshot, showOI }: { index: number, tcapSna
       changeIsNegative: false,
       changePercent: 0
     }
-  }, [pricesData])
+  }, [pricesData, error])
 
   return (
     <a
       key={index.toString()}
-      className={"market-row tcap-row ".concat(darkRow ? "dark" : "")}
+      className={"product-row tcap-row ".concat(darkRow ? "dark" : "")}
       href={"https://app.cryptex.finance/v2/"}
       target="_blank"
     >
-      <Col className="market-row-item tcap-item mobile-header" lg={showOI ? 2 : 4} md={showOI ? 2 : 4} sm={12}>
+      <Col className="product-row-item tcap-item mobile-header" lg={showOI ? 2 : 4} md={showOI ? 2 : 4} sm={12}>
         <Stack direction="horizontal" gap={2}>
-          <Image className="market-logo" src={tcapLogo} width={36} height={36} />
+          <Image className="product-logo" src={tcapLogo} width={36} height={36} />
           <Stack direction="vertical" gap={0}>
-            <span className="market-value tcap">Total Crypto Market Cap</span>
-            <span className="market-subvalue">TCAP-USD</span>
+            <span className="product-value tcap">Total Crypto Market Cap</span>
+            <span className="product-subvalue">TCAP-USD</span>
           </Stack>
         </Stack>
-        <span className={`market-value price only-mobile ${!changeIsNegative ? "text-green" : "text-red"}`}>
-            ${currentPrice.toFixed(2)}
-        </span>
-      </Col>
-      <Col lg={2} md={2} sm={12} className="market-row-item not-on-mobile text-right">
-        <span className="market-title only-mobile">Price</span>
-        <span className={`market-value price ${!changeIsNegative ? "text-green" : "text-red"}`}>
+        <span className={`product-value price only-mobile ${!changeIsNegative ? "text-green" : "text-red"}`}>
           ${currentPrice.toFixed(2)}
         </span>
       </Col>
-      <Col lg={2} md={2} sm={12} className="market-row-item text-right">
-        <span className="market-title only-mobile">24h Change</span>
-        <span className={`market-value ${!changeIsNegative ? "text-green" : "text-red"}`}>
-          {`${changeIsNegative ? "" : "+"}${changePercent.toFixed(2)}`}%
+      <Col lg={2} md={2} sm={12} className="product-row-item not-on-mobile text-right">
+        <span className="product-title only-mobile">Price</span>
+        <span className={`product-value price ${!changeIsNegative ? "text-green" : "text-red"}`}>
+          ${currentPrice.toFixed(2)}
         </span>
       </Col>
-      <Col lg={showOI ? 3 : 4} md={showOI ? 3 : 4} sm={12} className="market-row-item text-right">
-        <span className="market-title only-mobile">L/S Liquidity</span>
-        <span className="market-value">
+      <Col lg={2} md={2} sm={12} className="product-row-item text-right">
+        <span className="product-title only-mobile">24h Change</span>
+        <span className={`product-value ${!changeIsNegative ? "text-green" : "text-red"}`}>
+          {changePercent.toFixed(2)}%
+        </span>
+      </Col>
+      <Col lg={showOI ? 3 : 4} md={showOI ? 3 : 4} sm={12} className="product-row-item text-right">
+        <span className="product-title only-mobile">L/S Liquidity</span>
+        <span className="product-value">
           {formatBig6USDPrice(tcapLiquidity.long, { compact: true })} / {formatBig6USDPrice(tcapLiquidity.short, { compact: true })}
         </span>
       </Col>
       {showOI && (
-        <Col lg={3} md={3} sm={12} className="market-row-item text-right">
-          <span className="market-title only-mobile">L/S Open Interest</span>
-          <span className="market-value">
+        <Col lg={3} md={3} sm={12} className="product-row-item text-right">
+          <span className="product-title only-mobile">L/S Open Interest</span>
+          <span className="product-value">
             {formatBig6USDPrice(globalOpenInterest.long, { compact: true })} / {formatBig6USDPrice(globalOpenInterest.short, { compact: true })}
           </span>
         </Col>
@@ -189,7 +199,7 @@ const Perpetuals = () => {
   const { markets, tcapMarket, sortedAssets, totalLiquidity, totalOpenInteres } = useMemo(() => {
     if (snapshots && snapshots.data && snapshots.data.markets) {
       const unsorted = Object.keys(snapshots.data.markets.market).map((market) => {
-        const marketSnapshot = snapshots.data.markets.market[market as SupportedAsset]
+        const marketSnapshot = snapshots?.data?.markets?.market[market as SupportedAsset]
         const marketPrice = marketSnapshot?.global?.latestPrice ?? 0n
         const latestPrice = marketSnapshot?.global?.latestPrice ?? 0n
         const liquidity = marketSnapshot ? calcTakerLiquidity(marketSnapshot) : undefined
@@ -257,25 +267,91 @@ const Perpetuals = () => {
   }, [snapshots, snapshots.status])
 
   return (
-    <Stack direction="horizontal" gap={2} className="markets-metrics">
-      {/* <Stack direction="vertical" style={{ width: "42%" }}>
+    <Stack direction="horizontal" gap={2} className="products">
+      <Stack direction="vertical" className="products-info" style={{ width: "48%" }}>
         <ProductInfoCard
-          headline="Ut enim ad minim veniam, quis nostrud exercitation."
+          headline="Precise and Powerful Perpetual Trading"
           highlights={highlights}
           totals={[
             {
               title: "Total Liquidity",
-              value: totalLiquidity.concat("+")
+              value: totalLiquidity
             },
             {
               title: "Open Interest",
-              value: totalOpenInteres?.concat("+") || "$0.00"
+              value: totalOpenInteres || "$0.00"
             },
           ]}
         />
-      </Stack> */}
-      <Stack direction="vertical" style={{ width: "100%" }}>
-        <Stack direction="horizontal" gap={3} className="markets-totals">
+      </Stack>
+      <Stack direction="vertical" className="products-metrics" style={{ width: "52%" }}>
+        <Accordion className="only-mobile">
+          <Accordion.Item eventKey="1">
+            <Accordion.Header>
+              <h6>Details</h6>
+            </Accordion.Header>
+            <Accordion.Body>
+              <ProductInfoCard
+                headline="Precise and Powerful Perpetual Trading"
+                highlights={highlights}
+                totals={[
+                  {
+                    title: "Total Liquidity",
+                    value: totalLiquidity
+                  },
+                  {
+                    title: "Open Interest",
+                    value: totalOpenInteres || "$0.00"
+                  },
+                ]}
+              />
+            </Accordion.Body>
+          </Accordion.Item>
+        </Accordion>
+        {markets && tcapMarket ? (
+          <div className="products-detail-container">
+            <Stack direction="horizontal" gap={0} className="products-header">
+              <Col lg={4} md={4}>
+                <span className="product-title asset">{t('asset')}</span>
+              </Col>
+              <Col lg={2} md={2} className="text-right">
+                <span className="product-title">{t('price')}</span>
+              </Col>
+              <Col lg={2} md={2} className="text-right">
+                <span className="product-title">{t('chagen24h')}</span>
+              </Col>
+              <Col lg={4} md={4} className="text-right">
+                <span className="product-title">{t('ls-liquidity')}</span>
+              </Col>
+              {/* <Col lg={3} md={3} className="text-right">
+                <span className="market-title">{t('ls-interes')}</span>
+              </Col> */}
+            </Stack>
+            <div className="products-detail">
+              {sortedAssets.map((sorteAsset, index) => {
+                if (sorteAsset.asset !== 'tcap') {
+                  const market = markets[sorteAsset.asset as SupportedAsset]
+                  if (!market || sorteAsset.asset === SupportedAsset.rlb) return <></>
+                  return (
+                    <MarketRow
+                      key={sorteAsset.asset}
+                      index={index}
+                      asset={sorteAsset.asset as SupportedAsset}
+                      market={market}
+                      showOI={false}
+                    />
+                  )
+                }
+                return <MarketTcapRow key={sorteAsset.asset} index={index} tcapSnapshot={tcapMarket} showOI={false} />
+              })}
+            </div>
+          </div>
+        ) : (
+          <Stack direction="vertical" className="products-loading">
+            <Spinner animation="border" variant="primary" />
+          </Stack>
+        )}
+        {/* <Stack direction="horizontal" gap={3} className="products-totals only-mobile">
           <Col lg={6} sm={12} className="total-box">
             <span className="total-title">{t('total-liquidity')}</span>
             <span className="total-value">{totalLiquidity}</span>
@@ -284,50 +360,7 @@ const Perpetuals = () => {
             <span className="total-title">{t('total-interest')}</span>
             <span className="total-value">{totalOpenInteres}</span>
           </Col>
-        </Stack>
-        {markets && tcapMarket ? (
-          <div className="markets-detail-container">
-            <Stack direction="horizontal" gap={0} className="markets-header">
-              <Col lg={2} md={2}>
-                <span className="market-title asset">{t('asset')}</span>
-              </Col>
-              <Col lg={2} md={2} className="text-right">
-                <span className="market-title">{t('price')}</span>
-              </Col>
-              <Col lg={2} md={2} className="text-right">
-                <span className="market-title">{t('chagen24h')}</span>
-              </Col>
-              <Col lg={3} md={3} className="text-right">
-                <span className="market-title">{t('ls-liquidity')}</span>
-              </Col>
-              <Col lg={3} md={3} className="text-right">
-                <span className="market-title">{t('ls-interes')}</span>
-              </Col>
-            </Stack>
-            <div className="markets-detail">
-              {sortedAssets.map((sorteAsset, index) => {
-                if (sorteAsset.asset !== 'tcap') {
-                  const market = markets[sorteAsset.asset as SupportedAsset]
-                  if (!market || sorteAsset.asset === SupportedAsset.rlb) return <></>
-                  return (
-                    <MarketRow
-                      key={index.toString()}
-                      index={index}
-                      asset={sorteAsset.asset as SupportedAsset}
-                      market={market}
-                      showOI={true}
-                    />
-                  )
-                }
-                return <MarketTcapRow key={index.toString()} index={index} tcapSnapshot={tcapMarket} showOI={true} />
-              })}
-            </div>
-          </div>
-        ) : (
-          <Stack direction="vertical" className="markets-loading">
-            <Spinner animation="border" variant="primary" />
-          </Stack>
-        )}
+        </Stack> */}
       </Stack>
     </Stack>
   )
