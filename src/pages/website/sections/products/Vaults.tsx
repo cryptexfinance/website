@@ -28,9 +28,6 @@ import { Highlight, PurpleText } from "../../../../components/highlights"
 
 const highlights = [
   <Highlight>
-    <PurpleText>Earn yield</PurpleText> from various market activities
-  </Highlight>,
-  <Highlight>
     Enjoy the <PurpleText>flexibility to deposit and withdraw</PurpleText> capital at any time
   </Highlight>,
   <Highlight>
@@ -43,7 +40,7 @@ const highlights = [
     Benefit from professionally <PurpleText>crafted algorithms</PurpleText>
   </Highlight>,
   <Highlight>
-    Access <PurpleText>sophisticated trading</PurpleText> strategies
+    Access <PurpleText>automated</PurpleText> strategies
   </Highlight>
 ]
 
@@ -63,7 +60,7 @@ const Vaults = () => {
     <Stack direction="horizontal" className="products" gap={3} style={{ padding: "1rem 0.5rem" }}>
       <Stack direction="vertical" className="products-info" style={{ width: "50%" }}>
         <ProductInfoCard
-          headline="Automated Yield Through Smart Vaults"
+          headline="Automated Strategies Through Smart Vaults"
           highlights={highlights}
           totals={undefined}
         />
@@ -140,7 +137,7 @@ const VaultItem = ({ index, vaultSnapshot }: { index: number, vaultSnapshot: Vau
     <a
       key={`mr-${metadata.name}`}
       className={"product-row ".concat(darkRow ? "dark" : "")}
-      href={`https://app.cryptex.finance/vaults/?market=${metadata.name}`}
+      href={`https://app.cryptex.finance/vaults/?vault-type=${vaultType}`}
       target="_blank"
     >
       <Col lg={5} md={5} className="product-row-item mobile-header">
@@ -228,7 +225,7 @@ const TcapVaultItem = ({ index } : { index: number }) => {
     <a
       key={`mr-tcap`}
       className={"product-row ".concat(darkRow ? "dark" : "")}
-      href={`https://app.cryptex.finance/vaults/?market=tcap`}
+      href={`https://app.cryptex.finance/vaults/?vault-type=tcap`}
       target="_blank"
     >
       <Col lg={5} md={5} className="product-row-item">
