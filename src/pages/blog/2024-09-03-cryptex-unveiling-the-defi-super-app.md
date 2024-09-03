@@ -13,6 +13,8 @@ tags:
   - Super APP
   - Cryptex
 ---
+![Super Dapp](/img/super-dapp.png "Cryptex Super DAPP")
+
 In the ever-evolving landscape of blockchain technology, decentralized finance (DeFi) has emerged as a revolutionary force, promising to democratize access to financial services and create a more inclusive global economy. As we stand on the cusp of a new era in DeFi, Cryptex is proud to introduce a game-changing concept: the DeFi super app. Join us as we explore the journey that has led us here and the exciting future that lies ahead.
 
 **The DeFi Journey: Building Block by Block**
