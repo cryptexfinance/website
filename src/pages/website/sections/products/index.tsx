@@ -6,8 +6,8 @@ import { useTranslation } from "gatsby-plugin-react-i18next"
 import Indexes from "./Indexes"
 import Perpetuals from "./Perpetuals"
 import Spot from "./Spot"
-import { PerennialSDKProvider } from "../../../../context/perennialSdkContext"
 import Vaults from "./Vaults"
+import { PerennialSDKProvider } from "../../../../context/perennialSdkContext"
 
 
 const SectionProducts = () => {
