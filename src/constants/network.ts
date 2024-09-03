@@ -75,7 +75,7 @@ export const ExplorerURLs: { [chainId in SupportedChainIdType]: string } = {
 
 export const PythMainnetUrl = "https://perennial.rpc.p2p.world"
 export const PythTestnetUrl = "https://perennial.rpc.p2p.world"
-export const PythDataFeedUrl = "https://benchmarks.pyth.network/v1/shims/tradingview"
+export const PythDataFeedUrl = "https://benchmarks.pyth.network/"
 
 export const BackupPythClient = new HermesClient(
   `${typeof window !== 'undefined' ? window.location.origin : 'https://app.perennial.finance'}/api/pyth`,
