@@ -1,17 +1,17 @@
 import { AssetMetadata as SDKAssetMetadata, AssetMetadataType as sdkAssetMetadataType, SupportedAsset } from '@perennial/sdk';
 
-import arbLogo from '../../static/website/markets/arb.png'
-import bnbLogo from '../../static/website/markets/bnb.png'
-import btcLogo from '../../static/website/markets/btc.png'
-import celestiaLogo from '../../static/website/markets/celestia.png'
-import linkLogo from '../../static/website/markets/chainlink.png'
-import ethLogo from '../../static/website/markets/eth.png'
-import msqBtcLogo from '../../static/website/markets/msqBtc.png'
-import msqEthLogo from '../../static/website/markets/msqEth.png'
-import polygonLogo from '../../static/website/markets/polygon.png'
-import solanaLogo from '../../static/website/markets/solana.png'
-import xrpLogo from '../../static/website/markets/xrp.png'
-import jupLogo from '../../static/website/markets/jup.png'
+import arbLogo from '../../static/website/icons/arb.png'
+import bnbLogo from '../../static/website/icons/bnb.png'
+import btcLogo from '../../static/website/icons/btc.png'
+import celestiaLogo from '../../static/website/icons/celestia.png'
+import linkLogo from '../../static/website/icons/chainlink.png'
+import ethLogo from '../../static/website/icons/eth.png'
+import msqBtcLogo from '../../static/website/icons/msqBtc.png'
+import msqEthLogo from '../../static/website/icons/msqEth.png'
+import polygonLogo from '../../static/website/icons/polygon.png'
+import solanaLogo from '../../static/website/icons/solana.png'
+import xrpLogo from '../../static/website/icons/xrp.png'
+import jupLogo from '../../static/website/icons/jup.png'
 
 
 export enum PositionSide2 {

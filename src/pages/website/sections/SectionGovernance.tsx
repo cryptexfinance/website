@@ -13,7 +13,15 @@ import huobiLogo from "../../../../static/website/governance/huobi.svg"
 import camelotLogo from "../../../../static/website/governance/camelot.svg"
 import coingeckoLogo from "../../../../static/website/governance/coingecko.svg"
 import traderJoeLogo from "../../../../static/website/governance/traderjoe.png"
-import { FOUNDERS_ADDRESS, LIQUIDITY_REWARD2_ADDRESS, LIQUIDITY_REWARD_ADDRESS, MULTISIG_ADDRESS, TREASURY_ADDRESS, getPriceInUSDFromPair } from "../../../utils"
+import aeroDromeLogo from "../../../../static/website/governance/aerodrome.png"
+import {
+  FOUNDERS_ADDRESS,
+  LIQUIDITY_REWARD2_ADDRESS,
+  LIQUIDITY_REWARD_ADDRESS,
+  MULTISIG_ADDRESS,
+  TREASURY_ADDRESS,
+  getPriceInUSDFromPair,
+} from "../../../utils"
 import { contractsContext } from "../../../context"
 
 
@@ -89,16 +97,16 @@ const governanceIcons = [
     class: "",
   },
   {
-    href: "https://www.coingecko.com/en/coins/cryptex-finance",
-    icon: coingeckoLogo,
-    alt: "Coingecko Logo",
-    class: "",
-  },
-  {
     href: "https://traderjoexyz.com/arbitrum/pool/v21/0x84f5c2cfba754e76dd5ae4fb369cfc920425e12b/ETH/50",
     icon: traderJoeLogo,
     alt: "Trader Joe Logo",
     class: "trader-joe",
+  },
+  {
+    href: "https://aerodrome.finance/deposit?token0=0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913&token1=0xBB22Ff867F8Ca3D5F2251B4084F6Ec86D4666E14&type=-1",
+    icon: aeroDromeLogo,
+    alt: "Aerodrome Logo",
+    class: "aerodrome",
   },
 ]
 

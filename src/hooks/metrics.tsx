@@ -17,13 +17,13 @@ import {
 } from '@perennial/sdk'
 
 import { AssetMetadata } from '../constants/markets'
-import { useChainId, usePythSubscription } from './network'
+import { usePerpetualsChainId, usePythSubscription } from './network'
 import { useQuery } from '@tanstack/react-query'
 import { PythDataFeedUrl } from '../constants/network'
 
 
 const useChainLivePrices = () => {
-  const chain = useChainId()
+  const chain = usePerpetualsChainId()
   const markets = chainAssetsWithAddress(chain)
   const [prices, setPrices] = useState<{ [key in SupportedAsset]?: { price: bigint; untransformed: bigint } }>({})
 

@@ -49,6 +49,32 @@ body {
   }
 }
 
+/* width */
+::-webkit-scrollbar {
+  width: 7px;
+  height: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #7d078520;
+}
+
+::-webkit-scrollbar-track:hover {
+  background: #7d078520;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #9A24FF;
+  border-radius: 1rem;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
 .section-main {
   display: flex;
   align-items: flex-end;
@@ -62,7 +88,7 @@ body {
     &-container {
       display: flex;
       flex-direction: column;
-      padding: 4rem 4rem;
+      padding: 8rem 4rem;
     }
     &-info {
       padding: 0rem 1rem;
@@ -124,42 +150,45 @@ body {
   }
 }
 
-.section-markets {
-  // margin: 3rem 2rem 2rem 1rem;
-  // padding: 9rem 1.8rem 3rem 1.8rem;
-  margin: 3rem 2rem 2rem 1rem;
-  padding: 7.5rem 1.8rem 3rem 1.8rem;
-
+.section-products {
+  margin: 8rem 2rem 2rem 1rem;
+  padding: 5rem 1.8rem 3rem 1.8rem;
 
   .header {
     margin-left: 0.5rem;
   }
 
-  .markets-metrics {
+  .products {
     margin-top: 0.5rem;
     padding: 0.5rem 0rem;
   }
-  .markets-loading {
+  .products-loading {
     align-items: center;
     justify-content: center;
     padding: 8rem 0rem;
   }
-  .markets-header {
+  .products-header {
     // border-bottom: 0.5px solid #494866;
     margin: 0.2rem 0.5rem;
     // padding-bottom: 0.5rem;
     // padding-right: 1rem;
     
   }
-  .markets-detail-container {
+  .products-detail-container {
     background-color: #080809;
     border: 0.5px solid rgba(42, 15, 61, 0.3);
     border-radius: 5px;
     padding: 0.5rem 0.1rem;
   }
-  .markets-detail {
+  .products-detail {
     height: 25rem;
     overflow-y: scroll;
+  }
+
+  .products-info {
+    &.indexes {
+      height: 28rem;
+    }
   }
 
   .product-info-card {
@@ -168,6 +197,37 @@ body {
     background-color: #090909;
     border: 0.5px solid rgba(33, 33, 56, 0.50);
     border-radius: 5px;
+    overflow-y: scroll;
+
+    .product-info-title {
+      font-size: 1.5rem;
+      line-height: 1.8rem;
+    }
+
+    .product-info-highlights {
+      margin-top: 1.5rem;
+      padding-left: 0.5rem;
+    }
+
+    .product-info-totals {
+      padding: 0.7rem 0rem;
+      background-color: #090909;
+      border-top: 0.5px solid rgba(33, 33, 56, 0.70);
+
+      .total-box-value {
+        font-size: 1.7rem;
+        color: #ffffff;
+        text-shadow: 0 4px 13px rgba(223, 33, 254, 0.7);
+      }
+
+      .total-box-title {
+        color: #A9A7BE;
+      }
+    }
+
+    .highlight {
+      font-size: 1.1rem;
+    }
 
     .total-box {
       background-color: #090909;
@@ -182,7 +242,7 @@ body {
     }
   }
 
-  .market {
+  .product {
     &-row {
       display: flex;
       flex-direction: row;
@@ -200,11 +260,17 @@ body {
       }
     }
     &-row:hover {
-      box-shadow: 0px 0px 12px 1px rgba(165, 64, 242, 0.3);
-      -webkit-transform: scale(1.002);
-      transform: scale(1.002);
-      transition: transform 0.5s, -webkit-transform 0.5s;
-      transition-timing-function: ease-in;
+      background-color: rgba(33, 33, 56, 0.82);
+      border: 0.5px solid rgba(33, 33, 56, 0.82);
+      box-shadow: 0px 0px 12px 1px rgba(165, 64, 242, 0.3) !important;
+      -webkit-transform: scale(1.002) !important;
+      transform: scale(1.002) !important;
+      transition: transform 0.5s, -webkit-transform 0.5s !important;
+      transition-timing-function: ease-in !important;
+    }
+    &-row.dark:hover {
+      background-color: #0e0e19;
+      border: 0.5px solid rgba(33, 33, 56, 0.82);
     }
     &-title {
       color: $color-grey;
@@ -215,13 +281,19 @@ body {
     &-value {
       color: white;
       font-size: 1rem;
+
+      &.lg {
+        font-size: 1.3rem;
+      }
     }
     &-subvalue {
       color: $color-grey;
       font-size: 0.8rem;
+
+      &.lg {
+        font-size: 0.9rem;
+      }
     }
-
-
   }
 
   .tcap-row {
@@ -236,7 +308,7 @@ body {
     }
   }
 
-  .markets-totals {
+  .products-totals {
     margin-bottom: 1.5rem;
     padding-left: 0.5rem;
     padding-right: 1.5rem;
@@ -269,6 +341,17 @@ body {
 
   .text-right {
     text-align: right;
+  }
+
+  /* width */
+  ::-webkit-scrollbar {
+    width: 3px;
+    height: 4px;
+  }
+
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: transparent;
   }
 }
 
@@ -376,6 +459,10 @@ body {
         width: 56px;
         height: 56px;
       }
+      &.aerodrome {
+        width: 40px;
+        height: 50px;
+      }
 
       @media (max-width: 1300px) { 
         width: 42px;
@@ -396,6 +483,10 @@ body {
           width: 50px;
           height: 50px;
         }
+        &.aerodrome {
+          width: 34px;
+          height: 42px;
+        }
       }
       @media (max-width: 1100px) {
         width: 35px;
@@ -415,6 +506,10 @@ body {
         &.trader-joe {
           width: 44px;
           height: 44px;
+        }
+        &.aerodrome {
+          width: 28px;
+          height: 35px;
         }
       }
     }
@@ -527,6 +622,11 @@ body {
     margin-left: 0px;
     width: 140px;
   }
+
+  .year-label {
+    font-size: 1.4rem;
+    text-shadow: 0 1px 8px rgba(164,64,242, 0.8);
+  }
 }
 
 @media only screen and (max-device-width: 1180px) { 
@@ -545,32 +645,6 @@ body {
     height: 20rem;  
   }
 }
-
-/* width */
-::-webkit-scrollbar {
-  width: 10px;
-}
-
-/* Track */
-::-webkit-scrollbar-track {
-  background: #7d078520;
-}
-
-::-webkit-scrollbar-track:hover{
-  background: #7d078520;
-}
-
-/* Handle */
-::-webkit-scrollbar-thumb {
-  background: #9A24FF;
-  border-radius: 1rem;
-}
-
-/* Handle on hover */
-::-webkit-scrollbar-thumb:hover {
-  background: #555;
-}
-
 
 .main-brand-text{
   font-family: 'Tachyon Regular';

@@ -18,6 +18,8 @@
   "dependencies": {
     "@apollo/client": "^3.7.13",
     "@apollo/react-hooks": "^4.0.0",
+    "@lifi/widget": "3.2.2",
+    "@paraswap/core": "^2.4.0",
     "@perennial/sdk": "^0.0.1-beta27",
     "@react-icons/all-files": "^4.1.0",
     "@tanstack/react-query": "^5.35.1",
@@ -92,6 +94,7 @@
     "prettier": "2.4.1",
     "sass": "^1.54.5",
     "typescript": "^5.2.2",
+    "url": "^0.11.4",
     "util": "^0.12.5"
   },
   "repository": {

@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react"
 import { Dropdown, Navbar, Nav } from "react-bootstrap"
-import Flag from 'react-flagkit'
+import { MdOutlineLanguage } from "react-icons/md";
 import { useStaticQuery, graphql } from "gatsby"
 
 import { Link, useI18next, useTranslation } from "gatsby-plugin-react-i18next"
@@ -27,7 +27,7 @@ const languagesInfo = {
 }
 
 const NavbarMenu = props => {
-  const { languages, originalPath, t, i18n } = useI18next()
+  const { languages, originalPath, t } = useI18next()
   const [siteUrl, setSiteUrl] = useState("")
   const dataq = useStaticQuery(graphql`
     query {
@@ -50,22 +50,17 @@ const NavbarMenu = props => {
   const blogView =
     typeof props.blogPost !== "undefined" ? props.blogPost : false
   const governanceUrl = blogView ? `${siteUrl}/#governance` : "#governance"
-  const marketsUrl = blogView ? `${siteUrl}/#markets` : "#markets"
+  const productsUrl = blogView ? `${siteUrl}/#markets` : "#markets"
 
   const LangDropdown = () => (
     <Dropdown className="language-dropdown">
       <Dropdown.Toggle>
-        <Flag
-          country={languagesInfo[i18n.resolvedLanguage] ? languagesInfo[i18n.resolvedLanguage].country : 'us'}
-          size={28}
-          className="flag"
-        />
+        <MdOutlineLanguage size={28} />
       </Dropdown.Toggle>
       <Dropdown.Menu>
         {languages.map((lang) => (
           <Dropdown.Item key={lang}>
             <Link to={originalPath} language={lang !== 'us' ? lang : undefined} className="lang-link">
-              <Flag country={languagesInfo[lang].country} size={20} className="flag" />
               <span className="lang-text">{languagesInfo[lang].name}</span>
             </Link>
           </Dropdown.Item>
@@ -97,8 +92,8 @@ const NavbarMenu = props => {
             className="justify-content-start"
           >
             <Nav className="nav-links">
-              <Nav.Link as={Link} to={marketsUrl} title="Markets">
-                {t('markets')}
+              <Nav.Link as={Link} to={productsUrl} title="Markets">
+                Markets
               </Nav.Link>
               <div className="nav-links-divisor" />
             </Nav>     
@@ -134,14 +129,15 @@ const NavbarMenu = props => {
             className="justify-content-start"
           >
             <Nav className="nav-links">
-              <Nav.Link as={Link} to={marketsUrl} title="Markets">
-                {t('markets')}
+              <Nav.Link as={Link} to={productsUrl} title="Markets">
+                Markets
               </Nav.Link>
               <Nav.Link as={Link} to={governanceUrl} title="CTX Governance">
                 {t('governance')}
               </Nav.Link>         
             </Nav>
           </Navbar.Collapse>
+          <LangDropdown />
           <a
             href={appEndpoint}
             target="_blank"
@@ -150,7 +146,6 @@ const NavbarMenu = props => {
           >
             {t('launch-app')}
           </a>
-          <LangDropdown /> 
         </Navbar>
       </div>
     )

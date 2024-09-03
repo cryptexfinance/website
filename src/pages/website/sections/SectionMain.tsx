@@ -3,9 +3,8 @@ import Col from "react-bootstrap/esm/Col"
 import { useTranslation } from "gatsby-plugin-react-i18next"
 
 import appEndpoint from "../../../endpoint"
-import bgMobilePoster from "../../../../static/mobile_poster.png"
+// import bgMobilePoster from "../../../../static/mobile_poster.png"
 import bgVideo from "../../../../static/bg_main_pi.webm"
-import bgVideoMobile from "../../../../static/bg_mobile_pi.mp4"
 
 const SectionMain = () => {
   const { t } = useTranslation()
@@ -13,35 +12,20 @@ const SectionMain = () => {
   return (
     <div className="section-main">
       <video
-        autoPlay
-        loop
-        muted
-        playsInline
-        poster={bgMobilePoster}
-        className="video bgvid mobile"
         id="bgvidm"
-      >
-        <source src={bgVideoMobile} type="video/mp4" />
-      </video>
-      <video
         autoPlay
         loop
         muted
         playsInline
-        className="video bgvid desktop"
-        id="bgvid"
+        className="video bgvid"
       >
         <source src={bgVideo} type="video/webm" />
       </video>
       <div className="black-overlay"></div>
       <div className="main-container col-sm-12">
         <div className="main-info">
-          <div className="main-title">
-            <img className="cryptex-logo" src="/logo.svg" alt="Logo" />
-          </div>
-          <p className="home-subheader">
-            {t('cutting-edge').toUpperCase()}<br /><br />
-          </p>
+          <div className="main-title" />
+          <p className="home-subheader" />
         </div>
         <div className="main-buttons">
           <Col sm={12} md={12} lg={12} className="main-buttons-actions">

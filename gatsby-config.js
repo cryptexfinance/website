@@ -19,8 +19,8 @@ module.exports = {
   siteMetadata: {
     title: "Cryptex Finance",
     author: "Cryptex Finance",
-    description: "Decentralized platform providing cutting edge perpetuals.",
-    image: "https://cryptex-public-images.s3.us-east-2.amazonaws.com/cryptexv2-min.png",
+    description: "Decentralized platform providing cutting edge markets.",
+    image: "https://cryptex-public-images.s3.us-east-2.amazonaws.com/cryptex_cutting-edge-markets.png",
     keywords: [
       "Cryptex",
       "Blockchain",

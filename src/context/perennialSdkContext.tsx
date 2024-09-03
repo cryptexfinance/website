@@ -4,12 +4,12 @@ import { createContext, useContext, useMemo } from 'react'
 import { useWalletClient } from 'wagmi'
 
 import { GraphUrls, PythMainnetUrl } from '../constants/network'
-import { useChainId, useRPCProviderUrl } from '../hooks/network'
+import { usePerpetualsChainId, useRPCProviderUrl } from '../hooks/network'
 
 const SDKContext = createContext<PerennialSdk | null>(null)
 
 export const PerennialSDKProvider = ({ children }: { children: React.ReactNode }) => {
-  const chainId = useChainId()
+  const chainId = usePerpetualsChainId()
   const walletClient = useWalletClient({ chainId })
   const rpcUrl = useRPCProviderUrl()
 

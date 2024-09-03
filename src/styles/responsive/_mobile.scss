@@ -1,5 +1,9 @@
 @media only screen and (max-device-width: 600px) and (orientation: portrait) {
 
+  .mt-5 {
+    margin-top: 0rem !important;
+  }
+
   .nav-default {
     display: none;
   }
@@ -9,11 +13,49 @@
     --bs-spinner-height: 7rem;
   }
 
+  .nav-tabs {
+    .nav-item {
+      width: fit-content;
+      min-width: 30rem;
+    }
+    .nav-link {
+      width: 100%;
+    }
+  }
+
+  .accordion-item {
+   margin-bottom: 2rem;  
+  }
+
+  .accordion-button,
+  .accordion-button:not(.collapsed) {
+    height: 8rem;
+    padding: 5.5rem 2rem;
+    border-radius: 5px;
+    h6 {
+      font-size: 4rem;
+      margin-bottom: 0rem;
+    }
+  }
+
+  .accordion-button::after,
+  .accordion-button:not(.collapsed)::after {
+    background-size: 3rem;
+    height: 3rem;
+    width: 3rem;
+  }
+
+  .accordion-body {
+    margin-top: 0.5rem;
+    margin-bottom: 1.5rem;
+    padding: 0rem;
+  }
+
   .main-container{
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
-    padding: 10rem 1rem !important;
+    padding: 0rem 1rem 8rem 1rem !important;
     height: 100%;
     width: 100%;
   }
@@ -30,21 +72,22 @@
     line-height: 6rem; 
   }
 
-  .video{
+  .video, .bgvid{
+    display: block;
     object-fit: fill;
-    width: 100%;
-    margin-left: 0px;
-    height: 100% !important;
-    margin-top: 0rem;
-    padding-top: 1rem;
+    width: 240%;
+    top: 0px;
+    margin-left: -122%;
+    min-height: 95vh;
+    max-height: 100vh;
+    height: 95vh !important;
+    margin-top: -40px;
+    //width: 100%;
+    //margin-left: 0px;
+    //height: 100% !important;
+    // margin-top: 0rem;
+    padding-top: 0rem;
     overflow: hidden;
-
-    &.desktop {
-      display: none;
-    }
-    &.mobile {
-      display: block;
-    }
   }
 
   .main-brand-text{
@@ -94,7 +137,7 @@
   .navbar,
   .navbar div {
     height: 60px;
-    background: $color-black;
+    background: $color-navbar-button;
     font-family: $font-primary;
     font-style: normal;
     font-weight: normal;
@@ -117,7 +160,7 @@
   }
   .nav-links a {
     z-index: 30;
-    background: $color-black;
+    background: $color-navbar-button;
     padding-top: 35px;
     padding-bottom: 35px;
     text-align: center;
@@ -262,6 +305,7 @@
     height: 98% !important;
     .dropdown-toggle {
       border: none;
+      background-color: transparent;
     }
     .dropdown-menu {
       padding-top: 0.9rem;
@@ -280,6 +324,11 @@
   }
   h3 {
     font-size: 24px;
+    font-size: 30px;
+  }
+
+  li {
+    font-size: 3.5rem;
   }
 
   .header {
@@ -345,12 +394,14 @@
   }
 
   .section-main {
-    padding: 8rem 1rem 2rem 1rem;
+    padding: 0rem 1rem 2rem 1rem;
     position: relative;
+    align-items: flex-start;
     height: 100vh;
     width: 100%;
-    margin-top: 6rem;
+    margin-top: 0rem;
     overflow-x: hidden;
+    overflow-y: hidden;
     .col-sm-12, .col-md-8, .col-lg-8  {
       padding-left: 0px;
       padding-right: 0px;
@@ -400,33 +451,126 @@
     }
   }
 
-  .section-markets {
-    .markets-loading {
+  .section-products {
+    padding-top: 15rem;
+
+    .nav-tabs {
+      overflow-x: scroll;
+      overflow-y: hidden;
+      flex-wrap: nowrap;
+      height: 13.6rem;
+      border: none;
+      scrollbar-color: #212024 #7d078520;
+      scrollbar-gutter: 1px;
+    }
+
+    .nav-item {
+      height: 12rem;
+      width: fit-content;
+      min-width: fit-content;
+      padding: 0rem 2.5rem;
+      border-bottom: 1px solid $color-black;
+      
+      .nav-link {
+        height: 11.4rem;
+        border-bottom: 1px solid $color-black;
+      }
+      .nav-link.active {
+        border-bottom: 1.7px solid $shadow-purple-neon;
+        // border-bottom-color: $shadow-purple-neon;
+      }
+    }
+
+    .nav-link {
+      font-size: 5rem;
+    }
+
+    span {
+      font-size: 3.5rem !important;
+      line-height: 3.8rem;
+    }
+
+    .products-loading {
       padding: 18rem 0rem;
     }
-    .markets-metrics {
+
+    .products {
       margin-top: 3rem;
       padding: 0.5rem 0rem;
+
+      .products-info {
+        display: none;
+      }
     }
-    .markets-header { 
+    .products-header { 
       display: none;
     }
     
-    .markets-detail {
+    .product-info-card {
+      padding: 2rem 1rem !important;
+      border-color: rgba(164, 64, 242, 0.3);
+
+      .product-info-title {
+        font-size: 4rem !important;
+        line-height: 4.5rem;
+        margin-bottom: 2.2rem;
+      }
+
+      .product-info-totals { 
+        margin-top: 5rem;
+        padding-top: 4rem;
+        padding-bottom: 3rem;
+
+        .total-box-value {
+          font-size: 5rem !important;
+          margin-bottom: 2.5rem;
+        }
+        .total-box-title {
+          font-size: 4rem !important;
+        }
+      }
+
+      .highlight {
+        font-size: 3.5rem !important;
+        line-height: 4rem;
+        margin-left: 1.3rem;
+        margin-bottom: 1.3rem;
+        width: 95%;
+      }
+
+      svg {
+        width: 18px;
+        height: 18px;
+        margin-bottom: 1.2rem;
+      }
+    }
+
+    .products-detail {
       height: 120rem;
       overflow-y: scroll;
+
+      .h-separator {
+        width: 95%;
+        border-bottom: 0.5px solid #282834;
+        margin-top: 0.5rem;
+        margin-bottom: 2rem;
+      }
     }
-    .markets-totals {
+
+    .products-totals {
       flex-direction: column;
-      margin-bottom: 5rem;
+      margin-top: 2rem;
+      padding-left: 0rem;
+      padding-right: 0rem;
 
       .total-box {
         width: 100%;
         padding: 2.5rem 2rem;
-        margin-bottom: 0.7rem;
+        margin-bottom: 1.5rem;
       }
     }
-    .market {
+
+    .product {
       &-row {
         margin: 1.5rem 0rem;
         padding: 2rem 0rem;
@@ -450,6 +594,13 @@
         &.mobile-header {
           margin-bottom: 3.5rem;
         }
+
+        &.indexes-header {
+          padding-bottom: 1rem;
+          margin-bottom: 2rem;
+          padding-left: 1.5rem;
+          // border-bottom: 0.5px solid #282834;
+        }
       }
       &-logo {
         margin-right: 1rem;
@@ -460,14 +611,14 @@
         font-size: 16px;
       }
       &-value {
-        font-size: 16px;
+        font-size: 16px !important;
 
         &.price {
           font-size: 24px;
         }
       }
       &-subvalue {
-        font-size: 14px;
+        font-size: 14px !important;
       }
     }
 
@@ -483,8 +634,26 @@
       }
     }
 
+    .indexes {
+      .text-purple {
+        font-size: 4.5rem;
+        margin-top: 1rem;
+      }
+    }
+
+    .vaults {
+      .product-row-item {
+        .margin-right {
+          margin-right: 1rem;
+        }
+      }
+    }
+
     .only-mobile {
       display: block;
+      &.col-sm-12 {
+        display: flex;
+      }
     }
     .not-on-mobile {
       display: none;
@@ -534,7 +703,7 @@
       &-icon {
         width: 30px;
         height: 30px;
-        margin-right: 16px;
+        margin-right: 14px;
 
         &.dfp {
           width: 30px;
@@ -599,6 +768,11 @@
       width: 100%;
       flex-direction: column;
       margin-top: 12rem;
+    }
+
+    .year-label {
+      font-size: 24px;
+      margin-left: 10px;
     }
   }
 
