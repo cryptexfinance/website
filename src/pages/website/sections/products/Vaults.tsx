@@ -16,7 +16,7 @@ import {
   formatBig6USDPrice,
 } from "@perennial/sdk"
 
-import { useExposureAndFunding, useVault7dAccumulations, useVaultSnapshots, useVaults7dAccumulations } from "../../../../hooks/markets"
+import { useExposureAndFunding, useVaultSnapshots, useVaults7dAccumulations } from "../../../../hooks/markets"
 import { usePerpetualsChainId } from "../../../../hooks/network"
 import { AssetMetadata } from "../../../../constants/markets"
 import { addPositions, calculateFunding, calculateLeverageBN, nextPosition } from "../../../../utils/positionUtils"
@@ -117,10 +117,10 @@ const VaultItem = ({ index, vaultSnapshot }: { index: number, vaultSnapshot: Vau
   const chainId = usePerpetualsChainId()
   const { vaultType, totalAssets, parameter: { cap: maxCollateral } } = vaultSnapshot
   const metadata = VaultMetadata[chainId]?.[vaultType as PerennialVaultType]
-  const vaultAccumulations = useVault7dAccumulations(vaultSnapshot)
+  const vaultAccumulations = useVaults7dAccumulations()
   const exposureData = useExposureAndFunding ({
     vault: vaultSnapshot,
-    accumulations: vaultAccumulations?.data,
+    accumulations: vaultAccumulations.find((v) => v.data?.vaultAddress === vaultSnapshot.vault)?.data,
   })
 
   const { vaultApr } = useMemo(() => {
