@@ -148,14 +148,17 @@ exports.onCreateWebpackConfig = ({ getConfig, stage, loaders, actions }) => {
       plugins: [
         new webpack.NormalModuleReplacementPlugin(/^node:/, (resource) => {
           resource.request = resource.request.replace(/^node:/, '')
-        })
+        }),
+        new webpack.ProvidePlugin({ process: 'process/browser.js' })
       ],
       resolve: {
         // Handle unsupported node scheme - https://github.com/webpack/webpack/issues/13290#issuecomment-987880453
         fallback: {
           crypto: require.resolve('stream-browserify'),
           http: require.resolve("stream-http"),
-          https: require.resolve("https-browserify")
+          https: require.resolve("https-browserify"),
+          stream: require.resolve("stream-http"),
+          url: require.resolve("url/"),
         }
       }
     })

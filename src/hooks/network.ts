@@ -95,7 +95,9 @@ export const usePythSubscription = (feedIds: string[]) => {
   const key = feedIds.sort().join(',')
   if (!pythSubscriptions.has(key)) {
     const emitter = new EventEmitter()
+    emitter.setMaxListeners(20)
     pythSubscriptions.set(key, emitter)
+    
 
     const stream = pyth.getPriceUpdatesStream(feedIds, { parsed: true })
     stream.then((eventSource) => {

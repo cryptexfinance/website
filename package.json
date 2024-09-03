@@ -94,6 +94,7 @@
     "prettier": "2.4.1",
     "sass": "^1.54.5",
     "typescript": "^5.2.2",
+    "url": "^0.11.4",
     "util": "^0.12.5"
   },
   "repository": {
