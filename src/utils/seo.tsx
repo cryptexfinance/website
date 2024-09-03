@@ -37,7 +37,7 @@ const Seo = ({ description, lang, meta, image: img, title, pathname }) => {
         { property: "og:url", content: canonical },
         {
           property: "og:image",
-          content: `${site.siteMetadata.siteUrl}/crytpex-preview.png`,
+          content: "https://cryptex-public-images.s3.us-east-2.amazonaws.com/cryptex_cutting-edge-markets.png",
         },
         { name: "twitter:card", content: "summary_large_image" },
         { name: "twitter:site", content: "@CryptexFinance" },
@@ -45,7 +45,7 @@ const Seo = ({ description, lang, meta, image: img, title, pathname }) => {
         { name: "twitter:description", content: metaDescription },
         {
           name: "twitter:image",
-          content: `${site.siteMetadata.siteUrl}/crytpex-preview.png`,
+          content: "https://cryptex-public-images.s3.us-east-2.amazonaws.com/cryptex_cutting-edge-markets.png",
         },        
       ].concat(meta)}
     />
