@@ -184,3 +184,27 @@ export const useVaults7dAccumulations = () => {
     }),
   })
 }
+
+export type VaultAccumulation = NonNullable<Awaited<ReturnType<typeof useVault7dAccumulations>>['data']>
+export const useVault7dAccumulations = (vaultSnapshot: VaultSnapshot) => {
+  const chainId = usePerpetualsChainId()
+  const { data: blockNumber } = useBlockNumber()
+  const sdk = usePerennialSDKContext()
+
+  return useQuery({
+    queryKey: ['vault7dAccumulations', chainId, vaultSnapshot.vault],
+    enabled: !!blockNumber,
+    queryFn: async () => {
+      if (!sdk) return
+      if (!vaultSnapshot || !blockNumber) return
+
+      const vault7dAccumulations = await sdk.vaults.read.vault7dAccumulations({
+        vaultAddress: vaultSnapshot.vault,
+        vaultSnapshot,
+        latestBlockNumber: blockNumber,
+      })
+
+      return vault7dAccumulations
+    },
+  })
+}
