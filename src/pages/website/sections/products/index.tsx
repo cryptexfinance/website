@@ -16,6 +16,9 @@ const SectionProducts = () => {
   return (
     <PerennialSDKProvider>
       <div id="markets" className="section-products">
+        <h1 className="header">
+          {t('markets')}
+        </h1>
         <Tabs id="products-tabs" defaultActiveKey={"spot"}>
           <Tab eventKey="spot" title="Spot">
             <Spot />
