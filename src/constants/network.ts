@@ -58,7 +58,6 @@ export const CrypdexDefaultChain = chains[2];
 export const GraphUrls: { [chainId in PerennialSupportedChainId]: string } = {
   [arbitrum.id]: process.env.GATSBY_GRAPH_URL_ARBITRUM || process.env.GRAPH_URL_ARBITRUM || "",
   [arbitrumSepolia.id]: process.env.GATSBY_GRAPH_URL_ARBITRUM_SEPOLIA ?? "",
-  [base.id]: "",
 };
 
 export const ExplorerNames: { [chainId in SupportedChainIdType]: string } = {
@@ -73,9 +72,12 @@ export const ExplorerURLs: { [chainId in SupportedChainIdType]: string } = {
   [mainnet.id]: mainnet.blockExplorers.default.url,
 };
 
+const PythBenchmarkUrlVersion = 'v1'
+const PythBenchmarkUrl = "benchmarks.pyth.network" 
 export const PythMainnetUrl = "https://perennial.rpc.p2p.world"
 export const PythTestnetUrl = "https://perennial.rpc.p2p.world"
-export const PythDataFeedUrl = "https://benchmarks.pyth.network/v1/shims/tradingview"
+export const PythDataFeedUrl = `https://${PythBenchmarkUrl}/${PythBenchmarkUrlVersion}/shims/tradingview`
+export const PythPriceFeedUrl = `https://${PythBenchmarkUrl}/${PythBenchmarkUrlVersion}/price_feeds`
 
 export const BackupPythClient = new HermesClient(
   `${typeof window !== 'undefined' ? window.location.origin : 'https://app.perennial.finance'}/api/pyth`,

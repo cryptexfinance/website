@@ -16,7 +16,7 @@ import {
   formatBig6USDPrice,
 } from "@perennial/sdk"
 
-import { useExposureAndFunding, useVaultSnapshots, useVaults7dAccumulations } from "../../../../hooks/markets"
+import { useExposureAndFunding, useVault7dMarketData, useVaultSnapshots } from "../../../../hooks/markets"
 import { usePerpetualsChainId } from "../../../../hooks/network"
 import { AssetMetadata } from "../../../../constants/markets"
 import { addPositions, calculateFunding, calculateLeverageBN, nextPosition } from "../../../../utils/positionUtils"
@@ -117,10 +117,12 @@ const VaultItem = ({ index, vaultSnapshot }: { index: number, vaultSnapshot: Vau
   const chainId = usePerpetualsChainId()
   const { vaultType, totalAssets, parameter: { cap: maxCollateral } } = vaultSnapshot
   const metadata = VaultMetadata[chainId]?.[vaultType as PerennialVaultType]
-  const vaultAccumulations = useVaults7dAccumulations()
-  const exposureData = useExposureAndFunding ({
+  
+  const vaultMarketData = useVault7dMarketData()
+  const exposureData = useExposureAndFunding({
+    chainId,
     vault: vaultSnapshot,
-    accumulations: vaultAccumulations.find((v) => v.data?.vaultAddress === vaultSnapshot.vault)?.data,
+    marketData: vaultMarketData.find((v) => v.data?.vault.vaultAddress === vaultSnapshot.vault)?.data?.marketData,
   })
 
   const { vaultApr } = useMemo(() => {
@@ -142,16 +144,16 @@ const VaultItem = ({ index, vaultSnapshot }: { index: number, vaultSnapshot: Vau
     >
       <Col lg={5} md={5} className="product-row-item mobile-header">
         <Stack direction="horizontal" gap={1}>
-          {vaultSnapshot.assets.map((asset) => {
-            if (vaultType === PerennialVaultType.alpha && asset.asset === SupportedAsset.btc) {
+          {vaultSnapshot.markets.map((market) => {
+            if (vaultType === PerennialVaultType.alpha && market.market === SupportedAsset.btc) {
               return null
             }
 
             return (
               <Image
-                key={"imv-".concat(asset.asset)}
+                key={"imv-".concat(market.market)}
                 className="token-icon margin-right"
-                src={AssetMetadata[asset.asset].icon}
+                src={AssetMetadata[market.market].icon}
                 height={25}
                 width={25}
               />

@@ -3599,13 +3599,13 @@
     chrome-trace-event "^1.0.2"
     nullthrows "^1.1.1"
 
-"@perennial/sdk@^0.0.1-beta27":
-  version "0.0.1-beta27"
-  resolved "https://registry.yarnpkg.com/@perennial/sdk/-/sdk-0.0.1-beta27.tgz#e6d07de45d5d0c1111fe74f707717874d98ddc32"
-  integrity sha512-wlInawRjw57+J47Df3Iirf0Vk2DppW3QSwmLaaycvHWtdZw50B7PszyalcGoWTkJFQUtp8R3wNr5DCcVoTgt9Q==
+"@perennial/sdk@^0.0.2-beta25":
+  version "0.0.2-beta25"
+  resolved "https://registry.yarnpkg.com/@perennial/sdk/-/sdk-0.0.2-beta25.tgz#c0fbd655a8319a22c52fb29c27ff22a7fb4eb68c"
+  integrity sha512-/qitZhSfs+tZK1MGfMVQIsjmsoFdy/14yLrlylpTr4YYhwKStMEmcHsTmPjUD5FP+mJSQ98QePWhST2zwb/Cxw==
   dependencies:
     "@microsoft/tsdoc" "^0.14.2"
-    "@pythnetwork/hermes-client" "^1.0.2"
+    "@pythnetwork/hermes-client" "^1.0.4"
     axios "^1.7.2"
     date-fns "^2.30.0"
     graphql "^16.6.0"
@@ -3647,10 +3647,10 @@
   resolved "https://registry.yarnpkg.com/@popperjs/core/-/core-2.11.8.tgz#6b79032e760a0899cd4204710beede972a3a185f"
   integrity sha512-P1st0aksCrn9sGZhp8GMYwBnQsbvAWsZAX44oXNNvLHGqAOcoVxmjZiohstwQ7SqKnbR47akdNi+uleWD8+g6A==
 
-"@pythnetwork/hermes-client@^1.0.2":
-  version "1.0.2"
-  resolved "https://registry.yarnpkg.com/@pythnetwork/hermes-client/-/hermes-client-1.0.2.tgz#594044f9820fa981e0e2212aeab03700d8694edc"
-  integrity sha512-6t0jAMTFWDxpYYSqga8CXrovCNi9E4hJ1WVZFW8BD655TCLnyY8xlwa7PK30/SNF+nk1OrMYZ1ENdJwm2+JWRQ==
+"@pythnetwork/hermes-client@^1.0.4":
+  version "1.0.4"
+  resolved "https://registry.yarnpkg.com/@pythnetwork/hermes-client/-/hermes-client-1.0.4.tgz#2d811dbc76d3a072fafdc10edf75afa966fa6af8"
+  integrity sha512-/IrDaA7D2i3bqBLqUO2N6qUXq7xHA/mlpN+99O6iQiW/KuGn3JI9G1iv39v/Q84fFhQowhE56JAnLyNAoI6y7g==
   dependencies:
     "@zodios/core" "^10.9.6"
     eventsource "^2.0.2"
@@ -5916,9 +5916,9 @@ axios@^0.21.1:
     follow-redirects "^1.14.0"
 
 axios@^1.7.2:
-  version "1.7.2"
-  resolved "https://registry.yarnpkg.com/axios/-/axios-1.7.2.tgz#b625db8a7051fbea61c35a3cbb3a1daa7b9c7621"
-  integrity sha512-2A8QhOMrbomlDuiLeK9XibIBzuHeRcqqNOHp0Cyp5EoJ1IFDh+XZH3A6BkXtv0K4gFGCI0Y4BM7B1wOEi0Rmgw==
+  version "1.7.7"
+  resolved "https://registry.yarnpkg.com/axios/-/axios-1.7.7.tgz#2f554296f9892a72ac8d8e4c5b79c14a91d0a47f"
+  integrity sha512-S4kL7XrjgBmvdGut0sN3yJxqYzrDOnivkBiN0OFs6hLiUam3UPvswUo0kqGyhqUZGEOytHyumEdXsAkgCOUf3Q==
   dependencies:
     follow-redirects "^1.15.6"
     form-data "^4.0.0"
@@ -9266,9 +9266,9 @@ follow-redirects@^1.14.0:
   integrity sha512-VQLG33o04KaQ8uYi2tVNbdrWp1QWxNNea+nmIB4EVM28v0hmP17z7aG1+wAkNzVq4KeXTq3221ye5qTJP91JwA==
 
 follow-redirects@^1.15.6:
-  version "1.15.6"
-  resolved "https://registry.yarnpkg.com/follow-redirects/-/follow-redirects-1.15.6.tgz#7f815c0cda4249c74ff09e95ef97c23b5fd0399b"
-  integrity sha512-wWN62YITEaOpSK584EZXJafH1AGpO8RVgElfkuXbTOrPX4fIfOyEpW/CsiNd8JdYrAoOvafRTOEnvsO++qCqFA==
+  version "1.15.9"
+  resolved "https://registry.yarnpkg.com/follow-redirects/-/follow-redirects-1.15.9.tgz#a604fa10e443bf98ca94228d9eebcc2e8a2c8ee1"
+  integrity sha512-gew4GsXizNgdoRyqmyfMHyAmXsZDk6mHkSxZFCzW9gwlbtOW44CDtYavM+y+72qD/Vq2l550kMF52DT8fOLJqQ==
 
 for-each@^0.3.3:
   version "0.3.3"
@@ -10481,9 +10481,9 @@ graphql@^15.0.0, graphql@^15.7.2:
   integrity sha512-5gghUc24tP9HRznNpV2+FIoq3xKkj5dTQqf4v0CpdPbFVwFkWoxOM+o+2OC9ZSvjEMTjfmG9QT+gcvggTwW1zw==
 
 graphql@^16.6.0:
-  version "16.8.2"
-  resolved "https://registry.yarnpkg.com/graphql/-/graphql-16.8.2.tgz#54771c7ff195da913f5e70af8044a026d32eca2a"
-  integrity sha512-cvVIBILwuoSyD54U4cF/UXDh5yAobhNV/tPygI4lZhgOIJQE/WLWC4waBRb4I6bDVYb3OVx3lfHbaQOEoUD5sg==
+  version "16.9.0"
+  resolved "https://registry.yarnpkg.com/graphql/-/graphql-16.9.0.tgz#1c310e63f16a49ce1fbb230bd0a000e99f6f115f"
+  integrity sha512-GGTKBX4SD7Wdb8mqeDLni2oaRGYQWjWHGKPQ24ZMnUtKfcsVoiv4uX8+LJr1K6U5VW2Lu1BwJnj7uiori0YtRw==
 
 gray-matter@^4.0.2, gray-matter@^4.0.3:
   version "4.0.3"
