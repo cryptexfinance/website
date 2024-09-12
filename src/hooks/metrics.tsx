@@ -13,7 +13,8 @@ import {
   calcTakerLiquidity,
   efficiency,
   PriceUpdate,
-  pythPriceToBig6,
+  Big18Math,
+  pythPriceToBig18,
 } from '@perennial/sdk'
 
 import { AssetMetadata } from '../constants/markets'
@@ -22,19 +23,19 @@ import { useQuery } from '@tanstack/react-query'
 import { PythDataFeedUrl } from '../constants/network'
 
 
-const useChainLivePrices = () => {
+export const useChainLivePrices = () => {
   const chain = usePerpetualsChainId()
   const markets = chainAssetsWithAddress(chain)
   const [prices, setPrices] = useState<{ [key in SupportedAsset]?: { price: bigint; untransformed: bigint } }>({})
 
   const [feedIds, feedToAsset] = useMemo(() => {
-    const feedToAsset = markets.reduce((acc, { asset }) => {
-      const feed = AssetMetadata[asset].pythFeedId
+    const feedToAsset = markets.reduce((acc, { market }) => {
+      const feed = AssetMetadata[market].pythFeedId
       if (!feed) return acc
       if (acc[feed]) {
-        acc[feed].push(asset)
+        acc[feed].push(market)
       } else {
-        acc[feed] = [asset]
+        acc[feed] = [market]
       }
       return acc
     }, {} as { [key: string]: SupportedAsset[] })
@@ -49,15 +50,20 @@ const useChainLivePrices = () => {
     (priceFeed: PriceUpdate) => {
       const parsedData = priceFeed.parsed
       if (!parsedData) return
-      parsedData.forEach((data: any) => {
+      parsedData.forEach((data) => {
         const price = data.price
-        const normalizedPrice = pythPriceToBig6(BigOrZero(price?.price), price?.expo ?? 0)
+        const normalizedPrice = pythPriceToBig18(BigOrZero(price?.price), price?.expo ?? 0)
         setPrices((prices) => ({
           ...prices,
           ...feedToAsset['0x' + data.id].reduce((acc, asset) => {
             const { transform } = AssetMetadata[asset]
             // Pyth price is has `expo` (negative number) decimals, normalize to expected 18 decimals by multiplying by 10^(18 + expo)
-            acc[asset] = price ? { price: transform(normalizedPrice), untransformed: normalizedPrice } : undefined
+            acc[asset] = price
+              ? {
+                  price: transform(normalizedPrice),
+                  untransformed: normalizedPrice,
+                }
+              : undefined
             return acc
           }, {} as { [key in SupportedAsset]?: { price: bigint; untransformed: bigint } }),
         }))
@@ -91,22 +97,23 @@ export const useMarket24HrHighLow = (asset: SupportedAsset) => {
 
       const { tvTicker, transform } = metadata
       const { from, to } = last24hrBounds()
-      const request = await fetch(`${PythDataFeedUrl}/history?symbol=${tvTicker}&resolution=D&from=${from}&to=${to}`) 
+      const request = await fetch(`${PythDataFeedUrl}/history?symbol=${tvTicker}&resolution=D&from=${from}&to=${to}`)
       const prices = (await request.json()) as { h: number[]; l: number[]; o: number[] }
+      const highs = prices.h.map((h) => transform(Big18Math.fromFloatString(h.toFixed(18))))
+      const lows = prices.l.map((l) => transform(Big18Math.fromFloatString(l.toFixed(18))))
 
       return {
-        open: transform(Big6Math.fromFloatString(prices.o[0].toString())),
-        high: transform(Big6Math.fromFloatString(Math.max(...prices.h).toString())),
-        low: transform(Big6Math.fromFloatString(Math.min(...prices.l).toString())),
+        open: transform(Big18Math.fromFloatString(prices.o[0].toFixed(18))),
+        high: Big6Math.max(...(metadata.isInverted ? lows : highs)),
+        low: Big6Math.min(...(metadata.isInverted ? highs : lows)),
       }
     },
   })
 }
 
-
 export const useFormattedMarketBarValues = (marketSnapshot: MarketSnapshot) => {
   const livePrices = useChainLivePrices()
-  const selectedMarket = marketSnapshot.asset
+  const selectedMarket = marketSnapshot.market
   const { data: priceData } = useMarket24HrHighLow(selectedMarket)
 
   const chainPrice = marketSnapshot.global?.latestPrice ?? 0n

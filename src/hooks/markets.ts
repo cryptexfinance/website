@@ -1,15 +1,25 @@
 import { useContext, useMemo } from 'react'
 import { useQuery, useQueries } from '@tanstack/react-query'
-import { zeroAddress } from 'viem'
+import { Address, zeroAddress } from 'viem'
 import { useBlockNumber } from 'wagmi'
-import { addressToAsset, Big6Math, BigOrZero, calcMakerExposure, chainVaultsWithAddress, VaultSnapshot, sum as sumBI } from '@perennial/sdk'
+import {
+  addressToAsset,
+  Big6Math,
+  calcMakerExposure,
+  chainVaultsWithAddress,
+  VaultSnapshot, sum as sumBI,
+  last7dBounds,
+  SupportedAsset,
+  addressToMarket,
+  calcMakerStats,
+  SupportedChainId,
+} from '@perennial/sdk'
 
 import { usePerennialSDKContext } from '../context/perennialSdkContext'
 import { arbContractsContext } from '../context'
 import { usePerpetualsChainId } from './network'
 import { vaultSnapshotFetcher } from './marketsV1'
 import { TcapVaultContract } from '../constants/contracts'
-
 
 
 export const useProtocolParameter = () => {
@@ -92,11 +102,13 @@ export const useVaultSnapshots = () => {
 }
 
 export const useExposureAndFunding = ({
+  chainId,
   vault,
-  accumulations,
+  marketData,
 }: {
+  chainId: SupportedChainId
   vault?: VaultSnapshot
-  accumulations?: VaultAccumulations
+  marketData?: VaultMarketData['marketData']
 }) => {
   const exposureAndFunding = useMemo(() => {
     if (!vault) {
@@ -104,10 +116,9 @@ export const useExposureAndFunding = ({
     }
 
     const { registrations, marketSnapshots, marketVaultSnapshots } = vault
-
     const marketExposures = registrations.map((registration) => {
-      const marketSnapshot = marketSnapshots.find((v) => v.market === registration.market)
-      const marketVaultSnapshot = marketVaultSnapshots.find((v) => v.market === registration.market)
+      const marketSnapshot = marketSnapshots.find((v) => v.marketAddress === registration.market)
+      const marketVaultSnapshot = marketVaultSnapshots.find((v) => v.marketAddress === registration.market)
       const price = marketSnapshot?.global.latestPrice ?? 0n
       const vaultMakerPosition = marketVaultSnapshot?.nextPosition.maker ?? 0n
 
@@ -120,25 +131,36 @@ export const useExposureAndFunding = ({
       const usdExposure = Big6Math.mul(exposure, price)
       const assets = marketVaultSnapshot?.local.collateral ?? 0n
 
-      const marketAccumulations = accumulations?.marketValues.find((v) => v.market === registration.market)
+      const marketStats = marketData?.[registration.market]
+      const makerStats = calcMakerStats({
+        funding: marketStats?.makerAccumulation.funding ?? 0n,
+        interest: marketStats?.makerAccumulation.interest ?? 0n,
+        positionFee: marketStats?.makerAccumulation.positionFee ?? 0n,
+        positionSize: marketVaultSnapshot?.nextPosition.maker ?? 0n,
+        collateral: marketVaultSnapshot?.local.collateral ?? 0n,
+      })
 
       return {
-        asset: addressToAsset(registration.market),
+        asset: addressToMarket(chainId, registration.market),
         usdExposure,
         assets,
         exposurePct: assets > 0n ? Big6Math.toUnsafeFloat(Big6Math.div(usdExposure, assets)) * 100 : 0,
         weight: registration.weight,
-        ...marketAccumulations,
+        makerStats,
       }
     })
 
     const netUSDExposure = sumBI(marketExposures.map(({ usdExposure }) => usdExposure))
     const netExposurePct = Big6Math.toUnsafeFloat(Big6Math.div(netUSDExposure, vault.totalAssets)) * 100
 
-    const totalFundingAPR =
-      marketExposures.reduce((acc, curr) => acc + BigOrZero(curr.weightedAverageFundingInterest), 0n)
-    const totalFeeAPR =
-      marketExposures.reduce((acc, curr) => acc + BigOrZero(curr.weightedAverageMakerPositionFees), 0n)
+    const totalFundingAPR = marketExposures.reduce(
+      (acc, curr) => acc + Big6Math.mul(curr.makerStats.fundingAPR + curr.makerStats.interestAPR, curr.weight),
+      0n,
+    )
+    const totalFeeAPR = marketExposures.reduce(
+      (acc, curr) => acc + Big6Math.mul(curr.makerStats.positionFeeAPR, curr.weight),
+      0n,
+    )
 
     return {
       marketExposures,
@@ -148,63 +170,60 @@ export const useExposureAndFunding = ({
       totalFeeAPR,
       totalWeight: registrations.reduce((acc, curr) => acc + curr.weight, 0n),
     }
-  }, [vault, accumulations])
+  },
+    // eslint-disable-next-line
+    [vault, marketData]
+  )
 
   return exposureAndFunding
 }
 
-export type VaultAccumulations = NonNullable<Awaited<ReturnType<typeof useVaults7dAccumulations>>[number]['data']>
-export const useVaults7dAccumulations = () => {
+
+export type VaultMarketData = NonNullable<Awaited<ReturnType<typeof useVault7dMarketData>>[number]['data']>
+export const useVault7dMarketData = () => {
   const chainId = usePerpetualsChainId()
   const { data: vaultSnapshots, isLoading: vaultSnapshotsLoading } = useVaultSnapshots()
   const vaults = chainVaultsWithAddress(chainId)
   const { data: blockNumber } = useBlockNumber()
-  const sdk = usePerennialSDKContext()
+  const { data: market7dData } = useMarket7dData()
 
   return useQueries({
     queries: vaults.map((vault) => {
       return {
-        queryKey: ['vaults7dAccumulations', chainId, vault.vaultAddress],
-        enabled: !vaultSnapshotsLoading && !!vaultSnapshots?.vault?.[vault.vault] && !!blockNumber,
+        queryKey: ['vault7dMarketData', chainId, vault.vaultAddress],
+        enabled: !vaultSnapshotsLoading && !!vaultSnapshots?.vault?.[vault.vault] && !!blockNumber && !!market7dData,
         queryFn: async () => {
-          if (!sdk) return
-
           const vaultSnapshot = vaultSnapshots?.vault[vault.vault]
-          if (!vaultSnapshot || !blockNumber) return
+          if (!vaultSnapshot || !blockNumber || !market7dData) return
 
-          const vault7dAccumulations = await sdk.vaults.read.vault7dAccumulations({
-            vaultAddress: vault.vaultAddress,
-            vaultSnapshot,
-            latestBlockNumber: blockNumber,
-          })
+          const marketData = vaultSnapshot.registrations.reduce((acc, registration) => {
+            const asset = addressToAsset(chainId, registration.market)
+            if (!asset || !market7dData[asset]) return acc
+            acc[registration.market] = market7dData[asset]
+            return acc
+          }, {} as Record<Address, (typeof market7dData)[SupportedAsset]>)
 
-          return vault7dAccumulations
+          return { vault, marketData }
         },
       }
     }),
   })
 }
 
-export type VaultAccumulation = NonNullable<Awaited<ReturnType<typeof useVault7dAccumulations>>['data']>
-export const useVault7dAccumulations = (vaultSnapshot: VaultSnapshot) => {
+export const useMarket7dData = () => {
   const chainId = usePerpetualsChainId()
-  const { data: blockNumber } = useBlockNumber()
   const sdk = usePerennialSDKContext()
 
   return useQuery({
-    queryKey: ['vault7dAccumulations', chainId, vaultSnapshot.vault],
-    enabled: !!blockNumber,
+    queryKey: ['market7dData', chainId],
     queryFn: async () => {
+      const { from, to } = last7dBounds()
       if (!sdk) return
-      if (!vaultSnapshot || !blockNumber) return
 
-      const vault7dAccumulations = await sdk.vaults.read.vault7dAccumulations({
-        vaultAddress: vaultSnapshot.vault,
-        vaultSnapshot,
-        latestBlockNumber: blockNumber,
+      return sdk.markets.read.marketsHistoricalData({
+        fromTs: BigInt(from),
+        toTs: BigInt(to),
       })
-
-      return vault7dAccumulations
     },
   })
 }
