@@ -198,7 +198,9 @@ const Perpetuals = () => {
 
   const { markets, tcapMarket, sortedAssets, totalLiquidity, totalOpenInteres } = useMemo(() => {
     if (snapshots && snapshots.data && snapshots.data.markets) {
-      const unsorted = Object.keys(snapshots.data.markets.market).map((market) => {
+      const listedMarketsSnapshots = Object.keys(AssetMetadata).filter((asset) => !AssetMetadata[asset as SupportedAsset].isUnlisted)
+
+      const unsorted = listedMarketsSnapshots.map((market) => {
         const marketSnapshot = snapshots?.data?.markets?.market[market as SupportedAsset]
         const marketPrice = marketSnapshot?.global?.latestPrice ?? 0n
         const latestPrice = marketSnapshot?.global?.latestPrice ?? 0n
@@ -331,7 +333,7 @@ const Perpetuals = () => {
               {sortedAssets.map((sorteAsset, index) => {
                 if (sorteAsset.asset !== 'tcap') {
                   const market = markets[sorteAsset.asset as SupportedAsset]
-                  if (!market || sorteAsset.asset === SupportedAsset.rlb) return <></>
+                  if (!market) return <></>
                   return (
                     <MarketRow
                       key={sorteAsset.asset}
