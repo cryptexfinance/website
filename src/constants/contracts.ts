@@ -18,25 +18,21 @@ export const UsdcAddresses: AddressMappingType = {
 export const LensAddresses: AddressMappingPerennial = {
   [arbitrum.id]: getAddress("0x1593318424df66128cb7d0c5574B1283C3A74C3d"),
   [arbitrumSepolia.id]: zeroAddress,
-  [base.id]: zeroAddress,
 }
 
 export const MarketFactoryAddresses: AddressMappingPerennial = {
   [arbitrum.id]: getAddress('0xDaD8A103473dfd47F90168A0E46766ed48e26EC7'),
   [arbitrumSepolia.id]: getAddress('0x32F3aB7b3c5BBa0738b72FdB83FcE6bb1a1a943c'),
-  [base.id]: zeroAddress,
 }
 
 export const OracleFactoryAddresses: AddressMappingPerennial = {
   [arbitrum.id]: getAddress('0x8CDa59615C993f925915D3eb4394BAdB3feEF413'),
   [arbitrumSepolia.id]: getAddress('0x9d2CaE012AAe0aE00f4d8F42CD287a6923612456'),
-  [base.id]: zeroAddress,
 }
 
 export const PythFactoryAddresses: AddressMappingPerennial = {
   [arbitrum.id]: getAddress('0x6b60e7c96B4d11A63891F249eA826f8a73Ef4E6E'),
   [arbitrumSepolia.id]: getAddress('0x92F8d5B8d0ca2fc699c7c540471Ad49724a68007'),
-  [base.id]: zeroAddress,
 }
 
 // V1 Addresses
