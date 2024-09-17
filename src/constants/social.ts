@@ -1,5 +1,5 @@
 import React from "react"
-import meemLogo from '../../../../../static/website/icons/meem.png'
+import meemLogo from '../../static/website/icons/meem.png'
 
 
 export type PostType = {
