@@ -559,6 +559,41 @@ body {
   }
 }
 
+.section-social {
+  margin: 7rem 0rem;
+  padding: 2rem 4rem;
+
+  .posts {
+    display: grid;
+    grid-template-columns: 32% 32% 32%;
+    grid-gap: 2rem;
+  }
+
+  .post-card {
+    height: 17rem;
+    padding: 2rem 1.5rem;
+    border-radius: 5px;
+    border: 2px solid  transparent; // $color-grey-dark;
+    // box-shadow: 0px 0px 15px 3px $shadow-purple-neon-secondary;
+    background-clip: padding-box;
+    background: linear-gradient(71deg, #080509, #1a171c, #080509);
+    // border-radius: 45px;
+  }
+
+  .post-card::after {
+    position: absolute;
+    top: -1px;
+    bottom: -1px;
+    left: -1px;
+    right: -1px;
+    content: "";
+    z-index: -1;
+    border-radius: 5px;
+
+    background: linear-gradient(71deg, #0d1212, $color-primary-purple, #0d1212);
+  }
+}
+
 .footer {
   display: flex;
   flex-direction: row;

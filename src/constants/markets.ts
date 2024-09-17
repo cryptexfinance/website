@@ -182,7 +182,6 @@ export const AssetMetadata: AssetMetadataType = {
     tvPythSymbol: 'PYTH:MKRUSD',
     tvTicker: 'Crypto.MKR/USD',
     pythFeedId: SDKAssetMetadata.mkr.providerId,
-    isUnlisted: true,
     ...SDKAssetMetadata[SupportedAsset.mkr],
   },
   [SupportedAsset.doge]: {
