@@ -1,6 +1,6 @@
 import React from "react"
 import { Image, Stack } from "react-bootstrap";
-import { PostType, Posts } from "./constants";
+import { PostType, Posts } from "../../../../constants/social";
 
 
 const Card = (post: PostType) => { 
