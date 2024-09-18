@@ -570,7 +570,7 @@ body {
   }
 
   .post-card {
-    height: 17rem;
+    height: 20rem;
     padding: 2rem 1.5rem;
     border-radius: 5px;
     border: 2px solid  transparent; // $color-grey-dark;
@@ -578,6 +578,10 @@ body {
     background-clip: padding-box;
     background: linear-gradient(71deg, #080509, #1a171c, #080509);
     // border-radius: 45px;
+
+    a:hover {
+      color: $shadow-pink-neon;
+    }
   }
 
   .post-card::after {
@@ -591,6 +595,12 @@ body {
     border-radius: 5px;
 
     background: linear-gradient(71deg, #0d1212, $color-primary-purple, #0d1212);
+  }
+
+  .profile-pic {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
   }
 }
 
