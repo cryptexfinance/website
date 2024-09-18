@@ -246,6 +246,65 @@ only screen and (max-device-width : 935px) and (orientation: landscape)
     }
   }
 
+  .section-social {
+    margin: 5rem 0rem;
+    padding: 7rem 4rem;
+
+    .social-title {
+      margin-bottom: 3rem;
+    }
+
+    .posts {
+      grid-template-columns: 50% 50%;
+      grid-gap: 3rem;
+    }
+
+    .post-card {
+      height: 34rem;
+      padding: 2rem 2rem 2.5rem 2rem;
+
+      .post-header {
+        margin-bottom: 1.5rem;
+        h4 {
+          font-size: 18px;
+        }
+
+        .x_profile_link {
+          font-size: 14px;
+        }
+      }
+
+      .x_post_img {
+        padding: 10px 6px 6px 10px;
+        margin-top: -7px;
+        margin-right: -3px;
+
+        img {
+          height: 24px;
+          width: 24px;
+        }
+      }
+
+      .profile-pic {
+        width: 44px;
+        height: 44px;
+        margin-right: 5px;
+      }
+
+      .post-body {
+        p {
+          font-size: 16px;
+          margin-bottom: 12px;
+          line-height: 20px;
+        }
+
+        a {
+          font-size: 16px;
+        }
+      }
+    }
+  }
+
   .footer {
     margin-top: 30rem;
     padding-top: 5rem;

@@ -563,6 +563,10 @@ body {
   margin: 7rem 0rem;
   padding: 2rem 4rem;
 
+  .social-title {
+    margin-bottom: 1.2rem;
+  }
+
   .posts {
     display: grid;
     grid-template-columns: 32% 32% 32%;
@@ -570,17 +574,50 @@ body {
   }
 
   .post-card {
-    height: 20rem;
-    padding: 2rem 1.5rem;
+    height: 21rem;
+    padding: 1.5rem 1.5rem 2rem 1.5rem;
     border-radius: 5px;
-    border: 2px solid  transparent; // $color-grey-dark;
+    border: 2px solid  transparent;
     // box-shadow: 0px 0px 15px 3px $shadow-purple-neon-secondary;
     background-clip: padding-box;
     background: linear-gradient(71deg, #080509, #1a171c, #080509);
     // border-radius: 45px;
+    
+    .post-header {
+      margin-bottom: 0.8rem;
+
+      .x_profile_link {
+        font-size: 1.1rem;
+        color: $color-grey;
+      }
+    }
+    
+    .x_post_img {
+      border: 1px solid $color-grey-dark;
+      border-radius: 50%;
+      padding: 14px 10px 10px 14px;
+      margin-top: -10px;
+      margin-right: -7px;
+
+      img {
+        height: 30px;
+        width: 30px;
+      }
+    }
+
+    .x_post_img:hover {
+      border: 1px solid $color-primary-purple;
+    }
+
+    .profile-pic {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+    }
 
     a:hover {
-      color: $shadow-pink-neon;
+      color: $color-primary-purple;
+      filter: brightness(1.2);
     }
   }
 
@@ -595,12 +632,6 @@ body {
     border-radius: 5px;
 
     background: linear-gradient(71deg, #0d1212, $color-primary-purple, #0d1212);
-  }
-
-  .profile-pic {
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
   }
 }
 

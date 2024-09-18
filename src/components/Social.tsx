@@ -34,44 +34,42 @@ const PicXLink = ({ name, url } : { name: string, url: string }) => (
   </>
 )
 
+const ShowMoreLink = ({ url }: { url: string }) => (
+  <>
+    {" "}
+    <a className="text-purple text-decoration-none" href={url} target="_blank" rel="noreferrer">Show more</a>
+    {" "}
+  </>
+)
+
 export const Posts: Array<PostType> = [
   {
-    name: "leo ꧁IP꧂",
-    username: "@leo_hao",
+    name: "Elite Crypto",
+    username: "@TheEliteCrypto",
     bio: "Lorem ipsum, or lipsum.",
-    image: leoChen,
-    link: "https://x.com/CryptexFinance",
-    post:
+    image: theEliteCrypto,
+    link: "https://x.com/theelitecrypto/status/1835989593918750799",
+    post: (
       <p>
         <p>
-        don't underestimate the OG and builders!
-        <CryptexXComponent />
-        team kept building for a long time since 2021.
+          Just discovered <CryptexXComponent /> – the DeFi Super dApp that's changing the game! It offers instant token swaps, easy cross-chain transfers,
+          decentralized trading options and curated crypto bundles, all into one seamless platform.
         </p>
         <p>
-          Congrats! Very Cool!
-        </p>  
+          Why Cryptex?  
+          <br />
+          ➜ All-in-One Solution: Everything in one place, no more juggling platforms...
+          <ShowMoreLink url="https://x.com/SherifDefi/status/1835989593918750799" />
+        </p>
       </p>
-  },
-  {
-    name: "dnkta.eth",
-    username: "@dnkta",
-    bio: "Lorem ipsum, or lipsum.",
-    image: dnkta,
-    link: "https://x.com/CryptexFinance",
-    post:
-      <p>
-        Future of Finance <CryptexXComponent /> 👀
-        <br />
-        <PicXLink name="pic.x.com/ii0imdonzy" url="https://x.com/dnkta/status/1832042160260047029/photo/1" />
-      </p>
+    )
   },
   {
     name: "Defi Warhol",
     username: "@Defi_Warhol",
     bio: "Lorem ipsum, or lipsum.",
     image: defiWarhol,
-    link: "https://x.com/CryptexFinance",
+    link: "https://x.com/defi_warhol/status/1834223428183679090",
     post: (
       <p>
         <p>
@@ -88,11 +86,42 @@ export const Posts: Array<PostType> = [
     )
   },
   {
+    name: "dnkta.eth",
+    username: "@dnkta",
+    bio: "Lorem ipsum, or lipsum.",
+    image: dnkta,
+    link: "https://x.com/dnkta/status/1832042160260047029",
+    post:
+      <p>
+        Future of Finance <CryptexXComponent /> 👀
+        <br />
+        <PicXLink name="pic.x.com/ii0imdonzy" url="https://x.com/dnkta/status/1832042160260047029/photo/1" />
+      </p>
+  },
+  {
+    name: "leo ꧁IP꧂",
+    username: "@leo_hao",
+    bio: "Lorem ipsum, or lipsum.",
+    image: leoChen,
+    link: "https://x.com/leo_hao/status/1826674373887230021",
+    post:
+      <p>
+        <p>
+        don't underestimate the OG and builders!
+        <CryptexXComponent />
+        team kept building for a long time since 2021.
+        </p>
+        <p>
+          Congrats! Very Cool!
+        </p>  
+      </p>
+  },
+  {
     name: "Sherif | DeFi",
     username: "@SherifDefi",
     bio: "Lorem ipsum, or lipsum.",
     image: sherifDefi,
-    link: "https://x.com/CryptexFinance",
+    link: "https://x.com/sherifdefi/status/1834534034463965397",
     post: (
       <p>
         <p>
@@ -103,26 +132,8 @@ export const Posts: Array<PostType> = [
           is evolving into a DeFi Super App, consolidating all your trading needs in one place. 
         </p>
         <p>
-          ☂️ No more switching between platforms to access different services – Cryptex is simplifying DeFi. 
-        </p>
-      </p>
-    )
-  },
-  {
-    name: "Elite Crypto",
-    username: "@TheEliteCrypto",
-    bio: "Lorem ipsum, or lipsum.",
-    image: theEliteCrypto,
-    link: "https://x.com/CryptexFinance",
-    post: (
-      <p>
-        <p>
-          Just discovered <CryptexXComponent /> – the DeFi Super dApp that's changing the game! It offers instant token swaps, easy cross-chain transfers,
-          decentralized trading options and curated crypto bundles, all into one seamless platform.
-        </p>
-        <p>
-          Why Cryptex?  
-          ➜ All-in-One Solution: Everything in one place, no more juggling platforms.
+          ☂️ No more switching between platforms to access different services – Cryptex is sim... 
+          <ShowMoreLink url="https://x.com/SherifDefi/status/1834534034463965397" />
         </p>
       </p>
     )
@@ -132,7 +143,7 @@ export const Posts: Array<PostType> = [
     username: "@cyrilXBT",
     bio: "Lorem ipsum, or lipsum.",
     image: cyrilxbt,
-    link: "https://x.com/CryptexFinance",
+    link: "https://x.com/cyrilxbt/status/1834612839039803703",
     post: (
       <p>
         <p>
@@ -146,6 +157,11 @@ export const Posts: Array<PostType> = [
           Access perpetual futures for leverage
           Issue curated crypto indexes for diversification
           Use smart vaults for automated strategies
+          
+        </p>
+        <p>
+          All in one seamless...
+          <ShowMoreLink url="https://x.com/SherifDefi/status/1834612839039803703" />
         </p>
       </p>
     )

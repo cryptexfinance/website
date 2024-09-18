@@ -165,7 +165,6 @@ export const AssetMetadata: AssetMetadataType = {
     tvPythSymbol: 'PYTH:MOGUSD',
     tvTicker: 'Crypto.MOG/USD',
     pythFeedId: SDKAssetMetadata.mog.providerId,
-    isUnlisted: true,
     ...SDKAssetMetadata[SupportedAsset.mog],
   },
   [SupportedAsset.jpy]: {
