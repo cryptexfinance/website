@@ -3,7 +3,7 @@ import React from "react"
 import SectionMain from "./sections/SectionMain"
 import SectionProducts from "./sections/products"
 import SectionGovernance from "./sections/SectionGovernance"
-import SectionSocial from "./sections/social"
+// import SectionSocial from "./sections/social"
 
 const Home = data => {
   return (
@@ -13,7 +13,6 @@ const Home = data => {
         <SectionMain />
         <SectionProducts />
         <SectionGovernance />
-        <SectionSocial />
       </main>
     </>
   )
