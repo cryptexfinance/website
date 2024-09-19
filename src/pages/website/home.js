@@ -13,7 +13,6 @@ const Home = data => {
         <SectionMain />
         <SectionProducts />
         <SectionGovernance />
-        {/* <SectionSocial /> */}
       </main>
     </>
   )
