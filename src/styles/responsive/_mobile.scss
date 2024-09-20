@@ -670,7 +670,7 @@
       padding: 5rem 2rem;
     }
     .header {
-      font-size: 18px;
+      font-size: 20px;
     }
     .subtitle {
       margin-top: 2rem;
@@ -742,7 +742,9 @@
     padding: 7rem 4rem;
 
     .social-title {
-      margin-bottom: 6rem;
+      font-size: 20px;
+      line-height: 22px;
+      margin-bottom: 16px;
     }
 
     .posts {
@@ -751,7 +753,7 @@
     }
 
     .post-card {
-      height: 61rem;
+      height: 67rem;
       padding: 2.7rem 2.7rem 3.2rem 2.7rem;
 
       .post-header {
