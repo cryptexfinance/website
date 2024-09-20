@@ -16173,11 +16173,6 @@ react-transition-group@^4.0.0, react-transition-group@^4.3.0, react-transition-g
     loose-envify "^1.4.0"
     prop-types "^15.6.2"
 
-react-tweet-embed@^2.0.0:
-  version "2.0.0"
-  resolved "https://registry.yarnpkg.com/react-tweet-embed/-/react-tweet-embed-2.0.0.tgz#bb8a94bd11bf38ce6c5d9f18f35bf044110a7f40"
-  integrity sha512-g2kfPjSRTOKeJtaQF5EMuSTmp/q8I0qdDs/pZ2qLXZjCWExDT/JgjxSlyM65NyNzsz8072PDpvlO/sIXwwVpdQ==
-
 react-virtualized-auto-sizer@^1.0.2:
   version "1.0.7"
   resolved "https://registry.npmjs.org/react-virtualized-auto-sizer/-/react-virtualized-auto-sizer-1.0.7.tgz"
