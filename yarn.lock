@@ -3599,10 +3599,10 @@
     chrome-trace-event "^1.0.2"
     nullthrows "^1.1.1"
 
-"@perennial/sdk@^0.0.2-beta25":
-  version "0.0.2-beta25"
-  resolved "https://registry.yarnpkg.com/@perennial/sdk/-/sdk-0.0.2-beta25.tgz#c0fbd655a8319a22c52fb29c27ff22a7fb4eb68c"
-  integrity sha512-/qitZhSfs+tZK1MGfMVQIsjmsoFdy/14yLrlylpTr4YYhwKStMEmcHsTmPjUD5FP+mJSQ98QePWhST2zwb/Cxw==
+"@perennial/sdk@^0.0.2-beta26":
+  version "0.0.2-beta26"
+  resolved "https://registry.yarnpkg.com/@perennial/sdk/-/sdk-0.0.2-beta26.tgz#25844ee6c413d89e7beaad82337070fc6a078333"
+  integrity sha512-HTj6hccLAoWAV+gVD6MPyW0dSheDeZi7rwl9f83W5vds4/xyH6alUNa+T5p1ty4HqT9BvPA9vU/6T0Cj80SDQg==
   dependencies:
     "@microsoft/tsdoc" "^0.14.2"
     "@pythnetwork/hermes-client" "^1.0.4"
@@ -3648,9 +3648,9 @@
   integrity sha512-P1st0aksCrn9sGZhp8GMYwBnQsbvAWsZAX44oXNNvLHGqAOcoVxmjZiohstwQ7SqKnbR47akdNi+uleWD8+g6A==
 
 "@pythnetwork/hermes-client@^1.0.4":
-  version "1.0.4"
-  resolved "https://registry.yarnpkg.com/@pythnetwork/hermes-client/-/hermes-client-1.0.4.tgz#2d811dbc76d3a072fafdc10edf75afa966fa6af8"
-  integrity sha512-/IrDaA7D2i3bqBLqUO2N6qUXq7xHA/mlpN+99O6iQiW/KuGn3JI9G1iv39v/Q84fFhQowhE56JAnLyNAoI6y7g==
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/@pythnetwork/hermes-client/-/hermes-client-1.1.0.tgz#fe416b2676095ffd2c5a89959eff8a26175ae524"
+  integrity sha512-TMkH5RtkLhOyUi3cCWcSdwgOYfOx/gFjiOKUhD7A3Gpzh2TeVJg3Qk+Z697SGVE7DG+ZS6zc13BICJbEeMqQ7A==
   dependencies:
     "@zodios/core" "^10.9.6"
     eventsource "^2.0.2"
