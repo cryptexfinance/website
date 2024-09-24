@@ -73,7 +73,12 @@ const MarketRow = ({ index, asset, market, showOI }: { index: number, asset: Sup
     >
       <Col className="product-row-item mobile-header" lg={showOI ? 2 : 4} md={showOI ? 2 : 4} sm={12}>
         <Stack direction="horizontal" gap={3}>
-          <Image className="product-logo" src={assetMetada.icon} width={36} height={36} />
+          <Image
+            className="product-logo"
+            src={assetMetada.icon}
+            width={asset !== SupportedAsset.meem ? 36 : 42}
+            height={asset !== SupportedAsset.meem ? 36 : 42}
+          />
           <Stack direction="vertical" gap={0}>
             <span className="product-value">{assetMetada.name}</span>
             <span className="product-subvalue">{assetMetada.symbol}</span>
@@ -87,7 +92,7 @@ const MarketRow = ({ index, asset, market, showOI }: { index: number, asset: Sup
       <Col lg={2} md={2} sm={12} className="product-row-item text-right">
         <span className="product-title only-mobile">{t('chagen24h')}</span>
         <span className={`product-value ${!formattedValues.changeIsNegative ? "text-green" : "text-red"}`}>
-          {formattedValues.change}
+          {asset !== SupportedAsset.meem ? formattedValues.change : "-" }
         </span>
       </Col>
       <Col lg={showOI ? 3 : 4} md={showOI ? 3 : 4} sm={12} className="product-row-item text-right">
@@ -221,6 +226,13 @@ const Perpetuals = () => {
         return Big6Math.toUnsafeFloat(b.makerNotional) - Big6Math.toUnsafeFloat(a.makerNotional)
       })
 
+      const meemPosition = sortedMarkets.findIndex((market) => market.asset === SupportedAsset.meem)
+      if (meemPosition !== -1) {
+        const meemMarket = sortedMarkets[meemPosition]
+        sortedMarkets.splice(meemPosition, 1)
+        sortedMarkets.splice(2, 0, meemMarket)
+      }
+
       if (snapshots.data.tcapSnapshot) {
         const { longSnapshot, shortSnapshot } = snapshots.data.tcapSnapshot
         const tcapPrice = parseFloat(ethers.formatEther(longSnapshot.latestVersion.price))
@@ -234,7 +246,7 @@ const Perpetuals = () => {
           maker: ethers.formatEther(longSnapshot.openInterest.maker + shortGlobalPosition.maker)
         }
 
-        const tcapPosition = 2
+        const tcapPosition = 3
         sortedMarkets = [
             ...sortedMarkets.slice(0, tcapPosition),
             {
@@ -325,9 +337,6 @@ const Perpetuals = () => {
               <Col lg={4} md={4} className="text-right">
                 <span className="product-title">{t('ls-liquidity')}</span>
               </Col>
-              {/* <Col lg={3} md={3} className="text-right">
-                <span className="market-title">{t('ls-interes')}</span>
-              </Col> */}
             </Stack>
             <div className="products-detail">
               {sortedAssets.map((sorteAsset, index) => {
@@ -353,16 +362,6 @@ const Perpetuals = () => {
             <Spinner animation="border" variant="primary" />
           </Stack>
         )}
-        {/* <Stack direction="horizontal" gap={3} className="products-totals only-mobile">
-          <Col lg={6} sm={12} className="total-box">
-            <span className="total-title">{t('total-liquidity')}</span>
-            <span className="total-value">{totalLiquidity}</span>
-          </Col>
-          <Col lg={6} sm={12} className="total-box">
-            <span className="total-title">{t('total-interest')}</span>
-            <span className="total-value">{totalOpenInteres}</span>
-          </Col>
-        </Stack> */}
       </Stack>
     </Stack>
   )
