@@ -7,7 +7,7 @@ description: "The MEEM Perp is a perpetual futures contract based on an index
   composed of 5 meme tokens: DOGE, PEPE, FLOKI, SHIB, and ETH. Each token in the
   index is equally weighted, with a weight of 20%."
 featuredpost: true
-featuredimage: /img/howmuchistheentiremarketcap.png
+featuredimage: /img/meemlaunch.png
 tags:
   - Meem
   - Index
