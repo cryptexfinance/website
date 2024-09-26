@@ -13,6 +13,10 @@ tags:
   - Index
   - ""
 ---
+
+
+![Meem Inde](/img/meemlaunch.png "Meem Inde")
+
 Cryptex is beyond thrilled to deploy a brand new Index market for the DeFi ecosystem.
 
 MEEM is a collective of MEMEs in a single, fully decentralized index solution.
@@ -39,7 +43,7 @@ Weighting:
 
 20%, 20%, 20%, 20%, 20%
 
-*Index formula:  MEEM Index Price = 0.2  (Current DOGE Price / DOGE Mark Price) + 0.2  (Current SHIB Price / SHIB Mark Price) + 0.2  (Current PEPE Price / PEPE Mark Price) + 0.2  (Current FLOKI Price / FLOKI Mark Price) + 0.2 * (Current ETH Price / ETH Mark Price)* 
+*Index formula:  MEEM Index Price = 0.2  (Current DOGE Price / DOGE Mark Price) + 0.2  (Current SHIB Price / SHIB Mark Price) + 0.2  (Current PEPE Price / PEPE Mark Price) + 0.2  (Current FLOKI Price / FLOKI Mark Price) + 0.2*  (Current ETH Price / ETH Mark Price)* 
 
 MEEM is powered by:
 
