@@ -21,6 +21,8 @@ import { AssetMetadata } from '../constants/markets'
 import { usePerpetualsChainId, usePythSubscription } from './network'
 import { useQuery } from '@tanstack/react-query'
 import { PythDataFeedUrl } from '../constants/network'
+import { zeroHash } from 'viem'
+import { IndexMetadata, SupportedIndex } from '../constants/indexes'
 
 
 export const useChainLivePrices = () => {
@@ -31,7 +33,7 @@ export const useChainLivePrices = () => {
   const [feedIds, feedToAsset] = useMemo(() => {
     const feedToAsset = markets.reduce((acc, { market }) => {
       const feed = AssetMetadata[market].pythFeedId
-      if (!feed) return acc
+      if (!feed || feed === zeroHash || feed === IndexMetadata[SupportedIndex.meem].feedId) return acc
       if (acc[feed]) {
         acc[feed].push(market)
       } else {

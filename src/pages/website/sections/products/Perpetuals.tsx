@@ -15,6 +15,8 @@ import { useTcapPriceChanges } from "../../../../hooks/graph"
 
 import { ProductInfoCard } from "../../../../components/ProductInfoCard"
 import { Highlight, PurpleText } from "../../../../components/highlights"
+import { use24hPriceChange } from "../../../../hooks/indexes"
+import { SupportedIndex } from "../../../../constants/indexes"
 
 
 const highlights = [
@@ -58,6 +60,16 @@ const PriceBox = ({ currentPrice }: { currentPrice: bigint }) => {
   )
 }
 
+const IndexChangeBox = ({ index }: { index: string }) => { 
+  const { data } = use24hPriceChange(index as SupportedIndex)
+
+  return (
+    <span className={`product-value ${data && data.isPostive ? "text-green" : "text-red"}`}>
+      {data ? Math.abs(data.change).toFixed(2) : "0.00" }%
+    </span>
+  )
+}
+
 const MarketRow = ({ index, asset, market, showOI }: { index: number, asset: SupportedAsset, market: MarketSnapshot, showOI: boolean }) => {
   const { t } = useTranslation()
   const assetMetada = AssetMetadata[asset]
@@ -91,9 +103,13 @@ const MarketRow = ({ index, asset, market, showOI }: { index: number, asset: Sup
       <PriceBox currentPrice={formattedValues.priceBI} />
       <Col lg={2} md={2} sm={12} className="product-row-item text-right">
         <span className="product-title only-mobile">{t('chagen24h')}</span>
-        <span className={`product-value ${!formattedValues.changeIsNegative ? "text-green" : "text-red"}`}>
-          {asset !== SupportedAsset.meem ? formattedValues.change : "-" }
-        </span>
+        {asset !== SupportedAsset.meem ? (
+          <span className={`product-value ${!formattedValues.changeIsNegative ? "text-green" : "text-red"}`}>
+            {formattedValues.change}
+          </span>
+        ) : (
+          <IndexChangeBox index={asset} />
+        )}
       </Col>
       <Col lg={showOI ? 3 : 4} md={showOI ? 3 : 4} sm={12} className="product-row-item text-right">
         <span className="product-title only-mobile">{t('ls-liquidity')}</span>

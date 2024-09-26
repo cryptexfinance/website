@@ -74,6 +74,7 @@ export const ExplorerURLs: { [chainId in SupportedChainIdType]: string } = {
 
 const PythBenchmarkUrlVersion = 'v1'
 const PythBenchmarkUrl = "benchmarks.pyth.network" 
+export const CryptexPriceFeedUrl = 'https://api.perps.cryptex.finance/price-feed'
 export const PythMainnetUrl = "https://perennial.rpc.p2p.world"
 export const PythTestnetUrl = "https://perennial.rpc.p2p.world"
 export const PythDataFeedUrl = `https://${PythBenchmarkUrl}/${PythBenchmarkUrlVersion}/shims/tradingview`
