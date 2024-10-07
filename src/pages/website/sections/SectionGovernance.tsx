@@ -55,7 +55,7 @@ const governanceItems = [
     id: "3",
     title: "ctx-governance.staking",
     info: "ctx-governance.staking-description",
-    link: "https://v1.cryptex.finance/governance",
+    link: "https://app.cryptex.finance/governance",
   }
 ]
 
@@ -73,10 +73,16 @@ const governanceIcons = [
     class: "gemini",
   },
   {
-    href: "https://www.huobi.com/en-us/asset-introduction/details?currency=ctx",
-    icon: huobiLogo,
-    alt: "Huobi Logo",
-    class: "huobi",
+    href: "https://aerodrome.finance/deposit?token0=0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913&token1=0xBB22Ff867F8Ca3D5F2251B4084F6Ec86D4666E14&type=-1",
+    icon: aeroDromeLogo,
+    alt: "Aerodrome Logo",
+    class: "aerodrome",
+  },
+  {
+    href: "https://www.sushi.com/ethereum/pool/v2/0x2a93167ed63a31f35ca4788e2eb9fbd9fa6089d0",
+    icon: sushiLogo,
+    alt: "Sushiswap Logo",
+    class: "",
   },
   {
     href: "https://app.uniswap.org/#/tokens/ethereum/0x321c2fe4446c7c963dc41dd58879af648838f98d",
@@ -85,28 +91,10 @@ const governanceIcons = [
     class: "uniswap",
   },
   {
-    href: "https://www.sushi.com/pools/1:0x2a93167ed63a31f35ca4788e2eb9fbd9fa6089d0",
-    icon: sushiLogo,
-    alt: "Sushiswap Logo",
-    class: "",
-  },
-  {
-    href: "https://app.camelot.exchange/nitro/0x444D45d5d9612aBB596420fE81DA41a1aA98CeBa",
-    icon: camelotLogo,
-    alt: "Camelot Logo",
-    class: "",
-  },
-  {
-    href: "https://traderjoexyz.com/arbitrum/pool/v21/0x84f5c2cfba754e76dd5ae4fb369cfc920425e12b/ETH/50",
-    icon: traderJoeLogo,
-    alt: "Trader Joe Logo",
-    class: "trader-joe",
-  },
-  {
-    href: "https://aerodrome.finance/deposit?token0=0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913&token1=0xBB22Ff867F8Ca3D5F2251B4084F6Ec86D4666E14&type=-1",
-    icon: aeroDromeLogo,
-    alt: "Aerodrome Logo",
-    class: "aerodrome",
+    href: "https://www.huobi.com/en-us/asset-introduction/details?currency=ctx",
+    icon: huobiLogo,
+    alt: "Huobi Logo",
+    class: "huobi",
   },
 ]
 
