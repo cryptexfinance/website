@@ -23,13 +23,23 @@ const SectionMain = () => {
       </video>
       <div className="black-overlay"></div>
       <div className="main-container col-sm-12">
-        <div className="main-info">
-          <div className="main-title" />
-          <p className="home-subheader" />
+        <div className="main-info" style={{ width: "50%" }}>
+          <h1
+            className="main-title"
+            style={{
+              fontSize: "2.7rem",
+              color: "#A440F2",
+            }}
+          >
+            <span>One</span> <span>App,</span> <span>For</span> <span>All</span> <span>Defi</span> <span>Needs</span>
+          </h1>
+          <h2 className="main-subtitle line-up" style={{ width: "90%" }}>
+            DeFi platform to swap, bridge, trade and index crypto, all onchain.
+          </h2>
         </div>
         <div className="main-buttons">
           <Col sm={12} md={12} lg={12} className="main-buttons-actions">
-            <div className="button-to-app">
+            <div className="button-to-app line-up">
               <a
                 href={appEndpoint}
                 rel="noopener noreferrer"
@@ -39,7 +49,7 @@ const SectionMain = () => {
                 {t('launch-app')}
               </a>
             </div>
-            <div className="">
+            <div className="line-up">
               <a
                 href="https://docs.cryptex.finance/"
                 rel="noopener noreferrer"

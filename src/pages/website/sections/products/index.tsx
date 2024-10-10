@@ -6,7 +6,7 @@ import { useTranslation } from "gatsby-plugin-react-i18next"
 import Indexes from "./Indexes"
 import Perpetuals from "./Perpetuals"
 import Spot from "./Spot"
-import Vaults from "./Vaults"
+// import Vaults from "./Vaults"
 import { PerennialSDKProvider } from "../../../../context/perennialSdkContext"
 
 
@@ -16,9 +16,12 @@ const SectionProducts = () => {
   return (
     <PerennialSDKProvider>
       <div id="markets" className="section-products">
-        <h1 className="header">
+        <h1 className="header line-up">
           {t('markets')}
         </h1>
+        <h2 style={{ color: "#d5d4e3", marginLeft: "0.5rem", marginBottom: "2.5rem" }}>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit sed do eiusmod 
+        </h2>
         <Tabs id="products-tabs" defaultActiveKey={"spot"}>
           <Tab eventKey="spot" title="Spot">
             <Spot />
@@ -29,9 +32,9 @@ const SectionProducts = () => {
           <Tab eventKey="indexes" title="Indexes">
             <Indexes />
           </Tab>
-          <Tab eventKey="vaults" title="Vaults">
+          {/* <Tab eventKey="vaults" title="Vaults">
             <Vaults />
-          </Tab>
+          </Tab> */}
         </Tabs>
       </div>
     </PerennialSDKProvider>

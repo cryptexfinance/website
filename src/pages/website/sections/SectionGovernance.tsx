@@ -10,9 +10,6 @@ import sushiLogo from "../../../../static/website/governance/sushi-logo.svg"
 import uniLogo from "../../../../static/website/governance/uni-logo.svg"
 import coinbaseLogo from "../../../../static/website/governance/coinbase.svg"
 import huobiLogo from "../../../../static/website/governance/huobi.svg"
-import camelotLogo from "../../../../static/website/governance/camelot.svg"
-import coingeckoLogo from "../../../../static/website/governance/coingecko.svg"
-import traderJoeLogo from "../../../../static/website/governance/traderjoe.png"
 import aeroDromeLogo from "../../../../static/website/governance/aerodrome.png"
 import {
   FOUNDERS_ADDRESS,
