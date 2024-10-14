@@ -31,10 +31,10 @@ const SectionMain = () => {
               color: "#A440F2",
             }}
           >
-            <span>One</span> <span>App,</span> <span>For</span> <span>All</span> <span>Defi</span> <span>Needs</span>
+            <span>DeFi</span>{" "}<span>United</span>
           </h1>
           <h2 className="main-subtitle line-up" style={{ width: "90%" }}>
-            DeFi platform to swap, bridge, trade and index crypto, all onchain.
+            Indexes, Spot, Perps, all on one app.
           </h2>
         </div>
         <div className="main-buttons">

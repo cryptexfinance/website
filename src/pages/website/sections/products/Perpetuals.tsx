@@ -213,7 +213,7 @@ const MarketTcapRow = ({ index, tcapSnapshot, showOI }: { index: number, tcapSna
   )  
 }
 
-const Perpetuals = () => {
+const Perpetuals = ({ showAll } : { showAll?: boolean }) => {
   const { t } = useTranslation()
   const snapshots = useMarketSnapshots()
 
@@ -298,23 +298,25 @@ const Perpetuals = () => {
 
   return (
     <Stack direction="horizontal" gap={2} className="products">
-      <Stack direction="vertical" className="products-info" style={{ width: "48%" }}>
-        <ProductInfoCard
-          headline="Precise and Powerful Perpetual Trading"
-          highlights={highlights}
-          totals={[
-            {
-              title: "Total Liquidity",
-              value: totalLiquidity
-            },
-            {
-              title: "Open Interest",
-              value: totalOpenInteres || "$0.00"
-            },
-          ]}
-        />
-      </Stack>
-      <Stack direction="vertical" className="products-metrics" style={{ width: "52%" }}>
+      {showAll && (
+        <Stack direction="vertical" className="products-info" style={{ width: "48%" }}>
+          <ProductInfoCard
+            headline="Precise and Powerful Perpetual Trading"
+            highlights={highlights}
+            totals={[
+              {
+                title: "Total Liquidity",
+                value: totalLiquidity
+              },
+              {
+                title: "Open Interest",
+                value: totalOpenInteres || "$0.00"
+              },
+            ]}
+          />
+        </Stack>
+      )}
+      <Stack direction="vertical" className="products-metrics" style={{ width: showAll ? "52%" : "100%"}}>
         <Accordion className="only-mobile">
           <Accordion.Item eventKey="1">
             <Accordion.Header>

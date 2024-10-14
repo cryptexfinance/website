@@ -2,11 +2,10 @@ import React from "react"
 
 import SectionMain from "./sections/SectionMain"
 import SectionProducts from "./sections/products"
+import SectionProducts2 from "./sections/products2"
 import SectionGovernance from "./sections/SectionGovernance"
 import SectionSocial from "./sections/social"
 import SectionSecurity from "./sections/SectionSecurity"
-import SectionSecurity2 from "./sections/SectionSecurity2"
-import SectionSecurity3 from "./sections/SectionSecurity3"
 
 
 const Home = data => {
@@ -15,10 +14,8 @@ const Home = data => {
       <header id="home" />
       <main>
         <SectionMain />
-        <SectionProducts />
+        <SectionProducts2 />
         <SectionSecurity />
-        <SectionSecurity3 />
-        <SectionSecurity2 />
         <SectionGovernance />
         <SectionSocial />
       </main>

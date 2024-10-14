@@ -248,6 +248,54 @@ body {
   margin: 8rem 2rem 2rem 1rem;
   padding: 5rem 1.8rem 3rem 1.8rem;
 
+  .product2-button {
+    padding: 1.5rem 2rem;
+    border: 0.5px solid #494866;
+    border-radius: 10px;
+    background-color: #212138;
+    background-image: linear-gradient(135deg, #17111d 30%, #110b10 66%, #080509 100%);
+    transition: transform 0.5s, -webkit-transform 0.5s !important;
+    transition-timing-function: ease-in !important;
+
+    h1 {
+      margin-bottom: 0rem;
+    }
+  }
+  .product2-button:hover {
+    background-color: #282837;
+    border-color: $color-primary-purple;
+    transform: scale(1.01);
+  }
+  .product2-button.active {
+    border: 1px solid $color-primary-purple;
+    filter: brightness(1.1);
+  }
+
+  .box-total {
+    position: "relative";
+    height: 10.5rem;
+    width: 13rem;
+    border: 2px solid transparent;
+    // border: 1px solid #494866;
+    border-radius: 5px;
+    // box-shadow: 0px 0px 15px 3px rgba(164, 64, 242, 0.3);
+    // background-color: #0e0e19;
+    background-clip: border-box;
+    // background: linear-gradient(71deg, #080509, #1a171c, #080509);
+    background-color: #080509;
+  }
+  .box-total::after {
+    position: absolute;
+    top: -1px;
+    bottom: -1px;
+    left: -1px;
+    right: -1px;
+    content: "";
+    z-index: -1;
+    border-radius: 5px;
+    background: linear-gradient(71deg, #0d1212, #A440F2, #0d1212);
+  }
+
   .header {
     margin-left: 0.5rem;
   }

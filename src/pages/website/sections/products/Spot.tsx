@@ -46,19 +46,21 @@ const totals = [
   },
 ]
 
-const Spot = () => {
+const Spot = ({ showAll } : { showAll?: boolean }) => {
   // const { t } = useTranslation()
   const isSSR = typeof window === "undefined"
 
   return (
     <Stack direction="horizontal" className="products" gap={3} style={{ padding: "1rem 0.5rem" }} >
-      <Stack direction="vertical" className="products-info" style={{ width: "35%", maxWidth: "50%", height: "27.5rem" }}>
-        <ProductInfoCard
-          headline="Seamless Spot Trading Across Chains"
-          highlights={highlights}
-          totals={totals}
-        />
-      </Stack>
+      {showAll && (
+        <Stack direction="vertical" className="products-info" style={{ width: "35%", maxWidth: "50%", height: "27.5rem" }}>
+          <ProductInfoCard
+            headline="Seamless Spot Trading Across Chains"
+            highlights={highlights}
+            totals={totals}
+          />
+        </Stack>
+      )}
       <Stack direction="vertical" className="products-metrics indexes" style={{ width: "fit-content" }}>
         <Accordion className="only-mobile">
           <Accordion.Item eventKey="0">

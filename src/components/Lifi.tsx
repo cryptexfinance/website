@@ -5,10 +5,10 @@ import { Stack } from "react-bootstrap"
 
 
 const Lifi = ({
-  fromChain,
-  toChain,
-  fromToken,
-  toToken,
+  fromChain = 1,
+  toChain = 1,
+  fromToken = "ETH",
+  toToken = "CTX",
 }: {
   fromChain?: number,
   toChain?: number,

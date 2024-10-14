@@ -32,7 +32,7 @@ const highlights = [
 ];
 
 
-const Indexes = () => {
+const Indexes = ({ showAll } : { showAll?: boolean }) => {
   const { t } = useTranslation()
   const { data: setTokens } = useSetTokensSnapshots()
   const [currentIndex, setCurrentIndex] = React.useState("TCAP")
@@ -43,14 +43,16 @@ const Indexes = () => {
 
   return (
     <Stack direction="horizontal" className="products" gap={3} style={{ padding: "1rem 0.5rem" }} >
-      <Stack direction="vertical" className="products-info" style={{ width: "50%" }}>
-        <ProductInfoCard
-          headline="Access diversified crypto exposure through curated indexes"
-          highlights={highlights}
-          totals={undefined}
-        />
-      </Stack>
-      <Stack direction="vertical" className="products-metrics indexes" style={{ width: "50%" }}>
+      {showAll && (
+        <Stack direction="vertical" className="products-info" style={{ width: "50%" }}>
+          <ProductInfoCard
+            headline="Access diversified crypto exposure through curated indexes"
+            highlights={highlights}
+            totals={undefined}
+          />
+        </Stack>
+      )}
+      <Stack direction="vertical" className="products-metrics indexes" style={{ width: showAll ? "50%" : "100%" }}>
         <Accordion className="only-mobile">
           <Accordion.Item eventKey="2">
             <Accordion.Header>
