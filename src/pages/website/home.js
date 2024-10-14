@@ -6,6 +6,7 @@ import SectionProducts2 from "./sections/products2"
 import SectionGovernance from "./sections/SectionGovernance"
 import SectionSocial from "./sections/social"
 import SectionSecurity from "./sections/SectionSecurity"
+import SectionProducts3 from "./sections/products3"
 
 
 const Home = data => {
@@ -15,6 +16,7 @@ const Home = data => {
       <main>
         <SectionMain />
         <SectionProducts2 />
+        <SectionProducts3 />
         <SectionSecurity />
         <SectionGovernance />
         <SectionSocial />

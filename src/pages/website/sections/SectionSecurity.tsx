@@ -8,7 +8,7 @@ import spearbitLogo from "../../../../static/website/protocol/spearbit.svg"
 const SectionSecurity = () => { 
   return (
     <Stack direction="vertical" gap={2} className="section-security align-items-center ">
-      <h1>Trustless experience for all DeFi users.</h1>
+      <h1 style={{ fontSize: "2rem" }}>Trustless experience for all DeFi users.</h1>
       <h2 >
         We integrate battled tested technologies that are secure and trusted by the DeFi community. 
       </h2>

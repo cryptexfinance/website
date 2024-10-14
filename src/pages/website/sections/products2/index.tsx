@@ -21,17 +21,17 @@ const products = [
   {
     key: ProductKey.Indexes,
     title: "Indexes",
-    headline: "Lorem ipsum dolor sit amet, consectetur adipiscing elit sed do eiusmod",
+    headline: "Neque porro quisquam est qui",
   },
   {
     key: ProductKey.Spot,
     title: "Spot",
-    headline: "Lorem ipsum dolor sit amet, consectetur adipiscing elit sed do eiusmod",
+    headline: "Sed quia consequuntur magni dolores",
   },
   {
     key: ProductKey.Perpetuals,
     title: "Perpetuals",
-    headline: "Lorem ipsum dolor sit amet, consectetur adipiscing elit sed do eiusmod",
+    headline: "Quis autem vel eum iure",
   }
 ]
 
@@ -62,9 +62,10 @@ const SectionProducts2 = () => {
           gap={4}
           className="mx-5jsutify-content-center"
           style={{
-            padding: "1.5rem 2rem",
-            margin: "3rem 5rem 1.5rem 5rem",
-            borderRadius: "5px"
+            padding: "2rem 2rem",
+            margin: "1rem 5rem 1.5rem 5rem",
+            borderRadius: "3px",
+            backgroundColor: "#0e0e13"
           }}
         >
           <Stack direction="vertical" gap={4} style={{ width: activeProduct !== "spot" ? "36%" : "auto" }}>
@@ -77,7 +78,9 @@ const SectionProducts2 = () => {
               >
                 <h1>{product.title}</h1>
                 {activeProduct === product.key && (
-                  <span style={{ fontSize: "1.1rem", color: "#A9A7BE" }} >Neque porro quisquam est qui</span>
+                  <span style={{ fontSize: "1.1rem", color: "#A9A7BE" }}>
+                    {product.headline}
+                  </span>
                 )}
               </Button>
             ))}

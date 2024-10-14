@@ -29,6 +29,7 @@ const SectionMain = () => {
             style={{
               fontSize: "2.7rem",
               color: "#A440F2",
+              fontWeight: 700,
             }}
           >
             <span>DeFi</span>{" "}<span>United</span>
