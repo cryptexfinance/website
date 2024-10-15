@@ -1,5 +1,5 @@
 import React, { useMemo } from "react"
-import { Accordion, Col, Image, Spinner, Stack } from "react-bootstrap"
+import { Col, Image, Spinner, Stack } from "react-bootstrap"
 import { useTranslation } from "gatsby-plugin-react-i18next"
 import { graphql } from "gatsby"
 import { formatEther } from "viem"
@@ -22,27 +22,7 @@ import { AssetMetadata } from "../../../../constants/markets"
 import { addPositions, calculateFunding, calculateLeverageBN, nextPosition } from "../../../../utils/positionUtils"
 import { useVaultSnapshot } from "../../../../hooks/marketsV1"
 import tcapLogo from '../../../../../static/website/icons/tcap.png'
-import { ProductInfoCard } from "../../../../components/ProductInfoCard"
-import { Highlight, PurpleText } from "../../../../components/highlights"
 
-
-const highlights = [
-  <Highlight>
-    Enjoy the <PurpleText>flexibility to deposit and withdraw</PurpleText> capital at any time
-  </Highlight>,
-  <Highlight>
-    Leverage optimized, <PurpleText>capital-efficient strategies</PurpleText>
-  </Highlight>,
-  <Highlight>
-    Easily diversify <PurpleText>across multiple</PurpleText> automated vaults
-  </Highlight>,
-  <Highlight>
-    Benefit from professionally <PurpleText>crafted algorithms</PurpleText>
-  </Highlight>,
-  <Highlight>
-    Access <PurpleText>automated</PurpleText> strategies
-  </Highlight>
-]
 
 const Vaults = () => {
   const { t } = useTranslation()
@@ -58,28 +38,7 @@ const Vaults = () => {
 
   return (
     <Stack direction="horizontal" className="products" gap={3} style={{ padding: "1rem 0.5rem" }}>
-      <Stack direction="vertical" className="products-info" style={{ width: "50%" }}>
-        <ProductInfoCard
-          headline="Automated Strategies Through Smart Vaults"
-          highlights={highlights}
-          totals={undefined}
-        />
-      </Stack>
-      <Stack direction="vertical" className="products-metrics vaults" style={{ width: "50%" }}>
-        <Accordion className="only-mobile">
-          <Accordion.Item eventKey="3">
-            <Accordion.Header>
-              <h6>Details</h6>
-            </Accordion.Header>
-            <Accordion.Body>
-              <ProductInfoCard
-                headline="Automated Yield Through Smart Vaults"
-                highlights={highlights}
-                totals={undefined}
-              />
-            </Accordion.Body>
-          </Accordion.Item>
-        </Accordion>
+      <Stack direction="vertical" className="products-metrics vaults w-100" >
         {vaults ? (
           <div className="products-detail-container">
             <Stack direction="horizontal" gap={0} className="products-header">

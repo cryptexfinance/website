@@ -1,18 +1,25 @@
 import React from "react"
 import { Stack } from "react-bootstrap";
-import quantstampLogo from "../../../../static/website/protocol/quantstamp.svg"
-import quantstampLogo2 from "../../../../static/website/protocol/quantstamp2.svg"
-import spearbitLogo from "../../../../static/website/protocol/spearbit.svg"
+import quantstampLogo from "../../../../static/website/security/quantstamp.svg"
+import pashovLogo from "../../../../static/website/security/pashov.jpg"
+import spearbitLogo from "../../../../static/website/security/spearbit.svg"
 
 
 const SectionSecurity = () => { 
   return (
-    <Stack direction="vertical" gap={2} className="section-security align-items-center ">
-      <h1 style={{ fontSize: "2rem" }}>Trustless experience for all DeFi users.</h1>
-      <h2 >
+    <Stack
+      id="security"
+      direction="vertical"
+      gap={2}
+      className="section-security align-items-center "
+    >
+      <h1 className="header line-up">
+        Trustless experience for all DeFi users.
+      </h1>
+      <h2 className="headline">
         We integrate battled tested technologies that are secure and trusted by the DeFi community. 
       </h2>
-      <h2 className="mt-4 mb-0" style={{ color: "#A440F2" }}>
+      <h2 className="mt-4 mb-0 text-purple">
         Our products are extensively audited by:
       </h2>
       <Stack direction="vertical">
@@ -22,7 +29,7 @@ const SectionSecurity = () => {
           className="security-boxes align-self-center justify-content-center"
         >
           <Stack direction="vertical" gap={2} className="box sec-box align-items-center">
-            <img src={quantstampLogo2} alt="Quantstamp" height={160} width={160} />
+            <img src={quantstampLogo} alt="Quantstamp" height={160} width={160} />
             <h2>Quantstamp</h2>
           </Stack>
           <Stack direction="vertical" gap={2} className="box sec-box align-items-center">
@@ -30,7 +37,13 @@ const SectionSecurity = () => {
             <h2>Spearbit</h2>
           </Stack>
           <Stack direction="vertical" gap={2} className="box sec-box align-items-center">
-            <img src={quantstampLogo} alt="Quantstamp" height={160} width={160} />
+            <img
+              src={pashovLogo}
+              alt="Pashov"
+              height={160}
+              width={160}
+              style={{ borderRadius: "50%" }}
+            />
             <h2>Pashov</h2>
           </Stack>
         </Stack>

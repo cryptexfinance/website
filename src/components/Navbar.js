@@ -49,8 +49,9 @@ const NavbarMenu = props => {
 
   const blogView =
     typeof props.blogPost !== "undefined" ? props.blogPost : false
-  const governanceUrl = blogView ? `${siteUrl}/#governance` : "#governance"
   const productsUrl = blogView ? `${siteUrl}/#markets` : "#markets"
+  const securityeUrl = blogView ? `${siteUrl}/#security` : "#security"
+  const governanceUrl = blogView ? `${siteUrl}/#governance` : "#governance"
 
   const LangDropdown = () => (
     <Dropdown className="language-dropdown">
@@ -132,6 +133,9 @@ const NavbarMenu = props => {
               <Nav.Link as={Link} to={productsUrl} title="Markets">
                 Markets
               </Nav.Link>
+              <Nav.Link as={Link} to={securityeUrl} title="Security">
+                Security
+              </Nav.Link> 
               <Nav.Link as={Link} to={governanceUrl} title="CTX Governance">
                 {t('governance')}
               </Nav.Link>         
