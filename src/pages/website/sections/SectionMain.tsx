@@ -23,18 +23,11 @@ const SectionMain = () => {
       </video>
       <div className="black-overlay"></div>
       <div className="main-container col-sm-12">
-        <div className="main-info" style={{ width: "50%" }}>
-          <h1
-            className="main-title"
-            style={{
-              fontSize: "2.7rem",
-              color: "#A440F2",
-              fontWeight: 700,
-            }}
-          >
+        <div className="main-info">
+          <h1 className="main-title">
             <span>DeFi</span>{" "}<span>United</span>
           </h1>
-          <h2 className="main-subtitle line-up" style={{ width: "90%" }}>
+          <h2 className="main-subtitle line-up">
             Indexes, Spot, Perps, all on one app.
           </h2>
         </div>

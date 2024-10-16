@@ -169,7 +169,7 @@ span {
 }
 
 .text-purple {
-  color: $color-primary-purple;
+  color: $color-primary-purple !important;
 }
 
 .text-green {
@@ -471,8 +471,10 @@ span {
   transition: transform 0.5s;
   transition-timing-function: ease-in;
   text-decoration: none;
+
   &:hover {
-    box-shadow: 0px 0px 12px 3px $shadow-purple-neon;
+    border:0.5px solid rgba(165, 64, 242, 0.75);
+    box-shadow: 0px 0px 12px 3px rgba(164, 64, 242, 0.4);
     transform: scale(1.01);
     .link {
       transform: scale(1.05);

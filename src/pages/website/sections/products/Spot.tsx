@@ -28,7 +28,7 @@ const Spot = () => {
   const isSSR = typeof window === "undefined"
 
   return (
-    <Stack direction="horizontal" className="products" gap={3} style={{ padding: "1rem 0.5rem" }} >
+    <Stack direction="horizontal" className="products line-up fast" gap={3} style={{ padding: "1rem 0.5rem" }} >
       <Stack className="products-detail-container">
         {!isSSR && (
           <React.Suspense fallback={<div />}>

@@ -15,7 +15,7 @@ const Indexes = () => {
   const { data: setTokens } = useSetTokensSnapshots()
   
   return (
-    <Stack direction="horizontal" className="products" gap={3}>
+    <Stack direction="horizontal" className="line-up fast products" gap={3}>
       {setTokens ? (
         <div className="products-detail-container w-100">
           <Stack direction="horizontal" gap={0} className="products-header">
@@ -44,7 +44,6 @@ const Indexes = () => {
 const IndexRow = ({
   index,
   setToken,
-  components,
 } : {
   index: number,
   setToken: SupportedSetTokens,
@@ -59,7 +58,7 @@ const IndexRow = ({
   return (
     <Button
       key={`ir-${index.toString()}`}
-      className={"w-100 product-row ".concat(darkRow ? "" : "")}
+      className={"w-100 mx-0 product-row ".concat(darkRow ? "" : "")}
       onClick={() => {}}
     >
       <Col className="product-row-item indexes-header mobile-header" lg={6} md={5} sm={12}>
@@ -127,7 +126,7 @@ const TcapRow = () => {
   }, [pricesData, snapshots, error]) */
 
   return (
-    <Button className={"w-100 product-row dark"} onClick={() => {}}>
+    <Button className={"w-100 mx-0 product-row dark"} onClick={() => {}}>
       <Col className="product-row-item indexes-header mobile-header" lg={8} md={8} sm={12}>
         <Stack direction="horizontal" gap={2}>
           <Image className="product-logo" src={tcapLogo} width={42} height={42} />

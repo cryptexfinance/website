@@ -53,36 +53,59 @@ const SectionProducts = () => {
         <Stack
           direction="horizontal"
           gap={4}
-          className="mx-5jsutify-content-center"
-          style={{
-            padding: "2rem 2rem",
-            margin: "1rem 5rem 1.5rem 5rem",
-            borderRadius: "3px",
-            backgroundColor: "#0e0e13"
-          }}
+          className="products-container justify-content-center"
         >
-          <Stack direction="vertical" gap={4} style={{ width: activeProduct !== "spot" ? "36%" : "auto" }}>
+          <Stack
+            direction="vertical"
+            gap={4}
+            className="products-menu"
+            style={{ width: activeProduct !== "spot" ? "36%" : "auto" }}
+          >
             {products.map((product) => (
-              <Button
-                key={product.key}
-                className={`product-button ${activeProduct === product.key ? "active" : ""}`}
-                onClick={() => setActiveProduct(product.key)}
-                style={{ textAlign: "left" }}
+              <div
+                key={`bc-${product.key}`}
+                className={`btn-mobile-container ${activeProduct === product.key ? "active" : ""}`}
               >
-                <h1>{product.title}</h1>
-                {activeProduct === product.key && (
-                  <span style={{ fontSize: "1.1rem", color: "#A9A7BE" }}>
-                    {product.headline}
-                  </span>
-                )}
-              </Button>
+                <Button
+                  key={product.key}
+                  className={`product-button w-100 ${activeProduct === product.key ? "active" : ""}`}
+                  onClick={() => setActiveProduct(product.key)}
+                  style={{ textAlign: "left" }}
+                >
+                  <h1>{product.title}</h1>
+                  {/* activeProduct === product.key && (
+                    <span>
+                      {product.headline}
+                    </span>
+                  ) */}
+                </Button>
+                <div className={`product-mobile only-mobile ${activeProduct === product.key ? "active" : "hide"}`}>
+                  <div
+                    style={{ 
+                      backgroundColor: "rgb(22, 22, 30)",
+                      paddingLeft: "1rem",
+                      paddingRight: "1rem",
+                    }}
+                  >
+                    {activeProduct === ProductKey.Indexes && (
+                      <Indexes />
+                    )}  
+                    {activeProduct === ProductKey.Spot && (
+                      <Spot />
+                    )}
+                    {activeProduct === ProductKey.Perpetuals && (
+                      <Perpetuals />
+                    )}
+                  </div>    
+                </div>
+              </div>    
             ))}
           </Stack>
           <Stack
             direction="vertical"
+            className="not-on-mobile"
             style={{
               width: activeProduct !== "spot" ? "64%" : "auto",
-              marginTop: "-2rem"
             }}
           >
             <>

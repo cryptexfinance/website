@@ -5,6 +5,24 @@ import pashovLogo from "../../../../static/website/security/pashov.jpg"
 import spearbitLogo from "../../../../static/website/security/spearbit.svg"
 
 
+const audits = [
+  {
+    name: "Quantstamp",
+    logo: quantstampLogo,
+    url: "https://docs.cryptex.finance/audits",
+  },
+  {
+    name: "Spearbit",
+    logo: spearbitLogo,
+    url: "https://docs.cryptex.finance/audits",
+  },
+  {
+    name: "Pashov",
+    logo: pashovLogo,
+    url: "https://docs.cryptex.finance/audits",
+  },
+]
+
 const SectionSecurity = () => { 
   return (
     <Stack
@@ -19,35 +37,27 @@ const SectionSecurity = () => {
       <h2 className="headline">
         We integrate battled tested technologies that are secure and trusted by the DeFi community. 
       </h2>
-      <h2 className="mt-4 mb-0 text-purple">
+      <h2 className="mt-4 mb-0 headline text-purple">
         Our products are extensively audited by:
       </h2>
-      <Stack direction="vertical">
-        <Stack
-          direction="horizontal"
-          gap={2}
-          className="security-boxes align-self-center justify-content-center"
-        >
-          <Stack direction="vertical" gap={2} className="box sec-box align-items-center">
-            <img src={quantstampLogo} alt="Quantstamp" height={160} width={160} />
-            <h2>Quantstamp</h2>
-          </Stack>
-          <Stack direction="vertical" gap={2} className="box sec-box align-items-center">
-            <img src={spearbitLogo} alt="Quantstamp" height={160} width={160} />
-            <h2>Spearbit</h2>
-          </Stack>
-          <Stack direction="vertical" gap={2} className="box sec-box align-items-center">
-            <img
-              src={pashovLogo}
-              alt="Pashov"
-              height={160}
-              width={160}
-              style={{ borderRadius: "50%" }}
-            />
-            <h2>Pashov</h2>
-          </Stack>
-        </Stack>
-      </Stack>  
+      <Stack
+        direction="horizontal"
+        gap={2}
+        className="security-boxes align-self-center justify-content-center"
+      >
+        {audits.map((audit, index) => (
+          <a
+            key={index}
+            href={audit.url}
+            target="_blank"
+            rel="noreferrer"
+            className="box box-button sec-box align-items-center"
+          >
+            <img src={audit.logo} alt={audit.name} />
+            <h2>{audit.name}</h2>
+          </a>
+        ))}
+      </Stack>
     </Stack>    
   )
 }

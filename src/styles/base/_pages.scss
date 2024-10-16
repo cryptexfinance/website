@@ -77,7 +77,15 @@ body {
 }
 
 .line-up {
-  animation: 2s anim-lineUp ease-out;
+  animation: 3s anim-lineUp ease-out;
+
+  &.fast {
+    animation: 1.5s anim-lineUp ease-out;
+  }
+  
+  &.slow {
+    animation: 5s anim-lineUp ease-out;
+  }
 }
 
 @keyframes anim-lineUp {
@@ -119,9 +127,12 @@ body {
     }
     &-info {
       padding: 0rem 1rem;
-      width: 100%;
+      width: 50%;
 
       h1, .main-title {
+        font-size: 2.7rem;
+        color: $color-primary-purple;
+        font-weight: 700;
         letter-spacing: 0.6px;
         padding: 0.4rem 0rem;
         transform: scale(0.94);
@@ -134,21 +145,21 @@ body {
       }
       span {
         display: inline-block;
+        font-size: 2.7rem;
         opacity: 0;
         filter: blur(4px);
-        color: $color-primary-purple;
-        font-size: 2.7rem;
+        color: $color-primary-purple; 
         font-weight: 800;
         padding: 0rem;
         margin: 0rem;
       }
       span:nth-child(1) {
-        animation: fade-in 0.8s 0.1s forwards cubic-bezier(0.11, 0, 0.5, 0);
+        animation: fade-in 0.4s 0.05s forwards cubic-bezier(0.11, 0, 0.5, 0);
       }
       span:nth-child(2) {
-        animation: fade-in 0.8s 0.2s forwards cubic-bezier(0.11, 0, 0.5, 0);
+        animation: fade-in 0.6s 0.15s forwards cubic-bezier(0.11, 0, 0.5, 0);
       }
-      span:nth-child(3) {
+      /* span:nth-child(3) {
         animation: fade-in 0.8s 0.3s forwards cubic-bezier(0.11, 0, 0.5, 0);
       }
       span:nth-child(4) {
@@ -159,7 +170,7 @@ body {
       }
       span:nth-child(6) {
         animation: fade-in 0.8s 0.3s forwards cubic-bezier(0.11, 0, 0.5, 0);
-      }
+      } */
 
       @keyframes fade-in {
         100% {
@@ -172,6 +183,7 @@ body {
     &-subtitle {
       display: flex;
       flex-direction: column;
+      width: 90%;
       font-size: 2.5rem;
       line-height: 2.7rem;
       margin: 2rem 0rem 3.5rem 0rem;
@@ -306,20 +318,30 @@ body {
     h1 {
       margin-bottom: 0rem;
     }
+    span {
+      color: $color-grey;
+    }
   }
   .product-button:hover {
     background-color: #282837;
     border-color: $color-primary-purple;
-    transform: scale(1.01);
+    transform: scale(1.02);
   }
   .product-button.active {
     border: 1px solid $color-primary-purple;
     filter: brightness(1.1);
+    transform: scale(1.05);
   }
 
   .products {
-    margin-top: 0.5rem;
-    padding: 0.5rem 0rem;
+    margin-top: 0rem;
+    padding: 0rem 0rem;
+  }
+  .products-container {
+    padding: 2rem 2rem;
+    margin: 1rem 5rem 1.5rem 5rem;
+    border-radius: "3px";
+    background-color: #0e0e13;
   }
   .products-loading {
     align-items: center;
@@ -333,7 +355,7 @@ body {
     background-color: transparent;
     border: 0.5px solid rgba(42, 15, 61, 0.3);
     border-radius: 5px;
-    padding: 0.5rem 0.1rem;
+    padding: 0rem 0.1rem;
   }
   .products-detail {
     min-height: 15rem;
@@ -361,8 +383,8 @@ body {
     }
     &-row:hover {
       background-color: rgba(33, 33, 56, 0.82);
-      border: 0.5px solid rgba(33, 33, 56, 0.82);
-      box-shadow: 0px 0px 12px 1px rgba(165, 64, 242, 0.3) !important;
+      border: 0.5px solid #a540f2da;
+      box-shadow: 0px 0px 12px 1px rgba(165, 64, 242, 0.25) !important;
       -webkit-transform: scale(1.002) !important;
       transform: scale(1.002) !important;
       transition: transform 0.5s, -webkit-transform 0.5s !important;
@@ -370,7 +392,7 @@ body {
     }
     &-row.dark:hover {
       background-color: #0e0e19;
-      border: 0.5px solid rgba(33, 33, 56, 0.82);
+      border: 0.5px solid #a540f2da;
     }
     &-title {
       color: $color-grey;
@@ -406,33 +428,6 @@ body {
     }
     .price {
       font-size: 1rem;
-    }
-  }
-
-  .products-totals {
-    margin-bottom: 1.5rem;
-    padding-left: 0.5rem;
-    padding-right: 1.5rem;
-
-    .total-box {
-      display: flex;
-      flex-direction: row;
-      justify-content: space-between;
-      align-items: center;
-      background-color: #080809;
-      box-shadow: inset 0px 0px 8px 1px rgba(164, 64, 242, 0.2);
-      border: 0.7px solid #A440F2;//#441b64;
-      border-radius: 5px;
-      padding: 1rem 2rem;
-    }
-    .total-title {
-      color: $color-grey;
-      font-size: 18px;
-    }
-    .total-value {
-      color: rgb(216, 216, 216);
-      font-size: 24px;
-      text-shadow: 0px 0px 15px rgba(164, 64, 242, 0.98);;
     }
   }
 
@@ -472,9 +467,20 @@ body {
   }
 
   .sec-box {
+    display: flex;
+    flex-direction: column;
     height: 15rem;
     width: 15rem;
     padding: 1.5rem;
+    text-decoration: none;
+
+    img {
+      height: 90%;
+      width: 90%;
+      margin-bottom: 1rem;
+      border-radius: 50%;
+    }
+
     // border: 0.5px solid $color-grey;
     // border-radius: 5px;
     // box-shadow: 0px 0px 12px 3px rgba(164, 64, 242, 0.8)

@@ -97,7 +97,13 @@ const NavbarMenu = props => {
                 Markets
               </Nav.Link>
               <div className="nav-links-divisor" />
-            </Nav>     
+            </Nav>
+            <Nav className="nav-links">
+              <Nav.Link as={Link} to={securityeUrl} title="Security">
+                Security
+              </Nav.Link>
+              <div className="nav-links-divisor" />
+            </Nav> 
             <Nav className="nav-links">
               <Nav.Link as={Link} to={governanceUrl} title="Governance">
                 {t('governance')}

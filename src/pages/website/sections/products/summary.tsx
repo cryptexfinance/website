@@ -88,7 +88,7 @@ const Summary = () => {
       className="products-summary align-items-center justify-content-center"
     >
       {spotSummary.map((summary) => (
-        <div key={summary.title} className="position-relative">
+        <div key={summary.title} className="summary-box-wrapper position-relative">
           <Stack
             direction="vertical"
             gap={1}
@@ -103,7 +103,7 @@ const Summary = () => {
           </Stack>
         </div>
       ))}
-      <div className="position-relative">
+      <div className="position-relative summary-box-wrapper second-line">
         <Stack
           direction="vertical"
           gap={1}
@@ -117,19 +117,19 @@ const Summary = () => {
           </span>
         </Stack>
       </div>
-      <div className="position-relative">
-          <Stack
-            direction="vertical"
-            gap={1}
-            className="summary-box p-1 align-items-center justify-content-center"
-          >
-            <span className="summary-value">
-              {totalOpenInteres}
-            </span>
-            <span className="summary-title">
-              Open Interest
-            </span>
-          </Stack>
+      <div className="position-relative summary-box-wrapper second-line">
+        <Stack
+          direction="vertical"
+          gap={1}
+          className="summary-box p-1 align-items-center justify-content-center"
+        >
+          <span className="summary-value">
+            {totalOpenInteres}
+          </span>
+          <span className="summary-title">
+            Open Interest
+          </span>
+        </Stack>
         </div>
     </Stack>    
   )
