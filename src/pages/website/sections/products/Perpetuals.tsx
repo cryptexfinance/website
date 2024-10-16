@@ -264,7 +264,7 @@ const Perpetuals = () => {
   }, [snapshots, snapshots.status])
 
   return (
-    <Stack direction="horizontal" gap={2} className="line-up fast products">
+    <Stack direction="horizontal" gap={2} className="line-down fast products">
       {markets && tcapMarket ? (
         <div className="products-detail-container w-100">
           <Stack direction="horizontal" gap={0} className="products-header">

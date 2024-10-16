@@ -6,6 +6,7 @@ import { Big6Math, calcNotional, calcTakerLiquidity, formatBig6USDPrice, MarketS
 import { addPositions, nextPosition } from "../../../../utils/positionUtils"
 import { useMarketSnapshots } from "../../../../hooks/markets";
 import { AssetMetadata } from "../../../../constants/markets"
+import Spot from "./Spot";
 
 
 const spotSummary = [
@@ -130,7 +131,10 @@ const Summary = () => {
             Open Interest
           </span>
         </Stack>
-        </div>
+      </div>
+      <div style={{ display: "none" }}>
+        <Spot />
+      </div>      
     </Stack>    
   )
 }

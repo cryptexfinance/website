@@ -15,7 +15,7 @@ const Indexes = () => {
   const { data: setTokens } = useSetTokensSnapshots()
   
   return (
-    <Stack direction="horizontal" className="line-up fast products" gap={3}>
+    <Stack direction="horizontal" className="line-down fast products" gap={3}>
       {setTokens ? (
         <div className="products-detail-container w-100">
           <Stack direction="horizontal" gap={0} className="products-header">

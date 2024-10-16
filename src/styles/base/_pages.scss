@@ -109,6 +109,39 @@ body {
   }
 }
 
+.line-down {
+  animation: 3s anim-line-down ease-out;
+
+  &.fast {
+    animation: 1.3s anim-line-down ease-out;
+  }
+  
+  &.slow {
+    animation: 5s anim-line-down ease-out;
+  }
+}
+
+@keyframes anim-line-down {
+  0% {
+    opacity: 0;
+    transform: translateY(-80%);
+  }
+
+  20% {
+    opacity: 0;
+  }
+
+  30% {
+    opacity: 1;
+    transform: translateY(0%);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0%);
+  }
+}
+
 .section-main {
   display: flex;
   align-items: flex-end;
@@ -164,13 +197,7 @@ body {
       }
       span:nth-child(4) {
         animation: fade-in 0.8s 0.3s forwards cubic-bezier(0.11, 0, 0.5, 0);
-      }
-      span:nth-child(5) {
-        animation: fade-in 0.8s 0.3s forwards cubic-bezier(0.11, 0, 0.5, 0);
-      }
-      span:nth-child(6) {
-        animation: fade-in 0.8s 0.3s forwards cubic-bezier(0.11, 0, 0.5, 0);
-      } */
+      }*/
 
       @keyframes fade-in {
         100% {
@@ -217,7 +244,7 @@ body {
         top: -50px;
         transform: rotate(35deg);
         transition: all 550ms cubic-bezier(0.19, 1, 0.22, 1);
-        width: 50px;
+        width: 35px;
         z-index: 0;
       }
 
@@ -236,18 +263,6 @@ body {
     width: 370px;
   }
 
-  .main-buttons-social {
-    display: flex;
-    align-items: flex-end;
-    justify-content: flex-end;
-    .social-item {
-      margin-left: 1.5rem;
-    }
-    .social-item-icon {
-      height: 2.5rem;
-      width: 2.5rem;
-    }
-  }
   .button-to-app {
     margin-right: 1rem;
   }
@@ -473,6 +488,7 @@ body {
     width: 16rem;
     padding: 2rem;
     text-decoration: none;
+    overflow: hidden;
 
     img {
       height: 90%;
@@ -480,10 +496,6 @@ body {
       margin-bottom: 1rem;
       border-radius: 50%;
     }
-
-    // border: 0.5px solid $color-grey;
-    // border-radius: 5px;
-    // box-shadow: 0px 0px 12px 3px rgba(164, 64, 242, 0.8)
   }
 
   .hexagon {
