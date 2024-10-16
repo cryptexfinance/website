@@ -458,6 +458,12 @@
     padding-bottom: 12rem;
     margin-bottom: 12rem;
 
+    .line-up {
+      &.fast {
+        animation: 0.8s anim-lineUp ease-in;
+      }
+    }
+
     span {
       font-size: 3.5rem !important;
       line-height: 3.8rem;

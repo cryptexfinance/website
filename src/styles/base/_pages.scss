@@ -80,7 +80,7 @@ body {
   animation: 3s anim-lineUp ease-out;
 
   &.fast {
-    animation: 1.5s anim-lineUp ease-out;
+    animation: 1.3s anim-lineUp ease-out;
   }
   
   &.slow {
@@ -469,9 +469,9 @@ body {
   .sec-box {
     display: flex;
     flex-direction: column;
-    height: 15rem;
-    width: 15rem;
-    padding: 1.5rem;
+    height: 16rem;
+    width: 16rem;
+    padding: 2rem;
     text-decoration: none;
 
     img {

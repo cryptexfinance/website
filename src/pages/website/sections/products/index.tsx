@@ -37,6 +37,7 @@ const products = [
 const SectionProducts = () => {
   const { t } = useTranslation()
   const [activeProduct, setActiveProduct] = React.useState<ProductKey>(ProductKey.Indexes)
+  const [activeProductMobile, setActiveProductMobile] = React.useState<ProductKey | undefined>(ProductKey.Indexes)
 
   return (
     <PerennialSDKProvider>
@@ -69,7 +70,10 @@ const SectionProducts = () => {
                 <Button
                   key={product.key}
                   className={`product-button w-100 ${activeProduct === product.key ? "active" : ""}`}
-                  onClick={() => setActiveProduct(product.key)}
+                  onClick={() => {
+                    setActiveProduct(product.key)
+                    setActiveProductMobile(activeProductMobile !== product.key ? product.key : undefined)
+                  }}
                   style={{ textAlign: "left" }}
                 >
                   <h1>{product.title}</h1>
@@ -79,7 +83,7 @@ const SectionProducts = () => {
                     </span>
                   ) */}
                 </Button>
-                <div className={`product-mobile only-mobile ${activeProduct === product.key ? "active" : "hide"}`}>
+                <div className={`product-mobile only-mobile ${activeProductMobile === product.key ? "active" : "hide"}`}>
                   <div
                     style={{ 
                       backgroundColor: "rgb(22, 22, 30)",
