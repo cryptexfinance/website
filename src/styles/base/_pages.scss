@@ -163,13 +163,14 @@ body {
       width: 50%;
 
       h1, .main-title {
-        font-size: 2.7rem;
+        font-size: 4rem;
         color: $color-primary-purple;
         font-weight: 700;
         letter-spacing: 0.6px;
         padding: 0.4rem 0rem;
         transform: scale(0.94);
         animation: scale 3s forwards cubic-bezier(0.5, 1, 0.89, 1);
+        font-family: "Helvetica Neue Black";
       }
       @keyframes scale {
         100% {
@@ -178,13 +179,18 @@ body {
       }
       span {
         display: inline-block;
-        font-size: 2.7rem;
+        font-size: 5.5rem;
         opacity: 0;
         filter: blur(4px);
         color: $color-primary-purple; 
         font-weight: 800;
         padding: 0rem;
         margin: 0rem;
+        text-shadow:
+            /* regular text-shadow */
+            2px 2px 13px rgba(14, 14, 14, 0.9),
+            /* text-shadow highlight */
+            0 -4px 0 oklch(65.73% 0.2509 305.47 / 50.36%);
       }
       span:nth-child(1) {
         animation: fade-in 0.4s 0.05s forwards cubic-bezier(0.11, 0, 0.5, 0);

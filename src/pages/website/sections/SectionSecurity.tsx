@@ -14,12 +14,12 @@ const audits = [
   {
     name: "Spearbit",
     logo: spearbitLogo,
-    url: "https://docs.cryptex.finance/audits",
+    url: "https://docs.cryptex.finance/assets/files/tcapV2.0-cantina-audit-report-8b521e4a64b470f078f86e763b203de9.pdf",
   },
   {
     name: "Pashov",
     logo: pashovLogo,
-    url: "https://docs.cryptex.finance/audits",
+    url: "https://docs.cryptex.finance/assets/files/tcapV2.0-pashov-group-audit-report-2d233212e5c3d77879da3c9e1a202632.pdf",
   },
 ]
 

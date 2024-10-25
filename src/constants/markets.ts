@@ -207,6 +207,22 @@ export const AssetMetadata: AssetMetadataType = {
     isUnlisted: true,
     ...SDKAssetMetadata[SupportedAsset.gbp],
   },
+  [SupportedAsset.aero]: {
+    icon: gbpLogo,
+    tvPythSymbol: 'PYTH:AEROUSD',
+    tvTicker: 'FX.AERO/USD',
+    pythFeedId: SDKAssetMetadata.aero.providerId,
+    isUnlisted: true,
+    ...SDKAssetMetadata[SupportedAsset.aero],
+  },
+  [SupportedAsset.popcat]: {
+    icon: gbpLogo,
+    tvPythSymbol: 'PYTH:POPCATUSD',
+    tvTicker: 'FX.POPCAT/USD',
+    pythFeedId: SDKAssetMetadata.popcat.providerId,
+    isUnlisted: true,
+    ...SDKAssetMetadata[SupportedAsset.popcat],
+  },
   [SupportedAsset.unknown]: {
     icon: solanaLogo,
     tvPythSymbol: 'PYTH:JUPUSD',
