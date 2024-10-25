@@ -11,7 +11,7 @@ import {
   calcLpExposure,
   calcSkew,
   calcTakerLiquidity,
-  efficiency,
+  calcEfficiency,
   PriceUpdate,
   Big18Math,
   pythPriceToBig18,
@@ -131,7 +131,7 @@ export const useFormattedMarketBarValues = (marketSnapshot: MarketSnapshot) => {
   const availableLiq = marketSnapshot ? calcTakerLiquidity(marketSnapshot) : undefined
   const lpExposure = calcLpExposure(marketSnapshot)
   const calculatedSkew = calcSkew(marketSnapshot)
-  const makerEfficiency = efficiency(
+  const makerEfficiency = calcEfficiency(
     marketSnapshot?.nextPosition.maker ?? 0n,
     marketSnapshot?.nextMajor ?? 0n,
   )
