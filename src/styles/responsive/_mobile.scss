@@ -532,6 +532,10 @@
         border-bottom-left-radius: 0px;
         border-bottom-right-radius: 0px;
         transform: none;
+
+        .btn-arrow {
+          transform: rotate(180deg);
+        }
       }
       
       h1 {
@@ -555,6 +559,7 @@
         display: none;
       }
     }
+
     .products-header { 
       display: none;
     }

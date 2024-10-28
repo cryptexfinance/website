@@ -130,6 +130,7 @@ module.exports = {
     "gatsby-transformer-sharp",
     "gatsby-plugin-offline",
     "gatsby-plugin-react-helmet",
+    "gatsby-plugin-breakpoints",
     {
       resolve: `gatsby-plugin-nprogress`,
       options: {

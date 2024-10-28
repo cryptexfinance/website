@@ -2,6 +2,8 @@ import React from "react"
 import { Button, Stack } from "react-bootstrap"
 import { graphql } from "gatsby"
 import { useTranslation } from "gatsby-plugin-react-i18next"
+import { useBreakpoint } from "gatsby-plugin-breakpoints";
+import { FaChevronDown } from "react-icons/fa";
 
 import { PerennialSDKProvider } from "../../../../context/perennialSdkContext"
 import Indexes from "./Indexes"
@@ -36,8 +38,9 @@ const products = [
 
 const SectionProducts = () => {
   const { t } = useTranslation()
-  const [activeProduct, setActiveProduct] = React.useState<ProductKey>(ProductKey.Indexes)
-  const [activeProductMobile, setActiveProductMobile] = React.useState<ProductKey | undefined>(ProductKey.Indexes)
+  const breakpoints = useBreakpoint();
+  const [activeProduct, setActiveProduct] = React.useState<ProductKey | undefined>(ProductKey.Indexes)
+  // const [activeProductMobile, setActiveProductMobile] = React.useState<ProductKey | undefined>(ProductKey.Indexes)
 
   return (
     <PerennialSDKProvider>
@@ -71,38 +74,38 @@ const SectionProducts = () => {
                   key={product.key}
                   className={`product-button w-100 ${activeProduct === product.key ? "active" : ""}`}
                   onClick={() => {
-                    setActiveProduct(product.key)
-                    setActiveProductMobile(activeProductMobile !== product.key ? product.key : undefined)
+                    setActiveProduct(!breakpoints.sm ? product.key : activeProduct !== product.key ? product.key : undefined)
+                    // setActiveProductMobile(activeProductMobile !== product.key ? product.key : undefined)
                   }}
                   style={{ textAlign: "left" }}
                 >
-                  <h1>{product.title}</h1>
-                  {/* activeProduct === product.key && (
-                    <span>
-                      {product.headline}
-                    </span>
-                  ) */}
+                  <Stack direction="horizontal" gap={2} className="align-items-center justify-content-between">
+                    <h1>{product.title}</h1>
+                    {breakpoints.sm && <FaChevronDown className="btn-arrow" size={22} />}
+                  </Stack>
                 </Button>
-                <div className={`product-mobile only-mobile ${activeProductMobile === product.key ? "active" : "hide"}`}>
-                  <div
-                    style={{ 
-                      backgroundColor: "rgb(22, 22, 30)",
-                      paddingLeft: "1rem",
-                      paddingRight: "1rem",
-                    }}
-                  >
-                    {activeProduct === ProductKey.Indexes && (
-                      <Indexes />
-                    )}  
-                    {activeProduct === ProductKey.Spot && (
-                      <Spot />
-                    )}
-                    {activeProduct === ProductKey.Perpetuals && (
-                      <Perpetuals />
-                    )}
-                  </div>    
-                </div>
-              </div>    
+                {breakpoints.sm && (
+                  <div className={`product-mobile only-mobile ${activeProduct === product.key ? "active" : "hide"}`}>
+                    <div
+                      style={{ 
+                        backgroundColor: "rgb(22, 22, 30)",
+                        paddingLeft: "1rem",
+                        paddingRight: "1rem",
+                      }}
+                    >
+                      {activeProduct === ProductKey.Indexes && (
+                        <Indexes />
+                      )}  
+                      {activeProduct === ProductKey.Spot && (
+                        <Spot />
+                      )}
+                      {activeProduct === ProductKey.Perpetuals && (
+                        <Perpetuals />
+                      )}
+                    </div>
+                  </div>
+                )}
+              </div>
             ))}
           </Stack>
           <Stack
