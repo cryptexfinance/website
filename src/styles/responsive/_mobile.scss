@@ -528,6 +528,21 @@
       padding: 1.5rem 4rem;
       height: 20rem;
       
+      .btn-arrow {
+        transform: rotate(0deg);
+        animation: rotateUp 0.3s linear;
+      }
+    
+      @keyframes rotateUp {
+        0% {
+          transform: rotate(180deg);
+        }
+    
+        100% {
+          transform: rotate(0deg);
+        }
+      }
+
       &.active {
         border-bottom-left-radius: 0px;
         border-bottom-right-radius: 0px;
@@ -535,6 +550,16 @@
 
         .btn-arrow {
           transform: rotate(180deg);
+          animation: rotateDown 0.3s linear;
+        }
+        @keyframes rotateDown {
+          0% {
+            transform: rotate(0deg);
+          }
+
+          100% {
+            transform: rotate(180deg);
+          }
         }
       }
       
