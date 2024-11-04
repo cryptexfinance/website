@@ -28,7 +28,10 @@ const SectionMain = () => {
             <span>DeFi</span>{" "}<span>United</span>
           </h1>
           <h2 className="main-subtitle line-up">
-            Indexes, Spot, Perps, all on one app.
+            Crypto Indexes. Spot. Perpetuals.
+          </h2>
+          <h2 className="main-subtitle line-up">
+            All in one.
           </h2>
         </div>
         <div className="main-buttons">

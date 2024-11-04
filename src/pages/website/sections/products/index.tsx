@@ -50,7 +50,7 @@ const SectionProducts = () => {
             {t('markets')}
           </h1>
           <h2 className="headline line-up text-purple">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit sed do eiusmod 
+            A fully united DeFi platform: Crypto Indexes, Bridging, Swaps and Perpetuals. 
           </h2>
         </Stack>
         <Summary />

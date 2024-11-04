@@ -6,7 +6,6 @@ import { graphql } from "gatsby"
 import { useSetTokensSnapshots } from "../../../../hooks/crypdex"
 import { SetTokenMetadata, SupportedComponents, SupportedSetTokens } from "../../../../constants/crypdex"
 
-import { PurpleText } from "../../../../components/highlights"
 import tcapLogo from '../../../../../static/website/icons/tcap.png'
 
 
@@ -74,64 +73,22 @@ const IndexRow = ({
         </span> */}
       </Col>
       <Col lg={6} md={6} className="text-right">
-        <PurpleText>Coming Soon</PurpleText>
-      </Col>
-      {/* <Col lg={3} md={2} sm={12} className="product-row-item not-on-mobile text-right">
-        <span className="product-title only-mobile">{t('price')}</span>
-        <span className={"product-value text-green lg"}>
-          {price}
+        <span className="text-purple" style={{ fontSize: "1.1rem" }}>
+          Coming Soon
         </span>
       </Col>
-      <Col lg={3} md={2} sm={12} className="product-row-item text-right">
-        <span className="product-title only-mobile">24h Change</span>
-        <span className="product-value text-green lg">
-          1.13%
-        </span>
-      </Col> */}
     </Button>
   )
 }
 
 const TcapRow = () => {
-  // const { data: pricesData, error } = useTcapPriceChanges()
-  // const { data: snapshots } = useMarketSnapshots()
-
-  /*const { currentPrice, changeIsNegative, changePercent } = useMemo(() => {
-    const tcapSnapshot = snapshots?.tcapSnapshot;
-    let tcapPrice = 0;
-    if (pricesData && pricesData.answerUpdateds && tcapSnapshot) {
-      const { longSnapshot } = tcapSnapshot
-      tcapPrice = parseFloat(ethers.formatEther(longSnapshot.latestVersion.price))
-      const prices = pricesData.answerUpdateds
-
-      if (prices.length > 0) {
-        const currentPrice = parseFloat(ethers.formatEther(BigInt(prices[0].answer)))
-        const price24H = prices.length > 1
-          ? parseFloat(ethers.formatEther(BigInt(prices[prices.length - 1].answer)))
-          : currentPrice
-        
-        return {
-          currentPrice,
-          changeIsNegative: currentPrice - price24H < 0,
-          changePercent: ((currentPrice - price24H) / currentPrice) * 100
-        }
-      }      
-    }
-
-    return {
-      currentPrice: tcapPrice,
-      changeIsNegative: false,
-      changePercent: 0
-    }
-  }, [pricesData, snapshots, error]) */
-
   return (
     <Button className={"w-100 mx-0 product-row dark"} onClick={() => {}}>
       <Col className="product-row-item indexes-header mobile-header" lg={8} md={8} sm={12}>
         <Stack direction="horizontal" gap={2}>
           <Image className="product-logo" src={tcapLogo} width={42} height={42} />
           <Stack direction="vertical" gap={0} className="align-items-start">
-            <span className="product-value lg">TCAP</span>
+            <span className="product-value lg">TCAP 2.0</span>
             <span className="product-subvalue lg">Cryptex Total Crypto Market Cap Index</span>
           </Stack>
         </Stack>
@@ -140,19 +97,10 @@ const TcapRow = () => {
         </span> */}
       </Col>
       <Col lg={4} md={4} className="text-right">
-        <PurpleText>Coming Soon</PurpleText>
-      </Col>
-      {/* <Col lg={3} md={2} sm={12} className="product-row-item not-on-mobile text-right">
-        <span className={"product-value text-red lg"}>
-          ${currentPrice.toFixed(2)}
+        <span className="text-purple" style={{ fontSize: "1.1rem" }}>
+          Coming Soon
         </span>
       </Col>
-      <Col lg={3} md={2} sm={12} className="product-row-item text-right">
-        <span className="product-title only-mobile">24h Change</span>
-        <span className={`product-value lg ${changeIsNegative ? "text-red" : "text-green"}`}>
-          {changePercent.toFixed(2)}%
-        </span>
-      </Col> */}
     </Button>
   )
 }

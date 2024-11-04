@@ -2,24 +2,29 @@ import React from "react"
 import { Stack } from "react-bootstrap";
 import quantstampLogo from "../../../../static/website/security/quantstamp.svg"
 import pashovLogo from "../../../../static/website/security/pashov.jpg"
-import spearbitLogo from "../../../../static/website/security/spearbit.svg"
+import cantinaLogo from "../../../../static/website/security/cantina.svg"
+import cantina2Logo from "../../../../static/website/security/cantina2.svg"
+import cantina3Logo from "../../../../static/website/security/cantina3.png"
 
 
 const audits = [
   {
-    name: "Quantstamp",
-    logo: quantstampLogo,
-    url: "https://docs.cryptex.finance/audits",
-  },
-  {
-    name: "Spearbit",
-    logo: spearbitLogo,
+    name: "Cantina",
+    logo: cantina3Logo,
+    className: "cantina",
     url: "https://docs.cryptex.finance/assets/files/tcapV2.0-cantina-audit-report-8b521e4a64b470f078f86e763b203de9.pdf",
   },
   {
     name: "Pashov",
     logo: pashovLogo,
+    className: "pashov",
     url: "https://docs.cryptex.finance/assets/files/tcapV2.0-pashov-group-audit-report-2d233212e5c3d77879da3c9e1a202632.pdf",
+  },
+  {
+    name: "Quantstamp",
+    logo: quantstampLogo,
+    className: "quantstamp",
+    url: "https://docs.cryptex.finance/audits",
   },
 ]
 
@@ -35,7 +40,7 @@ const SectionSecurity = () => {
         Trustless experience for all DeFi users.
       </h1>
       <h2 className="headline">
-        We integrate battled tested technologies that are secure and trusted by the DeFi community. 
+        We deploy battled tested technologies that are audited and trusted by the DeFi community. 
       </h2>
       <h2 className="mt-4 mb-0 headline text-purple">
         Our products are extensively audited by:
@@ -53,7 +58,7 @@ const SectionSecurity = () => {
             rel="noreferrer"
             className="box box-button sec-box align-items-center"
           >
-            <img src={audit.logo} alt={audit.name} />
+            <img className={audit.className} src={audit.logo} alt={audit.name} />
             <h2>{audit.name}</h2>
           </a>
         ))}

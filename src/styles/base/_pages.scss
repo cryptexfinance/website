@@ -160,10 +160,11 @@ body {
     }
     &-info {
       padding: 0rem 1rem;
-      width: 50%;
+      width: 75%;
 
       h1, .main-title {
         font-size: 4rem;
+        margin-bottom: 1.7rem;
         color: $color-primary-purple;
         font-weight: 700;
         letter-spacing: 0.6px;
@@ -219,12 +220,13 @@ body {
       width: 90%;
       font-size: 2.5rem;
       line-height: 2.7rem;
-      margin: 2rem 0rem 3.5rem 0rem;
+      margin: 1.2rem 0rem 0rem 0rem;
       transition: max-width 1s linear;
     }
     &-buttons {
       display: flex;
       flex-direction: row;
+      margin-top: 3rem;
       &-actions { 
         display: flex;
       }
@@ -500,6 +502,8 @@ body {
       height: 90%;
       width: 90%;
       margin-bottom: 1rem;
+    }
+    .pashov {
       border-radius: 50%;
     }
   }

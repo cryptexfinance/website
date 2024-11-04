@@ -100,13 +100,13 @@ const NavbarMenu = props => {
             </Nav>
             <Nav className="nav-links">
               <Nav.Link as={Link} to={securityeUrl} title="Security">
-                Security
+                Security Audits
               </Nav.Link>
               <div className="nav-links-divisor" />
             </Nav> 
             <Nav className="nav-links">
               <Nav.Link as={Link} to={governanceUrl} title="Governance">
-                {t('governance')}
+                CTX Governance
               </Nav.Link>
               <div className="nav-links-divisor" />
             </Nav>
@@ -140,10 +140,10 @@ const NavbarMenu = props => {
                 Markets
               </Nav.Link>
               <Nav.Link as={Link} to={securityeUrl} title="Security">
-                Security
+                Security Audits
               </Nav.Link> 
               <Nav.Link as={Link} to={governanceUrl} title="CTX Governance">
-                {t('governance')}
+                CTX Governance
               </Nav.Link>         
             </Nav>
           </Navbar.Collapse>
