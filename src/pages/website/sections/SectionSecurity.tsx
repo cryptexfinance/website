@@ -2,8 +2,6 @@ import React from "react"
 import { Stack } from "react-bootstrap";
 import quantstampLogo from "../../../../static/website/security/quantstamp.svg"
 import pashovLogo from "../../../../static/website/security/pashov.jpg"
-import cantinaLogo from "../../../../static/website/security/cantina.svg"
-import cantina2Logo from "../../../../static/website/security/cantina2.svg"
 import cantina3Logo from "../../../../static/website/security/cantina3.png"
 
 

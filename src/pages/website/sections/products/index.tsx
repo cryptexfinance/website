@@ -46,15 +46,15 @@ const SectionProducts = () => {
     <PerennialSDKProvider>
       <div id="markets" className="section-products">
         <Stack direction="vertical" gap={2} className="align-items-center justify-content-center">
-          {/* <Stack direction="horizontal" className="justify-content-center" gap={3}>
-            <img src="/logo.svg" alt="Logo" width={220} style={{ marginBottom: "5px" }} />
+          <Stack direction="horizontal" className="justify-content-center" gap={3}>
+            <img src="/logo.svg" alt="Logo" width={265} style={{ marginBottom: "5px" }} />
             <h1 className="header line-up">
               {t('markets')}
             </h1>
-          </Stack> */}
-          <h1 className="header line-up">
+          </Stack>
+          {/* <h1 className="header line-up">
             Cryptex {t('markets')}
-          </h1>
+          </h1> */}
           <h2 className="headline line-up text-purple">
             A united DeFi platform: Crypto Indexes, Bridging, Swaps and Perpetuals. 
           </h2>
