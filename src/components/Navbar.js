@@ -49,8 +49,9 @@ const NavbarMenu = props => {
 
   const blogView =
     typeof props.blogPost !== "undefined" ? props.blogPost : false
-  const governanceUrl = blogView ? `${siteUrl}/#governance` : "#governance"
   const productsUrl = blogView ? `${siteUrl}/#markets` : "#markets"
+  const securityeUrl = blogView ? `${siteUrl}/#security` : "#security"
+  const governanceUrl = blogView ? `${siteUrl}/#governance` : "#governance"
 
   const LangDropdown = () => (
     <Dropdown className="language-dropdown">
@@ -96,10 +97,16 @@ const NavbarMenu = props => {
                 Markets
               </Nav.Link>
               <div className="nav-links-divisor" />
-            </Nav>     
+            </Nav>
+            <Nav className="nav-links">
+              <Nav.Link as={Link} to={securityeUrl} title="Security">
+                Security Audits
+              </Nav.Link>
+              <div className="nav-links-divisor" />
+            </Nav> 
             <Nav className="nav-links">
               <Nav.Link as={Link} to={governanceUrl} title="Governance">
-                {t('governance')}
+                CTX Governance
               </Nav.Link>
               <div className="nav-links-divisor" />
             </Nav>
@@ -132,8 +139,11 @@ const NavbarMenu = props => {
               <Nav.Link as={Link} to={productsUrl} title="Markets">
                 Markets
               </Nav.Link>
+              <Nav.Link as={Link} to={securityeUrl} title="Security">
+                Security Audits
+              </Nav.Link> 
               <Nav.Link as={Link} to={governanceUrl} title="CTX Governance">
-                {t('governance')}
+                CTX Governance
               </Nav.Link>         
             </Nav>
           </Navbar.Collapse>

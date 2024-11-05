@@ -1,12 +1,12 @@
 import React from "react"
 import { useTranslation } from "gatsby-plugin-react-i18next"
+import { Stack } from "react-bootstrap"
 
 import twitter from "../../static/website/ecosystem/x_logo.svg"
 import discord from "../../static/website/ecosystem/discord.svg"
 import telegram from "../../static/website/ecosystem/telegram.svg"
 import coingeckoLogo from "../../static/website/ecosystem/coingecko.svg"
 import coinmarketcapLogo from "../../static/website/ecosystem/coinmarketcap.png"
-import { Stack } from "react-bootstrap"
 
 
 type IconType = {
@@ -78,7 +78,7 @@ const Footer = () => {
           </span>
         </Stack>
         <p className="subtitle">
-          {t('site-description')}
+          A united DeFi platform
         </p>
         <div className="community">
           {socialIcons.map((socialIcon, index) => {
