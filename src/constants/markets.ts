@@ -207,7 +207,7 @@ export const AssetMetadata: AssetMetadataType = {
     isUnlisted: true,
     ...SDKAssetMetadata[SupportedAsset.gbp],
   },
-  [SupportedAsset.aero]: {
+   [SupportedAsset.aero]: {
     icon: gbpLogo,
     tvPythSymbol: 'PYTH:AEROUSD',
     tvTicker: 'FX.AERO/USD',
