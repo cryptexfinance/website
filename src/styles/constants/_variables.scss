@@ -32,6 +32,21 @@ $font-primary: 'Helvetica Neue';
 $font-secondary: 'Erbos Draco 1st Open NBP';
 $font-tertiary: 'Helvetica Neue';
 
+$font-header: 'Alegreya Sans';
+$font-header2: 'Fjalla One';
+$font-header3: 'Hind Siliguri';
+$font-header4: 'Signika Negative';
+
+$font-header5: 'Aclonica';
+// $font-header6: 'Dangrek';
+$font-header7: 'Genos';
+$font-header8: 'Port Lligat Sans';
+$font-header9: 'Source Sans 3';
+$font-header10: 'Yanone Kaffeesatz';
+
+
+$font-subheader: 'Source Sans 3';
+
 $main-image-width: 28.9375rem;
 $main-image-height: 28.625rem;
 
@@ -104,17 +119,10 @@ $rt-z-index: 9999 !default;
   font-display: swap;
 }
 
-@font-face {
-  font-family: 'Erbos Draco 1st Open NBP';
-  src: url('../fonts/Erbos-Draco-1st-Open-NBP.woff') format('woff');
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap;
-}
 
 $font: (
-  family:						('Helvetica Neue', 'Helvetica Neue', 'Erbos Draco 1st Open NBP'),
-  family-fixed:				('Helvetica Neue', 'Helvetica Neue', 'Erbos Draco 1st Open NBP'),
+  family:						('Helvetica Neue', 'Helvetica Neue', 'Fjalla One'),
+  family-fixed:				('Helvetica Neue', 'Helvetica Neue', 'Fjalla One'),
   weight:						300,
   weight-bold:				600,
   letter-spacing:				0.2rem,

@@ -166,12 +166,13 @@ body {
         font-size: 4rem;
         margin-bottom: 1.7rem;
         color: $color-primary-purple;
-        font-weight: 700;
+        // font-weight: 700;
         letter-spacing: 0.6px;
         padding: 0.4rem 0rem;
         transform: scale(0.94);
         animation: scale 3s forwards cubic-bezier(0.5, 1, 0.89, 1);
-        font-family: "Helvetica Neue Black";
+        // font-family: $font-header2;
+        // font-weight: 800;
       }
       @keyframes scale {
         100% {
@@ -184,7 +185,8 @@ body {
         opacity: 0;
         filter: blur(4px);
         color: $color-primary-purple; 
-        font-weight: 800;
+        // font-family: $font-header;
+        // font-weight: 900;
         padding: 0rem;
         margin: 0rem;
         text-shadow:
@@ -218,6 +220,7 @@ body {
       display: flex;
       flex-direction: column;
       width: 90%;
+      // font-family: $font-subheader;
       font-size: 2.5rem;
       line-height: 2.7rem;
       margin: 1.2rem 0rem 0rem 0rem;
@@ -227,6 +230,7 @@ body {
       display: flex;
       flex-direction: row;
       margin-top: 3rem;
+
       &-actions { 
         display: flex;
       }
@@ -241,6 +245,7 @@ body {
       height: 4.5rem;
       background-color: #0D082A;
       overflow: hidden;
+      // font-family: $font-subheader;
 
       &:after {
         background: #d5d4e3;
