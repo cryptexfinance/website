@@ -11,6 +11,12 @@ import "@fontsource/port-lligat-sans"
 import "@fontsource/source-sans-3"
 import "@fontsource/yanone-kaffeesatz"
 
+import "@fontsource/convergence"
+import "@fontsource/quicksand"
+import "@fontsource/noto-sans-display"
+import "@fontsource/sansita"
+import "@fontsource/tajawal"
+
 
 export { wrapRootElement } from "./src/apollo/wrap-root-element"
 

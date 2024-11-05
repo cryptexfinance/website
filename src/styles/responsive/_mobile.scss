@@ -1028,6 +1028,14 @@
   }
 
   @media only screen and (max-device-width: 395px) {
+    .section-main {
+      .main {
+        &-subtitle {
+          font-size: 24px;
+        }
+      } 
+    }
+    
     .section-governance {
       padding: 20rem 1.7rem;
 
@@ -1063,6 +1071,14 @@
   }
 
   @media only screen and (max-device-width: 375px) {
+    .section-main {
+      .main {
+        &-subtitle {
+          font-size: 23px;
+        }
+      }
+    }
+    
     .section-governance {
       padding: 20rem 0.8rem;
 

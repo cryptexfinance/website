@@ -1883,6 +1883,11 @@
   resolved "https://registry.yarnpkg.com/@fontsource/alegreya-sans/-/alegreya-sans-5.1.1.tgz#6dc8932ae8edd52feff76b3f9ffe882ef00d87a4"
   integrity sha512-vQAwr25Pk5N5Y924AxaGpipZQY9IdulIRS4+WXbNiHCVwDS/i6k7c46UdyBlhvnPM33JII7ndv/gJ9BP8i11bA==
 
+"@fontsource/convergence@^5.1.0":
+  version "5.1.0"
+  resolved "https://registry.yarnpkg.com/@fontsource/convergence/-/convergence-5.1.0.tgz#ff5df0a36f3072896c9e0b299e843fedbea1ac0e"
+  integrity sha512-afRzL8wR/fQ1XQRgYWkPHUbiObu756oQBp7dFZbyolNSbMVq4WeRpkcvDkLIp0PX1RfCfsvOYJYFmWD/z9iCuA==
+
 "@fontsource/dangrek@^5.1.0":
   version "5.1.0"
   resolved "https://registry.yarnpkg.com/@fontsource/dangrek/-/dangrek-5.1.0.tgz#9ca686dd9260074296fb951203022eef9861deb8"
@@ -1903,10 +1908,25 @@
   resolved "https://registry.yarnpkg.com/@fontsource/hind-siliguri/-/hind-siliguri-5.1.0.tgz#30ce5b04dd3b5fb1965aabd7dbc3c55227b215dc"
   integrity sha512-AR/c7CFxL38J+wmreIR5Wm67NCRAXwybDG8vpN7IeFz6/mWRWv69ZKVg6QfE7G93VGZ20EcwRU1UsZO9dfOhRg==
 
+"@fontsource/noto-sans-display@^5.1.0":
+  version "5.1.0"
+  resolved "https://registry.yarnpkg.com/@fontsource/noto-sans-display/-/noto-sans-display-5.1.0.tgz#c772ed960a15223eacaf1875a9c5f2b2c40f32a3"
+  integrity sha512-V6iqcB6bkQ1iBkHzZ2zsOa8TZZkPHne7mvj2ZpVQ03h7mFOX5vAfzkbogJRGU79yHuUv57rjmAfvjGiJe/aRIw==
+
 "@fontsource/port-lligat-sans@^5.1.0":
   version "5.1.0"
   resolved "https://registry.yarnpkg.com/@fontsource/port-lligat-sans/-/port-lligat-sans-5.1.0.tgz#3f9fa2526a8a7b5577c0e86d11805ff71d7239bb"
   integrity sha512-8wQF/KcOolMimwELWhCxJaalpDATt2BiZwIkCTOzrJ/1i3ZzZHxLRo8+SGQ6VdHvKJFrb95J9YFm/XqGyfbT7A==
+
+"@fontsource/quicksand@^5.1.0":
+  version "5.1.0"
+  resolved "https://registry.yarnpkg.com/@fontsource/quicksand/-/quicksand-5.1.0.tgz#5a146d381c28cde21a0a6567c4c88883c7ddeca0"
+  integrity sha512-TLi2qjOY3bdqK5e19TxUdCbfD+wHiITzM0RgnXXNcS2sJzd1rSXHFFW7pdD51wCVnO/2CaQXHUT2F4n05iclBg==
+
+"@fontsource/sansita@^5.1.0":
+  version "5.1.0"
+  resolved "https://registry.yarnpkg.com/@fontsource/sansita/-/sansita-5.1.0.tgz#eac60eb4e934181eaceffe1938ed55df59e96d5a"
+  integrity sha512-Ki8XghW/Sh2KyiA8nUJ6MLkJFglH2RcrEhxafJCHCZMgETX6/GKq7SuF7W3kYD3EmsfUihoE8B77SmdTk6aySQ==
 
 "@fontsource/signika-negative@^5.1.0":
   version "5.1.0"
@@ -1917,6 +1937,11 @@
   version "5.1.0"
   resolved "https://registry.yarnpkg.com/@fontsource/source-sans-3/-/source-sans-3-5.1.0.tgz#90ec151e8e568271bea0dfa9c4ec9cc9829ad982"
   integrity sha512-BUHzdaEiLBgqWR+QCv1g67sqlcE40BeuMOBH5uNaWQPxBen72Xj/J47MzydGoZqNAC73S6SYi5IzxgH3D/XEnQ==
+
+"@fontsource/tajawal@^5.1.0":
+  version "5.1.0"
+  resolved "https://registry.yarnpkg.com/@fontsource/tajawal/-/tajawal-5.1.0.tgz#9508e6da41fa6eae59e025c98c791603bd73ad0a"
+  integrity sha512-CYYxryDbFK4r4ev4xis+SyklUtnGy5O8nlJoDES/zEUdEz/qc7eYn1nVlQnUqWYLPzN5DgyTqHOx/5gWwHS7BA==
 
 "@fontsource/yanone-kaffeesatz@^5.1.0":
   version "5.1.0"
