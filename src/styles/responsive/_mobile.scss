@@ -411,14 +411,16 @@
       &-container {
         padding: 4rem 3rem;
         margin-left: 1rem;
+        background-image: linear-gradient(transparent, transparent, transparent, rgba(5, 5, 5, 0.9));
       }
       &-info {
         width: 100%;
         // background: #0000004a;
 
         .main-title {
-          padding: 5rem 0rem;
+          padding: 5rem 0rem 2rem 0rem;
           font-size: 46px;
+          line-height: 46px;
         }
         span {
           font-size: 46px;
@@ -428,7 +430,7 @@
       &-subtitle {
         width: 100%;
         margin-bottom: 2rem;
-        font-size: 27px;
+        font-size: 25px;
         line-height: 32px;
         text-align: center;
       }

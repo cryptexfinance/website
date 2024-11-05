@@ -185,7 +185,7 @@ body {
         opacity: 0;
         filter: blur(4px);
         color: $color-primary-purple; 
-        // font-family: $font-header;
+        font-family: $font-header9;
         // font-weight: 900;
         padding: 0rem;
         margin: 0rem;
@@ -220,7 +220,7 @@ body {
       display: flex;
       flex-direction: column;
       width: 90%;
-      // font-family: $font-subheader;
+      font-family: $font-subheader;
       font-size: 2.5rem;
       line-height: 2.7rem;
       margin: 1.2rem 0rem 0rem 0rem;
@@ -245,7 +245,7 @@ body {
       height: 4.5rem;
       background-color: #0D082A;
       overflow: hidden;
-      // font-family: $font-subheader;
+      font-family: $font-subheader;
 
       &:after {
         background: #d5d4e3;
