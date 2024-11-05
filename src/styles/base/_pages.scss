@@ -33,7 +33,7 @@ body {
 }
 
 .menu-logo {
-    width: 120px;
+    width: 140px;
 }
 
 .coin-icon{
@@ -598,6 +598,7 @@ body {
         flex-direction: column;
       }
       .subtitle  {
+        font-size: 1.2rem;
         margin-top: 0rem;
       }
       .icons {
@@ -614,6 +615,10 @@ body {
         flex-direction: row;
         margin-top: 1.5rem;    
         padding: 0rem 1.5rem;
+
+        .price-label {
+          font-size: 1.1rem;
+        }      
       }
     }
     &-icon {
