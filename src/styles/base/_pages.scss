@@ -166,13 +166,10 @@ body {
         font-size: 4rem;
         margin-bottom: 1.7rem;
         color: $color-primary-purple;
-        // font-weight: 700;
         letter-spacing: 0.6px;
         padding: 0.4rem 0rem;
         transform: scale(0.94);
         animation: scale 3s forwards cubic-bezier(0.5, 1, 0.89, 1);
-        // font-family: $font-header2;
-        // font-weight: 800;
       }
       @keyframes scale {
         100% {
@@ -185,15 +182,15 @@ body {
         opacity: 0;
         filter: blur(4px);
         color: $color-primary-purple; 
-        font-family: $font-header9;
+        font-family: $font-primary;
         // font-weight: 900;
         padding: 0rem;
         margin: 0rem;
         text-shadow:
-            /* regular text-shadow */
-            2px 2px 13px rgba(14, 14, 14, 0.9),
-            /* text-shadow highlight */
-            0 -4px 0 oklch(65.73% 0.2509 305.47 / 50.36%);
+          /* regular text-shadow */
+          2px 2px 13px rgba(14, 14, 14, 0.9),
+          /* text-shadow highlight */
+          0 -4px 0 oklch(65.73% 0.2509 305.47 / 50.36%);
       }
       span:nth-child(1) {
         animation: fade-in 0.4s 0.05s forwards cubic-bezier(0.11, 0, 0.5, 0);
@@ -884,7 +881,7 @@ body {
   }
 
   .year-label {
-    font-size: 1.4rem;
+    font-size: 1.5rem;
     text-shadow: 0 1px 8px rgba(164,64,242, 0.8);
   }
 }

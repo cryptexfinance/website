@@ -47,7 +47,12 @@ const SectionProducts = () => {
       <div id="markets" className="section-products">
         <Stack direction="vertical" gap={2} className="align-items-center justify-content-center">
           <Stack direction="horizontal" className="justify-content-center" gap={3}>
-            <img src="/logo.svg" alt="Logo" className="line-up" width={245} style={{ marginBottom: "6px" }} />
+            <img
+              src="/logo.svg" alt="Logo"
+              className="line-up"
+              width={!breakpoints.sm ? 245 : 180}
+              style={{ marginBottom: "6px" }}
+            />
             <h1 className="header line-up">
               {t('markets')}
             </h1>
@@ -56,7 +61,7 @@ const SectionProducts = () => {
             Cryptex {t('markets')}
           </h1> */}
           <h2 className="headline line-up text-purple">
-            A united DeFi platform: Crypto Indexes, Bridging, Swaps and Perpetuals. 
+            Explore Cryptex Indexes, Bridging, Swaps and Perpetuals.
           </h2>
         </Stack>
         <Summary />

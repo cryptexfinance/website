@@ -32,6 +32,12 @@ h3, .terciary-header {
   letter-spacing: 0.3px;
   text-align: left;
 }
+h4 {
+  font-size: 1.6rem;
+}
+p {
+  font-size: 1.01rem;
+}
 
 .accordion-button, .accordion-button:not(.collapsed) {
   background-color: $color-blackground;
@@ -298,7 +304,7 @@ span {
 .number-pink {
   color: $color-white;
   font-family: $font-secondary;
-  font-size: 1.1rem;
+  font-size: 1.5rem;
   font-weight: bold;
   letter-spacing: .2px;
   line-height: 2rem;
@@ -331,7 +337,7 @@ span {
 .number-blue {
   color: $color-white;;
   font-family: $font-secondary;
-  font-size: 1.1rem;
+  font-size: 1.5rem;
   font-style: normal;
   font-weight: bold;
   letter-spacing: .2px;

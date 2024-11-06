@@ -361,7 +361,7 @@
   }
 
   .number-pink, .number-blue {
-    font-size: 17px;
+    font-size: 18px;
     line-height: 22px;
     letter-spacing: 0.8px;
   }
@@ -770,6 +770,8 @@
       font-size: 20px;
     }
     .subtitle {
+      font-size: 19px !important;
+      line-height: 22px !important;
       margin-top: 2rem;
     }
     .governance-header {
@@ -795,6 +797,10 @@
         .prices {
           padding-top: 3rem;
           flex-direction: column;
+
+          .price-label {
+            font-size: 16px;
+          }
         }
       }
       &-icon {
@@ -918,8 +924,9 @@
     &-info {
       width: 100%;
       .subtitle {
-        margin-top: 5rem;
-        margin-bottom: 5rem;
+        font-size: 22px;
+        margin-top: 3.5rem;
+        margin-bottom: 4.5rem;
       }
     }
     &-menu {
