@@ -3604,10 +3604,10 @@
     chrome-trace-event "^1.0.2"
     nullthrows "^1.1.1"
 
-"@perennial/sdk@^0.0.3-beta.1":
-  version "0.0.3-beta.1"
-  resolved "https://registry.yarnpkg.com/@perennial/sdk/-/sdk-0.0.3-beta.1.tgz#52ac9b4daf55a922e4bf6515a9238a45fffa2396"
-  integrity sha512-joegHkRGnZ9WrjuaoIcqTkYiWUDzXZgP/tPK5VMf4dPV++wToAQShJFu7dMmfTWVWbFzLHprs9dxXyftQycp7w==
+"@perennial/sdk@^0.0.3-beta.6":
+  version "0.0.3-beta.6"
+  resolved "https://registry.yarnpkg.com/@perennial/sdk/-/sdk-0.0.3-beta.6.tgz#ec579c7cb852fc0e130b5439763f58e0752ad619"
+  integrity sha512-r8fqrVZ1pS0G3ojJEzXpBPtteOpINhtMnXTA/kg1lp9uOIaE7LJce78ybUFFyCH6ThJIkPJJhcZQfgCX7cQNJw==
   dependencies:
     "@microsoft/tsdoc" "^0.14.2"
     "@pythnetwork/hermes-client" "^1.0.4"
