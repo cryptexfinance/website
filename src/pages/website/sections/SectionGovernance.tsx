@@ -5,15 +5,14 @@ import { FaArrowRight } from "react-icons/fa"
 import { useTranslation } from "gatsby-plugin-react-i18next"
 
 import ctxIcon from "../../../../static/website/ctx.svg"
+import aeroDromeLogo from "../../../../static/website/governance/aerodrome.png"
+import bitstampLogo from "../../../../static/website/governance/bitstamp.png"
+import coinbaseLogo from "../../../../static/website/governance/coinbase.svg"
 import geminiLogo from "../../../../static/website/governance/gemini.svg"
+import huobiLogo from "../../../../static/website/governance/huobi.svg"
 import sushiLogo from "../../../../static/website/governance/sushi-logo.svg"
 import uniLogo from "../../../../static/website/governance/uni-logo.svg"
-import coinbaseLogo from "../../../../static/website/governance/coinbase.svg"
-import huobiLogo from "../../../../static/website/governance/huobi.svg"
-import camelotLogo from "../../../../static/website/governance/camelot.svg"
-import coingeckoLogo from "../../../../static/website/governance/coingecko.svg"
-import traderJoeLogo from "../../../../static/website/governance/traderjoe.png"
-import aeroDromeLogo from "../../../../static/website/governance/aerodrome.png"
+
 import {
   FOUNDERS_ADDRESS,
   LIQUIDITY_REWARD2_ADDRESS,
@@ -95,6 +94,12 @@ const governanceIcons = [
     icon: huobiLogo,
     alt: "Huobi Logo",
     class: "huobi",
+  },
+  {
+    href: "https://www.bitstamp.net/markets/ctx/usd/",
+    icon: bitstampLogo,
+    alt: "Bitstamp Logo",
+    class: "bitstamp",
   },
 ]
 
@@ -232,7 +237,7 @@ const SectionGovernance = () => {
                   prefix="$"
                   decimalScale={2}
                 />
-                <span className="label-all">
+                <span className="price-label">
                   {t('ctx-market-cap')}
                 </span>
               </div>
@@ -247,10 +252,7 @@ const SectionGovernance = () => {
                     prefix="$"
                     decimalScale={2}
                   />
-                  <span className="label">
-                    {t('ctx-price')}
-                  </span>
-                  <span className="label label-mobile">
+                  <span className="price-label">
                     {t('ctx-price')}
                   </span>
                 </div>

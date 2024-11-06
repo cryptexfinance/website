@@ -1,3 +1,5 @@
+import "@fontsource/source-sans-3"
+
 export { wrapRootElement } from "./src/apollo/wrap-root-element"
 
 const addScript = url => {

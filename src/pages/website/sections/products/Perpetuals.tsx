@@ -1,6 +1,6 @@
 import React, { useEffect, useMemo, useState } from "react"
 import { ethers } from "ethers"
-import { Accordion, Col, Image, Spinner, Stack } from "react-bootstrap"
+import { Col, Image, Spinner, Stack } from "react-bootstrap"
 import { Big6Math, calcNotional, calcTakerLiquidity, formatBig6USDPrice, MarketSnapshot, SupportedAsset } from "@perennial/sdk"
 import { graphql } from "gatsby"
 import { useTranslation } from "gatsby-plugin-react-i18next"
@@ -13,32 +13,10 @@ import { addPositions, nextPosition } from "../../../../utils/positionUtils"
 import { VaultSnapshot } from "../../../../hooks/marketsV1"
 import { useTcapPriceChanges } from "../../../../hooks/graph"
 
-import { ProductInfoCard } from "../../../../components/ProductInfoCard"
-import { Highlight, PurpleText } from "../../../../components/highlights"
 import { use24hPriceChange } from "../../../../hooks/indexes"
 import { SupportedIndex } from "../../../../constants/indexes"
 
 
-const highlights = [
-  <Highlight>
-    Trade popular and <PurpleText>unique crypto assets</PurpleText>.
-  </Highlight>,
-  <Highlight>
-    Benefit from <PurpleText>deep liquidity pools</PurpleText> for smooth trade execution.
-  </Highlight>,
-  <Highlight>
-    Enjoy <PurpleText>competitive fees</PurpleText> and minimal slippage across all pairs.
-  </Highlight>,
-  <Highlight>
-    Execute precise trades with <PurpleText>oracle-driven price feeds.</PurpleText>
-  </Highlight>,
-  <Highlight>
-    Utilize <PurpleText>advanced order types</PurpleText> for sophisticated trading.
-  </Highlight>,
-  <Highlight>
-    Monitor <PurpleText>real-time prices</PurpleText>, 24h changes, and liquidity data.
-  </Highlight>
-]
 
 const PriceBox = ({ currentPrice }: { currentPrice: bigint }) => {
   const { t } = useTranslation()
@@ -217,7 +195,7 @@ const Perpetuals = () => {
   const { t } = useTranslation()
   const snapshots = useMarketSnapshots()
 
-  const { markets, tcapMarket, sortedAssets, totalLiquidity, totalOpenInteres } = useMemo(() => {
+  const { markets, tcapMarket, sortedAssets } = useMemo(() => {
     if (snapshots && snapshots.data && snapshots.data.markets) {
       const listedMarketsSnapshots = Object.keys(AssetMetadata).filter((asset) => !AssetMetadata[asset as SupportedAsset].isUnlisted)
 
@@ -275,110 +253,58 @@ const Perpetuals = () => {
         ]
       }
 
-      const totalLiquidity = sortedMarkets.reduce(
-        (acc, totalLiq) => acc + totalLiq.liquidity,
-        0n,
-      )
-      const totalOpenInteres = sortedMarkets.reduce(
-        (acc, totalLiq) => acc + totalLiq.openInterest,
-        0n,
-      )
-
       return {
         markets: snapshots.data?.markets.market,
         tcapMarket: snapshots.data?.tcapSnapshot,
         sortedAssets: sortedMarkets,
-        totalLiquidity: `${formatBig6USDPrice(totalLiquidity, { compact: true })}+`,
-        totalOpenInteres: `${formatBig6USDPrice(totalOpenInteres, { compact: true })}+`,
       }
     }
 
-    return { markets: undefined, tcapMarket: undefined, sortedAssets: undefined, totalLiquidity: "-", totalOpenInteres: "-" }
+    return { markets: undefined, tcapMarket: undefined, sortedAssets: undefined}
   }, [snapshots, snapshots.status])
 
   return (
-    <Stack direction="horizontal" gap={2} className="products">
-      <Stack direction="vertical" className="products-info" style={{ width: "48%" }}>
-        <ProductInfoCard
-          headline="Precise and Powerful Perpetual Trading"
-          highlights={highlights}
-          totals={[
-            {
-              title: "Total Liquidity",
-              value: totalLiquidity
-            },
-            {
-              title: "Open Interest",
-              value: totalOpenInteres || "$0.00"
-            },
-          ]}
-        />
-      </Stack>
-      <Stack direction="vertical" className="products-metrics" style={{ width: "52%" }}>
-        <Accordion className="only-mobile">
-          <Accordion.Item eventKey="1">
-            <Accordion.Header>
-              <h6>Details</h6>
-            </Accordion.Header>
-            <Accordion.Body>
-              <ProductInfoCard
-                headline="Precise and Powerful Perpetual Trading"
-                highlights={highlights}
-                totals={[
-                  {
-                    title: "Total Liquidity",
-                    value: totalLiquidity
-                  },
-                  {
-                    title: "Open Interest",
-                    value: totalOpenInteres || "$0.00"
-                  },
-                ]}
-              />
-            </Accordion.Body>
-          </Accordion.Item>
-        </Accordion>
-        {markets && tcapMarket ? (
-          <div className="products-detail-container">
-            <Stack direction="horizontal" gap={0} className="products-header">
-              <Col lg={4} md={4}>
-                <span className="product-title asset">{t('asset')}</span>
-              </Col>
-              <Col lg={2} md={2} className="text-right">
-                <span className="product-title">{t('price')}</span>
-              </Col>
-              <Col lg={2} md={2} className="text-right">
-                <span className="product-title">{t('chagen24h')}</span>
-              </Col>
-              <Col lg={4} md={4} className="text-right">
-                <span className="product-title">{t('ls-liquidity')}</span>
-              </Col>
-            </Stack>
-            <div className="products-detail">
-              {sortedAssets.map((sorteAsset, index) => {
-                if (sorteAsset.asset !== 'tcap') {
-                  const market = markets[sorteAsset.asset as SupportedAsset]
-                  if (!market) return <></>
-                  return (
-                    <MarketRow
-                      key={sorteAsset.asset}
-                      index={index}
-                      asset={sorteAsset.asset as SupportedAsset}
-                      market={market}
-                      showOI={false}
-                    />
-                  )
-                }
-                return <MarketTcapRow key={sorteAsset.asset} index={index} tcapSnapshot={tcapMarket} showOI={false} />
-              })}
-            </div>
-          </div>
-        ) : (
-          <Stack direction="vertical" className="products-loading">
-            <Spinner animation="border" variant="primary" />
+    <Stack direction="horizontal" gap={2} className="line-down fast products">
+      {markets && tcapMarket ? (
+        <div className="products-detail-container w-100">
+          <Stack direction="horizontal" gap={0} className="products-header">
+            <Col lg={4} md={4}>
+              <span className="product-title asset">{t('asset')}</span>
+            </Col>
+            <Col lg={2} md={2} className="text-right">
+              <span className="product-title">{t('price')}</span>
+            </Col>
+            <Col lg={2} md={2} className="text-right">
+              <span className="product-title">{t('chagen24h')}</span>
+            </Col>
+            <Col lg={4} md={4} className="text-right">
+              <span className="product-title">{t('ls-liquidity')}</span>
+            </Col>
           </Stack>
-        )}
-      </Stack>
+          <div className="products-detail">
+            {sortedAssets.map((sorteAsset, index) => {
+              if (sorteAsset.asset !== 'tcap') {
+                const market = markets[sorteAsset.asset as SupportedAsset]
+                if (!market) return <></>
+                return (
+                  <MarketRow
+                    key={sorteAsset.asset}
+                    index={index}
+                    asset={sorteAsset.asset as SupportedAsset}
+                    market={market}
+                    showOI={false}
+                  />
+                )
+              }
+              return <MarketTcapRow key={sorteAsset.asset} index={index} tcapSnapshot={tcapMarket} showOI={false} />
+            })}
+          </div>
+        </div>
+      ) : (
+        <Stack direction="vertical" className="products-loading">
+          <Spinner animation="border" variant="primary" />
+        </Stack>
+      )}
     </Stack>
   )
 }

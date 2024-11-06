@@ -28,13 +28,13 @@ $shadow-orange-neon-second: rgba(242,128,64, 0.3);
 $shadow-navbar-button: rgba(254, 33, 245, 0.43);
 // $shadow-text-about: 0px 4px 13px #A440F2;
 
-$font-primary: 'Helvetica Neue';
-$font-secondary: 'Erbos Draco 1st Open NBP';
-$font-tertiary: 'Helvetica Neue';
+$font-primary: 'Source Sans 3';
+$font-secondary: 'Source Sans 3';
+$font-tertiary: 'Source Sans 3';
+$font-subheader: 'Source Sans 3';
 
 $main-image-width: 28.9375rem;
 $main-image-height: 28.625rem;
-
 
 //GRID
 $grid-width: 114rem;
@@ -43,7 +43,6 @@ $gutter-horizontal: 6rem;
 
 
 // Toast
-
 $rt-namespace: 'Toastify';
 $rt-toast-width: 320px !default;
 $rt-toast-background: #fff !default;
@@ -54,22 +53,6 @@ $rt-color-progress-dark: #bb86fc !default;
 $rt-mobile: "only screen and (max-width : 480px)" !default;
 $rt-z-index: 9999 !default;
 
-@font-face {
-  font-family: 'Tachyon Regular';
-  src: url("../fonts/tachyonregular.woff") format("woff");
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "Helvetica Neue Thin";
-  src: url("../fonts/helveticaneue-thin.woff2") format("woff2"),
-      url("../fonts/helveticaneue-thin.woff") format("woff");
-  font-weight: normal;
-  font-style: italic;
-  font-display: swap;
-}
 
 @font-face {
   font-family: "Helvetica Neue";
@@ -88,33 +71,9 @@ $rt-z-index: 9999 !default;
   font-display: swap;
 }
 
-@font-face {
-  font-family: 'Space Mono';
-  src: url('../fonts/SpaceMono-Regular.woff') format('woff');
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'NineTeen Ninety Seven';
-  src: url('../fonts/Nineteen-Ninety-Seven.woff') format('woff');
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'Erbos Draco 1st Open NBP';
-  src: url('../fonts/Erbos-Draco-1st-Open-NBP.woff') format('woff');
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap;
-}
-
 $font: (
-  family:						('Helvetica Neue', 'Helvetica Neue', 'Erbos Draco 1st Open NBP'),
-  family-fixed:				('Helvetica Neue', 'Helvetica Neue', 'Erbos Draco 1st Open NBP'),
+  family:						('Helvetica Neue', 'Helvetica Neue'),
+  family-fixed:				('Helvetica Neue', 'Helvetica Neue'),
   weight:						300,
   weight-bold:				600,
   letter-spacing:				0.2rem,

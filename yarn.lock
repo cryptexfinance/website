@@ -1873,6 +1873,11 @@
   resolved "https://registry.yarnpkg.com/@floating-ui/utils/-/utils-0.2.7.tgz#d0ece53ce99ab5a8e37ebdfe5e32452a2bfc073e"
   integrity sha512-X8R8Oj771YRl/w+c1HqAC1szL8zWQRwFvgDwT129k9ACdBoud/+/rX9V0qiMl6LWUdP9voC2nDVZYPMQQsb6eA==
 
+"@fontsource/source-sans-3@^5.1.0":
+  version "5.1.0"
+  resolved "https://registry.yarnpkg.com/@fontsource/source-sans-3/-/source-sans-3-5.1.0.tgz#90ec151e8e568271bea0dfa9c4ec9cc9829ad982"
+  integrity sha512-BUHzdaEiLBgqWR+QCv1g67sqlcE40BeuMOBH5uNaWQPxBen72Xj/J47MzydGoZqNAC73S6SYi5IzxgH3D/XEnQ==
+
 "@gar/promisify@^1.1.3":
   version "1.1.3"
   resolved "https://registry.npmjs.org/@gar/promisify/-/promisify-1.1.3.tgz"
@@ -9565,6 +9570,13 @@ gatsby-plugin-apollo@^4.0.2:
   integrity sha512-FppcI/nyhC5lsslBKpWZwWTmW+g7wSJQTHk+yEHsZJlNpGa0IE6nFvyl8j2Gwoola1ctUDZkkVHmo5sxj1dVQg==
   dependencies:
     isomorphic-fetch "^3.0.0"
+
+gatsby-plugin-breakpoints@^1.3.11:
+  version "1.3.11"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-breakpoints/-/gatsby-plugin-breakpoints-1.3.11.tgz#3491fa12b12603215e65100772f9cdf1bb1112e8"
+  integrity sha512-zoQX3J74HpTgvquGVL87l+Hh7GQkL7Fth6WS0TdR5C1pTCOt7Pb3F3sWl4mNg2vn8CADC0dD1IgmYgnOu4XUww==
+  dependencies:
+    "@babel/runtime" "^7.23.2"
 
 gatsby-plugin-catch-links@^4.21.0:
   version "4.23.0"
