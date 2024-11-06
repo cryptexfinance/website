@@ -35,7 +35,7 @@ export type SetTokenMetadataType = {
 
 export const SetTokenMetadata: SetTokenMetadataType = {
   [SupportedSetTokens.meem]: {
-    name: 'Cryptex Memecoin Index',
+    name: 'Cryptex 1:1 Memecoin Index',
     symbol: 'MEEM',
     decimals: 18,
     displayDecimals: 4,
@@ -197,7 +197,6 @@ export const addressToComponent = (address: Address) => {
 }
 
 // Crypdex Contracts
-
 export const BasicIssuanceModuleAddresses: AddressMappingType = {
   [mainnet.id]: getAddress('0x9330d0F979af5c8a5f2380f7bc41234A7d8A15de'),
   [arbitrum.id]: zeroAddress,

@@ -164,7 +164,7 @@
     padding-top: 35px;
     padding-bottom: 35px;
     text-align: center;
-    font-size: 18px;
+    font-size: 22px;
     line-height: 28px;
     letter-spacing: 0.6px;
     color: $color-grey !important;
@@ -316,6 +316,10 @@
     }
     .dropdown-item {
       height: 37px;
+
+      .lang-text {
+        font-size: 18px;
+      }
     }
   }
 
@@ -361,7 +365,7 @@
   }
 
   .number-pink, .number-blue {
-    font-size: 17px;
+    font-size: 18px;
     line-height: 22px;
     letter-spacing: 0.8px;
   }
@@ -482,8 +486,8 @@
     }
   
     .headline {
-      font-size: 24px;
-      line-height: 28px;
+      font-size: 22px;
+      line-height: 26px;
       margin-bottom: 8rem;
       text-align: center;
     }
@@ -720,7 +724,7 @@
     }
 
     .headline {
-      font-size: 17px;
+      font-size: 18px;
       line-height: 21px;
       text-align: center !important;
 
@@ -770,6 +774,8 @@
       font-size: 20px;
     }
     .subtitle {
+      font-size: 18px !important;
+      line-height: 22px !important;
       margin-top: 2rem;
     }
     .governance-header {
@@ -795,6 +801,10 @@
         .prices {
           padding-top: 3rem;
           flex-direction: column;
+
+          .price-label {
+            font-size: 16px;
+          }
         }
       }
       &-icon {
@@ -839,8 +849,8 @@
     padding: 7rem 4rem;
 
     .social-title {
-      font-size: 20px;
-      line-height: 22px;
+      font-size: 21px;
+      line-height: 23px;
       margin-bottom: 16px;
     }
 
@@ -857,11 +867,11 @@
         margin-bottom: 12px;
 
         h4 {
-          font-size: 16px;
+          font-size: 17px;
         }
 
         .x_profile_link {
-          font-size: 14px;
+          font-size: 15px;
         }
       }
       
@@ -884,7 +894,7 @@
 
       .post-body {
         p {
-          font-size: 16px;
+          font-size: 17px;
           margin-bottom: 12px;
           line-height: 20px;
         }
@@ -918,8 +928,9 @@
     &-info {
       width: 100%;
       .subtitle {
-        margin-top: 5rem;
-        margin-bottom: 5rem;
+        font-size: 22px;
+        margin-top: 3.5rem;
+        margin-bottom: 4.5rem;
       }
     }
     &-menu {

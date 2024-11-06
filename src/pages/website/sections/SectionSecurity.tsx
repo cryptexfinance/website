@@ -2,8 +2,6 @@ import React from "react"
 import { Stack } from "react-bootstrap";
 import quantstampLogo from "../../../../static/website/security/quantstamp.svg"
 import pashovLogo from "../../../../static/website/security/pashov.jpg"
-import cantinaLogo from "../../../../static/website/security/cantina.svg"
-import cantina2Logo from "../../../../static/website/security/cantina2.svg"
 import cantina3Logo from "../../../../static/website/security/cantina3.png"
 
 
@@ -37,10 +35,10 @@ const SectionSecurity = () => {
       className="section-security align-items-center "
     >
       <h1 className="header line-up">
-        Trustless experience for all DeFi users.
+        A trustless experience for all DeFi users
       </h1>
       <h2 className="headline">
-        We deploy battled tested technologies that are audited and trusted by the DeFi community. 
+        We deploy battled tested technologies that are audited and trusted by the DeFi community
       </h2>
       <h2 className="mt-4 mb-0 headline text-purple">
         Our products are extensively audited by:

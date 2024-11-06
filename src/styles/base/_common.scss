@@ -27,10 +27,16 @@ h3, .terciary-header {
   font-family: $font-primary;
   font-style: normal;
   font-weight: bold;
-  font-size: 1.2rem;
+  font-size: 1.25rem;
   line-height: 1.375rem;
   letter-spacing: 0.3px;
   text-align: left;
+}
+h4 {
+  font-size: 1.6rem;
+}
+p {
+  font-size: 1.01rem;
 }
 
 .accordion-button, .accordion-button:not(.collapsed) {
@@ -100,10 +106,6 @@ span {
   }
 }
 
-.menu-logo {
-  width: 170px;
-}
-
 .header {
   display: flex;
   align-items: center;
@@ -129,7 +131,8 @@ span {
     font-size: 1.2rem;
   }
   @media only screen and (max-device-width: 600px) {
-    font-size: 3.5rem;
+    font-size: 20px;
+    line-height: 22px;
   }
 }
 
@@ -188,7 +191,7 @@ span {
   font-family: $font-tertiary;
   font-style: normal;
   font-weight: normal;
-  font-size: 1rem;
+  font-size: 1.1rem;
   line-height: 1.7rem;
   letter-spacing: 0.5px;
   color: $color-grey-light;
@@ -302,7 +305,7 @@ span {
 .number-pink {
   color: $color-white;
   font-family: $font-secondary;
-  font-size: 1.1rem;
+  font-size: 1.5rem;
   font-weight: bold;
   letter-spacing: .2px;
   line-height: 2rem;
@@ -335,7 +338,7 @@ span {
 .number-blue {
   color: $color-white;;
   font-family: $font-secondary;
-  font-size: 1.1rem;
+  font-size: 1.5rem;
   font-style: normal;
   font-weight: bold;
   letter-spacing: .2px;

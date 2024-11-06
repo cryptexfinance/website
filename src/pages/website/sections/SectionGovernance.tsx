@@ -237,7 +237,7 @@ const SectionGovernance = () => {
                   prefix="$"
                   decimalScale={2}
                 />
-                <span className="label-all">
+                <span className="price-label">
                   {t('ctx-market-cap')}
                 </span>
               </div>
@@ -252,7 +252,7 @@ const SectionGovernance = () => {
                     prefix="$"
                     decimalScale={2}
                   />
-                  <span className="label">
+                  <span className="price-label">
                     {t('ctx-price')}
                   </span>
                   <span className="label label-mobile">
