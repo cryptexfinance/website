@@ -1,5 +1,4 @@
 import "@fontsource/source-sans-3"
-import "@fontsource/noto-sans-display"
 
 export { wrapRootElement } from "./src/apollo/wrap-root-element"
 

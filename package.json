@@ -18,7 +18,6 @@
   "dependencies": {
     "@apollo/client": "^3.7.13",
     "@apollo/react-hooks": "^4.0.0",
-    "@fontsource/noto-sans-display": "^5.1.0",
     "@fontsource/source-sans-3": "^5.1.0",
     "@lifi/widget": "3.2.2",
     "@paraswap/core": "^2.4.0",
