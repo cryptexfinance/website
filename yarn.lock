@@ -1873,11 +1873,6 @@
   resolved "https://registry.yarnpkg.com/@floating-ui/utils/-/utils-0.2.7.tgz#d0ece53ce99ab5a8e37ebdfe5e32452a2bfc073e"
   integrity sha512-X8R8Oj771YRl/w+c1HqAC1szL8zWQRwFvgDwT129k9ACdBoud/+/rX9V0qiMl6LWUdP9voC2nDVZYPMQQsb6eA==
 
-"@fontsource/noto-sans-display@^5.1.0":
-  version "5.1.0"
-  resolved "https://registry.yarnpkg.com/@fontsource/noto-sans-display/-/noto-sans-display-5.1.0.tgz#c772ed960a15223eacaf1875a9c5f2b2c40f32a3"
-  integrity sha512-V6iqcB6bkQ1iBkHzZ2zsOa8TZZkPHne7mvj2ZpVQ03h7mFOX5vAfzkbogJRGU79yHuUv57rjmAfvjGiJe/aRIw==
-
 "@fontsource/source-sans-3@^5.1.0":
   version "5.1.0"
   resolved "https://registry.yarnpkg.com/@fontsource/source-sans-3/-/source-sans-3-5.1.0.tgz#90ec151e8e568271bea0dfa9c4ec9cc9829ad982"
