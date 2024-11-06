@@ -255,9 +255,6 @@ const SectionGovernance = () => {
                   <span className="price-label">
                     {t('ctx-price')}
                   </span>
-                  <span className="label label-mobile">
-                    {t('ctx-price')}
-                  </span>
                 </div>
                 <img src={ctxIcon} className="coin-icon" alt="CTX" />
               </div>
