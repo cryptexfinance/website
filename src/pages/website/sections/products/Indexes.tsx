@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useMemo } from "react"
 import { Button, Col, Image, Spinner, Stack } from "react-bootstrap"
 import { useTranslation } from "gatsby-plugin-react-i18next"
 import { graphql } from "gatsby"
@@ -7,6 +7,8 @@ import { useSetTokensSnapshots } from "../../../../hooks/crypdex"
 import { SetTokenMetadata, SupportedComponents, SupportedSetTokens } from "../../../../constants/crypdex"
 
 import tcapLogo from '../../../../../static/website/icons/tcap.png'
+import { useIndexDataFromGraph } from "../../../../hooks/indexes"
+import { SupportedIndex } from "../../../../constants/indexes"
 
 
 const Indexes = () => {
@@ -21,7 +23,12 @@ const Indexes = () => {
             <Col lg={6} md={5}>
               <span className="product-title asset">Asset</span>
             </Col>
-            <Col lg={6} md={5} className="text-right" />
+            <Col lg={3} md={3} className="text-right">
+              <span className="product-title asset">Price</span>
+            </Col>  
+            <Col lg={3} md={3} className="text-right">
+              <span className="product-title asset">24h Change</span>
+            </Col>
           </Stack>
           <div className="products-detail">
             <TcapRow />
@@ -82,9 +89,26 @@ const IndexRow = ({
 }
 
 const TcapRow = () => {
+  const { data } = useIndexDataFromGraph(SupportedIndex.tcap)
+
+  const { currentPrice, percentChange, isPositiveChange } = useMemo(() => {
+    if (!data) return { currentPrice: "-", percentChange: "-", isPositiveChange: true }
+
+    return {
+      currentPrice: data.lastPrice.value.toFixed(2),
+      percentChange: data.percent24hChange.change.toFixed(2),
+      isPositiveChange: data.percent24hChange.isPositive,
+    }
+  }, [data])
+
   return (
-    <Button className={"w-100 mx-0 product-row dark"} onClick={() => {}}>
-      <Col className="product-row-item indexes-header mobile-header" lg={8} md={8} sm={12}>
+    <a
+      className={"w-100 mx-0 product-row dark"}
+      href={"https://app.cryptex.finance/indexes"}
+      target="_blank"
+      rel="noreferrer"
+    >
+      <Col className="product-row-item indexes-header mobile-header" lg={6} md={6} sm={12}>
         <Stack direction="horizontal" gap={2}>
           <Image className="product-logo" src={tcapLogo} width={42} height={42} />
           <Stack direction="vertical" gap={0} className="align-items-start">
@@ -96,12 +120,19 @@ const TcapRow = () => {
           ${currentPrice.toFixed(2)}
         </span> */}
       </Col>
-      <Col lg={4} md={4} className="text-right">
-        <span className="text-purple" style={{ fontSize: "1.1rem" }}>
-          Coming Soon
+      <Col lg={3} md={3} sm={12} className="product-row-item text-right">
+        <span className="product-title only-mobile">Price</span>
+        <span className={isPositiveChange ? "text-green" : "text-red"} style={{ fontSize: "1.1rem" }}>
+          ${currentPrice}
         </span>
       </Col>
-    </Button>
+      <Col lg={3} md={3} sm={12} className="product-row-item text-right">
+        <span className="product-title only-mobile">24h Change</span>
+        <span className={isPositiveChange ? "text-green" : "text-red"} style={{ fontSize: "1.1rem" }}>
+          {percentChange}%
+        </span>
+      </Col>
+    </a>
   )
 }
 

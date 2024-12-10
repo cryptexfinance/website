@@ -13,6 +13,7 @@ export const SupportedChainIds = [
   arbitrum.id,
   arbitrumSepolia.id,
   mainnet.id,
+  base.id,
 ] as const;
 
 export const chainIdToChainMap = {
@@ -28,6 +29,7 @@ export const Chains: { [chainId in SupportedChainIdType]: Chain } = {
   [arbitrum.id]: arbitrum,
   [arbitrumSepolia.id]: arbitrumSepolia,
   [mainnet.id]: mainnet,
+  [base.id]: base,
 };
 
 export const isSupportedChain = (chainId?: number) =>
@@ -39,6 +41,7 @@ export const rpcUrls: { [chainId in SupportedChainIdType]: string } = {
   [arbitrum.id]: `https://arb-mainnet.g.alchemy.com/v2/${AlchemyArbitrumKey}`,
   [arbitrumSepolia.id]: `https://arb-sepolia.g.alchemy.com/v2/${AlchemyArbitrumSepoliaKey}`,
   [mainnet.id]: `https://eth-mainnet.g.alchemy.com/v2/${AlchemyKey}`,
+  [base.id]: `https://base-mainnet.g.alchemy.com/v2/${AlchemyKey}`,
 }
 
 export const getPublicClient = (chainId: SupportedChainIdType) => { 
@@ -55,21 +58,25 @@ export const PerpetualsDefaultChain = chains[0];
 
 export const CrypdexDefaultChain = chains[2];
 
-export const GraphUrls: { [chainId in PerennialSupportedChainId]: string } = {
+export const GraphUrls: { [chainId in SupportedChainIdType]: string } = {
   [arbitrum.id]: process.env.GATSBY_GRAPH_URL_ARBITRUM || process.env.GRAPH_URL_ARBITRUM || "",
   [arbitrumSepolia.id]: process.env.GATSBY_GRAPH_URL_ARBITRUM_SEPOLIA ?? "",
+  [mainnet.id]: "",
+  [base.id]: process.env.GATSBY_GRAPH_URL_BASE || process.env.GRAPH_URL_BASE || "",
 };
 
 export const ExplorerNames: { [chainId in SupportedChainIdType]: string } = {
   [arbitrum.id]: arbitrum.blockExplorers.default.name,
   [arbitrumSepolia.id]: arbitrumSepolia.blockExplorers.default.name,
   [mainnet.id]: mainnet.blockExplorers.default.name,
+  [base.id]: base.blockExplorers.default.name,
 }
 
 export const ExplorerURLs: { [chainId in SupportedChainIdType]: string } = {
   [arbitrum.id]: arbitrum.blockExplorers.default.url,
   [arbitrumSepolia.id]: arbitrumSepolia.blockExplorers.default.url,
   [mainnet.id]: mainnet.blockExplorers.default.url,
+  [base.id]: base.blockExplorers.default.url,
 };
 
 const PythBenchmarkUrlVersion = 'v1'

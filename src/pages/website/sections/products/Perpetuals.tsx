@@ -148,6 +148,7 @@ const MarketTcapRow = ({ index, tcapSnapshot, showOI }: { index: number, tcapSna
       className={"product-row tcap-row ".concat(darkRow ? "dark" : "")}
       href={"https://app.cryptex.finance/?market=tcap"}
       target="_blank"
+      rel="noreferrer"
     >
       <Col className="product-row-item tcap-item mobile-header" lg={showOI ? 2 : 4} md={showOI ? 2 : 4} sm={12}>
         <Stack direction="horizontal" gap={2}>
