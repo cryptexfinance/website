@@ -1,7 +1,7 @@
 import meemLogo from '../../static/website/icons/meem.png'
 import PriceFeed from '../pages/website/components/PriceFeed';
 
-export const CryptexPricesUrl = "https://api.perps.cryptex.finance/"
+export const CryptexPricesUrl = "https://api.perps.cryptex.finance"
 export const IndexesPriceFeedUrl = 'https://api.perps.cryptex.finance/price-feed';
 
 export enum SupportedIndex {
