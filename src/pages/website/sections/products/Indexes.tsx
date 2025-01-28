@@ -3,7 +3,7 @@ import { Button, Col, Image, Spinner, Stack } from "react-bootstrap"
 import { useTranslation } from "gatsby-plugin-react-i18next"
 import { graphql } from "gatsby"
 
-import { useSetTokensSnapshots } from "../../../../hooks/crypdex"
+// import { useSetTokensSnapshots } from "../../../../hooks/crypdex"
 import { SetTokenMetadata, SupportedComponents, SupportedSetTokens } from "../../../../constants/crypdex"
 import { useIndexDataFromGraph } from "../../../../hooks/indexes"
 import { SupportedIndex } from "../../../../constants/indexes"

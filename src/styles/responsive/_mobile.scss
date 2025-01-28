@@ -712,6 +712,45 @@
     }
   }
 
+  .section-incentives {
+    padding-top: 17rem;
+    padding-bottom: 12rem;
+    margin-bottom: 12rem;
+
+    .incentives-body {
+      display: flex;
+      flex-direction: column;
+      padding: 1rem 0rem;
+      margin: 1rem 0rem 1.5rem 0rem;
+    }
+
+    .incentive-box { 
+      width: 100% !important;
+      height: 330px;
+      padding: 14px 12px;
+      margin-bottom: 16px;
+
+      h2 {
+        font-size: 18px;
+        line-height: 24px;
+        margin-bottom: 5px;
+      }
+      p, span {
+        font-size: 16px;
+      }
+      
+      .main-button-link {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 36px;
+        font-size: 17px !important;
+        padding: 1px 7px !important;
+        margin-bottom: 0rem !important;
+      }
+    }
+  }
+
   .section-security { 
     margin: 10rem 1rem 13rem 1rem;
     padding: 20rem 1rem 15rem 1rem;
