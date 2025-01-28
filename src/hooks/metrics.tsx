@@ -33,7 +33,7 @@ export const useChainLivePrices = () => {
   const [feedIds, feedToAsset] = useMemo(() => {
     const feedToAsset = markets.reduce((acc, { market }) => {
       const feed = AssetMetadata[market].pythFeedId
-      if (!feed || feed === zeroHash || feed === IndexMetadata[SupportedIndex.meem].feedId) return acc
+      if (!feed || feed === zeroHash || feed === IndexMetadata[SupportedIndex.meem].feedId.pyth) return acc
       if (acc[feed]) {
         acc[feed].push(market)
       } else {

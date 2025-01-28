@@ -1,6 +1,11 @@
 import { useInfiniteQuery, useQuery } from '@tanstack/react-query'
+import { formatUnits } from 'viem';
+import { base } from 'viem/chains';
+import { gql } from '@apollo/client'
+
 import { CryptexPriceFeedUrl } from "../constants/network";
 import { IndexMetadata, SupportedIndex } from "../constants/indexes";
+import { useGraphClient } from './network';
 const qs = require("qs");
 
 
@@ -134,5 +139,60 @@ export const use24hPriceChange = (index: SupportedIndex) => {
 
       return percentChange;
     }
+  })
+}
+
+//
+export const useIndexDataFromGraph = (index: SupportedIndex) => {
+  const graphClient = useGraphClient(base.id)
+
+  return useQuery({
+    queryKey: ['indexGraphPrices'],
+    enabled: true,
+    refetchInterval: 60000,
+    queryFn: async () => {
+      const query = gql(`
+        query IndexPrices($fromTimestamp: BigInt!) {
+          indexPrices(
+            orderBy: blockTimestamp, 
+            orderDirection: desc,
+            first: 200,
+            where: { blockTimestamp_gt: $fromTimestamp }
+          ) {
+            blockTimestamp
+            answer
+          }
+        }
+      `);
+      const indexMetadata = IndexMetadata[index];
+      const fromTimestamp = (new Date().getTime() - OneDay) / 1000;
+      const { indexPrices } = await graphClient.request(query, {
+          fromTimestamp: Math.ceil(fromTimestamp),
+        }) as any
+
+      let lastPrice = { time: 0, value: 0 }
+      let percent24hChange = {
+        change: 0,
+        isPositive: true,
+      };
+      if (indexPrices.length > 0) {
+        const price = parseFloat(formatUnits(indexPrices[0].answer, indexMetadata.decimals))
+        lastPrice = {
+          time: parseInt(indexPrices[0].blockTimestamp),
+          value: price,
+        }
+
+        const price24h = parseFloat(formatUnits(indexPrices[indexPrices.length - 1].answer, indexMetadata.decimals))
+        percent24hChange = {
+          change: ((price - price24h) / price24h) * 100,
+          isPositive: price >= price24h,
+        }
+      }  
+
+      return {
+        lastPrice,
+        percent24hChange,
+      }
+    },
   })
 }

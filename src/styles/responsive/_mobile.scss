@@ -701,6 +701,64 @@
       }
     }
 
+    .tcap-v2 {
+      padding: 15px 5px !important;
+      height: 620px !important;
+
+      .tcapv2-top {
+        flex: unset;
+      }
+      .tcapv2-header {
+        margin-bottom: 8px;
+      }
+      h1 {
+        font-size: 20px;
+        line-height: 24px;
+        padding-left: 8px;
+      }
+      p {
+        font-size: 16px;
+      }
+      .index-icon {
+        width: 28px;
+        height: 28px;
+      }
+
+      .products-detail {
+        .product-row-item {
+          padding-left: 8px;
+          padding-right: 8px;
+          justify-content: space-between !important;
+        }
+
+        .product-value {
+          width: 50% !important;
+        }
+      }
+
+      .aave-info {
+        flex-direction: column;
+        margin-top: 18px;
+
+        h6 {
+          font-size: 16px;
+        }
+        .aave-icon {
+          align-self: flex-start;
+          width: 28px;
+        }
+      }
+
+      .partners {
+        width: 100% !important;
+        flex-direction: column;
+
+        .partner-item {
+          margin-top: 15px;
+        }
+      }
+    }
+
     .only-mobile {
       display: block;
       &.col-sm-12 {
@@ -709,6 +767,45 @@
     }
     .not-on-mobile {
       display: none;
+    }
+  }
+
+  .section-incentives {
+    padding-top: 17rem;
+    padding-bottom: 12rem;
+    margin-bottom: 12rem;
+
+    .incentives-body {
+      display: flex;
+      flex-direction: column;
+      padding: 1rem 0rem;
+      margin: 1rem 0rem 1.5rem 0rem;
+    }
+
+    .incentive-box { 
+      width: 100% !important;
+      height: 330px;
+      padding: 14px 12px;
+      margin-bottom: 16px;
+
+      h2 {
+        font-size: 18px;
+        line-height: 24px;
+        margin-bottom: 5px;
+      }
+      p, span {
+        font-size: 16px;
+      }
+      
+      .main-button-link {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 36px;
+        font-size: 17px !important;
+        padding: 1px 7px !important;
+        margin-bottom: 0rem !important;
+      }
     }
   }
 

@@ -51,13 +51,16 @@ export const useRPCProviderUrl = (): string => {
   return `https://arb-mainnet.g.alchemy.com/v2/${keys[n]}`
 }
 
-/* export const useRPCProviderUrl = (): string => {
-  const pc = getViemClient()
-  return pc.transport.url
-} */
+const graphClients = new Map<SupportedChainIdType, GraphQLClient>()
+export const useGraphClient = (chainId: SupportedChainIdType) => {
+  if (!graphClients.has(chainId)) graphClients.set(chainId, new GraphQLClient(GraphUrls[chainId]))
 
-const graphClients = new Map<PerennialSupportedChainId, GraphQLClient>()
-export const useGraphClient = () => {
+  // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
+  return graphClients.get(chainId)!
+}
+
+const perennialGraphClients = new Map<PerennialSupportedChainId, GraphQLClient>()
+export const usePerennialGraphClient = () => {
   const chainId = PerpetualsDefaultChain.id as PerennialSupportedChainId
 
   if (!graphClients.has(chainId)) graphClients.set(chainId, new GraphQLClient(GraphUrls[chainId]))
@@ -69,7 +72,7 @@ export const useGraphClient = () => {
 const graphClientsV1 = new Map<PerennialSupportedChainId, GraphQLClient>()
 export const useGraphClientV1 = () => {
   const chainId = PerpetualsDefaultChain.id as PerennialSupportedChainId
-  if (!graphClients.has(chainId)) {
+  if (!perennialGraphClients.has(chainId)) {
     graphClientsV1.set(
       chainId,
       new GraphQLClient("https://subgraph.satsuma-prod.com/f8dfbcd260e8/cryptex--personal--24138/cryptex-arbitrum/api")

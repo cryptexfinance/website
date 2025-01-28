@@ -57,9 +57,6 @@ const SectionProducts = () => {
               {t('markets')}
             </h1>
           </Stack>
-          {/* <h1 className="header line-up">
-            Cryptex {t('markets')}
-          </h1> */}
           <h2 className="headline line-up text-purple">
             Explore Cryptex Indexes, Bridging, Swaps and Perpetuals.
           </h2>

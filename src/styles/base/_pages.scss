@@ -476,6 +476,42 @@ body {
   }
 }
 
+.section-incentives {
+  margin: 4rem 2rem 2rem 1rem;
+  padding: 6rem 1.5rem 3rem 1.5rem;
+
+  .incentive-box {
+    background-image: url("../../static/website/bgmagic.png");
+    background-size: contain;
+    background-color: linear-gradient(71deg, #080509, #1a171c, #080509);
+    border-color: #27272e;
+    box-shadow: none;
+    padding: 1.3rem;
+    height: 22rem;
+  }
+  .incentive-box:hover {
+    background-color: #0e0e19;
+    box-shadow: 0px 0px 15px 3px $shadow-purple-neon-secondary;
+    filter: brightness(1.1);
+  }
+
+  .main-button-link {
+    font-size: 1.1rem; 
+    background-color: #0f0f1c;
+    border-width: 1px;
+  }
+  .main-button-link:hover {
+    color: $color-white;
+    background-color: #0f0f1c;
+    border-color: $color-primary-purple;
+    filter: brightness(1.1);
+    transform: scale(1.01);
+    transition: transform 0.5s, -webkit-transform 0.5s;
+    transition-timing-function: ease, ease;
+    transition-timing-function: ease-in;
+  }
+}
+
 .section-security {
   margin: 3rem 2rem 3rem 1rem;
   padding: 6rem 1.8rem 3rem 1.8rem;
@@ -508,25 +544,6 @@ body {
     .pashov {
       border-radius: 50%;
     }
-  }
-
-  .hexagon {
-    --b: 2px;
-    /* adjust to control the border  */
-    height: 200px;
-    width: 200px;
-    /* adjust to control the size  */
-    aspect-ratio: 1/cos(30deg);
-    clip-path:
-      polygon(0 50%, 50% -50%, 100% 50%, 50% 150%, 0 50%,
-        var(--b) 50%,
-        calc(25% + var(--b)*cos(60deg)) calc(100% - var(--b)*sin(60deg)),
-        calc(75% - var(--b)*cos(60deg)) calc(100% - var(--b)*sin(60deg)),
-        calc(100% - var(--b)) 50%,
-        calc(75% - var(--b)*cos(60deg)) calc(var(--b)*sin(60deg)),
-        calc(25% + var(--b)*cos(60deg)) calc(var(--b)*sin(60deg)),
-        var(--b) 50%);
-    background: #A440F2;
   }
 }
 
