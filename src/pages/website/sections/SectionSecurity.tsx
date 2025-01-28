@@ -32,7 +32,7 @@ const SectionSecurity = () => {
       id="security"
       direction="vertical"
       gap={2}
-      className="section-security align-items-center "
+      className="section-security align-items-center"
     >
       <h1 className="header line-up">
         A trustless experience for all DeFi users

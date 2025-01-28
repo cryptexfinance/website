@@ -38,6 +38,9 @@ h4 {
 p {
   font-size: 1.01rem;
 }
+.font-size-1 {
+  font-size: 1.25rem;
+}
 
 .accordion-button, .accordion-button:not(.collapsed) {
   background-color: $color-blackground;
@@ -185,6 +188,14 @@ span {
 
 .text-grey {
   color: $color-grey !important;
+}
+
+.text-grey-medium {
+  color: #6C6B76 !important;
+}
+
+.text-grey-light {
+  color: $color-grey-light !important;
 }
 
 .subtitle {
