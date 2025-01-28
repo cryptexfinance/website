@@ -58,7 +58,7 @@ const MarketRow = ({ index, asset, market, showOI }: { index: number, asset: Sup
     <a
       key={`mr-${asset}`}
       className={"product-row ".concat(darkRow ? "dark" : "")}
-      href={`https://app.cryptex.finance/?market=${asset}`}
+      href={`https://app.cryptex.finance/perpetuals/?market=${asset}`}
       target="_blank"
     >
       <Col className="product-row-item mobile-header" lg={showOI ? 2 : 4} md={showOI ? 2 : 4} sm={12}>
@@ -146,7 +146,7 @@ const MarketTcapRow = ({ index, tcapSnapshot, showOI }: { index: number, tcapSna
     <a
       key={index.toString()}
       className={"product-row tcap-row ".concat(darkRow ? "dark" : "")}
-      href={"https://app.cryptex.finance/?market=tcap"}
+      href={"https://app.cryptex.finance/perpetuals/?market=tcap"}
       target="_blank"
       rel="noreferrer"
     >
