@@ -701,6 +701,64 @@
       }
     }
 
+    .tcap-v2 {
+      padding: 15px 5px !important;
+      height: 620px !important;
+
+      .tcapv2-top {
+        flex: unset;
+      }
+      .tcapv2-header {
+        margin-bottom: 8px;
+      }
+      h1 {
+        font-size: 20px;
+        line-height: 24px;
+        padding-left: 8px;
+      }
+      p {
+        font-size: 16px;
+      }
+      .index-icon {
+        width: 28px;
+        height: 28px;
+      }
+
+      .products-detail {
+        .product-row-item {
+          padding-left: 8px;
+          padding-right: 8px;
+          justify-content: space-between !important;
+        }
+
+        .product-value {
+          width: 50% !important;
+        }
+      }
+
+      .aave-info {
+        flex-direction: column;
+        margin-top: 18px;
+
+        h6 {
+          font-size: 16px;
+        }
+        .aave-icon {
+          align-self: flex-start;
+          width: 28px;
+        }
+      }
+
+      .partners {
+        width: 100% !important;
+        flex-direction: column;
+
+        .partner-item {
+          margin-top: 15px;
+        }
+      }
+    }
+
     .only-mobile {
       display: block;
       &.col-sm-12 {

@@ -2,9 +2,10 @@ import React, { useMemo } from "react"
 import { Button, Col, Image, Spinner, Stack } from "react-bootstrap"
 import { useTranslation } from "gatsby-plugin-react-i18next"
 import { graphql } from "gatsby"
+import { useBreakpoint } from "gatsby-plugin-breakpoints";
 
 // import { useSetTokensSnapshots } from "../../../../hooks/crypdex"
-import { SetTokenMetadata, SupportedComponents, SupportedSetTokens } from "../../../../constants/crypdex"
+// import { SetTokenMetadata, SupportedComponents, SupportedSetTokens } from "../../../../constants/crypdex"
 import { useIndexDataFromGraph } from "../../../../hooks/indexes"
 import { SupportedIndex } from "../../../../constants/indexes"
 
@@ -29,14 +30,14 @@ const Indexes = () => {
   return (
     <Stack
       direction="vertical"
-      className="justify-content-between line-down fast products ps-4 pe-1"
+      className="justify-content-between line-down fast products tcap-v2 ps-4 pe-1"
       gap={2}
       style={{ flex: "unset", height: "25rem" }}
     >
-      <Stack>
+      <Stack className="tcapv2-top">
         <Stack direction="vertical" gap={1} style={{ flex: "unset" }}>
-          <Stack direction="horizontal" gap={2}>
-            <Image className="product-logo align-items-center" src={tcapLogo} width={34} height={34} />
+          <Stack direction="horizontal" gap={2} className="tcapv2-header">
+            <Image className="index-icon align-items-center" src={tcapLogo} width={38} height={38} />
             <h1 className="mb-0">Total Crypto Market Cap Index</h1>
           </Stack>
           <p className="ps-2 text-grey-light">
@@ -56,27 +57,27 @@ const Indexes = () => {
               <span className="product-title asset">24h Price Change</span>
             </Stack>
           </Stack>
-          <div className="products-detail" style={{ minHeight: "5rem" }}>
+          <div className="products-detail" style={{ minHeight: "5rem", overflowY: "unset" }}>
             <TcapRow />
           </div>
         </div>
-        <Stack direction="horizontal" gap={2} className="align-items-center px-2">
-          <Image src={aaveMarkLogo} width={26} />
+        <Stack direction="horizontal" gap={2} className="aave-info align-items-center px-2">
+          <Image className="aave-icon" src={aaveMarkLogo} width={26} />
           <h6 className="mb-0 text-grey-light">
             With TCAP 2.0 earn real-world yield on your collateral via AAVE pass-through vaults.
           </h6>
         </Stack>
       </Stack>
-      <Stack direction="horizontal" gap={1} className="align-self-center align-items-center justify-content-end px-5 w-90">
-        <Stack direction="vertical" gap={1} className="align-items-center justify-content-center">
+      <Stack direction="horizontal" gap={1} className="partners align-self-center align-items-center justify-content-end px-5 w-90">
+        <Stack direction="vertical" gap={1} className="partner-item align-items-center justify-content-center">
           <span className="text-grey text-center bold">Live On</span>
           <Image src={baseLogo} width={85} />
         </Stack>
-        <Stack direction="vertical" gap={0} className="align-items-center justify-content-center">
+        <Stack direction="vertical" gap={0} className="partner-item align-items-center justify-content-center">
           <span className="w-100 text-grey text-center bold">Powered By</span>
           <Image src={chainlinkLogo} width={120} />
         </Stack>
-        <Stack direction="vertical" gap={0} className="align-items-center justify-content-center">
+        <Stack direction="vertical" gap={0} className="partner-item align-items-center justify-content-center">
           <span className="text-grey bold">Deployed On</span>
           <Image src={uniswapLogo} width={130} />
         </Stack>
@@ -88,6 +89,7 @@ const Indexes = () => {
 
 const TcapRow = () => {
   const { data } = useIndexDataFromGraph(SupportedIndex.tcap)
+  const breakpoints = useBreakpoint();
 
   const { currentPrice, percentChange, isPositiveChange } = useMemo(() => {
     if (!data) return { currentPrice: "-", percentChange: "-", isPositiveChange: true }
@@ -106,27 +108,27 @@ const TcapRow = () => {
       target="_blank"
       rel="noreferrer"
     >
-      <Stack direction="horizontal" className="product-row-item indexes-header mobile-header w-40" gap={2}>
-        {collateralsIcons.map((icon, index) => (
-          <Image key={`cr-${index.toString()}`} src={icon} height={32} width={32} />
-        ))}
-        {/* <Stack direction="horizontal" gap={2}>
-          <Image className="product-logo" src={tcapLogo} width={42} height={42} />
-          <Stack direction="vertical" gap={0} className="align-items-start">
-            <span className="product-value lg">TCAP 2.0</span>
-            <span className="product-subvalue lg">Cryptex Total Crypto Market Cap Index</span>
-          </Stack>
-        </Stack> */}
+      <Stack
+        direction="horizontal"
+        className={`product-row-item indexes-header mobile-header ${!breakpoints.sm ? "w-40" : "w-100"}`}
+        gap={2}
+      >
+        <span className="product-title only-mobile">TCAP Collaterals</span>
+        <Stack direction="horizontal" gap={!breakpoints.sm ? 2 : 4}>
+          {collateralsIcons.map((icon, index) => (
+            <Image key={`cr-${index.toString()}`} src={icon} height={32} width={32} />
+          ))}
+        </Stack>  
       </Stack>
-      <Stack className="product-row-item text-right w-30">
-        <span className="product-title only-mobile">Price</span>
-        <span className={isPositiveChange ? "text-green" : "text-red"} style={{ fontSize: "1.1rem" }}>
+      <Stack direction="horizontal" className={`product-row-item text-right ${!breakpoints.sm ? "w-30" : "w-100"}`}>
+        <span className="product-title only-mobile">TCAP Price</span>
+        <span className={`product-value w-100 text-right ${isPositiveChange ? "text-green" : "text-red"}`} style={{ fontSize: "1.1rem" }}>
           {currentPrice}
         </span>
       </Stack>
-      <Stack className="product-row-item text-right w-30">
+      <Stack className={`product-row-item text-right justify-content-center ${!breakpoints.sm ? "w-30" : "w-100"}`}>
         <span className="product-title only-mobile">24h Change</span>
-        <span className={isPositiveChange ? "text-green" : "text-red"} style={{ fontSize: "1.1rem" }}>
+        <span className={`product-value ${isPositiveChange ? "text-green" : "text-red"}`} style={{ fontSize: "1.1rem" }}>
           {percentChange}
         </span>
       </Stack>
@@ -134,7 +136,7 @@ const TcapRow = () => {
   )
 }
 
-const IndexRow = ({
+{/* const IndexRow = ({
   index,
   setToken,
 } : {
@@ -162,9 +164,6 @@ const IndexRow = ({
             <span className="product-subvalue lg">{assetMetada.name}</span>
           </Stack>
         </Stack>
-        {/* <span className={`product-value price only-mobile text-green`}>
-          {price}
-        </span> */}
       </Col>
       <Col lg={6} md={6} className="text-right">
         <span className="text-purple" style={{ fontSize: "1.1rem" }}>
@@ -173,7 +172,7 @@ const IndexRow = ({
       </Col>
     </Button>
   )
-}
+} */}
 
 export default Indexes
 
