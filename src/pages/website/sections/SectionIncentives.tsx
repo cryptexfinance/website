@@ -25,7 +25,7 @@ const SectionIncentives = () => {
                 <li>
                   <p style={{ marginBottom: "0rem" }}>
                     A total of <span className="text-purple font-size-1 px-1 bold">178,000 CTX</span> will be distributed among
-                    <span className="text-purple font-size-1 px-1 bold">TCAP/ETH pool</span> liquidity providers over six months
+                    <span className="text-purple font-size-1 px-1 bold">TCAP/WETH pool</span> liquidity providers over six months
                   </p>  
                 </li>
                 <li>
@@ -54,7 +54,7 @@ const SectionIncentives = () => {
               className="button-outlined-purple main-button main-button-link text-center p-2 w-50"
               style={{ fontSize: "1.1rem", backgroundColor: "#0f0f1c", borderWidth: "1px" }}
             >
-              TCAP/ETH Pool 
+              TCAP/WETH Pool 
             </a>
           </Stack>
         </Stack>
@@ -66,7 +66,7 @@ const SectionIncentives = () => {
                 <li>
                   <p style={{ marginBottom: "0rem" }}>
                     Earn <span className="text-purple font-size-1 px-1 bold">1 point</span> with every
-                    <span className="text-purple font-size-1 px-1 bold">TCAP/ETH swap</span> greater than $500 total value.
+                    <span className="text-purple font-size-1 px-1 bold">TCAP/WETH swap</span> greater than $500 total value.
                   </p>  
                 </li>
                 <li>
