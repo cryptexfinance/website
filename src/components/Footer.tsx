@@ -118,6 +118,7 @@ const Footer = () => {
           </a>
           <a className="subtitle" href="/blog">{t('blog')}</a>
           <a className="subtitle" href="https://v1.cryptex.finance">V1</a>
+          <a className="subtitle" href="https://app.cryptex.finance/terms-of-service">TOS</a>
         </div>
       </div>
     </section>

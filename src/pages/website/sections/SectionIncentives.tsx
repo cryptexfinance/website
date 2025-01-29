@@ -35,7 +35,7 @@ const SectionIncentives = () => {
                 </li>
                 <li>
                   <p style={{ marginBottom: "0rem" }}>
-                    <span className="text-purple font-size-1 px-1 bold">CTX rewards</span>will be distributed weekly
+                    <span className="text-purple font-size-1 px-1 bold">CTX rewards</span>will be distributed daily
                   </p>  
                 </li>
               </ul>
@@ -71,7 +71,7 @@ const SectionIncentives = () => {
                 </li>
                 <li>
                   <p style={{ marginBottom: "0rem" }}>
-                    Earn <span className="text-purple font-size-1 px-1 bold">0.15 points</span> per day per TCAP token held in your account
+                    Earn <span className="text-purple font-size-1 px-1 bold">0.25 points</span> per day per TCAP token held in your account
                     that was purchased directly from the <span className="text-purple font-size-1 px-1 bold">Uniswap DEX pool</span>
                   </p>  
                 </li>
