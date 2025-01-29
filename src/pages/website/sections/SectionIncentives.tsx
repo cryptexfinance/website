@@ -35,7 +35,7 @@ const SectionIncentives = () => {
                 </li>
                 <li>
                   <p style={{ marginBottom: "0rem" }}>
-                    <span className="text-purple font-size-1 px-1 bold">CTX rewards</span>will be distributed daily
+                    <span className="text-purple font-size-1 px-1 bold">CTX rewards</span>will be distributed weekly
                   </p>  
                 </li>
               </ul>
