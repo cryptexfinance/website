@@ -88,6 +88,14 @@
     // margin-top: 0rem;
     padding-top: 0rem;
     overflow: hidden;
+
+    &.desktop {
+      display: none;
+    }
+  
+    &.mobile {
+      display: block;
+    }
   }
 
   .main-brand-text{
