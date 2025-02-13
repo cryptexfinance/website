@@ -22,10 +22,10 @@ const SectionMain = () => {
         playsInline
         className="video bgvid"
       >
-        {!breakpoints.sm ? (
-          <source src={bgVideo} type="video/webm" />  
-        ) : (
+        {breakpoints.sm ? (
           <source src={bgVideoMobile} type="video/mp4" />
+        ) : (
+          <source src={bgVideo} type="video/webm" />
         )}
       </video>
       <div className="black-overlay"></div>
