@@ -1,13 +1,16 @@
 import React from "react"
 import Col from "react-bootstrap/esm/Col"
 import { useTranslation } from "gatsby-plugin-react-i18next"
+import { useBreakpoint } from "gatsby-plugin-breakpoints"
 
 import appEndpoint from "../../../endpoint"
 // import bgMobilePoster from "../../../../static/mobile_poster.png"
 import bgVideo from "../../../../static/bg_main_pi.webm"
+import bgVideoMobile from "../../../../static/bg_main_mobile.mp4"
 
 const SectionMain = () => {
   const { t } = useTranslation()
+  const breakpoints = useBreakpoint()
 
   return (
     <div className="section-main">
@@ -19,7 +22,11 @@ const SectionMain = () => {
         playsInline
         className="video bgvid"
       >
-        <source src={bgVideo} type="video/webm" />
+        {!breakpoints.sm ? (
+          <source src={bgVideoMobile} type="video/mp4" />
+        ) : (
+          <source src={bgVideo} type="video/webm" />  
+        )}
       </video>
       <div className="black-overlay"></div>
       <div className="main-container col-sm-12">
