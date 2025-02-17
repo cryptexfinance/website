@@ -16,7 +16,11 @@ const SectionIncentives = () => {
       <h1 className="header line-up">
         CTX Emissions: Rewarding TCAP's Most Active Users!
       </h1>
-      <Stack direction="horizontal" gap={0} className="incentives-body py-1 px-3 justify-content-center">
+      <Stack
+        direction="horizontal"
+        gap={0}
+        className="incentives-body py-1 px-3 justify-content-center"
+      >
         <Stack className="box incentive-box justify-content-between" gap={2}>
           <Stack direction="vertical" gap={2}>
             <h2>TCAP Liquidity Providers Emissions</h2>
@@ -58,7 +62,7 @@ const SectionIncentives = () => {
             </a>
           </Stack>
         </Stack>
-        <Stack className="box incentive-box justify-content-between" gap={2}>
+        {/* <Stack className="box incentive-box justify-content-between" gap={2}>
           <Stack direction="vertical" gap={2}>
             <h2>TCAP Points Program</h2>
             <Stack direction="vertical" className="ps-1">
@@ -92,7 +96,7 @@ const SectionIncentives = () => {
               Raffle Comming Soon!
             </a>
           </Stack>  
-        </Stack>
+        </Stack> */}
       </Stack>
     </Stack>    
   )  
