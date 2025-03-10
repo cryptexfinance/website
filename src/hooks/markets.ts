@@ -52,27 +52,17 @@ export const useMarketOracles = () => {
 
 export const useMarketSnapshots = () => {
   const chainId = usePerpetualsChainId()
-  const { data: marketOracles } = useMarketOracles()
-  const sdk = usePerennialSDKContext()
   const vaultAddress = TcapVaultContract[chainId]
   const contracts = useContext(arbContractsContext)
   const address = zeroAddress
 
   return useQuery({
     queryKey: ['marketSnapshots', chainId, address],
-    enabled: !!address && !!marketOracles,
+    enabled: !!address,
     queryFn: async () => {
-      if (!sdk || !marketOracles) return
-
-      const marketSnapshots = await sdk.markets.read.marketSnapshots({
-        marketOracles,
-        address,
-      })
-
       const tcapData = await vaultSnapshotFetcher(contracts, vaultAddress)
 
       return {
-        markets: marketSnapshots,
         tcapSnapshot: tcapData,
       }
     },

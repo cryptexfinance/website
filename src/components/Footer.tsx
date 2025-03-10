@@ -1,6 +1,7 @@
 import React from "react"
 import { useTranslation } from "gatsby-plugin-react-i18next"
 import { Stack } from "react-bootstrap"
+import Flag from 'react-flagkit';
 
 import twitter from "../../static/website/ecosystem/x_logo.svg"
 import discord from "../../static/website/ecosystem/discord.svg"
@@ -78,7 +79,7 @@ const Footer = () => {
           </span>
         </Stack>
         <p className="subtitle">
-          A united DeFi platform
+          American Made DeFi <Flag country="US" size={25} className="mb-1" />
         </p>
         <div className="community">
           {socialIcons.map((socialIcon, index) => {
