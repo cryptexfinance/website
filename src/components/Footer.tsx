@@ -75,7 +75,7 @@ const Footer = () => {
         <Stack direction="horizontal" gap={3}>
           <img className="menu-logo" src="/logo.svg" alt="Logo" />
           <span className="year-label">
-            2024
+            2025
           </span>
         </Stack>
         <p className="subtitle">
