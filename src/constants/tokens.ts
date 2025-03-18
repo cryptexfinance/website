@@ -9,7 +9,7 @@ import {
 } from "viem/chains";
 
 import aaveLogo from '../../static/website/icons/aave.png'
-import cbBtcLogo from '../../static/website/icons/cbBTC.png'
+import cbBtcLogo from '../../static/website/icons/cbbtc.png'
 import crvLogo from '../../static/website/icons/crv.png'
 import gmxLogo from '../../static/website/icons/gmx.png'
 import pendleLogo from '../../static/website/icons/pendle.png'
