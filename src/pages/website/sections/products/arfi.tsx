@@ -1,5 +1,5 @@
 import React, { useMemo } from "react"
-import { Image, Stack } from "react-bootstrap"
+import { Image, Spinner, Stack } from "react-bootstrap"
 import { useTranslation } from "gatsby-plugin-react-i18next"
 import { useBreakpoint } from "gatsby-plugin-breakpoints";
 
@@ -89,7 +89,11 @@ const ArfiRow = () => {
       <Stack direction="horizontal" className={`product-row-item text-right ${!breakpoints.sm ? "w-50" : "w-100"}`}>
         <span className="product-title only-mobile">ARFI Price</span>
         <span className={`product-value w-100 text-right text-green`} style={{ fontSize: "1.1rem" }}>
-          {currentPrice}
+          {currentPrice !== "-" ? (
+            <>{currentPrice}</>
+          ) : (
+            <Spinner animation="border" size="sm" className="spinner-green small" />      
+          )}  
         </span>
       </Stack>
     </a>
