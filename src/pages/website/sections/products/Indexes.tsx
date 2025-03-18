@@ -4,8 +4,6 @@ import { useTranslation } from "gatsby-plugin-react-i18next"
 import { graphql } from "gatsby"
 import { useBreakpoint } from "gatsby-plugin-breakpoints";
 
-// import { useSetTokensSnapshots } from "../../../../hooks/crypdex"
-// import { SetTokenMetadata, SupportedComponents, SupportedSetTokens } from "../../../../constants/crypdex"
 import { useIndexDataFromGraph } from "../../../../hooks/indexes"
 import { SupportedIndex } from "../../../../constants/indexes"
 

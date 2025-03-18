@@ -15,7 +15,7 @@ const Arfi = () => {
   return (
     <Stack
       direction="vertical"
-      className="justify-content-between line-down fast products tcap-v2 ps-4 pe-1"
+      className="justify-content-between line-down fast products arfi ps-4 pe-1"
       gap={2}
       style={{ flex: "unset", height: "25rem" }}
     >
@@ -79,10 +79,10 @@ const ArfiRow = () => {
         className={`product-row-item indexes-header mobile-header ${!breakpoints.sm ? "w-50" : "w-100"}`}
         gap={2}
       >
-        <span className="product-title only-mobile">ARFI Components</span>
+        <span className="product-title only-mobile">Components</span>
         <Stack direction="horizontal" gap={!breakpoints.sm ? 2 : 4}>
           {setTokenMetadata.components.map((token, index) => (
-            <Image key={`cr-${index.toString()}`} src={ComponentMetadata[token].icon} height={32} width={32} />
+            <Image key={`cr-${index.toString()}`} className="component-icon" src={ComponentMetadata[token].icon} height={32} width={32} />
           ))}
         </Stack>  
       </Stack>

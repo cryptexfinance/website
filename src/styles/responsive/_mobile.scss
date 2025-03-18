@@ -709,7 +709,7 @@
       }
     }
 
-    .tcap-v2 {
+    .tcap-v2, .arfi {
       padding: 15px 5px !important;
       height: 620px !important;
 
@@ -766,7 +766,18 @@
         }
       }
     }
+    .arfi {
+      height: 460px !important;
 
+      .index-icon {
+        width: 30px;
+        height: 30px;
+      }
+      .component-icon {
+        width: 26px;
+        height: 26px;
+      }
+    }
     .only-mobile {
       display: block;
       &.col-sm-12 {

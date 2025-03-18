@@ -26,7 +26,7 @@ export const useSetTokenPrice = (setToken: SupportedSetTokens) => {
   return useQuery({
     queryKey: ['SetTokenPrice', setToken],
     enabled: true,
-    refetchInterval: 120000,
+    refetchInterval: 180000,
     refetchIntervalInBackground: false,
     queryFn: async () => {
       const data = await fetchBuyComponentsData(arbitrum.id, setToken, Big18Math.fromFloatString("1"), SupportedTokens.usdc, DummyAddress);
