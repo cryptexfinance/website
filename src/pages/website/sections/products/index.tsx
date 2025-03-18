@@ -10,10 +10,12 @@ import Indexes from "./Indexes"
 import Perpetuals from "./Perpetuals"
 import Spot from "./Spot"
 import Summary from "./summary"
+import Arfi from "./arfi";
 
 
 const enum ProductKey { 
   Indexes = "indexes",
+  Arfi = "arfi",
   Spot = "spot",
   Perpetuals = "perpetuals"
 }
@@ -21,8 +23,13 @@ const enum ProductKey {
 const products = [
   {
     key: ProductKey.Indexes,
-    title: "Indexes",
+    title: "TCAP 2.0",
     headline: "Neque porro quisquam est qui",
+  },
+  {
+    key: ProductKey.Arfi,
+    title: "ARFI",
+    headline: "Sed quia consequuntur magni dolores",
   },
   {
     key: ProductKey.Spot,
@@ -83,7 +90,6 @@ const SectionProducts = () => {
                   className={`product-button w-100 ${activeProduct === product.key ? "active" : ""}`}
                   onClick={() => {
                     setActiveProduct(!breakpoints.sm ? product.key : activeProduct !== product.key ? product.key : undefined)
-                    // setActiveProductMobile(activeProductMobile !== product.key ? product.key : undefined)
                   }}
                   style={{ textAlign: "left" }}
                 >
@@ -103,7 +109,10 @@ const SectionProducts = () => {
                     >
                       {activeProduct === ProductKey.Indexes && (
                         <Indexes />
-                      )}  
+                      )}
+                      {activeProduct === ProductKey.Arfi && (
+                        <Arfi />
+                      )}
                       {activeProduct === ProductKey.Spot && (
                         <Spot />
                       )}
@@ -126,7 +135,10 @@ const SectionProducts = () => {
             <>
               {activeProduct === ProductKey.Indexes && (
                 <Indexes />
-              )}  
+              )}
+              {activeProduct === ProductKey.Arfi && (
+                <Arfi />
+              )}
               {activeProduct === ProductKey.Spot && (
                 <Spot />
               )}

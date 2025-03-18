@@ -1,5 +1,4 @@
 import meemLogo from '../../static/website/icons/meem.png'
-import PriceFeed from '../pages/website/components/PriceFeed';
 
 export const CryptexPricesUrl = "https://api.perps.cryptex.finance"
 export const IndexesPriceFeedUrl = 'https://api.perps.cryptex.finance/price-feed';
@@ -12,6 +11,12 @@ export enum SupportedIndex {
 export enum SupportedPriceFeeds {
   pyth = 'pyth',
   chainlink = 'chainlink',
+}
+
+export enum IndexProducts {
+  oneToOne = 'oneToOne',
+  perp = 'perp',
+  vault = 'vault',
 }
 
 export type IndexMetadataType = {
