@@ -11,7 +11,7 @@ import Perpetuals from "./Perpetuals"
 import Spot from "./Spot"
 import Summary from "./summary"
 import Arfi from "./arfi";
-import Indexes from "./Indexes";
+import Indexes from "./indexes";
 
 
 const enum ProductKey { 
