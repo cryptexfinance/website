@@ -19,10 +19,9 @@ import chainlinkLogo from '../../../../../static/website/ecosystem/chainlink-whi
 import uniswapLogo from '../../../../../static/website/ecosystem/uniswap_light.png'
 
 
-
 const collateralsIcons = [ethLogo, usdcLogo, cbBtcLogo, lBtcLogo]
 
-const Indexes = () => {
+const TcapV2 = () => {
   const { t } = useTranslation()
   
   return (
@@ -134,7 +133,7 @@ const TcapRow = () => {
   )
 }
 
-export default Indexes
+export default TcapV2
 
 export const query = graphql`
   query ($language: String!) {

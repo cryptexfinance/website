@@ -6,7 +6,7 @@ import { useBreakpoint } from "gatsby-plugin-breakpoints";
 import { FaChevronDown } from "react-icons/fa";
 
 import { PerennialSDKProvider } from "../../../../context/perennialSdkContext"
-import Indexes from "./Indexes"
+import TcapV2 from "./tcapv2"
 import Perpetuals from "./Perpetuals"
 import Spot from "./Spot"
 import Summary from "./summary"
@@ -108,7 +108,7 @@ const SectionProducts = () => {
                       }}
                     >
                       {activeProduct === ProductKey.Indexes && (
-                        <Indexes />
+                        <TcapV2 />
                       )}
                       {activeProduct === ProductKey.Arfi && (
                         <Arfi />
@@ -134,7 +134,7 @@ const SectionProducts = () => {
           >
             <>
               {activeProduct === ProductKey.Indexes && (
-                <Indexes />
+                <TcapV2 />
               )}
               {activeProduct === ProductKey.Arfi && (
                 <Arfi />
