@@ -225,6 +225,15 @@ span {
   --bs-spinner-width: 2.5rem;
   --bs-spinner-height: 2.5rem;
 }
+.spinner-green {
+  border-color: $color-primary-green;
+  border-right-color: transparent;
+  
+  &.small {
+    --bs-spinner-width: 1.5rem;
+    --bs-spinner-height: 1.5rem;
+  }
+}
 
 .link {
   font-family: $font-primary;

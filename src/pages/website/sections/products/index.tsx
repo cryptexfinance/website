@@ -6,14 +6,17 @@ import { useBreakpoint } from "gatsby-plugin-breakpoints";
 import { FaChevronDown } from "react-icons/fa";
 
 import { PerennialSDKProvider } from "../../../../context/perennialSdkContext"
-import Indexes from "./Indexes"
+import TcapV2 from "./tcapv2"
 import Perpetuals from "./Perpetuals"
 import Spot from "./Spot"
 import Summary from "./summary"
+import Arfi from "./arfi";
+import Indexes from "./indexes";
 
 
 const enum ProductKey { 
   Indexes = "indexes",
+  Arfi = "arfi",
   Spot = "spot",
   Perpetuals = "perpetuals"
 }
@@ -83,7 +86,6 @@ const SectionProducts = () => {
                   className={`product-button w-100 ${activeProduct === product.key ? "active" : ""}`}
                   onClick={() => {
                     setActiveProduct(!breakpoints.sm ? product.key : activeProduct !== product.key ? product.key : undefined)
-                    // setActiveProductMobile(activeProductMobile !== product.key ? product.key : undefined)
                   }}
                   style={{ textAlign: "left" }}
                 >
@@ -103,7 +105,7 @@ const SectionProducts = () => {
                     >
                       {activeProduct === ProductKey.Indexes && (
                         <Indexes />
-                      )}  
+                      )}
                       {activeProduct === ProductKey.Spot && (
                         <Spot />
                       )}
@@ -126,7 +128,7 @@ const SectionProducts = () => {
             <>
               {activeProduct === ProductKey.Indexes && (
                 <Indexes />
-              )}  
+              )}
               {activeProduct === ProductKey.Spot && (
                 <Spot />
               )}

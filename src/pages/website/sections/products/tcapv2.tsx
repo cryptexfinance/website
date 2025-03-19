@@ -1,11 +1,9 @@
 import React, { useMemo } from "react"
-import { Button, Col, Image, Spinner, Stack } from "react-bootstrap"
+import { Image, Stack } from "react-bootstrap"
 import { useTranslation } from "gatsby-plugin-react-i18next"
 import { graphql } from "gatsby"
 import { useBreakpoint } from "gatsby-plugin-breakpoints";
 
-// import { useSetTokensSnapshots } from "../../../../hooks/crypdex"
-// import { SetTokenMetadata, SupportedComponents, SupportedSetTokens } from "../../../../constants/crypdex"
 import { useIndexDataFromGraph } from "../../../../hooks/indexes"
 import { SupportedIndex } from "../../../../constants/indexes"
 
@@ -21,18 +19,17 @@ import chainlinkLogo from '../../../../../static/website/ecosystem/chainlink-whi
 import uniswapLogo from '../../../../../static/website/ecosystem/uniswap_light.png'
 
 
-
 const collateralsIcons = [ethLogo, usdcLogo, cbBtcLogo, lBtcLogo]
 
-const Indexes = () => {
+const TcapV2 = () => {
   const { t } = useTranslation()
   
   return (
     <Stack
       direction="vertical"
-      className="justify-content-between line-down fast products tcap-v2 ps-4 pe-1"
+      className="justify-content-between line-down fast products tcap-v2 mt-3 ps-4 pe-1"
       gap={2}
-      style={{ flex: "unset", height: "25rem" }}
+      style={{ flex: "unset", height: "30rem" }}
     >
       <Stack className="tcapv2-top">
         <Stack direction="vertical" gap={1} style={{ flex: "unset" }}>
@@ -136,45 +133,7 @@ const TcapRow = () => {
   )
 }
 
-{/* const IndexRow = ({
-  index,
-  setToken,
-} : {
-  index: number,
-  setToken: SupportedSetTokens,
-  components: Array<SupportedComponents>
-}) => {
-  const { t } = useTranslation()
-  const assetMetada = SetTokenMetadata[setToken]
-  const darkRow = index % 2 === 0
-  // const { data } = useSetTokenPrice(setToken)
-  // const price = data ? `$${data.priceOneSetToken.toFixed(4)}` : <span>-</span>
-
-  return (
-    <Button
-      key={`ir-${index.toString()}`}
-      className={"w-100 mx-0 product-row ".concat(darkRow ? "" : "")}
-      onClick={() => {}}
-    >
-      <Col className="product-row-item indexes-header mobile-header" lg={6} md={5} sm={12}>
-        <Stack direction="horizontal" gap={2}>
-          <Image className="product-logo" src={assetMetada.icon} width={42} height={42} />
-          <Stack direction="vertical" gap={0} className="align-items-start">
-            <span className="product-value lg">{assetMetada.symbol}</span>
-            <span className="product-subvalue lg">{assetMetada.name}</span>
-          </Stack>
-        </Stack>
-      </Col>
-      <Col lg={6} md={6} className="text-right">
-        <span className="text-purple" style={{ fontSize: "1.1rem" }}>
-          Coming Soon
-        </span>
-      </Col>
-    </Button>
-  )
-} */}
-
-export default Indexes
+export default TcapV2
 
 export const query = graphql`
   query ($language: String!) {

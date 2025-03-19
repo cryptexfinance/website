@@ -5,11 +5,19 @@ import { OptimalRate, ParaSwapVersion, SwapSide } from "@paraswap/core"
 import axios from "axios"
 
 import { useCrypdexChainId } from "./network"
-import { ChainComponentsTokens, ComponentMetadata, SupportedComponents, UsdcMetadata } from "../constants/crypdex"
+import { ChainComponentsTokens, ComponentMetadata, SupportedComponents } from "../constants/arfi"
 import { ParaswapApiUrl, ParaswapPartner, ParaswapPricesEndpoint, PriceQueryParams } from "../constants/paraswap"
 import { UsdcAddresses } from "../constants/contracts"
 import { SupportedChainIdType } from "../constants/network"
+import { SupportedTokens, TokenMetadata } from "../constants/tokens"
 
+
+export type BuyComponentsDataType = Record<SupportedComponents, {
+  payload: `0x${string}`,
+  srcAmount: number,
+  srcAmountBI: bigint,
+  error?: string
+}>;
 
 export const useTokensUsdcPrices = (componets: Array<SupportedComponents>) => { 
   const chainId = useCrypdexChainId()
@@ -34,7 +42,7 @@ export const fetchTokensUsdcPrices = async (componets: Array<SupportedComponents
         srcToken: addresses.token,
         destToken: UsdcAddresses[mainnet.id],
         srcDecimals: tokenMetadata.decimals.toString(),
-        destDecimals: UsdcMetadata.decimals.toString(),
+        destDecimals: TokenMetadata[SupportedTokens.usdc].decimals.toString(),
         amount: parseUnits("1", tokenMetadata.decimals).toString(), 
         side: SwapSide.SELL,
         network: mainnet.id.toString(),
