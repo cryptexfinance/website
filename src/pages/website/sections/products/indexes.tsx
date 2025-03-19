@@ -16,7 +16,7 @@ const Indexes = () => {
   const { t } = useTranslation()
   const breakpoints = useBreakpoint();
   const [currentTab, setCurrentTab] = useState<IndexesTabs>(IndexesTabs.tcap)
-  const mobileHeight = currentTab === IndexesTabs.tcap ? "620px" : "460px"
+  const mobileHeight = currentTab === IndexesTabs.tcap ? "730px" : "530px"
   const onTabChange = (key: string | null) => {
     setCurrentTab(key as IndexesTabs)
   }
