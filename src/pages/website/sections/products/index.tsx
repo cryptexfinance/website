@@ -11,6 +11,7 @@ import Perpetuals from "./Perpetuals"
 import Spot from "./Spot"
 import Summary from "./summary"
 import Arfi from "./arfi";
+import Indexes from "./Indexes";
 
 
 const enum ProductKey { 
@@ -23,13 +24,8 @@ const enum ProductKey {
 const products = [
   {
     key: ProductKey.Indexes,
-    title: "TCAP 2.0",
+    title: "Indexes",
     headline: "Neque porro quisquam est qui",
-  },
-  {
-    key: ProductKey.Arfi,
-    title: "ARFI",
-    headline: "Sed quia consequuntur magni dolores",
   },
   {
     key: ProductKey.Spot,
@@ -108,10 +104,7 @@ const SectionProducts = () => {
                       }}
                     >
                       {activeProduct === ProductKey.Indexes && (
-                        <TcapV2 />
-                      )}
-                      {activeProduct === ProductKey.Arfi && (
-                        <Arfi />
+                        <Indexes />
                       )}
                       {activeProduct === ProductKey.Spot && (
                         <Spot />
@@ -134,10 +127,7 @@ const SectionProducts = () => {
           >
             <>
               {activeProduct === ProductKey.Indexes && (
-                <TcapV2 />
-              )}
-              {activeProduct === ProductKey.Arfi && (
-                <Arfi />
+                <Indexes />
               )}
               {activeProduct === ProductKey.Spot && (
                 <Spot />

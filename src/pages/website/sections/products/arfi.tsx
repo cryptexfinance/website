@@ -15,7 +15,7 @@ const Arfi = () => {
   return (
     <Stack
       direction="vertical"
-      className="justify-content-between line-down fast products arfi ps-4 pe-1"
+      className="justify-content-between line-down fast products arfi ps-4 pe-1 mt-3"
       gap={2}
       style={{ flex: "unset", height: "25rem" }}
     >

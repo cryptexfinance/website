@@ -27,9 +27,9 @@ const TcapV2 = () => {
   return (
     <Stack
       direction="vertical"
-      className="justify-content-between line-down fast products tcap-v2 ps-4 pe-1"
+      className="justify-content-between line-down fast products tcap-v2 mt-3 ps-4 pe-1"
       gap={2}
-      style={{ flex: "unset", height: "25rem" }}
+      style={{ flex: "unset", height: "30rem" }}
     >
       <Stack className="tcapv2-top">
         <Stack direction="vertical" gap={1} style={{ flex: "unset" }}>
