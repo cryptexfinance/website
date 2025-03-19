@@ -28,14 +28,6 @@ const Indexes = () => {
         flex: "unset",
         height: !breakpoints.sm ? "30rem" : mobileHeight,
       }}>
-      {/* <Tabs
-        id="order-types-tabs"
-        defaultActiveKey={IndexesTabs.tcap}
-        onSelect={(k) => onTabChange(k)}
-      >
-        <Tab eventKey={IndexesTabs.tcap} title="TCAP V2" />
-        <Tab eventKey={IndexesTabs.arfi} title="ARFI" />
-      </Tabs> */}
       <Stack direction="horizontal" gap={2} className={`px-4 ${breakpoints.sm ? "mt-4" : ""}`}>
         <Button
           onClick={() => setCurrentTab(IndexesTabs.tcap)}
